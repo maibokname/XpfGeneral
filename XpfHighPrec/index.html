@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta name="description" content="Experimental Fortran Package - High-Precision Numbers">
+    <meta name="author" content="Niranama" >
+    <link rel="icon" href="./favicon.png">
+
+    <title> eXPerimental Fortran Library (XpfLib) Documentation </title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link href="./css/pygments.css" rel="stylesheet">
+    <link href="./css/font-awesome.min.css" rel="stylesheet">
+    <link href="./css/local.css" rel="stylesheet">
+      <link  href="./tipuesearch/tipuesearch.css" rel="stylesheet">
+
+    <script src="https://code.jquery.com/jquery-3.7.0.slim.min.js" integrity="sha256-tG5mcZUtJsZvyKAxYLVXrmjKBVLd6VpVccqz/r4ypFE=" crossorigin="anonymous"></script>
+  </head>
+
+  <body>
+
+    <!-- Fixed navbar -->
+    <div class="container-fluid mb-sm-4 mb-xl-2">
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container">
+          <a class="navbar-brand" href="./index.html">eXPerimental Fortran Library (XpfLib) Documentation </a>
+          <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar"
+                  aria-expanded="false" aria-controls="navbar" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon">
+          </button>
+
+          <div id="navbar" class="navbar-collapse collapse">
+            <ul class="navbar-nav">
+                  <li class="nav-item">
+                    <a class="nav-link" href="./lists/files.html">Source Files</a>
+                  </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="./lists/modules.html">Modules</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="./lists/procedures.html">Procedures</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="./lists/types.html">Derived Types</a>
+                </li>
+            </ul>
+              <div class="d-flex align-items-end flex-grow-1">
+                <form action="./search.html" role="search" class="ms-auto">
+                  <input type="text" class="form-control" aria-label="Search" placeholder="Search" name="q" id="tipue_search_input" autocomplete="off" required>
+                </form>
+              </div>
+          </div><!--/.nav-collapse -->
+        </div>
+      </nav>
+    </div>
+
+    <div class="container">
+      <!-- Main component for a primary marketing message or call to action -->
+      <div class="p-5 mb-4 bg-light border rounded-3" id="jumbotron">
+        <p>Experimental Fortran Package - High-Precision Numbers</p>
+        </p>
+      </div>
+
+      <div class="row" id='text'>
+        <div class=col-md-8>
+          <h1>eXPerimental Fortran Library (XpfLib) Documentation</h1>
+          <h2><em>XpfHighPrec: eXPerimental Fortran HighPrec Package</em></h2>
+<p><strong><em>XpfHighPrec</em></strong> is an experimenal package written in Fortran.   It is a sub-package of the <strong><em>XpfGeneral</em></strong> package (a larger package within the <strong><em>XpfLib</em></strong> library), which contains a large collection of general-purpose modules.  The <em>XpfHighPrec</em> package consists of three modules (and a number of submodules) that provides three data types representing numbers with precision higher than those numbers of Fortran intrinsic types.</p>
+<p>The source code of the <em>XpfHighPrec</em> package is organized into 3 module files and 3 subfolders of the <em>XpfHighPrec</em> folder.   A brief overview of the source code is given below.</p>
+<ol>
+<li>
+<p>The <em>MBase_Float128</em> module contains the <em>Float128</em> type, which represents a quadruple-precision floating point number.  Internally, the <em>Float128</em> type consists of a logical value representing its sign, two 64-bit integers representing its 128-bit significand and a 32-bit integer representing its exponent.  Therefore, it is slightly more precise and has a wider range than the standard IEEE-754 quadruple- precision floating point number (i.e. 128-bit Fortran intrinsic real number).  The <em>Float128</em> subfolder contains a number of submodules that provide implementations of the various operations of the <em>Float128</em> type.</p>
+</li>
+<li>
+<p>The <em>MClass_ApInt32</em> module contains the <em>ApInt32</em> type, which represents a <em>mutable, arbitrary-precision signed</em> integer.  The <em>ApInt32</em> subfolder contains several submodules that provide implementations of the various operations of the <em>ApInt32</em> type.</p>
+</li>
+<li>
+<p>The <em>MClass_ApInt64</em> module contains the <em>ApInt64</em> type, which represents a <em>mutable, arbitrary-precision signed</em> integer. The <em>ApInt64</em> subfolder contains a number of submodules that provide implementations of the various operations of the <em>ApInt64</em> type.  It should be noted that the main difference between the <em>ApInt32</em> and <em>ApInt64</em> types is that the <em>ApInt32</em> type uses an array of 32-bit integers to represent its magnitude whereas the <em>ApInt64</em> type uses an array of 64-bit integers instead.  Therefore, the base of the <em>ApInt32</em> type is 2<sup>32</sup> whereas the base of the <em>ApInt64</em> type is 2<sup>64</sup>.  The uses of difference bases make their actual implementation somewhat different although the various theories behind their provided operations are the same.</p>
+</li>
+</ol>
+<h2>Dependencies</h2>
+<p>The <em>XpfHighPrec</em> pacakge is primarily dependent on the <a href="../XpfBase/Index.html"><em>XpfBase</em></a> and <a href="../XpfRandom/Index.html"><em>XpfRandom</em></a> packages.</p>
+<h2>Documentation</h2>
+<p>The <a href="https://github.com/Fortran-FOSS-Programmers/ford">FORD</a> program can be used to automatically generate the documentation of the <em>XpfHighPrec</em> package via <code>ford XpfHighPrecDoc.md</code>.</p>
+        </div>
+          <div class="col-md-4">
+	        <div class="card card-body bg-light">
+              <h2 class="card-title">Developer Info</h2>
+              <h4 class="card-text">Niranama</h4>
+              <p class="card-text"></p>
+            </div>
+          </div>
+      </div>
+        <div class="row">
+          <hr>
+          <div class="col-xs-6 col-sm-3">
+            <div>
+              <h3>Source Files</h3>
+              <ul><li><a href='./sourcefile/mbase_float128.f90.html'>MBase_Float128.f90</a></li><li><a href='./sourcefile/mclass_apint32.f90.html'>MClass_ApInt32.f90</a></li><li><a href='./sourcefile/mclass_apint64.f90.html'>MClass_ApInt64.f90</a></li></ul>
+            </div>
+            <div>
+              <ul>
+                <li><a href="./lists/files.html"><em>All source files&hellip;</em></a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-xs-6 col-sm-3">
+            <div>
+              <h3>Modules</h3>
+              <ul><li><a href='./module/mbase_float128.html'>MBase_Float128</a></li><li><a href='./module/mclass_apint32.html'>MClass_ApInt32</a></li><li><a href='./module/mclass_apint64.html'>MClass_ApInt64</a></li></ul>
+            </div>
+            <div>
+              <ul>
+                <li><a href="./lists/modules.html"><em>All modules&hellip;</em></a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-xs-6 col-sm-3">
+            <div>
+              <h3>Procedures</h3>
+              <ul><li><a href='./interface/abs.html'>ABS</a></li><li><a href='./interface/abs~2.html'>ABS</a></li><li><a href='./interface/add.html'>Add</a></li><li><a href='./interface/addxp.html'>AddXp</a></li><li><a href='./interface/apint32.html'>ApInt32</a></li><li><a href='./interface/apint64.html'>ApInt64</a></li><li><a href='./interface/assignment(=).html'>ASSIGNMENT(=)</a></li><li><a href='./interface/assignment(=)~2.html'>ASSIGNMENT(=)</a></li><li><a href='./interface/assignment(=)~3.html'>ASSIGNMENT(=)</a></li><li><a href='./interface/btest.html'>BTEST</a></li><li><a href='./interface/btest~2.html'>BTEST</a></li><li><a href='./interface/compare.html'>Compare</a></li><li><a href='./interface/compare~2.html'>Compare</a></li><li><a href='./interface/compare~3.html'>Compare</a></li><li><a href='./interface/decrement.html'>Decrement</a></li><li><a href='./interface/display.html'>Display</a></li><li><a href='./interface/display~2.html'>Display</a></li><li><a href='./interface/divide.html'>Divide</a></li><li><a href='./interface/dividexp.html'>DivideXp</a></li><li><a href='./interface/divmod.html'>DivMod</a></li><li><a href='./interface/float128.html'>Float128</a></li><li><a href='./interface/fromstringxp.html'>FromStringXp</a></li><li><a href='./interface/getlength.html'>GetLength</a></li><li><a href='./interface/getlength~2.html'>GetLength</a></li><li><a href='./interface/iand.html'>IAND</a></li><li><a href='./interface/iand~2.html'>IAND</a></li><li><a href='./interface/iand_not.html'>IAND_NOT</a></li><li><a href='./interface/iand_not~2.html'>IAND_NOT</a></li><li><a href='./interface/ibchng.html'>IBCHNG</a></li><li><a href='./interface/ibchng~2.html'>IBCHNG</a></li><li><a href='./interface/ibclr.html'>IBCLR</a></li><li><a href='./interface/ibclr~2.html'>IBCLR</a></li><li><a href='./interface/ibset.html'>IBSET</a></li><li><a href='./interface/ibset~2.html'>IBSET</a></li><li><a href='./interface/ieor.html'>IEOR</a></li><li><a href='./interface/ieor~2.html'>IEOR</a></li><li><a href='./interface/increment.html'>Increment</a></li><li><a href='./interface/ior.html'>IOR</a></li><li><a href='./interface/ior~2.html'>IOR</a></li><li><a href='./interface/is_infinite.html'>Is_Infinite</a></li></ul>
+            </div>
+            <div>
+              <ul>
+                <li><a href="./lists/procedures.html"><em>All procedures&hellip;</em></a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-xs-6 col-sm-3">
+            <div>
+              <h3>Derived Types</h3>
+              <ul><li><a href='./type/apint32.html'>ApInt32</a></li><li><a href='./type/apint64.html'>ApInt64</a></li><li><a href='./type/float128.html'>Float128</a></li></ul>
+            </div>
+            <div>
+              <ul>
+                <li><a href="./lists/types.html"><em>All derived types&hellip;</em></a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      <hr>
+    </div> <!-- /container -->
+    <footer>
+      <div class="container">
+        <div class="row justify-content-between">
+          <div class="col"><p>eXPerimental Fortran Library (XpfLib) Documentation was developed by Niranama<br>&copy; 2024 
+</p>
+          </div>
+          <div class="col">
+            <p class="text-end">
+              Documentation generated by
+              <a href="https://github.com/Fortran-FOSS-Programmers/ford">FORD</a>
+            </p>
+          </div>
+        </div>
+        <br>
+      </div> <!-- /container -->
+    </footer>
+
+    <!-- Bootstrap core JavaScript -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>    
+
+    <!-- MathJax JavaScript
+             ================================================== -->
+             <!-- Placed at the end of the document so the pages load faster -->
+        <script type="text/x-mathjax-config">
+          MathJax.Hub.Config({
+          TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } },
+          jax: ['input/TeX','input/MathML','output/HTML-CSS'],
+          extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']
+          });
+        </script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+          <script src="./tipuesearch/tipuesearch_content.js"></script>
+          <script src="./tipuesearch/tipuesearch_set.js"></script>
+          <script src="./tipuesearch/tipuesearch.js"></script>
+
+  </body>
+</html>

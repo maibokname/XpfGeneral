@@ -1,0 +1,697 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta name="description" content="Experimental Fortran Package - String">
+    <meta name="author" content="Niranama" >
+    <link rel="icon" href="../favicon.png">
+
+    <title>PatternFinder &ndash; eXPerimental Fortran Library (XpfLib) Documentation </title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link href="../css/pygments.css" rel="stylesheet">
+    <link href="../css/font-awesome.min.css" rel="stylesheet">
+    <link href="../css/local.css" rel="stylesheet">
+      <link  href="../tipuesearch/tipuesearch.css" rel="stylesheet">
+
+    <script src="https://code.jquery.com/jquery-3.7.0.slim.min.js" integrity="sha256-tG5mcZUtJsZvyKAxYLVXrmjKBVLd6VpVccqz/r4ypFE=" crossorigin="anonymous"></script>
+  </head>
+
+  <body>
+
+    <!-- Fixed navbar -->
+    <div class="container-fluid mb-sm-4 mb-xl-2">
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container">
+          <a class="navbar-brand" href="../index.html">eXPerimental Fortran Library (XpfLib) Documentation </a>
+          <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar"
+                  aria-expanded="false" aria-controls="navbar" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon">
+          </button>
+
+          <div id="navbar" class="navbar-collapse collapse">
+            <ul class="navbar-nav">
+                  <li class="nav-item">
+                    <a class="nav-link" href="../lists/files.html">Source Files</a>
+                  </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../lists/modules.html">Modules</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../lists/procedures.html">Procedures</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../lists/types.html">Derived Types</a>
+                </li>
+            </ul>
+              <div class="d-flex align-items-end flex-grow-1">
+                <form action="../search.html" role="search" class="ms-auto">
+                  <input type="text" class="form-control" aria-label="Search" placeholder="Search" name="q" id="tipue_search_input" autocomplete="off" required>
+                </form>
+              </div>
+          </div><!--/.nav-collapse -->
+        </div>
+      </nav>
+    </div>
+
+    <div class="container">
+  <div class="row">
+    <h1>PatternFinder
+      <small>Derived Type</small>
+      
+    </h1>
+      <div class="container p-2 mb-4 bg-light border rounded-3">
+    <div class="row align-items-center justify-content-between" id="info-bar">
+      <div class="col">
+        <ul class="list-inline" style="margin-bottom:0px;display:inline">
+
+            <li class="list-inline-item" id="statements"><i class="fa fa-list-ol"></i>
+              <a data-bs-toggle="tooltip"
+                 data-bs-placement="bottom" data-html="true"
+                 title="<p> 2.1% of total for derived types.</p>Including implementation: 167 statements,  2.5% of total for derived types.">14 statements</a>
+            </li>
+
+            <li class="list-inline-item" id="source-file">
+              <i class="fa fa-code"></i>
+              <a href="../src/MClass_PatternFinder.f90"> Source File</a>
+            </li>
+        </ul>
+      </div>
+      <div class="col">
+        <nav aria-label="breadcrumb">
+          <ol class="breadcrumb justify-content-end mb-0">
+                <li class="breadcrumb-item"><a href='../sourcefile/mclass_patternfinder.f90.html'>MClass_PatternFinder.f90</a></li>
+                <li class="breadcrumb-item"><a href='../module/mclass_patternfinder.html'>MClass_PatternFinder</a></li>
+            <li class="breadcrumb-item active" aria-current="page">PatternFinder</li>
+          </ol>
+        </nav>
+      </div>
+    </div>
+  </div>
+  <script>
+    $(function () {
+    $('[data-bs-toggle="tooltip"]').tooltip()
+    })
+  </script>
+
+  </div>
+  
+  <div class="row">
+    <div class="col-md-3 hidden-xs hidden-sm visible-md visible-lg">
+      <div id="sidebar">
+      <h3>Contents</h3>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+      <div class="card mb-4">
+      <a data-bs-toggle="collapse" href="#fins-0"
+         aria-expanded="false" aria-controls="fins-0">
+         <h4 class="card-header bg-primary text-white">Finalization Procedures</h4>
+      </a>
+      <div id="fins-0" class="collapse">
+        <div class="list-group list-group-flush">
+            <a class="list-group-item" href="../type/patternfinder.html#finalproc-patternfinder_finalize">PatternFinder_Finalize</a>
+        </div>
+      </div>
+    </div>
+
+      <div class="card mb-4">
+      <a data-bs-toggle="collapse" href="#boundprocs-0"
+         aria-expanded="false" aria-controls="boundprocs-0">
+         <h4 class="card-header bg-primary text-white">Type-Bound Procedures</h4>
+      </a>
+      <div id="boundprocs-0" class="collapse">
+        <div class="list-group list-group-flush">
+            <a class="list-group-item" href="../type/patternfinder.html#boundprocedure-setpattern">SetPattern</a>
+            <a class="list-group-item" href="../type/patternfinder.html#boundprocedure-findindex">FindIndex</a>
+            <a class="list-group-item" href="../type/patternfinder.html#boundprocedure-findnext">FindNext</a>
+            <a class="list-group-item" href="../type/patternfinder.html#boundprocedure-clear">Clear</a>
+        </div>
+      </div>
+    </div>
+
+  
+  
+    <div class="card card-primary">
+      <div class="card-header text-left"><h3 class="card-title">Source Code</h3></div>
+      <div class="list-group">
+        <a class="list-group-item" href="../type/patternfinder.html#src">PatternFinder</a>
+      </div>
+    </div>
+
+
+  </div>
+
+    </div>
+    
+    <div class="col-md-9" id='text'>
+      <h2>type, public :: PatternFinder</h2>
+    <p>The <em>PatternFinder</em> type is a string type that provides various efficient
+ algorithms for a <em>substring searching</em> operation.</p>
+    <br>
+
+    
+
+      <section>
+        <h2>Finalization Procedures</h2>
+            <div class="card">
+    <div class="card-header codesum">
+      <span class="anchor" id="finalproc-patternfinder_finalize"></span>
+      <h3>final :: <strong>PatternFinder_Finalize</strong> </h3>
+    </div>
+    <div class="card-body">
+      
+      <p>To perform finalization of the <em>PatternFinder</em> object.</p>
+    </div>
+    <ul class="list-group">
+      <li class="list-group-item">
+            <h3>
+    private  subroutine PatternFinder_Finalize(Finder)  
+
+    </h3>
+  <p>To perform finalization of the object. <br></p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-finder~5"></span>
+              type(<a href='../type/patternfinder.html'>PatternFinder</a>),
+            </td>
+<td>intent(inout)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Finder</strong></td>
+            <td>
+                <p>'PatternFinder' object</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+      </li>
+    </ul>
+  </div>
+
+      </section>
+      <br>
+
+      <section>
+        <h2>Type-Bound Procedures</h2>
+          <div class="row">
+              <div class="card mt-3">
+    <div class="card-header codesum">
+      <span class="anchor" id="boundprocedure-setpattern"></span>
+      <h3>
+          procedure, public ::
+  <strong>SetPattern</strong> => PatternFinder_SetPattern
+        
+      </h3>
+    </div>
+      <div class="card-body">
+        
+        <p><strong>Type-Bound Subroutine</strong>: SetPattern <br>
+ <strong>Purpose</strong>:  To process the specified pattern based on the specified searching algorithm. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    CALL Finder%SetPattern(Pattern, SearchAlgo) <br>
+  ---&gt;    CALL Finder%SetPattern(Pattern, BNDM, WildCard='.') <br>
+  ---&gt;    CALL Finder%SetPattern(Pattern, BNDM, Insensitive=.TRUE.) <br>
+  ---&gt;    CALL Finder%SetPattern(Pattern, BNDM, .TRUE., '<em>') <br>
+ </em><em>Note</em><em>: <br>
+  1. If the length of the pattern is zero, the method just returns without doing anything. <br>
+  2. The optional </em>Insensitive<em> and </em>WildCard* arguments are applicable for the BNDM method only. <br></p>
+      </div>
+    <ul class="list-group">
+        <li class="list-group-item">
+                  <h3>
+    private  subroutine PatternFinder_SetPattern(Finder, Pattern, SearchAlgo, Insensitive, WildCard)  
+</h3>
+
+  <p>To process the specified pattern based on the specified searching algorithm.
+ If the length of the pattern is zero, just return without doing anything.</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(<a href='../type/patternfinder.html'>PatternFinder</a>),
+            </td>
+<td>intent(inout)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Finder</strong></td>
+            <td>
+                <p>'PatternFinder' object</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              character(kind=kChar, len=*),
+            </td>
+<td>intent(in),</td>
+              <td></td>            <td>
+              TARGET
+            </td>
+            <td>::</td>
+            <td><strong>Pattern</strong></td>
+            <td>
+                <p>the pattern</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              integer(kind=kInt32),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>SearchAlgo</strong></td>
+            <td>
+                <p>search algorithm</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              logical,
+            </td>
+<td>intent(in),</td>
+              <td>optional</td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Insensitive</strong></td>
+            <td>
+                <p>true if the pattern is case-insensitive; default is false; only applicable for BNDM algorithm.</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              character(kind=kChar, len=1),
+            </td>
+<td>intent(in),</td>
+              <td>optional</td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>WildCard</strong></td>
+            <td>
+                <p>a wild card character; default is "?"; only applicable for BNDM algorithm.</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+        </li>
+    </ul>
+  </div>
+
+          </div>
+          <div class="row">
+              <div class="card mt-3">
+    <div class="card-header codesum">
+      <span class="anchor" id="boundprocedure-findindex"></span>
+      <h3>
+          procedure, public ::
+  <strong>FindIndex</strong> => PatternFinder_FindIndex
+        
+      </h3>
+    </div>
+      <div class="card-body">
+        
+        <p><strong>Type-Bound Function</strong>: FindIndex <br>
+ <strong>Purpose</strong>:  To find the first occurrence of the (previously specified) <em>pattern</em> within the
+      specified <em>text</em>.  Return an (one-based) index representing the position of the first
+      character of the occurrence found.  Return zero if there is no such pattern found.  If the
+      pattern has not yet been set, return one. <br>
+ <strong>Usage</strong>: <br>
+  ! start searching from the beginning of the text <br>
+  ---&gt;    Index = Finder%FindIndex(Text) <br>
+  ! start searching from the specified position (one-based) of the text <br>
+  ---&gt;    Index = Finder%FindIndex(Text, StartPos) <br></p>
+      </div>
+    <ul class="list-group">
+        <li class="list-group-item">
+                  <h3>
+    private  function PatternFinder_FindIndex(Finder, Text, StartID) result(Index)  
+</h3>
+
+  <p>To return the one-based index of the first occurrence of the pattern string
+ in the text string.  Return zero if there is no such pattern found.  If the
+ pattern has not yet been set, return one. <br>
+ Note: The unset pattern is equivalent to the zero-length pattern.</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(<a href='../type/patternfinder.html'>PatternFinder</a>),
+            </td>
+<td>intent(inout)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Finder</strong></td>
+            <td>
+                <p>'PatternFinder' object</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              character(kind=kChar, len=*),
+            </td>
+<td>intent(in),</td>
+              <td></td>            <td>
+              TARGET
+            </td>
+            <td>::</td>
+            <td><strong>Text</strong></td>
+            <td>
+                <p>the text string</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              integer(kind=kInt32),
+            </td>
+<td>intent(in),</td>
+              <td>optional</td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>StartID</strong></td>
+            <td>
+                <p>(one-based) starting index of the text string;
+ if not present, starting at 1.</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+    <h4>
+    Return Value
+    <small>integer(kind=kInt32)</small>
+    </h4>
+    <p>(one-based) index of the first occurrence;
+ if pattern not found, return 0.</p>
+
+        </li>
+    </ul>
+  </div>
+
+          </div>
+          <div class="row">
+              <div class="card mt-3">
+    <div class="card-header codesum">
+      <span class="anchor" id="boundprocedure-findnext"></span>
+      <h3>
+          procedure, public ::
+  <strong>FindNext</strong> => PatternFinder_FindNext
+        
+      </h3>
+    </div>
+      <div class="card-body">
+        
+        <p><strong>Type-Bound Function</strong>: FindNext <br>
+ <strong>Purpose</strong>:  To find the next occurrence of the (previously specified) <em>pattern</em> within the
+       (previously specified) <em>text</em>. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    Index = Finder%FindNext() <br>
+ <strong>Note</strong>: Must call the <em>SetPattern</em> and <em>FindIndex</em> methods before calling this method. <br></p>
+      </div>
+    <ul class="list-group">
+        <li class="list-group-item">
+                  <h3>
+    private  function PatternFinder_FindNext(Finder) result(Index)  
+</h3>
+
+  <p>To return the one-based index of the next occurrence of the pattern string
+ in the text string.  Return zero if there is no more pattern found.  This
+ routine assumes that the <em>SetPattern</em> and the <em>FindIndex</em> methods have
+ already been called.  If that is not true, return -1. <br></p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(<a href='../type/patternfinder.html'>PatternFinder</a>),
+            </td>
+<td>intent(inout)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Finder</strong></td>
+            <td>
+                <p>'PatternFinder' object</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+    <h4>
+    Return Value
+    <small>integer(kind=kInt32)</small>
+    </h4>
+    <p>(one-based) index of the first occurrence;
+ if pattern not found, return 0.</p>
+
+        </li>
+    </ul>
+  </div>
+
+          </div>
+          <div class="row">
+              <div class="card mt-3">
+    <div class="card-header codesum">
+      <span class="anchor" id="boundprocedure-clear"></span>
+      <h3>
+          procedure, public ::
+  <strong>Clear</strong> => PatternFinder_Clear
+        
+      </h3>
+    </div>
+      <div class="card-body">
+        
+        <p><strong>Type-Bound Subroutine</strong>: Clear <br>
+ <strong>Purpose</strong>:  To reset/clear all components of the <em>PatternFinder</em> object. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    CALL Finder%Clear() <br>
+ <strong>Note</strong>: If the length of the pattern is zero, the method just returns without doing anything. <br></p>
+      </div>
+    <ul class="list-group">
+        <li class="list-group-item">
+                  <h3>
+    private  subroutine PatternFinder_Clear(Finder)  
+</h3>
+
+  <p>To reset the 'PatternFinder' object. <br></p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(<a href='../type/patternfinder.html'>PatternFinder</a>),
+            </td>
+<td>intent(inout)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Finder</strong></td>
+            <td>
+                <p>'PatternFinder' object</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+        </li>
+    </ul>
+  </div>
+
+          </div>
+      </section>
+
+    <section>
+    <h3><span class="anchor" id="src"></span>Source Code</h3>
+    <div class="hl codehilite"><pre><span></span><span class="w">    </span><span class="k">TYPE </span><span class="n">PatternFinder</span>
+<span class="w">        </span><span class="k">PRIVATE</span>
+<span class="w">        </span><span class="c">!% searching algorithm</span>
+<span class="w">        </span><span class="n">tSInt32</span><span class="w">                         </span><span class="kd">::</span><span class="w"> </span><span class="n">Algo</span><span class="w">  </span><span class="o">=</span><span class="w"> </span><span class="n">BoyerMoore</span>
+<span class="w">        </span><span class="c">!% current starting (one-based) index of the pattern</span>
+<span class="w">        </span><span class="n">tIndex</span><span class="w">                          </span><span class="kd">::</span><span class="w"> </span><span class="nb">Index</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0_kIndex</span>
+<span class="w">        </span><span class="c">!% string representing the pattern</span>
+<span class="w">        </span><span class="n">tChar</span><span class="p">,</span><span class="w">              </span><span class="k">POINTER</span><span class="w">     </span><span class="kd">::</span><span class="w"> </span><span class="n">PatTxt</span><span class="p">(:)</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="nb">NULL</span><span class="p">()</span>
+<span class="w">        </span><span class="c">!% string representing the searched text</span>
+<span class="w">        </span><span class="n">tCharLen</span><span class="p">(:),</span><span class="w">        </span><span class="k">POINTER</span><span class="w">     </span><span class="kd">::</span><span class="w"> </span><span class="n">InpTxt</span><span class="w">    </span><span class="o">=&gt;</span><span class="w"> </span><span class="nb">NULL</span><span class="p">()</span>
+<span class="w">        </span><span class="c">!% pattern object containing processed information</span>
+<span class="w">        </span><span class="k">CLASS</span><span class="p">(</span><span class="n">BasePattern</span><span class="p">),</span><span class="w"> </span><span class="k">ALLOCATABLE</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">PatObj</span>
+<span class="w">    </span><span class="k">CONTAINS</span>
+<span class="w">        </span><span class="c">!&gt; **Type-Bound Subroutine**: SetPattern &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Purpose**:  To process the specified pattern based on the specified searching algorithm. &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Usage**: &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!   ---&gt;    CALL Finder%SetPattern(Pattern, SearchAlgo) &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!   ---&gt;    CALL Finder%SetPattern(Pattern, BNDM, WildCard=&#39;.&#39;) &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!   ---&gt;    CALL Finder%SetPattern(Pattern, BNDM, Insensitive=.TRUE.) &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!   ---&gt;    CALL Finder%SetPattern(Pattern, BNDM, .TRUE., &#39;*&#39;) &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Note**: &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!   1. If the length of the pattern is zero, the method just returns without doing anything. &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!   2. The optional *Insensitive* and *WildCard* arguments are applicable for the BNDM method only. &lt;br&gt;</span>
+<span class="w">        </span><span class="k">PROCEDURE</span><span class="w">   </span><span class="kd">::</span><span class="w"> </span><span class="n">SetPattern</span><span class="w">   </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">PatternFinder_SetPattern</span>
+<span class="w">        </span><span class="c">!&gt; **Type-Bound Function**: FindIndex &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Purpose**:  To find the first occurrence of the (previously specified) *pattern* within the</span>
+<span class="w">        </span><span class="c">!       specified *text*.  Return an (one-based) index representing the position of the first</span>
+<span class="w">        </span><span class="c">!       character of the occurrence found.  Return zero if there is no such pattern found.  If the</span>
+<span class="w">        </span><span class="c">!       pattern has not yet been set, return one. &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Usage**: &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!   ! start searching from the beginning of the text &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!   ---&gt;    Index = Finder%FindIndex(Text) &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!   ! start searching from the specified position (one-based) of the text &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!   ---&gt;    Index = Finder%FindIndex(Text, StartPos) &lt;br&gt;</span>
+<span class="w">        </span><span class="k">PROCEDURE</span><span class="w">   </span><span class="kd">::</span><span class="w"> </span><span class="n">FindIndex</span><span class="w">    </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">PatternFinder_FindIndex</span>
+<span class="w">        </span><span class="c">!&gt; **Type-Bound Function**: FindNext &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Purpose**:  To find the next occurrence of the (previously specified) *pattern* within the</span>
+<span class="w">        </span><span class="c">!        (previously specified) *text*. &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Usage**: &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!   ---&gt;    Index = Finder%FindNext() &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Note**: Must call the *SetPattern* and *FindIndex* methods before calling this method. &lt;br&gt;</span>
+<span class="w">        </span><span class="k">PROCEDURE</span><span class="w">   </span><span class="kd">::</span><span class="w"> </span><span class="n">FindNext</span><span class="w">     </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">PatternFinder_FindNext</span>
+<span class="w">        </span><span class="c">!&gt; **Type-Bound Subroutine**: Clear &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Purpose**:  To reset/clear all components of the *PatternFinder* object. &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Usage**: &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!   ---&gt;    CALL Finder%Clear() &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Note**: If the length of the pattern is zero, the method just returns without doing anything. &lt;br&gt;</span>
+<span class="w">        </span><span class="k">PROCEDURE</span><span class="w">   </span><span class="kd">::</span><span class="w"> </span><span class="n">Clear</span><span class="w">        </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">PatternFinder_Clear</span>
+<span class="w">        </span><span class="c">!% To perform finalization of the *PatternFinder* object.</span>
+<span class="w">        </span><span class="k">FINAL</span><span class="w">       </span><span class="kd">::</span><span class="w"> </span><span class="n">PatternFinder_Finalize</span>
+<span class="w">    </span><span class="k">END TYPE </span><span class="n">PatternFinder</span>
+</pre></div>
+
+    </section>
+    
+    </div>
+  </div>
+
+      <hr>
+    </div> <!-- /container -->
+    <footer>
+      <div class="container">
+        <div class="row justify-content-between">
+          <div class="col"><p>eXPerimental Fortran Library (XpfLib) Documentation was developed by Niranama<br>&copy; 2024 
+</p>
+          </div>
+          <div class="col">
+            <p class="text-end">
+              Documentation generated by
+              <a href="https://github.com/Fortran-FOSS-Programmers/ford">FORD</a>
+            </p>
+          </div>
+        </div>
+        <br>
+      </div> <!-- /container -->
+    </footer>
+
+    <!-- Bootstrap core JavaScript -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>    
+
+    <!-- MathJax JavaScript
+             ================================================== -->
+             <!-- Placed at the end of the document so the pages load faster -->
+        <script type="text/x-mathjax-config">
+          MathJax.Hub.Config({
+          TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } },
+          jax: ['input/TeX','input/MathML','output/HTML-CSS'],
+          extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']
+          });
+        </script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+          <script src="../tipuesearch/tipuesearch_content.js"></script>
+          <script src="../tipuesearch/tipuesearch_set.js"></script>
+          <script src="../tipuesearch/tipuesearch.js"></script>
+
+  </body>
+</html>

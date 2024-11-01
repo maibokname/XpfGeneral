@@ -1,0 +1,2570 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta name="description" content="Experimental Fortran Package - High-Precision Numbers">
+    <meta name="author" content="Niranama" >
+    <link rel="icon" href="../favicon.png">
+
+    <title>ApInt32 &ndash; eXPerimental Fortran Library (XpfLib) Documentation </title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link href="../css/pygments.css" rel="stylesheet">
+    <link href="../css/font-awesome.min.css" rel="stylesheet">
+    <link href="../css/local.css" rel="stylesheet">
+      <link  href="../tipuesearch/tipuesearch.css" rel="stylesheet">
+
+    <script src="https://code.jquery.com/jquery-3.7.0.slim.min.js" integrity="sha256-tG5mcZUtJsZvyKAxYLVXrmjKBVLd6VpVccqz/r4ypFE=" crossorigin="anonymous"></script>
+  </head>
+
+  <body>
+
+    <!-- Fixed navbar -->
+    <div class="container-fluid mb-sm-4 mb-xl-2">
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container">
+          <a class="navbar-brand" href="../index.html">eXPerimental Fortran Library (XpfLib) Documentation </a>
+          <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar"
+                  aria-expanded="false" aria-controls="navbar" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon">
+          </button>
+
+          <div id="navbar" class="navbar-collapse collapse">
+            <ul class="navbar-nav">
+                  <li class="nav-item">
+                    <a class="nav-link" href="../lists/files.html">Source Files</a>
+                  </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../lists/modules.html">Modules</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../lists/procedures.html">Procedures</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../lists/types.html">Derived Types</a>
+                </li>
+            </ul>
+              <div class="d-flex align-items-end flex-grow-1">
+                <form action="../search.html" role="search" class="ms-auto">
+                  <input type="text" class="form-control" aria-label="Search" placeholder="Search" name="q" id="tipue_search_input" autocomplete="off" required>
+                </form>
+              </div>
+          </div><!--/.nav-collapse -->
+        </div>
+      </nav>
+    </div>
+
+    <div class="container">
+  <div class="row">
+    <h1>ApInt32
+      <small>Derived Type</small>
+      
+    </h1>
+      <div class="container p-2 mb-4 bg-light border rounded-3">
+    <div class="row align-items-center justify-content-between" id="info-bar">
+      <div class="col">
+        <ul class="list-inline" style="margin-bottom:0px;display:inline">
+
+            <li class="list-inline-item" id="statements"><i class="fa fa-list-ol"></i>
+              <a data-bs-toggle="tooltip"
+                 data-bs-placement="bottom" data-html="true"
+                 title="<p>46.3% of total for derived types.</p>Including implementation: 46 statements, 44.7% of total for derived types.">105 statements</a>
+            </li>
+
+            <li class="list-inline-item" id="source-file">
+              <i class="fa fa-code"></i>
+              <a href="../src/MClass_ApInt32.f90"> Source File</a>
+            </li>
+        </ul>
+      </div>
+      <div class="col">
+        <nav aria-label="breadcrumb">
+          <ol class="breadcrumb justify-content-end mb-0">
+                <li class="breadcrumb-item"><a href='../sourcefile/mclass_apint32.f90.html'>MClass_ApInt32.f90</a></li>
+                <li class="breadcrumb-item"><a href='../module/mclass_apint32.html'>MClass_ApInt32</a></li>
+            <li class="breadcrumb-item active" aria-current="page">ApInt32</li>
+          </ol>
+        </nav>
+      </div>
+    </div>
+  </div>
+  <script>
+    $(function () {
+    $('[data-bs-toggle="tooltip"]').tooltip()
+    })
+  </script>
+
+  </div>
+  
+  <div class="row">
+    <div class="col-md-3 hidden-xs hidden-sm visible-md visible-lg">
+      <div id="sidebar">
+      <h3>Contents</h3>
+  
+  
+  
+      <div class="card mb-4">
+      <a data-bs-toggle="collapse" href="#cons-0"
+         aria-expanded="false" aria-controls="cons-0">
+         <h4 class="card-header bg-primary text-white">Constructor</h4>
+      </a>
+      <div id="cons-0" class="collapse">
+        <div class="list-group list-group-flush">
+            <a class="list-group-item" href="../type/apint32.html#interface-apint32">ApInt32</a>
+        </div>
+      </div>
+    </div>
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+      <div class="card mb-4">
+      <a data-bs-toggle="collapse" href="#boundprocs-0"
+         aria-expanded="false" aria-controls="boundprocs-0">
+         <h4 class="card-header bg-primary text-white">Type-Bound Procedures</h4>
+      </a>
+      <div id="boundprocs-0" class="collapse">
+        <div class="list-group list-group-flush">
+            <a class="list-group-item" href="../type/apint32.html#boundprocedure-increment~2">Increment</a>
+            <a class="list-group-item" href="../type/apint32.html#boundprocedure-decrement~2">Decrement</a>
+            <a class="list-group-item" href="../type/apint32.html#boundprocedure-square~2">Square</a>
+            <a class="list-group-item" href="../type/apint32.html#boundprocedure-compare~2">Compare</a>
+            <a class="list-group-item" href="../type/apint32.html#boundprocedure-lshift~2">LShift</a>
+            <a class="list-group-item" href="../type/apint32.html#boundprocedure-rshift~2">RShift</a>
+            <a class="list-group-item" href="../type/apint32.html#boundprocedure-iszero~2">IsZero</a>
+            <a class="list-group-item" href="../type/apint32.html#boundprocedure-isone~2">IsOne</a>
+            <a class="list-group-item" href="../type/apint32.html#boundprocedure-ispositive~2">IsPositive</a>
+            <a class="list-group-item" href="../type/apint32.html#boundprocedure-isnegative~2">IsNegative</a>
+            <a class="list-group-item" href="../type/apint32.html#boundprocedure-randnum~2">RandNum</a>
+            <a class="list-group-item" href="../type/apint32.html#boundprocedure-copy~2">Copy</a>
+            <a class="list-group-item" href="../type/apint32.html#boundprocedure-display~2">Display</a>
+            <a class="list-group-item" href="../type/apint32.html#boundprocedure-getlength~2">GetLength</a>
+            <a class="list-group-item" href="../type/apint32.html#boundprocedure-add~2">Add</a>
+            <a class="list-group-item" href="../type/apint32.html#boundprocedure-subtract~2">Subtract</a>
+            <a class="list-group-item" href="../type/apint32.html#boundprocedure-multiply~2">Multiply</a>
+            <a class="list-group-item" href="../type/apint32.html#boundprocedure-divide~2">Divide</a>
+            <a class="list-group-item" href="../type/apint32.html#boundprocedure-divmod~2">DivMod</a>
+        </div>
+      </div>
+    </div>
+
+  
+  
+    <div class="card card-primary">
+      <div class="card-header text-left"><h3 class="card-title">Source Code</h3></div>
+      <div class="list-group">
+        <a class="list-group-item" href="../type/apint32.html#src">ApInt32</a>
+      </div>
+    </div>
+
+
+  </div>
+
+    </div>
+    
+    <div class="col-md-9" id='text'>
+      <h2>type, public :: ApInt32</h2>
+    <p><em>ApInt32</em> is a mutable arbitrary-precision signed integer type where
+  its representations are as follows. <br>
+- Base is 2<sup>32</sup>. <br>
+- Magnitude is represented by the 'Digit' array in little-endian order. <br>
+- The 'Length' first 'Digit' count as the <em>ApInt32</em> number (i.e. it is always
+  less than or equal to the size/capacity of the 'Digit' array). <br>
+- Sign is represented by a sign integer (-1 or 1). <br>
+- Internally zero is allowed to have either sign.
+  (Otherwise one would have to remember to check for sign-swap for division,
+  multiplication etc...) <br>
+- Zero can have many forms: <br>
+  -&gt; The most common form of zero has 'Length' = 1 and Digit(0) = 0 (set through
+     ZeroApInt32()). <br>
+  -&gt; If 'Digit' has not yet been allocated or 'Length' is less than 1, the number
+     is considered to be zero. <br></p>
+    <br>
+
+    
+      <section>
+        <h2>Constructor</h2>
+            <div class="card">
+    <div class="card-header bg-light codesum">
+      <span class="anchor" id="interface-apint32"></span>
+      <h3>public        interface <a href='../interface/apint32.html'>ApInt32</a> 
+      </h3>
+    </div>
+      <div class="card-body">
+        <p><strong>Constructor Interface</strong>: ApInt32 <br>
+ <strong>Purpose</strong>:  To construct an ApInt32 number. <br>
+ <strong>Usage</strong>: <br>
+  ! construct ApNum from a magnitude array <br>
+  ---&gt;    ApNum = ApInt32(Sign, MagLen, MagArray) <br>
+  ! construct ApNum from 64-bit intrinsic integer treated as signed <br>
+  ---&gt;    ApNum = ApInt32(I64) <br>
+  ! construct ApNum from 32-bit intrinsic integer treated as unsigned <br>
+  ---&gt;    ApNum = ApInt32(Sign, U32) <br>
+  ! construct ApNum from 128-bit real number <br>
+  ---&gt;    ApNum = ApInt32(R128) <br>
+  ! construct ApNum from a decimal string <br>
+  ---&gt;    ApNum = ApInt32('-123456789098765432101122334455667788990012345')</p>
+      </div>
+    <ul class="list-group">
+          <li class="list-group-item">
+                <h3>
+    private module function Construct_ApInt32(Sign, Length, Digit) result(Big)  
+
+    </h3>
+  <p>To construct the <em>ApInt32</em> number based on the specified 32-bit integer
+ magnitude array and related data. <br>
+ <em>Usage</em>: ApNum = ApInt32(Sign, MagLen, MagArray)</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-sign~9"></span>
+              integer(kind=kInt32),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Sign</strong></td>
+            <td>
+                <p>sign of the number</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-length~10"></span>
+              integer(kind=kInt32),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Length</strong></td>
+            <td>
+                <p>length of the magnitude array</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-digit~6"></span>
+              integer(kind=kInt32),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Digit</strong>(0:Length-1)</td>
+            <td>
+                <p>the magnitude of the number given as a 32-bit integer array where
+ the first element gives the least significant 32 bits (i.e. little
+ endian order)</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+    <h4>
+    Return Value
+    <small>type(<a href='../type/apint32.html'>ApInt32</a>)</small>
+    </h4>
+    <p>the arbitrary-precision integer number</p>
+
+          </li>
+          <li class="list-group-item">
+                <h3>
+    private module function Bytes_To_ApInt32(Sign, Length, Digit) result(Big)  
+
+    </h3>
+  <p>To construct the <em>ApInt32</em> number based on the specified 8-bit integer
+ magnitude array and related data. <br>
+ <em>Usage</em>: ApNum = ApInt32(Sign, MagLen, MagArray)</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-sign~10"></span>
+              integer(kind=kInt32),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Sign</strong></td>
+            <td>
+                <p>sign of the number</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-length~11"></span>
+              integer(kind=kInt32),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Length</strong></td>
+            <td>
+                <p>length of the magnitude array</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-digit~7"></span>
+              integer(kind=kInt8),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Digit</strong>(0:Length-1)</td>
+            <td>
+                <p>the magnitude of the number given as a 8-bit integer array where
+ the first element gives the least significant 8 bits (i.e. little
+ endian order)</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+    <h4>
+    Return Value
+    <small>type(<a href='../type/apint32.html'>ApInt32</a>)</small>
+    </h4>
+    <p>the arbitrary-precision integer number</p>
+
+          </li>
+          <li class="list-group-item">
+                <h3>
+    private module function DecString_To_ApInt32(cStr, ErrFlag, ErrMsg) result(Big)  
+
+    </h3>
+  <p>To construct the <em>ApInt32</em> number based on the specified decimal string. <br>
+ <em>Usage</em>:  <br>
+ ---&gt; ApNum = ApInt32('1234567890987654321011223344') <br>
+ ---&gt; ApNum = ApInt32('-987654321012345678900123123', ErrFlag) <br>
+ ---&gt; ApNum = ApInt32(NumStr, ErrMsg=Message) <br>
+ ---&gt; ApNum = ApInt32(NumStr, ErrFlag, ErrMsg)</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-cstr~3"></span>
+              character(kind=kChar, len=*),
+            </td>
+<td>intent(in),</td>
+              <td></td>            <td>
+              TARGET
+            </td>
+            <td>::</td>
+            <td><strong>cStr</strong></td>
+            <td>
+                <p>character string</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-errflag~3"></span>
+              logical,
+            </td>
+<td>intent(out),</td>
+              <td>optional</td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>ErrFlag</strong></td>
+            <td>
+                <p>true if input is not invalid</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-errmsg~3"></span>
+              character(kind=kChar, len=:),
+            </td>
+<td>intent(out),</td>
+              <td>optional,</td>            <td>
+              ALLOCATABLE
+            </td>
+            <td>::</td>
+            <td><strong>ErrMsg</strong></td>
+            <td>
+                <p>message if input is not invalid</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+    <h4>
+    Return Value
+    <small>type(<a href='../type/apint32.html'>ApInt32</a>)</small>
+    </h4>
+    <p>number</p>
+
+          </li>
+          <li class="list-group-item">
+                <h3>
+    private module function U32_To_ApInt32(Sign, U32) result(Big)  
+
+    </h3>
+  <p>To construct the <em>ApInt32</em> number based on the specified 32-bit unsigned integer. <br>
+ <em>Usage</em>: ApNum = ApInt32(Sign, U32)</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-sign~11"></span>
+              integer(kind=kInt32),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Sign</strong></td>
+            <td>
+                <p>the sign of the number</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-u32~3"></span>
+              integer(kind=kInt32),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>U32</strong></td>
+            <td>
+                <p>the magnitude of the number treated as unsigned</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+    <h4>
+    Return Value
+    <small>type(<a href='../type/apint32.html'>ApInt32</a>)</small>
+    </h4>
+    
+
+          </li>
+          <li class="list-group-item">
+                <h3>
+    private module function U64_To_ApInt32(Sign, U64) result(Big)  
+
+    </h3>
+  <p>To construct the <em>ApInt32</em> number based on the specified 64-bit unsigned integer. <br>
+ <em>Usage</em>: ApNum = ApInt32(Sign, U64)</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-sign~12"></span>
+              integer(kind=kInt32),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Sign</strong></td>
+            <td>
+                <p>the sign of the number</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-u64~3"></span>
+              integer(kind=kInt64),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>U64</strong></td>
+            <td>
+                <p>the magnitude of the number treated as unsigned</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+    <h4>
+    Return Value
+    <small>type(<a href='../type/apint32.html'>ApInt32</a>)</small>
+    </h4>
+    
+
+          </li>
+          <li class="list-group-item">
+                <h3>
+    private module function U128_To_ApInt32(Sign, U128) result(Big)  
+
+    </h3>
+  <p>To construct the <em>ApInt32</em> number based on the specified 128-bit unsigned integer. <br>
+ <em>Usage</em>: ApNum = ApInt32(Sign, U128)</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-sign~13"></span>
+              integer(kind=kInt32),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Sign</strong></td>
+            <td>
+                <p>the sign of the number</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-u128~3"></span>
+              type(UInt128),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>U128</strong></td>
+            <td>
+                <p>the magnitude of the number treated as unsigned</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+    <h4>
+    Return Value
+    <small>type(<a href='../type/apint32.html'>ApInt32</a>)</small>
+    </h4>
+    
+
+          </li>
+          <li class="list-group-item">
+                <h3>
+    private module function I32_To_ApInt32(I32) result(Big)  
+
+    </h3>
+  <p>To construct the <em>ApInt32</em> number based on the specified 32-bit signed integer. <br>
+ <em>Usage</em>: ApNum = ApInt32(I32)</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-i32~3"></span>
+              integer(kind=kInt32),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>I32</strong></td>
+            <td>
+                <p>the 32-bit signed integer</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+    <h4>
+    Return Value
+    <small>type(<a href='../type/apint32.html'>ApInt32</a>)</small>
+    </h4>
+    
+
+          </li>
+          <li class="list-group-item">
+                <h3>
+    private module function I64_To_ApInt32(I64) result(Big)  
+
+    </h3>
+  <p>To construct the <em>ApInt32</em> number based on the specified 64-bit signed integer. <br>
+ <em>Usage</em>: ApNum = ApInt32(I64)</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-i64~3"></span>
+              integer(kind=kInt64),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>I64</strong></td>
+            <td>
+                <p>the 64-bit signed integer</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+    <h4>
+    Return Value
+    <small>type(<a href='../type/apint32.html'>ApInt32</a>)</small>
+    </h4>
+    
+
+          </li>
+          <li class="list-group-item">
+                <h3>
+    private module function I128_To_ApInt32(I128) result(Big)  
+
+    </h3>
+  <p>To construct the <em>ApInt32</em> number based on the specified 128-bit signed integer. <br>
+ <em>Usage</em>: ApNum = ApInt32(I128)</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-i128~3"></span>
+              type(SInt128),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>I128</strong></td>
+            <td>
+                <p>the 128-bit signed integer</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+    <h4>
+    Return Value
+    <small>type(<a href='../type/apint32.html'>ApInt32</a>)</small>
+    </h4>
+    
+
+          </li>
+          <li class="list-group-item">
+                <h3>
+    private module function R32_To_ApInt32(R32) result(Big)  
+
+    </h3>
+  <p>To construct the <em>ApInt32</em> number based on the specified 32-bit real number. <br>
+ <em>Usage</em>: ApNum = ApInt32(R32)</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-r32~2"></span>
+              real(kind=kSingle),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>R32</strong></td>
+            <td>
+                <p>the 32-bit real number</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+    <h4>
+    Return Value
+    <small>type(<a href='../type/apint32.html'>ApInt32</a>)</small>
+    </h4>
+    
+
+          </li>
+          <li class="list-group-item">
+                <h3>
+    private module function R64_To_ApInt32(R64) result(Big)  
+
+    </h3>
+  <p>To construct the <em>ApInt32</em> number based on the specified 64-bit real number. <br>
+ <em>Usage</em>: ApNum = ApInt32(R64)</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-r64~2"></span>
+              real(kind=kDouble),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>R64</strong></td>
+            <td>
+                <p>the 64-bit real number</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+    <h4>
+    Return Value
+    <small>type(<a href='../type/apint32.html'>ApInt32</a>)</small>
+    </h4>
+    
+
+          </li>
+          <li class="list-group-item">
+                <h3>
+    private module function R128_To_ApInt32(R128) result(Big)  
+
+    </h3>
+  <p>To construct the <em>ApInt32</em> number based on the specified 128-bit real number. <br>
+ <em>Usage</em>: ApNum = ApInt32(R128)</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-r128~2"></span>
+              real(kind=kQuad),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>R128</strong></td>
+            <td>
+                <p>the 128-bit real number</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+    <h4>
+    Return Value
+    <small>type(<a href='../type/apint32.html'>ApInt32</a>)</small>
+    </h4>
+    
+
+          </li>
+    </ul>
+  </div>
+
+      </section>
+      <br>
+
+
+      <section>
+        <h2>Type-Bound Procedures</h2>
+          <div class="row">
+              <div class="card mt-3">
+    <div class="card-header codesum">
+      <span class="anchor" id="boundprocedure-increment~2"></span>
+      <h3>
+          procedure, public ::
+  <strong>Increment</strong> => ApInt32_Increment
+        
+      </h3>
+    </div>
+      <div class="card-body">
+        
+        <p><strong>Type-Bound Subroutine</strong>: Increment <br>
+ <strong>Purpose</strong>:  To increase value of the ApInt32 number by one. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    CALL ApNum%Increment()</p>
+      </div>
+    <ul class="list-group">
+        <li class="list-group-item">
+              <h3>interface </h3>
+                  <h3>
+    private module subroutine ApInt32_Increment(Val)  
+</h3>
+
+  <p>To perform addition: Val = Val + 1.</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(<a href='../type/apint32.html'>ApInt32</a>),
+            </td>
+<td>intent(inout)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Val</strong></td>
+            <td>
+                
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+        </li>
+    </ul>
+  </div>
+
+          </div>
+          <div class="row">
+              <div class="card mt-3">
+    <div class="card-header codesum">
+      <span class="anchor" id="boundprocedure-decrement~2"></span>
+      <h3>
+          procedure, public ::
+  <strong>Decrement</strong> => ApInt32_Decrement
+        
+      </h3>
+    </div>
+      <div class="card-body">
+        
+        <p><strong>Type-Bound Subroutine</strong>: Decrement <br>
+ <strong>Purpose</strong>:  To decrease value of the ApInt32 number by one. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    CALL ApNum%Decrement()</p>
+      </div>
+    <ul class="list-group">
+        <li class="list-group-item">
+              <h3>interface </h3>
+                  <h3>
+    private module subroutine ApInt32_Decrement(Val)  
+</h3>
+
+  <p>To perform subtraction: Val = Val - 1.</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(<a href='../type/apint32.html'>ApInt32</a>),
+            </td>
+<td>intent(inout)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Val</strong></td>
+            <td>
+                
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+        </li>
+    </ul>
+  </div>
+
+          </div>
+          <div class="row">
+              <div class="card mt-3">
+    <div class="card-header codesum">
+      <span class="anchor" id="boundprocedure-square~2"></span>
+      <h3>
+          procedure, public ::
+  <strong>Square</strong> => ApInt32_SquareSub
+        
+      </h3>
+    </div>
+      <div class="card-body">
+        
+        <p><strong>Type-Bound Subroutine</strong>: Square <br>
+ <strong>Purpose</strong>:  To return the ApInt32 number (ApInt32) where its value is
+               computed by: ApNum = ApNum * ApNum. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    CALL ApNum%Square()</p>
+      </div>
+    <ul class="list-group">
+        <li class="list-group-item">
+              <h3>interface </h3>
+                  <h3>
+    private module subroutine ApInt32_SquareSub(This)  
+</h3>
+
+  <p>To perform self-multiplication: This = This * This.</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(<a href='../type/apint32.html'>ApInt32</a>),
+            </td>
+<td>intent(inout)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>This</strong></td>
+            <td>
+                
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+        </li>
+    </ul>
+  </div>
+
+          </div>
+          <div class="row">
+              <div class="card mt-3">
+    <div class="card-header codesum">
+      <span class="anchor" id="boundprocedure-compare~2"></span>
+      <h3>
+          procedure, public ::
+  <strong>Compare</strong> => ApInt32_Compare
+        
+      </h3>
+    </div>
+      <div class="card-body">
+        
+        <p><strong>Type-Bound Function</strong>: Compare <br>
+ <strong>Purpose</strong>:  To compare two ApInt32 numbers (LHS and RHS) and return <br>
+  -1 if LHS &lt; RHS, <br>
+   0 if LHS == RHS, or <br>
+   1 if LHS &gt; RHS. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    Flag = LHS%Compare(RHS) <br>
+  ---&gt;    IF (LHS%Compare(RHS) /= 0) DoSomething</p>
+      </div>
+    <ul class="list-group">
+        <li class="list-group-item">
+              <h3>interface </h3>
+                  <h3>
+    private module function ApInt32_Compare(LHS, RHS) result(Flag)  
+</h3>
+
+  <p>To compare two ApInt32 numbers (LHS and RHS) and return <br>
+  -1 if LHS &lt; RHS, <br>
+   0 if LHS == RHS, or <br>
+   1 if LHS &gt; RHS.</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(<a href='../type/apint32.html'>ApInt32</a>),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>LHS</strong></td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              type(<a href='../type/apint32.html'>ApInt32</a>),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>RHS</strong></td>
+            <td>
+                
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+    <h4>
+    Return Value
+    <small>integer(kind=kInt32)</small>
+    </h4>
+    
+
+        </li>
+    </ul>
+  </div>
+
+          </div>
+          <div class="row">
+              <div class="card mt-3">
+    <div class="card-header codesum">
+      <span class="anchor" id="boundprocedure-lshift~2"></span>
+      <h3>
+          procedure, public ::
+  <strong>LShift</strong> => ApInt32_LeftShift
+        
+      </h3>
+    </div>
+      <div class="card-body">
+        
+        <p><strong>Type-Bound Subroutine</strong>: LShift <br>
+ <strong>Purpose</strong>:  To perform logical left shift where ShiftPos is non-negative. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    CALL ApNum%LShift(112)</p>
+      </div>
+    <ul class="list-group">
+        <li class="list-group-item">
+              <h3>interface </h3>
+                  <h3>
+    private module subroutine ApInt32_LeftShift(Val, ShiftPos)  
+</h3>
+
+  <p>To perform logical left shift with 0 &lt;= ShiftPos &lt;= 128.</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(<a href='../type/apint32.html'>ApInt32</a>),
+            </td>
+<td>intent(inout)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Val</strong></td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              integer(kind=kInt32),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>ShiftPos</strong></td>
+            <td>
+                
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+        </li>
+    </ul>
+  </div>
+
+          </div>
+          <div class="row">
+              <div class="card mt-3">
+    <div class="card-header codesum">
+      <span class="anchor" id="boundprocedure-rshift~2"></span>
+      <h3>
+          procedure, public ::
+  <strong>RShift</strong> => ApInt32_RightShift
+        
+      </h3>
+    </div>
+      <div class="card-body">
+        
+        <p><strong>Type-Bound Subroutine</strong>: RShift <br>
+ <strong>Purpose</strong>:  To perform logical right shift where ShiftPos is non-negative. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    CALL ApNum%RShift(112)</p>
+      </div>
+    <ul class="list-group">
+        <li class="list-group-item">
+              <h3>interface </h3>
+                  <h3>
+    private module subroutine ApInt32_RightShift(Val, ShiftPos)  
+</h3>
+
+  <p>To perform logical right shift with 0 &lt;= ShiftPos &lt;= 128.</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(<a href='../type/apint32.html'>ApInt32</a>),
+            </td>
+<td>intent(inout)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Val</strong></td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              integer(kind=kInt32),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>ShiftPos</strong></td>
+            <td>
+                
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+        </li>
+    </ul>
+  </div>
+
+          </div>
+          <div class="row">
+              <div class="card mt-3">
+    <div class="card-header codesum">
+      <span class="anchor" id="boundprocedure-iszero~2"></span>
+      <h3>
+          procedure, public ::
+  <strong>IsZero</strong> => ApInt32_Is_Zero_II
+        
+      </h3>
+    </div>
+      <div class="card-body">
+        
+        <p><strong>Type-Bound Function</strong>: IsZero <br>
+ <strong>Purpose</strong>:  To check whether the ApInt32 number has value of zero or not. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    Flag = ApNum%IsZero() <br>
+  ---&gt;    IF (.NOT.ApNum%IsZero()) DoSomething</p>
+      </div>
+    <ul class="list-group">
+        <li class="list-group-item">
+              <h3>interface </h3>
+                  <h3>
+    private module function ApInt32_Is_Zero_II(Big) result(Flag)  
+</h3>
+
+  <p>To check whether the ApInt32 number has value of zero or not.</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(<a href='../type/apint32.html'>ApInt32</a>),
+            </td>
+<td>intent(inout)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Big</strong></td>
+            <td>
+                
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+    <h4>
+    Return Value
+    <small>logical</small>
+    </h4>
+    
+
+        </li>
+    </ul>
+  </div>
+
+          </div>
+          <div class="row">
+              <div class="card mt-3">
+    <div class="card-header codesum">
+      <span class="anchor" id="boundprocedure-isone~2"></span>
+      <h3>
+          procedure, public ::
+  <strong>IsOne</strong> => ApInt32_Is_One
+        
+      </h3>
+    </div>
+      <div class="card-body">
+        
+        <p><strong>Type-Bound Function</strong>: IsOne <br>
+ <strong>Purpose</strong>:  To check whether the ApInt32 number has value of one or not. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    Flag = ApNum%IsOne() <br>
+  ---&gt;    IF (.NOT.ApNum%IsOne()) DoSomething</p>
+      </div>
+    <ul class="list-group">
+        <li class="list-group-item">
+              <h3>interface </h3>
+                  <h3>
+    private module function ApInt32_Is_One(Big) result(Flag)  
+</h3>
+
+  <p>To check whether the ApInt32 number has value of one or not.</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(<a href='../type/apint32.html'>ApInt32</a>),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Big</strong></td>
+            <td>
+                
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+    <h4>
+    Return Value
+    <small>logical</small>
+    </h4>
+    
+
+        </li>
+    </ul>
+  </div>
+
+          </div>
+          <div class="row">
+              <div class="card mt-3">
+    <div class="card-header codesum">
+      <span class="anchor" id="boundprocedure-ispositive~2"></span>
+      <h3>
+          procedure, public ::
+  <strong>IsPositive</strong> => ApInt32_Is_Positive
+        
+      </h3>
+    </div>
+      <div class="card-body">
+        
+        <p><strong>Type-Bound Function</strong>: IsPositive <br>
+ <strong>Purpose</strong>:  To check whether the ApInt32 number has positive value or not. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    Flag = ApNum%IsPositive() <br>
+  ---&gt;    IF (.NOT.ApNum%IsPositive()) DoSomething</p>
+      </div>
+    <ul class="list-group">
+        <li class="list-group-item">
+              <h3>interface </h3>
+                  <h3>
+    private module function ApInt32_Is_Positive(Big) result(Flag)  
+</h3>
+
+  <p>To check whether the ApInt32 number has positive value or not.</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(<a href='../type/apint32.html'>ApInt32</a>),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Big</strong></td>
+            <td>
+                
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+    <h4>
+    Return Value
+    <small>logical</small>
+    </h4>
+    
+
+        </li>
+    </ul>
+  </div>
+
+          </div>
+          <div class="row">
+              <div class="card mt-3">
+    <div class="card-header codesum">
+      <span class="anchor" id="boundprocedure-isnegative~2"></span>
+      <h3>
+          procedure, public ::
+  <strong>IsNegative</strong> => ApInt32_Is_Negative
+        
+      </h3>
+    </div>
+      <div class="card-body">
+        
+        <p><strong>Type-Bound Function</strong>: IsNegative <br>
+ <strong>Purpose</strong>:  To check whether the ApInt32 number has negative value or not. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    Flag = ApNum%IsNegative() <br>
+  ---&gt;    IF (.NOT.ApNum%IsNegative()) DoSomething</p>
+      </div>
+    <ul class="list-group">
+        <li class="list-group-item">
+              <h3>interface </h3>
+                  <h3>
+    private module function ApInt32_Is_Negative(Big) result(Flag)  
+</h3>
+
+  <p>To check whether the ApInt32 number has negative value or not.</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(<a href='../type/apint32.html'>ApInt32</a>),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Big</strong></td>
+            <td>
+                
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+    <h4>
+    Return Value
+    <small>logical</small>
+    </h4>
+    
+
+        </li>
+    </ul>
+  </div>
+
+          </div>
+          <div class="row">
+              <div class="card mt-3">
+    <div class="card-header codesum">
+      <span class="anchor" id="boundprocedure-randnum~2"></span>
+      <h3>
+          procedure, public ::
+  <strong>RandNum</strong> => ApInt32_RandNumSub
+        
+      </h3>
+    </div>
+      <div class="card-body">
+        
+        <p><strong>Type-Bound Subroutine</strong>: RandNum <br>
+ <strong>Purpose</strong>:  To generate the ApIn64 number with random value. <br>
+ <strong>Usage</strong>: <br>
+  ! generate random number with default settings <br>
+  ---&gt;    CALL ApNum%RandNum() <br>
+  ! generate random number with specified PRNG <br>
+  ---&gt;    CALL ApNum%RandNum(PRNG) <br>
+  ! generate random number with negative value <br>
+  ---&gt;    CALL ApNum%RandNum(Positive=.FALSE.) <br>
+  ! generate random number with specified length of magnitude array <br>
+  ---&gt;    CALL ApNum%RandNum(Length=MagLen)</p>
+      </div>
+    <ul class="list-group">
+        <li class="list-group-item">
+              <h3>interface </h3>
+                  <h3>
+    private module subroutine ApInt32_RandNumSub(BigRnd, Prng, Positive, Length)  
+</h3>
+
+  <p>To generate the ApIn64 number with random value.</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(<a href='../type/apint32.html'>ApInt32</a>),
+            </td>
+<td>intent(out)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>BigRnd</strong></td>
+            <td>
+                <p>the ApInt32 number with random value</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(BaseRNG),
+            </td>
+<td>intent(inout),</td>
+              <td>optional,</td>            <td>
+              TARGET
+            </td>
+            <td>::</td>
+            <td><strong>Prng</strong></td>
+            <td>
+                <p>pseudo-random number generator</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              logical,
+            </td>
+<td>intent(in),</td>
+              <td>optional</td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Positive</strong></td>
+            <td>
+                <p>flag indicating whether the number has positive value or not</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              integer(kind=kInt32),
+            </td>
+<td>intent(in),</td>
+              <td>optional</td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Length</strong></td>
+            <td>
+                <p>number indicating the length of magnitude array</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+        </li>
+    </ul>
+  </div>
+
+          </div>
+          <div class="row">
+              <div class="card mt-3">
+    <div class="card-header codesum">
+      <span class="anchor" id="boundprocedure-copy~2"></span>
+      <h3>
+          procedure, public ::
+  <strong>Copy</strong> => ApInt32_Copy
+        
+      </h3>
+    </div>
+      <div class="card-body">
+        
+        <p><strong>Type-Bound Function</strong>: Copy <br>
+ <strong>Purpose</strong>:  To make a copy of the ApInt32 number. <br>
+ <strong>Usage</strong>: <br>
+  ! make a copy of the ApInt32 number <br>
+  ---&gt;    DstApNum = SrcApNum%Copy() <br>
+  ! make a copy of the ApInt32 number with the specified capacity
+  (size of magnitude array) of the destination number <br>
+  ---&gt;    DstApNum = SrcApNum%Copy(DstCap)</p>
+      </div>
+    <ul class="list-group">
+        <li class="list-group-item">
+              <h3>interface </h3>
+                  <h3>
+    private module function ApInt32_Copy(Source, Capacity) result(Destination)  
+</h3>
+
+  <p>To make a copy of the ApInt32 number.</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(<a href='../type/apint32.html'>ApInt32</a>),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Source</strong></td>
+            <td>
+                <p>the source number</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              integer(kind=kInt32),
+            </td>
+<td>intent(in),</td>
+              <td>optional</td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Capacity</strong></td>
+            <td>
+                <p>capacity (size of magnitude array) of the destination number <br>
+ if specified, must be greater than capacity of the source number</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+    <h4>
+    Return Value
+    <small>type(<a href='../type/apint32.html'>ApInt32</a>)</small>
+    </h4>
+    <p>the destination number</p>
+
+        </li>
+    </ul>
+  </div>
+
+          </div>
+          <div class="row">
+              <div class="card mt-3">
+    <div class="card-header codesum">
+      <span class="anchor" id="boundprocedure-display~2"></span>
+      <h3>
+          procedure, public ::
+  <strong>Display</strong> => ApInt32_Write
+        
+      </h3>
+    </div>
+      <div class="card-body">
+        
+        <p><strong>Type-Bound Subroutine</strong>: Display <br>
+ <strong>Purpose</strong>:  To write/display the 'ApInt32' number to the screen (or the specified unit). <br>
+ <strong>Usage</strong>: <br>
+  ! To display (signed) value of ApNum as a decimal string to the screen <br>
+  ---&gt;    CALL ApNum%Display() <br>
+  ! To display (signed) value of ApNum as a decimal string to the output logical unit <br>
+  ---&gt;    CALL ApNum%Display(11) <br>
+  ! To display (signed) value of ApNum as a decimal string to the output logical unit <br>
+  with input/output status and message <br>
+  ---&gt;    CALL ApNum%Display(11, IOStat, IOMsg) <br>
+  ! To display (signed) values of components of ApNum as a decimal string to the screen <br>
+  ---&gt;    CALL ApNum%Display(ShowComponent=.TRUE.) <br>
+  ! To display (signed) value of ApNum as a decimal string to the screen with a prefix string <br>
+  ---&gt;    CALL ApNum%Display(Prefix='Signed value of ApNum')</p>
+      </div>
+    <ul class="list-group">
+        <li class="list-group-item">
+              <h3>interface </h3>
+                  <h3>
+    private module subroutine ApInt32_Write(Big, Unit, IOStat, IOMsg, ShowComponent, Prefix)  
+</h3>
+
+  <p>To write the ApInt32 number to the screen (or the specified unit).</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(<a href='../type/apint32.html'>ApInt32</a>),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Big</strong></td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              integer(kind=kInt32),
+            </td>
+<td>intent(in),</td>
+              <td>optional</td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Unit</strong></td>
+            <td>
+                <p>output logical unit</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              integer(kind=kInt32),
+            </td>
+<td>intent(out),</td>
+              <td>optional</td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>IOStat</strong></td>
+            <td>
+                <p>io stat</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              character(kind=kChar, len=*),
+            </td>
+<td>intent(out),</td>
+              <td>optional</td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>IOMsg</strong></td>
+            <td>
+                <p>io message</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              logical,
+            </td>
+<td>intent(in),</td>
+              <td>optional</td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>ShowComponent</strong></td>
+            <td>
+                <p>flag indicating whether to write the upper and lower components. <br>
+- If flag is present and true, write components of the object. <br>
+- Otherwise, write the object as a decimal string.</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              character(kind=kChar, len=*),
+            </td>
+<td>intent(in),</td>
+              <td>optional</td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Prefix</strong></td>
+            <td>
+                <p>prefix string</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+        </li>
+    </ul>
+  </div>
+
+          </div>
+          <div class="row">
+              <div class="card mt-3">
+    <div class="card-header codesum">
+      <span class="anchor" id="boundprocedure-getlength~2"></span>
+      <h3>
+          procedure, public ::
+  <strong>GetLength</strong> => ApInt32_GetLength
+        
+      </h3>
+    </div>
+      <div class="card-body">
+        
+        <p><strong>Type-Bound Function</strong>: GetLength <br>
+ <strong>Purpose</strong>:  To return the length of the magnitude array (the number of
+               digits counted as the ApNum number). <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    MagLen = ApNum%GetLength()</p>
+      </div>
+    <ul class="list-group">
+        <li class="list-group-item">
+              <h3>interface </h3>
+                  <h3>
+    private module function ApInt32_GetLength(Num) result(Length)  
+</h3>
+
+  <p>To return the number of digits counted as the ApNum number.</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(<a href='../type/apint32.html'>ApInt32</a>),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Num</strong></td>
+            <td>
+                
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+    <h4>
+    Return Value
+    <small>integer(kind=kInt32)</small>
+    </h4>
+    <p>the number of digits counted</p>
+
+        </li>
+    </ul>
+  </div>
+
+          </div>
+          <div class="row">
+              <div class="card mt-3">
+    <div class="card-header codesum">
+      <span class="anchor" id="boundprocedure-add~2"></span>
+      <h3>
+          generic, public ::
+  <strong>Add</strong> => ApInt32_Add_I32, ApInt32_Add_I64, ApInt32_Add_I128, ApInt32_Add_ApInt32
+        
+      </h3>
+    </div>
+      <div class="card-body">
+        
+        <p><strong>Type-Bound Subroutine</strong>: Add <br>
+ <strong>Purpose</strong>:  To perform an addition: This = This + Other. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    CALL This%Add(Other)</p>
+      </div>
+    <ul class="list-group">
+        <li class="list-group-item">
+                  <h3>
+    private  interface ApInt32_Add_I32()  
+</h3>
+
+  
+
+  <h4>Arguments</h4>
+    <em>None</em>
+
+        </li>
+        <li class="list-group-item">
+                  <h3>
+    private  interface ApInt32_Add_I64()  
+</h3>
+
+  
+
+  <h4>Arguments</h4>
+    <em>None</em>
+
+        </li>
+        <li class="list-group-item">
+                  <h3>
+    private  interface ApInt32_Add_I128()  
+</h3>
+
+  
+
+  <h4>Arguments</h4>
+    <em>None</em>
+
+        </li>
+        <li class="list-group-item">
+                  <h3>
+    private  interface ApInt32_Add_ApInt32()  
+</h3>
+
+  
+
+  <h4>Arguments</h4>
+    <em>None</em>
+
+        </li>
+    </ul>
+  </div>
+
+          </div>
+          <div class="row">
+              <div class="card mt-3">
+    <div class="card-header codesum">
+      <span class="anchor" id="boundprocedure-subtract~2"></span>
+      <h3>
+          generic, public ::
+  <strong>Subtract</strong> => ApInt32_Subtract_I32, ApInt32_Subtract_I64, ApInt32_Subtract_I128, ApInt32_Subtract_ApInt32
+        
+      </h3>
+    </div>
+      <div class="card-body">
+        
+        <p><strong>Type-Bound Subroutine</strong>: Subtract <br>
+ <strong>Purpose</strong>:  To perform a subtraction: This = This - Other. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    CALL This%Subtract(Other)</p>
+      </div>
+    <ul class="list-group">
+        <li class="list-group-item">
+                  <h3>
+    private  interface ApInt32_Subtract_I32()  
+</h3>
+
+  
+
+  <h4>Arguments</h4>
+    <em>None</em>
+
+        </li>
+        <li class="list-group-item">
+                  <h3>
+    private  interface ApInt32_Subtract_I64()  
+</h3>
+
+  
+
+  <h4>Arguments</h4>
+    <em>None</em>
+
+        </li>
+        <li class="list-group-item">
+                  <h3>
+    private  interface ApInt32_Subtract_I128()  
+</h3>
+
+  
+
+  <h4>Arguments</h4>
+    <em>None</em>
+
+        </li>
+        <li class="list-group-item">
+                  <h3>
+    private  interface ApInt32_Subtract_ApInt32()  
+</h3>
+
+  
+
+  <h4>Arguments</h4>
+    <em>None</em>
+
+        </li>
+    </ul>
+  </div>
+
+          </div>
+          <div class="row">
+              <div class="card mt-3">
+    <div class="card-header codesum">
+      <span class="anchor" id="boundprocedure-multiply~2"></span>
+      <h3>
+          generic, public ::
+  <strong>Multiply</strong> => ApInt32_Times_I32, ApInt32_Times_I64, ApInt32_Times_I128, ApInt32_Times_ApInt32
+        
+      </h3>
+    </div>
+      <div class="card-body">
+        
+        <p><strong>Type-Bound Subroutine</strong>: Multiply <br>
+ <strong>Purpose</strong>:  To perform a multiplication: This = This * Other. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    CALL This%Multiply(Other)</p>
+      </div>
+    <ul class="list-group">
+        <li class="list-group-item">
+                  <h3>
+    private  interface ApInt32_Times_I32()  
+</h3>
+
+  
+
+  <h4>Arguments</h4>
+    <em>None</em>
+
+        </li>
+        <li class="list-group-item">
+                  <h3>
+    private  interface ApInt32_Times_I64()  
+</h3>
+
+  
+
+  <h4>Arguments</h4>
+    <em>None</em>
+
+        </li>
+        <li class="list-group-item">
+                  <h3>
+    private  interface ApInt32_Times_I128()  
+</h3>
+
+  
+
+  <h4>Arguments</h4>
+    <em>None</em>
+
+        </li>
+        <li class="list-group-item">
+                  <h3>
+    private  interface ApInt32_Times_ApInt32()  
+</h3>
+
+  
+
+  <h4>Arguments</h4>
+    <em>None</em>
+
+        </li>
+    </ul>
+  </div>
+
+          </div>
+          <div class="row">
+              <div class="card mt-3">
+    <div class="card-header codesum">
+      <span class="anchor" id="boundprocedure-divide~2"></span>
+      <h3>
+          generic, public ::
+  <strong>Divide</strong> => ApInt32_Over_I32, ApInt32_Over_I64, ApInt32_Over_I128, ApInt32_Over_ApInt32
+        
+      </h3>
+    </div>
+      <div class="card-body">
+        
+        <p><strong>Type-Bound Subroutine</strong>: Divide <br>
+ <strong>Purpose</strong>:  To perform a division: This = This / Other.  Optionally,
+               return the remainder if present. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    CALL This%Divide(Other) <br>
+  ---&gt;    CALL This%Divide(Other, Remainder)</p>
+      </div>
+    <ul class="list-group">
+        <li class="list-group-item">
+                  <h3>
+    private  interface ApInt32_Over_I32()  
+</h3>
+
+  
+
+  <h4>Arguments</h4>
+    <em>None</em>
+
+        </li>
+        <li class="list-group-item">
+                  <h3>
+    private  interface ApInt32_Over_I64()  
+</h3>
+
+  
+
+  <h4>Arguments</h4>
+    <em>None</em>
+
+        </li>
+        <li class="list-group-item">
+                  <h3>
+    private  interface ApInt32_Over_I128()  
+</h3>
+
+  
+
+  <h4>Arguments</h4>
+    <em>None</em>
+
+        </li>
+        <li class="list-group-item">
+                  <h3>
+    private  interface ApInt32_Over_ApInt32()  
+</h3>
+
+  
+
+  <h4>Arguments</h4>
+    <em>None</em>
+
+        </li>
+    </ul>
+  </div>
+
+          </div>
+          <div class="row">
+              <div class="card mt-3">
+    <div class="card-header codesum">
+      <span class="anchor" id="boundprocedure-divmod~2"></span>
+      <h3>
+          generic, public ::
+  <strong>DivMod</strong> => ApInt32_DivMod_I32, ApInt32_DivMod_I64, ApInt32_DivMod_I128, ApInt32_DivMod_ApInt32
+        
+      </h3>
+    </div>
+      <div class="card-body">
+        
+        <p><strong>Type-Bound Subroutine</strong>: DivMod <br>
+ <strong>Purpose</strong>:  To perform a division and return both quotient and remainder. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    CALL Numerator%DivMod(Denominator, Quotient, Remainder)</p>
+      </div>
+    <ul class="list-group">
+        <li class="list-group-item">
+                  <h3>
+    private  interface ApInt32_DivMod_I32()  
+</h3>
+
+  
+
+  <h4>Arguments</h4>
+    <em>None</em>
+
+        </li>
+        <li class="list-group-item">
+                  <h3>
+    private  interface ApInt32_DivMod_I64()  
+</h3>
+
+  
+
+  <h4>Arguments</h4>
+    <em>None</em>
+
+        </li>
+        <li class="list-group-item">
+                  <h3>
+    private  interface ApInt32_DivMod_I128()  
+</h3>
+
+  
+
+  <h4>Arguments</h4>
+    <em>None</em>
+
+        </li>
+        <li class="list-group-item">
+                  <h3>
+    private  interface ApInt32_DivMod_ApInt32()  
+</h3>
+
+  
+
+  <h4>Arguments</h4>
+    <em>None</em>
+
+        </li>
+    </ul>
+  </div>
+
+          </div>
+      </section>
+
+    <section>
+    <h3><span class="anchor" id="src"></span>Source Code</h3>
+    <div class="hl codehilite"><pre><span></span><span class="w">    </span><span class="k">TYPE </span><span class="n">ApInt32</span>
+<span class="w">        </span><span class="k">PRIVATE</span>
+<span class="w">        </span><span class="c">!&gt; The sign of this number. &lt;br&gt;</span>
+<span class="w">        </span><span class="c">! -&gt; +1 for positive numbers and -1 for negative numbers. &lt;br&gt;</span>
+<span class="w">        </span><span class="c">! -&gt; Zero can have either sign.</span>
+<span class="w">        </span><span class="n">tSInt32</span><span class="w">                 </span><span class="kd">::</span><span class="w"> </span><span class="nb">Sign</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span>
+<span class="w">        </span><span class="c">!% The number of digits of the number (in base 2&lt;sup&gt;64&lt;/sup&gt;).</span>
+<span class="w">        </span><span class="n">tIndex</span><span class="w">                  </span><span class="kd">::</span><span class="w"> </span><span class="n">Length</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0_kIndex</span>
+<span class="w">        </span><span class="c">!&gt; The digits of the number, i.e., the magnitude array. &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  Values are treated as unsigned integer</span>
+<span class="w">        </span><span class="n">tUInt32</span><span class="p">,</span><span class="w"> </span><span class="k">ALLOCATABLE</span><span class="w">    </span><span class="kd">::</span><span class="w"> </span><span class="n">Digit</span><span class="p">(:)</span>
+<span class="w">    </span><span class="k">CONTAINS</span>
+<span class="w">        </span><span class="c">! ---------------------------------------------------------------------</span>
+<span class="w">        </span><span class="c">! -----                 Private Procedures                        -----</span>
+<span class="w">        </span><span class="c">! ---------------------------------------------------------------------</span>
+<span class="w">        </span><span class="k">PROCEDURE</span><span class="p">,</span><span class="w"> </span><span class="k">PRIVATE</span><span class="w">  </span><span class="kd">::</span><span class="w"> </span><span class="n">ApInt32_Add_I32</span>
+<span class="w">        </span><span class="k">PROCEDURE</span><span class="p">,</span><span class="w"> </span><span class="k">PRIVATE</span><span class="w">  </span><span class="kd">::</span><span class="w"> </span><span class="n">ApInt32_Add_I64</span>
+<span class="w">        </span><span class="k">PROCEDURE</span><span class="p">,</span><span class="w"> </span><span class="k">PRIVATE</span><span class="w">  </span><span class="kd">::</span><span class="w"> </span><span class="n">ApInt32_Add_I128</span>
+<span class="w">        </span><span class="k">PROCEDURE</span><span class="p">,</span><span class="w"> </span><span class="k">PRIVATE</span><span class="w">  </span><span class="kd">::</span><span class="w"> </span><span class="n">ApInt32_Add_ApInt32</span>
+<span class="w">        </span><span class="k">PROCEDURE</span><span class="p">,</span><span class="w"> </span><span class="k">PRIVATE</span><span class="w">  </span><span class="kd">::</span><span class="w"> </span><span class="n">ApInt32_Subtract_I32</span>
+<span class="w">        </span><span class="k">PROCEDURE</span><span class="p">,</span><span class="w"> </span><span class="k">PRIVATE</span><span class="w">  </span><span class="kd">::</span><span class="w"> </span><span class="n">ApInt32_Subtract_I64</span>
+<span class="w">        </span><span class="k">PROCEDURE</span><span class="p">,</span><span class="w"> </span><span class="k">PRIVATE</span><span class="w">  </span><span class="kd">::</span><span class="w"> </span><span class="n">ApInt32_Subtract_I128</span>
+<span class="w">        </span><span class="k">PROCEDURE</span><span class="p">,</span><span class="w"> </span><span class="k">PRIVATE</span><span class="w">  </span><span class="kd">::</span><span class="w"> </span><span class="n">ApInt32_Subtract_ApInt32</span>
+<span class="w">        </span><span class="k">PROCEDURE</span><span class="p">,</span><span class="w"> </span><span class="k">PRIVATE</span><span class="w">  </span><span class="kd">::</span><span class="w"> </span><span class="n">ApInt32_Times_I32</span>
+<span class="w">        </span><span class="k">PROCEDURE</span><span class="p">,</span><span class="w"> </span><span class="k">PRIVATE</span><span class="w">  </span><span class="kd">::</span><span class="w"> </span><span class="n">ApInt32_Times_I64</span>
+<span class="w">        </span><span class="k">PROCEDURE</span><span class="p">,</span><span class="w"> </span><span class="k">PRIVATE</span><span class="w">  </span><span class="kd">::</span><span class="w"> </span><span class="n">ApInt32_Times_I128</span>
+<span class="w">        </span><span class="k">PROCEDURE</span><span class="p">,</span><span class="w"> </span><span class="k">PRIVATE</span><span class="w">  </span><span class="kd">::</span><span class="w"> </span><span class="n">ApInt32_Times_ApInt32</span>
+<span class="w">        </span><span class="k">PROCEDURE</span><span class="p">,</span><span class="w"> </span><span class="k">PRIVATE</span><span class="w">  </span><span class="kd">::</span><span class="w"> </span><span class="n">ApInt32_Over_I32</span>
+<span class="w">        </span><span class="k">PROCEDURE</span><span class="p">,</span><span class="w"> </span><span class="k">PRIVATE</span><span class="w">  </span><span class="kd">::</span><span class="w"> </span><span class="n">ApInt32_Over_I64</span>
+<span class="w">        </span><span class="k">PROCEDURE</span><span class="p">,</span><span class="w"> </span><span class="k">PRIVATE</span><span class="w">  </span><span class="kd">::</span><span class="w"> </span><span class="n">ApInt32_Over_I128</span>
+<span class="w">        </span><span class="k">PROCEDURE</span><span class="p">,</span><span class="w"> </span><span class="k">PRIVATE</span><span class="w">  </span><span class="kd">::</span><span class="w"> </span><span class="n">ApInt32_Over_ApInt32</span>
+<span class="w">        </span><span class="k">PROCEDURE</span><span class="p">,</span><span class="w"> </span><span class="k">PRIVATE</span><span class="w">  </span><span class="kd">::</span><span class="w"> </span><span class="n">ApInt32_DivMod_I32</span>
+<span class="w">        </span><span class="k">PROCEDURE</span><span class="p">,</span><span class="w"> </span><span class="k">PRIVATE</span><span class="w">  </span><span class="kd">::</span><span class="w"> </span><span class="n">ApInt32_DivMod_I64</span>
+<span class="w">        </span><span class="k">PROCEDURE</span><span class="p">,</span><span class="w"> </span><span class="k">PRIVATE</span><span class="w">  </span><span class="kd">::</span><span class="w"> </span><span class="n">ApInt32_DivMod_I128</span>
+<span class="w">        </span><span class="k">PROCEDURE</span><span class="p">,</span><span class="w"> </span><span class="k">PRIVATE</span><span class="w">  </span><span class="kd">::</span><span class="w"> </span><span class="n">ApInt32_DivMod_ApInt32</span>
+<span class="w">        </span><span class="c">! ---------------------------------------------------------------------</span>
+<span class="w">        </span><span class="c">! -----                 Public Procedures                         -----</span>
+<span class="w">        </span><span class="c">! ---------------------------------------------------------------------</span>
+<span class="w">        </span><span class="c">!&gt; **Type-Bound Subroutine**: Increment &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Purpose**:  To increase value of the ApInt32 number by one. &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Usage**: &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!   ---&gt;    CALL ApNum%Increment()</span>
+<span class="w">        </span><span class="k">PROCEDURE</span><span class="w">   </span><span class="kd">::</span><span class="w"> </span><span class="n">Increment</span><span class="w">    </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">ApInt32_Increment</span>
+<span class="w">        </span><span class="c">!&gt; **Type-Bound Subroutine**: Decrement &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Purpose**:  To decrease value of the ApInt32 number by one. &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Usage**: &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!   ---&gt;    CALL ApNum%Decrement()</span>
+<span class="w">        </span><span class="k">PROCEDURE</span><span class="w">   </span><span class="kd">::</span><span class="w"> </span><span class="n">Decrement</span><span class="w">    </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">ApInt32_Decrement</span>
+<span class="w">        </span><span class="c">!&gt; **Type-Bound Subroutine**: Square &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Purpose**:  To return the ApInt32 number (ApInt32) where its value is</span>
+<span class="w">        </span><span class="c">!                computed by: ApNum = ApNum * ApNum. &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Usage**: &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!   ---&gt;    CALL ApNum%Square()</span>
+<span class="w">        </span><span class="k">PROCEDURE</span><span class="w">   </span><span class="kd">::</span><span class="w"> </span><span class="n">Square</span><span class="w">       </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">ApInt32_SquareSub</span>
+<span class="w">        </span><span class="c">!&gt; **Type-Bound Function**: Compare &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Purpose**:  To compare two ApInt32 numbers (LHS and RHS) and return &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!   -1 if LHS &lt; RHS, &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!    0 if LHS == RHS, or &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!    1 if LHS &gt; RHS. &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Usage**: &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!   ---&gt;    Flag = LHS%Compare(RHS) &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!   ---&gt;    IF (LHS%Compare(RHS) /= 0) DoSomething</span>
+<span class="w">        </span><span class="k">PROCEDURE</span><span class="w">   </span><span class="kd">::</span><span class="w"> </span><span class="n">Compare</span><span class="w">      </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">ApInt32_Compare</span>
+<span class="w">        </span><span class="c">!&gt; **Type-Bound Subroutine**: LShift &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Purpose**:  To perform logical left shift where ShiftPos is non-negative. &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Usage**: &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!   ---&gt;    CALL ApNum%LShift(112)</span>
+<span class="w">        </span><span class="k">PROCEDURE</span><span class="w">   </span><span class="kd">::</span><span class="w"> </span><span class="nb">LShift</span><span class="w">       </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">ApInt32_LeftShift</span>
+<span class="w">        </span><span class="c">!&gt; **Type-Bound Subroutine**: RShift &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Purpose**:  To perform logical right shift where ShiftPos is non-negative. &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Usage**: &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!   ---&gt;    CALL ApNum%RShift(112)</span>
+<span class="w">        </span><span class="k">PROCEDURE</span><span class="w">   </span><span class="kd">::</span><span class="w"> </span><span class="nb">RShift</span><span class="w">       </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">ApInt32_RightShift</span>
+<span class="w">        </span><span class="c">!&gt; **Type-Bound Function**: IsZero &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Purpose**:  To check whether the ApInt32 number has value of zero or not. &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Usage**: &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!   ---&gt;    Flag = ApNum%IsZero() &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!   ---&gt;    IF (.NOT.ApNum%IsZero()) DoSomething</span>
+<span class="w">        </span><span class="k">PROCEDURE</span><span class="w">   </span><span class="kd">::</span><span class="w"> </span><span class="n">IsZero</span><span class="w">       </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">ApInt32_Is_Zero_II</span>
+<span class="w">        </span><span class="c">!&gt; **Type-Bound Function**: IsOne &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Purpose**:  To check whether the ApInt32 number has value of one or not. &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Usage**: &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!   ---&gt;    Flag = ApNum%IsOne() &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!   ---&gt;    IF (.NOT.ApNum%IsOne()) DoSomething</span>
+<span class="w">        </span><span class="k">PROCEDURE</span><span class="w">   </span><span class="kd">::</span><span class="w"> </span><span class="n">IsOne</span><span class="w">        </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">ApInt32_Is_One</span>
+<span class="w">        </span><span class="c">!&gt; **Type-Bound Function**: IsPositive &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Purpose**:  To check whether the ApInt32 number has positive value or not. &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Usage**: &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!   ---&gt;    Flag = ApNum%IsPositive() &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!   ---&gt;    IF (.NOT.ApNum%IsPositive()) DoSomething</span>
+<span class="w">        </span><span class="k">PROCEDURE</span><span class="w">   </span><span class="kd">::</span><span class="w"> </span><span class="n">IsPositive</span><span class="w">   </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">ApInt32_Is_Positive</span>
+<span class="w">        </span><span class="c">!&gt; **Type-Bound Function**: IsNegative &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Purpose**:  To check whether the ApInt32 number has negative value or not. &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Usage**: &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!   ---&gt;    Flag = ApNum%IsNegative() &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!   ---&gt;    IF (.NOT.ApNum%IsNegative()) DoSomething</span>
+<span class="w">        </span><span class="k">PROCEDURE</span><span class="w">   </span><span class="kd">::</span><span class="w"> </span><span class="n">IsNegative</span><span class="w">   </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">ApInt32_Is_Negative</span>
+<span class="w">        </span><span class="c">!&gt; **Type-Bound Subroutine**: RandNum &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Purpose**:  To generate the ApIn64 number with random value. &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Usage**: &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!   ! generate random number with default settings &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!   ---&gt;    CALL ApNum%RandNum() &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!   ! generate random number with specified PRNG &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!   ---&gt;    CALL ApNum%RandNum(PRNG) &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!   ! generate random number with negative value &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!   ---&gt;    CALL ApNum%RandNum(Positive=.FALSE.) &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!   ! generate random number with specified length of magnitude array &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!   ---&gt;    CALL ApNum%RandNum(Length=MagLen)</span>
+<span class="w">        </span><span class="k">PROCEDURE</span><span class="w">   </span><span class="kd">::</span><span class="w"> </span><span class="n">RandNum</span><span class="w">      </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">ApInt32_RandNumSub</span>
+<span class="w">        </span><span class="c">!&gt; **Type-Bound Function**: Copy &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Purpose**:  To make a copy of the ApInt32 number. &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Usage**: &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!   ! make a copy of the ApInt32 number &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!   ---&gt;    DstApNum = SrcApNum%Copy() &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!   ! make a copy of the ApInt32 number with the specified capacity</span>
+<span class="w">        </span><span class="c">!   (size of magnitude array) of the destination number &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!   ---&gt;    DstApNum = SrcApNum%Copy(DstCap)</span>
+<span class="w">        </span><span class="k">PROCEDURE</span><span class="w">   </span><span class="kd">::</span><span class="w"> </span><span class="n">Copy</span><span class="w">         </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">ApInt32_Copy</span>
+<span class="w">        </span><span class="c">!&gt; **Type-Bound Subroutine**: Display &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Purpose**:  To write/display the &#39;ApInt32&#39; number to the screen (or the specified unit). &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Usage**: &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!   ! To display (signed) value of ApNum as a decimal string to the screen &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!   ---&gt;    CALL ApNum%Display() &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!   ! To display (signed) value of ApNum as a decimal string to the output logical unit &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!   ---&gt;    CALL ApNum%Display(11) &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!   ! To display (signed) value of ApNum as a decimal string to the output logical unit &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!   with input/output status and message &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!   ---&gt;    CALL ApNum%Display(11, IOStat, IOMsg) &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!   ! To display (signed) values of components of ApNum as a decimal string to the screen &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!   ---&gt;    CALL ApNum%Display(ShowComponent=.TRUE.) &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!   ! To display (signed) value of ApNum as a decimal string to the screen with a prefix string &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!   ---&gt;    CALL ApNum%Display(Prefix=&#39;Signed value of ApNum&#39;)</span>
+<span class="w">        </span><span class="k">PROCEDURE</span><span class="w">   </span><span class="kd">::</span><span class="w"> </span><span class="n">Display</span><span class="w">      </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">ApInt32_Write</span>
+<span class="w">        </span><span class="c">!&gt; **Type-Bound Function**: GetLength &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Purpose**:  To return the length of the magnitude array (the number of</span>
+<span class="w">        </span><span class="c">!                digits counted as the ApNum number). &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Usage**: &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!   ---&gt;    MagLen = ApNum%GetLength()</span>
+<span class="w">        </span><span class="k">PROCEDURE</span><span class="w">   </span><span class="kd">::</span><span class="w"> </span><span class="n">GetLength</span><span class="w">    </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">ApInt32_GetLength</span>
+<span class="w">        </span><span class="c">! ---------------------------------------------------------------------</span>
+<span class="w">        </span><span class="c">! -----                 Generic Interfaces                         -----</span>
+<span class="w">        </span><span class="c">! ---------------------------------------------------------------------</span>
+<span class="w">        </span><span class="c">!&gt; **Type-Bound Subroutine**: Add &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Purpose**:  To perform an addition: This = This + Other. &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Usage**: &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!   ---&gt;    CALL This%Add(Other)</span>
+<span class="w">        </span><span class="k">GENERIC</span><span class="w">     </span><span class="kd">::</span><span class="w"> </span><span class="n">Add</span><span class="w">          </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">ApInt32_Add_I32</span><span class="p">,</span><span class="w">       </span><span class="n">ApInt32_Add_I64</span><span class="p">,</span><span class="w">      </span><span class="p">&amp;</span>
+<span class="w">                                       </span><span class="n">ApInt32_Add_I128</span><span class="p">,</span><span class="w">      </span><span class="n">ApInt32_Add_ApInt32</span>
+<span class="w">        </span><span class="c">!&gt; **Type-Bound Subroutine**: Subtract &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Purpose**:  To perform a subtraction: This = This - Other. &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Usage**: &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!   ---&gt;    CALL This%Subtract(Other)</span>
+<span class="w">        </span><span class="k">GENERIC</span><span class="w">     </span><span class="kd">::</span><span class="w"> </span><span class="n">Subtract</span><span class="w">     </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">ApInt32_Subtract_I32</span><span class="p">,</span><span class="w">  </span><span class="n">ApInt32_Subtract_I64</span><span class="p">,</span><span class="w"> </span><span class="p">&amp;</span>
+<span class="w">                                       </span><span class="n">ApInt32_Subtract_I128</span><span class="p">,</span><span class="w"> </span><span class="n">ApInt32_Subtract_ApInt32</span>
+<span class="w">        </span><span class="c">!&gt; **Type-Bound Subroutine**: Multiply &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Purpose**:  To perform a multiplication: This = This * Other. &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Usage**: &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!   ---&gt;    CALL This%Multiply(Other)</span>
+<span class="w">        </span><span class="k">GENERIC</span><span class="w">     </span><span class="kd">::</span><span class="w"> </span><span class="n">Multiply</span><span class="w">     </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">ApInt32_Times_I32</span><span class="p">,</span><span class="w">     </span><span class="n">ApInt32_Times_I64</span><span class="p">,</span><span class="w">    </span><span class="p">&amp;</span>
+<span class="w">                                       </span><span class="n">ApInt32_Times_I128</span><span class="p">,</span><span class="w">    </span><span class="n">ApInt32_Times_ApInt32</span>
+<span class="w">        </span><span class="c">!&gt; **Type-Bound Subroutine**: Divide &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Purpose**:  To perform a division: This = This / Other.  Optionally,</span>
+<span class="w">        </span><span class="c">!                return the remainder if present. &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Usage**: &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!   ---&gt;    CALL This%Divide(Other) &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!   ---&gt;    CALL This%Divide(Other, Remainder)</span>
+<span class="w">        </span><span class="k">GENERIC</span><span class="w">     </span><span class="kd">::</span><span class="w"> </span><span class="n">Divide</span><span class="w">       </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">ApInt32_Over_I32</span><span class="p">,</span><span class="w">      </span><span class="n">ApInt32_Over_I64</span><span class="p">,</span><span class="w">     </span><span class="p">&amp;</span>
+<span class="w">                                       </span><span class="n">ApInt32_Over_I128</span><span class="p">,</span><span class="w">     </span><span class="n">ApInt32_Over_ApInt32</span>
+<span class="w">        </span><span class="c">!&gt; **Type-Bound Subroutine**: DivMod &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Purpose**:  To perform a division and return both quotient and remainder. &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Usage**: &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!   ---&gt;    CALL Numerator%DivMod(Denominator, Quotient, Remainder)</span>
+<span class="w">        </span><span class="k">GENERIC</span><span class="w">     </span><span class="kd">::</span><span class="w"> </span><span class="n">DivMod</span><span class="w">       </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">ApInt32_DivMod_I32</span><span class="p">,</span><span class="w">    </span><span class="n">ApInt32_DivMod_I64</span><span class="p">,</span><span class="w">   </span><span class="p">&amp;</span>
+<span class="w">                                       </span><span class="n">ApInt32_DivMod_I128</span><span class="p">,</span><span class="w">   </span><span class="n">ApInt32_DivMod_ApInt32</span>
+<span class="w">        </span><span class="c">! ---------------------------------------------------------------------</span>
+<span class="w">    </span><span class="k">END TYPE </span><span class="n">ApInt32</span>
+</pre></div>
+
+    </section>
+    
+    </div>
+  </div>
+
+      <hr>
+    </div> <!-- /container -->
+    <footer>
+      <div class="container">
+        <div class="row justify-content-between">
+          <div class="col"><p>eXPerimental Fortran Library (XpfLib) Documentation was developed by Niranama<br>&copy; 2024 
+</p>
+          </div>
+          <div class="col">
+            <p class="text-end">
+              Documentation generated by
+              <a href="https://github.com/Fortran-FOSS-Programmers/ford">FORD</a>
+            </p>
+          </div>
+        </div>
+        <br>
+      </div> <!-- /container -->
+    </footer>
+
+    <!-- Bootstrap core JavaScript -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>    
+
+    <!-- MathJax JavaScript
+             ================================================== -->
+             <!-- Placed at the end of the document so the pages load faster -->
+        <script type="text/x-mathjax-config">
+          MathJax.Hub.Config({
+          TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } },
+          jax: ['input/TeX','input/MathML','output/HTML-CSS'],
+          extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']
+          });
+        </script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+          <script src="../tipuesearch/tipuesearch_content.js"></script>
+          <script src="../tipuesearch/tipuesearch_set.js"></script>
+          <script src="../tipuesearch/tipuesearch.js"></script>
+
+  </body>
+</html>

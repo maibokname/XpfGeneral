@@ -1,0 +1,699 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta name="description" content="Experimental Fortran Package - Psuedo-Random Number Generators (PRNGs)">
+    <meta name="author" content="Niranama" >
+    <link rel="icon" href="../favicon.png">
+
+    <title>MClass_L64X128RNG &ndash; eXPerimental Fortran Library (XpfLib) Documentation</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link href="../css/pygments.css" rel="stylesheet">
+    <link href="../css/font-awesome.min.css" rel="stylesheet">
+    <link href="../css/local.css" rel="stylesheet">
+      <link  href="../tipuesearch/tipuesearch.css" rel="stylesheet">
+
+    <script src="https://code.jquery.com/jquery-3.7.0.slim.min.js" integrity="sha256-tG5mcZUtJsZvyKAxYLVXrmjKBVLd6VpVccqz/r4ypFE=" crossorigin="anonymous"></script>
+  </head>
+
+  <body>
+
+    <!-- Fixed navbar -->
+    <div class="container-fluid mb-sm-4 mb-xl-2">
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container">
+          <a class="navbar-brand" href="../index.html">eXPerimental Fortran Library (XpfLib) Documentation </a>
+          <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar"
+                  aria-expanded="false" aria-controls="navbar" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon">
+          </button>
+
+          <div id="navbar" class="navbar-collapse collapse">
+            <ul class="navbar-nav">
+                  <li class="nav-item">
+                    <a class="nav-link" href="../lists/files.html">Source Files</a>
+                  </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../lists/modules.html">Modules</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../lists/procedures.html">Procedures</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../lists/absint.html">Abstract Interfaces</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../lists/types.html">Derived Types</a>
+                </li>
+            </ul>
+              <div class="d-flex align-items-end flex-grow-1">
+                <form action="../search.html" role="search" class="ms-auto">
+                  <input type="text" class="form-control" aria-label="Search" placeholder="Search" name="q" id="tipue_search_input" autocomplete="off" required>
+                </form>
+              </div>
+          </div><!--/.nav-collapse -->
+        </div>
+      </nav>
+    </div>
+
+    <div class="container">
+  <div class="row">
+    <h1>MClass_L64X128RNG
+      <small>Module</small>
+      
+    </h1>
+      <div class="container p-2 mb-4 bg-light border rounded-3">
+    <div class="row align-items-center justify-content-between" id="info-bar">
+      <div class="col">
+        <ul class="list-inline" style="margin-bottom:0px;display:inline">
+
+            <li class="list-inline-item" id="statements"><i class="fa fa-list-ol"></i>
+              <a data-bs-toggle="tooltip"
+                 data-bs-placement="bottom" data-html="true"
+                 title=" 1.5% of total for modules and submodules.">117 statements</a>
+            </li>
+
+            <li class="list-inline-item" id="source-file">
+              <i class="fa fa-code"></i>
+              <a href="../src/MClass_L64X128RNG.f90"> Source File</a>
+            </li>
+        </ul>
+      </div>
+      <div class="col">
+        <nav aria-label="breadcrumb">
+          <ol class="breadcrumb justify-content-end mb-0">
+                <li class="breadcrumb-item"><a href='../sourcefile/mclass_l64x128rng.f90.html'>MClass_L64X128RNG.f90</a></li>
+            <li class="breadcrumb-item active" aria-current="page">MClass_L64X128RNG</li>
+          </ol>
+        </nav>
+      </div>
+    </div>
+  </div>
+  <script>
+    $(function () {
+    $('[data-bs-toggle="tooltip"]').tooltip()
+    })
+  </script>
+
+  </div>
+
+  <div class="row">
+    <div class="col-md-3">
+        <div id="sidebar">
+      <h3>Contents</h3>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+      <div class="card mb-4">
+      <a data-bs-toggle="collapse" href="#types-0"
+         aria-expanded="false" aria-controls="types-0">
+         <h4 class="card-header bg-primary text-white">Derived Types</h4>
+      </a>
+      <div id="types-0" class="collapse">
+        <div class="list-group list-group-flush">
+            <a class="list-group-item" href="../module/mclass_l64x128rng.html#type-l64x128rng">L64X128RNG</a>
+        </div>
+      </div>
+    </div>
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+
+
+  </div>
+
+    </div>
+
+    <div class="col-md-9" id='text'>
+      <p><strong>PURPOSE OF THIS MODULE</strong>: <br>
+  This module contains the <em>L64X128RNG</em> type and its related routines.
+  The <em>L64X128RNG</em> type is a <em>Long</em> PRNG type that directly extends
+  the <em>LongRNG</em> type.  Therefore, it provides all remaining deferred
+  procedures required by a <em>Long</em> PRNG type. <br>
+  In particular, the <em>L64X128RNG</em> type provides an implementation of the
+  <em>NextLongImpl</em> deferred procedure based on the <em>L64X128</em> algorithms.
+  The <em>L64X128</em> algorithms are specific members of the LXM family of
+  algorithms for pseudo-random number generators where <br>
+  -  L stands for Linear congruential generator (LCG); <br>
+  -  X stands for Xor-based generator (XBG); and <br>
+  -  M stands for Mix. <br>
+  The <em>L64X128RNG</em> type can represent two PRNG classes: <br>
+  - the L64X128Mix RNG, or <br>
+  - the L64X128StarStar RNG. <br>
+  Both PRNG classes employ a 64-bit LCG, a 128-bit XBG and a mixing function
+  where its memory footprint is 256 bits and its period is roughly 2<sup>192</sup>. <br>
+  By default, the <em>L64X128Mix</em> RNG is employed.  However, the <em>L64X128StarStar</em>
+  PRNG can be utilized by specifying an algorithm flag to true when initializing
+  the generator. <br>
+  In addition to common operations of a PRNG, the <em>L64X128RNG</em> type provides
+  the <em>Split</em> method to split a generator into two instances (the original and
+  a new instance) where the two generators can be used concurrently.  Presumably,
+  the new generator is statistically independent and uniform.  <br>
+  It is important to note that the <em>L64X128</em> PRNG requires an explicit
+  initialization by first calling the <em>Initialize</em> method before using
+  any other methods.  Otherwise, the generator may produce undesirable
+  random sequences. <br>
+  <br>
+<strong>REFERENCES</strong>: <br>
+  [1] <a href="https://dl.acm.org/doi/abs/10.1145/3485525">
+      Steele and Vigna (2021).  LXM: better splittable pseudo-random number generators
+     (and almost as fast). Proceedings of the ACM on Programming Languages, Volume 5,
+      Article 148, pp 1-31.</a> <br>
+  [2] <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/random/package-summary.html">
+      Package: Java.Util.Random</a></p>
+<br>          <div class="card mb-4">
+      <h3 class="card-header card-title bg-light">Uses</h3>
+      <div class="card-body">
+        <ul class="list-group list-group-flush">
+            <li class="list-group-item">
+              <ul class="list-inline">
+                  <li class="list-inline-item"><a href='../module/mclass_longrng.html'>MClass_LongRNG</a></li>
+                  <li class="list-inline-item"><a href='../module/mclass_baserng.html'>MClass_BaseRNG</a></li>
+                  <li class="list-inline-item"><a href='../../XpfBase/module/mbase_common.html'>MBase_Common</a></li>
+              </ul>
+            </li>
+        </ul>
+      </div>
+    </div>
+
+      
+      <br>
+
+
+
+
+
+
+        <section>
+          <h2>Derived Types</h2>
+              <div class="card">
+    <div class="card-header codesum">
+      <span class="anchor" id="type-l64x128rng"></span>
+      <h3>
+        type, public, extends(<a href='../type/longrng.html'>LongRNG</a>)&nbsp;::&nbsp;
+        <a href='../type/l64x128rng.html'>L64X128RNG</a>
+        
+      </h3>
+    </div>
+    <div class="card-body">
+      <p>The <em>L64X128RNG</em> type is a <em>Long</em> PRNG type based on the <em>L64X128</em>
+ algorithms, which are specific members of the LXM family of algorithms
+ for pseudo-random number generators.</p>
+
+
+
+
+        <h4>Type-Bound Procedures</h4>
+        <table class="table table-striped varlist">
+          <tbody>
+              <tr>
+                <td>  procedure, public ::
+  <strong><a href='../type/baserng.html#boundprocedure-default_nextintegerlimits~2'>Default_NextIntegerLimits</a></strong></td>
+                <td><p>Use the <em>NextInteger</em> Method instead of this method.</p></td>
+              </tr>
+              <tr>
+                <td>  procedure, public ::
+  <strong><a href='../type/baserng.html#boundprocedure-default_nextlonglimits'>Default_NextLongLimits</a></strong></td>
+                <td><p>Use the <em>NextLong</em> Method instead of this method.</p></td>
+              </tr>
+              <tr>
+                <td>  procedure, public ::
+  <strong><a href='../type/baserng.html#boundprocedure-default_nexti128limits'>Default_NextI128Limits</a></strong></td>
+                <td><p>Use the <em>NextI128</em> Method instead of this method.</p></td>
+              </tr>
+              <tr>
+                <td>  procedure, public ::
+  <strong><a href='../type/baserng.html#boundprocedure-default_nextu128limits'>Default_NextU128Limits</a></strong></td>
+                <td><p>Use the <em>NextU128</em> Method instead of this method.</p></td>
+              </tr>
+              <tr>
+                <td>  procedure, public ::
+  <strong><a href='../type/baserng.html#boundprocedure-default_nextsingle~2'>Default_NextSingle</a></strong></td>
+                <td><p>Use the <em>NextSingle</em> Method instead of this method.</p></td>
+              </tr>
+              <tr>
+                <td>  procedure, public ::
+  <strong><a href='../type/baserng.html#boundprocedure-default_nextsinglelimits'>Default_NextSingleLimits</a></strong></td>
+                <td><p>Use the <em>NextSingle</em> Method instead of this method.</p></td>
+              </tr>
+              <tr>
+                <td>  procedure, public ::
+  <strong><a href='../type/baserng.html#boundprocedure-default_nextdoublelimits'>Default_NextDoubleLimits</a></strong></td>
+                <td><p>Use the <em>NextDouble</em> Method instead of this method.</p></td>
+              </tr>
+              <tr>
+                <td>  procedure, public ::
+  <strong><a href='../type/baserng.html#boundprocedure-default_nextquadlimits'>Default_NextQuadLimits</a></strong></td>
+                <td><p>Use the <em>NextQuad</em> Method instead of this method.</p></td>
+              </tr>
+              <tr>
+                <td>  generic, public ::
+  <strong><a href='../type/l64x128rng.html#boundprocedure-nextinteger~40'>NextInteger</a></strong> => <a href='../type/longrng.html#boundprocedure-nextintegerimpl~20'>NextIntegerImpl</a>, <a href='../type/baserng.html#boundprocedure-default_nextintegerlimits~2'>Default_NextIntegerLimits</a></td>
+                <td><p><strong>Type-Bound Function</strong>: NextInteger  <br>
+ <strong>Purpose</strong>:  To return a 32-bit integer random number. <br>
+ <strong>Usage</strong>: <br>
+          ! any random value <br>
+  ---&gt;    I32Val = RNG%NextInteger() <br>
+          ! random value between 0 and Limit1 <br>
+  ---&gt;    I32Val = RNG%NextInteger(Limit1) <br>
+          ! random value between Limit1 and Limit2 <br>
+  ---&gt;    I32Val = RNG%NextInteger(Limit1, Limit2) <br>
+ <strong>Note</strong>: Values of specified limits can either be positive or negative.</p></td>
+              </tr>
+              <tr>
+                <td>  generic, public ::
+  <strong><a href='../type/l64x128rng.html#boundprocedure-nextlong~40'>NextLong</a></strong> => <a href='../type/xoshiro512rng.html#boundprocedure-nextlongimpl~16'>NextLongImpl</a>, <a href='../type/baserng.html#boundprocedure-default_nextlonglimits'>Default_NextLongLimits</a></td>
+                <td><p><strong>Type-Bound Function</strong>: NextLong <br>
+ <strong>Purpose</strong>:  To return a 64-bit integer random number. <br>
+ <strong>Usage</strong>: <br>
+          ! any random value <br>
+  ---&gt;    I64Val = RNG%NextLong() <br>
+          ! random value between 0 and Limit1 <br>
+  ---&gt;    I64Val = RNG%NextLong(Limit1) <br>
+          ! random value between Limit1 and Limit2 <br>
+  ---&gt;    I64Val = RNG%NextLong(Limit1, Limit2) <br>
+ <strong>Note</strong>: Values of specified limits can either be positive or negative.</p></td>
+              </tr>
+              <tr>
+                <td>  generic, public ::
+  <strong><a href='../type/l64x128rng.html#boundprocedure-nextindex~51'>NextIndex</a></strong> => <a href='../type/longrng.html#boundprocedure-nextintegerimpl~20'>NextIntegerImpl</a>, <a href='../type/baserng.html#boundprocedure-default_nextintegerlimits~2'>Default_NextIntegerLimits</a></td>
+                <td><p><strong>Type-Bound Function</strong>: NextIndex  <br>
+ <strong>Purpose</strong>:  To return an integer random number representing an index. <br>
+ <strong>Usage</strong>: <br>
+          ! any random value <br>
+  ---&gt;    Index = RNG%NextIndex() <br>
+          ! random value between 0 and Limit1 <br>
+  ---&gt;    Index = RNG%NextIndex(Limit1) <br>
+          ! random value between Limit1 and Limit2 <br>
+  ---&gt;    Index = RNG%NextIndex(Limit1, Limit2) <br>
+ <strong>Note</strong>: The number can be either 32-bit or 64-bit integer depending on the configuration
+           set when the code is compiled.</p></td>
+              </tr>
+              <tr>
+                <td>  generic, public ::
+  <strong><a href='../type/l64x128rng.html#boundprocedure-nexti128~40'>NextI128</a></strong> => <a href='../type/longrng.html#boundprocedure-nexti128impl~3'>NextI128Impl</a>, <a href='../type/baserng.html#boundprocedure-default_nexti128limits'>Default_NextI128Limits</a></td>
+                <td><p><strong>Type-Bound Function</strong>: NextI128 <br>
+ <strong>Purpose</strong>:  To return a signed 128-bit integer random number. <br>
+ <strong>Usage</strong>: <br>
+          ! any random value <br>
+  ---&gt;    I128Val = RNG%NextI128() <br>
+          ! random value between 0 and Limit1 <br>
+  ---&gt;    I128Val = RNG%NextI128(Limit1) <br>
+          ! random value between Limit1 and Limit2 <br>
+  ---&gt;    I128Val = RNG%NextI128(Limit1, Limit2) <br>
+ <strong>Note</strong>: Values of specified limits can either be positive or negative.</p></td>
+              </tr>
+              <tr>
+                <td>  generic, public ::
+  <strong><a href='../type/l64x128rng.html#boundprocedure-nextu128~40'>NextU128</a></strong> => <a href='../type/longrng.html#boundprocedure-nextu128impl~3'>NextU128Impl</a>, <a href='../type/baserng.html#boundprocedure-default_nextu128limits'>Default_NextU128Limits</a></td>
+                <td><p><strong>Type-Bound Function</strong>: NextU128 <br>
+ <strong>Purpose</strong>:  To return an unsigned 128-bit integer random number. <br>
+ <strong>Usage</strong>: <br>
+          ! any random value <br>
+  ---&gt;    U128Val = RNG%NextU128() <br>
+          ! random value between 0 and Limit1 <br>
+  ---&gt;    U128Val = RNG%NextU128(Limit1) <br>
+          ! random value between Limit1 and Limit2 <br>
+  ---&gt;    U128Val = RNG%NextU128(Limit1, Limit2) <br>
+ <strong>Note</strong>: Values of specified limits can either be positive or negative.</p></td>
+              </tr>
+              <tr>
+                <td>  generic, public ::
+  <strong><a href='../type/l64x128rng.html#boundprocedure-nextsingle~40'>NextSingle</a></strong> => <a href='../type/baserng.html#boundprocedure-default_nextsingle~2'>Default_NextSingle</a>, <a href='../type/baserng.html#boundprocedure-default_nextsinglelimits'>Default_NextSingleLimits</a></td>
+                <td><p><strong>Type-Bound Function</strong>: NextSingle <br>
+ <strong>Purpose</strong>:  To return a 32-bit real random number. <br>
+ <strong>Usage</strong>: <br>
+          ! random value between 0.0 (inclusive) and 1.0 (exclusive) <br>
+  ---&gt;    R32Val = RNG%NextSingle() <br>
+          ! random value between 0.0 and Limit1 <br>
+  ---&gt;    R32Val = RNG%NextSingle(Limit1) <br>
+          ! random value between Limit1 and Limit2 <br>
+  ---&gt;    R32Val = RNG%NextSingle(Limit1, Limit2) <br>
+ <strong>Note</strong>: Values of specified limits can either be positive or negative.</p></td>
+              </tr>
+              <tr>
+                <td>  generic, public ::
+  <strong><a href='../type/l64x128rng.html#boundprocedure-nextdouble~40'>NextDouble</a></strong> => <a href='../type/longrng.html#boundprocedure-nextdoubleimpl~7'>NextDoubleImpl</a>, <a href='../type/baserng.html#boundprocedure-default_nextdoublelimits'>Default_NextDoubleLimits</a></td>
+                <td><p><strong>Type-Bound Function</strong>: NextDouble <br>
+ <strong>Purpose</strong>:  To return a 64-bit real random number. <br>
+ <strong>Usage</strong>: <br>
+          ! random value between 0.0 (inclusive) and 1.0 (exclusive) <br>
+  ---&gt;    R64Val = RNG%NextDouble() <br>
+          ! random value between 0.0 and Limit1 <br>
+  ---&gt;    R64Val = RNG%NextDouble(Limit1) <br>
+          ! random value between Limit1 and Limit2 <br>
+  ---&gt;    R64Val = RNG%NextDouble(Limit1, Limit2) <br>
+ <strong>Note</strong>: Values of specified limits can either be positive or negative.</p></td>
+              </tr>
+              <tr>
+                <td>  generic, public ::
+  <strong><a href='../type/l64x128rng.html#boundprocedure-nextquad~40'>NextQuad</a></strong> => <a href='../type/longrng.html#boundprocedure-nextquadimpl~3'>NextQuadImpl</a>, <a href='../type/baserng.html#boundprocedure-default_nextquadlimits'>Default_NextQuadLimits</a></td>
+                <td><p><strong>Type-Bound Function</strong>: NextQuad <br>
+ <strong>Purpose</strong>:  To return a 128-bit real random number. <br>
+ <strong>Usage</strong>: <br>
+          ! random value between 0.0 (inclusive) and 1.0 (exclusive) <br>
+  ---&gt;    R128Val = RNG%NextQuad() <br>
+          ! random value between 0.0 and Limit1 <br>
+  ---&gt;    R128Val = RNG%NextQuad(Limit1) <br>
+          ! random value between Limit1 and Limit2 <br>
+  ---&gt;    R128Val = RNG%NextQuad(Limit1, Limit2) <br>
+ <strong>Note</strong>: Values of specified limits can either be positive or negative.</p></td>
+              </tr>
+              <tr>
+                <td>  procedure, public ::
+  <strong><a href='../type/baserng.html#boundprocedure-nextstring'>NextString</a></strong> => Default_NextString</td>
+                <td><p><strong>Type-Bound Function</strong>: NextString <br>
+ <strong>Purpose</strong>:  To return a random character string. <br>
+ <strong>Usage</strong>: <br>
+          ! random string with default settings <br>
+  ---&gt;    Str = RNG%NextString() <br>
+          ! random string with a specified character set <br>
+  ---&gt;    Str = RNG%NextString(AlphaOnlyCap) <br>
+          ! random string with a specified length <br>
+  ---&gt;    Str = RNG%NextString(StrLen=OutLen) <br>
+          ! random string with a specified maximum length <br>
+  ---&gt;    Str = RNG%NextString(MaxLen=MaxLen)</p></td>
+              </tr>
+              <tr>
+                <td>  procedure, public ::
+  <strong><a href='../type/baserng.html#boundprocedure-nextlogical'>NextLogical</a></strong> => Default_NextLogical</td>
+                <td><p><strong>Type-Bound Function</strong>: NextLogical <br>
+ <strong>Purpose</strong>:  To return a logical random value. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    LogVal = RNG%NextLogical()</p></td>
+              </tr>
+              <tr>
+                <td>  procedure, public ::
+  <strong><a href='../type/baserng.html#boundprocedure-nextlogicalarray'>NextLogicalArray</a></strong> => Default_NextLogicalArray</td>
+                <td><p><strong>Type-Bound Subroutine</strong>: NextLogicalArray <br>
+ <strong>Purpose</strong>:  To fill the specified array with logical random values. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    CALL RNG%NextLogicalArray(RndArr)</p></td>
+              </tr>
+              <tr>
+                <td>  procedure, public ::
+  <strong><a href='../type/baserng.html#boundprocedure-nextbyte'>NextByte</a></strong> => Default_NextByte</td>
+                <td><p><strong>Type-Bound Function</strong>: NextByte <br>
+ <strong>Purpose</strong>:  To return a 8-bit integer random number. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    I8Val = RNG%NextByte()</p></td>
+              </tr>
+              <tr>
+                <td>  procedure, public ::
+  <strong><a href='../type/baserng.html#boundprocedure-nextbytearray'>NextByteArray</a></strong> => Default_NextByteArray</td>
+                <td><p><strong>Type-Bound Subroutine</strong>: NextByteArray <br>
+ <strong>Purpose</strong>:  To fill the specified array with 8-bit integer random numbers. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    CALL RNG%NextByteArray(RndArr)</p></td>
+              </tr>
+              <tr>
+                <td>  procedure, public ::
+  <strong><a href='../type/baserng.html#boundprocedure-nextshort'>NextShort</a></strong> => Default_NextShort</td>
+                <td><p><strong>Type-Bound Function</strong>: NextShort <br>
+ <strong>Purpose</strong>:  To return a 16-bit integer random number. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    I16Val = RNG%NextShort()</p></td>
+              </tr>
+              <tr>
+                <td>  procedure, public ::
+  <strong><a href='../type/baserng.html#boundprocedure-nextshortarray'>NextShortArray</a></strong> => Default_NextShortArray</td>
+                <td><p><strong>Type-Bound Subroutine</strong>: NextShortArray <br>
+ <strong>Purpose</strong>:  To fill the specified array with 16-bit integer random numbers. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    CALL RNG%NextShortArray(RndArr)</p></td>
+              </tr>
+              <tr>
+                <td>  procedure, public ::
+  <strong><a href='../type/baserng.html#boundprocedure-nextintegerarray'>NextIntegerArray</a></strong> => Default_NextIntegerArray</td>
+                <td><p><strong>Type-Bound Subroutine</strong>: NextIntegerArray <br>
+ <strong>Purpose</strong>:  To fill the specified array with 32-bit integer random numbers. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    CALL RNG%NextIntegerArray(RndArr)</p></td>
+              </tr>
+              <tr>
+                <td>  procedure, public ::
+  <strong><a href='../type/baserng.html#boundprocedure-nextlongarray'>NextLongArray</a></strong> => Default_NextLongArray</td>
+                <td><p><strong>Type-Bound Subroutine</strong>: NextLongArray <br>
+ <strong>Purpose</strong>:  To fill the specified array with 64-bit integer random numbers. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    CALL RNG%NextLongArray(RndArr)</p></td>
+              </tr>
+              <tr>
+                <td>  procedure, public ::
+  <strong><a href='../type/baserng.html#boundprocedure-nexti128array'>NextI128Array</a></strong> => Default_NextI128Array</td>
+                <td><p><strong>Type-Bound Subroutine</strong>: NextI128Array <br>
+ <strong>Purpose</strong>:  To fill the specified array with signed 128-bit integer random numbers. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    CALL RNG%NextI128Array(RndArr)</p></td>
+              </tr>
+              <tr>
+                <td>  procedure, public ::
+  <strong><a href='../type/baserng.html#boundprocedure-nextsinglearray'>NextSingleArray</a></strong> => Default_NextSingleArray</td>
+                <td><p><strong>Type-Bound Subroutine</strong>: NextU128Array <br>
+ <strong>Purpose</strong>:  To fill the specified array with unsigned 128-bit integer random numbers. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    CALL RNG%NextU128Array(RndArr)
+       PROCEDURE   :: NextU128Array    =&gt; Default_NextU128Array
+<strong>Type-Bound Subroutine</strong>: NextSingleArray <br>
+ <strong>Purpose</strong>:  To fill the specified array with 32-bit real random numbers. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    CALL RNG%NextSingleArray(RndArr)</p></td>
+              </tr>
+              <tr>
+                <td>  procedure, public ::
+  <strong><a href='../type/baserng.html#boundprocedure-nextdoublearray'>NextDoubleArray</a></strong> => Default_NextDoubleArray</td>
+                <td><p><strong>Type-Bound Subroutine</strong>: NextDoubleArray <br>
+ <strong>Purpose</strong>:  To fill the specified array with 64-bit real random numbers. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    CALL RNG%NextDoubleArray(RndArr)</p></td>
+              </tr>
+              <tr>
+                <td>  procedure, public ::
+  <strong><a href='../type/baserng.html#boundprocedure-nextquadarray'>NextQuadArray</a></strong> => Default_NextQuadArray</td>
+                <td><p><strong>Type-Bound Subroutine</strong>: NextQuadArray <br>
+ <strong>Purpose</strong>:  To fill the specified array with 128-bit real random numbers. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    CALL RNG%NextQuadArray(RndArr)</p></td>
+              </tr>
+              <tr>
+                <td>  procedure, public ::
+  <strong><a href='../type/baserng.html#boundprocedure-nextgaussian'>NextGaussian</a></strong> => Default_NextGaussian</td>
+                <td><p><strong>Type-Bound Function</strong>: NextGaussian <br>
+ <strong>Purpose</strong>:  To return a 64-bit real value pseudo-randomly chosen from
+               a Gaussian (normal) distribution whose mean is 0.0 and whose
+               standard deviation is 1.0. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    R64Val = RNG%NextGaussian()</p></td>
+              </tr>
+              <tr>
+                <td>  procedure, public ::
+  <strong><a href='../type/baserng.html#boundprocedure-nextexponential'>NextExponential</a></strong> => Default_NextExponential</td>
+                <td><p><strong>Type-Bound Function</strong>: NextExponential <br>
+ <strong>Purpose</strong>:  To return a nonnegative 64-bit real value pseudo-randomly chosen
+               from a exponential distribution whose mean is 1.0. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    R64Val = RNG%NextExponential()</p></td>
+              </tr>
+              <tr>
+                <td>  procedure, public ::
+  <strong><a href='../type/longrng.html#boundprocedure-initwoseedimpl~4'>InitWOSeedImpl</a></strong> => Default_InitNoSeed</td>
+                <td><p><em>InitWOSeedImpl</em> is a deferred procedure. <br>
+ Use the <em>Initialize</em> method in place of the <em>InitWOSeedImpl</em> method to
+ initialize the PRNG without specifying any seed(s).</p></td>
+              </tr>
+              <tr>
+                <td>  procedure, public ::
+  <strong><a href='../type/longrng.html#boundprocedure-reinit~3'>ReInit</a></strong> => Default_ReInitialize</td>
+                <td><p><em>ReInit</em> is a deferred procedure. <br>
+ <strong>Type-Bound Subroutine</strong>: ReInit <br>
+ <strong>Purpose</strong>:  To reset the PRNG to its initial state. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    CALL PRNG%ReInit()</p></td>
+              </tr>
+              <tr>
+                <td>  procedure, public ::
+  <strong><a href='../type/longrng.html#boundprocedure-nextintegerimpl~20'>NextIntegerImpl</a></strong> => Default_NextInteger</td>
+                <td><p><em>NextIntegerImpl</em> is a deferred procedure. <br>
+ Use the <em>NextInteger</em> method in place of the <em>NextIntegerImpl</em> method
+ to generate a 32-bit integer number.</p></td>
+              </tr>
+              <tr>
+                <td>  procedure, public ::
+  <strong><a href='../type/longrng.html#boundprocedure-nexti128impl~3'>NextI128Impl</a></strong> => Default_NextI128</td>
+                <td><p><em>NextI128Impl</em> is a deferred procedure. <br>
+ Use the <em>NextI128</em> method in place of the <em>NextI128Impl</em> method
+ to generate a signed 128-bit integer number.</p></td>
+              </tr>
+              <tr>
+                <td>  procedure, public ::
+  <strong><a href='../type/longrng.html#boundprocedure-nextu128impl~3'>NextU128Impl</a></strong> => Default_NextU128</td>
+                <td><p><em>NextU128Impl</em> is a deferred procedure. <br>
+ Use the <em>NextU128</em> method in place of the <em>NextU128Impl</em> method
+ to generate an unsigned 128-bit integer number.</p></td>
+              </tr>
+              <tr>
+                <td>  procedure, public ::
+  <strong><a href='../type/longrng.html#boundprocedure-nextdoubleimpl~7'>NextDoubleImpl</a></strong> => Default_NextDouble</td>
+                <td><p><em>NextDoubleImpl</em> is a deferred procedure. <br>
+ Use the <em>NextDouble</em> method in place of the <em>NextDoubleImpl</em> method
+ to generate a 64-bit real number.</p></td>
+              </tr>
+              <tr>
+                <td>  procedure, public ::
+  <strong><a href='../type/longrng.html#boundprocedure-nextquadimpl~3'>NextQuadImpl</a></strong> => Default_NextQuad</td>
+                <td><p><em>NextQuadImpl</em> is a deferred procedure. <br>
+ Use the <em>NextQuad</em> method in place of the <em>NextQuadImpl</em> method
+ to generate a 128-bit real number.</p></td>
+              </tr>
+              <tr>
+                <td>  procedure, public ::
+  <strong><a href='../type/longrng.html#boundprocedure-initwseedimpl~2'>InitWSeedImpl</a></strong> => Default_InitWithSeeds</td>
+                <td><p><em>InitWSeedImpl</em> is a procedure to initialize the generator with
+ specified seed(s).  Instances of the PRNG initialized with the same
+ seed(s) in the same program should  produce identical sequences of
+ values. <br>
+ Use the <em>Initialize</em> method in place of the <em>InitWSeedImpl</em> method to
+ initialize the PRNG with specified seed(s).</p></td>
+              </tr>
+              <tr>
+                <td>  procedure, public ::
+  <strong><a href='../type/longrng.html#boundprocedure-copyseed~2'>CopySeed</a></strong> => Copy_InitSeed</td>
+                <td><p><strong>Type-Bound Subroutine</strong>: CopySeed <br>
+ <strong>Purpose</strong>:  To copy the initial seeds of the source PRNG to
+               that of the destination PRNG. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    CALL SrcRNG%CopySeed(DstRNG) <br>
+ <strong>Usage</strong>: This method is intended for internal use only.</p></td>
+              </tr>
+              <tr>
+                <td>  procedure, public ::
+  <strong><a href='../type/l64x128rng.html#boundprocedure-baseinit~39'>BaseInit</a></strong> => L64X128RNG_BaseInit</td>
+                <td><p><em>BaseInit</em> is a deferred procedure intended to be used internally. <br>
+ Use the <em>Initialize</em> method to initialize the PRNG instead.</p></td>
+              </tr>
+              <tr>
+                <td>  procedure, public ::
+  <strong><a href='../type/l64x128rng.html#boundprocedure-nextlongimpl~26'>NextLongImpl</a></strong> => L64X128RNG_NextLong</td>
+                <td><p><em>NextLongImpl</em> is a deferred procedure. <br>
+ Use the <em>NextLong</em> method in place of the <em>NextLongImpl</em> method
+ to generate a 32-bit integer number.</p></td>
+              </tr>
+              <tr>
+                <td>  procedure, public ::
+  <strong><a href='../type/l64x128rng.html#boundprocedure-getname~39'>GetName</a></strong> => L64X128RNG_GetName</td>
+                <td><p><em>GetName</em> is a deferred procedure. <br>
+ <strong>Type-Bound Function</strong>: GetName <br>
+ <strong>Purpose</strong>:  To get the name of the PRNG. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    Name = PRNG%GetName()</p></td>
+              </tr>
+              <tr>
+                <td>  procedure, public ::
+  <strong><a href='../type/l64x128rng.html#boundprocedure-getseedsize~39'>GetSeedSize</a></strong> => L64X128RNG_GetSeedSize</td>
+                <td><p><em>GetSeedSize</em> is a deferred procedure. <br>
+ <strong>Type-Bound Function</strong>: GetSeedSize <br>
+ <strong>Purpose</strong>:  To get size of specified seed(s) needed to initialize
+               the generator. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    SeedSize = PRNG%GetSeedSize()</p></td>
+              </tr>
+              <tr>
+                <td>  generic, public ::
+  <strong><a href='../type/l64x128rng.html#boundprocedure-initialize~14'>Initialize</a></strong> => <a href='../type/longrng.html#boundprocedure-initwoseedimpl~4'>InitWOSeedImpl</a>, <a href='../type/longrng.html#boundprocedure-initwseedimpl~2'>InitWSeedImpl</a>, InitWithFlag</td>
+                <td><p><strong>Type-Bound Function</strong>: Initialize <br>
+ <strong>Purpose</strong>:  To initialize the pseudo-random number generator. <br>
+ <strong>Usage</strong>: <br>
+  ! initialize without seed; use L64X128 (default) algorithm <br>
+  ---&gt;    CALL RNG%Initialize() <br>
+  ! initialize with seed(s); use L64X128 (default) algorithm <br>
+  ---&gt;    CALL RNG%Initialize(Seeds) <br>
+  ! initialize without seed; use L64X128StarStar algorithm <br>
+  ---&gt;    CALL RNG%Initialize(.TRUE.) <br>
+  ! initialize with seed(s); use L64X128StarStar algorithm <br>
+  ---&gt;    CALL RNG%Initialize(.TRUE., Seeds)</p></td>
+              </tr>
+              <tr>
+                <td>  procedure, public ::
+  <strong><a href='../type/l64x128rng.html#boundprocedure-split~9'>Split</a></strong> => L64X128RNG_Split</td>
+                <td><p><strong>Type-Bound Function</strong>: Split <br>
+ <strong>Purpose</strong>:  To return a new PRNG, split off from the current one. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    NewRNG = PRNG%Split() <br>
+ <strong>Note</strong>: The <em>Split</em> method is intended to be used in a parallel environment
+           where the current generator and the new one can be used concurrently.</p></td>
+              </tr>
+          </tbody>
+        </table>
+    </div>
+  </div>
+
+        </section>
+        <br>
+
+
+
+
+
+    </div>
+  </div>
+
+      <hr>
+    </div> <!-- /container -->
+    <footer>
+      <div class="container">
+        <div class="row justify-content-between">
+          <div class="col"><p>eXPerimental Fortran Library (XpfLib) Documentation was developed by Niranama<br>&copy; 2024 
+</p>
+          </div>
+          <div class="col">
+            <p class="text-end">
+              Documentation generated by
+              <a href="https://github.com/Fortran-FOSS-Programmers/ford">FORD</a>
+            </p>
+          </div>
+        </div>
+        <br>
+      </div> <!-- /container -->
+    </footer>
+
+    <!-- Bootstrap core JavaScript -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>    
+
+    <!-- MathJax JavaScript
+             ================================================== -->
+             <!-- Placed at the end of the document so the pages load faster -->
+        <script type="text/x-mathjax-config">
+          MathJax.Hub.Config({
+          TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } },
+          jax: ['input/TeX','input/MathML','output/HTML-CSS'],
+          extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']
+          });
+        </script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+          <script src="../tipuesearch/tipuesearch_content.js"></script>
+          <script src="../tipuesearch/tipuesearch_set.js"></script>
+          <script src="../tipuesearch/tipuesearch.js"></script>
+
+  </body>
+</html>

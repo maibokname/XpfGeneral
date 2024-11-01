@@ -1,0 +1,620 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta name="description" content="Experimental Fortran Package - Hash Functions">
+    <meta name="author" content="Niranama" >
+    <link rel="icon" href="../favicon.png">
+
+    <title>MClass_GroestlS &ndash; eXPerimental Fortran Library (XpfLib) Documentation</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link href="../css/pygments.css" rel="stylesheet">
+    <link href="../css/font-awesome.min.css" rel="stylesheet">
+    <link href="../css/local.css" rel="stylesheet">
+      <link  href="../tipuesearch/tipuesearch.css" rel="stylesheet">
+
+    <script src="https://code.jquery.com/jquery-3.7.0.slim.min.js" integrity="sha256-tG5mcZUtJsZvyKAxYLVXrmjKBVLd6VpVccqz/r4ypFE=" crossorigin="anonymous"></script>
+  </head>
+
+  <body>
+
+    <!-- Fixed navbar -->
+    <div class="container-fluid mb-sm-4 mb-xl-2">
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container">
+          <a class="navbar-brand" href="../index.html">eXPerimental Fortran Library (XpfLib) Documentation </a>
+          <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar"
+                  aria-expanded="false" aria-controls="navbar" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon">
+          </button>
+
+          <div id="navbar" class="navbar-collapse collapse">
+            <ul class="navbar-nav">
+                  <li class="nav-item">
+                    <a class="nav-link" href="../lists/files.html">Source Files</a>
+                  </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../lists/modules.html">Modules</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../lists/procedures.html">Procedures</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../lists/absint.html">Abstract Interfaces</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../lists/types.html">Derived Types</a>
+                </li>
+            </ul>
+              <div class="d-flex align-items-end flex-grow-1">
+                <form action="../search.html" role="search" class="ms-auto">
+                  <input type="text" class="form-control" aria-label="Search" placeholder="Search" name="q" id="tipue_search_input" autocomplete="off" required>
+                </form>
+              </div>
+          </div><!--/.nav-collapse -->
+        </div>
+      </nav>
+    </div>
+
+    <div class="container">
+  <div class="row">
+    <h1>MClass_GroestlS
+      <small>Module</small>
+      
+    </h1>
+      <div class="container p-2 mb-4 bg-light border rounded-3">
+    <div class="row align-items-center justify-content-between" id="info-bar">
+      <div class="col">
+        <ul class="list-inline" style="margin-bottom:0px;display:inline">
+
+            <li class="list-inline-item" id="statements"><i class="fa fa-list-ol"></i>
+              <a data-bs-toggle="tooltip"
+                 data-bs-placement="bottom" data-html="true"
+                 title=" 1.0% of total for modules and submodules.">252 statements</a>
+            </li>
+
+            <li class="list-inline-item" id="source-file">
+              <i class="fa fa-code"></i>
+              <a href="../src/MClass_GroestlS.f90"> Source File</a>
+            </li>
+        </ul>
+      </div>
+      <div class="col">
+        <nav aria-label="breadcrumb">
+          <ol class="breadcrumb justify-content-end mb-0">
+                <li class="breadcrumb-item"><a href='../sourcefile/mclass_groestls.f90.html'>MClass_GroestlS.f90</a></li>
+            <li class="breadcrumb-item active" aria-current="page">MClass_GroestlS</li>
+          </ol>
+        </nav>
+      </div>
+    </div>
+  </div>
+  <script>
+    $(function () {
+    $('[data-bs-toggle="tooltip"]').tooltip()
+    })
+  </script>
+
+  </div>
+
+  <div class="row">
+    <div class="col-md-3">
+        <div id="sidebar">
+      <h3>Contents</h3>
+  
+      <div class="card mb-4">
+      <a data-bs-toggle="collapse" href="#vars-0"
+         aria-expanded="false" aria-controls="vars-0">
+         <h4 class="card-header bg-primary text-white">Variables</h4>
+      </a>
+      <div id="vars-0" class="collapse">
+        <div class="list-group list-group-flush">
+            <a class="list-group-item" href="../module/mclass_groestls.html#variable-t0~3">T0</a>
+            <a class="list-group-item" href="../module/mclass_groestls.html#variable-t1~3">T1</a>
+            <a class="list-group-item" href="../module/mclass_groestls.html#variable-t2">T2</a>
+            <a class="list-group-item" href="../module/mclass_groestls.html#variable-t3">T3</a>
+            <a class="list-group-item" href="../module/mclass_groestls.html#variable-t4">T4</a>
+            <a class="list-group-item" href="../module/mclass_groestls.html#variable-t5">T5</a>
+            <a class="list-group-item" href="../module/mclass_groestls.html#variable-t6">T6</a>
+            <a class="list-group-item" href="../module/mclass_groestls.html#variable-t7">T7</a>
+        </div>
+      </div>
+    </div>
+
+  
+  
+  
+  
+  
+  
+  
+  
+      <div class="card mb-4">
+      <a data-bs-toggle="collapse" href="#types-0"
+         aria-expanded="false" aria-controls="types-0">
+         <h4 class="card-header bg-primary text-white">Derived Types</h4>
+      </a>
+      <div id="types-0" class="collapse">
+        <div class="list-group list-group-flush">
+            <a class="list-group-item" href="../module/mclass_groestls.html#type-groestls">GroestlS</a>
+        </div>
+      </div>
+    </div>
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+
+
+  </div>
+
+    </div>
+
+    <div class="col-md-9" id='text'>
+      <p><strong>PURPOSE OF THIS MODULE</strong>: <br>
+  This module contains the <em>GroestlS</em> type and its related routines.
+  The <em>GroestlS</em> type is a <em>digest</em> type that directly extends from the
+  <a href="../module/mclass_mdengine.html#type-mdengine">MDEngine</a>
+  type.  As a <em>concrete</em> derived type, it provides all remaining
+  deferred procedures required by all its abstract parent types. <br>
+  The <em>GroestlS</em> type implements an incremental cryptographic hash function
+  by employing either the <em>Groestl-224</em> or the <em>Groestl-256 message-digest</em>
+  algorithm [1].  The implementation here is based mainly on the <em>SPHLIB</em>
+  implementation [2].  <br>
+  By default, the <em>GroestlS</em> type employs the <em>Groestl-256 message-digest</em>
+  algorithm.  However, a user can specify the <em>IsGroestl224</em> flag to
+  true when initializing the digest object (by calling the <em>Create</em>
+  method) in order to use the <em>Groestl-224 message-digest</em> algorithm
+  instead of the default one. <br>
+   <br>
+<strong>REFERENCES</strong>: <br>
+  [1] <a href="http://www.groestl.info/">Grostl - a SHA-3 candidate. </a> <br>
+  [2] <a href="https://github.com/pornin/sphlib">SPHLIB 3.0: A Set of
+      Implementations of Various Hash Functions, Both in C and in Java. </a> <br></p>
+<br>          <div class="card mb-4">
+      <h3 class="card-header card-title bg-light">Uses</h3>
+      <div class="card-body">
+        <ul class="list-group list-group-flush">
+            <li class="list-group-item">
+              <ul class="list-inline">
+                  <li class="list-inline-item"><a href='../module/mbase_bytepack.html'>MBase_BytePack</a></li>
+                  <li class="list-inline-item"><a href='../module/mclass_basedigest.html'>MClass_BaseDigest</a></li>
+                  <li class="list-inline-item"><a href='../../XpfBase/module/mbase_common.html'>MBase_Common</a></li>
+                  <li class="list-inline-item"><a href='../module/mclass_mdengine.html'>MClass_MDEngine</a></li>
+              </ul>
+            </li>
+        </ul>
+      </div>
+    </div>
+
+      
+      <br>
+
+
+        <section>
+          <h2>Variables</h2>
+            <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Visibility</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+<th></th><th scope="col">Initial</th>        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-t0~3"></span>
+              integer(kind=kInt64),
+            </td>
+              <td>public,</td>
+            <td>
+parameter               
+            </td>
+            <td>::</td>
+            <td><strong>T0</strong>(0:255)</td>
+<td> =</td>
+                <td>[INT(Z&#39;C632F4A5F497A5C6&#39;, KIND=kInt64), INT(Z&#39;F86F978497EB84F8&#39;, KIND=kInt64), INT(Z&#39;EE5EB099B0C799EE&#39;, KIND=kInt64), INT(Z&#39;F67A8C8D8CF78DF6&#39;, KIND=kInt64), INT(Z&#39;FFE8170D17E50DFF&#39;, KIND=kInt64), INT(Z&#39;D60ADCBDDCB7BDD6&#39;, KIND=kInt64), INT(Z&#39;DE16C8B1C8A7B1DE&#39;, KIND=kInt64), INT(Z&#39;916DFC54FC395491&#39;, KIND=kInt64), INT(Z&#39;6090F050F0C05060&#39;, KIND=kInt64), INT(Z&#39;0207050305040302&#39;, KIND=kInt64), INT(Z&#39;CE2EE0A9E087A9CE&#39;, KIND=kInt64), INT(Z&#39;56D1877D87AC7D56&#39;, KIND=kInt64), INT(Z&#39;E7CC2B192BD519E7&#39;, KIND=kInt64), INT(Z&#39;B513A662A67162B5&#39;, KIND=kInt64), INT(Z&#39;4D7C31E6319AE64D&#39;, KIND=kInt64), INT(Z&#39;EC59B59AB5C39AEC&#39;, KIND=kInt64), INT(Z&#39;8F40CF45CF05458F&#39;, KIND=kInt64), INT(Z&#39;1FA3BC9DBC3E9D1F&#39;, KIND=kInt64), INT(Z&#39;8949C040C0094089&#39;, KIND=kInt64), INT(Z&#39;FA68928792EF87FA&#39;, KIND=kInt64), INT(Z&#39;EFD03F153FC515EF&#39;, KIND=kInt64), INT(Z&#39;B29426EB267FEBB2&#39;, KIND=kInt64), INT(Z&#39;8ECE40C94007C98E&#39;, KIND=kInt64), INT(Z&#39;FBE61D0B1DED0BFB&#39;, KIND=kInt64), INT(Z&#39;416E2FEC2F82EC41&#39;, KIND=kInt64), INT(Z&#39;B31AA967A97D67B3&#39;, KIND=kInt64), INT(Z&#39;5F431CFD1CBEFD5F&#39;, KIND=kInt64), INT(Z&#39;456025EA258AEA45&#39;, KIND=kInt64), INT(Z&#39;23F9DABFDA46BF23&#39;, KIND=kInt64), INT(Z&#39;535102F702A6F753&#39;, KIND=kInt64), INT(Z&#39;E445A196A1D396E4&#39;, KIND=kInt64), INT(Z&#39;9B76ED5BED2D5B9B&#39;, KIND=kInt64), INT(Z&#39;75285DC25DEAC275&#39;, KIND=kInt64), INT(Z&#39;E1C5241C24D91CE1&#39;, KIND=kInt64), INT(Z&#39;3DD4E9AEE97AAE3D&#39;, KIND=kInt64), INT(Z&#39;4CF2BE6ABE986A4C&#39;, KIND=kInt64), INT(Z&#39;6C82EE5AEED85A6C&#39;, KIND=kInt64), INT(Z&#39;7EBDC341C3FC417E&#39;, KIND=kInt64), INT(Z&#39;F5F3060206F102F5&#39;, KIND=kInt64), INT(Z&#39;8352D14FD11D4F83&#39;, KIND=kInt64), INT(Z&#39;688CE45CE4D05C68&#39;, KIND=kInt64), INT(Z&#39;515607F407A2F451&#39;, KIND=kInt64), INT(Z&#39;D18D5C345CB934D1&#39;, KIND=kInt64), INT(Z&#39;F9E1180818E908F9&#39;, KIND=kInt64), INT(Z&#39;E24CAE93AEDF93E2&#39;, KIND=kInt64), INT(Z&#39;AB3E9573954D73AB&#39;, KIND=kInt64), INT(Z&#39;6297F553F5C45362&#39;, KIND=kInt64), INT(Z&#39;2A6B413F41543F2A&#39;, KIND=kInt64), INT(Z&#39;081C140C14100C08&#39;, KIND=kInt64), INT(Z&#39;9563F652F6315295&#39;, KIND=kInt64), INT(Z&#39;46E9AF65AF8C6546&#39;, KIND=kInt64), INT(Z&#39;9D7FE25EE2215E9D&#39;, KIND=kInt64), INT(Z&#39;3048782878602830&#39;, KIND=kInt64), INT(Z&#39;37CFF8A1F86EA137&#39;, KIND=kInt64), INT(Z&#39;0A1B110F11140F0A&#39;, KIND=kInt64), INT(Z&#39;2FEBC4B5C45EB52F&#39;, KIND=kInt64), INT(Z&#39;0E151B091B1C090E&#39;, KIND=kInt64), INT(Z&#39;247E5A365A483624&#39;, KIND=kInt64), INT(Z&#39;1BADB69BB6369B1B&#39;, KIND=kInt64), INT(Z&#39;DF98473D47A53DDF&#39;, KIND=kInt64), INT(Z&#39;CDA76A266A8126CD&#39;, KIND=kInt64), INT(Z&#39;4EF5BB69BB9C694E&#39;, KIND=kInt64), INT(Z&#39;7F334CCD4CFECD7F&#39;, KIND=kInt64), INT(Z&#39;EA50BA9FBACF9FEA&#39;, KIND=kInt64), INT(Z&#39;123F2D1B2D241B12&#39;, KIND=kInt64), INT(Z&#39;1DA4B99EB93A9E1D&#39;, KIND=kInt64), INT(Z&#39;58C49C749CB07458&#39;, KIND=kInt64), INT(Z&#39;3446722E72682E34&#39;, KIND=kInt64), INT(Z&#39;3641772D776C2D36&#39;, KIND=kInt64), INT(Z&#39;DC11CDB2CDA3B2DC&#39;, KIND=kInt64), INT(Z&#39;B49D29EE2973EEB4&#39;, KIND=kInt64), INT(Z&#39;5B4D16FB16B6FB5B&#39;, KIND=kInt64), INT(Z&#39;A4A501F60153F6A4&#39;, KIND=kInt64), INT(Z&#39;76A1D74DD7EC4D76&#39;, KIND=kInt64), INT(Z&#39;B714A361A37561B7&#39;, KIND=kInt64), INT(Z&#39;7D3449CE49FACE7D&#39;, KIND=kInt64), INT(Z&#39;52DF8D7B8DA47B52&#39;, KIND=kInt64), INT(Z&#39;DD9F423E42A13EDD&#39;, KIND=kInt64), INT(Z&#39;5ECD937193BC715E&#39;, KIND=kInt64), INT(Z&#39;13B1A297A2269713&#39;, KIND=kInt64), INT(Z&#39;A6A204F50457F5A6&#39;, KIND=kInt64), INT(Z&#39;B901B868B86968B9&#39;, KIND=kInt64), INT(Z&#39;0000000000000000&#39;, KIND=kInt64), INT(Z&#39;C1B5742C74992CC1&#39;, KIND=kInt64), INT(Z&#39;40E0A060A0806040&#39;, KIND=kInt64), INT(Z&#39;E3C2211F21DD1FE3&#39;, KIND=kInt64), INT(Z&#39;793A43C843F2C879&#39;, KIND=kInt64), INT(Z&#39;B69A2CED2C77EDB6&#39;, KIND=kInt64), INT(Z&#39;D40DD9BED9B3BED4&#39;, KIND=kInt64), INT(Z&#39;8D47CA46CA01468D&#39;, KIND=kInt64), INT(Z&#39;671770D970CED967&#39;, KIND=kInt64), INT(Z&#39;72AFDD4BDDE44B72&#39;, KIND=kInt64), INT(Z&#39;94ED79DE7933DE94&#39;, KIND=kInt64), INT(Z&#39;98FF67D4672BD498&#39;, KIND=kInt64), INT(Z&#39;B09323E8237BE8B0&#39;, KIND=kInt64), INT(Z&#39;855BDE4ADE114A85&#39;, KIND=kInt64), INT(Z&#39;BB06BD6BBD6D6BBB&#39;, KIND=kInt64), INT(Z&#39;C5BB7E2A7E912AC5&#39;, KIND=kInt64), INT(Z&#39;4F7B34E5349EE54F&#39;, KIND=kInt64), INT(Z&#39;EDD73A163AC116ED&#39;, KIND=kInt64), INT(Z&#39;86D254C55417C586&#39;, KIND=kInt64), INT(Z&#39;9AF862D7622FD79A&#39;, KIND=kInt64), INT(Z&#39;6699FF55FFCC5566&#39;, KIND=kInt64), INT(Z&#39;11B6A794A7229411&#39;, KIND=kInt64), INT(Z&#39;8AC04ACF4A0FCF8A&#39;, KIND=kInt64), INT(Z&#39;E9D9301030C910E9&#39;, KIND=kInt64), INT(Z&#39;040E0A060A080604&#39;, KIND=kInt64), INT(Z&#39;FE66988198E781FE&#39;, KIND=kInt64), INT(Z&#39;A0AB0BF00B5BF0A0&#39;, KIND=kInt64), INT(Z&#39;78B4CC44CCF04478&#39;, KIND=kInt64), INT(Z&#39;25F0D5BAD54ABA25&#39;, KIND=kInt64), INT(Z&#39;4B753EE33E96E34B&#39;, KIND=kInt64), INT(Z&#39;A2AC0EF30E5FF3A2&#39;, KIND=kInt64), INT(Z&#39;5D4419FE19BAFE5D&#39;, KIND=kInt64), INT(Z&#39;80DB5BC05B1BC080&#39;, KIND=kInt64), INT(Z&#39;0580858A850A8A05&#39;, KIND=kInt64), INT(Z&#39;3FD3ECADEC7EAD3F&#39;, KIND=kInt64), INT(Z&#39;21FEDFBCDF42BC21&#39;, KIND=kInt64), INT(Z&#39;70A8D848D8E04870&#39;, KIND=kInt64), INT(Z&#39;F1FD0C040CF904F1&#39;, KIND=kInt64), INT(Z&#39;63197ADF7AC6DF63&#39;, KIND=kInt64), INT(Z&#39;772F58C158EEC177&#39;, KIND=kInt64), INT(Z&#39;AF309F759F4575AF&#39;, KIND=kInt64), INT(Z&#39;42E7A563A5846342&#39;, KIND=kInt64), INT(Z&#39;2070503050403020&#39;, KIND=kInt64), INT(Z&#39;E5CB2E1A2ED11AE5&#39;, KIND=kInt64), INT(Z&#39;FDEF120E12E10EFD&#39;, KIND=kInt64), INT(Z&#39;BF08B76DB7656DBF&#39;, KIND=kInt64), INT(Z&#39;8155D44CD4194C81&#39;, KIND=kInt64), INT(Z&#39;18243C143C301418&#39;, KIND=kInt64), INT(Z&#39;26795F355F4C3526&#39;, KIND=kInt64), INT(Z&#39;C3B2712F719D2FC3&#39;, KIND=kInt64), INT(Z&#39;BE8638E13867E1BE&#39;, KIND=kInt64), INT(Z&#39;35C8FDA2FD6AA235&#39;, KIND=kInt64), INT(Z&#39;88C74FCC4F0BCC88&#39;, KIND=kInt64), INT(Z&#39;2E654B394B5C392E&#39;, KIND=kInt64), INT(Z&#39;936AF957F93D5793&#39;, KIND=kInt64), INT(Z&#39;55580DF20DAAF255&#39;, KIND=kInt64), INT(Z&#39;FC619D829DE382FC&#39;, KIND=kInt64), INT(Z&#39;7AB3C947C9F4477A&#39;, KIND=kInt64), INT(Z&#39;C827EFACEF8BACC8&#39;, KIND=kInt64), INT(Z&#39;BA8832E7326FE7BA&#39;, KIND=kInt64), INT(Z&#39;324F7D2B7D642B32&#39;, KIND=kInt64), INT(Z&#39;E642A495A4D795E6&#39;, KIND=kInt64), INT(Z&#39;C03BFBA0FB9BA0C0&#39;, KIND=kInt64), INT(Z&#39;19AAB398B3329819&#39;, KIND=kInt64), INT(Z&#39;9EF668D16827D19E&#39;, KIND=kInt64), INT(Z&#39;A322817F815D7FA3&#39;, KIND=kInt64), INT(Z&#39;44EEAA66AA886644&#39;, KIND=kInt64), INT(Z&#39;54D6827E82A87E54&#39;, KIND=kInt64), INT(Z&#39;3BDDE6ABE676AB3B&#39;, KIND=kInt64), INT(Z&#39;0B959E839E16830B&#39;, KIND=kInt64), INT(Z&#39;8CC945CA4503CA8C&#39;, KIND=kInt64), INT(Z&#39;C7BC7B297B9529C7&#39;, KIND=kInt64), INT(Z&#39;6B056ED36ED6D36B&#39;, KIND=kInt64), INT(Z&#39;286C443C44503C28&#39;, KIND=kInt64), INT(Z&#39;A72C8B798B5579A7&#39;, KIND=kInt64), INT(Z&#39;BC813DE23D63E2BC&#39;, KIND=kInt64), INT(Z&#39;1631271D272C1D16&#39;, KIND=kInt64), INT(Z&#39;AD379A769A4176AD&#39;, KIND=kInt64), INT(Z&#39;DB964D3B4DAD3BDB&#39;, KIND=kInt64), INT(Z&#39;649EFA56FAC85664&#39;, KIND=kInt64), INT(Z&#39;74A6D24ED2E84E74&#39;, KIND=kInt64), INT(Z&#39;1436221E22281E14&#39;, KIND=kInt64), INT(Z&#39;92E476DB763FDB92&#39;, KIND=kInt64), INT(Z&#39;0C121E0A1E180A0C&#39;, KIND=kInt64), INT(Z&#39;48FCB46CB4906C48&#39;, KIND=kInt64), INT(Z&#39;B88F37E4376BE4B8&#39;, KIND=kInt64), INT(Z&#39;9F78E75DE7255D9F&#39;, KIND=kInt64), INT(Z&#39;BD0FB26EB2616EBD&#39;, KIND=kInt64), INT(Z&#39;43692AEF2A86EF43&#39;, KIND=kInt64), INT(Z&#39;C435F1A6F193A6C4&#39;, KIND=kInt64), INT(Z&#39;39DAE3A8E372A839&#39;, KIND=kInt64), INT(Z&#39;31C6F7A4F762A431&#39;, KIND=kInt64), INT(Z&#39;D38A593759BD37D3&#39;, KIND=kInt64), INT(Z&#39;F274868B86FF8BF2&#39;, KIND=kInt64), INT(Z&#39;D583563256B132D5&#39;, KIND=kInt64), INT(Z&#39;8B4EC543C50D438B&#39;, KIND=kInt64), INT(Z&#39;6E85EB59EBDC596E&#39;, KIND=kInt64), INT(Z&#39;DA18C2B7C2AFB7DA&#39;, KIND=kInt64), INT(Z&#39;018E8F8C8F028C01&#39;, KIND=kInt64), INT(Z&#39;B11DAC64AC7964B1&#39;, KIND=kInt64), INT(Z&#39;9CF16DD26D23D29C&#39;, KIND=kInt64), INT(Z&#39;49723BE03B92E049&#39;, KIND=kInt64), INT(Z&#39;D81FC7B4C7ABB4D8&#39;, KIND=kInt64), INT(Z&#39;ACB915FA1543FAAC&#39;, KIND=kInt64), INT(Z&#39;F3FA090709FD07F3&#39;, KIND=kInt64), INT(Z&#39;CFA06F256F8525CF&#39;, KIND=kInt64), INT(Z&#39;CA20EAAFEA8FAFCA&#39;, KIND=kInt64), INT(Z&#39;F47D898E89F38EF4&#39;, KIND=kInt64), INT(Z&#39;476720E9208EE947&#39;, KIND=kInt64), INT(Z&#39;1038281828201810&#39;, KIND=kInt64), INT(Z&#39;6F0B64D564DED56F&#39;, KIND=kInt64), INT(Z&#39;F073838883FB88F0&#39;, KIND=kInt64), INT(Z&#39;4AFBB16FB1946F4A&#39;, KIND=kInt64), INT(Z&#39;5CCA967296B8725C&#39;, KIND=kInt64), INT(Z&#39;38546C246C702438&#39;, KIND=kInt64), INT(Z&#39;575F08F108AEF157&#39;, KIND=kInt64), INT(Z&#39;732152C752E6C773&#39;, KIND=kInt64), INT(Z&#39;9764F351F3355197&#39;, KIND=kInt64), INT(Z&#39;CBAE6523658D23CB&#39;, KIND=kInt64), INT(Z&#39;A125847C84597CA1&#39;, KIND=kInt64), INT(Z&#39;E857BF9CBFCB9CE8&#39;, KIND=kInt64), INT(Z&#39;3E5D6321637C213E&#39;, KIND=kInt64), INT(Z&#39;96EA7CDD7C37DD96&#39;, KIND=kInt64), INT(Z&#39;611E7FDC7FC2DC61&#39;, KIND=kInt64), INT(Z&#39;0D9C9186911A860D&#39;, KIND=kInt64), INT(Z&#39;0F9B9485941E850F&#39;, KIND=kInt64), INT(Z&#39;E04BAB90ABDB90E0&#39;, KIND=kInt64), INT(Z&#39;7CBAC642C6F8427C&#39;, KIND=kInt64), INT(Z&#39;712657C457E2C471&#39;, KIND=kInt64), INT(Z&#39;CC29E5AAE583AACC&#39;, KIND=kInt64), INT(Z&#39;90E373D8733BD890&#39;, KIND=kInt64), INT(Z&#39;06090F050F0C0506&#39;, KIND=kInt64), INT(Z&#39;F7F4030103F501F7&#39;, KIND=kInt64), INT(Z&#39;1C2A36123638121C&#39;, KIND=kInt64), INT(Z&#39;C23CFEA3FE9FA3C2&#39;, KIND=kInt64), INT(Z&#39;6A8BE15FE1D45F6A&#39;, KIND=kInt64), INT(Z&#39;AEBE10F91047F9AE&#39;, KIND=kInt64), INT(Z&#39;69026BD06BD2D069&#39;, KIND=kInt64), INT(Z&#39;17BFA891A82E9117&#39;, KIND=kInt64), INT(Z&#39;9971E858E8295899&#39;, KIND=kInt64), INT(Z&#39;3A5369276974273A&#39;, KIND=kInt64), INT(Z&#39;27F7D0B9D04EB927&#39;, KIND=kInt64), INT(Z&#39;D991483848A938D9&#39;, KIND=kInt64), INT(Z&#39;EBDE351335CD13EB&#39;, KIND=kInt64), INT(Z&#39;2BE5CEB3CE56B32B&#39;, KIND=kInt64), INT(Z&#39;2277553355443322&#39;, KIND=kInt64), INT(Z&#39;D204D6BBD6BFBBD2&#39;, KIND=kInt64), INT(Z&#39;A9399070904970A9&#39;, KIND=kInt64), INT(Z&#39;07878089800E8907&#39;, KIND=kInt64), INT(Z&#39;33C1F2A7F266A733&#39;, KIND=kInt64), INT(Z&#39;2DECC1B6C15AB62D&#39;, KIND=kInt64), INT(Z&#39;3C5A66226678223C&#39;, KIND=kInt64), INT(Z&#39;15B8AD92AD2A9215&#39;, KIND=kInt64), INT(Z&#39;C9A96020608920C9&#39;, KIND=kInt64), INT(Z&#39;875CDB49DB154987&#39;, KIND=kInt64), INT(Z&#39;AAB01AFF1A4FFFAA&#39;, KIND=kInt64), INT(Z&#39;50D8887888A07850&#39;, KIND=kInt64), INT(Z&#39;A52B8E7A8E517AA5&#39;, KIND=kInt64), INT(Z&#39;03898A8F8A068F03&#39;, KIND=kInt64), INT(Z&#39;594A13F813B2F859&#39;, KIND=kInt64), INT(Z&#39;09929B809B128009&#39;, KIND=kInt64), INT(Z&#39;1A2339173934171A&#39;, KIND=kInt64), INT(Z&#39;651075DA75CADA65&#39;, KIND=kInt64), INT(Z&#39;D784533153B531D7&#39;, KIND=kInt64), INT(Z&#39;84D551C65113C684&#39;, KIND=kInt64), INT(Z&#39;D003D3B8D3BBB8D0&#39;, KIND=kInt64), INT(Z&#39;82DC5EC35E1FC382&#39;, KIND=kInt64), INT(Z&#39;29E2CBB0CB52B029&#39;, KIND=kInt64), INT(Z&#39;5AC3997799B4775A&#39;, KIND=kInt64), INT(Z&#39;1E2D3311333C111E&#39;, KIND=kInt64), INT(Z&#39;7B3D46CB46F6CB7B&#39;, KIND=kInt64), INT(Z&#39;A8B71FFC1F4BFCA8&#39;, KIND=kInt64), INT(Z&#39;6D0C61D661DAD66D&#39;, KIND=kInt64), INT(Z&#39;2C624E3A4E583A2C&#39;, KIND=kInt64)]</td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-t1~3"></span>
+              integer(kind=kInt64),
+            </td>
+              <td>public,</td>
+            <td>
+parameter               
+            </td>
+            <td>::</td>
+            <td><strong>T1</strong>(0:255)</td>
+<td> =</td>
+                <td>[(ISHFTC(T0(Indx), 56), Indx=0, 255)]</td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-t2"></span>
+              integer(kind=kInt64),
+            </td>
+              <td>public,</td>
+            <td>
+parameter               
+            </td>
+            <td>::</td>
+            <td><strong>T2</strong>(0:255)</td>
+<td> =</td>
+                <td>[(ISHFTC(T0(Indx), 48), Indx=0, 255)]</td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-t3"></span>
+              integer(kind=kInt64),
+            </td>
+              <td>public,</td>
+            <td>
+parameter               
+            </td>
+            <td>::</td>
+            <td><strong>T3</strong>(0:255)</td>
+<td> =</td>
+                <td>[(ISHFTC(T0(Indx), 40), Indx=0, 255)]</td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-t4"></span>
+              integer(kind=kInt64),
+            </td>
+              <td>public,</td>
+            <td>
+parameter               
+            </td>
+            <td>::</td>
+            <td><strong>T4</strong>(0:255)</td>
+<td> =</td>
+                <td>[(ISHFTC(T0(Indx), 32), Indx=0, 255)]</td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-t5"></span>
+              integer(kind=kInt64),
+            </td>
+              <td>public,</td>
+            <td>
+parameter               
+            </td>
+            <td>::</td>
+            <td><strong>T5</strong>(0:255)</td>
+<td> =</td>
+                <td>[(ISHFTC(T0(Indx), 24), Indx=0, 255)]</td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-t6"></span>
+              integer(kind=kInt64),
+            </td>
+              <td>public,</td>
+            <td>
+parameter               
+            </td>
+            <td>::</td>
+            <td><strong>T6</strong>(0:255)</td>
+<td> =</td>
+                <td>[(ISHFTC(T0(Indx), 16), Indx=0, 255)]</td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-t7"></span>
+              integer(kind=kInt64),
+            </td>
+              <td>public,</td>
+            <td>
+parameter               
+            </td>
+            <td>::</td>
+            <td><strong>T7</strong>(0:255)</td>
+<td> =</td>
+                <td>[(ISHFTC(T0(Indx), 8), Indx=0, 255)]</td>
+            <td>
+                
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+        </section>
+        <br>
+
+
+
+
+        <section>
+          <h2>Derived Types</h2>
+              <div class="card">
+    <div class="card-header codesum">
+      <span class="anchor" id="type-groestls"></span>
+      <h3>
+        type, public, extends(<a href='../type/mdengine.html'>MDEngine</a>)&nbsp;::&nbsp;
+        <a href='../type/groestls.html'>GroestlS</a>
+        
+      </h3>
+    </div>
+    <div class="card-body">
+      <p><em>GroestlS</em> is a concrete <em>digest</em> type that implements an
+ incremental cryptographic hash function by employing either
+ the <em>Groestl-224</em> or the <em>Groestl-256 message-digest</em> algorithm.</p>
+
+
+
+
+        <h4>Type-Bound Procedures</h4>
+        <table class="table table-striped varlist">
+          <tbody>
+              <tr>
+                <td>  generic, public ::
+  <strong><a href='../type/groestls.html#boundprocedure-update~15'>Update</a></strong> => <a href='../type/mdengine.html#boundprocedure-insertbytes~5'>InsertBytes</a>, <a href='../type/mdengine.html#boundprocedure-insertgen~5'>InsertGen</a></td>
+                <td><p><strong>Type-Bound Subroutine</strong>: Update <br>
+ <strong>Purpose</strong>:  To insert input data into the <em>digest</em> object (commonly stored in a
+               buffer array) and process block(s) of data if necessary. <br>
+ <strong>Usage</strong>: <br>
+  ! insert input data in a generic way <br>
+  ---&gt;    CALL MD%Update(Input, InpSize) <br>
+  ! insert input data as an array of bytes (8-bit integers) <br>
+  ---&gt;    CALL MD%Update(ByteArr, Offset, Length) <br></p></td>
+              </tr>
+              <tr>
+                <td>  generic, public ::
+  <strong><a href='../type/groestls.html#boundprocedure-digest~14'>Digest</a></strong> => <a href='../type/mdengine.html#boundprocedure-bytedigest~5'>ByteDigest</a>, <a href='../type/mdengine.html#boundprocedure-bytedigest_winput~5'>ByteDigest_wInput</a>, HexDigest, HexDigest_wInput</td>
+                <td><p><strong>Type-Bound Subroutine</strong>: Digest <br>
+ <strong>Purpose</strong>:  To finalize the current hash computation and return the hash output.
+               The object is reset.  Some final input data can be inserted. <br>
+ <strong>Usage</strong>: <br>
+  ! finalize hash computation and return hash output as a byte array <br>
+  ---&gt;    CALL MD%Digest(ByteArr) <br>
+  ! insert final input and return hash output as a byte array <br>
+  ---&gt;    CALL MD%Digest(Input, InpSize, ByteArr) <br>
+  ! finalize hash computation and return hash output as a hexadecimal string <br>
+  ---&gt;    CALL MD%Digest(HexStr) <br>
+  ! insert final input and return hash output as a hexadecimal string <br>
+  ---&gt;    CALL MD%Digest(Input, InpSize, HexStr) <br></p></td>
+              </tr>
+              <tr>
+                <td>  procedure, public ::
+  <strong><a href='../type/mdengine.html#boundprocedure-insertbytes~5'>InsertBytes</a></strong> => MDEngine_InsertBytes</td>
+                <td><p>Use the <em>Update</em> method in place of the <em>InsertBytes</em> method to insert input
+ data as an array of bytes (8-bit integers) where the offset (zero-based) into
+ the array and the length of the input in bytes are specified.</p></td>
+              </tr>
+              <tr>
+                <td>  procedure, public ::
+  <strong><a href='../type/mdengine.html#boundprocedure-insertgen~5'>InsertGen</a></strong> => MDEngine_InsertGen</td>
+                <td><p>Use the <em>Update</em> method in place of the <em>InsertGen</em> method to insert
+ input data in a generic way where the <em>Input</em> argument can be any type and
+ any rank and the <em>InpSize</em> argument specifies the size of input data in bytes.</p></td>
+              </tr>
+              <tr>
+                <td>  procedure, public ::
+  <strong><a href='../type/mdengine.html#boundprocedure-bytedigest~5'>ByteDigest</a></strong> => MDEngine_ByteDigest</td>
+                <td><p>Use the <em>Digest</em> method in place of the <em>ByteDigest</em> method to finalize the
+ current hash computation and return the hash value as an array of bytes
+ in a newly-allocated array.</p></td>
+              </tr>
+              <tr>
+                <td>  procedure, public ::
+  <strong><a href='../type/mdengine.html#boundprocedure-bytedigest_winput~5'>ByteDigest_wInput</a></strong> => MDEngine_ByteDigest_wInput</td>
+                <td><p>Use the <em>Digest</em> method in place of the <em>ByteDigest_wInput</em> method to insert final
+ input in a generic way and then finalize the current hash computation and return
+ the hash value as an array of bytes in a newly-allocated array.</p></td>
+              </tr>
+              <tr>
+                <td>  procedure, public ::
+  <strong><a href='../type/mdengine.html#boundprocedure-enginereset'>EngineReset</a></strong> => MDEngine_Reset</td>
+                <td><p><em>EngineReset</em> is a procedure to reset components of the digest to their initial values. <br>
+ This procedure is NOT intended to be used by a user but the <em>Reset</em> method implemented
+ by a <em>concrete</em> digest type should call this method.</p></td>
+              </tr>
+              <tr>
+                <td>  procedure, public ::
+  <strong><a href='../type/mdengine.html#boundprocedure-engineclone'>EngineClone</a></strong> => MDEngine_Clone</td>
+                <td><p><em>EngineClone</em> is a procedure to copy components of the source object to the destination one. <br>
+ This procedure is NOT intended to be used by a user but the <em>GetClone</em> method implemented
+ by a <em>concrete</em> digest type should call this method.</p></td>
+              </tr>
+              <tr>
+                <td>  procedure, public ::
+  <strong><a href='../type/mdengine.html#boundprocedure-getblockcount~2'>GetBlockCount</a></strong> => MDEngine_BlockCount</td>
+                <td><p><em>GetBlockCount</em> is a procedure to get the number of blocks of input processed. <br>
+ This procedure is NOT intended to be used by a user.</p></td>
+              </tr>
+              <tr>
+                <td>  procedure, public ::
+  <strong><a href='../type/mdengine.html#boundprocedure-getbuflen~3'>GetBufLen</a></strong> => MDEngine_BufLen</td>
+                <td><p><em>GetBufLen</em> is a procedure to get the number of bytes of input currently
+ stored in the buffer. <br>
+ This procedure is NOT intended to be used by a user.</p></td>
+              </tr>
+              <tr>
+                <td>  generic, public ::
+  <strong><a href='../type/groestls.html#boundprocedure-addbitsndigest~15'>AddBitsNDigest</a></strong> => MDEngine_ByteDigest_AddBits, MDEngine_HexDigest_AddBits</td>
+                <td><p><strong>Type-Bound Subroutine</strong>: AddBitsNDigest <br>
+ <strong>Purpose</strong>:  To add the last byte and then finalize the current hash computation
+               and return the hash output. The object is reset. <br>
+ <strong>Usage</strong>: <br>
+  ! insert final input and return hash output as a byte array <br>
+  ---&gt;    CALL MD%AddBitsNDigest(Input, InpSize, ByteArr) <br>
+  ! insert final input and return hash output as a hexadecimal string <br>
+  ---&gt;    CALL MD%AddBitsNDigest(Input, InpSize, HexStr) <br>
+ <strong>Note</strong>: <br>
+ This method is only used for an input message whose bit length is not
+ a multiple of eight (i.e. a message with partial bytes). <br>
+ The method is intended to be used by a digest type that implements a hash function
+ that is an entrant of the SHA-3 competition.  It is mainly used for a test purpose.</p></td>
+              </tr>
+              <tr>
+                <td>  procedure, public ::
+  <strong><a href='../type/groestls.html#boundprocedure-initialize~16'>Initialize</a></strong> => GroestlS_Initialize</td>
+                <td><p>Use the <em>Create</em> method in place of the <em>Initialize</em> method to
+ initialize the <em>digest</em> object with default algorithm (Groestl-256).</p></td>
+              </tr>
+              <tr>
+                <td>  procedure, public ::
+  <strong><a href='../type/groestls.html#boundprocedure-reset~10'>Reset</a></strong> => GroestlS_Reset</td>
+                <td><p><strong>Type-Bound Subroutine</strong>: Reset <br>
+ <strong>Purpose</strong>:  To reset the <em>digest</em> object to its initial state. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    CALL MD%Reset()</p></td>
+              </tr>
+              <tr>
+                <td>  procedure, public ::
+  <strong><a href='../type/groestls.html#boundprocedure-getclone~12'>GetClone</a></strong> => GroestlS_GetClone</td>
+                <td><p><strong>Type-Bound Subroutine</strong>: GetClone <br>
+ <strong>Purpose</strong>:  To clone the current state of the source object. The destination
+               object evolves independently of the source object. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    CALL SrcMD%GetClone(DstMD)</p></td>
+              </tr>
+              <tr>
+                <td>  procedure, public ::
+  <strong><a href='../type/groestls.html#boundprocedure-getname~16'>GetName</a></strong> => GroestlS_GetName</td>
+                <td><p><strong>Type-Bound Function</strong>: GetName <br>
+ <strong>Purpose</strong>:  To get the name of the <em>digest</em> object. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    Name = MD%GetName()</p></td>
+              </tr>
+              <tr>
+                <td>  procedure, public ::
+  <strong><a href='../type/groestls.html#boundprocedure-getdigestlen~11'>GetDigestLen</a></strong> => GroestlS_GetDigestLen</td>
+                <td><p><strong>Type-Bound Function</strong>: GetDigestLen <br>
+ <strong>Purpose</strong>:  To return the natural hash function output length (in bytes). <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    Length = MD%GetDigestLen()</p></td>
+              </tr>
+              <tr>
+                <td>  procedure, public ::
+  <strong><a href='../type/groestls.html#boundprocedure-getblocklen~7'>GetBlockLen</a></strong> => GroestlS_GetBlockLen</td>
+                <td><p><em>GetBlockLen</em> is a procedure to return the block length of the digest. <br>
+ This method is NOT intended to be used by a user.</p></td>
+              </tr>
+              <tr>
+                <td>  procedure, public ::
+  <strong><a href='../type/groestls.html#boundprocedure-setbufptr~12'>SetBufPtr</a></strong> => GroestlS_SetBufPtr</td>
+                <td><p><em>SetBufPtr</em> is a procedure to set a pointer to the buffer array of this digest. <br>
+ This method is NOT intended to be used by a user.</p></td>
+              </tr>
+              <tr>
+                <td>  procedure, public ::
+  <strong><a href='../type/groestls.html#boundprocedure-processblock~12'>ProcessBlock</a></strong> => GroestlS_ProcessBlock</td>
+                <td><p><em>ProcessBlock</em> is a procedure to process one block of data for this digest. <br>
+ This method is NOT intended to be used by a user.</p></td>
+              </tr>
+              <tr>
+                <td>  procedure, public ::
+  <strong><a href='../type/groestls.html#boundprocedure-dopadding~7'>DoPadding</a></strong> => GroestlS_DoPadding</td>
+                <td><p><em>DoPadding</em> is a procedure to perform padding of the message for this digest. <br>
+ This method is NOT intended to be used by a user.</p></td>
+              </tr>
+              <tr>
+                <td>  procedure, public ::
+  <strong><a href='../type/groestls.html#boundprocedure-addbitsnpad~7'>AddBitsNPad</a></strong> => GroestlS_AddBitsNPad</td>
+                <td><p><em>AddBitsNPad</em> is a procedure to add the final partial byte and then perform
+ padding of the message for this digest. <br>
+ This method is NOT intended to be used by a user.</p></td>
+              </tr>
+              <tr>
+                <td>  generic, public ::
+  <strong><a href='../type/groestls.html#boundprocedure-create~11'>Create</a></strong> => <a href='../type/groestls.html#boundprocedure-initialize~16'>Initialize</a>, InitializeWFlag</td>
+                <td><p><strong>Type-Bound Subroutine</strong>: Create <br>
+ <strong>Purpose</strong>:  To perform any essential initialization of the <em>digest</em> object. <br>
+ <strong>Usage</strong>: <br>
+  ! initialize the object to employ the default (Groestl-256) algorithm <br>
+  ---&gt;    CALL MD%Create() <br>
+  ! initialize the object to employ the Groestl-224 algorithm <br>
+  ---&gt;    CALL MD%Create(IsGroestl224=.TRUE.) <br></p></td>
+              </tr>
+          </tbody>
+        </table>
+    </div>
+  </div>
+
+        </section>
+        <br>
+
+
+
+
+
+    </div>
+  </div>
+
+      <hr>
+    </div> <!-- /container -->
+    <footer>
+      <div class="container">
+        <div class="row justify-content-between">
+          <div class="col"><p>eXPerimental Fortran Library (XpfLib) Documentation was developed by Niranama<br>&copy; 2024 
+</p>
+          </div>
+          <div class="col">
+            <p class="text-end">
+              Documentation generated by
+              <a href="https://github.com/Fortran-FOSS-Programmers/ford">FORD</a>
+            </p>
+          </div>
+        </div>
+        <br>
+      </div> <!-- /container -->
+    </footer>
+
+    <!-- Bootstrap core JavaScript -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>    
+
+    <!-- MathJax JavaScript
+             ================================================== -->
+             <!-- Placed at the end of the document so the pages load faster -->
+        <script type="text/x-mathjax-config">
+          MathJax.Hub.Config({
+          TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } },
+          jax: ['input/TeX','input/MathML','output/HTML-CSS'],
+          extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']
+          });
+        </script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+          <script src="../tipuesearch/tipuesearch_content.js"></script>
+          <script src="../tipuesearch/tipuesearch_set.js"></script>
+          <script src="../tipuesearch/tipuesearch.js"></script>
+
+  </body>
+</html>

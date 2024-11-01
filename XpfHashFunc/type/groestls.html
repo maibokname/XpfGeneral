@@ -1,0 +1,2465 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta name="description" content="Experimental Fortran Package - Hash Functions">
+    <meta name="author" content="Niranama" >
+    <link rel="icon" href="../favicon.png">
+
+    <title>GroestlS &ndash; eXPerimental Fortran Library (XpfLib) Documentation </title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link href="../css/pygments.css" rel="stylesheet">
+    <link href="../css/font-awesome.min.css" rel="stylesheet">
+    <link href="../css/local.css" rel="stylesheet">
+      <link  href="../tipuesearch/tipuesearch.css" rel="stylesheet">
+
+    <script src="https://code.jquery.com/jquery-3.7.0.slim.min.js" integrity="sha256-tG5mcZUtJsZvyKAxYLVXrmjKBVLd6VpVccqz/r4ypFE=" crossorigin="anonymous"></script>
+  </head>
+
+  <body>
+
+    <!-- Fixed navbar -->
+    <div class="container-fluid mb-sm-4 mb-xl-2">
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container">
+          <a class="navbar-brand" href="../index.html">eXPerimental Fortran Library (XpfLib) Documentation </a>
+          <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar"
+                  aria-expanded="false" aria-controls="navbar" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon">
+          </button>
+
+          <div id="navbar" class="navbar-collapse collapse">
+            <ul class="navbar-nav">
+                  <li class="nav-item">
+                    <a class="nav-link" href="../lists/files.html">Source Files</a>
+                  </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../lists/modules.html">Modules</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../lists/procedures.html">Procedures</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../lists/absint.html">Abstract Interfaces</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../lists/types.html">Derived Types</a>
+                </li>
+            </ul>
+              <div class="d-flex align-items-end flex-grow-1">
+                <form action="../search.html" role="search" class="ms-auto">
+                  <input type="text" class="form-control" aria-label="Search" placeholder="Search" name="q" id="tipue_search_input" autocomplete="off" required>
+                </form>
+              </div>
+          </div><!--/.nav-collapse -->
+        </div>
+      </nav>
+    </div>
+
+    <div class="container">
+  <div class="row">
+    <h1>GroestlS
+      <small>Derived Type</small>
+      
+    </h1>
+      <div class="container p-2 mb-4 bg-light border rounded-3">
+    <div class="row align-items-center justify-content-between" id="info-bar">
+      <div class="col">
+        <ul class="list-inline" style="margin-bottom:0px;display:inline">
+
+            <li class="list-inline-item" id="statements"><i class="fa fa-list-ol"></i>
+              <a data-bs-toggle="tooltip"
+                 data-bs-placement="bottom" data-html="true"
+                 title="<p> 1.7% of total for derived types.</p>Including implementation: 267 statements,  1.7% of total for derived types.">19 statements</a>
+            </li>
+
+            <li class="list-inline-item" id="source-file">
+              <i class="fa fa-code"></i>
+              <a href="../src/MClass_GroestlS.f90"> Source File</a>
+            </li>
+        </ul>
+      </div>
+      <div class="col">
+        <nav aria-label="breadcrumb">
+          <ol class="breadcrumb justify-content-end mb-0">
+                <li class="breadcrumb-item"><a href='../sourcefile/mclass_groestls.f90.html'>MClass_GroestlS.f90</a></li>
+                <li class="breadcrumb-item"><a href='../module/mclass_groestls.html'>MClass_GroestlS</a></li>
+            <li class="breadcrumb-item active" aria-current="page">GroestlS</li>
+          </ol>
+        </nav>
+      </div>
+    </div>
+  </div>
+  <script>
+    $(function () {
+    $('[data-bs-toggle="tooltip"]').tooltip()
+    })
+  </script>
+
+  </div>
+  
+  <div class="row">
+    <div class="col-md-3 hidden-xs hidden-sm visible-md visible-lg">
+      <div id="sidebar">
+      <h3>Contents</h3>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+      <div class="card mb-4">
+      <a data-bs-toggle="collapse" href="#boundprocs-0"
+         aria-expanded="false" aria-controls="boundprocs-0">
+         <h4 class="card-header bg-primary text-white">Type-Bound Procedures</h4>
+      </a>
+      <div id="boundprocs-0" class="collapse">
+        <div class="list-group list-group-flush">
+            <a class="list-group-item" href="../type/groestls.html#boundprocedure-update~15">Update</a>
+            <a class="list-group-item" href="../type/groestls.html#boundprocedure-digest~14">Digest</a>
+            <a class="list-group-item" href="../type/groestls.html#boundprocedure-insertbytes~5">InsertBytes</a>
+            <a class="list-group-item" href="../type/groestls.html#boundprocedure-insertgen~5">InsertGen</a>
+            <a class="list-group-item" href="../type/groestls.html#boundprocedure-bytedigest~5">ByteDigest</a>
+            <a class="list-group-item" href="../type/groestls.html#boundprocedure-bytedigest_winput~5">ByteDigest_wInput</a>
+            <a class="list-group-item" href="../type/groestls.html#boundprocedure-enginereset">EngineReset</a>
+            <a class="list-group-item" href="../type/groestls.html#boundprocedure-engineclone">EngineClone</a>
+            <a class="list-group-item" href="../type/groestls.html#boundprocedure-getblockcount~2">GetBlockCount</a>
+            <a class="list-group-item" href="../type/groestls.html#boundprocedure-getbuflen~3">GetBufLen</a>
+            <a class="list-group-item" href="../type/groestls.html#boundprocedure-addbitsndigest~15">AddBitsNDigest</a>
+            <a class="list-group-item" href="../type/groestls.html#boundprocedure-initialize~16">Initialize</a>
+            <a class="list-group-item" href="../type/groestls.html#boundprocedure-reset~10">Reset</a>
+            <a class="list-group-item" href="../type/groestls.html#boundprocedure-getclone~12">GetClone</a>
+            <a class="list-group-item" href="../type/groestls.html#boundprocedure-getname~16">GetName</a>
+            <a class="list-group-item" href="../type/groestls.html#boundprocedure-getdigestlen~11">GetDigestLen</a>
+            <a class="list-group-item" href="../type/groestls.html#boundprocedure-getblocklen~7">GetBlockLen</a>
+            <a class="list-group-item" href="../type/groestls.html#boundprocedure-setbufptr~12">SetBufPtr</a>
+            <a class="list-group-item" href="../type/groestls.html#boundprocedure-processblock~12">ProcessBlock</a>
+            <a class="list-group-item" href="../type/groestls.html#boundprocedure-dopadding~7">DoPadding</a>
+            <a class="list-group-item" href="../type/groestls.html#boundprocedure-addbitsnpad~7">AddBitsNPad</a>
+            <a class="list-group-item" href="../type/groestls.html#boundprocedure-create~11">Create</a>
+        </div>
+      </div>
+    </div>
+
+  
+  
+    <div class="card card-primary">
+      <div class="card-header text-left"><h3 class="card-title">Source Code</h3></div>
+      <div class="list-group">
+        <a class="list-group-item" href="../type/groestls.html#src">GroestlS</a>
+      </div>
+    </div>
+
+
+  </div>
+
+    </div>
+    
+    <div class="col-md-9" id='text'>
+      <h2>type, public, extends(<a href='../type/mdengine.html'>MDEngine</a>) :: GroestlS</h2>
+    <p><em>GroestlS</em> is a concrete <em>digest</em> type that implements an
+ incremental cryptographic hash function by employing either
+ the <em>Groestl-224</em> or the <em>Groestl-256 message-digest</em> algorithm.</p>
+    <br>
+
+    
+
+
+      <section>
+        <h2>Type-Bound Procedures</h2>
+          <div class="row">
+              <div class="card mt-3">
+    <div class="card-header codesum">
+      <span class="anchor" id="boundprocedure-update~15"></span>
+      <h3>
+          generic, public ::
+  <strong>Update</strong> => <a href='../type/mdengine.html#boundprocedure-insertbytes~5'>InsertBytes</a>, <a href='../type/mdengine.html#boundprocedure-insertgen~5'>InsertGen</a>
+        
+      </h3>
+    </div>
+    <ul class="list-group">
+        <li class="list-group-item">
+                  <h3>
+    private  subroutine MDEngine_InsertBytes(MD, ByteArr, Offset, Length)  
+</h3>
+
+  <p>To insert input data as a byte (8-bit integer) array where offset (zero-based)
+ and length are specified.</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(<a href='../type/mdengine.html'>MDEngine</a>),
+            </td>
+<td>intent(inout)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>MD</strong></td>
+            <td>
+                <p>'MDEngine' object</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              integer(kind=kInt8),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>ByteArr</strong>(0:)</td>
+            <td>
+                <p>a byte array of input data</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              integer(kind=kInt32),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Offset</strong></td>
+            <td>
+                <p>the offset in input data</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              integer(kind=kInt32),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Length</strong></td>
+            <td>
+                <p>the length of input data in bytes</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+        </li>
+        <li class="list-group-item">
+                  <h3>
+    private  subroutine MDEngine_InsertGen(MD, Input, InpSize)  
+</h3>
+
+  <p>To insert input data in a generic way where the <em>Input</em> argument can be
+ any type and any rank and the <em>InpSize</em> argument specifies the size of
+ the input data in a number of bytes.</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(<a href='../type/mdengine.html'>MDEngine</a>),
+            </td>
+<td>intent(inout)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>MD</strong></td>
+            <td>
+                <p>'MDEngine' object</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              type(*),
+            </td>
+<td>intent(in),</td>
+              <td></td>            <td>
+              CONTIGUOUS
+            </td>
+            <td>::</td>
+            <td><strong>Input</strong>(..)</td>
+            <td>
+                <p>input data (any type and rank)</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              integer(kind=kInt32),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>InpSize</strong></td>
+            <td>
+                <p>size of the input (in bytes)</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+        </li>
+    </ul>
+  </div>
+
+          </div>
+          <div class="row">
+              <div class="card mt-3">
+    <div class="card-header codesum">
+      <span class="anchor" id="boundprocedure-digest~14"></span>
+      <h3>
+          generic, public ::
+  <strong>Digest</strong> => <a href='../type/mdengine.html#boundprocedure-bytedigest~5'>ByteDigest</a>, <a href='../type/mdengine.html#boundprocedure-bytedigest_winput~5'>ByteDigest_wInput</a>, HexDigest, HexDigest_wInput
+        
+      </h3>
+    </div>
+    <ul class="list-group">
+        <li class="list-group-item">
+                  <h3>
+    private  subroutine MDEngine_ByteDigest(MD, ByteArr)  
+</h3>
+
+  <p>To finalize the current hash computation and return the hash value
+ as an array of (8-bit integer) bytes in a newly-allocated array.
+ The digest object is reset. <br>
+ <strong>Important Note</strong>: The newly-allocated array has a zero-based index.</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(<a href='../type/mdengine.html'>MDEngine</a>),
+            </td>
+<td>intent(inout)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>MD</strong></td>
+            <td>
+                <p>'MDEngine' object</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              integer(kind=kInt8),
+            </td>
+<td>intent(out),</td>
+              <td></td>            <td>
+              ALLOCATABLE
+            </td>
+            <td>::</td>
+            <td><strong>ByteArr</strong>(:)</td>
+            <td>
+                <p>the hash output</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+        </li>
+        <li class="list-group-item">
+                  <h3>
+    private  subroutine MDEngine_ByteDigest_wInput(MD, Input, InpSize, ByteArr)  
+</h3>
+
+  <p>To insert final input in a generic way and then finalize the current hash
+ computation and return the hash value as an array of (8-bit integer) bytes
+ in a newly-allocated array.  The digest object is reset. <br>
+ <strong>Important Note</strong>: The newly-allocated array has a zero-based index.</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(<a href='../type/mdengine.html'>MDEngine</a>),
+            </td>
+<td>intent(inout)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>MD</strong></td>
+            <td>
+                <p>'MDEngine' object</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              type(*),
+            </td>
+<td>intent(in),</td>
+              <td></td>            <td>
+              CONTIGUOUS
+            </td>
+            <td>::</td>
+            <td><strong>Input</strong>(..)</td>
+            <td>
+                <p>input data (any type and rank)</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              integer(kind=kInt32),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>InpSize</strong></td>
+            <td>
+                <p>size of the input (in bytes)</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              integer(kind=kInt8),
+            </td>
+<td>intent(out),</td>
+              <td></td>            <td>
+              ALLOCATABLE
+            </td>
+            <td>::</td>
+            <td><strong>ByteArr</strong>(:)</td>
+            <td>
+                <p>the hash output</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+        </li>
+        <li class="list-group-item">
+                  <h3>
+    private  subroutine HexStr_Digest(MD, HexStr)  
+</h3>
+
+  <p>To finalize the current hash computation and return the hash value
+ as a hexadecimal string in a newly-allocated character string.</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(<a href='../type/basedigest.html'>BaseDigest</a>),
+            </td>
+<td>intent(inout)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>MD</strong></td>
+            <td>
+                <p>'BaseDigest' object</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              character(kind=kChar, len=:),
+            </td>
+<td>intent(out),</td>
+              <td></td>            <td>
+              ALLOCATABLE
+            </td>
+            <td>::</td>
+            <td><strong>HexStr</strong></td>
+            <td>
+                <p>the hash output</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+        </li>
+        <li class="list-group-item">
+                  <h3>
+    private  subroutine HexStr_Digest_wInput(MD, Input, InpSize, HexStr)  
+</h3>
+
+  <p>To insert final input in a generic way and then finalize the current hash computation
+ and return the hash value as a hexadecimal string in a newly-allocated character string.</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(<a href='../type/basedigest.html'>BaseDigest</a>),
+            </td>
+<td>intent(inout)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>MD</strong></td>
+            <td>
+                <p>'BaseDigest' object</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              type(*),
+            </td>
+<td>intent(in),</td>
+              <td></td>            <td>
+              CONTIGUOUS
+            </td>
+            <td>::</td>
+            <td><strong>Input</strong>(..)</td>
+            <td>
+                <p>input data (any type and rank)</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              integer(kind=kInt32),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>InpSize</strong></td>
+            <td>
+                <p>size of the input (in bytes)</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              character(kind=kChar, len=:),
+            </td>
+<td>intent(out),</td>
+              <td></td>            <td>
+              ALLOCATABLE
+            </td>
+            <td>::</td>
+            <td><strong>HexStr</strong></td>
+            <td>
+                <p>the hash output</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+        </li>
+    </ul>
+  </div>
+
+          </div>
+          <div class="row">
+              <div class="card mt-3">
+    <div class="card-header codesum">
+      <span class="anchor" id="boundprocedure-insertbytes~5"></span>
+      <h3>
+          procedure, public ::
+  <strong>InsertBytes</strong> => MDEngine_InsertBytes
+        
+      </h3>
+    </div>
+      <div class="card-body">
+        
+        <p>Use the <em>Update</em> method in place of the <em>InsertBytes</em> method to insert input
+ data as an array of bytes (8-bit integers) where the offset (zero-based) into
+ the array and the length of the input in bytes are specified.</p>
+      </div>
+    <ul class="list-group">
+        <li class="list-group-item">
+                  <h3>
+    private  subroutine MDEngine_InsertBytes(MD, ByteArr, Offset, Length)  
+</h3>
+
+  <p>To insert input data as a byte (8-bit integer) array where offset (zero-based)
+ and length are specified.</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(<a href='../type/mdengine.html'>MDEngine</a>),
+            </td>
+<td>intent(inout)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>MD</strong></td>
+            <td>
+                <p>'MDEngine' object</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              integer(kind=kInt8),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>ByteArr</strong>(0:)</td>
+            <td>
+                <p>a byte array of input data</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              integer(kind=kInt32),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Offset</strong></td>
+            <td>
+                <p>the offset in input data</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              integer(kind=kInt32),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Length</strong></td>
+            <td>
+                <p>the length of input data in bytes</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+        </li>
+    </ul>
+  </div>
+
+          </div>
+          <div class="row">
+              <div class="card mt-3">
+    <div class="card-header codesum">
+      <span class="anchor" id="boundprocedure-insertgen~5"></span>
+      <h3>
+          procedure, public ::
+  <strong>InsertGen</strong> => MDEngine_InsertGen
+        
+      </h3>
+    </div>
+      <div class="card-body">
+        
+        <p>Use the <em>Update</em> method in place of the <em>InsertGen</em> method to insert
+ input data in a generic way where the <em>Input</em> argument can be any type and
+ any rank and the <em>InpSize</em> argument specifies the size of input data in bytes.</p>
+      </div>
+    <ul class="list-group">
+        <li class="list-group-item">
+                  <h3>
+    private  subroutine MDEngine_InsertGen(MD, Input, InpSize)  
+</h3>
+
+  <p>To insert input data in a generic way where the <em>Input</em> argument can be
+ any type and any rank and the <em>InpSize</em> argument specifies the size of
+ the input data in a number of bytes.</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(<a href='../type/mdengine.html'>MDEngine</a>),
+            </td>
+<td>intent(inout)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>MD</strong></td>
+            <td>
+                <p>'MDEngine' object</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              type(*),
+            </td>
+<td>intent(in),</td>
+              <td></td>            <td>
+              CONTIGUOUS
+            </td>
+            <td>::</td>
+            <td><strong>Input</strong>(..)</td>
+            <td>
+                <p>input data (any type and rank)</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              integer(kind=kInt32),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>InpSize</strong></td>
+            <td>
+                <p>size of the input (in bytes)</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+        </li>
+    </ul>
+  </div>
+
+          </div>
+          <div class="row">
+              <div class="card mt-3">
+    <div class="card-header codesum">
+      <span class="anchor" id="boundprocedure-bytedigest~5"></span>
+      <h3>
+          procedure, public ::
+  <strong>ByteDigest</strong> => MDEngine_ByteDigest
+        
+      </h3>
+    </div>
+      <div class="card-body">
+        
+        <p>Use the <em>Digest</em> method in place of the <em>ByteDigest</em> method to finalize the
+ current hash computation and return the hash value as an array of bytes
+ in a newly-allocated array.</p>
+      </div>
+    <ul class="list-group">
+        <li class="list-group-item">
+                  <h3>
+    private  subroutine MDEngine_ByteDigest(MD, ByteArr)  
+</h3>
+
+  <p>To finalize the current hash computation and return the hash value
+ as an array of (8-bit integer) bytes in a newly-allocated array.
+ The digest object is reset. <br>
+ <strong>Important Note</strong>: The newly-allocated array has a zero-based index.</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(<a href='../type/mdengine.html'>MDEngine</a>),
+            </td>
+<td>intent(inout)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>MD</strong></td>
+            <td>
+                <p>'MDEngine' object</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              integer(kind=kInt8),
+            </td>
+<td>intent(out),</td>
+              <td></td>            <td>
+              ALLOCATABLE
+            </td>
+            <td>::</td>
+            <td><strong>ByteArr</strong>(:)</td>
+            <td>
+                <p>the hash output</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+        </li>
+    </ul>
+  </div>
+
+          </div>
+          <div class="row">
+              <div class="card mt-3">
+    <div class="card-header codesum">
+      <span class="anchor" id="boundprocedure-bytedigest_winput~5"></span>
+      <h3>
+          procedure, public ::
+  <strong>ByteDigest_wInput</strong> => MDEngine_ByteDigest_wInput
+        
+      </h3>
+    </div>
+      <div class="card-body">
+        
+        <p>Use the <em>Digest</em> method in place of the <em>ByteDigest_wInput</em> method to insert final
+ input in a generic way and then finalize the current hash computation and return
+ the hash value as an array of bytes in a newly-allocated array.</p>
+      </div>
+    <ul class="list-group">
+        <li class="list-group-item">
+                  <h3>
+    private  subroutine MDEngine_ByteDigest_wInput(MD, Input, InpSize, ByteArr)  
+</h3>
+
+  <p>To insert final input in a generic way and then finalize the current hash
+ computation and return the hash value as an array of (8-bit integer) bytes
+ in a newly-allocated array.  The digest object is reset. <br>
+ <strong>Important Note</strong>: The newly-allocated array has a zero-based index.</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(<a href='../type/mdengine.html'>MDEngine</a>),
+            </td>
+<td>intent(inout)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>MD</strong></td>
+            <td>
+                <p>'MDEngine' object</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              type(*),
+            </td>
+<td>intent(in),</td>
+              <td></td>            <td>
+              CONTIGUOUS
+            </td>
+            <td>::</td>
+            <td><strong>Input</strong>(..)</td>
+            <td>
+                <p>input data (any type and rank)</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              integer(kind=kInt32),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>InpSize</strong></td>
+            <td>
+                <p>size of the input (in bytes)</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              integer(kind=kInt8),
+            </td>
+<td>intent(out),</td>
+              <td></td>            <td>
+              ALLOCATABLE
+            </td>
+            <td>::</td>
+            <td><strong>ByteArr</strong>(:)</td>
+            <td>
+                <p>the hash output</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+        </li>
+    </ul>
+  </div>
+
+          </div>
+          <div class="row">
+              <div class="card mt-3">
+    <div class="card-header codesum">
+      <span class="anchor" id="boundprocedure-enginereset"></span>
+      <h3>
+          procedure, public ::
+  <strong>EngineReset</strong> => MDEngine_Reset
+        
+      </h3>
+    </div>
+      <div class="card-body">
+        
+        <p><em>EngineReset</em> is a procedure to reset components of the digest to their initial values. <br>
+ This procedure is NOT intended to be used by a user but the <em>Reset</em> method implemented
+ by a <em>concrete</em> digest type should call this method.</p>
+      </div>
+    <ul class="list-group">
+        <li class="list-group-item">
+                  <h3>
+    private  subroutine MDEngine_Reset(MD)  
+</h3>
+
+  <p>To reset components of the digest.</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(<a href='../type/mdengine.html'>MDEngine</a>),
+            </td>
+<td>intent(inout)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>MD</strong></td>
+            <td>
+                <p>'MDEngine' object</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+        </li>
+    </ul>
+  </div>
+
+          </div>
+          <div class="row">
+              <div class="card mt-3">
+    <div class="card-header codesum">
+      <span class="anchor" id="boundprocedure-engineclone"></span>
+      <h3>
+          procedure, public ::
+  <strong>EngineClone</strong> => MDEngine_Clone
+        
+      </h3>
+    </div>
+      <div class="card-body">
+        
+        <p><em>EngineClone</em> is a procedure to copy components of the source object to the destination one. <br>
+ This procedure is NOT intended to be used by a user but the <em>GetClone</em> method implemented
+ by a <em>concrete</em> digest type should call this method.</p>
+      </div>
+    <ul class="list-group">
+        <li class="list-group-item">
+                  <h3>
+    private  subroutine MDEngine_Clone(SrcMD, DstMD)  
+</h3>
+
+  <p>To copy components of the source digest.</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(<a href='../type/mdengine.html'>MDEngine</a>),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>SrcMD</strong></td>
+            <td>
+                <p>source object</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(<a href='../type/mdengine.html'>MDEngine</a>),
+            </td>
+<td>intent(inout)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>DstMD</strong></td>
+            <td>
+                <p>destination object</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+        </li>
+    </ul>
+  </div>
+
+          </div>
+          <div class="row">
+              <div class="card mt-3">
+    <div class="card-header codesum">
+      <span class="anchor" id="boundprocedure-getblockcount~2"></span>
+      <h3>
+          procedure, public ::
+  <strong>GetBlockCount</strong> => MDEngine_BlockCount
+        
+      </h3>
+    </div>
+      <div class="card-body">
+        
+        <p><em>GetBlockCount</em> is a procedure to get the number of blocks of input processed. <br>
+ This procedure is NOT intended to be used by a user.</p>
+      </div>
+    <ul class="list-group">
+        <li class="list-group-item">
+                  <h3>
+    private  function MDEngine_BlockCount(MD) result(BlockCount)  
+</h3>
+
+  <p>To get the number of blocks of input processed.</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(<a href='../type/mdengine.html'>MDEngine</a>),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>MD</strong></td>
+            <td>
+                <p>'MDEngine' object</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+    <h4>
+    Return Value
+    <small>integer(kind=kInt32)</small>
+    </h4>
+    <p>number of blocks</p>
+
+        </li>
+    </ul>
+  </div>
+
+          </div>
+          <div class="row">
+              <div class="card mt-3">
+    <div class="card-header codesum">
+      <span class="anchor" id="boundprocedure-getbuflen~3"></span>
+      <h3>
+          procedure, public ::
+  <strong>GetBufLen</strong> => MDEngine_BufLen
+        
+      </h3>
+    </div>
+      <div class="card-body">
+        
+        <p><em>GetBufLen</em> is a procedure to get the number of bytes of input currently
+ stored in the buffer. <br>
+ This procedure is NOT intended to be used by a user.</p>
+      </div>
+    <ul class="list-group">
+        <li class="list-group-item">
+                  <h3>
+    private  function MDEngine_BufLen(MD) result(BufLen)  
+</h3>
+
+  <p>To get the number of bytes of input currently stored in the buffer.</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(<a href='../type/mdengine.html'>MDEngine</a>),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>MD</strong></td>
+            <td>
+                <p>'MDEngine' object</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+    <h4>
+    Return Value
+    <small>integer(kind=kInt32)</small>
+    </h4>
+    <p>number of bytes</p>
+
+        </li>
+    </ul>
+  </div>
+
+          </div>
+          <div class="row">
+              <div class="card mt-3">
+    <div class="card-header codesum">
+      <span class="anchor" id="boundprocedure-addbitsndigest~15"></span>
+      <h3>
+          generic, public ::
+  <strong>AddBitsNDigest</strong> => MDEngine_ByteDigest_AddBits, MDEngine_HexDigest_AddBits
+        
+      </h3>
+    </div>
+    <ul class="list-group">
+        <li class="list-group-item">
+                  <h3>
+    private  subroutine MDEngine_ByteDigest_AddBits(MD, LastByte, NBits, ByteArr)  
+</h3>
+
+  <p>To add the last byte and then finalize the current hash computation
+ and return the hash output as a byte array. <br>
+ This routine is only used for an input message whose bit length is not
+ a multiple of eight (i.e. a message with partial bytes). <br>
+ This procedure is intended to be used by a digest type that implements
+ a hash function that is an entrant of the SHA-3 competition.  It is mainly
+ used for a test purpose.</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(<a href='../type/mdengine.html'>MDEngine</a>),
+            </td>
+<td>intent(inout)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>MD</strong></td>
+            <td>
+                <p>'MDEngine' object</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              integer(kind=kInt8),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>LastByte</strong></td>
+            <td>
+                <p>the last byte</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              integer(kind=kInt8),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>NBits</strong></td>
+            <td>
+                <p>number of bits in the last byte</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              integer(kind=kInt8),
+            </td>
+<td>intent(out),</td>
+              <td></td>            <td>
+              ALLOCATABLE
+            </td>
+            <td>::</td>
+            <td><strong>ByteArr</strong>(:)</td>
+            <td>
+                <p>the hash output</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+        </li>
+        <li class="list-group-item">
+                  <h3>
+    private  subroutine MDEngine_HexDigest_AddBits(MD, LastByte, NBits, HexStr)  
+</h3>
+
+  <p>To add the last byte and then finalize the current hash computation
+ and return the hash output as a hexadecimal string. <br>
+ This routine is only used for an input message whose bit length is not
+ a multiple of eight (i.e. a message with partial bytes). <br>
+ This procedure is intended to be used by a digest type that implements
+ a hash function that is an entrant of the SHA-3 competition.  It is mainly
+ used for a test purpose.</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(<a href='../type/mdengine.html'>MDEngine</a>),
+            </td>
+<td>intent(inout)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>MD</strong></td>
+            <td>
+                <p>'MDEngine' object</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              integer(kind=kInt8),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>LastByte</strong></td>
+            <td>
+                <p>the last byte</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              integer(kind=kInt8),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>NBits</strong></td>
+            <td>
+                <p>number of bits in the last byte</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              character(kind=kChar, len=:),
+            </td>
+<td>intent(out),</td>
+              <td></td>            <td>
+              ALLOCATABLE
+            </td>
+            <td>::</td>
+            <td><strong>HexStr</strong></td>
+            <td>
+                <p>the hash output</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+        </li>
+    </ul>
+  </div>
+
+          </div>
+          <div class="row">
+              <div class="card mt-3">
+    <div class="card-header codesum">
+      <span class="anchor" id="boundprocedure-initialize~16"></span>
+      <h3>
+          procedure, public ::
+  <strong>Initialize</strong> => GroestlS_Initialize
+        
+      </h3>
+    </div>
+      <div class="card-body">
+        
+        <p>Use the <em>Create</em> method in place of the <em>Initialize</em> method to
+ initialize the <em>digest</em> object with default algorithm (Groestl-256).</p>
+      </div>
+    <ul class="list-group">
+        <li class="list-group-item">
+                  <h3>
+    private  subroutine GroestlS_Initialize(MD)  
+</h3>
+
+  <p>To perform initialization of the digest object with default algorithm.</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(<a href='../type/groestls.html'>GroestlS</a>),
+            </td>
+<td>intent(inout)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>MD</strong></td>
+            <td>
+                <p>'GroestlS' object</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+        </li>
+    </ul>
+  </div>
+
+          </div>
+          <div class="row">
+              <div class="card mt-3">
+    <div class="card-header codesum">
+      <span class="anchor" id="boundprocedure-reset~10"></span>
+      <h3>
+          procedure, public ::
+  <strong>Reset</strong> => GroestlS_Reset
+        
+      </h3>
+    </div>
+      <div class="card-body">
+        
+        <p><strong>Type-Bound Subroutine</strong>: Reset <br>
+ <strong>Purpose</strong>:  To reset the <em>digest</em> object to its initial state. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    CALL MD%Reset()</p>
+      </div>
+    <ul class="list-group">
+        <li class="list-group-item">
+                  <h3>
+    private  subroutine GroestlS_Reset(MD)  
+</h3>
+
+  <p>To reset the hash algorithm state.</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(<a href='../type/groestls.html'>GroestlS</a>),
+            </td>
+<td>intent(inout)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>MD</strong></td>
+            <td>
+                <p>'GroestlS' object</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+        </li>
+    </ul>
+  </div>
+
+          </div>
+          <div class="row">
+              <div class="card mt-3">
+    <div class="card-header codesum">
+      <span class="anchor" id="boundprocedure-getclone~12"></span>
+      <h3>
+          procedure, public ::
+  <strong>GetClone</strong> => GroestlS_GetClone
+        
+      </h3>
+    </div>
+      <div class="card-body">
+        
+        <p><strong>Type-Bound Subroutine</strong>: GetClone <br>
+ <strong>Purpose</strong>:  To clone the current state of the source object. The destination
+               object evolves independently of the source object. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    CALL SrcMD%GetClone(DstMD)</p>
+      </div>
+    <ul class="list-group">
+        <li class="list-group-item">
+                  <h3>
+    private  subroutine GroestlS_GetClone(Src, Dst)  
+</h3>
+
+  <p>To clone the current state of the source object.</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(<a href='../type/groestls.html'>GroestlS</a>),
+            </td>
+<td>intent(inout)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Src</strong></td>
+            <td>
+                <p>a source object</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(<a href='../type/basedigest.html'>BaseDigest</a>),
+            </td>
+<td>intent(out),</td>
+              <td></td>            <td>
+              ALLOCATABLE
+            </td>
+            <td>::</td>
+            <td><strong>Dst</strong></td>
+            <td>
+                <p>a destination object</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+        </li>
+    </ul>
+  </div>
+
+          </div>
+          <div class="row">
+              <div class="card mt-3">
+    <div class="card-header codesum">
+      <span class="anchor" id="boundprocedure-getname~16"></span>
+      <h3>
+          procedure, public ::
+  <strong>GetName</strong> => GroestlS_GetName
+        
+      </h3>
+    </div>
+      <div class="card-body">
+        
+        <p><strong>Type-Bound Function</strong>: GetName <br>
+ <strong>Purpose</strong>:  To get the name of the <em>digest</em> object. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    Name = MD%GetName()</p>
+      </div>
+    <ul class="list-group">
+        <li class="list-group-item">
+                  <h3>
+    private  function GroestlS_GetName(MD) result(Name)  
+</h3>
+
+  <p>To return the algorithm name of the hash function.</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(<a href='../type/groestls.html'>GroestlS</a>),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>MD</strong></td>
+            <td>
+                <p>'GroestlS' object</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+    <h4>
+    Return Value
+    <small>character(kind=kChar, len=:), ALLOCATABLE</small>
+    </h4>
+    <p>name of the hash function</p>
+
+        </li>
+    </ul>
+  </div>
+
+          </div>
+          <div class="row">
+              <div class="card mt-3">
+    <div class="card-header codesum">
+      <span class="anchor" id="boundprocedure-getdigestlen~11"></span>
+      <h3>
+          procedure, public ::
+  <strong>GetDigestLen</strong> => GroestlS_GetDigestLen
+        
+      </h3>
+    </div>
+      <div class="card-body">
+        
+        <p><strong>Type-Bound Function</strong>: GetDigestLen <br>
+ <strong>Purpose</strong>:  To return the natural hash function output length (in bytes). <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    Length = MD%GetDigestLen()</p>
+      </div>
+    <ul class="list-group">
+        <li class="list-group-item">
+                  <h3>
+    private  function GroestlS_GetDigestLen(MD) result(Length)  
+</h3>
+
+  <p>To get the natural hash function output length (in bytes).</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(<a href='../type/groestls.html'>GroestlS</a>),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>MD</strong></td>
+            <td>
+                <p>'GroestlS' object</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+    <h4>
+    Return Value
+    <small>integer(kind=kInt32)</small>
+    </h4>
+    <p>the digest length</p>
+
+        </li>
+    </ul>
+  </div>
+
+          </div>
+          <div class="row">
+              <div class="card mt-3">
+    <div class="card-header codesum">
+      <span class="anchor" id="boundprocedure-getblocklen~7"></span>
+      <h3>
+          procedure, public ::
+  <strong>GetBlockLen</strong> => GroestlS_GetBlockLen
+        
+      </h3>
+    </div>
+      <div class="card-body">
+        
+        <p><em>GetBlockLen</em> is a procedure to return the block length of the digest. <br>
+ This method is NOT intended to be used by a user.</p>
+      </div>
+    <ul class="list-group">
+        <li class="list-group-item">
+                  <h3>
+    private  function GroestlS_GetBlockLen(MD) result(Length)  
+</h3>
+
+  <p>To return the block length for the hash function.</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(<a href='../type/groestls.html'>GroestlS</a>),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>MD</strong></td>
+            <td>
+                <p>'GroestlS' object</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+    <h4>
+    Return Value
+    <small>integer(kind=kInt32)</small>
+    </h4>
+    <p>the block length</p>
+
+        </li>
+    </ul>
+  </div>
+
+          </div>
+          <div class="row">
+              <div class="card mt-3">
+    <div class="card-header codesum">
+      <span class="anchor" id="boundprocedure-setbufptr~12"></span>
+      <h3>
+          procedure, public ::
+  <strong>SetBufPtr</strong> => GroestlS_SetBufPtr
+        
+      </h3>
+    </div>
+      <div class="card-body">
+        
+        <p><em>SetBufPtr</em> is a procedure to set a pointer to the buffer array of this digest. <br>
+ This method is NOT intended to be used by a user.</p>
+      </div>
+    <ul class="list-group">
+        <li class="list-group-item">
+                  <h3>
+    private  subroutine GroestlS_SetBufPtr(MD, BufPtr)  
+</h3>
+
+  <p>To set the pointer <em>BufPtr</em> to the actual buffer array with starting index of zero.</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(<a href='../type/groestls.html'>GroestlS</a>),
+            </td>
+<td>intent(inout),</td>
+              <td></td>            <td>
+              TARGET
+            </td>
+            <td>::</td>
+            <td><strong>MD</strong></td>
+            <td>
+                <p>'GroestlS' object</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              integer(kind=kInt8),
+            </td>
+<td>intent(inout),</td>
+              <td></td>            <td>
+              POINTER
+            </td>
+            <td>::</td>
+            <td><strong>BufPtr</strong>(:)</td>
+            <td>
+                <p>a buffer pointer</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+        </li>
+    </ul>
+  </div>
+
+          </div>
+          <div class="row">
+              <div class="card mt-3">
+    <div class="card-header codesum">
+      <span class="anchor" id="boundprocedure-processblock~12"></span>
+      <h3>
+          procedure, public ::
+  <strong>ProcessBlock</strong> => GroestlS_ProcessBlock
+        
+      </h3>
+    </div>
+      <div class="card-body">
+        
+        <p><em>ProcessBlock</em> is a procedure to process one block of data for this digest. <br>
+ This method is NOT intended to be used by a user.</p>
+      </div>
+    <ul class="list-group">
+        <li class="list-group-item">
+                  <h3>
+    private  subroutine GroestlS_ProcessBlock(MD, BytesIn)  
+</h3>
+
+  <p>To process one block of data.</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(<a href='../type/groestls.html'>GroestlS</a>),
+            </td>
+<td>intent(inout)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>MD</strong></td>
+            <td>
+                <p>'GroestlS' object</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              integer(kind=kInt8),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>BytesIn</strong>(0:)</td>
+            <td>
+                <p>the data block</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+        </li>
+    </ul>
+  </div>
+
+          </div>
+          <div class="row">
+              <div class="card mt-3">
+    <div class="card-header codesum">
+      <span class="anchor" id="boundprocedure-dopadding~7"></span>
+      <h3>
+          procedure, public ::
+  <strong>DoPadding</strong> => GroestlS_DoPadding
+        
+      </h3>
+    </div>
+      <div class="card-body">
+        
+        <p><em>DoPadding</em> is a procedure to perform padding of the message for this digest. <br>
+ This method is NOT intended to be used by a user.</p>
+      </div>
+    <ul class="list-group">
+        <li class="list-group-item">
+                  <h3>
+    private  subroutine GroestlS_DoPadding(MD, BytesOut, Offset)  
+</h3>
+
+  <p>To perform the final padding and store the result in the
+ provided buffer.</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(<a href='../type/groestls.html'>GroestlS</a>),
+            </td>
+<td>intent(inout)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>MD</strong></td>
+            <td>
+                <p>'GroestlS' object</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              integer(kind=kInt8),
+            </td>
+<td>intent(inout)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>BytesOut</strong>(0:)</td>
+            <td>
+                <p>the output buffer</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              integer(kind=kInt32),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Offset</strong></td>
+            <td>
+                <p>the output offset</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+        </li>
+    </ul>
+  </div>
+
+          </div>
+          <div class="row">
+              <div class="card mt-3">
+    <div class="card-header codesum">
+      <span class="anchor" id="boundprocedure-addbitsnpad~7"></span>
+      <h3>
+          procedure, public ::
+  <strong>AddBitsNPad</strong> => GroestlS_AddBitsNPad
+        
+      </h3>
+    </div>
+      <div class="card-body">
+        
+        <p><em>AddBitsNPad</em> is a procedure to add the final partial byte and then perform
+ padding of the message for this digest. <br>
+ This method is NOT intended to be used by a user.</p>
+      </div>
+    <ul class="list-group">
+        <li class="list-group-item">
+                  <h3>
+    private  subroutine GroestlS_AddBitsNPad(MD, LastByte, NBits, BytesOut, Offset)  
+</h3>
+
+  <p>To add the last byte and then perform the final padding and
+ store the result in the provided buffer.</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(<a href='../type/groestls.html'>GroestlS</a>),
+            </td>
+<td>intent(inout)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>MD</strong></td>
+            <td>
+                <p>'GroestlS' object</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              integer(kind=kInt8),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>LastByte</strong></td>
+            <td>
+                <p>the last byte</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              integer(kind=kInt8),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>NBits</strong></td>
+            <td>
+                <p>number of bits in the last byte</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              integer(kind=kInt8),
+            </td>
+<td>intent(inout)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>BytesOut</strong>(0:)</td>
+            <td>
+                <p>the output buffer</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              integer(kind=kInt32),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Offset</strong></td>
+            <td>
+                <p>the output offset</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+        </li>
+    </ul>
+  </div>
+
+          </div>
+          <div class="row">
+              <div class="card mt-3">
+    <div class="card-header codesum">
+      <span class="anchor" id="boundprocedure-create~11"></span>
+      <h3>
+          generic, public ::
+  <strong>Create</strong> => <a href='../type/groestls.html#boundprocedure-initialize~16'>Initialize</a>, InitializeWFlag
+        
+      </h3>
+    </div>
+      <div class="card-body">
+        
+        <p><strong>Type-Bound Subroutine</strong>: Create <br>
+ <strong>Purpose</strong>:  To perform any essential initialization of the <em>digest</em> object. <br>
+ <strong>Usage</strong>: <br>
+  ! initialize the object to employ the default (Groestl-256) algorithm <br>
+  ---&gt;    CALL MD%Create() <br>
+  ! initialize the object to employ the Groestl-224 algorithm <br>
+  ---&gt;    CALL MD%Create(IsGroestl224=.TRUE.) <br></p>
+      </div>
+    <ul class="list-group">
+        <li class="list-group-item">
+                  <h3>
+    private  subroutine GroestlS_Initialize(MD)  
+</h3>
+
+  <p>To perform initialization of the digest object with default algorithm.</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(<a href='../type/groestls.html'>GroestlS</a>),
+            </td>
+<td>intent(inout)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>MD</strong></td>
+            <td>
+                <p>'GroestlS' object</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+        </li>
+        <li class="list-group-item">
+                  <h3>
+    private  subroutine GroestlS_Initialize_wFlag(MD, IsGroestl224)  
+</h3>
+
+  <p>To perform initialization of the digest object with the specified flag.</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(<a href='../type/groestls.html'>GroestlS</a>),
+            </td>
+<td>intent(inout)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>MD</strong></td>
+            <td>
+                <p>'GroestlS' object</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              logical,
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>IsGroestl224</strong></td>
+            <td>
+                <p>flag indicating whether the Groestl-224 algorithm is employed or not. <br>
+ - If true, use the Groestl-224 algorithm. <br>
+ - Otherwise, use the Groestl-256 algorithm. <br></p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+        </li>
+    </ul>
+  </div>
+
+          </div>
+      </section>
+
+    <section>
+    <h3><span class="anchor" id="src"></span>Source Code</h3>
+    <div class="hl codehilite"><pre><span></span><span class="w">    </span><span class="k">TYPE</span><span class="p">,</span><span class="w"> </span><span class="k">EXTENDS</span><span class="p">(</span><span class="n">MDEngine</span><span class="p">)</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">GroestlS</span>
+<span class="w">        </span><span class="k">PRIVATE</span>
+<span class="w">        </span><span class="c">!% buffer array used to store input data</span>
+<span class="w">        </span><span class="n">tByte</span><span class="w">       </span><span class="kd">::</span><span class="w"> </span><span class="n">BufArr</span><span class="p">(</span><span class="mi">0</span><span class="p">:</span><span class="n">BlockLen</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0_kInt8</span>
+<span class="w">        </span><span class="c">!% state variable</span>
+<span class="w">        </span><span class="n">tLong</span><span class="w">       </span><span class="kd">::</span><span class="w"> </span><span class="n">H</span><span class="p">(</span><span class="mi">0</span><span class="p">:</span><span class="mi">7</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0_kInt64</span>
+<span class="w">        </span><span class="c">!% flag indicating whether the Groestl-224 algorithm is employed or not.</span>
+<span class="w">        </span><span class="n">tLogical</span><span class="w">    </span><span class="kd">::</span><span class="w"> </span><span class="n">IsGroestl224</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">FalseVal</span>
+<span class="w">    </span><span class="k">CONTAINS</span>
+<span class="w">        </span><span class="c">! ---------------------------------------------------------------------</span>
+<span class="w">        </span><span class="c">! -----                    Private Procedures                     -----</span>
+<span class="w">        </span><span class="c">! ---------------------------------------------------------------------</span>
+<span class="w">        </span><span class="c">!&gt; Use the *Create* method in place of the *InitializeWFlag* method to</span>
+<span class="w">        </span><span class="c">!  initialize the *digest* object with specified flag.</span>
+<span class="w">        </span><span class="k">PROCEDURE</span><span class="p">,</span><span class="w"> </span><span class="k">PRIVATE</span><span class="w">  </span><span class="kd">::</span><span class="w"> </span><span class="n">InitializeWFlag</span><span class="w">  </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">GroestlS_Initialize_wFlag</span>
+<span class="w">        </span><span class="c">! ---------------------------------------------------------------------</span>
+<span class="w">        </span><span class="c">! -----                     Public Procedures                     -----</span>
+<span class="w">        </span><span class="c">! ---------------------------------------------------------------------</span>
+<span class="w">        </span><span class="c">!&gt; Use the *Create* method in place of the *Initialize* method to</span>
+<span class="w">        </span><span class="c">!  initialize the *digest* object with default algorithm (Groestl-256).</span>
+<span class="w">        </span><span class="k">PROCEDURE</span><span class="w">       </span><span class="kd">::</span><span class="w"> </span><span class="n">Initialize</span><span class="w">   </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">GroestlS_Initialize</span>
+<span class="w">        </span><span class="c">!&gt; **Type-Bound Subroutine**: Reset &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Purpose**:  To reset the *digest* object to its initial state. &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Usage**: &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!   ---&gt;    CALL MD%Reset()</span>
+<span class="w">        </span><span class="k">PROCEDURE</span><span class="w">       </span><span class="kd">::</span><span class="w"> </span><span class="n">Reset</span><span class="w">        </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">GroestlS_Reset</span>
+<span class="w">        </span><span class="c">!&gt; **Type-Bound Subroutine**: GetClone &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Purpose**:  To clone the current state of the source object. The destination</span>
+<span class="w">        </span><span class="c">!                object evolves independently of the source object. &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Usage**: &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!   ---&gt;    CALL SrcMD%GetClone(DstMD)</span>
+<span class="w">        </span><span class="k">PROCEDURE</span><span class="w">       </span><span class="kd">::</span><span class="w"> </span><span class="n">GetClone</span><span class="w">     </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">GroestlS_GetClone</span>
+<span class="w">        </span><span class="c">!&gt; **Type-Bound Function**: GetName &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Purpose**:  To get the name of the *digest* object. &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Usage**: &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!   ---&gt;    Name = MD%GetName()</span>
+<span class="w">        </span><span class="k">PROCEDURE</span><span class="w">       </span><span class="kd">::</span><span class="w"> </span><span class="n">GetName</span><span class="w">      </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">GroestlS_GetName</span>
+<span class="w">        </span><span class="c">!&gt; **Type-Bound Function**: GetDigestLen &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Purpose**:  To return the natural hash function output length (in bytes). &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Usage**: &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!   ---&gt;    Length = MD%GetDigestLen()</span>
+<span class="w">        </span><span class="k">PROCEDURE</span><span class="w">       </span><span class="kd">::</span><span class="w"> </span><span class="n">GetDigestLen</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">GroestlS_GetDigestLen</span>
+<span class="w">        </span><span class="c">!&gt; *GetBlockLen* is a procedure to return the block length of the digest. &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  This method is NOT intended to be used by a user.</span>
+<span class="w">        </span><span class="k">PROCEDURE</span><span class="w">       </span><span class="kd">::</span><span class="w"> </span><span class="n">GetBlockLen</span><span class="w">  </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">GroestlS_GetBlockLen</span>
+<span class="w">        </span><span class="c">!&gt; *SetBufPtr* is a procedure to set a pointer to the buffer array of this digest. &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  This method is NOT intended to be used by a user.</span>
+<span class="w">        </span><span class="k">PROCEDURE</span><span class="w">       </span><span class="kd">::</span><span class="w"> </span><span class="n">SetBufPtr</span><span class="w">    </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">GroestlS_SetBufPtr</span>
+<span class="w">        </span><span class="c">!&gt; *ProcessBlock* is a procedure to process one block of data for this digest. &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  This method is NOT intended to be used by a user.</span>
+<span class="w">        </span><span class="k">PROCEDURE</span><span class="w">       </span><span class="kd">::</span><span class="w"> </span><span class="n">ProcessBlock</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">GroestlS_ProcessBlock</span>
+<span class="w">        </span><span class="c">!&gt; *DoPadding* is a procedure to perform padding of the message for this digest. &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  This method is NOT intended to be used by a user.</span>
+<span class="w">        </span><span class="k">PROCEDURE</span><span class="w">       </span><span class="kd">::</span><span class="w"> </span><span class="n">DoPadding</span><span class="w">    </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">GroestlS_DoPadding</span>
+<span class="w">        </span><span class="c">!&gt; *AddBitsNPad* is a procedure to add the final partial byte and then perform</span>
+<span class="w">        </span><span class="c">!  padding of the message for this digest. &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  This method is NOT intended to be used by a user.</span>
+<span class="w">        </span><span class="k">PROCEDURE</span><span class="w">       </span><span class="kd">::</span><span class="w"> </span><span class="n">AddBitsNPad</span><span class="w">  </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">GroestlS_AddBitsNPad</span>
+<span class="w">        </span><span class="c">! ---------------------------------------------------------------------</span>
+<span class="w">        </span><span class="c">! -----                     Generic Interfaces                    -----</span>
+<span class="w">        </span><span class="c">! ---------------------------------------------------------------------</span>
+<span class="w">        </span><span class="c">!&gt; **Type-Bound Subroutine**: Create &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Purpose**:  To perform any essential initialization of the *digest* object. &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Usage**: &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!   ! initialize the object to employ the default (Groestl-256) algorithm &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!   ---&gt;    CALL MD%Create() &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!   ! initialize the object to employ the Groestl-224 algorithm &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!   ---&gt;    CALL MD%Create(IsGroestl224=.TRUE.) &lt;br&gt;</span>
+<span class="w">        </span><span class="k">GENERIC</span><span class="w">         </span><span class="kd">::</span><span class="w"> </span><span class="n">Create</span><span class="w">       </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">InitializeWFlag</span>
+<span class="w">        </span><span class="c">! ---------------------------------------------------------------------</span>
+<span class="w">    </span><span class="k">END TYPE </span><span class="n">GroestlS</span>
+</pre></div>
+
+    </section>
+    
+    </div>
+  </div>
+
+      <hr>
+    </div> <!-- /container -->
+    <footer>
+      <div class="container">
+        <div class="row justify-content-between">
+          <div class="col"><p>eXPerimental Fortran Library (XpfLib) Documentation was developed by Niranama<br>&copy; 2024 
+</p>
+          </div>
+          <div class="col">
+            <p class="text-end">
+              Documentation generated by
+              <a href="https://github.com/Fortran-FOSS-Programmers/ford">FORD</a>
+            </p>
+          </div>
+        </div>
+        <br>
+      </div> <!-- /container -->
+    </footer>
+
+    <!-- Bootstrap core JavaScript -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>    
+
+    <!-- MathJax JavaScript
+             ================================================== -->
+             <!-- Placed at the end of the document so the pages load faster -->
+        <script type="text/x-mathjax-config">
+          MathJax.Hub.Config({
+          TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } },
+          jax: ['input/TeX','input/MathML','output/HTML-CSS'],
+          extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']
+          });
+        </script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+          <script src="../tipuesearch/tipuesearch_content.js"></script>
+          <script src="../tipuesearch/tipuesearch_set.js"></script>
+          <script src="../tipuesearch/tipuesearch.js"></script>
+
+  </body>
+</html>

@@ -1,0 +1,1303 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta name="description" content="Experimental Fortran Package - Base Modules and Classes">
+    <meta name="author" content="Niranama" >
+    <link rel="icon" href="../favicon.png">
+
+    <title>ByteBuffer &ndash; eXPerimental Fortran Library (XpfLib) Documentation </title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link href="../css/pygments.css" rel="stylesheet">
+    <link href="../css/font-awesome.min.css" rel="stylesheet">
+    <link href="../css/local.css" rel="stylesheet">
+      <link  href="../tipuesearch/tipuesearch.css" rel="stylesheet">
+
+    <script src="https://code.jquery.com/jquery-3.7.0.slim.min.js" integrity="sha256-tG5mcZUtJsZvyKAxYLVXrmjKBVLd6VpVccqz/r4ypFE=" crossorigin="anonymous"></script>
+  </head>
+
+  <body>
+
+    <!-- Fixed navbar -->
+    <div class="container-fluid mb-sm-4 mb-xl-2">
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container">
+          <a class="navbar-brand" href="../index.html">eXPerimental Fortran Library (XpfLib) Documentation </a>
+          <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar"
+                  aria-expanded="false" aria-controls="navbar" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon">
+          </button>
+
+          <div id="navbar" class="navbar-collapse collapse">
+            <ul class="navbar-nav">
+                  <li class="nav-item">
+                    <a class="nav-link" href="../lists/files.html">Source Files</a>
+                  </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../lists/modules.html">Modules</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../lists/procedures.html">Procedures</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../lists/absint.html">Abstract Interfaces</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../lists/types.html">Derived Types</a>
+                </li>
+            </ul>
+              <div class="d-flex align-items-end flex-grow-1">
+                <form action="../search.html" role="search" class="ms-auto">
+                  <input type="text" class="form-control" aria-label="Search" placeholder="Search" name="q" id="tipue_search_input" autocomplete="off" required>
+                </form>
+              </div>
+          </div><!--/.nav-collapse -->
+        </div>
+      </nav>
+    </div>
+
+    <div class="container">
+  <div class="row">
+    <h1>ByteBuffer
+      <small>Derived Type</small>
+      
+    </h1>
+      <div class="container p-2 mb-4 bg-light border rounded-3">
+    <div class="row align-items-center justify-content-between" id="info-bar">
+      <div class="col">
+        <ul class="list-inline" style="margin-bottom:0px;display:inline">
+
+            <li class="list-inline-item" id="statements"><i class="fa fa-list-ol"></i>
+              <a data-bs-toggle="tooltip"
+                 data-bs-placement="bottom" data-html="true"
+                 title="<p> 2.6% of total for derived types.</p>Including implementation: 183 statements,  2.7% of total for derived types.">21 statements</a>
+            </li>
+
+            <li class="list-inline-item" id="source-file">
+              <i class="fa fa-code"></i>
+              <a href="../src/MClass_ByteBuffer.f90"> Source File</a>
+            </li>
+        </ul>
+      </div>
+      <div class="col">
+        <nav aria-label="breadcrumb">
+          <ol class="breadcrumb justify-content-end mb-0">
+                <li class="breadcrumb-item"><a href='../sourcefile/mclass_bytebuffer.f90.html'>MClass_ByteBuffer.f90</a></li>
+                <li class="breadcrumb-item"><a href='../module/mclass_bytebuffer.html'>MClass_ByteBuffer</a></li>
+            <li class="breadcrumb-item active" aria-current="page">ByteBuffer</li>
+          </ol>
+        </nav>
+      </div>
+    </div>
+  </div>
+  <script>
+    $(function () {
+    $('[data-bs-toggle="tooltip"]').tooltip()
+    })
+  </script>
+
+  </div>
+  
+  <div class="row">
+    <div class="col-md-3 hidden-xs hidden-sm visible-md visible-lg">
+      <div id="sidebar">
+      <h3>Contents</h3>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+      <div class="card mb-4">
+      <a data-bs-toggle="collapse" href="#fins-0"
+         aria-expanded="false" aria-controls="fins-0">
+         <h4 class="card-header bg-primary text-white">Finalization Procedures</h4>
+      </a>
+      <div id="fins-0" class="collapse">
+        <div class="list-group list-group-flush">
+            <a class="list-group-item" href="../type/bytebuffer.html#finalproc-bytebuffer_finalize">ByteBuffer_Finalize</a>
+        </div>
+      </div>
+    </div>
+
+      <div class="card mb-4">
+      <a data-bs-toggle="collapse" href="#boundprocs-0"
+         aria-expanded="false" aria-controls="boundprocs-0">
+         <h4 class="card-header bg-primary text-white">Type-Bound Procedures</h4>
+      </a>
+      <div id="boundprocs-0" class="collapse">
+        <div class="list-group list-group-flush">
+            <a class="list-group-item" href="../type/bytebuffer.html#boundprocedure-createempty">CreateEmpty</a>
+            <a class="list-group-item" href="../type/bytebuffer.html#boundprocedure-construct~4">Construct</a>
+            <a class="list-group-item" href="../type/bytebuffer.html#boundprocedure-clear">Clear</a>
+            <a class="list-group-item" href="../type/bytebuffer.html#boundprocedure-append~3">Append</a>
+            <a class="list-group-item" href="../type/bytebuffer.html#boundprocedure-asarray">AsArray</a>
+            <a class="list-group-item" href="../type/bytebuffer.html#boundprocedure-viewarray">ViewArray</a>
+            <a class="list-group-item" href="../type/bytebuffer.html#boundprocedure-size~11">Size</a>
+            <a class="list-group-item" href="../type/bytebuffer.html#boundprocedure-copy~5">Copy</a>
+            <a class="list-group-item" href="../type/bytebuffer.html#boundprocedure-isequalto~5">IsEqualTo</a>
+            <a class="list-group-item" href="../type/bytebuffer.html#boundprocedure-memfree~5">MemFree</a>
+            <a class="list-group-item" href="../type/bytebuffer.html#boundprocedure-tostring~6">ToString</a>
+            <a class="list-group-item" href="../type/bytebuffer.html#boundprocedure-hashcode~33">HashCode</a>
+        </div>
+      </div>
+    </div>
+
+  
+  
+    <div class="card card-primary">
+      <div class="card-header text-left"><h3 class="card-title">Source Code</h3></div>
+      <div class="list-group">
+        <a class="list-group-item" href="../type/bytebuffer.html#src">ByteBuffer</a>
+      </div>
+    </div>
+
+
+  </div>
+
+    </div>
+    
+    <div class="col-md-9" id='text'>
+      <h2>type, public, extends(<a href='../type/object.html'>Object</a>) :: ByteBuffer</h2>
+    <p>The <em>ByteBuffer</em> type is a buffer type that provides a convenient way
+ to build an array of 8-bit integers.</p>
+    <br>
+
+    
+
+      <section>
+        <h2>Finalization Procedures</h2>
+            <div class="card">
+    <div class="card-header codesum">
+      <span class="anchor" id="finalproc-bytebuffer_finalize"></span>
+      <h3>final :: <strong>ByteBuffer_Finalize</strong> </h3>
+    </div>
+    <div class="card-body">
+      
+      <p>To perform finalization of the <em>ByteBuffer</em> object.</p>
+    </div>
+    <ul class="list-group">
+      <li class="list-group-item">
+            <h3>
+    private  subroutine ByteBuffer_Finalize(ByteBuf)  
+
+    </h3>
+  <p>To perform finalization of a 'ByteBuffer' object.</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-bytebuf~4"></span>
+              type(<a href='../type/bytebuffer.html'>ByteBuffer</a>),
+            </td>
+<td>intent(inout)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>ByteBuf</strong></td>
+            <td>
+                <p>'ByteBuffer' object</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+      </li>
+    </ul>
+  </div>
+
+      </section>
+      <br>
+
+      <section>
+        <h2>Type-Bound Procedures</h2>
+          <div class="row">
+              <div class="card mt-3">
+    <div class="card-header codesum">
+      <span class="anchor" id="boundprocedure-createempty"></span>
+      <h3>
+          procedure, public ::
+  <strong>CreateEmpty</strong> => ByteBuffer_CreateEmpty
+        
+      </h3>
+    </div>
+      <div class="card-body">
+        
+        <p><strong>Type-Bound Subroutine</strong>: CreateEmpty <br>
+ <strong>Purpose</strong>:  To construct an empty <em>ByteBuffer</em> object. <br>
+ <strong>Usage</strong>: <br>
+  ! use default initial capacity  <br>
+  ---&gt;    CALL ByteBuf%CreateEmpty() <br>
+  ! specify initial capacity <br>
+  ---&gt;    CALL ByteBuf%CreateEmpty(InitCap=256) <br></p>
+      </div>
+    <ul class="list-group">
+        <li class="list-group-item">
+                  <h3>
+    private  subroutine ByteBuffer_CreateEmpty(ByteBuf, InitCap)  
+</h3>
+
+  <p>To create an empty 'ByteBuffer' object with optionally specified initial capacity.</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(<a href='../type/bytebuffer.html'>ByteBuffer</a>),
+            </td>
+<td>intent(inout)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>ByteBuf</strong></td>
+            <td>
+                <p>'ByteBuffer' object</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              integer(kind=kInt32),
+            </td>
+<td>intent(in),</td>
+              <td>optional</td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>InitCap</strong></td>
+            <td>
+                <p>initial capacity</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+        </li>
+    </ul>
+  </div>
+
+          </div>
+          <div class="row">
+              <div class="card mt-3">
+    <div class="card-header codesum">
+      <span class="anchor" id="boundprocedure-construct~4"></span>
+      <h3>
+          procedure, public ::
+  <strong>Construct</strong> => ByteBuffer_Construct
+        
+      </h3>
+    </div>
+      <div class="card-body">
+        
+        <p><strong>Type-Bound Subroutine</strong>: Construct <br>
+ <strong>Purpose</strong>:  To construct a <em>ByteBuffer</em> object with the specified bytes.  This method
+      provides a convenient way to create an empty <em>ByteBuffer</em> object and then add the
+      first array of bytes into the object. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    CALL ByteBuf%Construct(ByteArr) <br></p>
+      </div>
+    <ul class="list-group">
+        <li class="list-group-item">
+                  <h3>
+    private  subroutine ByteBuffer_Construct(ByteBuf, ByteArr, NElm)  
+</h3>
+
+  <p>To construct a 'ByteBuffer' object with the specified bytes.  This routine
+ provides a convenient way to create an empty <em>ByteBuffer</em> object and then
+ add the first bytes into the buffer.</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(<a href='../type/bytebuffer.html'>ByteBuffer</a>),
+            </td>
+<td>intent(inout)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>ByteBuf</strong></td>
+            <td>
+                <p>'ByteBuffer' object</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              integer(kind=kInt8),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>ByteArr</strong>(*)</td>
+            <td>
+                <p>byte array (can be a single byte)</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              integer(kind=kInt32),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>NElm</strong></td>
+            <td>
+                <p>number of bytes</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+        </li>
+    </ul>
+  </div>
+
+          </div>
+          <div class="row">
+              <div class="card mt-3">
+    <div class="card-header codesum">
+      <span class="anchor" id="boundprocedure-clear"></span>
+      <h3>
+          procedure, public ::
+  <strong>Clear</strong> => ByteBuffer_Clear
+        
+      </h3>
+    </div>
+      <div class="card-body">
+        
+        <p><strong>Type-Bound Subroutine</strong>: Clear <br>
+ <strong>Purpose</strong>:  To clear the buffer of the <em>ByteBuffer</em> object. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    CALL ByteBuf%Clear() <br></p>
+      </div>
+    <ul class="list-group">
+        <li class="list-group-item">
+                  <h3>
+    private  subroutine ByteBuffer_Clear(ByteBuf)  
+</h3>
+
+  <p>To clear the buffer of a 'ByteBuffer' object.</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(<a href='../type/bytebuffer.html'>ByteBuffer</a>),
+            </td>
+<td>intent(inout)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>ByteBuf</strong></td>
+            <td>
+                <p>'ByteBuffer' object</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+        </li>
+    </ul>
+  </div>
+
+          </div>
+          <div class="row">
+              <div class="card mt-3">
+    <div class="card-header codesum">
+      <span class="anchor" id="boundprocedure-append~3"></span>
+      <h3>
+          procedure, public ::
+  <strong>Append</strong> => ByteBuffer_Append
+        
+      </h3>
+    </div>
+      <div class="card-body">
+        
+        <p><strong>Type-Bound Subroutine</strong>: Append <br>
+ <strong>Purpose</strong>:  To append the specified byte(s) at the end of the buffer. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    CALL ByteBuf%Append(ByteArr, NElm) <br></p>
+      </div>
+    <ul class="list-group">
+        <li class="list-group-item">
+                  <h3>
+    private  subroutine ByteBuffer_Append(ByteBuf, ByteArr, NElm)  
+</h3>
+
+  <p>To append the character string at the end of the stored characters (i.e. at Count+1).</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(<a href='../type/bytebuffer.html'>ByteBuffer</a>),
+            </td>
+<td>intent(inout)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>ByteBuf</strong></td>
+            <td>
+                <p>'ByteBuffer' object</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              integer(kind=kInt8),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>ByteArr</strong>(*)</td>
+            <td>
+                <p>byte array (can be a single byte)</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              integer(kind=kInt32),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>NElm</strong></td>
+            <td>
+                <p>number of bytes</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+        </li>
+    </ul>
+  </div>
+
+          </div>
+          <div class="row">
+              <div class="card mt-3">
+    <div class="card-header codesum">
+      <span class="anchor" id="boundprocedure-asarray"></span>
+      <h3>
+          procedure, public ::
+  <strong>AsArray</strong> => ByteBuffer_AsArray
+        
+      </h3>
+    </div>
+      <div class="card-body">
+        
+        <p><strong>Type-Bound Function</strong>: AsArray <br>
+ <strong>Purpose</strong>:  To return bytes currently stored in the ByteBuffer as an
+      allocatable array of bytes.  Optionally, a user can request to clear the
+      buffer. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    CALL ByteBuf%AsArray(ByteArr) <br>
+  ---&gt;    CALL ByteBuf%AsArray(ByteArr, ClearBuffer=.TRUE.) <br></p>
+      </div>
+    <ul class="list-group">
+        <li class="list-group-item">
+                  <h3>
+    private  subroutine ByteBuffer_AsArray(ByteBuf, ByteArr, ClearBuffer)  
+</h3>
+
+  <p>To return bytes currently stored in the 'ByteBuffer' object as
+ an allocatable array of 8-bit integers.</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(<a href='../type/bytebuffer.html'>ByteBuffer</a>),
+            </td>
+<td>intent(inout)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>ByteBuf</strong></td>
+            <td>
+                <p>'ByteBuffer' object</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              integer(kind=kInt8),
+            </td>
+<td>intent(out),</td>
+              <td></td>            <td>
+              ALLOCATABLE
+            </td>
+            <td>::</td>
+            <td><strong>ByteArr</strong>(:)</td>
+            <td>
+                <p>an array of bytes</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              logical,
+            </td>
+<td>intent(in),</td>
+              <td>optional</td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>ClearBuffer</strong></td>
+            <td>
+                <p>true if requesting to clear the buffer's buffer after getting the string;
+ default is false.</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+        </li>
+    </ul>
+  </div>
+
+          </div>
+          <div class="row">
+              <div class="card mt-3">
+    <div class="card-header codesum">
+      <span class="anchor" id="boundprocedure-viewarray"></span>
+      <h3>
+          procedure, public ::
+  <strong>ViewArray</strong> => ByteBuffer_ViewArray
+        
+      </h3>
+    </div>
+      <div class="card-body">
+        
+        <p><strong>Type-Bound Function</strong>: ViewArray <br>
+ <strong>Purpose</strong>:  To return a pointer to bytes currently stored in the <em>ByteBuffer</em> object. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    BytePtr =&gt; ByteBuf%ViewArray() <br></p>
+      </div>
+    <ul class="list-group">
+        <li class="list-group-item">
+                  <h3>
+    private  function ByteBuffer_ViewArray(ByteBuf) result(BytePtr)  
+</h3>
+
+  <p>To return a pointer to an array representing bytes currently
+ stored in the 'ByteBuffer' object.  Return null pointer if the
+ object is currently empty.</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(<a href='../type/bytebuffer.html'>ByteBuffer</a>),
+            </td>
+<td>intent(in),</td>
+              <td></td>            <td>
+              TARGET
+            </td>
+            <td>::</td>
+            <td><strong>ByteBuf</strong></td>
+            <td>
+                <p>'ByteBuffer' object</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+    <h4>
+    Return Value
+    <small>integer(kind=kInt8), POINTER, (:)</small>
+    </h4>
+    <p>byte pointer</p>
+
+        </li>
+    </ul>
+  </div>
+
+          </div>
+          <div class="row">
+              <div class="card mt-3">
+    <div class="card-header codesum">
+      <span class="anchor" id="boundprocedure-size~11"></span>
+      <h3>
+          procedure, public ::
+  <strong>Size</strong> => ByteBuffer_GetSize
+        
+      </h3>
+    </div>
+      <div class="card-body">
+        
+        <p><strong>Type-Bound Function</strong>: Size <br>
+ <strong>Purpose</strong>:  To return the current size of the byte array being built. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    Size = ByteBuf%Size() <br></p>
+      </div>
+    <ul class="list-group">
+        <li class="list-group-item">
+                  <h3>
+    private  function ByteBuffer_GetSize(ByteBuf) result(Size)  
+</h3>
+
+  <p>To return the current size of the array being built (i.e. the number
+ of bytes currently stored in the buffer).</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(<a href='../type/bytebuffer.html'>ByteBuffer</a>),
+            </td>
+<td>intent(inout)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>ByteBuf</strong></td>
+            <td>
+                <p>'ByteBuffer' object</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+    <h4>
+    Return Value
+    <small>integer(kind=kInt32)</small>
+    </h4>
+    <p>size of the array</p>
+
+        </li>
+    </ul>
+  </div>
+
+          </div>
+          <div class="row">
+              <div class="card mt-3">
+    <div class="card-header codesum">
+      <span class="anchor" id="boundprocedure-copy~5"></span>
+      <h3>
+          procedure, public ::
+  <strong>Copy</strong> => ByteBuffer_Copy
+        
+      </h3>
+    </div>
+      <div class="card-body">
+        
+        <p><strong>Type-Bound Subroutine</strong>: Copy <br>
+ <strong>Purpose</strong>: To make a copy of the source object. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    CALL SrcObj%Copy(DstObj) <br></p>
+      </div>
+    <ul class="list-group">
+        <li class="list-group-item">
+                  <h3>
+    private  subroutine ByteBuffer_Copy(SrcObj, DstObj, IsDeep)  
+</h3>
+
+  <p>To copy the <em>ByteBuffer</em> object.  This is a deferred procedure.</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(<a href='../type/bytebuffer.html'>ByteBuffer</a>),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>SrcObj</strong></td>
+            <td>
+                <p>source object</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(<a href='../type/object.html'>Object</a>),
+            </td>
+<td>intent(out)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>DstObj</strong></td>
+            <td>
+                <p>destination object</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              logical,
+            </td>
+<td>intent(in),</td>
+              <td>optional</td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>IsDeep</strong></td>
+            <td>
+                <p>Flag indicating whether to perform deep copy or shallow copy. <br>
+ - If present and true, perform a deep copy. <br>
+ - If present and false, perform a shallow copy. <br>
+ - If not present, perform either a shallow or a deep copy that is naturally most
+   suitable for the object's components.</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+        </li>
+    </ul>
+  </div>
+
+          </div>
+          <div class="row">
+              <div class="card mt-3">
+    <div class="card-header codesum">
+      <span class="anchor" id="boundprocedure-isequalto~5"></span>
+      <h3>
+          procedure, public ::
+  <strong>IsEqualTo</strong> => ByteBuffer_IsEqualTo
+        
+      </h3>
+    </div>
+      <div class="card-body">
+        
+        <p><strong>Type-Bound Function</strong>: IsEqualTo <br>
+ <strong>Purpose</strong>: To check whether two objects are equal to one another or not. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    Flag = ObjA%IsEqualTo(ObjB) <br>
+  ---&gt;    IF (ObjA%IsEqualTo(ObjB)) DoSomething</p>
+      </div>
+    <ul class="list-group">
+        <li class="list-group-item">
+                  <h3>
+    private  function ByteBuffer_IsEqualTo(LhsObj, RhsObj) result(Flag)  
+</h3>
+
+  <p>To check whether LhsObj and RhsObj are equal or not.
+ This is a deferred procedure.</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(<a href='../type/bytebuffer.html'>ByteBuffer</a>),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>LhsObj</strong></td>
+            <td>
+                <p>an object</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(<a href='../type/object.html'>Object</a>),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>RhsObj</strong></td>
+            <td>
+                <p>another object</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+    <h4>
+    Return Value
+    <small>logical</small>
+    </h4>
+    <p>true if both objects are equal</p>
+
+        </li>
+    </ul>
+  </div>
+
+          </div>
+          <div class="row">
+              <div class="card mt-3">
+    <div class="card-header codesum">
+      <span class="anchor" id="boundprocedure-memfree~5"></span>
+      <h3>
+          procedure, public ::
+  <strong>MemFree</strong> => ByteBuffer_MemFree
+        
+      </h3>
+    </div>
+      <div class="card-body">
+        
+        <p><strong>Type-Bound Subroutine</strong>: MemFree <br>
+ <strong>Purpose</strong>: To free memory/storage occupied by the object. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    CALL Obj%MemFree() <br></p>
+      </div>
+    <ul class="list-group">
+        <li class="list-group-item">
+                  <h3>
+    private  subroutine ByteBuffer_MemFree(Obj)  
+</h3>
+
+  <p>To free memory of the <em>ByteBuffer</em> object.  This is a deferred procedure.</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(<a href='../type/bytebuffer.html'>ByteBuffer</a>),
+            </td>
+<td>intent(inout)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Obj</strong></td>
+            <td>
+                
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+        </li>
+    </ul>
+  </div>
+
+          </div>
+          <div class="row">
+              <div class="card mt-3">
+    <div class="card-header codesum">
+      <span class="anchor" id="boundprocedure-tostring~6"></span>
+      <h3>
+          procedure, public ::
+  <strong>ToString</strong> => ByteBuffer_ToString
+        
+      </h3>
+    </div>
+      <div class="card-body">
+        
+        <p><strong>Type-Bound Function</strong>: ToString <br>
+ <strong>Purpose</strong>:  To return the string representation of this object. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    Str = Obj%ToString() <br></p>
+      </div>
+    <ul class="list-group">
+        <li class="list-group-item">
+                  <h3>
+    private  function ByteBuffer_ToString(Obj) result(Str)  
+</h3>
+
+  <p>To get the string representation of this object.</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(<a href='../type/bytebuffer.html'>ByteBuffer</a>),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Obj</strong></td>
+            <td>
+                
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+    <h4>
+    Return Value
+    <small>character(kind=kChar, len=:), ALLOCATABLE</small>
+    </h4>
+    <p>string representation of the object</p>
+
+        </li>
+    </ul>
+  </div>
+
+          </div>
+          <div class="row">
+              <div class="card mt-3">
+    <div class="card-header codesum">
+      <span class="anchor" id="boundprocedure-hashcode~33"></span>
+      <h3>
+          procedure, public ::
+  <strong>HashCode</strong> => ByteBuffer_HashCode
+        
+      </h3>
+    </div>
+      <div class="card-body">
+        
+        <p><strong>Type-Bound Function</strong>: HashCode <br>
+ <strong>Purpose</strong>:  To compute the hash code of this object. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    Code = Obj%HashCode() <br></p>
+      </div>
+    <ul class="list-group">
+        <li class="list-group-item">
+                  <h3>
+    private  function ByteBuffer_HashCode(Obj) result(Code)  
+</h3>
+
+  <p>To compute hash code for this object.</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(<a href='../type/bytebuffer.html'>ByteBuffer</a>),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Obj</strong></td>
+            <td>
+                
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+    <h4>
+    Return Value
+    <small>integer(kind=kInt32)</small>
+    </h4>
+    
+
+        </li>
+    </ul>
+  </div>
+
+          </div>
+      </section>
+
+    <section>
+    <h3><span class="anchor" id="src"></span>Source Code</h3>
+    <div class="hl codehilite"><pre><span></span><span class="w">    </span><span class="k">TYPE</span><span class="p">,</span><span class="w"> </span><span class="k">EXTENDS</span><span class="p">(</span><span class="n">Object</span><span class="p">)</span><span class="w">   </span><span class="kd">::</span><span class="w"> </span><span class="n">ByteBuffer</span>
+<span class="w">        </span><span class="k">PRIVATE</span>
+<span class="k">        </span><span class="n">tIndex</span><span class="w">              </span><span class="kd">::</span><span class="w"> </span><span class="nb">Count</span><span class="w">    </span><span class="o">=</span><span class="w"> </span><span class="mi">0_kIndex</span><span class="w">  </span><span class="c">!! the number of bytes currently stored</span>
+<span class="w">        </span><span class="n">tIndex</span><span class="w">              </span><span class="kd">::</span><span class="w"> </span><span class="n">Capacity</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0_kIndex</span><span class="w">  </span><span class="c">!! the maximum number of bytes that currently can be stored</span>
+<span class="w">        </span><span class="n">tSInt8</span><span class="p">,</span><span class="w"> </span><span class="k">ALLOCATABLE</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">Buffer</span><span class="p">(:)</span><span class="w">            </span><span class="c">!! buffer</span>
+<span class="w">    </span><span class="k">CONTAINS</span>
+<span class="w">        </span><span class="c">! ---------------------------------------------------------------------</span>
+<span class="w">        </span><span class="c">! -----                     Private Procedures                    -----</span>
+<span class="w">        </span><span class="c">! ---------------------------------------------------------------------</span>
+<span class="w">        </span><span class="k">PROCEDURE</span><span class="p">,</span><span class="w"> </span><span class="k">PRIVATE</span><span class="w">  </span><span class="kd">::</span><span class="w"> </span><span class="n">EnsureCapacity</span><span class="w">   </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">ByteBuffer_EnsureCapacity</span>
+<span class="w">        </span><span class="c">! ---------------------------------------------------------------------</span>
+<span class="w">        </span><span class="c">! -----                     Public Procedures                     -----</span>
+<span class="w">        </span><span class="c">! ---------------------------------------------------------------------</span>
+<span class="w">        </span><span class="c">!&gt; **Type-Bound Subroutine**: CreateEmpty &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Purpose**:  To construct an empty *ByteBuffer* object. &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Usage**: &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!   ! use default initial capacity  &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!   ---&gt;    CALL ByteBuf%CreateEmpty() &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!   ! specify initial capacity &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!   ---&gt;    CALL ByteBuf%CreateEmpty(InitCap=256) &lt;br&gt;</span>
+<span class="w">        </span><span class="k">PROCEDURE</span><span class="w">   </span><span class="kd">::</span><span class="w"> </span><span class="n">CreateEmpty</span><span class="w">  </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">ByteBuffer_CreateEmpty</span>
+<span class="w">        </span><span class="c">!&gt; **Type-Bound Subroutine**: Construct &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Purpose**:  To construct a *ByteBuffer* object with the specified bytes.  This method</span>
+<span class="w">        </span><span class="c">!       provides a convenient way to create an empty *ByteBuffer* object and then add the</span>
+<span class="w">        </span><span class="c">!       first array of bytes into the object. &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Usage**: &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!   ---&gt;    CALL ByteBuf%Construct(ByteArr) &lt;br&gt;</span>
+<span class="w">        </span><span class="k">PROCEDURE</span><span class="w">   </span><span class="kd">::</span><span class="w"> </span><span class="n">Construct</span><span class="w">    </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">ByteBuffer_Construct</span>
+<span class="w">        </span><span class="c">!&gt; **Type-Bound Subroutine**: Clear &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Purpose**:  To clear the buffer of the *ByteBuffer* object. &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Usage**: &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!   ---&gt;    CALL ByteBuf%Clear() &lt;br&gt;</span>
+<span class="w">        </span><span class="k">PROCEDURE</span><span class="w">   </span><span class="kd">::</span><span class="w"> </span><span class="n">Clear</span><span class="w">        </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">ByteBuffer_Clear</span>
+<span class="w">        </span><span class="c">!&gt; **Type-Bound Subroutine**: Append &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Purpose**:  To append the specified byte(s) at the end of the buffer. &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Usage**: &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!   ---&gt;    CALL ByteBuf%Append(ByteArr, NElm) &lt;br&gt;</span>
+<span class="w">        </span><span class="k">PROCEDURE</span><span class="w">   </span><span class="kd">::</span><span class="w"> </span><span class="n">Append</span><span class="w">       </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">ByteBuffer_Append</span>
+<span class="w">        </span><span class="c">!&gt; **Type-Bound Function**: AsArray &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Purpose**:  To return bytes currently stored in the ByteBuffer as an</span>
+<span class="w">        </span><span class="c">!       allocatable array of bytes.  Optionally, a user can request to clear the</span>
+<span class="w">        </span><span class="c">!       buffer. &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Usage**: &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!   ---&gt;    CALL ByteBuf%AsArray(ByteArr) &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!   ---&gt;    CALL ByteBuf%AsArray(ByteArr, ClearBuffer=.TRUE.) &lt;br&gt;</span>
+<span class="w">        </span><span class="k">PROCEDURE</span><span class="w">   </span><span class="kd">::</span><span class="w"> </span><span class="n">AsArray</span><span class="w">     </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">ByteBuffer_AsArray</span>
+<span class="w">        </span><span class="c">!&gt; **Type-Bound Function**: ViewArray &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Purpose**:  To return a pointer to bytes currently stored in the *ByteBuffer* object. &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Usage**: &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!   ---&gt;    BytePtr =&gt; ByteBuf%ViewArray() &lt;br&gt;</span>
+<span class="w">        </span><span class="k">PROCEDURE</span><span class="w">   </span><span class="kd">::</span><span class="w"> </span><span class="n">ViewArray</span><span class="w">   </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">ByteBuffer_ViewArray</span>
+<span class="w">        </span><span class="c">!&gt; **Type-Bound Function**: Size &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Purpose**:  To return the current size of the byte array being built. &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Usage**: &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!   ---&gt;    Size = ByteBuf%Size() &lt;br&gt;</span>
+<span class="w">        </span><span class="k">PROCEDURE</span><span class="w">   </span><span class="kd">::</span><span class="w"> </span><span class="n">Size</span><span class="w">         </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">ByteBuffer_GetSize</span>
+<span class="w">        </span><span class="c">! ---------------------------------------------------------------------</span>
+<span class="w">        </span><span class="c">! -----                     Deferred Procedures                   -----</span>
+<span class="w">        </span><span class="c">! ---------------------------------------------------------------------</span>
+<span class="w">        </span><span class="c">!&gt; **Type-Bound Subroutine**: Copy &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Purpose**: To make a copy of the source object. &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Usage**: &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!   ---&gt;    CALL SrcObj%Copy(DstObj) &lt;br&gt;</span>
+<span class="w">        </span><span class="k">PROCEDURE</span><span class="w">   </span><span class="kd">::</span><span class="w"> </span><span class="n">Copy</span><span class="w">         </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">ByteBuffer_Copy</span>
+<span class="w">        </span><span class="c">!&gt; **Type-Bound Function**: IsEqualTo &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Purpose**: To check whether two objects are equal to one another or not. &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Usage**: &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!   ---&gt;    Flag = ObjA%IsEqualTo(ObjB) &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!   ---&gt;    IF (ObjA%IsEqualTo(ObjB)) DoSomething</span>
+<span class="w">        </span><span class="k">PROCEDURE</span><span class="w">   </span><span class="kd">::</span><span class="w"> </span><span class="n">IsEqualTo</span><span class="w">    </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">ByteBuffer_IsEqualTo</span>
+<span class="w">        </span><span class="c">!&gt; **Type-Bound Subroutine**: MemFree &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Purpose**: To free memory/storage occupied by the object. &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Usage**: &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!   ---&gt;    CALL Obj%MemFree() &lt;br&gt;</span>
+<span class="w">        </span><span class="k">PROCEDURE</span><span class="w">   </span><span class="kd">::</span><span class="w"> </span><span class="n">MemFree</span><span class="w">      </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">ByteBuffer_MemFree</span>
+<span class="w">        </span><span class="c">!&gt; **Type-Bound Function**: ToString &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Purpose**:  To return the string representation of this object. &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Usage**: &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!   ---&gt;    Str = Obj%ToString() &lt;br&gt;</span>
+<span class="w">        </span><span class="k">PROCEDURE</span><span class="w">   </span><span class="kd">::</span><span class="w"> </span><span class="n">ToString</span><span class="w">     </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">ByteBuffer_ToString</span>
+<span class="w">        </span><span class="c">! ---------------------------------------------------------------------</span>
+<span class="w">        </span><span class="c">! -----                     Overridden Procedure                  -----</span>
+<span class="w">        </span><span class="c">! ---------------------------------------------------------------------</span>
+<span class="w">        </span><span class="c">!&gt; **Type-Bound Function**: HashCode &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Purpose**:  To compute the hash code of this object. &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Usage**: &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!   ---&gt;    Code = Obj%HashCode() &lt;br&gt;</span>
+<span class="w">        </span><span class="k">PROCEDURE</span><span class="w">   </span><span class="kd">::</span><span class="w"> </span><span class="n">HashCode</span><span class="w">     </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">ByteBuffer_HashCode</span>
+<span class="w">        </span><span class="c">! ---------------------------------------------------------------------</span>
+<span class="w">        </span><span class="c">! -----                 Final Procedure                           -----</span>
+<span class="w">        </span><span class="c">! ---------------------------------------------------------------------</span>
+<span class="w">        </span><span class="c">!% To perform finalization of the *ByteBuffer* object.</span>
+<span class="w">        </span><span class="k">FINAL</span><span class="w">       </span><span class="kd">::</span><span class="w"> </span><span class="n">ByteBuffer_Finalize</span>
+<span class="w">        </span><span class="c">! ---------------------------------------------------------------------</span>
+<span class="w">    </span><span class="k">END TYPE </span><span class="n">ByteBuffer</span>
+</pre></div>
+
+    </section>
+    
+    </div>
+  </div>
+
+      <hr>
+    </div> <!-- /container -->
+    <footer>
+      <div class="container">
+        <div class="row justify-content-between">
+          <div class="col"><p>eXPerimental Fortran Library (XpfLib) Documentation was developed by Niranama<br>&copy; 2024 
+</p>
+          </div>
+          <div class="col">
+            <p class="text-end">
+              Documentation generated by
+              <a href="https://github.com/Fortran-FOSS-Programmers/ford">FORD</a>
+            </p>
+          </div>
+        </div>
+        <br>
+      </div> <!-- /container -->
+    </footer>
+
+    <!-- Bootstrap core JavaScript -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>    
+
+    <!-- MathJax JavaScript
+             ================================================== -->
+             <!-- Placed at the end of the document so the pages load faster -->
+        <script type="text/x-mathjax-config">
+          MathJax.Hub.Config({
+          TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } },
+          jax: ['input/TeX','input/MathML','output/HTML-CSS'],
+          extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']
+          });
+        </script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+          <script src="../tipuesearch/tipuesearch_content.js"></script>
+          <script src="../tipuesearch/tipuesearch_set.js"></script>
+          <script src="../tipuesearch/tipuesearch.js"></script>
+
+  </body>
+</html>

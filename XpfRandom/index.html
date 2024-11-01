@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta name="description" content="Experimental Fortran Package - Psuedo-Random Number Generators (PRNGs)">
+    <meta name="author" content="Niranama" >
+    <link rel="icon" href="./favicon.png">
+
+    <title> eXPerimental Fortran Library (XpfLib) Documentation </title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link href="./css/pygments.css" rel="stylesheet">
+    <link href="./css/font-awesome.min.css" rel="stylesheet">
+    <link href="./css/local.css" rel="stylesheet">
+      <link  href="./tipuesearch/tipuesearch.css" rel="stylesheet">
+
+    <script src="https://code.jquery.com/jquery-3.7.0.slim.min.js" integrity="sha256-tG5mcZUtJsZvyKAxYLVXrmjKBVLd6VpVccqz/r4ypFE=" crossorigin="anonymous"></script>
+  </head>
+
+  <body>
+
+    <!-- Fixed navbar -->
+    <div class="container-fluid mb-sm-4 mb-xl-2">
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container">
+          <a class="navbar-brand" href="./index.html">eXPerimental Fortran Library (XpfLib) Documentation </a>
+          <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar"
+                  aria-expanded="false" aria-controls="navbar" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon">
+          </button>
+
+          <div id="navbar" class="navbar-collapse collapse">
+            <ul class="navbar-nav">
+                  <li class="nav-item">
+                    <a class="nav-link" href="./lists/files.html">Source Files</a>
+                  </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="./lists/modules.html">Modules</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="./lists/procedures.html">Procedures</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="./lists/absint.html">Abstract Interfaces</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="./lists/types.html">Derived Types</a>
+                </li>
+            </ul>
+              <div class="d-flex align-items-end flex-grow-1">
+                <form action="./search.html" role="search" class="ms-auto">
+                  <input type="text" class="form-control" aria-label="Search" placeholder="Search" name="q" id="tipue_search_input" autocomplete="off" required>
+                </form>
+              </div>
+          </div><!--/.nav-collapse -->
+        </div>
+      </nav>
+    </div>
+
+    <div class="container">
+      <!-- Main component for a primary marketing message or call to action -->
+      <div class="p-5 mb-4 bg-light border rounded-3" id="jumbotron">
+        <p>Experimental Fortran Package - Psuedo-Random Number Generators (PRNGs)</p>
+        </p>
+      </div>
+
+      <div class="row" id='text'>
+        <div class=col-md-8>
+          <h1>eXPerimental Fortran Library (XpfLib) Documentation</h1>
+          <h2><em>XpfRandom: eXPerimental Fortran Random Package</em></h2>
+<p><strong><em>XpfRandom</em></strong> is an experimenal package written in Fortran.   It is a sub-package of the <strong><em>XpfGeneral</em></strong> package (a larger package within the <strong><em>XpfLib</em></strong> library), which contains a large collection of general-purpose modules.  The <em>XpfRandom</em> package consists of a large number of modules that implement object-oriented pseudo-random number generators (PRNGs) based on many random number generation algorithms. </p>
+<p>The source code of the <em>XpfRandom</em> package is organized into 3 subfolders of the <em>XpfRandom</em> folder.   A brief overview of the source code in each subfolder is given below.</p>
+<ol>
+<li>
+<p>The <em>Bases</em> subfolder contains three modules (and two submodules) that provide abstract derived types (ADT) that are employed as base types for pseudo-random number generators.  The <em>BaseRNG</em> type defines an application programming interface (API) for uniformly-distributed random number generations.  It also provides a number of default implementations of random number generations.  The <em>IntegerRNG</em> type is a subtype of the <em>BaseRNG</em> type that defines additional methods for a so-called <em>Integer</em> PRNG.  It also provides default implementations of some deferred procedures required by a PRNG where other deferred procedures  must be implemented by its subtypes.  Similarly, the <em>LongRNG</em> type is also a direct subtype of the <em>BaseRNG</em> type that defines additional methods for a so-called <em>Long</em> PRNG.  By design, both the <em>IntegerRNG</em> and the <em>LongRNG</em> types are provided as base types for so-called <em>Integer</em>  and <em>Long</em> PRNGs.</p>
+</li>
+<li>
+<p>The <em>Integer</em> subfolder contains a large number modules where each module contains a concrete derived type that represents the so-called <em>Integer</em> PRNG whose main purpose is to produce a 32-bit integer random number.</p>
+</li>
+<li>
+<p>The <em>Long</em> subfolder contains a large number modules where each module contains a concrete derived type that represents the so-called <em>Long</em> PRNG whose main purpose is to produce a 64-bit integer random number.</p>
+</li>
+<li>
+<p>The <em>MBase_PrgnBuilder</em> module provides a centralized access to all available PRNGs in the package.</p>
+</li>
+</ol>
+<h3>Dependencies</h3>
+<p>The <em>XpfRandom</em> pacakge is primarily dependent on the <a href="../XpfBase/Index.html">XpfBase</a> package.</p>
+<h2>Documentation</h2>
+<p>The <a href="https://github.com/Fortran-FOSS-Programmers/ford">FORD</a> program can be used to automatically generate the documentation of the <em>XpfRandom</em> package via <code>ford XpfRandomDoc.md</code>.</p>
+        </div>
+          <div class="col-md-4">
+	        <div class="card card-body bg-light">
+              <h2 class="card-title">Developer Info</h2>
+              <h4 class="card-text">Niranama</h4>
+              <p class="card-text"></p>
+            </div>
+          </div>
+      </div>
+        <div class="row">
+          <hr>
+          <div class="col-xs-6 col-sm-3">
+            <div>
+              <h3>Source Files</h3>
+              <ul><li><a href='./sourcefile/mbase_prngbuilder.f90.html'>MBase_PrngBuilder.f90</a></li><li><a href='./sourcefile/mclass_baserng.f90.html'>MClass_BaseRNG.f90</a></li><li><a href='./sourcefile/mclass_chacharng.f90.html'>MClass_ChaChaRNG.f90</a></li><li><a href='./sourcefile/mclass_cmwc4096rng.f90.html'>MClass_Cmwc4096RNG.f90</a></li><li><a href='./sourcefile/mclass_integerrng.f90.html'>MClass_IntegerRNG.f90</a></li><li><a href='./sourcefile/mclass_isaacrng.f90.html'>MClass_IsaacRNG.f90</a></li><li><a href='./sourcefile/mclass_jsf32rng.f90.html'>MClass_Jsf32RNG.f90</a></li><li><a href='./sourcefile/mclass_jsf64rng.f90.html'>MClass_Jsf64RNG.f90</a></li><li><a href='./sourcefile/mclass_kiss32rng.f90.html'>MClass_Kiss32RNG.f90</a></li><li><a href='./sourcefile/mclass_kiss64rng.f90.html'>MClass_Kiss64RNG.f90</a></li><li><a href='./sourcefile/mclass_komirng.f90.html'>MClass_KomiRNG.f90</a></li><li><a href='./sourcefile/mclass_l128x1024rng.f90.html'>MClass_L128X1024RNG.f90</a></li><li><a href='./sourcefile/mclass_l128x128rng.f90.html'>MClass_L128X128RNG.f90</a></li><li><a href='./sourcefile/mclass_l128x256rng.f90.html'>MClass_L128X256RNG.f90</a></li><li><a href='./sourcefile/mclass_l128xmrng.f90.html'>MClass_L128XMRNG.f90</a></li><li><a href='./sourcefile/mclass_l32x64mrng.f90.html'>MClass_L32X64MRNG.f90</a></li><li><a href='./sourcefile/mclass_l32x64rng.f90.html'>MClass_L32X64RNG.f90</a></li><li><a href='./sourcefile/mclass_l64x1024rng.f90.html'>MClass_L64X1024RNG.f90</a></li><li><a href='./sourcefile/mclass_l64x128rng.f90.html'>MClass_L64X128RNG.f90</a></li><li><a href='./sourcefile/mclass_l64x256rng.f90.html'>MClass_L64X256RNG.f90</a></li><li><a href='./sourcefile/mclass_l64xmrng.f90.html'>MClass_L64XMRNG.f90</a></li><li><a href='./sourcefile/mclass_lfsr113rng.f90.html'>MClass_Lfsr113RNG.f90</a></li><li><a href='./sourcefile/mclass_lfsr258rng.f90.html'>MClass_Lfsr258RNG.f90</a></li><li><a href='./sourcefile/mclass_longrng.f90.html'>MClass_LongRNG.f90</a></li><li><a href='./sourcefile/mclass_mrg32k3arng.f90.html'>MClass_Mrg32k3aRNG.f90</a></li><li><a href='./sourcefile/mclass_mrg63k3arng.f90.html'>MClass_Mrg63k3aRNG.f90</a></li><li><a href='./sourcefile/mclass_mswsrng.f90.html'>MClass_MswsRNG.f90</a></li><li><a href='./sourcefile/mclass_mt32rng.f90.html'>MClass_Mt32RNG.f90</a></li><li><a href='./sourcefile/mclass_mt64rng.f90.html'>MClass_Mt64RNG.f90</a></li><li><a href='./sourcefile/mclass_mwc256rng.f90.html'>MClass_Mwc256RNG.f90</a></li><li><a href='./sourcefile/mclass_pcglcg32rng.f90.html'>MClass_PcgLcg32RNG.f90</a></li><li><a href='./sourcefile/mclass_pcgmcg32rng.f90.html'>MClass_PcgMcg32RNG.f90</a></li><li><a href='./sourcefile/mclass_pcgrxsmxs64rng.f90.html'>MClass_PcgRxsMXs64RNG.f90</a></li><li><a href='./sourcefile/mclass_ranluxpprng.f90.html'>MClass_RanLuxPpRNG.f90</a></li><li><a href='./sourcefile/mclass_ranluxrng.f90.html'>MClass_RanLuxRNG.f90</a></li><li><a href='./sourcefile/mclass_sfc32rng.f90.html'>MClass_Sfc32RNG.f90</a></li><li><a href='./sourcefile/mclass_sfc64rng.f90.html'>MClass_Sfc64RNG.f90</a></li><li><a href='./sourcefile/mclass_sip24rng.f90.html'>MClass_Sip24RNG.f90</a></li><li><a href='./sourcefile/mclass_splitmixrng.f90.html'>MClass_SplitMixRNG.f90</a></li><li><a href='./sourcefile/mclass_superkiss32rng.f90.html'>MClass_SuperKiss32RNG.f90</a></li></ul>
+            </div>
+            <div>
+              <ul>
+                <li><a href="./lists/files.html"><em>All source files&hellip;</em></a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-xs-6 col-sm-3">
+            <div>
+              <h3>Modules</h3>
+              <ul><li><a href='./module/mbase_prgnbuilder.html'>MBase_PrgnBuilder</a></li><li><a href='./module/mclass_baserng.html'>MClass_BaseRNG</a></li><li><a href='./module/mclass_chacharng.html'>MClass_ChaChaRNG</a></li><li><a href='./module/mclass_cmwc4096rng.html'>MClass_Cmwc4096RNG</a></li><li><a href='./module/mclass_integerrng.html'>MClass_IntegerRNG</a></li><li><a href='./module/mclass_isaccrng.html'>MClass_IsaccRNG</a></li><li><a href='./module/mclass_jsf32rng.html'>MClass_Jsf32RNG</a></li><li><a href='./module/mclass_jsf64rng.html'>MClass_Jsf64RNG</a></li><li><a href='./module/mclass_kiss32rng.html'>MClass_Kiss32RNG</a></li><li><a href='./module/mclass_kiss64rng.html'>MClass_Kiss64RNG</a></li><li><a href='./module/mclass_komirng.html'>MClass_KomiRNG</a></li><li><a href='./module/mclass_l128x1024rng.html'>MClass_L128X1024RNG</a></li><li><a href='./module/mclass_l128x128rng.html'>MClass_L128X128RNG</a></li><li><a href='./module/mclass_l128x256rng.html'>MClass_L128X256RNG</a></li><li><a href='./module/mclass_l128xmrng.html'>MClass_L128XMRNG</a></li><li><a href='./module/mclass_l32x64mrng.html'>MClass_L32X64MRNG</a></li><li><a href='./module/mclass_l32x64rng.html'>MClass_L32X64RNG</a></li><li><a href='./module/mclass_l64x1024rng.html'>MClass_L64X1024RNG</a></li><li><a href='./module/mclass_l64x128rng.html'>MClass_L64X128RNG</a></li><li><a href='./module/mclass_l64x256rng.html'>MClass_L64X256RNG</a></li><li><a href='./module/mclass_l64xmrng.html'>MClass_L64XMRNG</a></li><li><a href='./module/mclass_lfsr113rng.html'>MClass_Lfsr113RNG</a></li><li><a href='./module/mclass_lfsr258rng.html'>MClass_Lfsr258RNG</a></li><li><a href='./module/mclass_longrng.html'>MClass_LongRNG</a></li><li><a href='./module/mclass_mrg32k3arng.html'>MClass_Mrg32k3aRNG</a></li><li><a href='./module/mclass_mrg63k3arng.html'>MClass_Mrg63k3aRNG</a></li><li><a href='./module/mclass_mswsrng.html'>MClass_MswsRNG</a></li><li><a href='./module/mclass_mt32rng.html'>MClass_Mt32RNG</a></li><li><a href='./module/mclass_mt64rng.html'>MClass_Mt64RNG</a></li><li><a href='./module/mclass_mwc256rng.html'>MClass_Mwc256RNG</a></li><li><a href='./module/mclass_pcglcg32rng.html'>MClass_PcgLcg32RNG</a></li><li><a href='./module/mclass_pcgmcg32rng.html'>MClass_PcgMcg32RNG</a></li><li><a href='./module/mclass_pcgrxsmxs64rng.html'>MClass_PcgRxsMXs64RNG</a></li><li><a href='./module/mclass_ranluxpprng.html'>MClass_RanLuxPpRNG</a></li><li><a href='./module/mclass_ranluxrng.html'>MClass_RanLuxRNG</a></li><li><a href='./module/mclass_sfc32rng.html'>MClass_Sfc32RNG</a></li><li><a href='./module/mclass_sfc64rng.html'>MClass_Sfc64RNG</a></li><li><a href='./module/mclass_sip24rng.html'>MClass_Sip24RNG</a></li><li><a href='./module/mclass_splitmixrng.html'>MClass_SplitMixRNG</a></li><li><a href='./module/mclass_superkiss32rng.html'>MClass_SuperKiss32RNG</a></li></ul>
+            </div>
+            <div>
+              <ul>
+                <li><a href="./lists/modules.html"><em>All modules&hellip;</em></a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-xs-6 col-sm-3">
+            <div>
+              <h3>Procedures</h3>
+              <ul><li><a href='./proc/calculateblockcount.html'>CalculateBlockCount</a></li><li><a href='./proc/createintegerrng.html'>CreateIntegerRng</a></li><li><a href='./proc/createlongrng.html'>CreateLongRng</a></li><li><a href='./interface/extend_seed.html'>Extend_Seed</a></li><li><a href='./interface/fill_state.html'>Fill_State</a></li><li><a href='./interface/getrandomseed32.html'>GetRandomSeed32</a></li><li><a href='./interface/getrandomseed64.html'>GetRandomSeed64</a></li><li><a href='./proc/getseedsizeintegerrng.html'>GetSeedSizeIntegerRng</a></li><li><a href='./proc/getseedsizelongrng.html'>GetSeedSizeLongRng</a></li><li><a href='./proc/i128_to_r128.html'>I128_To_R128</a></li><li><a href='./interface/mix_lea.html'>Mix_Lea</a></li><li><a href='./interface/mix_murmur.html'>Mix_Murmur</a></li><li><a href='./interface/mix_stafford_13.html'>Mix_Stafford_13</a></li><li><a href='./interface/scramblewell.html'>ScrambleWell</a></li></ul>
+            </div>
+            <div>
+              <ul>
+                <li><a href="./lists/procedures.html"><em>All procedures&hellip;</em></a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-xs-6 col-sm-3">
+            <div>
+              <h3>Derived Types</h3>
+              <ul><li><a href='./type/baserng.html'>BaseRNG</a></li><li><a href='./type/chacharng.html'>ChaChaRNG</a></li><li><a href='./type/cmwc4096rng.html'>Cmwc4096RNG</a></li><li><a href='./type/integerrng.html'>IntegerRNG</a></li><li><a href='./type/isaccrng.html'>IsaccRNG</a></li><li><a href='./type/jsf32rng.html'>Jsf32RNG</a></li><li><a href='./type/jsf64rng.html'>Jsf64RNG</a></li><li><a href='./type/kiss32rng.html'>Kiss32RNG</a></li><li><a href='./type/kiss64rng.html'>Kiss64RNG</a></li><li><a href='./type/komirng.html'>KomiRNG</a></li><li><a href='./type/l128x1024rng.html'>L128X1024RNG</a></li><li><a href='./type/l128x128rng.html'>L128X128RNG</a></li><li><a href='./type/l128x256rng.html'>L128X256RNG</a></li><li><a href='./type/l128xmrng.html'>L128XMRNG</a></li><li><a href='./type/l32x64mrng.html'>L32X64MRNG</a></li><li><a href='./type/l32x64rng.html'>L32X64RNG</a></li><li><a href='./type/l64x1024rng.html'>L64X1024RNG</a></li><li><a href='./type/l64x128rng.html'>L64X128RNG</a></li><li><a href='./type/l64x256rng.html'>L64X256RNG</a></li><li><a href='./type/l64xmrng.html'>L64XMRNG</a></li><li><a href='./type/lfsr113rng.html'>Lfsr113RNG</a></li><li><a href='./type/lfsr258rng.html'>Lfsr258RNG</a></li><li><a href='./type/longrng.html'>LongRNG</a></li><li><a href='./type/mrg32k3arng.html'>Mrg32k3aRNG</a></li><li><a href='./type/mrg63k3arng.html'>Mrg63k3aRNG</a></li><li><a href='./type/mswsrng.html'>MswsRNG</a></li><li><a href='./type/mt32rng.html'>Mt32RNG</a></li><li><a href='./type/mt64rng.html'>Mt64RNG</a></li><li><a href='./type/mwc256rng.html'>Mwc256RNG</a></li><li><a href='./type/pcglcg32rng.html'>PcgLcg32RNG</a></li><li><a href='./type/pcgmcg32rng.html'>PcgMcg32RNG</a></li><li><a href='./type/pcgrxsmxs64rng.html'>PcgRxsMXs64RNG</a></li><li><a href='./type/ranluxpprng.html'>RanLuxPpRNG</a></li><li><a href='./type/ranluxrng.html'>RanLuxRNG</a></li><li><a href='./type/sfc32rng.html'>Sfc32RNG</a></li><li><a href='./type/sfc64rng.html'>Sfc64RNG</a></li><li><a href='./type/sip24rng.html'>Sip24RNG</a></li><li><a href='./type/splitmixrng.html'>SplitMixRNG</a></li><li><a href='./type/superkiss32rng.html'>SuperKiss32RNG</a></li><li><a href='./type/superkiss64rng.html'>SuperKiss64RNG</a></li></ul>
+            </div>
+            <div>
+              <ul>
+                <li><a href="./lists/types.html"><em>All derived types&hellip;</em></a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      <hr>
+    </div> <!-- /container -->
+    <footer>
+      <div class="container">
+        <div class="row justify-content-between">
+          <div class="col"><p>eXPerimental Fortran Library (XpfLib) Documentation was developed by Niranama<br>&copy; 2024 
+</p>
+          </div>
+          <div class="col">
+            <p class="text-end">
+              Documentation generated by
+              <a href="https://github.com/Fortran-FOSS-Programmers/ford">FORD</a>
+            </p>
+          </div>
+        </div>
+        <br>
+      </div> <!-- /container -->
+    </footer>
+
+    <!-- Bootstrap core JavaScript -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>    
+
+    <!-- MathJax JavaScript
+             ================================================== -->
+             <!-- Placed at the end of the document so the pages load faster -->
+        <script type="text/x-mathjax-config">
+          MathJax.Hub.Config({
+          TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } },
+          jax: ['input/TeX','input/MathML','output/HTML-CSS'],
+          extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']
+          });
+        </script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+          <script src="./tipuesearch/tipuesearch_content.js"></script>
+          <script src="./tipuesearch/tipuesearch_set.js"></script>
+          <script src="./tipuesearch/tipuesearch.js"></script>
+
+  </body>
+</html>

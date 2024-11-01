@@ -1,0 +1,583 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta name="description" content="Experimental Fortran Package - Base Modules and Classes">
+    <meta name="author" content="Niranama" >
+    <link rel="icon" href="../favicon.png">
+
+    <title>Timer &ndash; eXPerimental Fortran Library (XpfLib) Documentation </title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link href="../css/pygments.css" rel="stylesheet">
+    <link href="../css/font-awesome.min.css" rel="stylesheet">
+    <link href="../css/local.css" rel="stylesheet">
+      <link  href="../tipuesearch/tipuesearch.css" rel="stylesheet">
+
+    <script src="https://code.jquery.com/jquery-3.7.0.slim.min.js" integrity="sha256-tG5mcZUtJsZvyKAxYLVXrmjKBVLd6VpVccqz/r4ypFE=" crossorigin="anonymous"></script>
+  </head>
+
+  <body>
+
+    <!-- Fixed navbar -->
+    <div class="container-fluid mb-sm-4 mb-xl-2">
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container">
+          <a class="navbar-brand" href="../index.html">eXPerimental Fortran Library (XpfLib) Documentation </a>
+          <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar"
+                  aria-expanded="false" aria-controls="navbar" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon">
+          </button>
+
+          <div id="navbar" class="navbar-collapse collapse">
+            <ul class="navbar-nav">
+                  <li class="nav-item">
+                    <a class="nav-link" href="../lists/files.html">Source Files</a>
+                  </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../lists/modules.html">Modules</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../lists/procedures.html">Procedures</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../lists/absint.html">Abstract Interfaces</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../lists/types.html">Derived Types</a>
+                </li>
+            </ul>
+              <div class="d-flex align-items-end flex-grow-1">
+                <form action="../search.html" role="search" class="ms-auto">
+                  <input type="text" class="form-control" aria-label="Search" placeholder="Search" name="q" id="tipue_search_input" autocomplete="off" required>
+                </form>
+              </div>
+          </div><!--/.nav-collapse -->
+        </div>
+      </nav>
+    </div>
+
+    <div class="container">
+  <div class="row">
+    <h1>Timer
+      <small>Derived Type</small>
+      
+    </h1>
+      <div class="container p-2 mb-4 bg-light border rounded-3">
+    <div class="row align-items-center justify-content-between" id="info-bar">
+      <div class="col">
+        <ul class="list-inline" style="margin-bottom:0px;display:inline">
+
+            <li class="list-inline-item" id="statements"><i class="fa fa-list-ol"></i>
+              <a data-bs-toggle="tooltip"
+                 data-bs-placement="bottom" data-html="true"
+                 title="<p> 1.9% of total for derived types.</p>Including implementation: 76 statements,  1.1% of total for derived types.">15 statements</a>
+            </li>
+
+            <li class="list-inline-item" id="source-file">
+              <i class="fa fa-code"></i>
+              <a href="../src/MClass_Timer.f90"> Source File</a>
+            </li>
+        </ul>
+      </div>
+      <div class="col">
+        <nav aria-label="breadcrumb">
+          <ol class="breadcrumb justify-content-end mb-0">
+                <li class="breadcrumb-item"><a href='../sourcefile/mclass_timer.f90.html'>MClass_Timer.f90</a></li>
+                <li class="breadcrumb-item"><a href='../module/mclass_timer.html'>MClass_Timer</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Timer</li>
+          </ol>
+        </nav>
+      </div>
+    </div>
+  </div>
+  <script>
+    $(function () {
+    $('[data-bs-toggle="tooltip"]').tooltip()
+    })
+  </script>
+
+  </div>
+  
+  <div class="row">
+    <div class="col-md-3 hidden-xs hidden-sm visible-md visible-lg">
+      <div id="sidebar">
+      <h3>Contents</h3>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+      <div class="card mb-4">
+      <a data-bs-toggle="collapse" href="#boundprocs-0"
+         aria-expanded="false" aria-controls="boundprocs-0">
+         <h4 class="card-header bg-primary text-white">Type-Bound Procedures</h4>
+      </a>
+      <div id="boundprocs-0" class="collapse">
+        <div class="list-group list-group-flush">
+            <a class="list-group-item" href="../type/timer.html#boundprocedure-start">Start</a>
+            <a class="list-group-item" href="../type/timer.html#boundprocedure-stop">Stop</a>
+            <a class="list-group-item" href="../type/timer.html#boundprocedure-pause">Pause</a>
+            <a class="list-group-item" href="../type/timer.html#boundprocedure-resume">Resume</a>
+            <a class="list-group-item" href="../type/timer.html#boundprocedure-elapsedtime">ElapsedTime</a>
+        </div>
+      </div>
+    </div>
+
+  
+  
+    <div class="card card-primary">
+      <div class="card-header text-left"><h3 class="card-title">Source Code</h3></div>
+      <div class="list-group">
+        <a class="list-group-item" href="../type/timer.html#src">Timer</a>
+      </div>
+    </div>
+
+
+  </div>
+
+    </div>
+    
+    <div class="col-md-9" id='text'>
+      <h2>type, public :: Timer</h2>
+    <p>a timer type that can be used to measure an elapsed time</p>
+    <br>
+
+    
+
+
+      <section>
+        <h2>Type-Bound Procedures</h2>
+          <div class="row">
+              <div class="card mt-3">
+    <div class="card-header codesum">
+      <span class="anchor" id="boundprocedure-start"></span>
+      <h3>
+          procedure, public ::
+  <strong>Start</strong> => Timer_Start
+        
+      </h3>
+    </div>
+      <div class="card-body">
+        
+        <p><strong>Type-Bound Subroutine</strong>: Start <br>
+<strong>Purpose</strong>:  To start (or reset) the timer <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    CALL BenchTime%Start()</p>
+      </div>
+    <ul class="list-group">
+        <li class="list-group-item">
+                  <h3>
+    private  subroutine Timer_Start(Clock)  
+</h3>
+
+  <p>To start (or reset) the timer.</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(<a href='../type/timer.html'>Timer</a>),
+            </td>
+<td>intent(out)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Clock</strong></td>
+            <td>
+                
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+        </li>
+    </ul>
+  </div>
+
+          </div>
+          <div class="row">
+              <div class="card mt-3">
+    <div class="card-header codesum">
+      <span class="anchor" id="boundprocedure-stop"></span>
+      <h3>
+          procedure, public ::
+  <strong>Stop</strong> => Timer_Stop
+        
+      </h3>
+    </div>
+      <div class="card-body">
+        
+        <p><strong>Type-Bound Subroutine</strong>: Stop <br>
+<strong>Purpose</strong>:  To stop the timer <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    CALL BenchTime%Stop()</p>
+      </div>
+    <ul class="list-group">
+        <li class="list-group-item">
+                  <h3>
+    private  subroutine Timer_Stop(Clock)  
+</h3>
+
+  <p>To stop the timer.</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(<a href='../type/timer.html'>Timer</a>),
+            </td>
+<td>intent(inout)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Clock</strong></td>
+            <td>
+                
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+        </li>
+    </ul>
+  </div>
+
+          </div>
+          <div class="row">
+              <div class="card mt-3">
+    <div class="card-header codesum">
+      <span class="anchor" id="boundprocedure-pause"></span>
+      <h3>
+          procedure, public ::
+  <strong>Pause</strong> => Timer_Pause
+        
+      </h3>
+    </div>
+      <div class="card-body">
+        
+        <p><strong>Type-Bound Subroutine</strong>: Pause <br>
+<strong>Purpose</strong>:  To pause the timer <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    CALL BenchTime%Pause()</p>
+      </div>
+    <ul class="list-group">
+        <li class="list-group-item">
+                  <h3>
+    private  subroutine Timer_Pause(Clock)  
+</h3>
+
+  <p>To pause the timer.</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(<a href='../type/timer.html'>Timer</a>),
+            </td>
+<td>intent(inout)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Clock</strong></td>
+            <td>
+                
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+        </li>
+    </ul>
+  </div>
+
+          </div>
+          <div class="row">
+              <div class="card mt-3">
+    <div class="card-header codesum">
+      <span class="anchor" id="boundprocedure-resume"></span>
+      <h3>
+          procedure, public ::
+  <strong>Resume</strong> => Timer_Resume
+        
+      </h3>
+    </div>
+      <div class="card-body">
+        
+        <p><strong>Type-Bound Subroutine</strong>: Resume <br>
+<strong>Purpose</strong>:  To resume the timer <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    CALL BenchTime%Resume()</p>
+      </div>
+    <ul class="list-group">
+        <li class="list-group-item">
+                  <h3>
+    private  subroutine Timer_Resume(Clock)  
+</h3>
+
+  <p>To resume the timer.</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(<a href='../type/timer.html'>Timer</a>),
+            </td>
+<td>intent(inout)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Clock</strong></td>
+            <td>
+                
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+        </li>
+    </ul>
+  </div>
+
+          </div>
+          <div class="row">
+              <div class="card mt-3">
+    <div class="card-header codesum">
+      <span class="anchor" id="boundprocedure-elapsedtime"></span>
+      <h3>
+          procedure, public ::
+  <strong>ElapsedTime</strong> => Timer_ElapsedTime
+        
+      </h3>
+    </div>
+      <div class="card-body">
+        
+        <p><strong>Type-Bound Subroutine</strong>: ElapsedTime <br>
+<strong>Purpose</strong>:  ! To get elapsed time of the timer <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    CALL BenchTime%ElapsedTime()            ! default unit time (seconds) <br>
+  ---&gt;    CALL BenchTime%ElapsedTime(MILLI_SEC)   ! unit time in milliseconds <br>
+  ---&gt;    CALL BenchTime%ElapsedTime(MICRO_SEC)   ! unit time in microseconds</p>
+      </div>
+    <ul class="list-group">
+        <li class="list-group-item">
+                  <h3>
+    private  function Timer_ElapsedTime(Clock, Unit) result(Time)  
+</h3>
+
+  <p>To get elapsed time of the timer.</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(<a href='../type/timer.html'>Timer</a>),
+            </td>
+<td>intent(inout)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Clock</strong></td>
+            <td>
+                <p>timer object</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              integer(kind=kInt32),
+            </td>
+<td></td>
+              <td>optional</td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Unit</strong></td>
+            <td>
+                <p>unit of the elapsed time <br>
+= 1 if unit time is in seconds (default) <br>
+= 2 if unit time is in milliseconds <br>
+= 3 if unit time is in microseconds <br>
+= 4 if unit time is in nanoseconds <br>
+Note that some unit time may not be accurate/available because
+  the processor clock and its counts are system dependent.</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+    <h4>
+    Return Value
+    <small>real(kind=kDouble)</small>
+    </h4>
+    <p>elapsed time</p>
+
+        </li>
+    </ul>
+  </div>
+
+          </div>
+      </section>
+
+    <section>
+    <h3><span class="anchor" id="src"></span>Source Code</h3>
+    <div class="hl codehilite"><pre><span></span><span class="w">    </span><span class="k">TYPE </span><span class="n">Timer</span>
+<span class="w">        </span><span class="k">PRIVATE</span>
+<span class="k">        </span><span class="n">tSInt64</span><span class="w">     </span><span class="kd">::</span><span class="w"> </span><span class="n">Frequency</span><span class="w">    </span><span class="c">! set to the number of processor clock counts per second</span>
+<span class="w">        </span><span class="n">tSInt64</span><span class="w">     </span><span class="kd">::</span><span class="w"> </span><span class="n">StartTime</span><span class="w">    </span><span class="c">! set to the processor clock by *Start* procedure</span>
+<span class="w">        </span><span class="n">tSInt64</span><span class="w">     </span><span class="kd">::</span><span class="w"> </span><span class="n">TimePaused</span><span class="w">   </span><span class="c">! the elapsed time the clock paused</span>
+<span class="w">        </span><span class="n">tSInt64</span><span class="w">     </span><span class="kd">::</span><span class="w"> </span><span class="n">PauseTime</span><span class="w">    </span><span class="c">! set to the processor clock by *Pause* procedure</span>
+<span class="w">        </span><span class="n">tSInt64</span><span class="w">     </span><span class="kd">::</span><span class="w"> </span><span class="n">StopTime</span><span class="w">     </span><span class="c">! set to the processor clock by *Stop* procedure</span>
+<span class="w">        </span><span class="n">tSInt32</span><span class="w">     </span><span class="kd">::</span><span class="w"> </span><span class="n">State</span><span class="w">        </span><span class="c">! current state of the timer</span>
+<span class="w">    </span><span class="k">CONTAINS</span>
+<span class="w">        </span><span class="c">!&gt; **Type-Bound Subroutine**: Start &lt;br&gt;</span>
+<span class="w">        </span><span class="c">! **Purpose**:  To start (or reset) the timer &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Usage**: &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!   ---&gt;    CALL BenchTime%Start()</span>
+<span class="w">        </span><span class="k">PROCEDURE</span><span class="w">   </span><span class="kd">::</span><span class="w"> </span><span class="n">Start</span><span class="w">        </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">Timer_Start</span>
+<span class="w">        </span><span class="c">!&gt; **Type-Bound Subroutine**: Stop &lt;br&gt;</span>
+<span class="w">        </span><span class="c">! **Purpose**:  To stop the timer &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Usage**: &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!   ---&gt;    CALL BenchTime%Stop()</span>
+<span class="w">        </span><span class="k">PROCEDURE</span><span class="w">   </span><span class="kd">::</span><span class="w"> </span><span class="k">Stop</span><span class="w">         </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">Timer_Stop</span>
+<span class="w">        </span><span class="c">!&gt; **Type-Bound Subroutine**: Pause &lt;br&gt;</span>
+<span class="w">        </span><span class="c">! **Purpose**:  To pause the timer &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Usage**: &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!   ---&gt;    CALL BenchTime%Pause()</span>
+<span class="w">        </span><span class="k">PROCEDURE</span><span class="w">   </span><span class="kd">::</span><span class="w"> </span><span class="k">Pause</span><span class="w">        </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">Timer_Pause</span>
+<span class="w">        </span><span class="c">!&gt; **Type-Bound Subroutine**: Resume &lt;br&gt;</span>
+<span class="w">        </span><span class="c">! **Purpose**:  To resume the timer &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Usage**: &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!   ---&gt;    CALL BenchTime%Resume()</span>
+<span class="w">        </span><span class="k">PROCEDURE</span><span class="w">   </span><span class="kd">::</span><span class="w"> </span><span class="n">Resume</span><span class="w">       </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">Timer_Resume</span>
+<span class="w">        </span><span class="c">!&gt; **Type-Bound Subroutine**: ElapsedTime &lt;br&gt;</span>
+<span class="w">        </span><span class="c">! **Purpose**:  ! To get elapsed time of the timer &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Usage**: &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!   ---&gt;    CALL BenchTime%ElapsedTime()            ! default unit time (seconds) &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!   ---&gt;    CALL BenchTime%ElapsedTime(MILLI_SEC)   ! unit time in milliseconds &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!   ---&gt;    CALL BenchTime%ElapsedTime(MICRO_SEC)   ! unit time in microseconds</span>
+<span class="w">        </span><span class="k">PROCEDURE</span><span class="w">   </span><span class="kd">::</span><span class="w"> </span><span class="n">ElapsedTime</span><span class="w">  </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">Timer_ElapsedTime</span>
+<span class="w">    </span><span class="k">END TYPE </span><span class="n">Timer</span>
+</pre></div>
+
+    </section>
+    
+    </div>
+  </div>
+
+      <hr>
+    </div> <!-- /container -->
+    <footer>
+      <div class="container">
+        <div class="row justify-content-between">
+          <div class="col"><p>eXPerimental Fortran Library (XpfLib) Documentation was developed by Niranama<br>&copy; 2024 
+</p>
+          </div>
+          <div class="col">
+            <p class="text-end">
+              Documentation generated by
+              <a href="https://github.com/Fortran-FOSS-Programmers/ford">FORD</a>
+            </p>
+          </div>
+        </div>
+        <br>
+      </div> <!-- /container -->
+    </footer>
+
+    <!-- Bootstrap core JavaScript -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>    
+
+    <!-- MathJax JavaScript
+             ================================================== -->
+             <!-- Placed at the end of the document so the pages load faster -->
+        <script type="text/x-mathjax-config">
+          MathJax.Hub.Config({
+          TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } },
+          jax: ['input/TeX','input/MathML','output/HTML-CSS'],
+          extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']
+          });
+        </script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+          <script src="../tipuesearch/tipuesearch_content.js"></script>
+          <script src="../tipuesearch/tipuesearch_set.js"></script>
+          <script src="../tipuesearch/tipuesearch.js"></script>
+
+  </body>
+</html>

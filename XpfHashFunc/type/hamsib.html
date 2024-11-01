@@ -1,0 +1,1817 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta name="description" content="Experimental Fortran Package - Hash Functions">
+    <meta name="author" content="Niranama" >
+    <link rel="icon" href="../favicon.png">
+
+    <title>HamsiB &ndash; eXPerimental Fortran Library (XpfLib) Documentation </title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link href="../css/pygments.css" rel="stylesheet">
+    <link href="../css/font-awesome.min.css" rel="stylesheet">
+    <link href="../css/local.css" rel="stylesheet">
+      <link  href="../tipuesearch/tipuesearch.css" rel="stylesheet">
+
+    <script src="https://code.jquery.com/jquery-3.7.0.slim.min.js" integrity="sha256-tG5mcZUtJsZvyKAxYLVXrmjKBVLd6VpVccqz/r4ypFE=" crossorigin="anonymous"></script>
+  </head>
+
+  <body>
+
+    <!-- Fixed navbar -->
+    <div class="container-fluid mb-sm-4 mb-xl-2">
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container">
+          <a class="navbar-brand" href="../index.html">eXPerimental Fortran Library (XpfLib) Documentation </a>
+          <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar"
+                  aria-expanded="false" aria-controls="navbar" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon">
+          </button>
+
+          <div id="navbar" class="navbar-collapse collapse">
+            <ul class="navbar-nav">
+                  <li class="nav-item">
+                    <a class="nav-link" href="../lists/files.html">Source Files</a>
+                  </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../lists/modules.html">Modules</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../lists/procedures.html">Procedures</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../lists/absint.html">Abstract Interfaces</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../lists/types.html">Derived Types</a>
+                </li>
+            </ul>
+              <div class="d-flex align-items-end flex-grow-1">
+                <form action="../search.html" role="search" class="ms-auto">
+                  <input type="text" class="form-control" aria-label="Search" placeholder="Search" name="q" id="tipue_search_input" autocomplete="off" required>
+                </form>
+              </div>
+          </div><!--/.nav-collapse -->
+        </div>
+      </nav>
+    </div>
+
+    <div class="container">
+  <div class="row">
+    <h1>HamsiB
+      <small>Derived Type</small>
+      
+    </h1>
+      <div class="container p-2 mb-4 bg-light border rounded-3">
+    <div class="row align-items-center justify-content-between" id="info-bar">
+      <div class="col">
+        <ul class="list-inline" style="margin-bottom:0px;display:inline">
+
+            <li class="list-inline-item" id="statements"><i class="fa fa-list-ol"></i>
+              <a data-bs-toggle="tooltip"
+                 data-bs-placement="bottom" data-html="true"
+                 title="<p> 2.0% of total for derived types.</p>Including implementation: 186 statements,  1.2% of total for derived types.">23 statements</a>
+            </li>
+
+            <li class="list-inline-item" id="source-file">
+              <i class="fa fa-code"></i>
+              <a href="../src/MClass_HamsiB.f90"> Source File</a>
+            </li>
+        </ul>
+      </div>
+      <div class="col">
+        <nav aria-label="breadcrumb">
+          <ol class="breadcrumb justify-content-end mb-0">
+                <li class="breadcrumb-item"><a href='../sourcefile/mclass_hamsib.f90.html'>MClass_HamsiB.f90</a></li>
+                <li class="breadcrumb-item"><a href='../module/mclass_hamsib.html'>MClass_HamsiB</a></li>
+            <li class="breadcrumb-item active" aria-current="page">HamsiB</li>
+          </ol>
+        </nav>
+      </div>
+    </div>
+  </div>
+  <script>
+    $(function () {
+    $('[data-bs-toggle="tooltip"]').tooltip()
+    })
+  </script>
+
+  </div>
+  
+  <div class="row">
+    <div class="col-md-3 hidden-xs hidden-sm visible-md visible-lg">
+      <div id="sidebar">
+      <h3>Contents</h3>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+      <div class="card mb-4">
+      <a data-bs-toggle="collapse" href="#boundprocs-0"
+         aria-expanded="false" aria-controls="boundprocs-0">
+         <h4 class="card-header bg-primary text-white">Type-Bound Procedures</h4>
+      </a>
+      <div id="boundprocs-0" class="collapse">
+        <div class="list-group list-group-flush">
+            <a class="list-group-item" href="../type/hamsib.html#boundprocedure-update~3">Update</a>
+            <a class="list-group-item" href="../type/hamsib.html#boundprocedure-digest~2">Digest</a>
+            <a class="list-group-item" href="../type/hamsib.html#boundprocedure-initialize">Initialize</a>
+            <a class="list-group-item" href="../type/hamsib.html#boundprocedure-reset">Reset</a>
+            <a class="list-group-item" href="../type/hamsib.html#boundprocedure-getclone">GetClone</a>
+            <a class="list-group-item" href="../type/hamsib.html#boundprocedure-getname">GetName</a>
+            <a class="list-group-item" href="../type/hamsib.html#boundprocedure-insertbytes">InsertBytes</a>
+            <a class="list-group-item" href="../type/hamsib.html#boundprocedure-insertgen">InsertGen</a>
+            <a class="list-group-item" href="../type/hamsib.html#boundprocedure-bytedigest">ByteDigest</a>
+            <a class="list-group-item" href="../type/hamsib.html#boundprocedure-bytedigest_winput">ByteDigest_wInput</a>
+            <a class="list-group-item" href="../type/hamsib.html#boundprocedure-getdigestlen">GetDigestLen</a>
+            <a class="list-group-item" href="../type/hamsib.html#boundprocedure-create">Create</a>
+            <a class="list-group-item" href="../type/hamsib.html#boundprocedure-addbitsndigest">AddBitsNDigest</a>
+        </div>
+      </div>
+    </div>
+
+  
+  
+    <div class="card card-primary">
+      <div class="card-header text-left"><h3 class="card-title">Source Code</h3></div>
+      <div class="list-group">
+        <a class="list-group-item" href="../type/hamsib.html#src">HamsiB</a>
+      </div>
+    </div>
+
+
+  </div>
+
+    </div>
+    
+    <div class="col-md-9" id='text'>
+      <h2>type, public, extends(<a href='../type/basedigest.html'>BaseDigest</a>) :: HamsiB</h2>
+    <p><em>HamsiB</em> is a concrete <em>digest</em> type that implements an incremental
+ cryptographic hash function based on the Hamsi hash algorithms.</p>
+    <br>
+
+    
+
+
+      <section>
+        <h2>Type-Bound Procedures</h2>
+          <div class="row">
+              <div class="card mt-3">
+    <div class="card-header codesum">
+      <span class="anchor" id="boundprocedure-update~3"></span>
+      <h3>
+          generic, public ::
+  <strong>Update</strong> => <a href='../type/mdengine.html#boundprocedure-insertbytes~5'>InsertBytes</a>, <a href='../type/mdengine.html#boundprocedure-insertgen~5'>InsertGen</a>
+        
+      </h3>
+    </div>
+    <ul class="list-group">
+        <li class="list-group-item">
+                  <h3>
+    private  subroutine MDEngine_InsertBytes(MD, ByteArr, Offset, Length)  
+</h3>
+
+  <p>To insert input data as a byte (8-bit integer) array where offset (zero-based)
+ and length are specified.</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(<a href='../type/mdengine.html'>MDEngine</a>),
+            </td>
+<td>intent(inout)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>MD</strong></td>
+            <td>
+                <p>'MDEngine' object</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              integer(kind=kInt8),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>ByteArr</strong>(0:)</td>
+            <td>
+                <p>a byte array of input data</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              integer(kind=kInt32),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Offset</strong></td>
+            <td>
+                <p>the offset in input data</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              integer(kind=kInt32),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Length</strong></td>
+            <td>
+                <p>the length of input data in bytes</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+        </li>
+        <li class="list-group-item">
+                  <h3>
+    private  subroutine MDEngine_InsertGen(MD, Input, InpSize)  
+</h3>
+
+  <p>To insert input data in a generic way where the <em>Input</em> argument can be
+ any type and any rank and the <em>InpSize</em> argument specifies the size of
+ the input data in a number of bytes.</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(<a href='../type/mdengine.html'>MDEngine</a>),
+            </td>
+<td>intent(inout)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>MD</strong></td>
+            <td>
+                <p>'MDEngine' object</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              type(*),
+            </td>
+<td>intent(in),</td>
+              <td></td>            <td>
+              CONTIGUOUS
+            </td>
+            <td>::</td>
+            <td><strong>Input</strong>(..)</td>
+            <td>
+                <p>input data (any type and rank)</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              integer(kind=kInt32),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>InpSize</strong></td>
+            <td>
+                <p>size of the input (in bytes)</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+        </li>
+    </ul>
+  </div>
+
+          </div>
+          <div class="row">
+              <div class="card mt-3">
+    <div class="card-header codesum">
+      <span class="anchor" id="boundprocedure-digest~2"></span>
+      <h3>
+          generic, public ::
+  <strong>Digest</strong> => <a href='../type/mdengine.html#boundprocedure-bytedigest~5'>ByteDigest</a>, <a href='../type/mdengine.html#boundprocedure-bytedigest_winput~5'>ByteDigest_wInput</a>, HexDigest, HexDigest_wInput
+        
+      </h3>
+    </div>
+    <ul class="list-group">
+        <li class="list-group-item">
+                  <h3>
+    private  subroutine MDEngine_ByteDigest(MD, ByteArr)  
+</h3>
+
+  <p>To finalize the current hash computation and return the hash value
+ as an array of (8-bit integer) bytes in a newly-allocated array.
+ The digest object is reset. <br>
+ <strong>Important Note</strong>: The newly-allocated array has a zero-based index.</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(<a href='../type/mdengine.html'>MDEngine</a>),
+            </td>
+<td>intent(inout)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>MD</strong></td>
+            <td>
+                <p>'MDEngine' object</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              integer(kind=kInt8),
+            </td>
+<td>intent(out),</td>
+              <td></td>            <td>
+              ALLOCATABLE
+            </td>
+            <td>::</td>
+            <td><strong>ByteArr</strong>(:)</td>
+            <td>
+                <p>the hash output</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+        </li>
+        <li class="list-group-item">
+                  <h3>
+    private  subroutine MDEngine_ByteDigest_wInput(MD, Input, InpSize, ByteArr)  
+</h3>
+
+  <p>To insert final input in a generic way and then finalize the current hash
+ computation and return the hash value as an array of (8-bit integer) bytes
+ in a newly-allocated array.  The digest object is reset. <br>
+ <strong>Important Note</strong>: The newly-allocated array has a zero-based index.</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(<a href='../type/mdengine.html'>MDEngine</a>),
+            </td>
+<td>intent(inout)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>MD</strong></td>
+            <td>
+                <p>'MDEngine' object</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              type(*),
+            </td>
+<td>intent(in),</td>
+              <td></td>            <td>
+              CONTIGUOUS
+            </td>
+            <td>::</td>
+            <td><strong>Input</strong>(..)</td>
+            <td>
+                <p>input data (any type and rank)</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              integer(kind=kInt32),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>InpSize</strong></td>
+            <td>
+                <p>size of the input (in bytes)</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              integer(kind=kInt8),
+            </td>
+<td>intent(out),</td>
+              <td></td>            <td>
+              ALLOCATABLE
+            </td>
+            <td>::</td>
+            <td><strong>ByteArr</strong>(:)</td>
+            <td>
+                <p>the hash output</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+        </li>
+        <li class="list-group-item">
+                  <h3>
+    private  subroutine HexStr_Digest(MD, HexStr)  
+</h3>
+
+  <p>To finalize the current hash computation and return the hash value
+ as a hexadecimal string in a newly-allocated character string.</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(<a href='../type/basedigest.html'>BaseDigest</a>),
+            </td>
+<td>intent(inout)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>MD</strong></td>
+            <td>
+                <p>'BaseDigest' object</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              character(kind=kChar, len=:),
+            </td>
+<td>intent(out),</td>
+              <td></td>            <td>
+              ALLOCATABLE
+            </td>
+            <td>::</td>
+            <td><strong>HexStr</strong></td>
+            <td>
+                <p>the hash output</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+        </li>
+        <li class="list-group-item">
+                  <h3>
+    private  subroutine HexStr_Digest_wInput(MD, Input, InpSize, HexStr)  
+</h3>
+
+  <p>To insert final input in a generic way and then finalize the current hash computation
+ and return the hash value as a hexadecimal string in a newly-allocated character string.</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(<a href='../type/basedigest.html'>BaseDigest</a>),
+            </td>
+<td>intent(inout)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>MD</strong></td>
+            <td>
+                <p>'BaseDigest' object</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              type(*),
+            </td>
+<td>intent(in),</td>
+              <td></td>            <td>
+              CONTIGUOUS
+            </td>
+            <td>::</td>
+            <td><strong>Input</strong>(..)</td>
+            <td>
+                <p>input data (any type and rank)</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              integer(kind=kInt32),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>InpSize</strong></td>
+            <td>
+                <p>size of the input (in bytes)</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              character(kind=kChar, len=:),
+            </td>
+<td>intent(out),</td>
+              <td></td>            <td>
+              ALLOCATABLE
+            </td>
+            <td>::</td>
+            <td><strong>HexStr</strong></td>
+            <td>
+                <p>the hash output</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+        </li>
+    </ul>
+  </div>
+
+          </div>
+          <div class="row">
+              <div class="card mt-3">
+    <div class="card-header codesum">
+      <span class="anchor" id="boundprocedure-initialize"></span>
+      <h3>
+          procedure, public ::
+  <strong>Initialize</strong> => HamsiB_Initialize
+        
+      </h3>
+    </div>
+      <div class="card-body">
+        
+        <p>Use the <em>Create</em> method in place of the <em>Initialize</em> method to
+ initialize the <em>digest</em> object with default algorithm (HamsiB-512).</p>
+      </div>
+    <ul class="list-group">
+        <li class="list-group-item">
+                  <h3>
+    private  subroutine HamsiB_Initialize(MD)  
+</h3>
+
+  <p>To perform initialization of the digest object with default algorithm.</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(<a href='../type/hamsib.html'>HamsiB</a>),
+            </td>
+<td>intent(inout)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>MD</strong></td>
+            <td>
+                <p>'HamsiB' object</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+        </li>
+    </ul>
+  </div>
+
+          </div>
+          <div class="row">
+              <div class="card mt-3">
+    <div class="card-header codesum">
+      <span class="anchor" id="boundprocedure-reset"></span>
+      <h3>
+          procedure, public ::
+  <strong>Reset</strong> => HamsiB_Reset
+        
+      </h3>
+    </div>
+      <div class="card-body">
+        
+        <p><strong>Type-Bound Subroutine</strong>: Reset <br>
+ <strong>Purpose</strong>:  To reset the <em>digest</em> object to its initial state. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    CALL MD%Reset()</p>
+      </div>
+    <ul class="list-group">
+        <li class="list-group-item">
+                  <h3>
+    private  subroutine HamsiB_Reset(MD)  
+</h3>
+
+  <p>To reset the hash algorithm state.</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(<a href='../type/hamsib.html'>HamsiB</a>),
+            </td>
+<td>intent(inout)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>MD</strong></td>
+            <td>
+                <p>'HamsiB' object</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+        </li>
+    </ul>
+  </div>
+
+          </div>
+          <div class="row">
+              <div class="card mt-3">
+    <div class="card-header codesum">
+      <span class="anchor" id="boundprocedure-getclone"></span>
+      <h3>
+          procedure, public ::
+  <strong>GetClone</strong> => HamsiB_GetClone
+        
+      </h3>
+    </div>
+      <div class="card-body">
+        
+        <p><strong>Type-Bound Subroutine</strong>: GetClone <br>
+ <strong>Purpose</strong>:  To clone the current state of the source object. The destination
+               object evolves independently of the source object. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    CALL SrcMD%GetClone(DstMD)</p>
+      </div>
+    <ul class="list-group">
+        <li class="list-group-item">
+                  <h3>
+    private  subroutine HamsiB_GetClone(Src, Dst)  
+</h3>
+
+  <p>To clone the current state of the source object.</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(<a href='../type/hamsib.html'>HamsiB</a>),
+            </td>
+<td>intent(inout)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Src</strong></td>
+            <td>
+                <p>a source object</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(<a href='../type/basedigest.html'>BaseDigest</a>),
+            </td>
+<td>intent(out),</td>
+              <td></td>            <td>
+              ALLOCATABLE
+            </td>
+            <td>::</td>
+            <td><strong>Dst</strong></td>
+            <td>
+                <p>a destination object</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+        </li>
+    </ul>
+  </div>
+
+          </div>
+          <div class="row">
+              <div class="card mt-3">
+    <div class="card-header codesum">
+      <span class="anchor" id="boundprocedure-getname"></span>
+      <h3>
+          procedure, public ::
+  <strong>GetName</strong> => HamsiB_GetName
+        
+      </h3>
+    </div>
+      <div class="card-body">
+        
+        <p><strong>Type-Bound Function</strong>: GetName <br>
+ <strong>Purpose</strong>:  To get the name of the <em>digest</em> object. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    Name = MD%GetName()</p>
+      </div>
+    <ul class="list-group">
+        <li class="list-group-item">
+                  <h3>
+    private  function HamsiB_GetName(MD) result(Name)  
+</h3>
+
+  <p>To return the algorithm name of the hash function.</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(<a href='../type/hamsib.html'>HamsiB</a>),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>MD</strong></td>
+            <td>
+                <p>'HamsiB' object</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+    <h4>
+    Return Value
+    <small>character(kind=kChar, len=:), ALLOCATABLE</small>
+    </h4>
+    <p>name of the hash function</p>
+
+        </li>
+    </ul>
+  </div>
+
+          </div>
+          <div class="row">
+              <div class="card mt-3">
+    <div class="card-header codesum">
+      <span class="anchor" id="boundprocedure-insertbytes"></span>
+      <h3>
+          procedure, public ::
+  <strong>InsertBytes</strong> => HamsiB_InsertBytes
+        
+      </h3>
+    </div>
+      <div class="card-body">
+        
+        <p>Use the <em>Update</em> method in place of the <em>InsertBytes</em> method to insert input
+ data as an array of bytes (8-bit integers) where the offset (zero-based) into
+ the array and the length of the input in bytes are specified.</p>
+      </div>
+    <ul class="list-group">
+        <li class="list-group-item">
+                  <h3>
+    private  subroutine HamsiB_InsertBytes(MD, ByteArr, Offset, Length)  
+</h3>
+
+  <p>To insert input data as a byte (8-bit integer) array where offset (zero-based)
+ and length are specified.</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(<a href='../type/hamsib.html'>HamsiB</a>),
+            </td>
+<td>intent(inout)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>MD</strong></td>
+            <td>
+                <p>'HamsiB' object</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              integer(kind=kInt8),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>ByteArr</strong>(0:)</td>
+            <td>
+                <p>a byte array of input data</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              integer(kind=kInt32),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Offset</strong></td>
+            <td>
+                <p>the offset in input data</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              integer(kind=kInt32),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Length</strong></td>
+            <td>
+                <p>the length of input data in bytes</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+        </li>
+    </ul>
+  </div>
+
+          </div>
+          <div class="row">
+              <div class="card mt-3">
+    <div class="card-header codesum">
+      <span class="anchor" id="boundprocedure-insertgen"></span>
+      <h3>
+          procedure, public ::
+  <strong>InsertGen</strong> => HamsiB_InsertGen
+        
+      </h3>
+    </div>
+      <div class="card-body">
+        
+        <p>Use the <em>Update</em> method in place of the <em>InsertGen</em> method to insert
+ input data in a generic way where the <em>Input</em> argument can be any type and
+ any rank and the <em>InpSize</em> argument specifies the size of input data in bytes.</p>
+      </div>
+    <ul class="list-group">
+        <li class="list-group-item">
+                  <h3>
+    private  subroutine HamsiB_InsertGen(MD, Input, InpSize)  
+</h3>
+
+  <p>To insert input data in a generic way where the <em>Input</em> argument can be
+ any type and any rank and the <em>InpSize</em> argument specifies the size of
+ the input data in a number of bytes.</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(<a href='../type/hamsib.html'>HamsiB</a>),
+            </td>
+<td>intent(inout)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>MD</strong></td>
+            <td>
+                <p>'HamsiB' object</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              type(*),
+            </td>
+<td>intent(in),</td>
+              <td></td>            <td>
+              CONTIGUOUS
+            </td>
+            <td>::</td>
+            <td><strong>Input</strong>(..)</td>
+            <td>
+                <p>input data (any type and rank)</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              integer(kind=kInt32),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>InpSize</strong></td>
+            <td>
+                <p>size of the input (in bytes)</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+        </li>
+    </ul>
+  </div>
+
+          </div>
+          <div class="row">
+              <div class="card mt-3">
+    <div class="card-header codesum">
+      <span class="anchor" id="boundprocedure-bytedigest"></span>
+      <h3>
+          procedure, public ::
+  <strong>ByteDigest</strong> => HamsiB_ByteDigest
+        
+      </h3>
+    </div>
+      <div class="card-body">
+        
+        <p>Use the <em>Digest</em> method in place of the <em>ByteDigest</em> method to finalize the
+ current hash computation and return the hash value as an array of bytes
+ in a newly-allocated array.</p>
+      </div>
+    <ul class="list-group">
+        <li class="list-group-item">
+                  <h3>
+    private  subroutine HamsiB_ByteDigest(MD, ByteArr)  
+</h3>
+
+  <p>To finalize the current hash computation and return the hash value
+ as an array of (8-bit integer) bytes in a newly-allocated array.
+ The digest object is reset. <br>
+ <strong>Important Note</strong>: The newly-allocated array has a zero-based index.</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(<a href='../type/hamsib.html'>HamsiB</a>),
+            </td>
+<td>intent(inout)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>MD</strong></td>
+            <td>
+                <p>'HamsiB' object</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              integer(kind=kInt8),
+            </td>
+<td>intent(out),</td>
+              <td></td>            <td>
+              ALLOCATABLE
+            </td>
+            <td>::</td>
+            <td><strong>ByteArr</strong>(:)</td>
+            <td>
+                <p>the hash output</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+        </li>
+    </ul>
+  </div>
+
+          </div>
+          <div class="row">
+              <div class="card mt-3">
+    <div class="card-header codesum">
+      <span class="anchor" id="boundprocedure-bytedigest_winput"></span>
+      <h3>
+          procedure, public ::
+  <strong>ByteDigest_wInput</strong> => HamsiB_ByteDigest_wInput
+        
+      </h3>
+    </div>
+      <div class="card-body">
+        
+        <p>Use the <em>Digest</em> method in place of the <em>ByteDigest_wInput</em> method to insert final
+ input in a generic way and then finalize the current hash computation and return
+ the hash value as an array of bytes in a newly-allocated array.</p>
+      </div>
+    <ul class="list-group">
+        <li class="list-group-item">
+                  <h3>
+    private  subroutine HamsiB_ByteDigest_wInput(MD, Input, InpSize, ByteArr)  
+</h3>
+
+  <p>To insert final input in a generic way and then finalize the current hash
+ computation and return the hash value as an array of (8-bit integer) bytes
+ in a newly-allocated array.  The digest object is reset. <br>
+ <strong>Important Note</strong>: The newly-allocated array has a zero-based index.</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(<a href='../type/hamsib.html'>HamsiB</a>),
+            </td>
+<td>intent(inout)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>MD</strong></td>
+            <td>
+                <p>'HamsiB' object</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              type(*),
+            </td>
+<td>intent(in),</td>
+              <td></td>            <td>
+              CONTIGUOUS
+            </td>
+            <td>::</td>
+            <td><strong>Input</strong>(..)</td>
+            <td>
+                <p>input data (any type and rank)</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              integer(kind=kInt32),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>InpSize</strong></td>
+            <td>
+                <p>size of the input (in bytes)</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              integer(kind=kInt8),
+            </td>
+<td>intent(out),</td>
+              <td></td>            <td>
+              ALLOCATABLE
+            </td>
+            <td>::</td>
+            <td><strong>ByteArr</strong>(:)</td>
+            <td>
+                <p>the hash output</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+        </li>
+    </ul>
+  </div>
+
+          </div>
+          <div class="row">
+              <div class="card mt-3">
+    <div class="card-header codesum">
+      <span class="anchor" id="boundprocedure-getdigestlen"></span>
+      <h3>
+          procedure, public ::
+  <strong>GetDigestLen</strong> => HamsiB_GetDigestLen
+        
+      </h3>
+    </div>
+      <div class="card-body">
+        
+        <p><strong>Type-Bound Function</strong>: GetDigestLen <br>
+ <strong>Purpose</strong>:  To return the natural hash function output length (in bytes). <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    Length = MD%GetDigestLen()</p>
+      </div>
+    <ul class="list-group">
+        <li class="list-group-item">
+                  <h3>
+    private  function HamsiB_GetDigestLen(MD) result(Length)  
+</h3>
+
+  <p>To get the natural hash function output length (in bytes).</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(<a href='../type/hamsib.html'>HamsiB</a>),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>MD</strong></td>
+            <td>
+                <p>'HamsiB' object</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+    <h4>
+    Return Value
+    <small>integer(kind=kInt32)</small>
+    </h4>
+    <p>the digest length</p>
+
+        </li>
+    </ul>
+  </div>
+
+          </div>
+          <div class="row">
+              <div class="card mt-3">
+    <div class="card-header codesum">
+      <span class="anchor" id="boundprocedure-create"></span>
+      <h3>
+          generic, public ::
+  <strong>Create</strong> => <a href='../type/hamsib.html#boundprocedure-initialize'>Initialize</a>, InitializeWFlag
+        
+      </h3>
+    </div>
+      <div class="card-body">
+        
+        <p><strong>Type-Bound Subroutine</strong>: Create <br>
+ <strong>Purpose</strong>:  To perform any essential initialization of the <em>digest</em> object. <br>
+ <strong>Usage</strong>: <br>
+  ! initialize the object to employ the default (Hamsi-512) algorithm <br>
+  ---&gt;    CALL MD%Create() <br>
+  ! initialize the object to employ the Hamsi-384 algorithm <br>
+  ---&gt;    CALL MD%Create(IsHamsi384=.TRUE.) <br></p>
+      </div>
+    <ul class="list-group">
+        <li class="list-group-item">
+                  <h3>
+    private  subroutine HamsiB_Initialize(MD)  
+</h3>
+
+  <p>To perform initialization of the digest object with default algorithm.</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(<a href='../type/hamsib.html'>HamsiB</a>),
+            </td>
+<td>intent(inout)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>MD</strong></td>
+            <td>
+                <p>'HamsiB' object</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+        </li>
+        <li class="list-group-item">
+                  <h3>
+    private  subroutine HamsiB_Initialize_wFlag(MD, IsHamsi384)  
+</h3>
+
+  <p>To perform initialization of the digest object with the specified flag.</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(<a href='../type/hamsib.html'>HamsiB</a>),
+            </td>
+<td>intent(inout)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>MD</strong></td>
+            <td>
+                <p>'HamsiB' object</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              logical,
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>IsHamsi384</strong></td>
+            <td>
+                <p>flag indicating whether the Hamsi-384 algorithm is employed or not. <br>
+ - If true, use the Hamsi-384 algorithm. <br>
+ - Otherwise, use the Hamsi-512 algorithm. <br></p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+        </li>
+    </ul>
+  </div>
+
+          </div>
+          <div class="row">
+              <div class="card mt-3">
+    <div class="card-header codesum">
+      <span class="anchor" id="boundprocedure-addbitsndigest"></span>
+      <h3>
+          generic, public ::
+  <strong>AddBitsNDigest</strong> => HamsiB_ByteDigest_AddBits, HamsiB_HexDigest_AddBits
+        
+      </h3>
+    </div>
+      <div class="card-body">
+        
+        <p><strong>Type-Bound Subroutine</strong>: AddBitsNDigest <br>
+ <strong>Purpose</strong>:  To add the last byte and then finalize the current hash computation
+               and return the hash output. The object is reset. <br>
+ <strong>Usage</strong>: <br>
+  ! insert final input and return hash output as a byte array <br>
+  ---&gt;    CALL MD%AddBitsNDigest(Input, InpSize, ByteArr) <br>
+  ! insert final input and return hash output as a hexadecimal string <br>
+  ---&gt;    CALL MD%AddBitsNDigest(Input, InpSize, HexStr) <br>
+ <strong>Note</strong>: <br>
+ This method is only used for an input message whose bit length is not
+ a multiple of eight (i.e. a message with partial bytes). <br>
+ The method is intended to be used by a digest type that implements a hash function
+ that is an entrant of the SHA-3 competition.  It is mainly used for a test purpose.</p>
+      </div>
+    <ul class="list-group">
+        <li class="list-group-item">
+                  <h3>
+    private  subroutine HamsiB_ByteDigest_AddBits(MD, LastByte, NBits, ByteArr)  
+</h3>
+
+  <p>To add the last byte and then finalize the current hash computation
+ and return the hash output as a byte array. <br>
+ This routine is only used for an input message whose bit length is not
+ a multiple of eight (i.e. a message with partial bytes). <br>
+ This procedure is intended to be used by a digest type that implements
+ a hash function that is an entrant of the SHA-3 competition.  It is mainly
+ used for a test purpose.</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(<a href='../type/hamsib.html'>HamsiB</a>),
+            </td>
+<td>intent(inout)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>MD</strong></td>
+            <td>
+                <p>'HamsiB' object</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              integer(kind=kInt8),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>LastByte</strong></td>
+            <td>
+                <p>the last byte</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              integer(kind=kInt8),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>NBits</strong></td>
+            <td>
+                <p>number of bits in the last byte</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              integer(kind=kInt8),
+            </td>
+<td>intent(out),</td>
+              <td></td>            <td>
+              ALLOCATABLE
+            </td>
+            <td>::</td>
+            <td><strong>ByteArr</strong>(:)</td>
+            <td>
+                <p>the hash output</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+        </li>
+        <li class="list-group-item">
+                  <h3>
+    private  subroutine HamsiB_HexDigest_AddBits(MD, LastByte, NBits, HexStr)  
+</h3>
+
+  <p>To add the last byte and then finalize the current hash computation
+ and return the hash output as a hexadecimal string. <br>
+ This routine is only used for an input message whose bit length is not
+ a multiple of eight (i.e. a message with partial bytes). <br>
+ This procedure is intended to be used by a digest type that implements
+ a hash function that is an entrant of the SHA-3 competition.  It is mainly
+ used for a test purpose.</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(<a href='../type/hamsib.html'>HamsiB</a>),
+            </td>
+<td>intent(inout)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>MD</strong></td>
+            <td>
+                <p>'HamsiB' object</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              integer(kind=kInt8),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>LastByte</strong></td>
+            <td>
+                <p>the last byte</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              integer(kind=kInt8),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>NBits</strong></td>
+            <td>
+                <p>number of bits in the last byte</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              character(kind=kChar, len=:),
+            </td>
+<td>intent(out),</td>
+              <td></td>            <td>
+              ALLOCATABLE
+            </td>
+            <td>::</td>
+            <td><strong>HexStr</strong></td>
+            <td>
+                <p>the hash output</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+        </li>
+    </ul>
+  </div>
+
+          </div>
+      </section>
+
+    <section>
+    <h3><span class="anchor" id="src"></span>Source Code</h3>
+    <div class="hl codehilite"><pre><span></span><span class="w">    </span><span class="k">TYPE</span><span class="p">,</span><span class="w"> </span><span class="k">EXTENDS</span><span class="p">(</span><span class="n">BaseDigest</span><span class="p">)</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">HamsiB</span>
+<span class="w">        </span><span class="k">PRIVATE</span>
+<span class="w">        </span><span class="c">!% state</span>
+<span class="w">        </span><span class="n">tInteger</span><span class="w">    </span><span class="kd">::</span><span class="w"> </span><span class="n">State</span><span class="p">(</span><span class="mi">0</span><span class="p">:</span><span class="mi">15</span><span class="p">)</span><span class="w">  </span><span class="o">=</span><span class="w"> </span><span class="n">IV512</span><span class="p">(</span><span class="mi">0</span><span class="p">:</span><span class="mi">15</span><span class="p">)</span>
+<span class="w">        </span><span class="c">!% buffer</span>
+<span class="w">        </span><span class="n">tByte</span><span class="w">       </span><span class="kd">::</span><span class="w"> </span><span class="n">Partial</span><span class="p">(</span><span class="mi">0</span><span class="p">:</span><span class="mi">7</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0_kInt8</span>
+<span class="w">        </span><span class="c">!% number of bytes used in the buffer</span>
+<span class="w">        </span><span class="n">tIndex</span><span class="w">      </span><span class="kd">::</span><span class="w"> </span><span class="n">PartialLen</span><span class="w">   </span><span class="o">=</span><span class="w"> </span><span class="mi">0_kIndex</span>
+<span class="w">        </span><span class="c">!% bit count</span>
+<span class="w">        </span><span class="n">tLong</span><span class="w">       </span><span class="kd">::</span><span class="w"> </span><span class="n">BitCount</span><span class="w">     </span><span class="o">=</span><span class="w"> </span><span class="mi">0_kInt64</span>
+<span class="w">        </span><span class="c">!% flag indicating whether the Hamsi-384 algorithm is employed or not.</span>
+<span class="w">        </span><span class="n">tLogical</span><span class="w">    </span><span class="kd">::</span><span class="w"> </span><span class="n">IsHamsi384</span><span class="w">   </span><span class="o">=</span><span class="w"> </span><span class="n">FalseVal</span>
+<span class="w">    </span><span class="k">CONTAINS</span>
+<span class="w">        </span><span class="c">! ---------------------------------------------------------------------</span>
+<span class="w">        </span><span class="c">! -----                     Private Procedures                    -----</span>
+<span class="w">        </span><span class="c">! ---------------------------------------------------------------------</span>
+<span class="w">        </span><span class="k">PROCEDURE</span><span class="p">,</span><span class="w"> </span><span class="k">PRIVATE</span><span class="w">  </span><span class="kd">::</span><span class="w"> </span><span class="n">HamsiB_ByteDigest_AddBits</span>
+<span class="w">        </span><span class="k">PROCEDURE</span><span class="p">,</span><span class="w"> </span><span class="k">PRIVATE</span><span class="w">  </span><span class="kd">::</span><span class="w"> </span><span class="n">HamsiB_HexDigest_AddBits</span>
+<span class="w">        </span><span class="c">!&gt; Use the *Create* method in place of the *InitializeWFlag* method to</span>
+<span class="w">        </span><span class="c">!  initialize the *digest* object with specified flag.</span>
+<span class="w">        </span><span class="k">PROCEDURE</span><span class="p">,</span><span class="w"> </span><span class="k">PRIVATE</span><span class="w">  </span><span class="kd">::</span><span class="w"> </span><span class="n">InitializeWFlag</span><span class="w">  </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">HamsiB_Initialize_wFlag</span>
+<span class="w">        </span><span class="c">! ---------------------------------------------------------------------</span>
+<span class="w">        </span><span class="c">! -----                     Public Procedures                     -----</span>
+<span class="w">        </span><span class="c">! ---------------------------------------------------------------------</span>
+<span class="w">        </span><span class="c">!&gt; Use the *Create* method in place of the *Initialize* method to</span>
+<span class="w">        </span><span class="c">!  initialize the *digest* object with default algorithm (HamsiB-512).</span>
+<span class="w">        </span><span class="k">PROCEDURE</span><span class="w">       </span><span class="kd">::</span><span class="w"> </span><span class="n">Initialize</span><span class="w">           </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">HamsiB_Initialize</span>
+<span class="w">        </span><span class="c">!&gt; **Type-Bound Subroutine**: Reset &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Purpose**:  To reset the *digest* object to its initial state. &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Usage**: &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!   ---&gt;    CALL MD%Reset()</span>
+<span class="w">        </span><span class="k">PROCEDURE</span><span class="w">       </span><span class="kd">::</span><span class="w"> </span><span class="n">Reset</span><span class="w">                </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">HamsiB_Reset</span>
+<span class="w">        </span><span class="c">!&gt; **Type-Bound Subroutine**: GetClone &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Purpose**:  To clone the current state of the source object. The destination</span>
+<span class="w">        </span><span class="c">!                object evolves independently of the source object. &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Usage**: &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!   ---&gt;    CALL SrcMD%GetClone(DstMD)</span>
+<span class="w">        </span><span class="k">PROCEDURE</span><span class="w">       </span><span class="kd">::</span><span class="w"> </span><span class="n">GetClone</span><span class="w">             </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">HamsiB_GetClone</span>
+<span class="w">        </span><span class="c">!&gt; **Type-Bound Function**: GetName &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Purpose**:  To get the name of the *digest* object. &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Usage**: &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!   ---&gt;    Name = MD%GetName()</span>
+<span class="w">        </span><span class="k">PROCEDURE</span><span class="w">       </span><span class="kd">::</span><span class="w"> </span><span class="n">GetName</span><span class="w">              </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">HamsiB_GetName</span>
+<span class="w">        </span><span class="c">!&gt; Use the *Update* method in place of the *InsertBytes* method to insert input</span>
+<span class="w">        </span><span class="c">!  data as an array of bytes (8-bit integers) where the offset (zero-based) into</span>
+<span class="w">        </span><span class="c">!  the array and the length of the input in bytes are specified.</span>
+<span class="w">        </span><span class="k">PROCEDURE</span><span class="w">       </span><span class="kd">::</span><span class="w"> </span><span class="n">InsertBytes</span><span class="w">          </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">HamsiB_InsertBytes</span>
+<span class="w">        </span><span class="c">!&gt; Use the *Update* method in place of the *InsertGen* method to insert</span>
+<span class="w">        </span><span class="c">!  input data in a generic way where the *Input* argument can be any type and</span>
+<span class="w">        </span><span class="c">!  any rank and the *InpSize* argument specifies the size of input data in bytes.</span>
+<span class="w">        </span><span class="k">PROCEDURE</span><span class="w">       </span><span class="kd">::</span><span class="w"> </span><span class="n">InsertGen</span><span class="w">            </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">HamsiB_InsertGen</span>
+<span class="w">        </span><span class="c">!&gt; Use the *Digest* method in place of the *ByteDigest* method to finalize the</span>
+<span class="w">        </span><span class="c">!  current hash computation and return the hash value as an array of bytes</span>
+<span class="w">        </span><span class="c">!  in a newly-allocated array.</span>
+<span class="w">        </span><span class="k">PROCEDURE</span><span class="w">       </span><span class="kd">::</span><span class="w"> </span><span class="n">ByteDigest</span><span class="w">           </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">HamsiB_ByteDigest</span>
+<span class="w">        </span><span class="c">!&gt; Use the *Digest* method in place of the *ByteDigest_wInput* method to insert final</span>
+<span class="w">        </span><span class="c">!  input in a generic way and then finalize the current hash computation and return</span>
+<span class="w">        </span><span class="c">!  the hash value as an array of bytes in a newly-allocated array.</span>
+<span class="w">        </span><span class="k">PROCEDURE</span><span class="w">       </span><span class="kd">::</span><span class="w"> </span><span class="n">ByteDigest_wInput</span><span class="w">    </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">HamsiB_ByteDigest_wInput</span>
+<span class="w">        </span><span class="c">! ---------------------------------------------------------------------</span>
+<span class="w">        </span><span class="c">! -----                     Public Procedures                     -----</span>
+<span class="w">        </span><span class="c">! ---------------------------------------------------------------------</span>
+<span class="w">        </span><span class="c">!&gt; **Type-Bound Function**: GetDigestLen &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Purpose**:  To return the natural hash function output length (in bytes). &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Usage**: &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!   ---&gt;    Length = MD%GetDigestLen()</span>
+<span class="w">        </span><span class="k">PROCEDURE</span><span class="w">       </span><span class="kd">::</span><span class="w"> </span><span class="n">GetDigestLen</span><span class="w">         </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">HamsiB_GetDigestLen</span>
+<span class="w">        </span><span class="c">! ---------------------------------------------------------------------</span>
+<span class="w">        </span><span class="c">! -----                     Generic Interfaces                    -----</span>
+<span class="w">        </span><span class="c">! ---------------------------------------------------------------------</span>
+<span class="w">        </span><span class="c">!&gt; **Type-Bound Subroutine**: Create &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Purpose**:  To perform any essential initialization of the *digest* object. &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Usage**: &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!   ! initialize the object to employ the default (Hamsi-512) algorithm &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!   ---&gt;    CALL MD%Create() &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!   ! initialize the object to employ the Hamsi-384 algorithm &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!   ---&gt;    CALL MD%Create(IsHamsi384=.TRUE.) &lt;br&gt;</span>
+<span class="w">        </span><span class="k">GENERIC</span><span class="w">         </span><span class="kd">::</span><span class="w"> </span><span class="n">Create</span><span class="w">       </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">InitializeWFlag</span>
+<span class="w">        </span><span class="c">!&gt; **Type-Bound Subroutine**: AddBitsNDigest &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Purpose**:  To add the last byte and then finalize the current hash computation</span>
+<span class="w">        </span><span class="c">!                and return the hash output. The object is reset. &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Usage**: &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!   ! insert final input and return hash output as a byte array &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!   ---&gt;    CALL MD%AddBitsNDigest(Input, InpSize, ByteArr) &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!   ! insert final input and return hash output as a hexadecimal string &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!   ---&gt;    CALL MD%AddBitsNDigest(Input, InpSize, HexStr) &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Note**: &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  This method is only used for an input message whose bit length is not</span>
+<span class="w">        </span><span class="c">!  a multiple of eight (i.e. a message with partial bytes). &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  The method is intended to be used by a digest type that implements a hash function</span>
+<span class="w">        </span><span class="c">!  that is an entrant of the SHA-3 competition.  It is mainly used for a test purpose.</span>
+<span class="w">        </span><span class="k">GENERIC</span><span class="w">     </span><span class="kd">::</span><span class="w"> </span><span class="n">AddBitsNDigest</span><span class="w">           </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">HamsiB_ByteDigest_AddBits</span><span class="p">,</span><span class="w"> </span><span class="p">&amp;</span>
+<span class="w">                                                   </span><span class="n">HamsiB_HexDigest_AddBits</span>
+<span class="w">        </span><span class="c">! ---------------------------------------------------------------------</span>
+<span class="w">    </span><span class="k">END TYPE </span><span class="n">HamsiB</span>
+</pre></div>
+
+    </section>
+    
+    </div>
+  </div>
+
+      <hr>
+    </div> <!-- /container -->
+    <footer>
+      <div class="container">
+        <div class="row justify-content-between">
+          <div class="col"><p>eXPerimental Fortran Library (XpfLib) Documentation was developed by Niranama<br>&copy; 2024 
+</p>
+          </div>
+          <div class="col">
+            <p class="text-end">
+              Documentation generated by
+              <a href="https://github.com/Fortran-FOSS-Programmers/ford">FORD</a>
+            </p>
+          </div>
+        </div>
+        <br>
+      </div> <!-- /container -->
+    </footer>
+
+    <!-- Bootstrap core JavaScript -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>    
+
+    <!-- MathJax JavaScript
+             ================================================== -->
+             <!-- Placed at the end of the document so the pages load faster -->
+        <script type="text/x-mathjax-config">
+          MathJax.Hub.Config({
+          TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } },
+          jax: ['input/TeX','input/MathML','output/HTML-CSS'],
+          extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']
+          });
+        </script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+          <script src="../tipuesearch/tipuesearch_content.js"></script>
+          <script src="../tipuesearch/tipuesearch_set.js"></script>
+          <script src="../tipuesearch/tipuesearch.js"></script>
+
+  </body>
+</html>

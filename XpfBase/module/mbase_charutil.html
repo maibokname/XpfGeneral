@@ -1,0 +1,2183 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta name="description" content="Experimental Fortran Package - Base Modules and Classes">
+    <meta name="author" content="Niranama" >
+    <link rel="icon" href="../favicon.png">
+
+    <title>MBase_CharUtil &ndash; eXPerimental Fortran Library (XpfLib) Documentation</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link href="../css/pygments.css" rel="stylesheet">
+    <link href="../css/font-awesome.min.css" rel="stylesheet">
+    <link href="../css/local.css" rel="stylesheet">
+      <link  href="../tipuesearch/tipuesearch.css" rel="stylesheet">
+
+    <script src="https://code.jquery.com/jquery-3.7.0.slim.min.js" integrity="sha256-tG5mcZUtJsZvyKAxYLVXrmjKBVLd6VpVccqz/r4ypFE=" crossorigin="anonymous"></script>
+  </head>
+
+  <body>
+
+    <!-- Fixed navbar -->
+    <div class="container-fluid mb-sm-4 mb-xl-2">
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container">
+          <a class="navbar-brand" href="../index.html">eXPerimental Fortran Library (XpfLib) Documentation </a>
+          <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar"
+                  aria-expanded="false" aria-controls="navbar" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon">
+          </button>
+
+          <div id="navbar" class="navbar-collapse collapse">
+            <ul class="navbar-nav">
+                  <li class="nav-item">
+                    <a class="nav-link" href="../lists/files.html">Source Files</a>
+                  </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../lists/modules.html">Modules</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../lists/procedures.html">Procedures</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../lists/absint.html">Abstract Interfaces</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../lists/types.html">Derived Types</a>
+                </li>
+            </ul>
+              <div class="d-flex align-items-end flex-grow-1">
+                <form action="../search.html" role="search" class="ms-auto">
+                  <input type="text" class="form-control" aria-label="Search" placeholder="Search" name="q" id="tipue_search_input" autocomplete="off" required>
+                </form>
+              </div>
+          </div><!--/.nav-collapse -->
+        </div>
+      </nav>
+    </div>
+
+    <div class="container">
+  <div class="row">
+    <h1>MBase_CharUtil
+      <small>Module</small>
+      
+    </h1>
+      <div class="container p-2 mb-4 bg-light border rounded-3">
+    <div class="row align-items-center justify-content-between" id="info-bar">
+      <div class="col">
+        <ul class="list-inline" style="margin-bottom:0px;display:inline">
+
+            <li class="list-inline-item" id="statements"><i class="fa fa-list-ol"></i>
+              <a data-bs-toggle="tooltip"
+                 data-bs-placement="bottom" data-html="true"
+                 title=" 0.5% of total for modules and submodules.">234 statements</a>
+            </li>
+
+            <li class="list-inline-item" id="source-file">
+              <i class="fa fa-code"></i>
+              <a href="../src/MBase_CharUtil.f90"> Source File</a>
+            </li>
+        </ul>
+      </div>
+      <div class="col">
+        <nav aria-label="breadcrumb">
+          <ol class="breadcrumb justify-content-end mb-0">
+                <li class="breadcrumb-item"><a href='../sourcefile/mbase_charutil.f90.html'>MBase_CharUtil.f90</a></li>
+            <li class="breadcrumb-item active" aria-current="page">MBase_CharUtil</li>
+          </ol>
+        </nav>
+      </div>
+    </div>
+  </div>
+  <script>
+    $(function () {
+    $('[data-bs-toggle="tooltip"]').tooltip()
+    })
+  </script>
+
+  </div>
+
+  <div class="row">
+    <div class="col-md-3">
+        <div id="sidebar">
+      <h3>Contents</h3>
+  
+      <div class="card mb-4">
+      <a data-bs-toggle="collapse" href="#vars-0"
+         aria-expanded="false" aria-controls="vars-0">
+         <h4 class="card-header bg-primary text-white">Variables</h4>
+      </a>
+      <div id="vars-0" class="collapse">
+        <div class="list-group list-group-flush">
+            <a class="list-group-item" href="../module/mbase_charutil.html#variable-chr_backspace">CHR_BACKSPACE</a>
+            <a class="list-group-item" href="../module/mbase_charutil.html#variable-chr_tab">CHR_TAB</a>
+            <a class="list-group-item" href="../module/mbase_charutil.html#variable-chr_newline">CHR_NEWLINE</a>
+            <a class="list-group-item" href="../module/mbase_charutil.html#variable-chr_vertical_tab">CHR_VERTICAL_TAB</a>
+            <a class="list-group-item" href="../module/mbase_charutil.html#variable-chr_form_feed">CHR_FORM_FEED</a>
+            <a class="list-group-item" href="../module/mbase_charutil.html#variable-chr_carriage_return">CHR_CARRIAGE_RETURN</a>
+            <a class="list-group-item" href="../module/mbase_charutil.html#variable-chr_space">CHR_SPACE</a>
+            <a class="list-group-item" href="../module/mbase_charutil.html#variable-chr_doublequote">CHR_DOUBLEQUOTE</a>
+            <a class="list-group-item" href="../module/mbase_charutil.html#variable-chr_apostrophe">CHR_APOSTROPHE</a>
+            <a class="list-group-item" href="../module/mbase_charutil.html#variable-chr_backslash">CHR_BACKSLASH</a>
+            <a class="list-group-item" href="../module/mbase_charutil.html#variable-chr_underscore">CHR_UNDERSCORE</a>
+            <a class="list-group-item" href="../module/mbase_charutil.html#variable-chr_exclamation_mark">CHR_EXCLAMATION_MARK</a>
+            <a class="list-group-item" href="../module/mbase_charutil.html#variable-chr_period">CHR_PERIOD</a>
+            <a class="list-group-item" href="../module/mbase_charutil.html#variable-chr_comma">CHR_COMMA</a>
+            <a class="list-group-item" href="../module/mbase_charutil.html#variable-chr_semicolon">CHR_SEMICOLON</a>
+            <a class="list-group-item" href="../module/mbase_charutil.html#variable-chr_colon">CHR_COLON</a>
+            <a class="list-group-item" href="../module/mbase_charutil.html#variable-chr_bracket_left">CHR_BRACKET_LEFT</a>
+            <a class="list-group-item" href="../module/mbase_charutil.html#variable-chr_bracket_right">CHR_BRACKET_RIGHT</a>
+            <a class="list-group-item" href="../module/mbase_charutil.html#variable-chr_parentheses_left">CHR_PARENTHESES_LEFT</a>
+            <a class="list-group-item" href="../module/mbase_charutil.html#variable-chr_parentheses_right">CHR_PARENTHESES_RIGHT</a>
+            <a class="list-group-item" href="../module/mbase_charutil.html#variable-chr_brace_left">CHR_BRACE_LEFT</a>
+            <a class="list-group-item" href="../module/mbase_charutil.html#variable-chr_brace_right">CHR_BRACE_RIGHT</a>
+            <a class="list-group-item" href="../module/mbase_charutil.html#variable-chr_slash">CHR_SLASH</a>
+            <a class="list-group-item" href="../module/mbase_charutil.html#variable-chr_caret">CHR_CARET</a>
+            <a class="list-group-item" href="../module/mbase_charutil.html#variable-chr_grave_accent">CHR_GRAVE_ACCENT</a>
+            <a class="list-group-item" href="../module/mbase_charutil.html#variable-chr_at_sign">CHR_AT_SIGN</a>
+            <a class="list-group-item" href="../module/mbase_charutil.html#variable-chr_question_mark">CHR_QUESTION_MARK</a>
+            <a class="list-group-item" href="../module/mbase_charutil.html#variable-chr_dollar_sign">CHR_DOLLAR_SIGN</a>
+            <a class="list-group-item" href="../module/mbase_charutil.html#variable-chr_vertical_bar">CHR_VERTICAL_BAR</a>
+            <a class="list-group-item" href="../module/mbase_charutil.html#variable-chr_asterisk">CHR_ASTERISK</a>
+            <a class="list-group-item" href="../module/mbase_charutil.html#variable-chr_plus_sign">CHR_PLUS_SIGN</a>
+            <a class="list-group-item" href="../module/mbase_charutil.html#variable-chr_minus_sign">CHR_MINUS_SIGN</a>
+            <a class="list-group-item" href="../module/mbase_charutil.html#variable-set_digits">SET_DIGITS</a>
+            <a class="list-group-item" href="../module/mbase_charutil.html#variable-set_alphabets_lower">SET_ALPHABETS_LOWER</a>
+            <a class="list-group-item" href="../module/mbase_charutil.html#variable-set_alphabets_upper">SET_ALPHABETS_UPPER</a>
+            <a class="list-group-item" href="../module/mbase_charutil.html#variable-set_alphabets">SET_ALPHABETS</a>
+            <a class="list-group-item" href="../module/mbase_charutil.html#variable-set_alphanum">SET_ALPHANUM</a>
+            <a class="list-group-item" href="../module/mbase_charutil.html#variable-set_blanks">SET_BLANKS</a>
+            <a class="list-group-item" href="../module/mbase_charutil.html#variable-set_whitespaces">SET_WHITESPACES</a>
+            <a class="list-group-item" href="../module/mbase_charutil.html#variable-set_hexdigits">SET_HEXDIGITS</a>
+            <a class="list-group-item" href="../module/mbase_charutil.html#variable-set_octdigits">SET_OCTDIGITS</a>
+            <a class="list-group-item" href="../module/mbase_charutil.html#variable-set_logical">SET_LOGICAL</a>
+            <a class="list-group-item" href="../module/mbase_charutil.html#variable-set_punctuations">SET_PUNCTUATIONS</a>
+            <a class="list-group-item" href="../module/mbase_charutil.html#variable-set_signs">SET_SIGNS</a>
+            <a class="list-group-item" href="../module/mbase_charutil.html#variable-set_exponents">SET_EXPONENTS</a>
+            <a class="list-group-item" href="../module/mbase_charutil.html#variable-set_integers">SET_INTEGERS</a>
+            <a class="list-group-item" href="../module/mbase_charutil.html#variable-set_numerics">SET_NUMERICS</a>
+        </div>
+      </div>
+    </div>
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+      <div class="card mb-4">
+      <a data-bs-toggle="collapse" href="#funcs-0"
+         aria-expanded="false" aria-controls="funcs-0">
+         <h4 class="card-header bg-primary text-white">Functions</h4>
+      </a>
+      <div id="funcs-0" class="collapse">
+        <div class="list-group list-group-flush">
+            <a class="list-group-item" href="../module/mbase_charutil.html#proc-is_character_in_range">Is_Character_In_Range</a>
+            <a class="list-group-item" href="../module/mbase_charutil.html#proc-is_character_letter">Is_Character_Letter</a>
+            <a class="list-group-item" href="../module/mbase_charutil.html#proc-is_character_digit">Is_Character_Digit</a>
+            <a class="list-group-item" href="../module/mbase_charutil.html#proc-is_character_alphanum">Is_Character_AlphaNum</a>
+            <a class="list-group-item" href="../module/mbase_charutil.html#proc-is_character_ascii">Is_Character_ASCII</a>
+            <a class="list-group-item" href="../module/mbase_charutil.html#proc-is_character_blank">Is_Character_Blank</a>
+            <a class="list-group-item" href="../module/mbase_charutil.html#proc-is_character_control">Is_Character_Control</a>
+            <a class="list-group-item" href="../module/mbase_charutil.html#proc-is_character_graphical">Is_Character_Graphical</a>
+            <a class="list-group-item" href="../module/mbase_charutil.html#proc-is_character_logical">Is_Character_Logical</a>
+            <a class="list-group-item" href="../module/mbase_charutil.html#proc-is_character_printable">Is_Character_Printable</a>
+            <a class="list-group-item" href="../module/mbase_charutil.html#proc-is_character_lowercase_letter">Is_Character_Lowercase_Letter</a>
+            <a class="list-group-item" href="../module/mbase_charutil.html#proc-is_character_uppercase_letter">Is_Character_Uppercase_Letter</a>
+            <a class="list-group-item" href="../module/mbase_charutil.html#proc-is_character_whitespace">Is_Character_WhiteSpace</a>
+            <a class="list-group-item" href="../module/mbase_charutil.html#proc-is_character_sign">Is_Character_Sign</a>
+            <a class="list-group-item" href="../module/mbase_charutil.html#proc-is_character_period">Is_Character_Period</a>
+            <a class="list-group-item" href="../module/mbase_charutil.html#proc-is_character_exponent">Is_Character_Exponent</a>
+            <a class="list-group-item" href="../module/mbase_charutil.html#proc-is_character_hexdigit">Is_Character_HexDigit</a>
+            <a class="list-group-item" href="../module/mbase_charutil.html#proc-is_character_octdigit">Is_Character_OctDigit</a>
+            <a class="list-group-item" href="../module/mbase_charutil.html#proc-is_character_punctuation">Is_Character_Punctuation</a>
+            <a class="list-group-item" href="../module/mbase_charutil.html#proc-is_character_numeric">Is_Character_Numeric</a>
+            <a class="list-group-item" href="../module/mbase_charutil.html#proc-is_character_integer">Is_Character_Integer</a>
+            <a class="list-group-item" href="../module/mbase_charutil.html#proc-tolowercase">ToLowerCase</a>
+            <a class="list-group-item" href="../module/mbase_charutil.html#proc-touppercase">ToUpperCase</a>
+        </div>
+      </div>
+    </div>
+
+  
+  
+  
+  
+  
+  
+  
+  
+
+
+  </div>
+
+    </div>
+
+    <div class="col-md-9" id='text'>
+      <p><strong>PURPOSE OF THIS MODULE</strong>: <br>
+This module contains various utility routines and parameters relating to a character. <br></p>
+<br>          <div class="card mb-4">
+      <h3 class="card-header card-title bg-light">Uses</h3>
+      <div class="card-body">
+        <ul class="list-group list-group-flush">
+            <li class="list-group-item">
+              <ul class="list-inline">
+                  <li class="list-inline-item"><a href='../module/mbase_common.html'>MBase_Common</a></li>
+              </ul>
+            </li>
+        </ul>
+      </div>
+    </div>
+
+      
+      <br>
+
+
+        <section>
+          <h2>Variables</h2>
+            <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Visibility</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+<th></th><th scope="col">Initial</th>        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-chr_backspace"></span>
+              character(kind=kChar, len=*),
+            </td>
+              <td>public,</td>
+            <td>
+parameter               
+            </td>
+            <td>::</td>
+            <td><strong>CHR_BACKSPACE</strong></td>
+<td> =</td>
+                <td>ACHAR(8)</td>
+            <td>
+                <p>back space character</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-chr_tab"></span>
+              character(kind=kChar, len=*),
+            </td>
+              <td>public,</td>
+            <td>
+parameter               
+            </td>
+            <td>::</td>
+            <td><strong>CHR_TAB</strong></td>
+<td> =</td>
+                <td>ACHAR(9)</td>
+            <td>
+                <p>horizontal tab character</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-chr_newline"></span>
+              character(kind=kChar, len=*),
+            </td>
+              <td>public,</td>
+            <td>
+parameter               
+            </td>
+            <td>::</td>
+            <td><strong>CHR_NEWLINE</strong></td>
+<td> =</td>
+                <td>ACHAR(10)</td>
+            <td>
+                <p>new line character</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-chr_vertical_tab"></span>
+              character(kind=kChar, len=*),
+            </td>
+              <td>public,</td>
+            <td>
+parameter               
+            </td>
+            <td>::</td>
+            <td><strong>CHR_VERTICAL_TAB</strong></td>
+<td> =</td>
+                <td>ACHAR(11)</td>
+            <td>
+                <p>vertical tab character</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-chr_form_feed"></span>
+              character(kind=kChar, len=*),
+            </td>
+              <td>public,</td>
+            <td>
+parameter               
+            </td>
+            <td>::</td>
+            <td><strong>CHR_FORM_FEED</strong></td>
+<td> =</td>
+                <td>ACHAR(12)</td>
+            <td>
+                <p>form feed character</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-chr_carriage_return"></span>
+              character(kind=kChar, len=*),
+            </td>
+              <td>public,</td>
+            <td>
+parameter               
+            </td>
+            <td>::</td>
+            <td><strong>CHR_CARRIAGE_RETURN</strong></td>
+<td> =</td>
+                <td>ACHAR(13)</td>
+            <td>
+                <p>carriage return character</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-chr_space"></span>
+              character(kind=kChar, len=*),
+            </td>
+              <td>public,</td>
+            <td>
+parameter               
+            </td>
+            <td>::</td>
+            <td><strong>CHR_SPACE</strong></td>
+<td> =</td>
+                <td>ACHAR(32)</td>
+            <td>
+                <p>space character</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-chr_doublequote"></span>
+              character(kind=kChar, len=*),
+            </td>
+              <td>public,</td>
+            <td>
+parameter               
+            </td>
+            <td>::</td>
+            <td><strong>CHR_DOUBLEQUOTE</strong></td>
+<td> =</td>
+                <td>ACHAR(34)</td>
+            <td>
+                <p>double quote character</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-chr_apostrophe"></span>
+              character(kind=kChar, len=*),
+            </td>
+              <td>public,</td>
+            <td>
+parameter               
+            </td>
+            <td>::</td>
+            <td><strong>CHR_APOSTROPHE</strong></td>
+<td> =</td>
+                <td>ACHAR(39)</td>
+            <td>
+                <p>apostrophe character (single quotation mark)</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-chr_backslash"></span>
+              character(kind=kChar, len=*),
+            </td>
+              <td>public,</td>
+            <td>
+parameter               
+            </td>
+            <td>::</td>
+            <td><strong>CHR_BACKSLASH</strong></td>
+<td> =</td>
+                <td>ACHAR(92)</td>
+            <td>
+                <p>back slash character</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-chr_underscore"></span>
+              character(kind=kChar, len=*),
+            </td>
+              <td>public,</td>
+            <td>
+parameter               
+            </td>
+            <td>::</td>
+            <td><strong>CHR_UNDERSCORE</strong></td>
+<td> =</td>
+                <td>ACHAR(95)</td>
+            <td>
+                <p>underscore character</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-chr_exclamation_mark"></span>
+              character(kind=kChar, len=*),
+            </td>
+              <td>public,</td>
+            <td>
+parameter               
+            </td>
+            <td>::</td>
+            <td><strong>CHR_EXCLAMATION_MARK</strong></td>
+<td> =</td>
+                <td>&#39;!&#39;</td>
+            <td>
+                <p>exclamation mark character</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-chr_period"></span>
+              character(kind=kChar, len=*),
+            </td>
+              <td>public,</td>
+            <td>
+parameter               
+            </td>
+            <td>::</td>
+            <td><strong>CHR_PERIOD</strong></td>
+<td> =</td>
+                <td>&#39;.&#39;</td>
+            <td>
+                <p>period (dot) character</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-chr_comma"></span>
+              character(kind=kChar, len=*),
+            </td>
+              <td>public,</td>
+            <td>
+parameter               
+            </td>
+            <td>::</td>
+            <td><strong>CHR_COMMA</strong></td>
+<td> =</td>
+                <td>&#39;,&#39;</td>
+            <td>
+                <p>comma character</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-chr_semicolon"></span>
+              character(kind=kChar, len=*),
+            </td>
+              <td>public,</td>
+            <td>
+parameter               
+            </td>
+            <td>::</td>
+            <td><strong>CHR_SEMICOLON</strong></td>
+<td> =</td>
+                <td>&#39;;&#39;</td>
+            <td>
+                <p>semi-colon character</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-chr_colon"></span>
+              character(kind=kChar, len=*),
+            </td>
+              <td>public,</td>
+            <td>
+parameter               
+            </td>
+            <td>::</td>
+            <td><strong>CHR_COLON</strong></td>
+<td> =</td>
+                <td>&#39;:&#39;</td>
+            <td>
+                <p>colon character</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-chr_bracket_left"></span>
+              character(kind=kChar, len=*),
+            </td>
+              <td>public,</td>
+            <td>
+parameter               
+            </td>
+            <td>::</td>
+            <td><strong>CHR_BRACKET_LEFT</strong></td>
+<td> =</td>
+                <td>&#39;[&#39;</td>
+            <td>
+                <p>left bracket character</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-chr_bracket_right"></span>
+              character(kind=kChar, len=*),
+            </td>
+              <td>public,</td>
+            <td>
+parameter               
+            </td>
+            <td>::</td>
+            <td><strong>CHR_BRACKET_RIGHT</strong></td>
+<td> =</td>
+                <td>&#39;]&#39;</td>
+            <td>
+                <p>right bracket character</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-chr_parentheses_left"></span>
+              character(kind=kChar, len=*),
+            </td>
+              <td>public,</td>
+            <td>
+parameter               
+            </td>
+            <td>::</td>
+            <td><strong>CHR_PARENTHESES_LEFT</strong></td>
+<td> =</td>
+                <td>&#39;(&#39;</td>
+            <td>
+                <p>left parentheses character</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-chr_parentheses_right"></span>
+              character(kind=kChar, len=*),
+            </td>
+              <td>public,</td>
+            <td>
+parameter               
+            </td>
+            <td>::</td>
+            <td><strong>CHR_PARENTHESES_RIGHT</strong></td>
+<td> =</td>
+                <td>&#39;)&#39;</td>
+            <td>
+                <p>right parentheses character</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-chr_brace_left"></span>
+              character(kind=kChar, len=*),
+            </td>
+              <td>public,</td>
+            <td>
+parameter               
+            </td>
+            <td>::</td>
+            <td><strong>CHR_BRACE_LEFT</strong></td>
+<td> =</td>
+                <td>&#39;{&#39;</td>
+            <td>
+                <p>left brace character</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-chr_brace_right"></span>
+              character(kind=kChar, len=*),
+            </td>
+              <td>public,</td>
+            <td>
+parameter               
+            </td>
+            <td>::</td>
+            <td><strong>CHR_BRACE_RIGHT</strong></td>
+<td> =</td>
+                <td>&#39;}&#39;</td>
+            <td>
+                <p>right brace character</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-chr_slash"></span>
+              character(kind=kChar, len=*),
+            </td>
+              <td>public,</td>
+            <td>
+parameter               
+            </td>
+            <td>::</td>
+            <td><strong>CHR_SLASH</strong></td>
+<td> =</td>
+                <td>&#39;/&#39;</td>
+            <td>
+                <p>slash character</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-chr_caret"></span>
+              character(kind=kChar, len=*),
+            </td>
+              <td>public,</td>
+            <td>
+parameter               
+            </td>
+            <td>::</td>
+            <td><strong>CHR_CARET</strong></td>
+<td> =</td>
+                <td>&#39;^&#39;</td>
+            <td>
+                <p>Caret character</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-chr_grave_accent"></span>
+              character(kind=kChar, len=*),
+            </td>
+              <td>public,</td>
+            <td>
+parameter               
+            </td>
+            <td>::</td>
+            <td><strong>CHR_GRAVE_ACCENT</strong></td>
+<td> =</td>
+                <td>&#39;`&#39;</td>
+            <td>
+                <p>Grave Accent character</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-chr_at_sign"></span>
+              character(kind=kChar, len=*),
+            </td>
+              <td>public,</td>
+            <td>
+parameter               
+            </td>
+            <td>::</td>
+            <td><strong>CHR_AT_SIGN</strong></td>
+<td> =</td>
+                <td>&#39;@&#39;</td>
+            <td>
+                <p>At Sign character</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-chr_question_mark"></span>
+              character(kind=kChar, len=*),
+            </td>
+              <td>public,</td>
+            <td>
+parameter               
+            </td>
+            <td>::</td>
+            <td><strong>CHR_QUESTION_MARK</strong></td>
+<td> =</td>
+                <td>&#39;?&#39;</td>
+            <td>
+                <p>Question Mark character</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-chr_dollar_sign"></span>
+              character(kind=kChar, len=*),
+            </td>
+              <td>public,</td>
+            <td>
+parameter               
+            </td>
+            <td>::</td>
+            <td><strong>CHR_DOLLAR_SIGN</strong></td>
+<td> =</td>
+                <td>&#39;$&#39;</td>
+            <td>
+                <p>Currency Symbol character</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-chr_vertical_bar"></span>
+              character(kind=kChar, len=*),
+            </td>
+              <td>public,</td>
+            <td>
+parameter               
+            </td>
+            <td>::</td>
+            <td><strong>CHR_VERTICAL_BAR</strong></td>
+<td> =</td>
+                <td>&#39;|&#39;</td>
+            <td>
+                <p>Vertical Bar character</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-chr_asterisk"></span>
+              character(kind=kChar, len=*),
+            </td>
+              <td>public,</td>
+            <td>
+parameter               
+            </td>
+            <td>::</td>
+            <td><strong>CHR_ASTERISK</strong></td>
+<td> =</td>
+                <td>&#39;*&#39;</td>
+            <td>
+                <p>Asterisk character</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-chr_plus_sign"></span>
+              character(kind=kChar, len=*),
+            </td>
+              <td>public,</td>
+            <td>
+parameter               
+            </td>
+            <td>::</td>
+            <td><strong>CHR_PLUS_SIGN</strong></td>
+<td> =</td>
+                <td>&#39;+&#39;</td>
+            <td>
+                <p>Plus Sign character</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-chr_minus_sign"></span>
+              character(kind=kChar, len=*),
+            </td>
+              <td>public,</td>
+            <td>
+parameter               
+            </td>
+            <td>::</td>
+            <td><strong>CHR_MINUS_SIGN</strong></td>
+<td> =</td>
+                <td>&#39;-&#39;</td>
+            <td>
+                <p>Minus Sign character</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-set_digits"></span>
+              character(kind=kChar, len=*),
+            </td>
+              <td>public,</td>
+            <td>
+parameter               
+            </td>
+            <td>::</td>
+            <td><strong>SET_DIGITS</strong></td>
+<td> =</td>
+                <td>&#39;0123456789&#39;</td>
+            <td>
+                <p>(decimal) digit character set</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-set_alphabets_lower"></span>
+              character(kind=kChar, len=*),
+            </td>
+              <td>public,</td>
+            <td>
+parameter               
+            </td>
+            <td>::</td>
+            <td><strong>SET_ALPHABETS_LOWER</strong></td>
+<td> =</td>
+                <td>&#39;abcdefghijklmnopqrstuvwxyz&#39;</td>
+            <td>
+                <p>lower-case alphabet character set</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-set_alphabets_upper"></span>
+              character(kind=kChar, len=*),
+            </td>
+              <td>public,</td>
+            <td>
+parameter               
+            </td>
+            <td>::</td>
+            <td><strong>SET_ALPHABETS_UPPER</strong></td>
+<td> =</td>
+                <td>&#39;ABCDEFGHIJKLMNOPQRSTUVWXYZ&#39;</td>
+            <td>
+                <p>upper-case alphabet character set</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-set_alphabets"></span>
+              character(kind=kChar, len=*),
+            </td>
+              <td>public,</td>
+            <td>
+parameter               
+            </td>
+            <td>::</td>
+            <td><strong>SET_ALPHABETS</strong></td>
+<td> =</td>
+                <td>SET_ALPHABETS_UPPER</td>
+            <td>
+                <p>alphabet character set (upper + lower)</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-set_alphanum"></span>
+              character(kind=kChar, len=*),
+            </td>
+              <td>public,</td>
+            <td>
+parameter               
+            </td>
+            <td>::</td>
+            <td><strong>SET_ALPHANUM</strong></td>
+<td> =</td>
+                <td>SET_ALPHABETS</td>
+            <td>
+                <p>alphabet and number character set (alphabet + digit)</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-set_blanks"></span>
+              character(kind=kChar, len=*),
+            </td>
+              <td>public,</td>
+            <td>
+parameter               
+            </td>
+            <td>::</td>
+            <td><strong>SET_BLANKS</strong></td>
+<td> =</td>
+                <td>CHR_TAB</td>
+            <td>
+                <p>blank character set (tab + space characters)</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-set_whitespaces"></span>
+              character(kind=kChar, len=*),
+            </td>
+              <td>public,</td>
+            <td>
+parameter               
+            </td>
+            <td>::</td>
+            <td><strong>SET_WHITESPACES</strong></td>
+<td> =</td>
+                <td>CHR_TAB</td>
+            <td>
+                <p>white-space character set</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-set_hexdigits"></span>
+              character(kind=kChar, len=*),
+            </td>
+              <td>public,</td>
+            <td>
+parameter               
+            </td>
+            <td>::</td>
+            <td><strong>SET_HEXDIGITS</strong></td>
+<td> =</td>
+                <td>&#39;abcdefABCDEF&#39;</td>
+            <td>
+                <p>hexadecimal digit character set</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-set_octdigits"></span>
+              character(kind=kChar, len=*),
+            </td>
+              <td>public,</td>
+            <td>
+parameter               
+            </td>
+            <td>::</td>
+            <td><strong>SET_OCTDIGITS</strong></td>
+<td> =</td>
+                <td>&#39;01234567&#39;</td>
+            <td>
+                <p>octal digit character set</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-set_logical"></span>
+              character(kind=kChar, len=*),
+            </td>
+              <td>public,</td>
+            <td>
+parameter               
+            </td>
+            <td>::</td>
+            <td><strong>SET_LOGICAL</strong></td>
+<td> =</td>
+                <td>&#39;tfTF&#39;</td>
+            <td>
+                <p>logical character set</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-set_punctuations"></span>
+              character(kind=kChar, len=*),
+            </td>
+              <td>public,</td>
+            <td>
+parameter               
+            </td>
+            <td>::</td>
+            <td><strong>SET_PUNCTUATIONS</strong></td>
+<td> =</td>
+                <td>&#39;_,;:.?![](){}@&#39;</td>
+            <td>
+                <p>punctuation character set</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-set_signs"></span>
+              character(kind=kChar, len=*),
+            </td>
+              <td>public,</td>
+            <td>
+parameter               
+            </td>
+            <td>::</td>
+            <td><strong>SET_SIGNS</strong></td>
+<td> =</td>
+                <td>&#39;+-&#39;</td>
+            <td>
+                <p>sign character set</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-set_exponents"></span>
+              character(kind=kChar, len=*),
+            </td>
+              <td>public,</td>
+            <td>
+parameter               
+            </td>
+            <td>::</td>
+            <td><strong>SET_EXPONENTS</strong></td>
+<td> =</td>
+                <td>&#39;EeDd&#39;</td>
+            <td>
+                <p>exponent character set</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-set_integers"></span>
+              character(kind=kChar, len=*),
+            </td>
+              <td>public,</td>
+            <td>
+parameter               
+            </td>
+            <td>::</td>
+            <td><strong>SET_INTEGERS</strong></td>
+<td> =</td>
+                <td>SET_DIGITS</td>
+            <td>
+                <p>integer character set (digit + sign)</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-set_numerics"></span>
+              character(kind=kChar, len=*),
+            </td>
+              <td>public,</td>
+            <td>
+parameter               
+            </td>
+            <td>::</td>
+            <td><strong>SET_NUMERICS</strong></td>
+<td> =</td>
+                <td>SET_INTEGERS</td>
+            <td>
+                <p>numeric character set (integer + exponent + period character)</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+        </section>
+        <br>
+
+
+
+
+
+        <section>
+          <h2>Functions</h2>
+              <div class="card">
+    <div class="card-header codesum"><span class="anchor" id="proc-is_character_in_range"></span><h3>public  function <a href='../proc/is_character_in_range.html'>Is_Character_In_Range</a>(Chr, ASCII_Min, ASCII_Max) result(Flag)  
+</h3></div>
+    <div class="card-body">
+          
+  <p>To check whether the given character is in the given ASCII range
+ from ASCII_Min to ASCII_Max.</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-chr"></span>
+              character(kind=kChar, len=1),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Chr</strong></td>
+            <td>
+<p>character</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-ascii_min"></span>
+              integer(kind=kInt32),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>ASCII_Min</strong></td>
+            <td>
+<p>minimum ASHCII index</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-ascii_max"></span>
+              integer(kind=kInt32),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>ASCII_Max</strong></td>
+            <td>
+<p>maximum ASHCII index</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+    <h4>
+    Return Value
+    <small>logical</small>
+    </h4>
+    <p>true if the character is in the range</p>
+
+    </div>
+  </div>
+
+              <div class="card">
+    <div class="card-header codesum"><span class="anchor" id="proc-is_character_letter"></span><h3>public  function <a href='../proc/is_character_letter.html'>Is_Character_Letter</a>(Chr) result(Flag)  
+</h3></div>
+    <div class="card-body">
+          
+  <p>To check whether the given character is in the 'ALPHABET' set.</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-chr~2"></span>
+              character(kind=kChar, len=1),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Chr</strong></td>
+            <td>
+<p>character</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+    <h4>
+    Return Value
+    <small>logical</small>
+    </h4>
+    <p>true if the character is valid</p>
+
+    </div>
+  </div>
+
+              <div class="card">
+    <div class="card-header codesum"><span class="anchor" id="proc-is_character_digit"></span><h3>public  function <a href='../proc/is_character_digit.html'>Is_Character_Digit</a>(Chr) result(Flag)  
+</h3></div>
+    <div class="card-body">
+          
+  <p>To check whether the given character is in the 'DIGIT' set.</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-chr~3"></span>
+              character(kind=kChar, len=1),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Chr</strong></td>
+            <td>
+<p>character</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+    <h4>
+    Return Value
+    <small>logical</small>
+    </h4>
+    <p>true if the character is valid</p>
+
+    </div>
+  </div>
+
+              <div class="card">
+    <div class="card-header codesum"><span class="anchor" id="proc-is_character_alphanum"></span><h3>public  function <a href='../proc/is_character_alphanum.html'>Is_Character_AlphaNum</a>(Chr) result(Flag)  
+</h3></div>
+    <div class="card-body">
+          
+  <p>To check whether the given character is in the 'ALPHABET' set or 'DIGIT' set.</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-chr~4"></span>
+              character(kind=kChar, len=1),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Chr</strong></td>
+            <td>
+<p>character</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+    <h4>
+    Return Value
+    <small>logical</small>
+    </h4>
+    <p>true if the character is valid</p>
+
+    </div>
+  </div>
+
+              <div class="card">
+    <div class="card-header codesum"><span class="anchor" id="proc-is_character_ascii"></span><h3>public  function <a href='../proc/is_character_ascii.html'>Is_Character_ASCII</a>(Chr) result(Flag)  
+</h3></div>
+    <div class="card-body">
+          
+  <p>To check whether the given character is a valid ASCII character.</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-chr~5"></span>
+              character(kind=kChar, len=1),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Chr</strong></td>
+            <td>
+<p>character</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+    <h4>
+    Return Value
+    <small>logical</small>
+    </h4>
+    <p>true if the character is valid</p>
+
+    </div>
+  </div>
+
+              <div class="card">
+    <div class="card-header codesum"><span class="anchor" id="proc-is_character_blank"></span><h3>public  function <a href='../proc/is_character_blank.html'>Is_Character_Blank</a>(Chr) result(Flag)  
+</h3></div>
+    <div class="card-body">
+          
+  <p>To check whether the given character is in the 'BLANK' set.</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-chr~6"></span>
+              character(kind=kChar, len=1),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Chr</strong></td>
+            <td>
+<p>character</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+    <h4>
+    Return Value
+    <small>logical</small>
+    </h4>
+    <p>true if the character is valid</p>
+
+    </div>
+  </div>
+
+              <div class="card">
+    <div class="card-header codesum"><span class="anchor" id="proc-is_character_control"></span><h3>public  function <a href='../proc/is_character_control.html'>Is_Character_Control</a>(Chr) result(Flag)  
+</h3></div>
+    <div class="card-body">
+          
+  <p>To check whether the given character is a control character.</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-chr~7"></span>
+              character(kind=kChar, len=1),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Chr</strong></td>
+            <td>
+<p>character</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+    <h4>
+    Return Value
+    <small>logical</small>
+    </h4>
+    <p>true if the character is valid</p>
+
+    </div>
+  </div>
+
+              <div class="card">
+    <div class="card-header codesum"><span class="anchor" id="proc-is_character_graphical"></span><h3>public  function <a href='../proc/is_character_graphical.html'>Is_Character_Graphical</a>(Chr) result(Flag)  
+</h3></div>
+    <div class="card-body">
+          
+  <p>To check whether the given character is a graphical character.</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-chr~8"></span>
+              character(kind=kChar, len=1),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Chr</strong></td>
+            <td>
+<p>character</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+    <h4>
+    Return Value
+    <small>logical</small>
+    </h4>
+    <p>true if the character is valid</p>
+
+    </div>
+  </div>
+
+              <div class="card">
+    <div class="card-header codesum"><span class="anchor" id="proc-is_character_logical"></span><h3>public  function <a href='../proc/is_character_logical.html'>Is_Character_Logical</a>(Chr) result(Flag)  
+</h3></div>
+    <div class="card-body">
+          
+  <p>To check whether the given character is a logical character.</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-chr~9"></span>
+              character(kind=kChar, len=1),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Chr</strong></td>
+            <td>
+<p>character</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+    <h4>
+    Return Value
+    <small>logical</small>
+    </h4>
+    <p>true if the character is valid</p>
+
+    </div>
+  </div>
+
+              <div class="card">
+    <div class="card-header codesum"><span class="anchor" id="proc-is_character_printable"></span><h3>public  function <a href='../proc/is_character_printable.html'>Is_Character_Printable</a>(Chr) result(Flag)  
+</h3></div>
+    <div class="card-body">
+          
+  <p>To check whether the given character is a printable character.</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-chr~10"></span>
+              character(kind=kChar, len=1),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Chr</strong></td>
+            <td>
+<p>character</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+    <h4>
+    Return Value
+    <small>logical</small>
+    </h4>
+    <p>true if the character is valid</p>
+
+    </div>
+  </div>
+
+              <div class="card">
+    <div class="card-header codesum"><span class="anchor" id="proc-is_character_lowercase_letter"></span><h3>public  function <a href='../proc/is_character_lowercase_letter.html'>Is_Character_Lowercase_Letter</a>(Chr) result(Flag)  
+</h3></div>
+    <div class="card-body">
+          
+  <p>To check whether the given character is a 'lower-case' letter.</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-chr~11"></span>
+              character(kind=kChar, len=1),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Chr</strong></td>
+            <td>
+<p>character</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+    <h4>
+    Return Value
+    <small>logical</small>
+    </h4>
+    <p>true if the character is valid</p>
+
+    </div>
+  </div>
+
+              <div class="card">
+    <div class="card-header codesum"><span class="anchor" id="proc-is_character_uppercase_letter"></span><h3>public  function <a href='../proc/is_character_uppercase_letter.html'>Is_Character_Uppercase_Letter</a>(Chr) result(Flag)  
+</h3></div>
+    <div class="card-body">
+          
+  <p>To check whether the given character is a 'upper-case' letter.</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-chr~12"></span>
+              character(kind=kChar, len=1),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Chr</strong></td>
+            <td>
+<p>character</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+    <h4>
+    Return Value
+    <small>logical</small>
+    </h4>
+    <p>true if the character is valid</p>
+
+    </div>
+  </div>
+
+              <div class="card">
+    <div class="card-header codesum"><span class="anchor" id="proc-is_character_whitespace"></span><h3>public  function <a href='../proc/is_character_whitespace.html'>Is_Character_WhiteSpace</a>(Chr) result(Flag)  
+</h3></div>
+    <div class="card-body">
+          
+  <p>To check whether the given character is in the 'WHITESPACE' set.</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-chr~13"></span>
+              character(kind=kChar, len=1),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Chr</strong></td>
+            <td>
+<p>character</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+    <h4>
+    Return Value
+    <small>logical</small>
+    </h4>
+    <p>true if the character is valid</p>
+
+    </div>
+  </div>
+
+              <div class="card">
+    <div class="card-header codesum"><span class="anchor" id="proc-is_character_sign"></span><h3>public  function <a href='../proc/is_character_sign.html'>Is_Character_Sign</a>(Chr) result(Flag)  
+</h3></div>
+    <div class="card-body">
+          
+  <p>To check whether the given character is a 'sign' character.</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-chr~14"></span>
+              character(kind=kChar, len=1),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Chr</strong></td>
+            <td>
+<p>character</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+    <h4>
+    Return Value
+    <small>logical</small>
+    </h4>
+    <p>true if the character is valid</p>
+
+    </div>
+  </div>
+
+              <div class="card">
+    <div class="card-header codesum"><span class="anchor" id="proc-is_character_period"></span><h3>public  function <a href='../proc/is_character_period.html'>Is_Character_Period</a>(Chr) result(Flag)  
+</h3></div>
+    <div class="card-body">
+          
+  <p>To check whether the given character is a 'period/dot' character.</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-chr~15"></span>
+              character(kind=kChar, len=1),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Chr</strong></td>
+            <td>
+<p>character</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+    <h4>
+    Return Value
+    <small>logical</small>
+    </h4>
+    <p>true if the character is valid</p>
+
+    </div>
+  </div>
+
+              <div class="card">
+    <div class="card-header codesum"><span class="anchor" id="proc-is_character_exponent"></span><h3>public  function <a href='../proc/is_character_exponent.html'>Is_Character_Exponent</a>(Chr) result(Flag)  
+</h3></div>
+    <div class="card-body">
+          
+  <p>To check whether the given character is an 'exponent' character.</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-chr~16"></span>
+              character(kind=kChar, len=1),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Chr</strong></td>
+            <td>
+<p>character</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+    <h4>
+    Return Value
+    <small>logical</small>
+    </h4>
+    <p>true if the character is valid</p>
+
+    </div>
+  </div>
+
+              <div class="card">
+    <div class="card-header codesum"><span class="anchor" id="proc-is_character_hexdigit"></span><h3>public  function <a href='../proc/is_character_hexdigit.html'>Is_Character_HexDigit</a>(Chr) result(Flag)  
+</h3></div>
+    <div class="card-body">
+          
+  <p>To check whether the given character is in the 'HEXDIGIT' set.</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-chr~17"></span>
+              character(kind=kChar, len=1),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Chr</strong></td>
+            <td>
+<p>character</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+    <h4>
+    Return Value
+    <small>logical</small>
+    </h4>
+    <p>true if the character is valid</p>
+
+    </div>
+  </div>
+
+              <div class="card">
+    <div class="card-header codesum"><span class="anchor" id="proc-is_character_octdigit"></span><h3>public  function <a href='../proc/is_character_octdigit.html'>Is_Character_OctDigit</a>(Chr) result(Flag)  
+</h3></div>
+    <div class="card-body">
+          
+  <p>To check whether the given character is in the 'OCTDIGIT' set.</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-chr~18"></span>
+              character(kind=kChar, len=1),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Chr</strong></td>
+            <td>
+<p>character</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+    <h4>
+    Return Value
+    <small>logical</small>
+    </h4>
+    <p>true if the character is valid</p>
+
+    </div>
+  </div>
+
+              <div class="card">
+    <div class="card-header codesum"><span class="anchor" id="proc-is_character_punctuation"></span><h3>public  function <a href='../proc/is_character_punctuation.html'>Is_Character_Punctuation</a>(Chr) result(Flag)  
+</h3></div>
+    <div class="card-body">
+          
+  <p>To check whether the given character is in the 'PUNCTUATION' set.</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-chr~19"></span>
+              character(kind=kChar, len=1),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Chr</strong></td>
+            <td>
+<p>character</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+    <h4>
+    Return Value
+    <small>logical</small>
+    </h4>
+    <p>true if the character is valid</p>
+
+    </div>
+  </div>
+
+              <div class="card">
+    <div class="card-header codesum"><span class="anchor" id="proc-is_character_numeric"></span><h3>public  function <a href='../proc/is_character_numeric.html'>Is_Character_Numeric</a>(Chr) result(Flag)  
+</h3></div>
+    <div class="card-body">
+          
+  <p>To check whether the given character is in the 'NUMERIC' set.</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-chr~20"></span>
+              character(kind=kChar, len=1),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Chr</strong></td>
+            <td>
+<p>character</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+    <h4>
+    Return Value
+    <small>logical</small>
+    </h4>
+    <p>true if the character is valid</p>
+
+    </div>
+  </div>
+
+              <div class="card">
+    <div class="card-header codesum"><span class="anchor" id="proc-is_character_integer"></span><h3>public  function <a href='../proc/is_character_integer.html'>Is_Character_Integer</a>(Chr) result(Flag)  
+</h3></div>
+    <div class="card-body">
+          
+  <p>To check whether the given character is in the 'INTEGER' set.</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-chr~21"></span>
+              character(kind=kChar, len=1),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Chr</strong></td>
+            <td>
+<p>character</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+    <h4>
+    Return Value
+    <small>logical</small>
+    </h4>
+    <p>true if the character is valid</p>
+
+    </div>
+  </div>
+
+              <div class="card">
+    <div class="card-header codesum"><span class="anchor" id="proc-tolowercase"></span><h3>public  function <a href='../proc/tolowercase.html'>ToLowerCase</a>(ChrIn) result(ChrOut)  
+</h3></div>
+    <div class="card-body">
+          
+  <p>To change case of the input character to lower case if applicable.</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-chrin"></span>
+              character(kind=kChar, len=1),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>ChrIn</strong></td>
+            <td>
+
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+    <h4>
+    Return Value
+    <small>character(kind=kChar, len=1)</small>
+    </h4>
+    
+
+    </div>
+  </div>
+
+              <div class="card">
+    <div class="card-header codesum"><span class="anchor" id="proc-touppercase"></span><h3>public  function <a href='../proc/touppercase.html'>ToUpperCase</a>(ChrIn) result(ChrOut)  
+</h3></div>
+    <div class="card-body">
+          
+  <p>To change case of the input character to upper case if applicable.</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-chrin~2"></span>
+              character(kind=kChar, len=1),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>ChrIn</strong></td>
+            <td>
+
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+    <h4>
+    Return Value
+    <small>character(kind=kChar, len=1)</small>
+    </h4>
+    
+
+    </div>
+  </div>
+
+        </section>
+        <br>
+
+
+
+
+    </div>
+  </div>
+
+      <hr>
+    </div> <!-- /container -->
+    <footer>
+      <div class="container">
+        <div class="row justify-content-between">
+          <div class="col"><p>eXPerimental Fortran Library (XpfLib) Documentation was developed by Niranama<br>&copy; 2024 
+</p>
+          </div>
+          <div class="col">
+            <p class="text-end">
+              Documentation generated by
+              <a href="https://github.com/Fortran-FOSS-Programmers/ford">FORD</a>
+            </p>
+          </div>
+        </div>
+        <br>
+      </div> <!-- /container -->
+    </footer>
+
+    <!-- Bootstrap core JavaScript -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>    
+
+    <!-- MathJax JavaScript
+             ================================================== -->
+             <!-- Placed at the end of the document so the pages load faster -->
+        <script type="text/x-mathjax-config">
+          MathJax.Hub.Config({
+          TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } },
+          jax: ['input/TeX','input/MathML','output/HTML-CSS'],
+          extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']
+          });
+        </script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+          <script src="../tipuesearch/tipuesearch_content.js"></script>
+          <script src="../tipuesearch/tipuesearch_set.js"></script>
+          <script src="../tipuesearch/tipuesearch.js"></script>
+
+  </body>
+</html>

@@ -1,0 +1,1617 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta name="description" content="Experimental Fortran Package - Hash Functions">
+    <meta name="author" content="Niranama" >
+    <link rel="icon" href="../favicon.png">
+
+    <title>All Modules &ndash; eXPerimental Fortran Library (XpfLib) Documentation
+</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link href="../css/pygments.css" rel="stylesheet">
+    <link href="../css/font-awesome.min.css" rel="stylesheet">
+    <link href="../css/local.css" rel="stylesheet">
+      <link  href="../tipuesearch/tipuesearch.css" rel="stylesheet">
+
+    <script src="https://code.jquery.com/jquery-3.7.0.slim.min.js" integrity="sha256-tG5mcZUtJsZvyKAxYLVXrmjKBVLd6VpVccqz/r4ypFE=" crossorigin="anonymous"></script>
+  </head>
+
+  <body>
+
+    <!-- Fixed navbar -->
+    <div class="container-fluid mb-sm-4 mb-xl-2">
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container">
+          <a class="navbar-brand" href="../index.html">eXPerimental Fortran Library (XpfLib) Documentation </a>
+          <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar"
+                  aria-expanded="false" aria-controls="navbar" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon">
+          </button>
+
+          <div id="navbar" class="navbar-collapse collapse">
+            <ul class="navbar-nav">
+                  <li class="nav-item">
+                    <a class="nav-link" href="../lists/files.html">Source Files</a>
+                  </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../lists/modules.html">Modules</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../lists/procedures.html">Procedures</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../lists/absint.html">Abstract Interfaces</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../lists/types.html">Derived Types</a>
+                </li>
+            </ul>
+              <div class="d-flex align-items-end flex-grow-1">
+                <form action="../search.html" role="search" class="ms-auto">
+                  <input type="text" class="form-control" aria-label="Search" placeholder="Search" name="q" id="tipue_search_input" autocomplete="off" required>
+                </form>
+              </div>
+          </div><!--/.nav-collapse -->
+        </div>
+      </nav>
+    </div>
+
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12" id='text'>
+			 <h1>Modules</h1>
+			 <table class="table">
+			 <thead><tr><th>Module</th><th>Source File</th><th>Description</th></tr></thead>
+			 <tbody>
+			   <tr class="active"><td><a href='../module/mbase_bytepack.html'>MBase_BytePack</a></td><td><a href='../sourcefile/mbase_bytepack.f90.html'>MBase_BytePack.f90</a></td><td><p><strong>PURPOSE OF THIS MODULE</strong>: <br>
+  This module contains utility routines for conversion of bit patterns between
+  a byte array (an array of 8-bit integers) and other integer types.  The module
+  provide six procedure interfaces: BytePack, ByteUnpack, BytePackBE, ByteUnpackBE,
+  BytePackLE, and ByteUnpackLE. <br>
+  The <em>BytePack</em> procedure interface performs a conversion from a byte array to
+  an (other) integer (or an array of other integers) using machine endianess. <br>
+  The <em>ByteUnpack</em> procedure interface performs a conversion from an (other) integer
+  (or an array of other integers) to a byte array using machine endianess. <br>
+  The <em>BytePackBE</em> procedure interface performs a conversion from a byte array in
+  big-endian order to an (other) integer (or an array of other integers). <br>
+  The <em>ByteUnpackBE</em> procedure interface performs a conversion from an (other) integer
+  (or an array of other integers) to a byte array in big-endian order. <br>
+  The <em>BytePackLE</em> procedure interface performs a conversion from a byte array in
+  little-endian order to an (other) integer (or an array of other integers). <br>
+  The <em>ByteUnpackLE</em> procedure interface performs a conversion from an (other) integer
+  (or an array of other integers) to a byte array in little-endian order. <br></p></td></tr>
+<!--active-->			   <tr class=""><td><a href='../module/mbase_experimentalhash32.html'>MBase_ExperimentalHash32</a></td><td><a href='../sourcefile/mbase_experimentalhash32.f90.html'>MBase_ExperimentalHash32.f90</a></td><td><p><strong>PURPOSE OF THIS MODULE</strong>: <br>
+  This module contains an experimental implementation of various non-cryptographic
+  hash function routines that output a hash value as a 32-bit integer.  The available
+  hash functions are a subset of those reference hash functions implemented in the
+  <a href="../module/mbase_referencehash32.html">ModBase_ReferenceHash32</a> module.
+  The API of these experimental routines are the same as those reference routines with
+  the exception of an additional argument (<em>Algo</em>). <br>
+  The <em>Algo</em> argument is an algorithm flag used to indicate which algorithm is employed
+  to implement a <em>Pack_I32</em> procedure, which perform a conversion from an array of four
+  8-bit integers to a 32-bit integer.  There are a number of possible implementations
+  of the <em>Pack_I32</em> procedure.  In this module, seven basic implementations are provided.
+  A user can perform a benchmark of each specific hash function routine in order to know
+  which one of the <em>Pack_I32</em> algorithms is the best one for a particular system (i.e.
+  a combination of operating system, machine as well as compiler used).  The benchmark
+  can then be used to implement an optimal implementation of the hash function. <br>
+  <br>
+<strong>REFERENCES</strong>: <br>
+  See the <a href="../module/mbase_referencehash32.html">ModBase_ReferenceHash32</a>
+  module for references of the available hash functions in this module.</p></td></tr>
+<!---->			   <tr class="active"><td><a href='../module/mbase_experimentalhash64.html'>MBase_ExperimentalHash64</a></td><td><a href='../sourcefile/mbase_experimentalhash64.f90.html'>MBase_ExperimentalHash64.f90</a></td><td><p><strong>PURPOSE OF THIS MODULE</strong>: <br>
+  This module contains an experimental implementation of various non-cryptographic
+  hash function routines that output a hash value as a 64-bit integer.  The available
+  hash functions are a subset of those reference hash functions implemented in the
+  <a href="../module/mbase_referencehash64.html">ModBase_ReferenceHash64</a> module.
+  The API of these experimental routines are the same as those reference routines with
+  the exception of an additional argument (<em>Algo</em>). <br>
+  The <em>Algo</em> argument is an algorithm flag used to indicate which algorithm is employed
+  to implement a <em>Pack_I64</em> procedure, which perform a conversion from an array of eight
+  8-bit integers to a 64-bit integer.  There are a number of possible implementations
+  of the <em>Pack_I64</em> procedure.  In this module, seven basic implementations are provided.
+  A user can perform a benchmark of each specific hash function routine in order to know
+  which one of the <em>Pack_I64</em> algorithms is the best one for a particular system (i.e.
+  a combination of operating system, machine as well as compiler used).  The benchmark
+  can then be used to implement an optimal implementation of the hash function. <br>
+  <br>
+<strong>REFERENCES</strong>: <br>
+  See the <a href="../module/mbase_referencehash64.html">ModBase_ReferenceHash64</a>
+  module for references of the available hash functions in this module.</p></td></tr>
+<!--active-->			   <tr class=""><td><a href='../module/mbase_optimalhash32.html'>MBase_OptimalHash32</a></td><td><a href='../sourcefile/mbase_optimalhash32.f90.html'>MBase_OptimalHash32.f90</a></td><td><p><strong>PURPOSE OF THIS MODULE</strong>: <br>
+  This module contains an optimal implementation of various non-cryptographic hash
+  function routines that output a hash value as a 32-bit integer.  The available
+  hash functions are a subset of those reference hash functions implemented in the
+  <a href="../module/mbase_referencehash32.html">ModBase_ReferenceHash32</a> module.
+  The API of these optimal routines are exactly the same as those reference routines. <br>
+  It should be noted that each optimal hash function routine is based on a benchmark
+  that compares performances of various possible implementations of the hash function
+  as provided in the  <a href="../module/mbase_experimentalhash32.html">
+  ModBase_ExperimentalHash32</a> module.  It should also be noted that these so-called
+  optimal hash function routines may not actually be optimal for a particular user so
+  the user is highly encouraged to perform (by himself/herself) a benchmark of each
+  specific hash function routine in order to know which implementation is the best one
+  for a particular system (i.e. a combination of operating system, machine as well as
+  compiler used). <br>
+  <br>
+<strong>REFERENCES</strong>: <br>
+  See the <a href="../module/mbase_referencehash32.html">ModBase_ReferenceHash32</a>
+  module for references of the available hash functions in this module.</p></td></tr>
+<!---->			   <tr class="active"><td><a href='../module/mbase_optimalhash64.html'>MBase_OptimalHash64</a></td><td><a href='../sourcefile/mbase_optimalhash64.f90.html'>MBase_OptimalHash64.f90</a></td><td><p><strong>PURPOSE OF THIS MODULE</strong>: <br>
+  This module contains an optimal implementation of various non-cryptographic hash
+  function routines that output a hash value as a 64-bit integer.  The available
+  hash functions are a subset of those reference hash functions implemented in the
+  <a href="../module/mbase_referencehash64.html">ModBase_ReferenceHash64</a> module.
+  The API of these optimal routines are exactly the same as those reference routines. <br>
+  It should be noted that each optimal hash function routine is based on a benchmark
+  that compares performances of various possible implementations of the hash function
+  as provided in the  <a href="../module/mbase_experimentalhash64.html">
+  ModBase_ExperimentalHash64</a> module.  It should also be noted that these so-called
+  optimal hash function routines may not actually be optimal for a particular user so
+  the user is highly encouraged to perform (by himself/herself) a benchmark of each
+  specific hash function routine in order to know which implementation is the best one
+  for a particular system (i.e. a combination of operating system, machine as well as
+  compiler used). <br>
+  <br>
+<strong>REFERENCES</strong>: <br>
+  See the <a href="../module/mbase_referencehash64.html">ModBase_ReferenceHash64</a>
+  module for references of the available hash functions in this module.</p></td></tr>
+<!--active-->			   <tr class=""><td><a href='../module/mbase_referencehash32.html'>MBase_ReferenceHash32</a></td><td><a href='../sourcefile/mbase_referencehash32.f90.html'>MBase_ReferenceHash32.f90</a></td><td><p><strong>PURPOSE OF THIS MODULE</strong>: <br>
+  This module contains a reference implementation of various non-cryptographic
+  hash function routines that output a hash value as a 32-bit integer.  The API
+  of these hash function routines are mostly similar to that of routines in the
+  <a href="../../xpfbase/module/mbase_simplehash32.html">ModBase_SimpleHash32</a>
+  module.  The main difference between routines in these two modules is that routines
+  in the <em>ModBase_SimpleHash32</em> module process input data one byte at a time whereas
+  routines in this module commonly process input data several/many bytes at a time.
+  Also, routines in this module are somewhat more complicated than those in the
+  <em>ModBase_SimpleHash32</em> module. <br>
+  Similar to those routines in the <em>ModBase_SimpleHash32</em> module, all routines can
+  be used for an input (i.e. a key) of any type and rank providing that the size of
+  the input (in bytes) is known at compile time.  All routines can be used for a
+  continued hashing by providing the previously computed hash value as an (optional)
+  input argument (i.e. the <em>StartHash</em> argument).  Optionally, a user can specify
+  whether to return only positive value of the hash code.  This is particularly
+  useful when used in conjunction with a hash table. <br>
+  <br>
+<strong>REFERENCES</strong>: <br>
+  [1] <a href="https://github.com/aappleby/smhasher">SMHasher: a test suite designed to
+      test the distribution, collision, and performance properties of non-cryptographic
+      hash functions. </a> <br>
+  [2] <a href="https://burtleburtle.net/bob/c/lookup3.c">Lookup 3 Hash Function: C Code. </a> <br>
+  [3] <a href="https://github.com/google/cityhash">CityHash: a family of hash functions
+      for strings. </a> <br>
+  [4] <a href="https://github.com/google/farmhash">FarmHash: a family of hash functions. </a> <br>
+  [5] <a href="http://www.azillionmonkeys.com/qed/hash.html">Hash functions by Paul Hsieh. </a> <br>
+  [6] <a href="https://github.com/fortran-lang/stdlib">Fortran Standard Library. </a> <br>
+  [7] <a href="https://github.com/gzm55/hash-garage">NMHash32 Hash Functions. </a> <br>
+  [8] <a href="https://github.com/Cyan4973/xxHash">xxHash: Extremely fast hash algorithm. </a> <br>
+  [9] <a href="https://github.com/tildeleb/hashland">HashLand: a collection of hash
+      functions in Go. </a> <br>
+  [10] <a href="https://github.com/rurban/fast-hash/tree/master">FastHash by Zilong Tan. </a> <br>
+  [11] <a href="https://github.com/tommyettinger/waterhash">WaterHash: A variant of WyHash. </a> <br>
+  [12] <a href="https://github.com/veorq/SipHash">SipHash: high-speed secure pseudorandom
+      function for short messages. </a> <br></p></td></tr>
+<!---->			   <tr class="active"><td><a href='../module/mbase_referencehash64.html'>MBase_ReferenceHash64</a></td><td><a href='../sourcefile/mbase_referencehash64.f90.html'>MBase_ReferenceHash64.f90</a></td><td><p><strong>PURPOSE OF THIS MODULE</strong>: <br>
+  This module contains a reference implementation of various non-cryptographic
+  hash function routines that output a hash value as a 64-bit integer.  The API
+  of these hash function routines are mostly similar to that of routines in the
+  <a href="../../xpfbase/module/mbase_simplehash64.html">ModBase_SimpleHash64</a>
+  module.  The main difference between routines in these two modules is that routines
+  in the <em>ModBase_SimpleHash64</em> module process input data one byte at a time whereas
+  routines in this module commonly process input data several/many bytes at a time.
+  Also, routines in this module are somewhat more complicated than those in the
+  <em>ModBase_SimpleHash64</em> module. <br>
+  Similar to those routines in the <em>ModBase_SimpleHash64</em> module, all routines can
+  be used for an input (i.e. a key) of any type and rank providing that the size of
+  the input (in bytes) is known at compile time.  All routines can be used for a
+  continued hashing by providing the previously computed hash value as an (optional)
+  input argument (i.e. the <em>StartHash</em> argument).  Optionally, a user can specify
+  whether to return only positive value of the hash code.  This is particularly
+  useful when used in conjunction with a hash table. <br>
+  <br>
+<strong>REFERENCES</strong>: <br>
+  [1] <a href="https://github.com/aappleby/smhasher">SMHasher: a test suite designed to
+      test the distribution, collision, and performance properties of non-cryptographic
+      hash functions. </a> <br>
+  [2] <a href="https://github.com/jandrewrogers/MetroHash">MetroHash: Faster, Better
+      Hash Functions. </a> <br>
+  [3] <a href="https://github.com/wangyi-fudan/wyhash">WYHASH and WYRAND - The FASTEST
+      QUALITY hash function, random number generators (PRNG) and hash map. </a> <br>
+  [4] <a href="https://github.com/OpenHFT/Zero-Allocation-Hashing/tree/ea">
+      Zero-Allocation Hashing for Java. </a> <br>
+  [5] <a href="https://github.com/Cyan4973/xxHash">xxHash: Extremely fast hash algorithm. </a> <br>
+  [6] <a href="https://github.com/google/cityhash">CityHash: a family of hash functions
+      for strings. </a> <br>
+  [7] <a href="https://github.com/google/farmhash">FarmHash: a family of hash functions. </a> <br>
+  [8] <a href="https://burtleburtle.net/bob/hash/spooky.html">SpookyHash: a 128-bit
+      non-cryptographic hash. </a> <br>
+  [9] <a href="https://github.com/rurban/smhasher">SMHasher by Reini Urban. </a> <br>
+  [10] <a href="https://github.com/fortran-lang/stdlib">Fortran Standard Library. </a> <br>
+  [11] <a href="https://github.com/veorq/SipHash">SipHash: high-speed secure pseudorandom
+      function for short messages. </a> <br>
+  [12] <a href="https://github.com/jonmaiga/mx3">mx3: A bit mixer, pseudo random number
+      generator and a hash function. </a> <br>
+  [13] <a href="https://github.com/avaneev/komihash">KOMIHASH - Very fast, high-quality
+      hash function, discrete-incremental and streamed hashing-capable (non-cryptographic,
+      in C) + PRNG.</a> <br>
+  [14] <a href="https://github.com/vnmakarov/mir">MIR Project: A lightweight JIT compiler
+      based on MIR (Medium Internal Representation) and C11 JIT compiler and interpreter
+      based on MIR. </a> <br>
+  [15] <a href="https://github.com/vnmakarov/mum-hash">MumHash: Hashing functions and
+      PRNGs based on them. </a> <br>
+  [15] <a href="https://github.com/tinypeng/pengyhash">PengyHash: Fast 64-bit
+      non-cryptographic function. </a> <br></p></td></tr>
+<!--active-->			   <tr class=""><td><a href='../module/mclass_basedigest.html'>MClass_BaseDigest</a></td><td><a href='../sourcefile/mclass_basedigest.f90.html'>MClass_BaseDigest.f90</a></td><td><p><strong>PURPOSE OF THIS MODULE</strong>: <br>
+  This module contains the <em>BaseDigest</em> type and its related routines.
+  The <em>BaseDigest</em> type is an abstract type representing a base type for
+  a <em>(message) digest</em> object, which is an incremental cryptographic hash function.
+  The <em>BaseDigest</em> type defines an application programming interface (API)
+  for various common operations shared by most cryptographic hash functions.
+  Therefore, all (message) digest types should extend from this base type. <br>
+  Typically, a <em>digest</em> object maintains a running state for a hash computation.
+  Therefore, it must first be initialized via the <em>Create</em> method.  Then, input
+  data can be inserted (a number of times) into the digest object (which normally
+  stored in a buffer and/or processed if a buffer is fulled) by using the <em>Update</em>
+  method.  Finally, the result can be obtained from the <em>Digest</em> method (where
+  some final data can be inserted as well). <br>
+  When a digest output has been produced, the <em>digest</em> object is automatically reset
+  to its initialized state, and can thus be used immediately for another digest
+  operation.  The state of a hash computation can be copied by using the <em>GetClone</em>
+  method; this can be used to get a partial hash result without interrupting the
+  complete computation.  The new (clone) object evolves independently of the source
+  object. <br></p></td></tr>
+<!---->			   <tr class="active"><td><a href='../module/mclass_basehasher.html'>MClass_BaseHasher</a></td><td><a href='../sourcefile/mclass_basehasher.f90.html'>MClass_BaseHasher.f90</a></td><td><p><strong>PURPOSE OF THIS MODULE</strong>: <br>
+  This module contains the <em>BaseHasher</em> type and its related routines.
+  The <em>BaseHasher</em> type is an abstract type representing a base type for
+  a <em>hasher</em> object, which is an incremental non-cryptographic hash function.
+  By design, it defines a somewhat <em>incomplete</em> application programming
+  interface (API) for some operations of an incremental hash function.
+  The <a href="../module/mclass_hasher32.html#type-hasher32">Hasher32</a>
+  type, which is an abstract type representing a 32-bit-integer hasher,
+  defines additional methods and completes the API of an incremental
+  32-bit-integer hash function.
+  Also, the <a href="../module/mclass_hasher64.html#type-hasher64">Hasher64</a>
+  type, which is an abstract type representing a 64-bit-integer hasher,
+  defines additional methods and completes the API of an incremental
+  64-bit-integer hash function.
+  All other (concrete) hasher types that implement specific hash functions
+  extend from either the <em>Hasher32</em> type or the <em>Hasher64</em> type.</p></td></tr>
+<!--active-->			   <tr class=""><td><a href='../module/mclass_blake1b.html'>MClass_Blake1B</a></td><td><a href='../sourcefile/mclass_blake1b.f90.html'>MClass_Blake1B.f90</a></td><td><p><strong>PURPOSE OF THIS MODULE</strong>: <br>
+  This module contains the <em>Blake1B</em> type and its related routines.
+  The <em>Blake1B</em> type is a <em>digest</em> type that directly extends from the
+  <a href="../module/mclass_mdengine.html#type-mdengine">MDEngine</a>
+  type.  As a <em>concrete</em> derived type, it provides all remaining
+  deferred procedures required by all its abstract parent types. <br>
+  The <em>Blake1B</em> type implements an incremental cryptographic hash
+  function by employing either the <em>BLAKE-384</em> or the <em>BLAKE-512
+  message-digest</em> algorithm where both algorithms are described in
+  the <em>Hash Function BLAKE</em> book [1].  The implementation here is
+  based mainly on the <em>SPHLIB</em> implementation [2].  <br>
+  By default, the <em>Blake1B</em> type employs the <em>BLAKE-512 message-digest</em>
+  algorithm.  However, a user can specify the <em>IsBLAKE384</em> flag to
+  true when initializing the digest object (by calling the <em>Create</em>
+  method) in order to use the <em>BLAKE-384 message-digest</em> algorithm
+  instead of the default one. <br>
+   <br>
+<strong>REFERENCES</strong>: <br>
+  [1] <a href="https://www.aumasson.jp/blake/book/">J.P. Aumasson, W. Meier,
+      R.C.W. Phan, and L. Henzen. 2015. The Hash Function BLAKE. Springer. </a> <br>
+  [2] <a href="https://github.com/pornin/sphlib">SPHLIB 3.0: A Set of
+      Implementations of Various Hash Functions, Both in C and in Java. </a> <br></p></td></tr>
+<!---->			   <tr class="active"><td><a href='../module/mclass_blake1s.html'>MClass_Blake1S</a></td><td><a href='../sourcefile/mclass_blake1s.f90.html'>MClass_Blake1S.f90</a></td><td><p><strong>PURPOSE OF THIS MODULE</strong>: <br>
+  This module contains the <em>Blake1S</em> type and its related routines.
+  The <em>Blake1S</em> type is a <em>digest</em> type that directly extends from the
+  <a href="../module/mclass_mdengine.html#type-mdengine">MDEngine</a>
+  type.  As a <em>concrete</em> derived type, it provides all remaining
+  deferred procedures required by all its abstract parent types. <br>
+  The <em>Blake1S</em> type implements an incremental cryptographic hash
+  function by employing either the <em>BLAKE-224</em> or the <em>BLAKE-256
+  message-digest</em> algorithm where both algorithms are described in
+  the <em>Hash Function BLAKE</em> book [1].  The implementation here is
+  based mainly on the <em>SPHLIB</em> implementation [2].  <br>
+  By default, the <em>Blake1S</em> type employs the <em>BLAKE-256 message-digest</em>
+  algorithm.  However, a user can specify the <em>IsBLAKE224</em> flag to
+  true when initializing the digest object (by calling the <em>Create</em>
+  method) in order to use the <em>BLAKE-224 message-digest</em> algorithm
+  instead of the default one. <br>
+   <br>
+<strong>REFERENCES</strong>: <br>
+  [1] <a href="https://www.aumasson.jp/blake/book/">J.P. Aumasson, W. Meier,
+      R.C.W. Phan, and L. Henzen. 2015. The Hash Function BLAKE. Springer. </a> <br>
+  [2] <a href="https://github.com/pornin/sphlib">SPHLIB 3.0: A Set of
+      Implementations of Various Hash Functions, Both in C and in Java. </a> <br></p></td></tr>
+<!--active-->			   <tr class=""><td><a href='../module/mclass_blake2b.html'>MClass_Blake2B</a></td><td><a href='../sourcefile/mclass_blake2b.f90.html'>MClass_Blake2B.f90</a></td><td><p><strong>PURPOSE OF THIS MODULE</strong>: <br>
+  This module contains the <em>Blake2B</em> type and its related routines.
+  The <em>Blake2B</em> type is a <em>digest</em> type that directly extends from the
+  <a href="../module/mclass_blake2core.html#type-blake2core">Blake2Core</a>
+  type.  As a <em>concrete</em> derived type, it provides all remaining
+  deferred procedures required by all its abstract parent types. <br>
+  The <em>Blake2B</em> type implements an incremental cryptographic hash
+  function by employing the <em>BLAKE2b</em> message-digest algorithm, which
+  is optimized for 64-bit platforms and can produce the hash output of
+  any size between 1 and 64 bytes [1, 2].  The implementation here is
+  based mainly on the references [3, 4].  Unlike most of other <em>digest</em>
+  types, the <em>Blake2B</em> type can perform keyed hashing providing that a
+  user specifies the key during an initialization of the digest object
+  by calling the <em>CreateHMAC</em> method instead of the <em>Create</em> method. <br>
+   <br>
+<strong>REFERENCES</strong>: <br>
+  [1] <a href="https://www.aumasson.jp/blake/book/">J.P. Aumasson, W. Meier,
+      R.C.W. Phan, and L. Henzen. 2015. The Hash Function BLAKE. Springer. </a> <br>
+  [2] <a href="https://www.blake2.net/">BLAKE2 - Fast Secure Hashing. </a> <br>
+  [3] <a href="https://github.com/kocakosm/jblake2">JBlake2: A pure Java
+      implementation of BLAKE2 (RFC 7693). </a> <br>
+  [4] <a href="https://github.com/BLAKE2/BLAKE2">BLAKE2 official implementations. </a> <br></p></td></tr>
+<!---->			   <tr class="active"><td><a href='../module/mclass_blake2core.html'>MClass_Blake2Core</a></td><td><a href='../sourcefile/mclass_blake2core.f90.html'>MClass_Blake2Core.f90</a></td><td><p><strong>PURPOSE OF THIS MODULE</strong>: <br>
+  This module contains the <em>Blake2Core</em> type and its related routines.
+  The <em>Blake2Core</em> type is an abstract <em>digest</em> type extending directly
+  from the <a href="../module/mclass_basedigest.html#type-basedigest">
+  BaseDigest</a> type.  It defines and implements additional methods
+  (most of which is intended to be used internally) to provide an
+  extended API for an incremental cryptographic hash function. <br>
+  By design, the <em>Blake2Core</em> type is intended to be used as a parent
+  type for all <em>BLAKE2-based</em> digest types.  The <em>Blake2Core</em> type
+  provides an implementation of an incremental cryptographic hash function
+  by employing the <em>BLAKE2 message-digest</em> algorithm [1, 2].  It takes care
+  core operations (i.e. some of the deferred procedures and additional methods
+  provided) required by a <em>BLAKE2-based digest</em> object where its subtypes must
+  take care the remaining operations (i.e the rest of the deferred procedures).
+  The implementation of the <em>Blake2Core</em> type and its subtypes are based
+  mainly on the references [3, 4]. <br>
+  It should be noted that the <em>BLAKE2 message-digest</em> algorithm has several
+  variants with additional features such as keyed hashing (that is, MAC or
+  PRF), hashing with a salt, personalization and/or incremental tree-hashing.
+  The algorithm can also produce a variable-length hash output.  Among these
+  additional features, the <em>Blake2Core</em> type and its subtypes only allow
+  keyed hashing and variable-length hash output. <br>
+   <br>
+<strong>REFERENCES</strong>: <br>
+  [1] <a href="https://www.aumasson.jp/blake/book/">J.P. Aumasson, W. Meier,
+      R.C.W. Phan, and L. Henzen. 2015. The Hash Function BLAKE. Springer. </a> <br>
+  [2] <a href="https://www.blake2.net/">BLAKE2 - Fast Secure Hashing. </a> <br>
+  [3] <a href="https://github.com/kocakosm/jblake2">JBlake2: A pure Java
+      implementation of BLAKE2 (RFC 7693). </a> <br>
+  [4] <a href="https://github.com/BLAKE2/BLAKE2">BLAKE2 official implementations. </a> <br></p></td></tr>
+<!--active-->			   <tr class=""><td><a href='../module/mclass_blake2s.html'>MClass_Blake2S</a></td><td><a href='../sourcefile/mclass_blake2s.f90.html'>MClass_Blake2S.f90</a></td><td><p><strong>PURPOSE OF THIS MODULE</strong>: <br>
+  This module contains the <em>Blake2S</em> type and its related routines.
+  The <em>Blake2S</em> type is a <em>digest</em> type that directly extends from the
+  <a href="../module/mclass_blake2core.html#type-blake2core">Blake2Core</a>
+  type.  As a <em>concrete</em> derived type, it provides all remaining
+  deferred procedures required by all its abstract parent types. <br>
+  The <em>Blake2S</em> type implements an incremental cryptographic hash
+  function by employing the <em>BLAKE2s</em> message-digest algorithm,
+  which is optimized for 8-bit to 32-bit platforms and can produce
+  the hash output of any size between 1 and 32 bytes [1, 2].  The
+  implementation here is based mainly on the references [3, 4].
+  Unlike most of other <em>digest</em> types, the <em>Blake2S</em> type can
+  perform keyed hashing providing that a user specifies the key
+  during an initialization of the digest object by calling the
+  <em>CreateHMAC</em> method instead of the <em>Create</em> method. <br>
+   <br>
+<strong>REFERENCES</strong>: <br>
+  [1] <a href="https://www.aumasson.jp/blake/book/">J.P. Aumasson, W. Meier,
+      R.C.W. Phan, and L. Henzen. 2015. The Hash Function BLAKE. Springer. </a> <br>
+  [2] <a href="https://www.blake2.net/">BLAKE2 - Fast Secure Hashing. </a> <br>
+  [3] <a href="https://github.com/kocakosm/jblake2">JBlake2: A pure Java
+      implementation of BLAKE2 (RFC 7693). </a> <br>
+  [4] <a href="https://github.com/BLAKE2/BLAKE2">BLAKE2 official implementations. </a> <br></p></td></tr>
+<!---->			   <tr class="active"><td><a href='../module/mclass_blake3.html'>MClass_Blake3</a></td><td><a href='../sourcefile/mclass_blake3.f90.html'>MClass_Blake3.f90</a></td><td><p><strong>PURPOSE OF THIS MODULE</strong>: <br>
+  This module contains the <em>Blake3</em> type and its related routines.
+  The <em>Blake3</em> type is a <em>digest</em> type extending directly from the
+  <a href="../module/mclass_basedigest.html#type-basedigest">BaseDigest</a>
+  type.  It implements all deferred procedures required by a digest type. <br>
+  The <em>Blake3</em> type implements an incremental cryptographic hash function
+  by employing the <em>BLAKE3 message-digest</em> algorithm [1].  The implementation
+  here is based mainly on the official implementation in C [2]. <br>
+  Similar to the <em>Blake2-based</em> digest types, the <em>Blake3</em> type can perform
+  keyed hashing providing that a user specifies the key during an initialization
+  of the digest object by calling the <em>CreateHMAC</em> method in place of the <em>Create</em>
+  method.  In addition, the <em>Blake3</em> type can be used as a key derivative function
+  (KDF) by specifying the context string during an initialization of the digest
+  object with the <em>CreateKDF</em> method.  Furthermore, the <em>Blake3</em> type can be used
+  as an extendable-output function (XOF) by specifying the hash output length
+  during a finalization of the digest object where the <em>DigestWOutLen</em> method
+  is called. <br>
+   <br>
+<strong>REFERENCES</strong>: <br>
+  [1] <a href="https://github.com/BLAKE3-team/BLAKE3-specs">The BLAKE3 paper:
+      specifications, analysis, and design rationale. </a> <br>
+  [2] <a href="https://github.com/BLAKE3-team/BLAKE3">Blake3: The official Rust
+      and C implementations of BLAKE3 cryptographic hash function. </a> <br></p></td></tr>
+<!--active-->			   <tr class=""><td><a href='../module/mclass_bmwb.html'>MClass_BmwB</a></td><td><a href='../sourcefile/mclass_bmwb.f90.html'>MClass_BmwB.f90</a></td><td><p><strong>PURPOSE OF THIS MODULE</strong>: <br>
+  This module contains the <em>BmwB</em> type and its related routines.
+  The <em>BmwB</em> type is a <em>digest</em> type that directly extends from the
+  <a href="../module/mclass_mdengine.html#type-mdengine">MDEngine</a>
+  type.  As a <em>concrete</em> derived type, it provides all remaining
+  deferred procedures required by all its abstract parent types. <br>
+  The <em>BmwB</em> type implements an incremental cryptographic hash function
+  by employing a <em>Blue Midnight Wish (BMW) message-digest</em> algorithm
+  (either the <em>BMW-384</em> or the <em>BMW-512</em>) [1].  The implementation here
+  is based mainly on the <em>SPHLIB</em> implementation [2].  <br>
+  By default, the <em>BmwB</em> type employs the <em>BMW-512 message-digest</em>
+  algorithm.  However, a user can specify the <em>IsBMW384</em> flag to
+  true when initializing the digest object (by calling the <em>Create</em>
+  method) in order to use the <em>BMW-384 message-digest</em> algorithm
+  instead of the default one. <br>
+   <br>
+<strong>REFERENCES</strong>: <br>
+  [1] <a href="http://people.item.ntnu.no/~danilog/Hash/BMW-SecondRound/">
+      The Blue Midnight Wish cryptographic hash function package submitted
+      to the second round of the NIST's SHA-3 hash competition. </a> <br>
+  [2] <a href="https://github.com/pornin/sphlib">SPHLIB 3.0: A Set of
+      Implementations of Various Hash Functions, Both in C and in Java. </a> <br></p></td></tr>
+<!---->			   <tr class="active"><td><a href='../module/mclass_bmws.html'>MClass_BmwS</a></td><td><a href='../sourcefile/mclass_bmws.f90.html'>MClass_BmwS.f90</a></td><td><p><strong>PURPOSE OF THIS MODULE</strong>: <br>
+  This module contains the <em>BmwS</em> type and its related routines.
+  The <em>BmwS</em> type is a <em>digest</em> type that directly extends from the
+  <a href="../module/mclass_mdengine.html#type-mdengine">MDEngine</a>
+  type.  As a <em>concrete</em> derived type, it provides all remaining
+  deferred procedures required by all its abstract parent types. <br>
+  The <em>BmwS</em> type implements an incremental cryptographic hash function
+  by employing a <em>Blue Midnight Wish (BMW) message-digest</em> algorithm
+  (either the <em>BMW-224</em> or the <em>BMW-256</em>) [1].  The implementation here
+  is based mainly on the <em>SPHLIB</em> implementation [2].  <br>
+  By default, the <em>BmwS</em> type employs the <em>BMW-256 message-digest</em>
+  algorithm.  However, a user can specify the <em>IsBMW224</em> flag to
+  true when initializing the digest object (by calling the <em>Create</em>
+  method) in order to use the <em>BMW-224 message-digest</em> algorithm
+  instead of the default one. <br>
+   <br>
+<strong>REFERENCES</strong>: <br>
+  [1] <a href="http://people.item.ntnu.no/~danilog/Hash/BMW-SecondRound/">
+      The Blue Midnight Wish cryptographic hash function package submitted
+      to the second round of the NIST's SHA-3 hash competition. </a> <br>
+  [2] <a href="https://github.com/pornin/sphlib">SPHLIB 3.0: A Set of
+      Implementations of Various Hash Functions, Both in C and in Java. </a> <br></p></td></tr>
+<!--active-->			   <tr class=""><td><a href='../module/mclass_byteconverter.html'>MClass_ByteConverter</a></td><td><a href='../sourcefile/mclass_byteconverter.f90.html'>MClass_ByteConverter.f90</a></td><td><p><strong>PURPOSE OF THIS MODULE</strong>: <br>
+  This module contains the <em>ByteConverter</em> type and its related routines.  The
+  <em>ByteConverter</em> type performs a conversion of bit patterns between a byte
+  array (an array of 8-bit integers) and an other integer type (i.e. a 16-bit,
+  32-bit or 64-bit integer).  The <em>ByteConverter</em> type is intended to be used
+  with a general-purpose (non-cryptographic) hash function. <br>
+  It is important to note that the <em>ByteConverter</em> type MUST be initialized
+  before being used.  Otherwise, unexpected behaviors or a crash may occur.
+  The initialization provides a way to specify how the byte values are stored
+  in a byte array.  The byte values can be stored in either the big-endian
+  or the little-endian order.  If the optional flag is not specified during
+  the initialization, it assumes that the byte values are stored according to
+  machine-endian order.</p></td></tr>
+<!---->			   <tr class="active"><td><a href='../module/mclass_cshake.html'>MClass_cSHAKE</a></td><td><a href='../sourcefile/mclass_cshake.f90.html'>MClass_cSHAKE.f90</a></td><td><p><strong>PURPOSE OF THIS MODULE</strong>: <br>
+  This module contains the <em>cSHAKE</em> type and its related routines.
+  The <em>cSHAKE</em> type is a <em>Keccak-based digest</em> type that extends from
+  the <a href="../module/mclass_kp1600core.html#type-kp1600core">
+  KP1600Core</a> type.  As a <em>concrete</em> derived type, it provides
+  all remaining deferred procedures required by all its parent types. <br>
+  Like the <a href="../module/mclass_shake.html#type-shake">SHAKE</a>
+  type, the <em>cSHAKE</em> type represents two incremental cryptographic hash
+  functions and is capable of producing a variable-length hash output.
+  The <em>cSHAKE</em> type is a customizable version of the <em>SHAKE</em> type that
+  supports explicit domain separation via customization parameters.
+  For default initializations (initializing without other input arguments),
+  both types should produces the same hash output for the same input message. <br>
+  See the <a href="../module/mclass_shake.html">MClass_SHAKE</a> module for
+  the default algorithm and how to specify the desired algorithm and/or
+  the desired output length.  See the <em>Create</em> (<em>InitializeWOption</em> to be
+  exact) method for detailed explanation of customization parameters.
+  Similar to the <em>SHAKE</em> type, a user may use the <em>cSHAKE</em> type as an
+  extendable-output function (XOF) by specifying the hash output length
+  during a finalization of the digest object where the <em>DigestWOutLen</em>
+  method is called.  This method will ignore the output length specified
+  during initialization if the specified length is valid (greater than or
+  equal to 1). <br>
+   <br>
+<strong>REFERENCES</strong>: <br>
+  [1] <a href="https://doi.org/10.6028/NIST.FIPS.202">SHA-3 Standard:
+      Permutation-Based Hash and Extendable-Output Functions. </a> <br>
+  [2] <a href="https://github.com/XKCP/XKCP">The eXtended Keccak Code Package. </a> <br></p></td></tr>
+<!--active-->			   <tr class=""><td><a href='../module/mclass_cubehash.html'>MClass_CubeHash</a></td><td><a href='../sourcefile/mclass_cubehash.f90.html'>MClass_CubeHash.f90</a></td><td><p><strong>PURPOSE OF THIS MODULE</strong>: <br>
+  This module contains the <em>CubeHash</em> type and its related routines.
+  The <em>CubeHash</em> type is a <em>digest</em> type that directly extends from the
+  <a href="../module/mclass_mdengine.html#type-mdengine">MDEngine</a>
+  type.  As a <em>concrete</em> derived type, it provides all remaining
+  deferred procedures required by all its abstract parent types. <br>
+  The <em>CubeHash</em> type implements an incremental cryptographic hash
+  function by employing the <em>CubeHash message-digest</em> algorithm [1].
+  The implementation here is mainly based on the references [2]. <br>
+  The <em>CubeHash</em> type represents four cryptographic hash functions:
+  the <em>CubeHash-224</em>, <em>CubeHash-256</em>, <em>CubeHash-384</em>, and <em>CubeHash-512</em>
+  hash functions.  By default, the <em>CubeHash</em> type represents the
+  <em>CubeHash-512</em> hash function.  However, a user can specify the
+  <em>Security</em> argument (to one of the four applicable values: 224, 256,
+  384 and 512) when initializing the digest object in order to use a
+  different hash function and get a different hash output size. <br>
+   <br>
+<strong>REFERENCES</strong>: <br>
+  [1] <a href="http://cubehash.cr.yp.to/">CubeHash: a simple hash function. </a> <br>
+  [2] <a href="https://github.com/pornin/sphlib">SPHLIB 3.0: A Set of
+      Implementations of Various Hash Functions, Both in C and in Java. </a> <br></p></td></tr>
+<!---->			   <tr class="active"><td><a href='../module/mclass_echob.html'>MClass_EChoB</a></td><td><a href='../sourcefile/mclass_echob.f90.html'>MClass_EchoB.f90</a></td><td><p><strong>PURPOSE OF THIS MODULE</strong>: <br>
+  This module contains the <em>EChoB</em> type and its related routines.
+  The <em>EChoB</em> type is a <em>digest</em> type that directly extends from the
+  <a href="../module/mclass_mdengine.html#type-mdengine">MDEngine</a>
+  type.  As a <em>concrete</em> derived type, it provides all remaining
+  deferred procedures required by all its abstract parent types. <br>
+  The <em>EChoB</em> type implements an incremental cryptographic hash function
+  by employing either the <em>ECHO-384</em> or the <em>ECHO-512</em> algorithm [1].  The
+  implementation here is based mainly on the <em>SPHLIB</em> implementation [2].  <br>
+  By default, the <em>EChoB</em> type employs the <em>ECHO-512 message-digest</em>
+  algorithm.  However, a user can specify the <em>IsECHO384</em> flag to
+  true when initializing the digest object (by calling the <em>Create</em>
+  method) in order to use the <em>ECHO-384 message-digest</em> algorithm
+  instead of the default one. <br>
+   <br>
+<strong>REFERENCES</strong>: <br>
+  [1] <a href="https://web.archive.org/web/20180315075044/http://crypto.rd.francetelecom.com/ECHO/">
+      ECHO hash function. </a> <br>
+  [2] <a href="https://github.com/pornin/sphlib">SPHLIB 3.0: A Set of
+      Implementations of Various Hash Functions, Both in C and in Java. </a> <br></p></td></tr>
+<!--active-->			   <tr class=""><td><a href='../module/mclass_echos.html'>MClass_EChoS</a></td><td><a href='../sourcefile/mclass_echos.f90.html'>MClass_EchoS.f90</a></td><td><p><strong>PURPOSE OF THIS MODULE</strong>: <br>
+  This module contains the <em>EChoS</em> type and its related routines.
+  The <em>EChoS</em> type is a <em>digest</em> type that directly extends from the
+  <a href="../module/mclass_mdengine.html#type-mdengine">MDEngine</a>
+  type.  As a <em>concrete</em> derived type, it provides all remaining
+  deferred procedures required by all its abstract parent types. <br>
+  The <em>EChoS</em> type implements an incremental cryptographic hash function
+  by employing  either the <em>ECHO-224</em> or the <em>ECHO-256</em> algorithm [1].  The
+  implementation here is based mainly on the <em>SPHLIB</em> implementation [2].  <br>
+  By default, the <em>EChoS</em> type employs the <em>ECHO-256 message-digest</em>
+  algorithm.  However, a user can specify the <em>IsECHO224</em> flag to
+  true when initializing the digest object (by calling the <em>Create</em>
+  method) in order to use the <em>ECHO-224 message-digest</em> algorithm
+  instead of the default one. <br>
+   <br>
+<strong>REFERENCES</strong>: <br>
+  [1] <a href="https://web.archive.org/web/20180315075044/http://crypto.rd.francetelecom.com/ECHO/">
+      ECHO hash function. </a> <br>
+  [2] <a href="https://github.com/pornin/sphlib">SPHLIB 3.0: A Set of
+      Implementations of Various Hash Functions, Both in C and in Java. </a> <br></p></td></tr>
+<!---->			   <tr class="active"><td><a href='../module/mclass_farmnahasher64.html'>MClass_FarmNaHasher64</a></td><td><a href='../sourcefile/mclass_farmnahasher64.f90.html'>MClass_FarmNaHasher64.f90</a></td><td><p><strong>PURPOSE OF THIS MODULE</strong>: <br>
+  This module contains the <em>FarmNaHasher64</em> type and its related routines.
+  The <em>FarmNaHasher64</em> type is a hasher type that extends directly from the
+  <a href="../module/mclass_hasher64.html#type-hasher64">Hasher64</a> type.
+  It provides all deferred procedures required by a <em>Hasher64</em> class and
+  outputs the hash value as a 64-bit integer. <br>
+  The <em>FarmNaHasher64</em> type employs the <em>FarmNa</em> hash algorithm for 64-bit integer
+  output by Google Inc [1, 2].  As a hasher, it can be used to compute the
+  hash value incrementally.  It also provides a method to compute the hash
+  value directly (i.e. non-incrementally).  The following code snippet shows
+  a typical usage of the hasher.
+<br>
+<Pre><Code style="color:MidnightBlue;">
+  ! first, initialize the hasher (once)
+  CALL Hasher%Initialize(Seed)
+  ! then, put data into the hasher (a number of times)
+  CALL Hasher%Update(Input, InpSize)
+              ...
+              ...
+              ...
+  ! finally, get the hash value from the hasher (once)
+  HashCode = Hasher%Finalize()
+  </Code></Pre></p><a href="../module/mclass_farmnahasher64.html" class="pull-right"><emph>Read more&hellip;</emph></a></td></tr>
+<!--active-->			   <tr class=""><td><a href='../module/mclass_farmuohasher64.html'>MClass_FarmUoHasher64</a></td><td><a href='../sourcefile/mclass_farmuohasher64.f90.html'>MClass_FarmUoHasher64.f90</a></td><td><p><strong>PURPOSE OF THIS MODULE</strong>: <br>
+  This module contains the <em>FarmUoHasher64</em> type and its related routines.
+  The <em>FarmUoHasher64</em> type is a hasher type that extends directly from the
+  <a href="../module/mclass_hasher64.html#type-hasher64">Hasher64</a> type.
+  It provides all deferred procedures required by a <em>Hasher64</em> class and
+  outputs the hash value as a 64-bit integer. <br>
+  The <em>FarmUoHasher64</em> type employs the <em>FarmUo</em> hash algorithm for 64-bit integer
+  output by Google Inc [1, 2].  As a hasher, it can be used to compute the
+  hash value incrementally.  It also provides a method to compute the hash
+  value directly (i.e. non-incrementally).  The following code snippet shows
+  a typical usage of the hasher.
+<br>
+<Pre><Code style="color:MidnightBlue;">
+  ! first, initialize the hasher (once)
+  CALL Hasher%Initialize(Seed)
+  ! then, put data into the hasher (a number of times)
+  CALL Hasher%Update(Input, InpSize)
+              ...
+              ...
+              ...
+  ! finally, get the hash value from the hasher (once)
+  HashCode = Hasher%Finalize()
+  </Code></Pre></p><a href="../module/mclass_farmuohasher64.html" class="pull-right"><emph>Read more&hellip;</emph></a></td></tr>
+<!---->			   <tr class="active"><td><a href='../module/mclass_fugue.html'>MClass_Fugue</a></td><td><a href='../sourcefile/mclass_fugue.f90.html'>MClass_Fugue.f90</a></td><td><p><strong>PURPOSE OF THIS MODULE</strong>: <br>
+  This module contains the <em>Fugue</em> type and its related routines.
+  The <em>Fugue</em> type is a <em>digest</em> type that extends directly from the
+  <a href="../module/mclass_basedigest.html#type-basedigest">BaseDigest</a>
+  type.  It implements all deferred procedures required by a digest type. <br>
+  The <em>Fugue</em> type implements an incremental cryptographic hash
+  function by employing the <em>Fugue message-digest</em> algorithm [1].
+  The implementation here is mainly based on the references [2]. <br>
+  The <em>Fugue</em> type represents four cryptographic hash functions: the
+  <em>Fugue-224</em>, <em>Fugue-256</em>, <em>Fugue-384</em>, and <em>Fugue-512</em> hash functions.
+  By default, the <em>Fugue</em> type represents the <em>Fugue-256</em> hash function.
+  However, a user can specify the <em>Security</em> argument (to one of the
+  four applicable values: 224, 256, 384 and 512) when initializing the
+  digest object in order to use a different hash function and get a
+  different hash output size. <br>
+   <br>
+<strong>REFERENCES</strong>: <br>
+  [1] <a href="https://web.archive.org/web/20170604091329/http://csrc.nist.gov/groups/ST/hash/sha-3/Round2/documents/Fugue_Round2_Update.zip">
+      The Hash Function "Fugue". </a> <br>
+  [2] <a href="https://github.com/pornin/sphlib">SPHLIB 3.0: A Set of
+      Implementations of Various Hash Functions, Both in C and in Java. </a> <br></p></td></tr>
+<!--active-->			   <tr class=""><td><a href='../module/mclass_groestlb.html'>MClass_GroestlB</a></td><td><a href='../sourcefile/mclass_groestlb.f90.html'>MClass_GroestlB.f90</a></td><td><p><strong>PURPOSE OF THIS MODULE</strong>: <br>
+  This module contains the <em>GroestlB</em> type and its related routines.
+  The <em>GroestlB</em> type is a <em>digest</em> type that directly extends from the
+  <a href="../module/mclass_mdengine.html#type-mdengine">MDEngine</a>
+  type.  As a <em>concrete</em> derived type, it provides all remaining
+  deferred procedures required by all its abstract parent types. <br>
+  The <em>GroestlB</em> type implements an incremental cryptographic hash function
+  by employing either the <em>Groestl-384</em> or the <em>Groestl-512 message-digest</em>
+  algorithm [1].  The implementation here is based mainly on the <em>SPHLIB</em>
+  implementation [2].  <br>
+  By default, the <em>GroestlB</em> type employs the <em>Groestl-512 message-digest</em>
+  algorithm.  However, a user can specify the <em>IsGroestl384</em> flag to
+  true when initializing the digest object (by calling the <em>Create</em>
+  method) in order to use the <em>Groestl-384 message-digest</em> algorithm
+  instead of the default one. <br>
+   <br>
+<strong>REFERENCES</strong>: <br>
+  [1] <a href="http://www.groestl.info/">Grostl - a SHA-3 candidate. </a> <br>
+  [2] <a href="https://github.com/pornin/sphlib">SPHLIB 3.0: A Set of
+      Implementations of Various Hash Functions, Both in C and in Java. </a> <br></p></td></tr>
+<!---->			   <tr class="active"><td><a href='../module/mclass_groestls.html'>MClass_GroestlS</a></td><td><a href='../sourcefile/mclass_groestls.f90.html'>MClass_GroestlS.f90</a></td><td><p><strong>PURPOSE OF THIS MODULE</strong>: <br>
+  This module contains the <em>GroestlS</em> type and its related routines.
+  The <em>GroestlS</em> type is a <em>digest</em> type that directly extends from the
+  <a href="../module/mclass_mdengine.html#type-mdengine">MDEngine</a>
+  type.  As a <em>concrete</em> derived type, it provides all remaining
+  deferred procedures required by all its abstract parent types. <br>
+  The <em>GroestlS</em> type implements an incremental cryptographic hash function
+  by employing either the <em>Groestl-224</em> or the <em>Groestl-256 message-digest</em>
+  algorithm [1].  The implementation here is based mainly on the <em>SPHLIB</em>
+  implementation [2].  <br>
+  By default, the <em>GroestlS</em> type employs the <em>Groestl-256 message-digest</em>
+  algorithm.  However, a user can specify the <em>IsGroestl224</em> flag to
+  true when initializing the digest object (by calling the <em>Create</em>
+  method) in order to use the <em>Groestl-224 message-digest</em> algorithm
+  instead of the default one. <br>
+   <br>
+<strong>REFERENCES</strong>: <br>
+  [1] <a href="http://www.groestl.info/">Grostl - a SHA-3 candidate. </a> <br>
+  [2] <a href="https://github.com/pornin/sphlib">SPHLIB 3.0: A Set of
+      Implementations of Various Hash Functions, Both in C and in Java. </a> <br></p></td></tr>
+<!--active-->			   <tr class=""><td><a href='../module/mclass_halfsip24hasher32.html'>MClass_HalfSip24Hasher32</a></td><td><a href='../sourcefile/mclass_halfsip24hasher32.f90.html'>MClass_HalfSip24Hasher32.f90</a></td><td><p><strong>PURPOSE OF THIS MODULE</strong>: <br>
+  This module contains the <em>HalfSip24Hasher32</em> type and its related routines.
+  The <em>HalfSip24Hasher32</em> type is a hasher type that extends directly from the
+  <a href="../module/mclass_hasher32.html#type-hasher32">Hasher32</a> type.
+  It provides all deferred procedures required by a <em>Hasher32</em> class and
+  outputs the hash value as a 32-bit integer. <br>
+  The <em>HalfSip24Hasher32</em> type employs the <em>HalfSip24</em> hash algorithm for
+  32-bit integer output by Jean-Philippe Aumasson [1].  As a hasher, it can be
+  used to compute the hash value incrementally.  It also provides a method to
+  compute the hash value directly (i.e. non-incrementally).  The following code
+  snippet illustrates a typical usage of the hasher.
+<br>
+<Pre><Code style="color:MidnightBlue;">
+  ! first, initialize the hasher (once)
+  CALL Hasher%Initialize(Seed)
+  ! then, put data into the hasher (a number of times)
+  CALL Hasher%Update(Input, InpSize)
+              ...
+              ...
+              ...
+  ! finally, get the hash value from the hasher (once)
+  HashCode = Hasher%Finalize()
+  </Code></Pre></p><a href="../module/mclass_halfsip24hasher32.html" class="pull-right"><emph>Read more&hellip;</emph></a></td></tr>
+<!---->			   <tr class="active"><td><a href='../module/mclass_hamsib.html'>MClass_HamsiB</a></td><td><a href='../sourcefile/mclass_hamsib.f90.html'>MClass_HamsiB.f90</a></td><td><p><strong>PURPOSE OF THIS MODULE</strong>: <br>
+  This module contains the <em>HamsiB</em> type and its related routines.
+  The <em>HamsiB</em> type is a <em>digest</em> type that extends directly from the
+  <a href="../module/mclass_basedigest.html#type-basedigest">BaseDigest</a>
+  type.  It implements all deferred procedures required by a digest type. <br>
+  The <em>HamsiB</em> type implements an incremental cryptographic hash function
+  by employing either the <em>Hamsi-384</em> or the <em>Hamsi-512 message-digest</em>
+  algorithm [1].  The implementation here is based mainly on the <em>SPHLIB</em>
+  implementation [2].  <br>
+  By default, the <em>HamsiB</em> type employs the <em>Hamsi-512 message-digest</em>
+  algorithm.  However, a user can specify the <em>IsHamsi384</em> flag to
+  true when initializing the digest object (by calling the <em>Create</em>
+  method) in order to use the <em>Hamsi-384 message-digest</em> algorithm
+  instead of the default one. <br>
+   <br>
+<strong>REFERENCES</strong>: <br>
+  [1] <a href="https://www.esat.kuleuven.be/cosic/publications/article-1203.pdf">
+      The Hash Function Hamsi. </a> <br>
+  [2] <a href="https://github.com/pornin/sphlib">SPHLIB 3.0: A Set of
+      Implementations of Various Hash Functions, Both in C and in Java. </a> <br></p></td></tr>
+<!--active-->			   <tr class=""><td><a href='../module/mclass_hamsis.html'>MClass_HamsiS</a></td><td><a href='../sourcefile/mclass_hamsis.f90.html'>MClass_HamsiS.f90</a></td><td><p><strong>PURPOSE OF THIS MODULE</strong>: <br>
+  This module contains the <em>HamsiS</em> type and its related routines.
+  The <em>HamsiS</em> type is a <em>digest</em> type that extends directly from the
+  <a href="../module/mclass_basedigest.html#type-basedigest">BaseDigest</a>
+  type.  It implements all deferred procedures required by a digest type. <br>
+  The <em>HamsiS</em> type implements an incremental cryptographic hash function
+  by employing either the <em>Hamsi-224</em> or the <em>Hamsi-256 message-digest</em>
+  algorithm [1].  The implementation here is based mainly on the <em>SPHLIB</em>
+  implementation [2].  <br>
+  By default, the <em>HamsiS</em> type employs the <em>Hamsi-256 message-digest</em>
+  algorithm.  However, a user can specify the <em>IsHamsi224</em> flag to
+  true when initializing the digest object (by calling the <em>Create</em>
+  method) in order to use the <em>Hamsi-224 message-digest</em> algorithm
+  instead of the default one. <br>
+   <br>
+<strong>REFERENCES</strong>: <br>
+  [1] <a href="https://www.esat.kuleuven.be/cosic/publications/article-1203.pdf">
+      The Hash Function Hamsi. </a> <br>
+  [2] <a href="https://github.com/pornin/sphlib">SPHLIB 3.0: A Set of
+      Implementations of Various Hash Functions, Both in C and in Java. </a> <br></p></td></tr>
+<!---->			   <tr class="active"><td><a href='../module/mclass_hasher32.html'>MClass_Hasher32</a></td><td><a href='../sourcefile/mclass_hasher32.f90.html'>MClass_Hasher32.f90</a></td><td><p><strong>PURPOSE OF THIS MODULE</strong>: <br>
+  This module contains the <em>Hasher32</em> type and its related routines.
+  The <em>Hasher32</em> type is an abstract type that extends from the
+  <a href="../module/mclass_basehasher.html#type-basehasher">BaseHasher</a>
+  type.  It represents a 32-bit integer hasher where additional methods,
+  specific for 32-bit integer hash functions, are defined to complete
+  the API for an incremental non-cryptographic hash function.  All
+  hashers that output a hash value as a 32-bit integer should extends
+  from this abstract type. <br>
+  <br>
+ <strong>USAGE</strong>: <br>
+  Although there are a number of methods provided, several of them are
+  intended for internal use (by developers).  Only five methods are
+  intentionally provided for users including: <br>
+  - the <em>Initialize</em> method that initializes the hasher, <br>
+  - the <em>Update</em> method that inputs data into the hasher, <br>
+  - the <em>Finalize</em> method that returns the hash value, <br>
+  - the <em>GetName</em> method that returns the hasher name, and <br>
+  - the <em>HashDirect</em> method that compute the hash value directly. <br>
+  The first three methods mentioned are provided for the incremental
+  hash computations where the <em>Initialize</em> method is first called
+  (once), the <em>Update</em> method is then called (many times), and the
+  <em>Finalize</em> method is finally called (once). <br>
+  If the <em>Update</em> method is to be called only one time, then the
+  <em>HashDirect</em> method (for non-incremental hash computations) should
+  be employed in place of those three methods.</p></td></tr>
+<!--active-->			   <tr class=""><td><a href='../module/mclass_hasher64.html'>MClass_Hasher64</a></td><td><a href='../sourcefile/mclass_hasher64.f90.html'>MClass_Hasher64.f90</a></td><td><p><strong>PURPOSE OF THIS MODULE</strong>: <br>
+  This module contains the <em>Hasher64</em> type and its related routines.
+  The <em>Hasher64</em> type is an abstract type that extends from the
+  <a href="../module/mclass_basehasher.html#type-basehasher">BaseHasher</a>
+  type.  It represents a 64-bit integer hasher where additional methods,
+  specific for 64-bit integer hash functions, are defined to complete
+  the API for an incremental non-cryptographic hash function.  All
+  hashers that output a hash value as a 64-bit integer should extends
+  from this abstract type. <br>
+  <br>
+ <strong>USAGE</strong>: <br>
+  Although there are a number of methods provided, several of them are
+  intended for internal use (by developers).  Only five methods are
+  intentionally provided for users including: <br>
+  - the <em>Initialize</em> method that initializes the hasher, <br>
+  - the <em>Update</em> method that inputs data into the hasher, <br>
+  - the <em>Finalize</em> method that returns the hash value, <br>
+  - the <em>GetName</em> method that returns the hasher name, and <br>
+  - the <em>HashDirect</em> method that compute the hash value directly. <br>
+  The first three methods mentioned are provided for the incremental
+  hash computations where the <em>Initialize</em> method is first called
+  (once), the <em>Update</em> method is then called (many times), and the
+  <em>Finalize</em> method is finally called (once). <br>
+  If the <em>Update</em> method is to be called only one time, then the
+  <em>HashDirect</em> method (for non-incremental hash computations) should
+  be employed in place of those three methods.</p></td></tr>
+<!---->			   <tr class="active"><td><a href='../module/mclass_jhdigest.html'>MClass_JHDigest</a></td><td><a href='../sourcefile/mclass_jhdigest.f90.html'>MClass_JHDigest.f90</a></td><td><p><strong>PURPOSE OF THIS MODULE</strong>: <br>
+  This module contains the <em>JHDigest</em> type and its related routines.
+  The <em>JHDigest</em> type is a <em>digest</em> type that directly extends from the
+  <a href="../module/mclass_mdengine.html#type-mdengine">MDEngine</a>
+  type.  As a <em>concrete</em> derived type, it provides all remaining
+  deferred procedures required by all its abstract parent types. <br>
+  The <em>JHDigest</em> type implements an incremental cryptographic hash
+  function by employing the <em>JH message-digest</em> algorithm [1].  The
+  implementation here is mainly based on the references [2]. <br>
+  The <em>JHDigest</em> type represents four cryptographic hash functions:
+  the <em>JH-224</em>, <em>JH-256</em>, <em>JH-384</em>, and <em>JH-512</em> hash functions.  By
+  default, the <em>JHDigest</em> type represents the <em>JH-256</em> hash function.
+  However, a user can specify the <em>Security</em> argument (to one of the
+  four applicable values: 224, 256, 384 and 512) when initializing the
+  digest object in order to use a different hash function and get a
+  different hash output size. <br>
+   <br>
+<strong>REFERENCES</strong>: <br>
+  [1] <a href="https://www3.ntu.edu.sg/home/wuhj/research/jh/">Hash Function JH. </a> <br>
+  [2] <a href="https://github.com/pornin/sphlib">SPHLIB 3.0: A Set of
+      Implementations of Various Hash Functions, Both in C and in Java. </a> <br></p></td></tr>
+<!--active-->			   <tr class=""><td><a href='../module/mclass_kangaroo.html'>MClass_Kangaroo</a></td><td><a href='../sourcefile/mclass_kangaroo.f90.html'>MClass_Kangaroo.f90</a></td><td><p><strong>PURPOSE OF THIS MODULE</strong>: <br>
+  This module contains the <em>Kangaroo</em> type and its related routines.
+  The <em>Kangaroo</em> type is a <em>digest</em> type extending directly from the
+  <a href="../module/mclass_basedigest.html#type-basedigest">BaseDigest</a>
+  type.  It implements all deferred procedures required by a digest type. <br>
+  As a <em>Keccak-based digest</em> type, the <em>Kangaroo</em> type utilizes the
+  <a href="../module/mclass_kp1600sponge.html#type-kp1600sponge">
+  KP1600Sponge</a> type, similar to other <em>Keccak-based digest</em> types.
+  However, unlike other <em>Keccak-based digest</em> types, the <em>Kangaroo</em> type does
+  not extends from the <a href="../module/mclass_kp1600core.html#type-kp1600core">
+  KP1600Core</a> type, due to different designs of internal structures. <br>
+  Similar to the <a href="../module/mclass_shake.html#type-shake">SHAKE</a>
+  type, the <em>Kangaroo</em> type represents two incremental cryptographic hash
+  functions (<em>KangarooTwelve</em> and <em>MarsupilamiFourteen</em>) and is capable of
+  producing a variable-length hash output.  By default, the <em>Kangaroo</em> type
+  employs the <em>KangarooTwelve</em> hash function as a default algorithm.  However,
+  a user can specify the <em>IsMarsupilami14</em> flag to true when initializing the
+  digest object in order to use the <em>MarsupilamiFourteen</em> hash function instead
+  of the default one.  As previously mentioned, the <em>Kangaroo</em> type is capable
+  of producing variable-length hash output.  Therefore, a user can specify an
+  output length through the optional <em>OutputLen</em> argument when initializing the
+  digest object.  If the optional argument is NOT present, the <em>Kangaroo</em> type
+  produces the output length based on a default length for a specific algorithm.
+  In addition, a user may use the <em>Kangaroo</em> type as an extendable-output function
+  (XOF) by specifying the hash output length during a finalization of the digest
+  object where the <em>DigestWOutLen</em> method is called.  This method will ignore the
+  output length specified during initialization if the specified length is valid
+  (greater than or equal to 1). <br>
+   <br>
+<strong>REFERENCES</strong>: <br>
+  [1] <a href="https://keccak.team/kangarootwelve.html">KangarooTwelve:
+      fast hashing based on Keccak-p. </a> <br>
+  [2] <a href="https://github.com/XKCP/XKCP">The eXtended Keccak Code Package. </a> <br></p></td></tr>
+<!---->			   <tr class="active"><td><a href='../module/mclass_keccak.html'>MClass_Keccak</a></td><td><a href='../sourcefile/mclass_keccak.f90.html'>MClass_Keccak.f90</a></td><td><p><strong>PURPOSE OF THIS MODULE</strong>: <br>
+  This module contains the <em>Keccak</em> type and its related routines.
+  The <em>Keccak</em> type is a <em>Keccak-based digest</em> type that extends from
+  the <a href="../module/mclass_kp1600core.html#type-kp1600core">
+  KP1600Core</a> type.  As a <em>concrete</em> derived type, it provides
+  all remaining deferred procedures required by all its parent types. <br>
+  Similar to the <a href="../module/mclass_sha3.html#type-sha3">SHA3</a>
+  type, the <em>Keccak</em> type represents two families of incremental
+  cryptographic hash functions: the <em>Keccak</em> and the <em>SHA-3</em> families.
+  Both types are functionally the same and should provide the same
+  hash output if they are initialized to employ the same message-digest
+  algorithm (e.g. SHA3-256).  However, they uses completely different
+  implementations. <br>
+  As the name suggested, the <em>Keccak</em> type represents the <em>Keccak</em> family
+  by default.  However, a user can specify the <em>IsSHA3</em> flag to true
+  when initializing the digest object (by calling the <em>Create</em> method)
+  in order to use the padding strategy of the <em>SHA-3</em> family.  Also,
+  the <em>Keccak</em> type employs the Keccak-256 hash function as a default
+  algorithm.  This implies that the hash output has the output size
+  and the strength of security (against pre-image attack) of 256 bits.
+  The user can also specify the <em>Security</em> argument (to one of the four
+  applicable values: 224, 256, 384 and 512) when initializing the digest
+  object in order to use a different algorithm and get a different hash
+  output size. <br>
+   <br>
+<strong>REFERENCES</strong>: <br>
+  [1] <a href="https://doi.org/10.6028/NIST.FIPS.202">SHA-3 Standard:
+      Permutation-Based Hash and Extendable-Output Functions. </a> <br>
+  [2] <a href="https://github.com/XKCP/XKCP">The eXtended Keccak Code Package. </a> <br></p></td></tr>
+<!--active-->			   <tr class=""><td><a href='../module/mclass_komihasher64.html'>MClass_KomiHasher64</a></td><td><a href='../sourcefile/mclass_komihasher64.f90.html'>MClass_KomiHasher64.f90</a></td><td><p><strong>PURPOSE OF THIS MODULE</strong>: <br>
+  This module contains the <em>KomiHasher64</em> type and its related routines.
+  The <em>KomiHasher64</em> type is a hasher type that extends directly from the
+  <a href="../module/mclass_hasher64.html#type-hasher64">Hasher64</a> type.
+  It provides all deferred procedures required by a <em>Hasher64</em> class and
+  outputs the hash value as a 64-bit integer. <br>
+  The <em>KomiHasher64</em> type employs the <em>Komi</em> hash algorithm for 64-bit integer
+  output by Aleksey Vaneev [1].  As a hasher, it can be used to compute the
+  hash value incrementally.  It also provides a method to compute the hash
+  value directly (i.e. non-incrementally).  The following code snippet shows
+  a typical usage of the hasher.
+<br>
+<Pre><Code style="color:MidnightBlue;">
+  ! first, initialize the hasher (once)
+  CALL Hasher%Initialize(Seed)
+  ! then, put data into the hasher (a number of times)
+  CALL Hasher%Update(Input, InpSize)
+              ...
+              ...
+              ...
+  ! finally, get the hash value from the hasher (once)
+  HashCode = Hasher%Finalize()
+  </Code></Pre></p><a href="../module/mclass_komihasher64.html" class="pull-right"><emph>Read more&hellip;</emph></a></td></tr>
+<!---->			   <tr class="active"><td><a href='../module/mclass_kp1600core.html'>MClass_KP1600Core</a></td><td><a href='../sourcefile/mclass_kp1600core.f90.html'>MClass_KP1600Core.f90</a></td><td><p><strong>PURPOSE OF THIS MODULE</strong>: <br>
+  This module contains the <em>KP1600Core</em> type and its related routines.
+  The <em>KP1600Core</em> type is an abstract <em>digest</em> type extending directly
+  from the <a href="../module/mclass_basedigest.html#type-basedigest">
+  BaseDigest</a> type.  It implements additional methods to provide an
+  extended API for an incremental cryptographic hash function.  Several
+  of these additional methods are the same as those methods defined by the
+  <a href="../module/mclass_mdengine.html#type-mdengine">MDEngine</a> type. <br>
+  By design, the <em>KP1600Core</em> type is intended to be used as a parent
+  type for all <em>Keccak-based</em> digest types.  The <em>KP1600Core</em> type
+  provides an implementation of an incremental cryptographic hash function
+  by employing the <em>Keccak message-digest</em> algorithm with the internal
+  state size of 1600 bits (i.e. Keccak-p[1600, nRound]) [1].  It takes care
+  core operations (i.e. some of the deferred procedures and additional methods
+  provided) required by a <em>Keccak-based digest</em> object where its subtypes must
+  take care the remaining operations (i.e the rest of the deferred procedures).
+  The <em>KP1600Core</em> type utilizes the <a href="../module/mclass_kp1600sponge.html#type-kp1600sponge">
+  KP1600Sponge</a> type, which provides all basic operations of the
+  <em>Keccak-p[1600, nRound]</em> algorithm.  The implementation of the <em>KP1600Sponge</em>
+  type is mainly based on the <em>eXtended Keccak Code Package</em> (XKCP) [2].<br>
+   <br>
+<strong>REFERENCES</strong>: <br>
+  [1] <a href="https://doi.org/10.6028/NIST.FIPS.202">SHA-3 Standard:
+      Permutation-Based Hash and Extendable-Output Functions. </a> <br>
+  [2] <a href="https://github.com/XKCP/XKCP">The eXtended Keccak Code Package. </a> <br></p></td></tr>
+<!--active-->			   <tr class=""><td><a href='../module/mclass_kp1600sponge.html'>MClass_KP1600Sponge</a></td><td><a href='../sourcefile/mclass_kp1600sponge.f90.html'>MClass_KP1600Sponge.f90</a></td><td><p><strong>PURPOSE OF THIS MODULE</strong>: <br>
+  This module contains the <em>KP1600Sponge</em> type and its related routines.
+  The <em>KP1600Sponge</em> type is a derived type representing a sponge instance
+  for use with the so-called <em>Keccak Sponge</em> function.  It provides basic
+  operations of the <em>Keccak-p[1600, nRound]</em> message-digest algorithm, which
+  has the internal state size of 1600 bits.  The <em>Keccak Sponge</em> function,
+  the <em>Sponge</em> construction and other related information are described in
+  FIPS 202 [1].  The implementation here is mainly based on the <em>eXtended
+  Keccak Code Package</em> (XKCP) [2].  The <em>KP1600Sponge</em> type is provided
+  to help the development and implementation of the <em>Keccak-based</em> digest
+  types.  <br>
+   <br>
+<strong>REFERENCES</strong>: <br>
+  [1] <a href="https://doi.org/10.6028/NIST.FIPS.202">SHA-3 Standard:
+      Permutation-Based Hash and Extendable-Output Functions. </a> <br>
+  [2] <a href="https://github.com/XKCP/XKCP">The eXtended Keccak Code Package. </a> <br></p></td></tr>
+<!---->			   <tr class="active"><td><a href='../module/mclass_luffa.html'>MClass_Luffa</a></td><td><a href='../sourcefile/mclass_luffa.f90.html'>MClass_Luffa.f90</a></td><td><p><strong>PURPOSE OF THIS MODULE</strong>: <br>
+  This module contains the <em>Luffa</em> type and its related routines.
+  The <em>Luffa</em> type is a <em>digest</em> type that directly extends from the
+  <a href="../module/mclass_mdengine.html#type-mdengine">MDEngine</a>
+  type.  As a <em>concrete</em> derived type, it provides all remaining
+  deferred procedures required by all its abstract parent types. <br>
+  The <em>Luffa</em> type implements an incremental cryptographic hash
+  function by employing the <em>Luffa message-digest</em> algorithm [1].  The
+  implementation here is mainly based on the references [2]. <br>
+  The <em>Luffa</em> type represents four cryptographic hash functions:
+  the <em>Luffa-224</em>, <em>Luffa-256</em>, <em>Luffa-384</em>, and <em>Luffa-512</em> hash
+  functions.  By default, the <em>Luffa</em> type represents the <em>Luffa-256</em>
+  hash function.  However, a user can specify the <em>Security</em> argument
+  (to one of the four applicable values: 224, 256, 384 and 512) when
+  initializing the digest object in order to use a different hash
+  function and get a different hash output size. <br>
+   <br>
+<strong>REFERENCES</strong>: <br>
+  [1] <a href="https://www.hitachi.com/rd/yrl/crypto/luffa/">The Hash Function
+      Family Luffa (Round 2 Archive). </a> <br>
+  [2] <a href="https://github.com/pornin/sphlib">SPHLIB 3.0: A Set of
+      Implementations of Various Hash Functions, Both in C and in Java. </a> <br></p></td></tr>
+<!--active-->			   <tr class=""><td><a href='../module/mclass_md2.html'>MClass_MD2</a></td><td><a href='../sourcefile/mclass_md2.f90.html'>MClass_MD2.f90</a></td><td><p><strong>PURPOSE OF THIS MODULE</strong>: <br>
+  This module contains the <em>MD2</em> type and its related routines.
+  The <em>MD2</em> type is a <em>digest</em> type that directly extends from the
+  <a href="../module/mclass_mdengine.html#type-mdengine">MDEngine</a>
+  type.  As a <em>concrete</em> derived type, it provides all remaining
+  deferred procedures required by all its abstract parent types. <br>
+  The <em>MD2</em> type implements an incremental cryptographic hash
+  function by employing the <em>MD2 message-digest</em> algorithm [1]
+  where the algorithm is described in RFC 1319.  The implementation
+  here is mainly based on the <em>SPHLIB</em> implementation [2].  <br>
+   <br>
+<strong>REFERENCES</strong>: <br>
+  [1] <a href="https://datatracker.ietf.org/doc/html/rfc1319">RFC1319:
+      The MD2 Message-Digest Algorithm. </a> <br>
+  [2] <a href="https://github.com/pornin/sphlib">SPHLIB 3.0: A Set of
+      Implementations of Various Hash Functions, Both in C and in Java. </a> <br></p></td></tr>
+<!---->			   <tr class="active"><td><a href='../module/mclass_md4.html'>MClass_MD4</a></td><td><a href='../sourcefile/mclass_md4.f90.html'>MClass_MD4.f90</a></td><td><p><strong>PURPOSE OF THIS MODULE</strong>: <br>
+  This module contains the <em>MD4</em> type and its related routines.
+  The <em>MD4</em> type is a <em>digest</em> type that directly extends from the
+  <a href="../module/mclass_mdhelper.html#type-mdhelper">MDHelper</a>
+  type.  As a <em>concrete</em> derived type, it provides all remaining
+  deferred procedures required by all its abstract parent types. <br>
+  The <em>MD4</em> type implements an incremental cryptographic hash
+  function by employing the <em>MD4 message-digest</em> algorithm [1]
+  where the algorithm is described in RFC 1320.  The implementation
+  here is mainly based on the <em>SPHLIB</em> implementation [2].  <br>
+   <br>
+<strong>REFERENCES</strong>: <br>
+  [1] <a href="https://datatracker.ietf.org/doc/html/rfc1320">RFC1320:
+      The MD4 Message-Digest Algorithm. </a> <br>
+  [2] <a href="https://github.com/pornin/sphlib">SPHLIB 3.0: A Set of
+      Implementations of Various Hash Functions, Both in C and in Java. </a> <br></p></td></tr>
+<!--active-->			   <tr class=""><td><a href='../module/mclass_md5.html'>MClass_MD5</a></td><td><a href='../sourcefile/mclass_md5.f90.html'>MClass_MD5.f90</a></td><td><p><strong>PURPOSE OF THIS MODULE</strong>: <br>
+  This module contains the <em>MD5</em> type and its related routines.
+  The <em>MD5</em> type is a <em>digest</em> type that directly extends from the
+  <a href="../module/mclass_mdhelper.html#type-mdhelper">MDHelper</a>
+  type.  As a <em>concrete</em> derived type, it provides all remaining
+  deferred procedures required by all its abstract parent types. <br>
+  The <em>MD5</em> type implements an incremental cryptographic hash
+  function by employing the <em>MD5 message-digest</em> algorithm where
+  the algorithm is described in RFC 1321 [1].  The implementation
+  here is mainly based on the <em>SPHLIB</em> implementation [2].  <br>
+   <br>
+<strong>REFERENCES</strong>: <br>
+  [1] <a href="https://datatracker.ietf.org/doc/html/rfc1321">RFC1321:
+      The MD5 Message-Digest Algorithm. </a> <br>
+  [2] <a href="https://github.com/pornin/sphlib">SPHLIB 3.0: A Set of
+      Implementations of Various Hash Functions, Both in C and in Java. </a> <br></p></td></tr>
+<!---->			   <tr class="active"><td><a href='../module/mclass_mdengine.html'>MClass_MDEngine</a></td><td><a href='../sourcefile/mclass_mdengine.f90.html'>MClass_MDEngine.f90</a></td><td><p><strong>PURPOSE OF THIS MODULE</strong>: <br>
+  This module contains the <em>MDEngine</em> type and its related routines.
+  The <em>MDEngine</em> type is an abstract <em>digest</em> type extending directly
+  from the <a href="../module/mclass_basedigest.html#type-basedigest">
+  BaseDigest</a> type.  It defines additional methods (most of which
+  is intended to be used internally) to provide an extended API for
+  an incremental cryptographic hash function. <br>
+  By design, the <em>MDEngine</em> type is intended to be used as a template
+  (a parent type) to implement a cryptographic hash function.  It takes
+  care some of the deferred procedures required by a <em>digest</em> object.
+  If practical, all other <em>digest</em> types that implement specific hash
+  functions should extend from this template type.</p></td></tr>
+<!--active-->			   <tr class=""><td><a href='../module/mclass_mdhelper.html'>MClass_MDHelper</a></td><td><a href='../sourcefile/mclass_mdhelper.f90.html'>MClass_MDHelper.f90</a></td><td><p><strong>PURPOSE OF THIS MODULE</strong>: <br>
+  This module contains the <em>MDHelper</em> type and its related routines.
+  The <em>MDHelper</em> type is an abstract <em>digest</em> type extending from the
+  <a href="../module/mclass_mdengine.html#type-mdengine">MDEngine</a>
+  type.  It is a helper type that implements the padding common to
+  MD4, MD5, and the SHA family.  The implementation works as long as
+  the internal block length is a power of 2, which is the case for all
+  these algorithms. <br>
+  <br>
+  <strong>REFERENCES</strong>: <br>
+  [1] <a href="https://github.com/pornin/sphlib">SPHLIB 3.0: A Set of
+      Implementations of Various Hash Functions, Both in C and in Java. </a> <br></p></td></tr>
+<!---->			   <tr class="active"><td><a href='../module/mclass_metrohasher64.html'>MClass_MetroHasher64</a></td><td><a href='../sourcefile/mclass_metrohasher64.f90.html'>MClass_MetroHasher64.f90</a></td><td><p><strong>PURPOSE OF THIS MODULE</strong>: <br>
+  This module contains the <em>MetroHasher64</em> type and its related routines.
+  The <em>MetroHasher64</em> type is a hasher type that extends directly from the
+  <a href="../module/mclass_hasher64.html#type-hasher64">Hasher64</a> type.
+  It provides all deferred procedures required by a <em>Hasher64</em> class and
+  outputs the hash value as a 64-bit integer. <br>
+  The <em>MetroHasher64</em> type employs the <em>Metro</em> hash algorithm for 64-bit integer
+  output by J. Andrew Rogers [1, 2].  As a hasher, it can be used to compute the
+  hash value incrementally.  It also provides a method to compute the hash
+  value directly (i.e. non-incrementally).  The following code snippet shows
+  a typical usage of the hasher.
+<br>
+<Pre><Code style="color:MidnightBlue;">
+  ! first, initialize the hasher (once)
+  CALL Hasher%Initialize(Seed)
+  ! then, put data into the hasher (a number of times)
+  CALL Hasher%Update(Input, InpSize)
+              ...
+              ...
+              ...
+  ! finally, get the hash value from the hasher (once)
+  HashCode = Hasher%Finalize()
+  </Code></Pre></p><a href="../module/mclass_metrohasher64.html" class="pull-right"><emph>Read more&hellip;</emph></a></td></tr>
+<!--active-->			   <tr class=""><td><a href='../module/mclass_murmur3hasher32.html'>MClass_Murmur3Hasher32</a></td><td><a href='../sourcefile/mclass_murmur3hasher32.f90.html'>MClass_Murmur3Hasher32.f90</a></td><td><p><strong>PURPOSE OF THIS MODULE</strong>: <br>
+  This module contains the <em>Murmur3Hasher32</em> type and its related routines.
+  The <em>Murmur3Hasher32</em> type is a hasher type that extends directly from the
+  <a href="../module/mclass_hasher32.html#type-hasher32">Hasher32</a> type.
+  It provides all deferred procedures required by a <em>Hasher32</em> class and
+  outputs the hash value as a 32-bit integer. <br>
+  The <em>Murmur3Hasher32</em> type employs the <em>Murmur3</em> hash algorithm for 32-bit
+  integer output by Austin Appleby [1].  As a hasher, it can be used to compute
+  the hash value incrementally.  It also provides a method to compute the hash
+  value directly (i.e. non-incrementally).  The following code snippet shows
+  a typical usage of the hasher.
+<br>
+<Pre><Code style="color:MidnightBlue;">
+  ! first, initialize the hasher (once)
+  CALL Hasher%Initialize(Seed)
+  ! then, put data into the hasher (a number of times)
+  CALL Hasher%Update(Input, InpSize)
+              ...
+              ...
+              ...
+  ! finally, get the hash value from the hasher (once)
+  HashCode = Hasher%Finalize()
+  </Code></Pre></p><a href="../module/mclass_murmur3hasher32.html" class="pull-right"><emph>Read more&hellip;</emph></a></td></tr>
+<!---->			   <tr class="active"><td><a href='../module/mclass_murmur3hasher64.html'>MClass_Murmur3Hasher64</a></td><td><a href='../sourcefile/mclass_murmur3hasher64.f90.html'>MClass_Murmur3Hasher64.f90</a></td><td><p><strong>PURPOSE OF THIS MODULE</strong>: <br>
+  This module contains the <em>Murmur3Hasher64</em> and <em>Murmur3Hasher128</em> types and their
+  related routines.  The <em>Murmur3Hasher64</em> type is a hasher type that extends directly
+  from the <a href="../module/mclass_hasher64.html#type-hasher64">Hasher64</a> type.
+  It provides all deferred procedures required by a <em>Hasher64</em> class and outputs the
+  hash value as a 64-bit integer.  The <em>Murmur3Hasher128</em> type is a hasher type that
+  extends from the <em>Murmur3Hasher64</em> type and provides two additional methods (the
+  <em>Finalize128</em> and <em>HashDirect128</em> methods) to output the hash value as a 128-bit
+  integer. <br>
+  Both hashers employ the <em>Murmur3</em> hash algorithm by Austin Appleby [1, 2].  As hashers,
+  they can be used to compute the hash value incrementally.  They also provide a method
+  to compute the hash value directly (i.e. non-incrementally).  The following code snippet
+  shows a typical usage of the hashers.
+<br>
+<Pre><Code style="color:MidnightBlue;">
+  ! first, initialize the hasher (once)
+  CALL Hasher%Initialize(Seed)
+  ! then, put data into the hasher (a number of times)
+  CALL Hasher%Update(Input, InpSize)
+              ...
+              ...
+              ...
+  ! finally, get the hash value from the hasher (once)
+  HashCode = Hasher%Finalize()
+  </Code></Pre></p><a href="../module/mclass_murmur3hasher64.html" class="pull-right"><emph>Read more&hellip;</emph></a></td></tr>
+<!--active-->			   <tr class=""><td><a href='../module/mclass_nmhasher32.html'>MClass_NMHasher32</a></td><td><a href='../sourcefile/mclass_nmhasher32.f90.html'>MClass_NMHasher32.f90</a></td><td><p><strong>PURPOSE OF THIS MODULE</strong>: <br>
+  This module contains the <em>NMHasher32</em> and <em>NMxHasher32</em> types and their related
+  routines.  The <em>NMHasher32</em> type is a hasher type that extends directly from the
+  <a href="../module/mclass_hasher32.html#type-hasher32">Hasher32</a> type.  It
+  provides all deferred procedures required by a <em>Hasher32</em> class and outputs the
+  hash value as a 32-bit integer.  The <em>NMxHasher32</em> type is a hasher type that
+  extends from the <em>NMHasher32</em> type and overrides a couple of methods that require
+  different implementation from those of the <em>NMHasher32</em> type. <br>
+  The <em>NMHasher32</em> type employs the <em>NM</em> hash algorithm for 32-bit integer
+  output by James Z. M. Gao. [1] whereas the <em>NMxHasher32</em> type employs the <em>NMx</em>
+  hash algorithm, which is a variant of the <em>NM</em> hash algorithm.  As hashers, both
+  can be used to compute the hash value incrementally.  They also provide a method
+  to compute the hash value directly (i.e. non-incrementally).  The following code
+  snippet illustrates a typical usage of both hashers.
+<br>
+<Pre><Code style="color:MidnightBlue;">
+  ! first, initialize the hasher (once)
+  CALL Hasher%Initialize(Seed)
+  ! then, put data into the hasher (a number of times)
+  CALL Hasher%Update(Input, InpSize)
+              ...
+              ...
+              ...
+  ! finally, get the hash value from the hasher (once)
+  HashCode = Hasher%Finalize()
+  </Code></Pre></p><a href="../module/mclass_nmhasher32.html" class="pull-right"><emph>Read more&hellip;</emph></a></td></tr>
+<!---->			   <tr class="active"><td><a href='../module/mclass_sha0.html'>MClass_SHA0</a></td><td><a href='../sourcefile/mclass_sha0.f90.html'>MClass_SHA0.f90</a></td><td><p><strong>PURPOSE OF THIS MODULE</strong>: <br>
+  This module contains the <em>SHA0</em> type and its related routines.
+  The <em>SHA0</em> type is a <em>digest</em> type that directly extends from the
+  <a href="../module/mclass_mdhelper.html#type-mdhelper">MDHelper</a>
+  type.  As a <em>concrete</em> derived type, it provides all remaining
+  deferred procedures required by all its abstract parent types. <br>
+  The <em>SHA0</em> type implements an incremental cryptographic hash
+  function by employing the <em>SHA-0 message-digest</em> algorithm [1].
+  The implementation here is mainly based on the <em>SPHLIB</em>
+  implementation [2].  <br>
+   <br>
+<strong>REFERENCES</strong>: <br>
+  [1] <a href="https://en.wikipedia.org/wiki/Secure_Hash_Algorithms">Secure
+      Hash Algorithms. </a> <br>
+  [2] <a href="https://github.com/pornin/sphlib">SPHLIB 3.0: A Set of
+      Implementations of Various Hash Functions, Both in C and in Java. </a> <br></p></td></tr>
+<!--active-->			   <tr class=""><td><a href='../module/mclass_sha1.html'>MClass_SHA1</a></td><td><a href='../sourcefile/mclass_sha1.f90.html'>MClass_SHA1.f90</a></td><td><p><strong>PURPOSE OF THIS MODULE</strong>: <br>
+  This module contains the <em>SHA1</em> type and its related routines.
+  The <em>SHA1</em> type is a <em>digest</em> type that directly extends from the
+  <a href="../module/mclass_mdhelper.html#type-mdhelper">MDHelper</a>
+  type.  As a <em>concrete</em> derived type, it provides all remaining
+  deferred procedures required by all its abstract parent types. <br>
+  The <em>SHA1</em> type implements an incremental cryptographic hash
+  function by employing the <em>SHA-1 message-digest</em> algorithm where
+  the algorithm is described in FIPS 180-4 [1]. The implementation
+  here is mainly based on the <em>SPHLIB</em> implementation [2].  <br>
+   <br>
+<strong>REFERENCES</strong>: <br>
+  [1] <a href="https://doi.org/10.6028%2FNIST.FIPS.180-4">FIPS PUB 180-4:
+      Secure Hash Standard (SHS). </a> <br>
+  [2] <a href="https://github.com/pornin/sphlib">SPHLIB 3.0: A Set of
+      Implementations of Various Hash Functions, Both in C and in Java. </a> <br></p></td></tr>
+<!---->			   <tr class="active"><td><a href='../module/mclass_sha2b.html'>MClass_SHA2B</a></td><td><a href='../sourcefile/mclass_sha2b.f90.html'>MClass_SHA2B.f90</a></td><td><p><strong>PURPOSE OF THIS MODULE</strong>: <br>
+  This module contains the <em>SHA2B</em> type and its related routines.
+  The <em>SHA2B</em> type is a <em>digest</em> type that directly extends from the
+  <a href="../module/mclass_mdhelper.html#type-mdhelper">MDHelper</a>
+  type.  As a <em>concrete</em> derived type, it provides all remaining
+  deferred procedures required by all its abstract parent types. <br>
+  The <em>SHA2B</em> type implements an incremental cryptographic hash
+  function by employing the <em>SHA-384 or SHA-512 message-digest</em>
+  algorithm where both algorithms are described in FIPS 180-4 [1].
+  The implementation here is mainly based on the references [2, 3].  <br>
+  By default, the <em>SHA2B</em> type employs the <em>SHA-512 message-digest</em>
+  algorithm.  However, a user can specify the <em>IsSHA384</em> flag to
+  true when initializing the digest object (by calling the <em>Create</em>
+  method) in order to use the <em>SHA-384 message-digest</em> algorithm
+  instead of the default one. <br>
+   <br>
+<strong>REFERENCES</strong>: <br>
+  [1] <a href="https://doi.org/10.6028%2FNIST.FIPS.180-4">FIPS PUB 180-4:
+      Secure Hash Standard (SHS). </a> <br>
+  [2] <a href="https://github.com/pornin/sphlib">SPHLIB 3.0: A Set of
+      Implementations of Various Hash Functions, Both in C and in Java. </a> <br>
+  [3] <a href="https://github.com/bcgit/bc-java">The Bouncy Castle Crypto
+      Package For Java. </a> <br></p></td></tr>
+<!--active-->			   <tr class=""><td><a href='../module/mclass_sha2s.html'>MClass_SHA2S</a></td><td><a href='../sourcefile/mclass_sha2s.f90.html'>MClass_SHA2S.f90</a></td><td><p><strong>PURPOSE OF THIS MODULE</strong>: <br>
+  This module contains the <em>SHA2S</em> type and its related routines.
+  The <em>SHA2S</em> type is a <em>digest</em> type that directly extends from the
+  <a href="../module/mclass_mdhelper.html#type-mdhelper">MDHelper</a>
+  type.  As a <em>concrete</em> derived type, it provides all remaining
+  deferred procedures required by all its abstract parent types. <br>
+  The <em>SHA2S</em> type implements an incremental cryptographic hash
+  function by employing the <em>SHA-224 or SHA-256 message-digest</em>
+  algorithm where both algorithms are described in FIPS 180-4 [1].
+  The implementation here is mainly based on the references [2, 3].  <br>
+  By default, the <em>SHA2S</em> type employs the <em>SHA-256 message-digest</em>
+  algorithm.  However, a user can specify the <em>IsSHA224</em> flag to
+  true when initializing the digest object (by calling the <em>Create</em>
+  method) in order to use the <em>SHA-224 message-digest</em> algorithm
+  instead of the default one. <br>
+   <br>
+<strong>REFERENCES</strong>: <br>
+  [1] <a href="https://doi.org/10.6028%2FNIST.FIPS.180-4">FIPS PUB 180-4:
+      Secure Hash Standard (SHS). </a> <br>
+  [2] <a href="https://github.com/pornin/sphlib">SPHLIB 3.0: A Set of
+      Implementations of Various Hash Functions, Both in C and in Java. </a> <br>
+  [3] <a href="https://github.com/bcgit/bc-java">The Bouncy Castle Crypto
+      Package For Java. </a> <br></p></td></tr>
+<!---->			   <tr class="active"><td><a href='../module/mclass_sha3.html'>MClass_SHA3</a></td><td><a href='../sourcefile/mclass_sha3.f90.html'>MClass_SHA3.f90</a></td><td><p><strong>PURPOSE OF THIS MODULE</strong>: <br>
+  This module contains the <em>SHA3</em> type and its related routines.
+  The <em>SHA3</em> type is a <em>digest</em> type that directly extends from the
+  <a href="../module/mclass_mdengine.html#type-mdengine">MDEngine</a>
+  type.  As a <em>concrete</em> derived type, it provides all remaining
+  deferred procedures required by all its abstract parent types. <br>
+  The <em>SHA3</em> type implements an incremental cryptographic hash
+  function by employing the <em>Keccak message-digest</em> algorithm [1, 2].
+  The implementation here is mainly based on the references [3, 4]. <br>
+  Unlike other digest types, which represent one or two hash functions,
+  the <em>SHA3</em> type represents eight cryptographic hash functions; four of
+  which are in the so-called SHA-3 family while the rest are in the
+  so-called Keccak family.  These two families of hash functions employ
+  the same Keccak message-digest algorithm; however, they use different
+  padding strategies. <br>
+  As the name suggested, the <em>SHA3</em> type represents the <em>SHA-3</em> family
+  by default.  However, a user can specify the <em>IsKeccak</em> flag to true
+  when initializing the digest object (by calling the <em>Create</em> method)
+  in order to use the padding strategy of the <em>Keccak</em> family.  Also,
+  the <em>SHA3</em> type employs the SHA3-256 hash function as a default
+  algorithm.  This implies that the hash output has the output size
+  and the strength of security (against pre-image attack) of 256 bits.
+  The user can also specify the <em>Security</em> argument (to one of the four
+  applicable values: 224, 256, 384 and 512) when initializing the digest
+  object in order to use a different algorithm and get a different hash
+  output size. <br>
+   <br>
+<strong>REFERENCES</strong>: <br>
+  [1] <a href="https://csrc.nist.gov/csrc/media/Projects/hash-functions/documents/Keccak-reference-3.0.pdf">
+      The Keccak Reference, Version 3.0. </a> <br>
+  [2] <a href="https://doi.org/10.6028/NIST.FIPS.202">SHA-3 Standard:
+      Permutation-Based Hash and Extendable-Output Functions. </a> <br>
+  [3] <a href="https://github.com/pornin/sphlib">SPHLIB 3.0: A Set of
+      Implementations of Various Hash Functions, Both in C and in Java. </a> <br>
+  [4] <a href="https://csrc.nist.gov/CSRC/media/Projects/Hash-Functions/documents/Keccak_FinalRnd.zip">
+      The Keccak Reference Implementation in C. </a> <br></p></td></tr>
+<!--active-->			   <tr class=""><td><a href='../module/mclass_shabal.html'>MClass_Shabal</a></td><td><a href='../sourcefile/mclass_shabal.f90.html'>MClass_Shabal.f90</a></td><td><p><strong>PURPOSE OF THIS MODULE</strong>: <br>
+  This module contains the <em>Shabal</em> type and its related routines.
+  The <em>Shabal</em> type is a <em>digest</em> type that directly extends from the
+  <a href="../module/mclass_mdengine.html#type-mdengine">MDEngine</a>
+  type.  As a <em>concrete</em> derived type, it provides all remaining
+  deferred procedures required by all its abstract parent types. <br>
+  The <em>Shabal</em> type implements an incremental cryptographic hash
+  function by employing the <em>Shabal message-digest</em> algorithm [1].
+  The implementation here is mainly based on the references [2]. <br>
+  The <em>Shabal</em> type represents five cryptographic hash functions:
+  the <em>Shabal-192</em>,  <em>Shabal-224</em>, <em>Shabal-256</em>, <em>Shabal-384</em>, and
+  <em>Shabal-512</em> hash functions.  By default, the <em>Shabal</em> type
+  represents the <em>Shabal-256</em> hash function.  However, a user can
+  specify the <em>Security</em> argument (to one of the five applicable
+  values: 192, 224, 256, 384 and 512) when initializing the digest
+  object in order to use a different hash function and get a
+  different hash output size. <br>
+   <br>
+<strong>REFERENCES</strong>: <br>
+  [1] <a href="https://web.archive.org/web/20170611041218mp_/http://www.shabal.com/">
+      SHABAL: A submission to NIST's Cryptographic Hash Algorithm Competition. </a> <br>
+  [2] <a href="https://github.com/pornin/sphlib">SPHLIB 3.0: A Set of
+      Implementations of Various Hash Functions, Both in C and in Java. </a> <br></p></td></tr>
+<!---->			   <tr class="active"><td><a href='../module/mclass_shake.html'>MClass_SHAKE</a></td><td><a href='../sourcefile/mclass_shake.f90.html'>MClass_SHAKE.f90</a></td><td><p><strong>PURPOSE OF THIS MODULE</strong>: <br>
+  This module contains the <em>SHAKE</em> type and its related routines.
+  The <em>SHAKE</em> type is a <em>Keccak-based digest</em> type that extends from
+  the <a href="../module/mclass_kp1600core.html#type-kp1600core">
+  KP1600Core</a> type.  As a <em>concrete</em> derived type, it provides
+  all remaining deferred procedures required by all its parent types. <br>
+  Unlike the <a href="../module/mclass_keccak.html#type-keccak">
+  Keccak</a> type, which produces a fixed-length hash output for the
+  specified strength of security, the <em>SHAKE</em> type allows an arbitrary
+  output length, which is useful in applications such as optimal
+  asymmetric encryption padding.  Similar to the <em>Keccak</em> type, the
+  <em>SHAKE</em> type represents a family of incremental cryptographic hash
+  functions (two functions, exactly), rather than just one hash function. <br>
+  By default, the <em>SHAKE</em> type employs the <em>SHAKE-128</em> hash function as
+  a default algorithm.  However, a user can specify the <em>IsSHAKE256</em>
+  flag to true when initializing the digest object (by calling the
+  <em>Create</em> method) in order to use the <em>SHAKE-256</em> hash function, in
+  place of the <em>SHAKE-128</em> hash function.  As previously mentioned,
+  the <em>SHAKE</em> type is capable of producing variable-length hash output.
+  Therefore, a user can specify an output length through the optional
+  <em>OutputLen</em> argument when initializing the digest object.  If the
+  optional argument is NOT present, the <em>SHAKE</em> type produces the hash
+  output length based on a default length for a specific algorithm.
+  In addition, a user may use the <em>SHAKE</em> type as an extendable-output
+  function (XOF) by specifying the hash output length during a finalization
+  of the digest object where the <em>DigestWOutLen</em> method is called.  This
+  method will ignore the output length specified during initialization if
+  the specified length is valid (greater than or equal to 1). <br>
+   <br>
+<strong>REFERENCES</strong>: <br>
+  [1] <a href="https://doi.org/10.6028/NIST.FIPS.202">SHA-3 Standard:
+      Permutation-Based Hash and Extendable-Output Functions. </a> <br>
+  [2] <a href="https://github.com/XKCP/XKCP">The eXtended Keccak Code Package. </a> <br></p></td></tr>
+<!--active-->			   <tr class=""><td><a href='../module/mclass_shaviteb.html'>MClass_ShaviteB</a></td><td><a href='../sourcefile/mclass_shaviteb.f90.html'>MClass_ShaviteB.f90</a></td><td><p><strong>PURPOSE OF THIS MODULE</strong>: <br>
+  This module contains the <em>ShaviteB</em> type and its related routines.
+  The <em>ShaviteB</em> type is a <em>digest</em> type that directly extends from the
+  <a href="../module/mclass_mdengine.html#type-mdengine">MDEngine</a>
+  type.  As a <em>concrete</em> derived type, it provides all remaining
+  deferred procedures required by all its abstract parent types. <br>
+  The <em>ShaviteB</em> type implements an incremental cryptographic hash function
+  by employing a <em>SHAvite-3 message-digest</em> algorithm (either the <em>SHAvite-384</em>
+  or the <em>SHAvite-512</em>) [1].  The implementation here is based mainly on the
+  <em>SPHLIB</em> implementation [2].  <br>
+  By default, the <em>ShaviteB</em> type employs the <em>SHAvite-512 message-digest</em>
+  algorithm.  However, a user can specify the <em>IsSHAvite384</em> flag to
+  true when initializing the digest object (by calling the <em>Create</em>
+  method) in order to use the <em>SHAvite-384 message-digest</em> algorithm
+  instead of the default one. <br>
+   <br>
+<strong>REFERENCES</strong>: <br>
+  [1] <a href="https://web.archive.org/web/20161220074845mp_/http://www.cs.technion.ac.il/~orrd/SHAvite-3/">
+      The SHAvite-3 hash function. </a> <br>
+  [2] <a href="https://github.com/pornin/sphlib">SPHLIB 3.0: A Set of
+      Implementations of Various Hash Functions, Both in C and in Java. </a> <br></p></td></tr>
+<!---->			   <tr class="active"><td><a href='../module/mclass_shavites.html'>MClass_ShaviteS</a></td><td><a href='../sourcefile/mclass_shavites.f90.html'>MClass_ShaviteS.f90</a></td><td><p><strong>PURPOSE OF THIS MODULE</strong>: <br>
+  This module contains the <em>ShaviteS</em> type and its related routines.
+  The <em>ShaviteS</em> type is a <em>digest</em> type that directly extends from the
+  <a href="../module/mclass_mdengine.html#type-mdengine">MDEngine</a>
+  type.  As a <em>concrete</em> derived type, it provides all remaining
+  deferred procedures required by all its abstract parent types. <br>
+  The <em>ShaviteS</em> type implements an incremental cryptographic hash function
+  by employing a <em>SHAvite-3 message-digest</em> algorithm (either the <em>SHAvite-224</em>
+  or the <em>SHAvite-256</em>) [1].  The implementation here is based mainly on the
+  <em>SPHLIB</em> implementation [2].  <br>
+  By default, the <em>ShaviteS</em> type employs the <em>SHAvite-256 message-digest</em>
+  algorithm.  However, a user can specify the <em>IsSHAvite224</em> flag to
+  true when initializing the digest object (by calling the <em>Create</em>
+  method) in order to use the <em>SHAvite-224 message-digest</em> algorithm
+  instead of the default one. <br>
+   <br>
+<strong>REFERENCES</strong>: <br>
+  [1] <a href="https://web.archive.org/web/20161220074845mp_/http://www.cs.technion.ac.il/~orrd/SHAvite-3/">
+      The SHAvite-3 hash function. </a> <br>
+  [2] <a href="https://github.com/pornin/sphlib">SPHLIB 3.0: A Set of
+      Implementations of Various Hash Functions, Both in C and in Java. </a> <br></p></td></tr>
+<!--active-->			   <tr class=""><td><a href='../module/mclass_simdb.html'>MClass_SIMDB</a></td><td><a href='../sourcefile/mclass_simdb.f90.html'>MClass_SIMDB.f90</a></td><td><p><strong>PURPOSE OF THIS MODULE</strong>: <br>
+  This module contains the <em>SIMDB</em> type and its related routines.
+  The <em>SIMDB</em> type is a <em>digest</em> type that directly extends from the
+  <a href="../module/mclass_mdengine.html#type-mdengine">MDEngine</a>
+  type.  As a <em>concrete</em> derived type, it provides all remaining
+  deferred procedures required by all its abstract parent types. <br>
+  The <em>SIMDB</em> type implements an incremental cryptographic hash function
+  by employing either the <em>SIMD-384</em> or the <em>SIMD-512 message-digest</em>
+  algorithm [1].  The implementation here is based mainly on the <em>SPHLIB</em>
+  implementation [2].  <br>
+  By default, the <em>SIMDB</em> type employs the <em>SIMD-512 message-digest</em>
+  algorithm.  However, a user can specify the <em>IsSIMD384</em> flag to
+  true when initializing the digest object (by calling the <em>Create</em>
+  method) in order to use the <em>SIMD-384 message-digest</em> algorithm
+  instead of the default one. <br>
+   <br>
+<strong>REFERENCES</strong>: <br>
+  [1] <a href="https://who.rocq.inria.fr/Gaetan.Leurent/simd.html">
+      The SIMD Hash Function. </a> <br>
+  [2] <a href="https://github.com/pornin/sphlib">SPHLIB 3.0: A Set of
+      Implementations of Various Hash Functions, Both in C and in Java. </a> <br></p></td></tr>
+<!---->			   <tr class="active"><td><a href='../module/mclass_simds.html'>MClass_SIMDS</a></td><td><a href='../sourcefile/mclass_simds.f90.html'>MClass_SIMDS.f90</a></td><td><p><strong>PURPOSE OF THIS MODULE</strong>: <br>
+  This module contains the <em>SIMDS</em> type and its related routines.
+  The <em>SIMDS</em> type is a <em>digest</em> type that directly extends from the
+  <a href="../module/mclass_mdengine.html#type-mdengine">MDEngine</a>
+  type.  As a <em>concrete</em> derived type, it provides all remaining
+  deferred procedures required by all its abstract parent types. <br>
+  The <em>SIMDS</em> type implements an incremental cryptographic hash function
+  by employing either the <em>SIMD-224</em> or the <em>SIMD-256 message-digest</em>
+  algorithm [1].  The implementation here is based mainly on the <em>SPHLIB</em>
+  implementation [2].  <br>
+  By default, the <em>SIMDS</em> type employs the <em>SIMD-256 message-digest</em>
+  algorithm.  However, a user can specify the <em>IsSIMD224</em> flag to
+  true when initializing the digest object (by calling the <em>Create</em>
+  method) in order to use the <em>SIMD-224 message-digest</em> algorithm
+  instead of the default one. <br>
+   <br>
+<strong>REFERENCES</strong>: <br>
+  [1] <a href="https://who.rocq.inria.fr/Gaetan.Leurent/simd.html">
+      The SIMD Hash Function. </a> <br>
+  [2] <a href="https://github.com/pornin/sphlib">SPHLIB 3.0: A Set of
+      Implementations of Various Hash Functions, Both in C and in Java. </a> <br></p></td></tr>
+<!--active-->			   <tr class=""><td><a href='../module/mclass_siphasher64.html'>MClass_SipHasher64</a></td><td><a href='../sourcefile/mclass_siphasher64.f90.html'>MClass_SipHasher64.f90</a></td><td><p><strong>PURPOSE OF THIS MODULE</strong>: <br>
+  This module contains the <em>SipHasher64</em> type and its related routines.
+  The <em>SipHasher64</em> type is a hasher type that extends directly from the
+  <a href="../module/mclass_hasher64.html#type-hasher64">Hasher64</a> type.
+  It provides all deferred procedures required by a <em>Hasher64</em> class and
+  outputs the hash value as a 64-bit integer. <br>
+  The <em>SipHasher64</em> type employs the <em>Sip</em> hash algorithm for 64-bit integer
+  output by Jean-Philippe Aumasson [1].  As a hasher, it can be used to compute
+  the hash value incrementally.  It also provides a method to compute the hash
+  value directly (i.e. non-incrementally).  The following code snippet shows
+  a typical usage of the hasher.
+<br>
+<Pre><Code style="color:MidnightBlue;">
+  ! first, initialize the hasher (once)
+  CALL Hasher%Initialize(Seed)
+  ! then, put data into the hasher (a number of times)
+  CALL Hasher%Update(Input, InpSize)
+              ...
+              ...
+              ...
+  ! finally, get the hash value from the hasher (once)
+  HashCode = Hasher%Finalize()
+  </Code></Pre></p><a href="../module/mclass_siphasher64.html" class="pull-right"><emph>Read more&hellip;</emph></a></td></tr>
+<!---->			   <tr class="active"><td><a href='../module/mclass_skein.html'>MClass_Skein</a></td><td><a href='../sourcefile/mclass_skein.f90.html'>MClass_Skein.f90</a></td><td><p><strong>PURPOSE OF THIS MODULE</strong>: <br>
+  This module contains the <em>Skein</em> type and its related routines.
+  The <em>Skein</em> type is a <em>digest</em> type that extends directly from the
+  <a href="../module/mclass_basedigest.html#type-basedigest">BaseDigest</a>
+  type.  It implements all deferred procedures required by a digest type. <br>
+  The <em>Skein</em> type implements an incremental cryptographic hash
+  function by employing the <em>Skein message-digest</em> algorithm [1].
+  The implementation here is mainly based on the references [2]. <br>
+  The <em>Skein</em> type represents four cryptographic hash functions: the
+  <em>Skein-224</em>, <em>Skein-256</em>, <em>Skein-384</em>, and <em>Skein-512</em> hash functions.
+  By default, the <em>Skein</em> type represents the <em>Skein-256</em> hash function.
+  However, a user can specify the <em>Security</em> argument (to one of the
+  four applicable values: 224, 256, 384 and 512) when initializing the
+  digest object in order to use a different hash function and get a
+  different hash output size. <br>
+   <br>
+<strong>REFERENCES</strong>: <br>
+  [1] <a href="https://www.schneier.com/academic/skein/">
+      The Skein Hash Function Family. </a> <br>
+  [2] <a href="https://github.com/pornin/sphlib">SPHLIB 3.0: A Set of
+      Implementations of Various Hash Functions, Both in C and in Java. </a> <br></p></td></tr>
+<!--active-->			   <tr class=""><td><a href='../module/mclass_spookyhasher64.html'>MClass_SpookyHasher64</a></td><td><a href='../sourcefile/mclass_spookyhasher64.f90.html'>MClass_SpookyHasher64.f90</a></td><td><p><strong>PURPOSE OF THIS MODULE</strong>: <br>
+  This module contains the <em>SpookyHasher64</em> and <em>SpookyHasher128</em> types and their
+  related routines.  The <em>SpookyHasher64</em> type is a hasher type that extends directly
+  from the <a href="../module/mclass_hasher64.html#type-hasher64">Hasher64</a> type.
+  It provides all deferred procedures required by a <em>Hasher64</em> class and outputs the
+  hash value as a 64-bit integer.  The <em>SpookyHasher128</em> type is a hasher type that
+  extends from the <em>SpookyHasher64</em> type and provides two additional methods (the
+  <em>Finalize128</em> and <em>HashDirect128</em> methods) to output the hash value as a 128-bit
+  integer. <br>
+  Both hashers employ the <em>Spooky</em> hash algorithm by Bob Jenkins [1].  As hashers,
+  they can be used to compute the hash value incrementally.  They also provide a method
+  to compute the hash value directly (i.e. non-incrementally).  The following code snippet
+  shows a typical usage of the hashers.
+<br>
+<Pre><Code style="color:MidnightBlue;">
+  ! first, initialize the hasher (once)
+  CALL Hasher%Initialize(Seed)
+  ! then, put data into the hasher (a number of times)
+  CALL Hasher%Update(Input, InpSize)
+              ...
+              ...
+              ...
+  ! finally, get the hash value from the hasher (once)
+  HashCode = Hasher%Finalize()
+  </Code></Pre></p><a href="../module/mclass_spookyhasher64.html" class="pull-right"><emph>Read more&hellip;</emph></a></td></tr>
+<!---->			   <tr class="active"><td><a href='../module/mclass_waterhasher32.html'>MClass_WaterHasher32</a></td><td><a href='../sourcefile/mclass_waterhasher32.f90.html'>MClass_WaterHasher32.f90</a></td><td><p><strong>PURPOSE OF THIS MODULE</strong>: <br>
+  This module contains the <em>WaterHasher32</em> type and its related routines.
+  The <em>WaterHasher32</em> type is a hasher type that extends directly from the
+  <a href="../module/mclass_hasher32.html#type-hasher32">Hasher32</a> type.
+  It provides all deferred procedures required by a <em>Hasher32</em> class and
+  outputs the hash value as a 32-bit integer. <br>
+  The <em>WaterHasher32</em> type employs the <em>Water</em> hash algorithm for 32-bit integer
+  output by Tommy Ettinger [1].  As a hasher, it can be used to compute the
+  hash value incrementally.  It also provides a method to compute the hash
+  value directly (i.e. non-incrementally).  The following code snippet shows
+  a typical usage of the hasher.
+<br>
+<Pre><Code style="color:MidnightBlue;">
+  ! first, initialize the hasher (once)
+  CALL Hasher%Initialize(Seed)
+  ! then, put data into the hasher (a number of times)
+  CALL Hasher%Update(Input, InpSize)
+              ...
+              ...
+              ...
+  ! finally, get the hash value from the hasher (once)
+  HashCode = Hasher%Finalize()
+  </Code></Pre></p><a href="../module/mclass_waterhasher32.html" class="pull-right"><emph>Read more&hellip;</emph></a></td></tr>
+<!--active-->			   <tr class=""><td><a href='../module/mclass_wyhasher64.html'>MClass_WyHasher64</a></td><td><a href='../sourcefile/mclass_wyhasher64.f90.html'>MClass_WyHasher64.f90</a></td><td><p><strong>PURPOSE OF THIS MODULE</strong>: <br>
+  This module contains the <em>WyHasher64</em> type and its related routines.
+  The <em>WyHasher64</em> type is a hasher type that extends directly from the
+  <a href="../module/mclass_hasher64.html#type-hasher64">Hasher64</a> type.
+  It provides all deferred procedures required by a <em>Hasher64</em> class and
+  outputs the hash value as a 64-bit integer. <br>
+  The <em>WyHasher64</em> type employs the <em>Wy</em> hash algorithm for 64-bit integer
+  output by Wang Yi [1].  As a hasher, it can be used to compute the
+  hash value incrementally.  It also provides a method to compute the hash
+  value directly (i.e. non-incrementally).  The following code snippet shows
+  a typical usage of the hasher.
+<br>
+<Pre><Code style="color:MidnightBlue;">
+  ! first, initialize the hasher (once)
+  CALL Hasher%Initialize(Seed)
+  ! then, put data into the hasher (a number of times)
+  CALL Hasher%Update(Input, InpSize)
+              ...
+              ...
+              ...
+  ! finally, get the hash value from the hasher (once)
+  HashCode = Hasher%Finalize()
+  </Code></Pre></p><a href="../module/mclass_wyhasher64.html" class="pull-right"><emph>Read more&hellip;</emph></a></td></tr>
+<!---->			   <tr class="active"><td><a href='../module/mclass_xx3hasher64.html'>MClass_XX3Hasher64</a></td><td><a href='../sourcefile/mclass_xx3hasher64.f90.html'>MClass_XX3Hasher64.f90</a></td><td><p><strong>PURPOSE OF THIS MODULE</strong>: <br>
+  This module contains the <em>XX3Hasher64</em> and <em>XX3Hasher128</em> types and their
+  related routines.  The <em>XX3Hasher64</em> type is a hasher type that extends directly
+  from the <a href="../module/mclass_hasher64.html#type-hasher64">Hasher64</a> type.
+  It provides all deferred procedures required by a <em>Hasher64</em> class and outputs the
+  hash value as a 64-bit integer.  The <em>XX3Hasher128</em> type is a hasher type that
+  extends from the <em>XX3Hasher64</em> type and provides additional methods to output
+  the hash value as a 128-bit integer. <br>
+  Both hashers employ the <em>XX3</em> hash algorithm by Yann Collet [1, 2].  As hashers,
+  they can be used to compute the hash value incrementally.  They also provide a
+  method to compute the hash value directly (i.e. non-incrementally).  The following
+  code snippet shows a typical usage of the hashers.
+<br>
+<Pre><Code style="color:MidnightBlue;">
+  ! first, initialize the hasher (once)
+  CALL Hasher%Initialize(Seed)
+  ! then, put data into the hasher (a number of times)
+  CALL Hasher%Update(Input, InpSize)
+              ...
+              ...
+              ...
+  ! finally, get the hash value from the hasher (once)
+  HashCode = Hasher%Finalize()
+  </Code></Pre></p><a href="../module/mclass_xx3hasher64.html" class="pull-right"><emph>Read more&hellip;</emph></a></td></tr>
+<!--active-->			   <tr class=""><td><a href='../module/mclass_xxhasher32.html'>MClass_XXHasher32</a></td><td><a href='../sourcefile/mclass_xxhasher32.f90.html'>MClass_XXHasher32.f90</a></td><td><p><strong>PURPOSE OF THIS MODULE</strong>: <br>
+  This module contains the <em>XXHasher32</em> type and its related routines.
+  The <em>XXHasher32</em> type is a hasher type that extends directly from the
+  <a href="../module/mclass_hasher32.html#type-hasher32">Hasher32</a> type.
+  It provides all deferred procedures required by a <em>Hasher32</em> class and
+  outputs the hash value as a 32-bit integer. <br>
+  The <em>XXHasher32</em> type employs the <em>XX</em> hash algorithm for 32-bit integer
+  output by Yann Collet [1].  As a hasher, it can be used to compute the
+  hash value incrementally.  It also provides a method to compute the hash
+  value directly (i.e. non-incrementally).  The following code snippet shows
+  a typical usage of the hasher.
+<br>
+<Pre><Code style="color:MidnightBlue;">
+  ! first, initialize the hasher (once)
+  CALL Hasher%Initialize(Seed)
+  ! then, put data into the hasher (a number of times)
+  CALL Hasher%Update(Input, InpSize)
+              ...
+              ...
+              ...
+  ! finally, get the hash value from the hasher (once)
+  HashCode = Hasher%Finalize()
+  </Code></Pre></p><a href="../module/mclass_xxhasher32.html" class="pull-right"><emph>Read more&hellip;</emph></a></td></tr>
+<!---->			   <tr class="active"><td><a href='../module/mclass_xxhasher64.html'>MClass_XXHasher64</a></td><td><a href='../sourcefile/mclass_xxhasher64.f90.html'>MClass_XXHasher64.f90</a></td><td><p><strong>PURPOSE OF THIS MODULE</strong>: <br>
+  This module contains the <em>XXHasher64</em> type and its related routines.
+  The <em>XXHasher64</em> type is a hasher type that extends directly from the
+  <a href="../module/mclass_hasher64.html#type-hasher64">Hasher64</a> type.
+  It provides all deferred procedures required by a <em>Hasher64</em> class and
+  outputs the hash value as a 64-bit integer. <br>
+  The <em>XXHasher64</em> type employs the <em>XX</em> hash algorithm for 64-bit integer
+  output by Yann Collet [1, 2].  As a hasher, it can be used to compute the
+  hash value incrementally.  It also provides a method to compute the hash
+  value directly (i.e. non-incrementally).  The following code snippet shows
+  a typical usage of the hasher.
+<br>
+<Pre><Code style="color:MidnightBlue;">
+  ! first, initialize the hasher (once)
+  CALL Hasher%Initialize(Seed)
+  ! then, put data into the hasher (a number of times)
+  CALL Hasher%Update(Input, InpSize)
+              ...
+              ...
+              ...
+  ! finally, get the hash value from the hasher (once)
+  HashCode = Hasher%Finalize()
+  </Code></Pre></p><a href="../module/mclass_xxhasher64.html" class="pull-right"><emph>Read more&hellip;</emph></a></td></tr>
+<!--active-->			 </tbody></table>
+             
+        </div>
+      </div>
+      <hr>
+    </div> <!-- /container -->
+    <footer>
+      <div class="container">
+        <div class="row justify-content-between">
+          <div class="col"><p>eXPerimental Fortran Library (XpfLib) Documentation was developed by Niranama<br>&copy; 2024 
+</p>
+          </div>
+          <div class="col">
+            <p class="text-end">
+              Documentation generated by
+              <a href="https://github.com/Fortran-FOSS-Programmers/ford">FORD</a>
+            </p>
+          </div>
+        </div>
+        <br>
+      </div> <!-- /container -->
+    </footer>
+
+    <!-- Bootstrap core JavaScript -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>    
+
+    <!-- MathJax JavaScript
+             ================================================== -->
+             <!-- Placed at the end of the document so the pages load faster -->
+        <script type="text/x-mathjax-config">
+          MathJax.Hub.Config({
+          TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } },
+          jax: ['input/TeX','input/MathML','output/HTML-CSS'],
+          extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']
+          });
+        </script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+          <script src="../tipuesearch/tipuesearch_content.js"></script>
+          <script src="../tipuesearch/tipuesearch_set.js"></script>
+          <script src="../tipuesearch/tipuesearch.js"></script>
+
+  </body>
+</html>

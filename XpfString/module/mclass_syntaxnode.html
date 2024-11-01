@@ -1,0 +1,684 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta name="description" content="Experimental Fortran Package - String">
+    <meta name="author" content="Niranama" >
+    <link rel="icon" href="../favicon.png">
+
+    <title>MClass_SyntaxNode &ndash; eXPerimental Fortran Library (XpfLib) Documentation</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link href="../css/pygments.css" rel="stylesheet">
+    <link href="../css/font-awesome.min.css" rel="stylesheet">
+    <link href="../css/local.css" rel="stylesheet">
+      <link  href="../tipuesearch/tipuesearch.css" rel="stylesheet">
+
+    <script src="https://code.jquery.com/jquery-3.7.0.slim.min.js" integrity="sha256-tG5mcZUtJsZvyKAxYLVXrmjKBVLd6VpVccqz/r4ypFE=" crossorigin="anonymous"></script>
+  </head>
+
+  <body>
+
+    <!-- Fixed navbar -->
+    <div class="container-fluid mb-sm-4 mb-xl-2">
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container">
+          <a class="navbar-brand" href="../index.html">eXPerimental Fortran Library (XpfLib) Documentation </a>
+          <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar"
+                  aria-expanded="false" aria-controls="navbar" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon">
+          </button>
+
+          <div id="navbar" class="navbar-collapse collapse">
+            <ul class="navbar-nav">
+                  <li class="nav-item">
+                    <a class="nav-link" href="../lists/files.html">Source Files</a>
+                  </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../lists/modules.html">Modules</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../lists/procedures.html">Procedures</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../lists/types.html">Derived Types</a>
+                </li>
+            </ul>
+              <div class="d-flex align-items-end flex-grow-1">
+                <form action="../search.html" role="search" class="ms-auto">
+                  <input type="text" class="form-control" aria-label="Search" placeholder="Search" name="q" id="tipue_search_input" autocomplete="off" required>
+                </form>
+              </div>
+          </div><!--/.nav-collapse -->
+        </div>
+      </nav>
+    </div>
+
+    <div class="container">
+  <div class="row">
+    <h1>MClass_SyntaxNode
+      <small>Module</small>
+      
+    </h1>
+      <div class="container p-2 mb-4 bg-light border rounded-3">
+    <div class="row align-items-center justify-content-between" id="info-bar">
+      <div class="col">
+        <ul class="list-inline" style="margin-bottom:0px;display:inline">
+
+            <li class="list-inline-item" id="statements"><i class="fa fa-list-ol"></i>
+              <a data-bs-toggle="tooltip"
+                 data-bs-placement="bottom" data-html="true"
+                 title=" 1.9% of total for modules and submodules.">221 statements</a>
+            </li>
+
+            <li class="list-inline-item" id="source-file">
+              <i class="fa fa-code"></i>
+              <a href="../src/MClass_SyntaxNode.f90"> Source File</a>
+            </li>
+        </ul>
+      </div>
+      <div class="col">
+        <nav aria-label="breadcrumb">
+          <ol class="breadcrumb justify-content-end mb-0">
+                <li class="breadcrumb-item"><a href='../sourcefile/mclass_syntaxnode.f90.html'>MClass_SyntaxNode.f90</a></li>
+            <li class="breadcrumb-item active" aria-current="page">MClass_SyntaxNode</li>
+          </ol>
+        </nav>
+      </div>
+    </div>
+  </div>
+  <script>
+    $(function () {
+    $('[data-bs-toggle="tooltip"]').tooltip()
+    })
+  </script>
+
+  </div>
+
+  <div class="row">
+    <div class="col-md-3">
+        <div id="sidebar">
+      <h3>Contents</h3>
+  
+      <div class="card mb-4">
+      <a data-bs-toggle="collapse" href="#vars-0"
+         aria-expanded="false" aria-controls="vars-0">
+         <h4 class="card-header bg-primary text-white">Variables</h4>
+      </a>
+      <div id="vars-0" class="collapse">
+        <div class="list-group list-group-flush">
+            <a class="list-group-item" href="../module/mclass_syntaxnode.html#variable-node_undefined">Node_Undefined</a>
+            <a class="list-group-item" href="../module/mclass_syntaxnode.html#variable-leafnode_null">LeafNode_Null</a>
+            <a class="list-group-item" href="../module/mclass_syntaxnode.html#variable-leafnode_char">LeafNode_Char</a>
+            <a class="list-group-item" href="../module/mclass_syntaxnode.html#variable-leafnode_closure">LeafNode_Closure</a>
+            <a class="list-group-item" href="../module/mclass_syntaxnode.html#variable-branchnode_or">BranchNode_Or</a>
+            <a class="list-group-item" href="../module/mclass_syntaxnode.html#variable-branchnode_many">BranchNode_Many</a>
+            <a class="list-group-item" href="../module/mclass_syntaxnode.html#variable-branchnode_concat">BranchNode_Concat</a>
+            <a class="list-group-item" href="../module/mclass_syntaxnode.html#variable-branchnode_lbracket">BranchNode_LBracket</a>
+            <a class="list-group-item" href="../module/mclass_syntaxnode.html#variable-branchnode_rbracket">BranchNode_RBracket</a>
+        </div>
+      </div>
+    </div>
+
+  
+  
+  
+  
+  
+  
+  
+  
+      <div class="card mb-4">
+      <a data-bs-toggle="collapse" href="#types-0"
+         aria-expanded="false" aria-controls="types-0">
+         <h4 class="card-header bg-primary text-white">Derived Types</h4>
+      </a>
+      <div id="types-0" class="collapse">
+        <div class="list-group list-group-flush">
+            <a class="list-group-item" href="../module/mclass_syntaxnode.html#type-syntaxnode">SyntaxNode</a>
+        </div>
+      </div>
+    </div>
+
+  
+      <div class="card mb-4">
+      <a data-bs-toggle="collapse" href="#subs-0"
+         aria-expanded="false" aria-controls="subs-0">
+         <h4 class="card-header bg-primary text-white">Subroutines</h4>
+      </a>
+      <div id="subs-0" class="collapse">
+        <div class="list-group list-group-flush">
+            <a class="list-group-item" href="../module/mclass_syntaxnode.html#proc-syntaxnode_new">SyntaxNode_New</a>
+            <a class="list-group-item" href="../module/mclass_syntaxnode.html#proc-syntaxnode_free">SyntaxNode_Free</a>
+        </div>
+      </div>
+    </div>
+
+  
+  
+  
+  
+  
+  
+  
+
+
+  </div>
+
+    </div>
+
+    <div class="col-md-9" id='text'>
+      <p><strong>PURPOSE OF THIS MODULE</strong>: <br>
+  This module contains the <em>SyntaxNode</em> type and its related routines.
+  The <em>SyntaxNode</em> type is a derived type representing a ... <br></p>
+<br>          <div class="card mb-4">
+      <h3 class="card-header card-title bg-light">Uses</h3>
+      <div class="card-body">
+        <ul class="list-group list-group-flush">
+            <li class="list-group-item">
+              <ul class="list-inline">
+                  <li class="list-inline-item"><a href='../../XpfBase/module/mclass_object.html'>MClass_Object</a></li>
+                  <li class="list-inline-item"><a href='../../XpfBase/module/mbase_common.html'>MBase_Common</a></li>
+                  <li class="list-inline-item"><a href='../../XpfBase/module/mbase_errhandlers.html'>MBase_ErrHandlers</a></li>
+                  <li class="list-inline-item"><a href='../../XpfBase/module/mclass_intrusivelinkedlists.html'>MClass_IntrusiveLinkedLists</a></li>
+                  <li class="list-inline-item"><a href='../../XpfBase/module/mbase_sintutil.html'>MBase_SIntUtil</a></li>
+              </ul>
+            </li>
+        </ul>
+      </div>
+    </div>
+
+      
+      <br>
+
+
+        <section>
+          <h2>Variables</h2>
+            <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Visibility</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+<th></th><th scope="col">Initial</th>        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-node_undefined"></span>
+              integer(kind=kInt32),
+            </td>
+              <td>public,</td>
+            <td>
+parameter               
+            </td>
+            <td>::</td>
+            <td><strong>Node_Undefined</strong></td>
+<td> =</td>
+                <td>0</td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-leafnode_null"></span>
+              integer(kind=kInt32),
+            </td>
+              <td>public,</td>
+            <td>
+parameter               
+            </td>
+            <td>::</td>
+            <td><strong>LeafNode_Null</strong></td>
+<td> =</td>
+                <td>1</td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-leafnode_char"></span>
+              integer(kind=kInt32),
+            </td>
+              <td>public,</td>
+            <td>
+parameter               
+            </td>
+            <td>::</td>
+            <td><strong>LeafNode_Char</strong></td>
+<td> =</td>
+                <td>2</td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-leafnode_closure"></span>
+              integer(kind=kInt32),
+            </td>
+              <td>public,</td>
+            <td>
+parameter               
+            </td>
+            <td>::</td>
+            <td><strong>LeafNode_Closure</strong></td>
+<td> =</td>
+                <td>3</td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-branchnode_or"></span>
+              integer(kind=kInt32),
+            </td>
+              <td>public,</td>
+            <td>
+parameter               
+            </td>
+            <td>::</td>
+            <td><strong>BranchNode_Or</strong></td>
+<td> =</td>
+                <td>4</td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-branchnode_many"></span>
+              integer(kind=kInt32),
+            </td>
+              <td>public,</td>
+            <td>
+parameter               
+            </td>
+            <td>::</td>
+            <td><strong>BranchNode_Many</strong></td>
+<td> =</td>
+                <td>5</td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-branchnode_concat"></span>
+              integer(kind=kInt32),
+            </td>
+              <td>public,</td>
+            <td>
+parameter               
+            </td>
+            <td>::</td>
+            <td><strong>BranchNode_Concat</strong></td>
+<td> =</td>
+                <td>6</td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-branchnode_lbracket"></span>
+              integer(kind=kInt32),
+            </td>
+              <td>public,</td>
+            <td>
+parameter               
+            </td>
+            <td>::</td>
+            <td><strong>BranchNode_LBracket</strong></td>
+<td> =</td>
+                <td>7</td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-branchnode_rbracket"></span>
+              integer(kind=kInt32),
+            </td>
+              <td>public,</td>
+            <td>
+parameter               
+            </td>
+            <td>::</td>
+            <td><strong>BranchNode_RBracket</strong></td>
+<td> =</td>
+                <td>8</td>
+            <td>
+                
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+        </section>
+        <br>
+
+
+
+
+        <section>
+          <h2>Derived Types</h2>
+              <div class="card">
+    <div class="card-header codesum">
+      <span class="anchor" id="type-syntaxnode"></span>
+      <h3>
+        type, public, extends(DoublyLinkedNode)&nbsp;::&nbsp;
+        <a href='../type/syntaxnode.html'>SyntaxNode</a>
+        
+      </h3>
+    </div>
+    <div class="card-body">
+      <p>The <em>SyntaxNode</em> type is a node type...</p>
+
+        <h4>Components</h4>
+          <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Visibility</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+<th></th><th scope="col">Initial</th>        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-type"></span>
+              integer(kind=kInt32),
+            </td>
+              <td>public</td>
+            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Type</strong></td>
+<td> =</td>
+                <td>Node_Undefined</td>
+            <td>
+<p>node type</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-id"></span>
+              integer(kind=kInt32),
+            </td>
+              <td>public</td>
+            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>ID</strong></td>
+<td> =</td>
+                <td>0</td>
+            <td>
+<p>node identification (only used for branch nodes)</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-c"></span>
+              character(kind=kChar, len=1),
+            </td>
+              <td>public</td>
+            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>C</strong></td>
+<td> =</td>
+                <td>NULCHR</td>
+            <td>
+<p>character used only for LeafNode_Char</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+
+
+        <h4>Type-Bound Procedures</h4>
+        <table class="table table-striped varlist">
+          <tbody>
+              <tr>
+                <td>  procedure, public ::
+  <strong><a href='../type/syntaxnode.html#boundprocedure-copy'>Copy</a></strong> => SyntaxNode_Copy</td>
+                <td><p><em>CopyAssign</em> is a procedure deferred by the <em>Object</em> type. <br>
+ Use the assignment expression in place of the <em>CopyAssign</em> method
+ to make a copy of an <em>Object</em> object.</p></td>
+              </tr>
+              <tr>
+                <td>  procedure, public ::
+  <strong><a href='../type/syntaxnode.html#boundprocedure-isequalto'>IsEqualTo</a></strong> => SyntaxNode_IsEqualTo</td>
+                <td><p><em>IsEqualTo</em> is a procedure deferred by the <em>Object</em> type. <br>
+ <strong>Type-Bound Function</strong>: IsEqualTo <br>
+ <strong>Purpose</strong>: To check whether two objects are equal to one another or not. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    Flag = ObjA%IsEqualTo(ObjB) <br>
+  ---&gt;    IF (ObjA%IsEqualTo(ObjB)) DoSomething</p></td>
+              </tr>
+              <tr>
+                <td>  procedure, public ::
+  <strong><a href='../type/syntaxnode.html#boundprocedure-memfree'>MemFree</a></strong> => SyntaxNode_MemFree</td>
+                <td><p><em>FreeMemory</em> is a procedure deferred by the <em>Object</em> type. <br>
+ Use the <em>MemFree</em> method in place of the <em>FreeMemory</em> method to free
+ memory the <em>Object</em> object if the object contains allocatable and/or
+ pointer component(s).</p></td>
+              </tr>
+              <tr>
+                <td>  procedure, public ::
+  <strong><a href='../type/syntaxnode.html#boundprocedure-tostring'>ToString</a></strong> => SyntaxNode_ToString</td>
+                <td><p><em>ToString</em> is a deferred procedure to get the string representation of this object.</p></td>
+              </tr>
+              <tr>
+                <td>  procedure, public ::
+  <strong><a href='../type/syntaxnode.html#boundprocedure-getright'>GetRight</a></strong> => SyntaxNode_GetRightNode</td>
+                <td><p><strong>Type-Bound Function</strong>: GetRight <br>
+ <strong>Purpose</strong>:  To get a pointer to the right node of the current node. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    RightNode =&gt; CurrNode%GetRight()</p></td>
+              </tr>
+              <tr>
+                <td>  procedure, public ::
+  <strong><a href='../type/syntaxnode.html#boundprocedure-getleft'>GetLeft</a></strong> => SyntaxNode_GetLeftNode</td>
+                <td><p><strong>Type-Bound Function</strong>: GetLeft <br>
+ <strong>Purpose</strong>:  To get a pointer to the left node of the current node. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    LeftNode =&gt; CurrNode%GetLeft()</p></td>
+              </tr>
+              <tr>
+                <td>  procedure, public ::
+  <strong><a href='../type/syntaxnode.html#boundprocedure-setright'>SetRight</a></strong> => SyntaxNode_SetRightNode</td>
+                <td><p><strong>Type-Bound Subroutine</strong>: SetRight <br>
+ <strong>Purpose</strong>:  To set a pointer to the right node of the current node. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    CALL CurrNode%SetRight(RightNode)</p></td>
+              </tr>
+              <tr>
+                <td>  procedure, public ::
+  <strong><a href='../type/syntaxnode.html#boundprocedure-setleft'>SetLeft</a></strong> => SyntaxNode_SetLeftNode</td>
+                <td><p><strong>Type-Bound Subroutine</strong>: SetLeft <br>
+ <strong>Purpose</strong>:  To set a pointer to the left node of the current node. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    CALL CurrNode%SetLeft(LeftNode)</p></td>
+              </tr>
+              <tr>
+                <td>  procedure, public ::
+  <strong><a href='../type/syntaxnode.html#boundprocedure-hasright'>HasRight</a></strong> => SyntaxNode_HasRightNode</td>
+                <td><p><strong>Type-Bound Function</strong>: HasRight <br>
+ <strong>Purpose</strong>:  To check whether the right node of the specified node is associated or not. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    Flag = CurrNode%HasRight() <br>
+  ---&gt;    IF (.NOT.CurrNode%HasRight()) DoSomething <br></p></td>
+              </tr>
+              <tr>
+                <td>  procedure, public ::
+  <strong><a href='../type/syntaxnode.html#boundprocedure-hasleft'>HasLeft</a></strong> => SyntaxNode_HasLeftNode</td>
+                <td><p><strong>Type-Bound Function</strong>: HasLeft <br>
+ <strong>Purpose</strong>:  To check whether the left node of the specified node is associated or not. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    Flag = CurrNode%HasLeft() <br>
+  ---&gt;    IF (.NOT.CurrNode%HasLeft()) DoSomething <br></p></td>
+              </tr>
+              <tr>
+                <td>  procedure, public ::
+  <strong><a href='../type/syntaxnode.html#boundprocedure-operate'>Operate</a></strong> => SyntaxNode_Operate</td>
+                <td><p><strong>Type-Bound Subroutine</strong>: Operate <br>
+ <strong>Purpose</strong>:  To set a pointer to both the left and right nodes of the current node.
+               This operation is applicable only for the "BranchNode_Or", "BranchNode_Many",
+               or "BranchNode_Concat" node type. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    CALL CurrNode%Operate(LeftNode, RightNode)</p></td>
+              </tr>
+              <tr>
+                <td>  procedure, public ::
+  <strong><a href='../type/syntaxnode.html#boundprocedure-setchar'>SetChar</a></strong> => SyntaxNode_SetCharacter</td>
+                <td><p><strong>Type-Bound Subroutine</strong>: SetChar <br>
+ <strong>Purpose</strong>:  To set the specified character to the current node.  This operation is
+               only applicable for the "LeafNode_Char" node type. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    CALL CurrNode%SetChar(C)</p></td>
+              </tr>
+          </tbody>
+        </table>
+    </div>
+  </div>
+
+        </section>
+        <br>
+
+
+        <section>
+          <h2>Subroutines</h2>
+              <div class="card">
+    <div class="card-header codesum"><span class="anchor" id="proc-syntaxnode_new"></span><h3>public  subroutine <a href='../proc/syntaxnode_new.html'>SyntaxNode_New</a>(Node, NodeType)  
+</h3></div>
+    <div class="card-body">
+          
+  <p>To allocate the node and specify its type.</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-node~13"></span>
+              type(<a href='../type/syntaxnode.html'>SyntaxNode</a>),
+            </td>
+<td>intent(inout),</td>
+              <td></td>            <td>
+              POINTER
+            </td>
+            <td>::</td>
+            <td><strong>Node</strong></td>
+            <td>
+
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-nodetype"></span>
+              integer(kind=kInt32),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>NodeType</strong></td>
+            <td>
+
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+    </div>
+  </div>
+
+              <div class="card">
+    <div class="card-header codesum"><span class="anchor" id="proc-syntaxnode_free"></span><h3>public  subroutine <a href='../proc/syntaxnode_free.html'>SyntaxNode_Free</a>()  
+</h3></div>
+    <div class="card-body">
+          
+  <p>To free all the nodes linked to the specified node.</p>
+
+  <h4>Arguments</h4>
+    <em>None</em>
+
+    </div>
+  </div>
+
+        </section>
+        <br>
+
+
+
+    </div>
+  </div>
+
+      <hr>
+    </div> <!-- /container -->
+    <footer>
+      <div class="container">
+        <div class="row justify-content-between">
+          <div class="col"><p>eXPerimental Fortran Library (XpfLib) Documentation was developed by Niranama<br>&copy; 2024 
+</p>
+          </div>
+          <div class="col">
+            <p class="text-end">
+              Documentation generated by
+              <a href="https://github.com/Fortran-FOSS-Programmers/ford">FORD</a>
+            </p>
+          </div>
+        </div>
+        <br>
+      </div> <!-- /container -->
+    </footer>
+
+    <!-- Bootstrap core JavaScript -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>    
+
+    <!-- MathJax JavaScript
+             ================================================== -->
+             <!-- Placed at the end of the document so the pages load faster -->
+        <script type="text/x-mathjax-config">
+          MathJax.Hub.Config({
+          TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } },
+          jax: ['input/TeX','input/MathML','output/HTML-CSS'],
+          extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']
+          });
+        </script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+          <script src="../tipuesearch/tipuesearch_content.js"></script>
+          <script src="../tipuesearch/tipuesearch_set.js"></script>
+          <script src="../tipuesearch/tipuesearch.js"></script>
+
+  </body>
+</html>

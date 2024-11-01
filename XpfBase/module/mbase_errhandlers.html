@@ -1,0 +1,1106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta name="description" content="Experimental Fortran Package - Base Modules and Classes">
+    <meta name="author" content="Niranama" >
+    <link rel="icon" href="../favicon.png">
+
+    <title>MBase_ErrHandlers &ndash; eXPerimental Fortran Library (XpfLib) Documentation</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link href="../css/pygments.css" rel="stylesheet">
+    <link href="../css/font-awesome.min.css" rel="stylesheet">
+    <link href="../css/local.css" rel="stylesheet">
+      <link  href="../tipuesearch/tipuesearch.css" rel="stylesheet">
+
+    <script src="https://code.jquery.com/jquery-3.7.0.slim.min.js" integrity="sha256-tG5mcZUtJsZvyKAxYLVXrmjKBVLd6VpVccqz/r4ypFE=" crossorigin="anonymous"></script>
+  </head>
+
+  <body>
+
+    <!-- Fixed navbar -->
+    <div class="container-fluid mb-sm-4 mb-xl-2">
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container">
+          <a class="navbar-brand" href="../index.html">eXPerimental Fortran Library (XpfLib) Documentation </a>
+          <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar"
+                  aria-expanded="false" aria-controls="navbar" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon">
+          </button>
+
+          <div id="navbar" class="navbar-collapse collapse">
+            <ul class="navbar-nav">
+                  <li class="nav-item">
+                    <a class="nav-link" href="../lists/files.html">Source Files</a>
+                  </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../lists/modules.html">Modules</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../lists/procedures.html">Procedures</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../lists/absint.html">Abstract Interfaces</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../lists/types.html">Derived Types</a>
+                </li>
+            </ul>
+              <div class="d-flex align-items-end flex-grow-1">
+                <form action="../search.html" role="search" class="ms-auto">
+                  <input type="text" class="form-control" aria-label="Search" placeholder="Search" name="q" id="tipue_search_input" autocomplete="off" required>
+                </form>
+              </div>
+          </div><!--/.nav-collapse -->
+        </div>
+      </nav>
+    </div>
+
+    <div class="container">
+  <div class="row">
+    <h1>MBase_ErrHandlers
+      <small>Module</small>
+      
+    </h1>
+      <div class="container p-2 mb-4 bg-light border rounded-3">
+    <div class="row align-items-center justify-content-between" id="info-bar">
+      <div class="col">
+        <ul class="list-inline" style="margin-bottom:0px;display:inline">
+
+            <li class="list-inline-item" id="statements"><i class="fa fa-list-ol"></i>
+              <a data-bs-toggle="tooltip"
+                 data-bs-placement="bottom" data-html="true"
+                 title=" 0.5% of total for modules and submodules.">215 statements</a>
+            </li>
+
+            <li class="list-inline-item" id="source-file">
+              <i class="fa fa-code"></i>
+              <a href="../src/MBase_ErrHandlers.f90"> Source File</a>
+            </li>
+        </ul>
+      </div>
+      <div class="col">
+        <nav aria-label="breadcrumb">
+          <ol class="breadcrumb justify-content-end mb-0">
+                <li class="breadcrumb-item"><a href='../sourcefile/mbase_errhandlers.f90.html'>MBase_ErrHandlers.f90</a></li>
+            <li class="breadcrumb-item active" aria-current="page">MBase_ErrHandlers</li>
+          </ol>
+        </nav>
+      </div>
+    </div>
+  </div>
+  <script>
+    $(function () {
+    $('[data-bs-toggle="tooltip"]').tooltip()
+    })
+  </script>
+
+  </div>
+
+  <div class="row">
+    <div class="col-md-3">
+        <div id="sidebar">
+      <h3>Contents</h3>
+  
+      <div class="card mb-4">
+      <a data-bs-toggle="collapse" href="#vars-0"
+         aria-expanded="false" aria-controls="vars-0">
+         <h4 class="card-header bg-primary text-white">Variables</h4>
+      </a>
+      <div id="vars-0" class="collapse">
+        <div class="list-group list-group-flush">
+            <a class="list-group-item" href="../module/mbase_errhandlers.html#variable-errnone">ErrNone</a>
+            <a class="list-group-item" href="../module/mbase_errhandlers.html#variable-errwarning">ErrWarning</a>
+            <a class="list-group-item" href="../module/mbase_errhandlers.html#variable-errsevere">ErrSevere</a>
+            <a class="list-group-item" href="../module/mbase_errhandlers.html#variable-errfatal">ErrFatal</a>
+        </div>
+      </div>
+    </div>
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+      <div class="card mb-4">
+      <a data-bs-toggle="collapse" href="#subs-0"
+         aria-expanded="false" aria-controls="subs-0">
+         <h4 class="card-header bg-primary text-white">Subroutines</h4>
+      </a>
+      <div id="subs-0" class="collapse">
+        <div class="list-group list-group-flush">
+            <a class="list-group-item" href="../module/mbase_errhandlers.html#proc-displaywarningerror">DisplayWarningError</a>
+            <a class="list-group-item" href="../module/mbase_errhandlers.html#proc-displayfatalerror">DisplayFatalError</a>
+            <a class="list-group-item" href="../module/mbase_errhandlers.html#proc-displaysevereerror">DisplaySevereError</a>
+            <a class="list-group-item" href="../module/mbase_errhandlers.html#proc-displaycontinueerror">DisplayContinueError</a>
+            <a class="list-group-item" href="../module/mbase_errhandlers.html#proc-displaymessage">DisplayMessage</a>
+            <a class="list-group-item" href="../module/mbase_errhandlers.html#proc-closeerrorfile">CloseErrorFile</a>
+            <a class="list-group-item" href="../module/mbase_errhandlers.html#proc-abortprogram">AbortProgram</a>
+            <a class="list-group-item" href="../module/mbase_errhandlers.html#proc-setstoponerror">SetStopOnError</a>
+            <a class="list-group-item" href="../module/mbase_errhandlers.html#proc-closemiscopenfiles">CloseMiscOpenFiles</a>
+            <a class="list-group-item" href="../module/mbase_errhandlers.html#proc-handle_errdealloc">Handle_ErrDealloc</a>
+            <a class="list-group-item" href="../module/mbase_errhandlers.html#proc-handle_erralloc">Handle_ErrAlloc</a>
+            <a class="list-group-item" href="../module/mbase_errhandlers.html#proc-handle_erropen">Handle_ErrOpen</a>
+            <a class="list-group-item" href="../module/mbase_errhandlers.html#proc-handle_errlevel">Handle_ErrLevel</a>
+        </div>
+      </div>
+    </div>
+
+  
+  
+  
+  
+  
+  
+  
+
+
+  </div>
+
+    </div>
+
+    <div class="col-md-9" id='text'>
+      <p><strong>PURPOSE OF THIS MODULE</strong>: <br>
+  This module contains routines and parameters for error-handling tasks.   The error messages
+  are written to a (default) log file named 'XpfLibError.Log'.</p>
+<br>          <div class="card mb-4">
+      <h3 class="card-header card-title bg-light">Uses</h3>
+      <div class="card-body">
+        <ul class="list-group list-group-flush">
+            <li class="list-group-item">
+              <ul class="list-inline">
+                  <li class="list-inline-item"><a href='../module/mbase_sintutil.html'>MBase_SIntUtil</a></li>
+                  <li class="list-inline-item"><a href='../module/mbase_common.html'>MBase_Common</a></li>
+              </ul>
+            </li>
+        </ul>
+      </div>
+    </div>
+
+      
+      <br>
+
+
+        <section>
+          <h2>Variables</h2>
+            <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Visibility</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+<th></th><th scope="col">Initial</th>        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-errnone"></span>
+              integer(kind=kInt32),
+            </td>
+              <td>public,</td>
+            <td>
+parameter               
+            </td>
+            <td>::</td>
+            <td><strong>ErrNone</strong></td>
+<td> =</td>
+                <td>0</td>
+            <td>
+                <p>no error level</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-errwarning"></span>
+              integer(kind=kInt32),
+            </td>
+              <td>public,</td>
+            <td>
+parameter               
+            </td>
+            <td>::</td>
+            <td><strong>ErrWarning</strong></td>
+<td> =</td>
+                <td>1</td>
+            <td>
+                <p>warning error level</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-errsevere"></span>
+              integer(kind=kInt32),
+            </td>
+              <td>public,</td>
+            <td>
+parameter               
+            </td>
+            <td>::</td>
+            <td><strong>ErrSevere</strong></td>
+<td> =</td>
+                <td>2</td>
+            <td>
+                <p>severe error level</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-errfatal"></span>
+              integer(kind=kInt32),
+            </td>
+              <td>public,</td>
+            <td>
+parameter               
+            </td>
+            <td>::</td>
+            <td><strong>ErrFatal</strong></td>
+<td> =</td>
+                <td>3</td>
+            <td>
+                <p>fatal error level</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+        </section>
+        <br>
+
+
+
+
+
+
+        <section>
+          <h2>Subroutines</h2>
+              <div class="card">
+    <div class="card-header codesum"><span class="anchor" id="proc-displaywarningerror"></span><h3>public  subroutine <a href='../proc/displaywarningerror.html'>DisplayWarningError</a>(ErrorMessage, OutUnit)  
+</h3></div>
+    <div class="card-body">
+          
+  <p>To display a 'Warning Error' message.</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-errormessage"></span>
+              character(kind=kChar, len=*),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>ErrorMessage</strong></td>
+            <td>
+
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-outunit~2"></span>
+              integer(kind=kInt32),
+            </td>
+<td>intent(inout),</td>
+              <td>optional</td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>OutUnit</strong></td>
+            <td>
+<p>user specified unit number. <br>
+If not present, the message is written to the default log file. <br>
+If present and an associated file is open, the message is written to the associated file. <br>
+Otherwise, the message is written to a file named 'UserErrLog.Txt'.</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+    </div>
+  </div>
+
+              <div class="card">
+    <div class="card-header codesum"><span class="anchor" id="proc-displayfatalerror"></span><h3>public  subroutine <a href='../proc/displayfatalerror.html'>DisplayFatalError</a>(ErrorMessage, OutUnit)  
+</h3></div>
+    <div class="card-body">
+          
+  <p>To display a 'Fatal Error' message.</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-errormessage~2"></span>
+              character(kind=kChar, len=*),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>ErrorMessage</strong></td>
+            <td>
+
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-outunit~3"></span>
+              integer(kind=kInt32),
+            </td>
+<td>intent(inout),</td>
+              <td>optional</td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>OutUnit</strong></td>
+            <td>
+<p>user specified unit number. <br>
+If not present, the message is written to the default log file. <br>
+If present and an associated file is open, the message is written to the associated file. <br>
+Otherwise, the message is written to a file named 'UserErrLog.Txt'.</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+    </div>
+  </div>
+
+              <div class="card">
+    <div class="card-header codesum"><span class="anchor" id="proc-displaysevereerror"></span><h3>public  subroutine <a href='../proc/displaysevereerror.html'>DisplaySevereError</a>(ErrorMessage, OutUnit)  
+</h3></div>
+    <div class="card-body">
+          
+  <p>To display a 'Severe Error' message.</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-errormessage~3"></span>
+              character(kind=kChar, len=*),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>ErrorMessage</strong></td>
+            <td>
+
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-outunit~4"></span>
+              integer(kind=kInt32),
+            </td>
+<td>intent(inout),</td>
+              <td>optional</td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>OutUnit</strong></td>
+            <td>
+<p>user specified unit number. <br>
+If not present, the message is written to the default log file. <br>
+If present and an associated file is open, the message is written to the associated file. <br>
+Otherwise, the message is written to a file named 'UserErrLog.Txt'.</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+    </div>
+  </div>
+
+              <div class="card">
+    <div class="card-header codesum"><span class="anchor" id="proc-displaycontinueerror"></span><h3>public  subroutine <a href='../proc/displaycontinueerror.html'>DisplayContinueError</a>(ErrorMessage, OutUnit)  
+</h3></div>
+    <div class="card-body">
+          
+  <p>To display a 'Continued Error' message.</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-errormessage~4"></span>
+              character(kind=kChar, len=*),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>ErrorMessage</strong></td>
+            <td>
+
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-outunit~5"></span>
+              integer(kind=kInt32),
+            </td>
+<td>intent(inout),</td>
+              <td>optional</td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>OutUnit</strong></td>
+            <td>
+<p>user specified unit number. <br>
+If not present, the message is written to the default log file. <br>
+If present and an associated file is open, the message is written to the associated file. <br>
+Otherwise, the message is written to a file named 'UserErrLog.Txt'.</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+    </div>
+  </div>
+
+              <div class="card">
+    <div class="card-header codesum"><span class="anchor" id="proc-displaymessage"></span><h3>public  subroutine <a href='../proc/displaymessage.html'>DisplayMessage</a>(Message, OutUnit)  
+</h3></div>
+    <div class="card-body">
+          
+  <p>To display a (informative) message on designated output Files.</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-message~5"></span>
+              character(kind=kChar, len=*),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Message</strong></td>
+            <td>
+
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-outunit~6"></span>
+              integer(kind=kInt32),
+            </td>
+<td>intent(inout),</td>
+              <td>optional</td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>OutUnit</strong></td>
+            <td>
+<p>user specified unit number. <br>
+If not present, the message is written to the default log file. <br>
+If present and an associated file is open, the message is written to the associated file. <br>
+Otherwise, the message is written to a file named 'UserErrLog.Txt'.</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+    </div>
+  </div>
+
+              <div class="card">
+    <div class="card-header codesum"><span class="anchor" id="proc-closeerrorfile"></span><h3>public  subroutine <a href='../proc/closeerrorfile.html'>CloseErrorFile</a>(OutUnit)  
+</h3></div>
+    <div class="card-body">
+          
+  <p>This subroutine closes the general error file.</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-outunit~7"></span>
+              integer(kind=kInt32),
+            </td>
+<td>intent(in),</td>
+              <td>optional</td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>OutUnit</strong></td>
+            <td>
+<p>user specified unit number. <br>
+If not present, the default file is closed. <br>
+If present and an associated file is open, the associated file is closed. <br>
+Otherwise, the file named 'UserErrLog.Txt' is closed.</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+    </div>
+  </div>
+
+              <div class="card">
+    <div class="card-header codesum"><span class="anchor" id="proc-abortprogram"></span><h3>public  subroutine <a href='../proc/abortprogram.html'>AbortProgram</a>(OutUnit)  
+</h3></div>
+    <div class="card-body">
+          
+  <p>This subroutine causes the program to halt due to a fatal error.</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-outunit~8"></span>
+              integer(kind=kInt32),
+            </td>
+<td>intent(inout),</td>
+              <td>optional</td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>OutUnit</strong></td>
+            <td>
+<p>user specified unit number. <br>
+If not present, messages are written to the default log file. <br>
+If present and an associated file is open, messages are written to the associated file. <br>
+Otherwise, messages are written to a file named 'UserErrLog.Txt'.</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+    </div>
+  </div>
+
+              <div class="card">
+    <div class="card-header codesum"><span class="anchor" id="proc-setstoponerror"></span><h3>public  subroutine <a href='../proc/setstoponerror.html'>SetStopOnError</a>(Flag)  
+</h3></div>
+    <div class="card-body">
+          
+  <p>To set StopOnError flag (module variable).</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-flag~5"></span>
+              logical,
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Flag</strong></td>
+            <td>
+<p>true if requesting termination of the program due to fatal error(s)</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+    </div>
+  </div>
+
+              <div class="card">
+    <div class="card-header codesum"><span class="anchor" id="proc-closemiscopenfiles"></span><h3>public  subroutine <a href='../proc/closemiscopenfiles.html'>CloseMiscOpenFiles</a>()  
+</h3></div>
+    <div class="card-body">
+          
+  <p>This subroutine scans potential unit numbers and closes any that are still open.</p>
+
+  <h4>Arguments</h4>
+    <em>None</em>
+
+    </div>
+  </div>
+
+              <div class="card">
+    <div class="card-header codesum"><span class="anchor" id="proc-handle_errdealloc"></span><h3>public  subroutine <a href='../proc/handle_errdealloc.html'>Handle_ErrDealloc</a>(SubName, ModName, Msg, Stat)  
+</h3></div>
+    <div class="card-body">
+          
+  <p>To handle deallocation error if necessary (i.e. Stat /= 0).</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-subname"></span>
+              character(kind=kChar, len=*),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>SubName</strong></td>
+            <td>
+<p>routine name</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-modname"></span>
+              character(kind=kChar, len=*),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>ModName</strong></td>
+            <td>
+<p>module name</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-msg"></span>
+              character(kind=kChar, len=*),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Msg</strong></td>
+            <td>
+<p>error message</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-stat"></span>
+              integer(kind=kInt32),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Stat</strong></td>
+            <td>
+<p>error status</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+    </div>
+  </div>
+
+              <div class="card">
+    <div class="card-header codesum"><span class="anchor" id="proc-handle_erralloc"></span><h3>public  subroutine <a href='../proc/handle_erralloc.html'>Handle_ErrAlloc</a>(SubName, ModName, Msg, Stat)  
+</h3></div>
+    <div class="card-body">
+          
+  <p>To handle allocation error if necessary (i.e. Stat /= 0).</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-subname~2"></span>
+              character(kind=kChar, len=*),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>SubName</strong></td>
+            <td>
+<p>routine name</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-modname~2"></span>
+              character(kind=kChar, len=*),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>ModName</strong></td>
+            <td>
+<p>module name</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-msg~2"></span>
+              character(kind=kChar, len=*),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Msg</strong></td>
+            <td>
+<p>error message</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-stat~2"></span>
+              integer(kind=kInt32),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Stat</strong></td>
+            <td>
+<p>error status</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+    </div>
+  </div>
+
+              <div class="card">
+    <div class="card-header codesum"><span class="anchor" id="proc-handle_erropen"></span><h3>public  subroutine <a href='../proc/handle_erropen.html'>Handle_ErrOpen</a>(SubName, ModName, FileName, Level)  
+</h3></div>
+    <div class="card-body">
+          
+  <p>To handle error due to open file operation according to the specified error level (and
+ the configuration mode defined in the "Macro - Basic Definitions.f90" file).</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-subname~3"></span>
+              character(kind=kChar, len=*),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>SubName</strong></td>
+            <td>
+<p>routine name</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-modname~3"></span>
+              character(kind=kChar, len=*),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>ModName</strong></td>
+            <td>
+<p>module name</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-filename"></span>
+              character(kind=kChar, len=*),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>FileName</strong></td>
+            <td>
+<p>file name</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-level"></span>
+              integer(kind=kInt32),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Level</strong></td>
+            <td>
+<p>error level</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+    </div>
+  </div>
+
+              <div class="card">
+    <div class="card-header codesum"><span class="anchor" id="proc-handle_errlevel"></span><h3>public  subroutine <a href='../proc/handle_errlevel.html'>Handle_ErrLevel</a>(SubName, ModName, Level, Msg)  
+</h3></div>
+    <div class="card-body">
+          
+  <p>To handle the error occurred according to the specified error level (and the
+ configuration mode defined in the "Macro - Basic Definitions.f90" file).</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-subname~4"></span>
+              character(kind=kChar, len=*),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>SubName</strong></td>
+            <td>
+<p>routine name</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-modname~4"></span>
+              character(kind=kChar, len=*),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>ModName</strong></td>
+            <td>
+<p>module name</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-level~2"></span>
+              integer(kind=kInt32),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Level</strong></td>
+            <td>
+<p>error level</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-msg~3"></span>
+              character(kind=kChar, len=*),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Msg</strong></td>
+            <td>
+<p>error message</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+    </div>
+  </div>
+
+        </section>
+        <br>
+
+
+
+    </div>
+  </div>
+
+      <hr>
+    </div> <!-- /container -->
+    <footer>
+      <div class="container">
+        <div class="row justify-content-between">
+          <div class="col"><p>eXPerimental Fortran Library (XpfLib) Documentation was developed by Niranama<br>&copy; 2024 
+</p>
+          </div>
+          <div class="col">
+            <p class="text-end">
+              Documentation generated by
+              <a href="https://github.com/Fortran-FOSS-Programmers/ford">FORD</a>
+            </p>
+          </div>
+        </div>
+        <br>
+      </div> <!-- /container -->
+    </footer>
+
+    <!-- Bootstrap core JavaScript -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>    
+
+    <!-- MathJax JavaScript
+             ================================================== -->
+             <!-- Placed at the end of the document so the pages load faster -->
+        <script type="text/x-mathjax-config">
+          MathJax.Hub.Config({
+          TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } },
+          jax: ['input/TeX','input/MathML','output/HTML-CSS'],
+          extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']
+          });
+        </script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+          <script src="../tipuesearch/tipuesearch_content.js"></script>
+          <script src="../tipuesearch/tipuesearch_set.js"></script>
+          <script src="../tipuesearch/tipuesearch.js"></script>
+
+  </body>
+</html>

@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta name="description" content="Experimental Fortran Package - High-Precision Numbers">
+    <meta name="author" content="Niranama" >
+    <link rel="icon" href="../favicon.png">
+
+    <title>All Modules &ndash; eXPerimental Fortran Library (XpfLib) Documentation
+</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link href="../css/pygments.css" rel="stylesheet">
+    <link href="../css/font-awesome.min.css" rel="stylesheet">
+    <link href="../css/local.css" rel="stylesheet">
+      <link  href="../tipuesearch/tipuesearch.css" rel="stylesheet">
+
+    <script src="https://code.jquery.com/jquery-3.7.0.slim.min.js" integrity="sha256-tG5mcZUtJsZvyKAxYLVXrmjKBVLd6VpVccqz/r4ypFE=" crossorigin="anonymous"></script>
+  </head>
+
+  <body>
+
+    <!-- Fixed navbar -->
+    <div class="container-fluid mb-sm-4 mb-xl-2">
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container">
+          <a class="navbar-brand" href="../index.html">eXPerimental Fortran Library (XpfLib) Documentation </a>
+          <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar"
+                  aria-expanded="false" aria-controls="navbar" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon">
+          </button>
+
+          <div id="navbar" class="navbar-collapse collapse">
+            <ul class="navbar-nav">
+                  <li class="nav-item">
+                    <a class="nav-link" href="../lists/files.html">Source Files</a>
+                  </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../lists/modules.html">Modules</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../lists/procedures.html">Procedures</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../lists/types.html">Derived Types</a>
+                </li>
+            </ul>
+              <div class="d-flex align-items-end flex-grow-1">
+                <form action="../search.html" role="search" class="ms-auto">
+                  <input type="text" class="form-control" aria-label="Search" placeholder="Search" name="q" id="tipue_search_input" autocomplete="off" required>
+                </form>
+              </div>
+          </div><!--/.nav-collapse -->
+        </div>
+      </nav>
+    </div>
+
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12" id='text'>
+			 <h1>Modules</h1>
+			 <table class="table">
+			 <thead><tr><th>Module</th><th>Source File</th><th>Description</th></tr></thead>
+			 <tbody>
+			   <tr class="active"><td><a href='../module/mbase_float128.html'>MBase_Float128</a></td><td><a href='../sourcefile/mbase_float128.f90.html'>MBase_Float128.f90</a></td><td><p><strong>PURPOSE OF THIS MODULE</strong>: <br>
+  This module contains the <em>Float128</em> type, its related routines and useful <em>Float128</em> parameters.
+  The <em>Float128</em> type is a derived type representing a quadruple-precision floating point number.
+  Internally, it consists of a logical value representing a sign component, two 64-bit integers
+  representing a significand component and a 32-bit integer representing an exponent component.
+  Therefore, it is slightly more precise and has a wider range than the standard IEEE-754 quadruple-
+  precision floating point number. <br>
+  Various common operations typically available for real types are provided including arithmetic,
+  comparison and conversion/construction operations.  Currently, only basic arithmetic operations
+  including addition, subtraction, multiplication and division are implemented. <br>
+ <br>
+<strong>REFERENCES</strong>: <br>
+  [1] <a href="https://github.com/m-vokhm/Quadruple">Quadruple: A 128-bit floating-point arithmetic
+      for Java</a> <br></p></td></tr>
+<!--active-->			   <tr class=""><td><a href='../module/mclass_apint32.html'>MClass_ApInt32</a></td><td><a href='../sourcefile/mclass_apint32.f90.html'>MClass_ApInt32.f90</a></td><td><p><strong>PURPOSE OF THIS MODULE</strong>: <br>
+  This module contains the <em>ApInt32</em> type, its related routines and some useful
+  parameter-like functions.  The <em>ApInt32</em> type is a derived type representing
+  a <strong>mutable, arbitrary-precision signed</strong> integer.  Various common operations
+  usually available for integer types are provided including arithmetic, bitwise,
+  comparison, and conversion/construction operations.  The application programming
+  interface (API) follows Fortran intrinsic integer types with additional functions/
+  methods provided. <br>
+  Due to the fact that the <em>ApInt32</em> type has an allocatable component, unlike
+  other integer types available, the <em>ApInt32</em> type normally requires an explicit
+  construction either via a constructor method or an assignment expression before
+  being used as an input argument in other operations.  Otherwise, the number
+  would be interpreted as having zero value. <br>
+  If a number is always in a range provided by a 128-bit signed integer, a user can
+  use the <a href="../../xpfbase/module/mbase_sint128.html#type-sint128">SInt128</a>
+  type instead for efficiency reason.  Likewise, if a number is always in a range
+  provided by a 128-bit unsigned integer, the
+  <a href="../../xpfbase/module/mbase_uint128.html#type-uint128">UInt128</a> type
+  can be used with better performance. <br>
+  Similar to the <em>SInt128</em> type, mixed types of signed integer types (32-bit, 64-bit,
+  128-bit or arbitrary-precision) are allowed in arithmetic operations.  Likewise,
+  arguments with Fortran intrinsic integer types in all public methods are considered
+  to be signed, except those in some of conversion methods.  Also, for comparison and
+  bitwise operations that require two input arguments, both arguments must only be the
+  <em>ApInt32</em> type.  The operations on mixed types are not provided.  Therefore, all other
+  types must be explicitly converted to the <em>ApInt32</em> type before using in the comparison
+  and bitwise operations. <br>
+  It should be noted that unlike both the <em>SInt128</em> and <em>UInt128</em> types where a conventional
+  API (procedural programming) following Fortran integer types is used, the <em>ApInt32</em> type
+  uses a mixed programming style.  For basic integer operations, a conventional API is used.
+  For additional functionalities provided, both a conventional API and an object-oriented
+  API (via type-bound procedures) are used.  Therefore, for additional functions/methods,
+  the usage of the <em>ApInt32</em> type may differ from the usage of the <em>SInt128</em> and <em>UInt128</em>
+  types. <br>
+  See the <a href="../module/mclass_apint64.html">ApInt64</a> type for a <strong>mutable,
+  arbitrary-precision signed</strong> integer that has mostly identical functionalities.
+  The <em>ApInt64</em> type is similar to the <em>ApInt32</em> type, but employs the base of
+  2<sup>64</sup> instead of 2<sup>32</sup>.  Therefore, the <em>ApInt64</em> type uses
+  many similar algorithms but requires different implementations.  Also, the
+  <em>ApInt64</em> type provides experimental routines for various operations while
+  the <em>ApInt32</em> type does not. <br>
+  <br>
+<strong>REFERENCES</strong>: <br>
+  [1] <a href="https://github.com/bwakell/Huldra/blob/master/src/main/java/org/huldra/math/BigInt.java">
+      The Huldra Project: BigInt</a> <br>
+  [2] <a href="https://docs.oracle.com/javase/8/docs/api/?java/math/BigInteger.html">
+      Java's Class BigInteger</a></p></td></tr>
+<!---->			   <tr class="active"><td><a href='../module/mclass_apint64.html'>MClass_ApInt64</a></td><td><a href='../sourcefile/mclass_apint64.f90.html'>MClass_ApInt64.f90</a></td><td><p><strong>PURPOSE OF THIS MODULE</strong>: <br>
+  This module contains the <em>ApInt64</em> type, its related routines and some useful
+  parameter-like functions.  The <em>ApInt64</em> type is a derived type representing
+  a <strong>mutable, arbitrary-precision signed</strong> integer.  Various common operations
+  usually available for integer types are provided including arithmetic, bitwise,
+  comparison, and conversion/construction operations.  The application programming
+  interface (API) follows Fortran intrinsic integer types with additional functions/
+  methods provided. <br>
+  Due to the fact that the <em>ApInt64</em> type has an allocatable component, unlike
+  other integer types available, the <em>ApInt64</em> type normally requires an explicit
+  construction either via a constructor method or an assignment expression before
+  being used as an input argument in other operations.  Otherwise, the number
+  would be interpreted as having zero value. <br>
+  If a number is always in a range provided by a 128-bit signed integer, a user can
+  use the <a href="../../xpfbase/module/mbase_sint128.html#type-sint128">SInt128</a>
+  type instead for efficiency reason.  Likewise, if a number is always in a range
+  provided by a 128-bit unsigned integer, the
+  <a href="../../xpfbase/module/mbase_uint128.html#type-uint128"> UInt128</a>
+  type can be used with better performance. <br>
+  Similar to the <em>SInt128</em> type, mixed types of signed integer types (32-bit, 64-bit,
+  128-bit or arbitrary-precision) are allowed in arithmetic operations.  Likewise,
+  arguments with Fortran intrinsic integer types in all public methods are considered
+  to be signed, except those in some of conversion methods.  Also, for comparison and
+  bitwise operations that require two input arguments, both arguments must only be the
+  <em>ApInt64</em> type.  The operations on mixed types are not provided.  Therefore, all other
+  types must be explicitly converted to the <em>ApInt64</em> type before using in the comparison
+  and bitwise operations. <br>
+  It should be noted that unlike both the <em>SInt128</em> and <em>UInt128</em> types where a conventional
+  API (procedural programming) following Fortran integer types is used, the <em>ApInt64</em> type
+  uses a mixed programming style.  For basic integer operations, a conventional API is used.
+  For additional functionalities provided, both a conventional API and an object-oriented
+  API (via type-bound procedures) are used.  Therefore, for additional functions/methods,
+  the usage of the <em>ApInt64</em> type may differ from the usage of the <em>SInt128</em> and <em>UInt128</em>
+  types. <br>
+  See the <a href="../module/mclass_ApInt32.html">ApInt32</a> type for a <strong>mutable,
+  arbitrary-precision signed</strong> integer that has mostly identical functionalities.
+  The <em>ApInt32</em> type is similar to the <em>ApInt64</em> type, but employs the base of
+  2<sup>32</sup> instead of 2<sup>64</sup>.  Therefore, the <em>ApInt32</em> type uses
+  many similar algorithms but requires different implementations.  Also, the
+  <em>ApInt64</em> type provides experimental routines for various operations while
+  the <em>ApInt64</em> type does not. <br>
+  <br>
+<strong>REFERENCES</strong>: <br>
+  [1] <a href="https://github.com/bwakell/Huldra/blob/master/src/main/java/org/huldra/math/BigInt.java">
+      The Huldra Project: BigInt</a> <br>
+  [2] <a href="https://docs.oracle.com/javase/8/docs/api/?java/math/BigInteger.html">
+      Java's Class BigInteger</a> <br>
+  [3] <a href="https://github.com/chfast/intx">IntX: Extended precision integer C++
+      library</a></p></td></tr>
+<!--active-->			 </tbody></table>
+             
+        </div>
+      </div>
+      <hr>
+    </div> <!-- /container -->
+    <footer>
+      <div class="container">
+        <div class="row justify-content-between">
+          <div class="col"><p>eXPerimental Fortran Library (XpfLib) Documentation was developed by Niranama<br>&copy; 2024 
+</p>
+          </div>
+          <div class="col">
+            <p class="text-end">
+              Documentation generated by
+              <a href="https://github.com/Fortran-FOSS-Programmers/ford">FORD</a>
+            </p>
+          </div>
+        </div>
+        <br>
+      </div> <!-- /container -->
+    </footer>
+
+    <!-- Bootstrap core JavaScript -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>    
+
+    <!-- MathJax JavaScript
+             ================================================== -->
+             <!-- Placed at the end of the document so the pages load faster -->
+        <script type="text/x-mathjax-config">
+          MathJax.Hub.Config({
+          TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } },
+          jax: ['input/TeX','input/MathML','output/HTML-CSS'],
+          extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']
+          });
+        </script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+          <script src="../tipuesearch/tipuesearch_content.js"></script>
+          <script src="../tipuesearch/tipuesearch_set.js"></script>
+          <script src="../tipuesearch/tipuesearch.js"></script>
+
+  </body>
+</html>

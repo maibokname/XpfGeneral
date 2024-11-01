@@ -1,0 +1,3019 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta name="description" content="Experimental Fortran Package - High-Precision Numbers">
+    <meta name="author" content="Niranama" >
+    <link rel="icon" href="../favicon.png">
+
+    <title>ApInt64 &ndash; eXPerimental Fortran Library (XpfLib) Documentation </title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link href="../css/pygments.css" rel="stylesheet">
+    <link href="../css/font-awesome.min.css" rel="stylesheet">
+    <link href="../css/local.css" rel="stylesheet">
+      <link  href="../tipuesearch/tipuesearch.css" rel="stylesheet">
+
+    <script src="https://code.jquery.com/jquery-3.7.0.slim.min.js" integrity="sha256-tG5mcZUtJsZvyKAxYLVXrmjKBVLd6VpVccqz/r4ypFE=" crossorigin="anonymous"></script>
+  </head>
+
+  <body>
+
+    <!-- Fixed navbar -->
+    <div class="container-fluid mb-sm-4 mb-xl-2">
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container">
+          <a class="navbar-brand" href="../index.html">eXPerimental Fortran Library (XpfLib) Documentation </a>
+          <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar"
+                  aria-expanded="false" aria-controls="navbar" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon">
+          </button>
+
+          <div id="navbar" class="navbar-collapse collapse">
+            <ul class="navbar-nav">
+                  <li class="nav-item">
+                    <a class="nav-link" href="../lists/files.html">Source Files</a>
+                  </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../lists/modules.html">Modules</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../lists/procedures.html">Procedures</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../lists/types.html">Derived Types</a>
+                </li>
+            </ul>
+              <div class="d-flex align-items-end flex-grow-1">
+                <form action="../search.html" role="search" class="ms-auto">
+                  <input type="text" class="form-control" aria-label="Search" placeholder="Search" name="q" id="tipue_search_input" autocomplete="off" required>
+                </form>
+              </div>
+          </div><!--/.nav-collapse -->
+        </div>
+      </nav>
+    </div>
+
+    <div class="container">
+  <div class="row">
+    <h1>ApInt64
+      <small>Derived Type</small>
+      
+    </h1>
+      <div class="container p-2 mb-4 bg-light border rounded-3">
+    <div class="row align-items-center justify-content-between" id="info-bar">
+      <div class="col">
+        <ul class="list-inline" style="margin-bottom:0px;display:inline">
+
+            <li class="list-inline-item" id="statements"><i class="fa fa-list-ol"></i>
+              <a data-bs-toggle="tooltip"
+                 data-bs-placement="bottom" data-html="true"
+                 title="<p>48.0% of total for derived types.</p>Including implementation: 50 statements, 48.5% of total for derived types.">109 statements</a>
+            </li>
+
+            <li class="list-inline-item" id="source-file">
+              <i class="fa fa-code"></i>
+              <a href="../src/MClass_ApInt64.f90"> Source File</a>
+            </li>
+        </ul>
+      </div>
+      <div class="col">
+        <nav aria-label="breadcrumb">
+          <ol class="breadcrumb justify-content-end mb-0">
+                <li class="breadcrumb-item"><a href='../sourcefile/mclass_apint64.f90.html'>MClass_ApInt64.f90</a></li>
+                <li class="breadcrumb-item"><a href='../module/mclass_apint64.html'>MClass_ApInt64</a></li>
+            <li class="breadcrumb-item active" aria-current="page">ApInt64</li>
+          </ol>
+        </nav>
+      </div>
+    </div>
+  </div>
+  <script>
+    $(function () {
+    $('[data-bs-toggle="tooltip"]').tooltip()
+    })
+  </script>
+
+  </div>
+  
+  <div class="row">
+    <div class="col-md-3 hidden-xs hidden-sm visible-md visible-lg">
+      <div id="sidebar">
+      <h3>Contents</h3>
+  
+  
+  
+      <div class="card mb-4">
+      <a data-bs-toggle="collapse" href="#cons-0"
+         aria-expanded="false" aria-controls="cons-0">
+         <h4 class="card-header bg-primary text-white">Constructor</h4>
+      </a>
+      <div id="cons-0" class="collapse">
+        <div class="list-group list-group-flush">
+            <a class="list-group-item" href="../type/apint64.html#interface-apint64">ApInt64</a>
+        </div>
+      </div>
+    </div>
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+      <div class="card mb-4">
+      <a data-bs-toggle="collapse" href="#boundprocs-0"
+         aria-expanded="false" aria-controls="boundprocs-0">
+         <h4 class="card-header bg-primary text-white">Type-Bound Procedures</h4>
+      </a>
+      <div id="boundprocs-0" class="collapse">
+        <div class="list-group list-group-flush">
+            <a class="list-group-item" href="../type/apint64.html#boundprocedure-increment">Increment</a>
+            <a class="list-group-item" href="../type/apint64.html#boundprocedure-decrement">Decrement</a>
+            <a class="list-group-item" href="../type/apint64.html#boundprocedure-square">Square</a>
+            <a class="list-group-item" href="../type/apint64.html#boundprocedure-compare">Compare</a>
+            <a class="list-group-item" href="../type/apint64.html#boundprocedure-lshift">LShift</a>
+            <a class="list-group-item" href="../type/apint64.html#boundprocedure-rshift">RShift</a>
+            <a class="list-group-item" href="../type/apint64.html#boundprocedure-iszero">IsZero</a>
+            <a class="list-group-item" href="../type/apint64.html#boundprocedure-isone">IsOne</a>
+            <a class="list-group-item" href="../type/apint64.html#boundprocedure-ispositive">IsPositive</a>
+            <a class="list-group-item" href="../type/apint64.html#boundprocedure-isnegative">IsNegative</a>
+            <a class="list-group-item" href="../type/apint64.html#boundprocedure-randnum">RandNum</a>
+            <a class="list-group-item" href="../type/apint64.html#boundprocedure-copy">Copy</a>
+            <a class="list-group-item" href="../type/apint64.html#boundprocedure-display">Display</a>
+            <a class="list-group-item" href="../type/apint64.html#boundprocedure-getlength">GetLength</a>
+            <a class="list-group-item" href="../type/apint64.html#boundprocedure-add">Add</a>
+            <a class="list-group-item" href="../type/apint64.html#boundprocedure-subtract">Subtract</a>
+            <a class="list-group-item" href="../type/apint64.html#boundprocedure-multiply">Multiply</a>
+            <a class="list-group-item" href="../type/apint64.html#boundprocedure-divide">Divide</a>
+            <a class="list-group-item" href="../type/apint64.html#boundprocedure-divmod">DivMod</a>
+            <a class="list-group-item" href="../type/apint64.html#boundprocedure-addxp">AddXp</a>
+            <a class="list-group-item" href="../type/apint64.html#boundprocedure-subtractxp">SubtractXp</a>
+            <a class="list-group-item" href="../type/apint64.html#boundprocedure-dividexp">DivideXp</a>
+            <a class="list-group-item" href="../type/apint64.html#boundprocedure-divmodxp">DivModXp</a>
+        </div>
+      </div>
+    </div>
+
+  
+  
+    <div class="card card-primary">
+      <div class="card-header text-left"><h3 class="card-title">Source Code</h3></div>
+      <div class="list-group">
+        <a class="list-group-item" href="../type/apint64.html#src">ApInt64</a>
+      </div>
+    </div>
+
+
+  </div>
+
+    </div>
+    
+    <div class="col-md-9" id='text'>
+      <h2>type, public :: ApInt64</h2>
+    <p><em>ApInt64</em> is a mutable arbitrary-precision signed integer type where
+  its representations are as follows. <br>
+- Base is 2<sup>64</sup>. <br>
+- Magnitude is represented by the 'Digit' array in little-endian order. <br>
+- The 'Length' first 'Digit' count as the <em>ApInt64</em> number (i.e. it is always
+  less than or equal to the size/capacity of the 'Digit' array). <br>
+- Sign is represented by a sign integer (-1 or 1). <br>
+- Internally zero is allowed to have either sign.
+  (Otherwise one would have to remember to check for sign-swap for division,
+  multiplication etc...) <br>
+- Zero can have many forms: <br>
+  -&gt; The most common form of zero has 'Length' = 1 and Digit(0) = 0 (set through
+     ZeroApInt64()). <br>
+  -&gt; If 'Digit' has not yet been allocated or 'Length' is less than 1, the number
+     is considered to be zero. <br></p>
+    <br>
+
+    
+      <section>
+        <h2>Constructor</h2>
+            <div class="card">
+    <div class="card-header bg-light codesum">
+      <span class="anchor" id="interface-apint64"></span>
+      <h3>public        interface <a href='../interface/apint64.html'>ApInt64</a> 
+      </h3>
+    </div>
+      <div class="card-body">
+        <p><strong>Constructor Interface</strong>: ApInt64 <br>
+ <strong>Purpose</strong>:  To construct an ApInt64 number. <br>
+ <strong>Usage</strong>: <br>
+  ! construct ApNum from a magnitude array <br>
+  ---&gt;    ApNum = ApInt64(Sign, MagLen, MagArray) <br>
+  ! construct ApNum from 64-bit intrinsic integer treated as signed <br>
+  ---&gt;    ApNum = ApInt64(I64) <br>
+  ! construct ApNum from 32-bit intrinsic integer treated as unsigned <br>
+  ---&gt;    ApNum = ApInt64(Sign, U32) <br>
+  ! construct ApNum from 128-bit real number <br>
+  ---&gt;    ApNum = ApInt64(R128) <br>
+  ! construct ApNum from a decimal string <br>
+  ---&gt;    ApNum = ApInt64('-123456789098765432101122334455667788990012345')</p>
+      </div>
+    <ul class="list-group">
+          <li class="list-group-item">
+                <h3>
+    private module function Construct_ApInt64(Sign, Length, Digit) result(Big)  
+
+    </h3>
+  <p>To construct the <em>ApInt64</em> number based on the specified 64-bit integer
+ magnitude array and related data. <br>
+ <em>Usage</em>: ApNum = ApInt64(Sign, MagLen, MagArray)</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-sign~2"></span>
+              integer(kind=kInt32),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Sign</strong></td>
+            <td>
+                <p>sign of the number</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-length~4"></span>
+              integer(kind=kInt32),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Length</strong></td>
+            <td>
+                <p>length of the magnitude array</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-digit~2"></span>
+              integer(kind=kInt64),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Digit</strong>(0:Length-1)</td>
+            <td>
+                <p>the magnitude of the number given as a 64-bit integer array where
+ the first element gives the least significant 64 bits (i.e. little
+ endian order)</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+    <h4>
+    Return Value
+    <small>type(<a href='../type/apint64.html'>ApInt64</a>)</small>
+    </h4>
+    <p>the arbitrary-precision integer number</p>
+
+          </li>
+          <li class="list-group-item">
+                <h3>
+    private module function Bytes_To_ApInt64(Sign, Length, Digit) result(Big)  
+
+    </h3>
+  <p>To construct the <em>ApInt64</em> number based on the specified 8-bit integer
+ magnitude array and related data. <br>
+ <em>Usage</em>: ApNum = ApInt64(Sign, MagLen, MagArray)</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-sign~3"></span>
+              integer(kind=kInt32),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Sign</strong></td>
+            <td>
+                <p>sign of the number</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-length~5"></span>
+              integer(kind=kInt32),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Length</strong></td>
+            <td>
+                <p>length of the magnitude array</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-digit~3"></span>
+              integer(kind=kInt8),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Digit</strong>(0:Length-1)</td>
+            <td>
+                <p>the magnitude of the number given as a 8-bit integer array where
+ the first element gives the least significant 8 bits (i.e. little
+ endian order)</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+    <h4>
+    Return Value
+    <small>type(<a href='../type/apint64.html'>ApInt64</a>)</small>
+    </h4>
+    <p>the arbitrary-precision integer number</p>
+
+          </li>
+          <li class="list-group-item">
+                <h3>
+    private module function DecString_To_ApInt64(cStr, ErrFlag, ErrMsg) result(Big)  
+
+    </h3>
+  <p>To construct the <em>ApInt64</em> number based on the specified decimal string. <br>
+ <em>Usage</em>:  <br>
+ ---&gt; ApNum = ApInt64('1234567890987654321011223344') <br>
+ ---&gt; ApNum = ApInt64('-987654321012345678900123123', ErrFlag) <br>
+ ---&gt; ApNum = ApInt64(NumStr, ErrMsg=Message) <br>
+ ---&gt; ApNum = ApInt64(NumStr, ErrFlag, ErrMsg)</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-cstr"></span>
+              character(kind=kChar, len=*),
+            </td>
+<td>intent(in),</td>
+              <td></td>            <td>
+              TARGET
+            </td>
+            <td>::</td>
+            <td><strong>cStr</strong></td>
+            <td>
+                <p>character string</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-errflag"></span>
+              logical,
+            </td>
+<td>intent(out),</td>
+              <td>optional</td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>ErrFlag</strong></td>
+            <td>
+                <p>true if input is not invalid</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-errmsg"></span>
+              character(kind=kChar, len=:),
+            </td>
+<td>intent(out),</td>
+              <td>optional,</td>            <td>
+              ALLOCATABLE
+            </td>
+            <td>::</td>
+            <td><strong>ErrMsg</strong></td>
+            <td>
+                <p>message if input is not invalid</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+    <h4>
+    Return Value
+    <small>type(<a href='../type/apint64.html'>ApInt64</a>)</small>
+    </h4>
+    <p>number</p>
+
+          </li>
+          <li class="list-group-item">
+                <h3>
+    private module function U32_To_ApInt64(Sign, U32) result(Big)  
+
+    </h3>
+  <p>To construct the <em>ApInt64</em> number based on the specified 32-bit unsigned integer. <br>
+ <em>Usage</em>: ApNum = ApInt64(Sign, U32)</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-sign~4"></span>
+              integer(kind=kInt32),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Sign</strong></td>
+            <td>
+                <p>the sign of the number</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-u32"></span>
+              integer(kind=kInt32),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>U32</strong></td>
+            <td>
+                <p>the magnitude of the number treated as unsigned</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+    <h4>
+    Return Value
+    <small>type(<a href='../type/apint64.html'>ApInt64</a>)</small>
+    </h4>
+    
+
+          </li>
+          <li class="list-group-item">
+                <h3>
+    private module function U64_To_ApInt64(Sign, U64) result(Big)  
+
+    </h3>
+  <p>To construct the <em>ApInt64</em> number based on the specified 64-bit unsigned integer. <br>
+ <em>Usage</em>: ApNum = ApInt64(Sign, U64)</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-sign~5"></span>
+              integer(kind=kInt32),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Sign</strong></td>
+            <td>
+                <p>the sign of the number</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-u64"></span>
+              integer(kind=kInt64),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>U64</strong></td>
+            <td>
+                <p>the magnitude of the number treated as unsigned</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+    <h4>
+    Return Value
+    <small>type(<a href='../type/apint64.html'>ApInt64</a>)</small>
+    </h4>
+    
+
+          </li>
+          <li class="list-group-item">
+                <h3>
+    private module function U128_To_ApInt64(Sign, U128) result(Big)  
+
+    </h3>
+  <p>To construct the <em>ApInt64</em> number based on the specified 128-bit unsigned integer. <br>
+ <em>Usage</em>: ApNum = ApInt64(Sign, U128)</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-sign~6"></span>
+              integer(kind=kInt32),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Sign</strong></td>
+            <td>
+                <p>the sign of the number</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-u128"></span>
+              type(UInt128),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>U128</strong></td>
+            <td>
+                <p>the magnitude of the number treated as unsigned</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+    <h4>
+    Return Value
+    <small>type(<a href='../type/apint64.html'>ApInt64</a>)</small>
+    </h4>
+    
+
+          </li>
+          <li class="list-group-item">
+                <h3>
+    private module function I32_To_ApInt64(I32) result(Big)  
+
+    </h3>
+  <p>To construct the <em>ApInt64</em> number based on the specified 32-bit signed integer. <br>
+ <em>Usage</em>: ApNum = ApInt64(I32)</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-i32"></span>
+              integer(kind=kInt32),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>I32</strong></td>
+            <td>
+                <p>the 32-bit signed integer</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+    <h4>
+    Return Value
+    <small>type(<a href='../type/apint64.html'>ApInt64</a>)</small>
+    </h4>
+    
+
+          </li>
+          <li class="list-group-item">
+                <h3>
+    private module function I64_To_ApInt64(I64) result(Big)  
+
+    </h3>
+  <p>To construct the <em>ApInt64</em> number based on the specified 64-bit signed integer. <br>
+ <em>Usage</em>: ApNum = ApInt64(I64)</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-i64"></span>
+              integer(kind=kInt64),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>I64</strong></td>
+            <td>
+                <p>the 64-bit signed integer</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+    <h4>
+    Return Value
+    <small>type(<a href='../type/apint64.html'>ApInt64</a>)</small>
+    </h4>
+    
+
+          </li>
+          <li class="list-group-item">
+                <h3>
+    private module function I128_To_ApInt64(I128) result(Big)  
+
+    </h3>
+  <p>To construct the <em>ApInt64</em> number based on the specified 128-bit signed integer. <br>
+ <em>Usage</em>: ApNum = ApInt64(I128)</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-i128"></span>
+              type(SInt128),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>I128</strong></td>
+            <td>
+                <p>the 128-bit signed integer</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+    <h4>
+    Return Value
+    <small>type(<a href='../type/apint64.html'>ApInt64</a>)</small>
+    </h4>
+    
+
+          </li>
+          <li class="list-group-item">
+                <h3>
+    private module function R32_To_ApInt64(R32) result(Big)  
+
+    </h3>
+  <p>To construct the <em>ApInt64</em> number based on the specified 32-bit real number. <br>
+ <em>Usage</em>: ApNum = ApInt64(R32)</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-r32"></span>
+              real(kind=kSingle),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>R32</strong></td>
+            <td>
+                <p>the 32-bit real number</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+    <h4>
+    Return Value
+    <small>type(<a href='../type/apint64.html'>ApInt64</a>)</small>
+    </h4>
+    
+
+          </li>
+          <li class="list-group-item">
+                <h3>
+    private module function R64_To_ApInt64(R64) result(Big)  
+
+    </h3>
+  <p>To construct the <em>ApInt64</em> number based on the specified 64-bit real number. <br>
+ <em>Usage</em>: ApNum = ApInt64(R64)</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-r64"></span>
+              real(kind=kDouble),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>R64</strong></td>
+            <td>
+                <p>the 64-bit real number</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+    <h4>
+    Return Value
+    <small>type(<a href='../type/apint64.html'>ApInt64</a>)</small>
+    </h4>
+    
+
+          </li>
+          <li class="list-group-item">
+                <h3>
+    private module function R128_To_ApInt64(R128) result(Big)  
+
+    </h3>
+  <p>To construct the <em>ApInt64</em> number based on the specified 128-bit real number. <br>
+ <em>Usage</em>: ApNum = ApInt64(R128)</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-r128"></span>
+              real(kind=kQuad),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>R128</strong></td>
+            <td>
+                <p>the 128-bit real number</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+    <h4>
+    Return Value
+    <small>type(<a href='../type/apint64.html'>ApInt64</a>)</small>
+    </h4>
+    
+
+          </li>
+    </ul>
+  </div>
+
+      </section>
+      <br>
+
+
+      <section>
+        <h2>Type-Bound Procedures</h2>
+          <div class="row">
+              <div class="card mt-3">
+    <div class="card-header codesum">
+      <span class="anchor" id="boundprocedure-increment"></span>
+      <h3>
+          procedure, public ::
+  <strong>Increment</strong> => ApInt64_Increment
+        
+      </h3>
+    </div>
+      <div class="card-body">
+        
+        <p><strong>Type-Bound Subroutine</strong>: Increment <br>
+ <strong>Purpose</strong>:  To increase value of the ApInt64 number by one. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    CALL ApNum%Increment()</p>
+      </div>
+    <ul class="list-group">
+        <li class="list-group-item">
+              <h3>interface </h3>
+                  <h3>
+    private module subroutine ApInt64_Increment(Val)  
+</h3>
+
+  <p>To perform addition: Val = Val + 1.</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(<a href='../type/apint64.html'>ApInt64</a>),
+            </td>
+<td>intent(inout)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Val</strong></td>
+            <td>
+                
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+        </li>
+    </ul>
+  </div>
+
+          </div>
+          <div class="row">
+              <div class="card mt-3">
+    <div class="card-header codesum">
+      <span class="anchor" id="boundprocedure-decrement"></span>
+      <h3>
+          procedure, public ::
+  <strong>Decrement</strong> => ApInt64_Decrement
+        
+      </h3>
+    </div>
+      <div class="card-body">
+        
+        <p><strong>Type-Bound Subroutine</strong>: Decrement <br>
+ <strong>Purpose</strong>:  To decrease value of the ApInt64 number by one. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    CALL ApNum%Decrement()</p>
+      </div>
+    <ul class="list-group">
+        <li class="list-group-item">
+              <h3>interface </h3>
+                  <h3>
+    private module subroutine ApInt64_Decrement(Val)  
+</h3>
+
+  <p>To perform subtraction: Val = Val - 1.</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(<a href='../type/apint64.html'>ApInt64</a>),
+            </td>
+<td>intent(inout)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Val</strong></td>
+            <td>
+                
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+        </li>
+    </ul>
+  </div>
+
+          </div>
+          <div class="row">
+              <div class="card mt-3">
+    <div class="card-header codesum">
+      <span class="anchor" id="boundprocedure-square"></span>
+      <h3>
+          procedure, public ::
+  <strong>Square</strong> => ApInt64_SquareSub
+        
+      </h3>
+    </div>
+      <div class="card-body">
+        
+        <p><strong>Type-Bound Subroutine</strong>: Square <br>
+ <strong>Purpose</strong>:  To return the ApInt64 number (ApInt64) where its value is
+               computed by: ApNum = ApNum * ApNum. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    CALL ApNum%Square()</p>
+      </div>
+    <ul class="list-group">
+        <li class="list-group-item">
+              <h3>interface </h3>
+                  <h3>
+    private module subroutine ApInt64_SquareSub(This)  
+</h3>
+
+  <p>To perform self-multiplication: This = This * This.</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(<a href='../type/apint64.html'>ApInt64</a>),
+            </td>
+<td>intent(inout)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>This</strong></td>
+            <td>
+                
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+        </li>
+    </ul>
+  </div>
+
+          </div>
+          <div class="row">
+              <div class="card mt-3">
+    <div class="card-header codesum">
+      <span class="anchor" id="boundprocedure-compare"></span>
+      <h3>
+          procedure, public ::
+  <strong>Compare</strong> => ApInt64_Compare
+        
+      </h3>
+    </div>
+      <div class="card-body">
+        
+        <p><strong>Type-Bound Function</strong>: Compare <br>
+ <strong>Purpose</strong>:  To compare two ApInt64 numbers (LHS and RHS) and return <br>
+  -1 if LHS &lt; RHS, <br>
+   0 if LHS == RHS, or <br>
+   1 if LHS &gt; RHS. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    Flag = LHS%Compare(RHS) <br>
+  ---&gt;    IF (LHS%Compare(RHS) /= 0) DoSomething</p>
+      </div>
+    <ul class="list-group">
+        <li class="list-group-item">
+              <h3>interface </h3>
+                  <h3>
+    private module function ApInt64_Compare(LHS, RHS) result(Flag)  
+</h3>
+
+  <p>To compare two ApInt64 numbers (LHS and RHS) and return <br>
+  -1 if LHS &lt; RHS, <br>
+   0 if LHS == RHS, or <br>
+   1 if LHS &gt; RHS.</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(<a href='../type/apint64.html'>ApInt64</a>),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>LHS</strong></td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              type(<a href='../type/apint64.html'>ApInt64</a>),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>RHS</strong></td>
+            <td>
+                
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+    <h4>
+    Return Value
+    <small>integer(kind=kInt32)</small>
+    </h4>
+    
+
+        </li>
+    </ul>
+  </div>
+
+          </div>
+          <div class="row">
+              <div class="card mt-3">
+    <div class="card-header codesum">
+      <span class="anchor" id="boundprocedure-lshift"></span>
+      <h3>
+          procedure, public ::
+  <strong>LShift</strong> => ApInt64_LeftShift
+        
+      </h3>
+    </div>
+      <div class="card-body">
+        
+        <p><strong>Type-Bound Subroutine</strong>: LShift <br>
+ <strong>Purpose</strong>:  To perform logical left shift where ShiftPos is non-negative. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    CALL ApNum%LShift(112)</p>
+      </div>
+    <ul class="list-group">
+        <li class="list-group-item">
+              <h3>interface </h3>
+                  <h3>
+    private module subroutine ApInt64_LeftShift(Val, ShiftPos)  
+</h3>
+
+  <p>To perform logical left shift with 0 &lt;= ShiftPos &lt;= 128.</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(<a href='../type/apint64.html'>ApInt64</a>),
+            </td>
+<td>intent(inout)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Val</strong></td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              integer(kind=kInt32),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>ShiftPos</strong></td>
+            <td>
+                
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+        </li>
+    </ul>
+  </div>
+
+          </div>
+          <div class="row">
+              <div class="card mt-3">
+    <div class="card-header codesum">
+      <span class="anchor" id="boundprocedure-rshift"></span>
+      <h3>
+          procedure, public ::
+  <strong>RShift</strong> => ApInt64_RightShift
+        
+      </h3>
+    </div>
+      <div class="card-body">
+        
+        <p><strong>Type-Bound Subroutine</strong>: RShift <br>
+ <strong>Purpose</strong>:  To perform logical right shift where ShiftPos is non-negative. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    CALL ApNum%RShift(112)</p>
+      </div>
+    <ul class="list-group">
+        <li class="list-group-item">
+              <h3>interface </h3>
+                  <h3>
+    private module subroutine ApInt64_RightShift(Val, ShiftPos)  
+</h3>
+
+  <p>To perform logical right shift with 0 &lt;= ShiftPos &lt;= 128.</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(<a href='../type/apint64.html'>ApInt64</a>),
+            </td>
+<td>intent(inout)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Val</strong></td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              integer(kind=kInt32),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>ShiftPos</strong></td>
+            <td>
+                
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+        </li>
+    </ul>
+  </div>
+
+          </div>
+          <div class="row">
+              <div class="card mt-3">
+    <div class="card-header codesum">
+      <span class="anchor" id="boundprocedure-iszero"></span>
+      <h3>
+          procedure, public ::
+  <strong>IsZero</strong> => ApInt64_Is_Zero_II
+        
+      </h3>
+    </div>
+      <div class="card-body">
+        
+        <p><strong>Type-Bound Function</strong>: IsZero <br>
+ <strong>Purpose</strong>:  To check whether the ApInt64 number has value of zero or not. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    Flag = ApNum%IsZero() <br>
+  ---&gt;    IF (.NOT.ApNum%IsZero()) DoSomething</p>
+      </div>
+    <ul class="list-group">
+        <li class="list-group-item">
+              <h3>interface </h3>
+                  <h3>
+    private module function ApInt64_Is_Zero_II(Big) result(Flag)  
+</h3>
+
+  <p>To check whether the ApInt64 number has value of zero or not.</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(<a href='../type/apint64.html'>ApInt64</a>),
+            </td>
+<td>intent(inout)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Big</strong></td>
+            <td>
+                
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+    <h4>
+    Return Value
+    <small>logical</small>
+    </h4>
+    
+
+        </li>
+    </ul>
+  </div>
+
+          </div>
+          <div class="row">
+              <div class="card mt-3">
+    <div class="card-header codesum">
+      <span class="anchor" id="boundprocedure-isone"></span>
+      <h3>
+          procedure, public ::
+  <strong>IsOne</strong> => ApInt64_Is_One
+        
+      </h3>
+    </div>
+      <div class="card-body">
+        
+        <p><strong>Type-Bound Function</strong>: IsOne <br>
+ <strong>Purpose</strong>:  To check whether the ApInt64 number has value of one or not. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    Flag = ApNum%IsOne() <br>
+  ---&gt;    IF (.NOT.ApNum%IsOne()) DoSomething</p>
+      </div>
+    <ul class="list-group">
+        <li class="list-group-item">
+              <h3>interface </h3>
+                  <h3>
+    private module function ApInt64_Is_One(Big) result(Flag)  
+</h3>
+
+  <p>To check whether the ApInt64 number has value of one or not.</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(<a href='../type/apint64.html'>ApInt64</a>),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Big</strong></td>
+            <td>
+                
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+    <h4>
+    Return Value
+    <small>logical</small>
+    </h4>
+    
+
+        </li>
+    </ul>
+  </div>
+
+          </div>
+          <div class="row">
+              <div class="card mt-3">
+    <div class="card-header codesum">
+      <span class="anchor" id="boundprocedure-ispositive"></span>
+      <h3>
+          procedure, public ::
+  <strong>IsPositive</strong> => ApInt64_Is_Positive
+        
+      </h3>
+    </div>
+      <div class="card-body">
+        
+        <p><strong>Type-Bound Function</strong>: IsPositive <br>
+ <strong>Purpose</strong>:  To check whether the ApInt64 number has positive value or not. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    Flag = ApNum%IsPositive() <br>
+  ---&gt;    IF (.NOT.ApNum%IsPositive()) DoSomething</p>
+      </div>
+    <ul class="list-group">
+        <li class="list-group-item">
+              <h3>interface </h3>
+                  <h3>
+    private module function ApInt64_Is_Positive(Big) result(Flag)  
+</h3>
+
+  <p>To check whether the ApInt64 number has positive value or not.</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(<a href='../type/apint64.html'>ApInt64</a>),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Big</strong></td>
+            <td>
+                
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+    <h4>
+    Return Value
+    <small>logical</small>
+    </h4>
+    
+
+        </li>
+    </ul>
+  </div>
+
+          </div>
+          <div class="row">
+              <div class="card mt-3">
+    <div class="card-header codesum">
+      <span class="anchor" id="boundprocedure-isnegative"></span>
+      <h3>
+          procedure, public ::
+  <strong>IsNegative</strong> => ApInt64_Is_Negative
+        
+      </h3>
+    </div>
+      <div class="card-body">
+        
+        <p><strong>Type-Bound Function</strong>: IsNegative <br>
+ <strong>Purpose</strong>:  To check whether the ApInt64 number has negative value or not. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    Flag = ApNum%IsNegative() <br>
+  ---&gt;    IF (.NOT.ApNum%IsNegative()) DoSomething</p>
+      </div>
+    <ul class="list-group">
+        <li class="list-group-item">
+              <h3>interface </h3>
+                  <h3>
+    private module function ApInt64_Is_Negative(Big) result(Flag)  
+</h3>
+
+  <p>To check whether the ApInt64 number has negative value or not.</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(<a href='../type/apint64.html'>ApInt64</a>),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Big</strong></td>
+            <td>
+                
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+    <h4>
+    Return Value
+    <small>logical</small>
+    </h4>
+    
+
+        </li>
+    </ul>
+  </div>
+
+          </div>
+          <div class="row">
+              <div class="card mt-3">
+    <div class="card-header codesum">
+      <span class="anchor" id="boundprocedure-randnum"></span>
+      <h3>
+          procedure, public ::
+  <strong>RandNum</strong> => ApInt64_RandNumSub
+        
+      </h3>
+    </div>
+      <div class="card-body">
+        
+        <p><strong>Type-Bound Subroutine</strong>: RandNum <br>
+ <strong>Purpose</strong>:  To generate the ApIn64 number with random value. <br>
+ <strong>Usage</strong>: <br>
+  ! generate random number with default settings <br>
+  ---&gt;    CALL ApNum%RandNum() <br>
+  ! generate random number with specified PRNG <br>
+  ---&gt;    CALL ApNum%RandNum(PRNG) <br>
+  ! generate random number with negative value <br>
+  ---&gt;    CALL ApNum%RandNum(Positive=.FALSE.) <br>
+  ! generate random number with specified length of magnitude array <br>
+  ---&gt;    CALL ApNum%RandNum(Length=MagLen)</p>
+      </div>
+    <ul class="list-group">
+        <li class="list-group-item">
+              <h3>interface </h3>
+                  <h3>
+    private module subroutine ApInt64_RandNumSub(BigRnd, Prng, Positive, Length)  
+</h3>
+
+  <p>To generate the ApIn64 number with random value.</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(<a href='../type/apint64.html'>ApInt64</a>),
+            </td>
+<td>intent(out)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>BigRnd</strong></td>
+            <td>
+                <p>the ApInt64 number with random value</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(BaseRNG),
+            </td>
+<td>intent(inout),</td>
+              <td>optional,</td>            <td>
+              TARGET
+            </td>
+            <td>::</td>
+            <td><strong>Prng</strong></td>
+            <td>
+                <p>pseudo-random number generator</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              logical,
+            </td>
+<td>intent(in),</td>
+              <td>optional</td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Positive</strong></td>
+            <td>
+                <p>flag indicating whether the number has positive value or not</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              integer(kind=kInt32),
+            </td>
+<td>intent(in),</td>
+              <td>optional</td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Length</strong></td>
+            <td>
+                <p>number indicating the length of magnitude array</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+        </li>
+    </ul>
+  </div>
+
+          </div>
+          <div class="row">
+              <div class="card mt-3">
+    <div class="card-header codesum">
+      <span class="anchor" id="boundprocedure-copy"></span>
+      <h3>
+          procedure, public ::
+  <strong>Copy</strong> => ApInt64_Copy
+        
+      </h3>
+    </div>
+      <div class="card-body">
+        
+        <p><strong>Type-Bound Function</strong>: Copy <br>
+ <strong>Purpose</strong>:  To make a copy of the ApInt64 number. <br>
+ <strong>Usage</strong>: <br>
+  ! make a copy of the ApInt64 number <br>
+  ---&gt;    DstApNum = SrcApNum%Copy() <br>
+  ! make a copy of the ApInt64 number with the specified capacity
+  (size of magnitude array) of the destination number <br>
+  ---&gt;    DstApNum = SrcApNum%Copy(DstCap)</p>
+      </div>
+    <ul class="list-group">
+        <li class="list-group-item">
+              <h3>interface </h3>
+                  <h3>
+    private module function ApInt64_Copy(Source, Capacity) result(Destination)  
+</h3>
+
+  <p>To make a copy of the ApInt64 number.</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(<a href='../type/apint64.html'>ApInt64</a>),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Source</strong></td>
+            <td>
+                <p>the source number</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              integer(kind=kInt32),
+            </td>
+<td>intent(in),</td>
+              <td>optional</td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Capacity</strong></td>
+            <td>
+                <p>capacity (size of magnitude array) of the destination number <br>
+ if specified, must be greater than capacity of the source number</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+    <h4>
+    Return Value
+    <small>type(<a href='../type/apint64.html'>ApInt64</a>)</small>
+    </h4>
+    <p>the destination number</p>
+
+        </li>
+    </ul>
+  </div>
+
+          </div>
+          <div class="row">
+              <div class="card mt-3">
+    <div class="card-header codesum">
+      <span class="anchor" id="boundprocedure-display"></span>
+      <h3>
+          procedure, public ::
+  <strong>Display</strong> => ApInt64_Write
+        
+      </h3>
+    </div>
+      <div class="card-body">
+        
+        <p><strong>Type-Bound Subroutine</strong>: Display <br>
+ <strong>Purpose</strong>:  To write/display the 'ApInt64' number to the screen (or the specified unit). <br>
+ <strong>Usage</strong>: <br>
+  ! To display (signed) value of ApNum as a decimal string to the screen <br>
+  ---&gt;    CALL ApNum%Display() <br>
+  ! To display (signed) value of ApNum as a decimal string to the output logical unit <br>
+  ---&gt;    CALL ApNum%Display(11) <br>
+  ! To display (signed) value of ApNum as a decimal string to the output logical unit <br>
+  with input/output status and message <br>
+  ---&gt;    CALL ApNum%Display(11, IOStat, IOMsg) <br>
+  ! To display (signed) values of components of ApNum as a decimal string to the screen <br>
+  ---&gt;    CALL ApNum%Display(ShowComponent=.TRUE.) <br>
+  ! To display (signed) value of ApNum as a decimal string to the screen with a prefix string <br>
+  ---&gt;    CALL ApNum%Display(Prefix='Signed value of ApNum')</p>
+      </div>
+    <ul class="list-group">
+        <li class="list-group-item">
+              <h3>interface </h3>
+                  <h3>
+    private module subroutine ApInt64_Write(Big, Unit, IOStat, IOMsg, ShowComponent, Prefix)  
+</h3>
+
+  <p>To write the ApInt64 number to the screen (or the specified unit).</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(<a href='../type/apint64.html'>ApInt64</a>),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Big</strong></td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              integer(kind=kInt32),
+            </td>
+<td>intent(in),</td>
+              <td>optional</td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Unit</strong></td>
+            <td>
+                <p>output logical unit</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              integer(kind=kInt32),
+            </td>
+<td>intent(out),</td>
+              <td>optional</td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>IOStat</strong></td>
+            <td>
+                <p>io stat</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              character(kind=kChar, len=*),
+            </td>
+<td>intent(out),</td>
+              <td>optional</td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>IOMsg</strong></td>
+            <td>
+                <p>io message</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              logical,
+            </td>
+<td>intent(in),</td>
+              <td>optional</td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>ShowComponent</strong></td>
+            <td>
+                <p>flag indicating whether to write the upper and lower components. <br>
+- If flag is present and true, write components of the number. <br>
+- Otherwise, write the number as a decimal string.</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              character(kind=kChar, len=*),
+            </td>
+<td>intent(in),</td>
+              <td>optional</td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Prefix</strong></td>
+            <td>
+                <p>prefix string</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+        </li>
+    </ul>
+  </div>
+
+          </div>
+          <div class="row">
+              <div class="card mt-3">
+    <div class="card-header codesum">
+      <span class="anchor" id="boundprocedure-getlength"></span>
+      <h3>
+          procedure, public ::
+  <strong>GetLength</strong> => ApInt64_GetLength
+        
+      </h3>
+    </div>
+      <div class="card-body">
+        
+        <p><strong>Type-Bound Function</strong>: GetLength <br>
+ <strong>Purpose</strong>:  To return the length of the magnitude array (the number of
+               digits counted as the ApNum number). <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    MagLen = ApNum%GetLength()</p>
+      </div>
+    <ul class="list-group">
+        <li class="list-group-item">
+              <h3>interface </h3>
+                  <h3>
+    private module function ApInt64_GetLength(Num) result(Length)  
+</h3>
+
+  <p>To return the number of digits counted as the ApNum number.</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(<a href='../type/apint64.html'>ApInt64</a>),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Num</strong></td>
+            <td>
+                
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+    <h4>
+    Return Value
+    <small>integer(kind=kInt32)</small>
+    </h4>
+    <p>the number of digits counted</p>
+
+        </li>
+    </ul>
+  </div>
+
+          </div>
+          <div class="row">
+              <div class="card mt-3">
+    <div class="card-header codesum">
+      <span class="anchor" id="boundprocedure-add"></span>
+      <h3>
+          generic, public ::
+  <strong>Add</strong> => ApInt64_Add_I32, ApInt64_Add_I64, ApInt64_Add_I128, ApInt64_Add_ApInt64
+        
+      </h3>
+    </div>
+      <div class="card-body">
+        
+        <p><strong>Type-Bound Subroutine</strong>: Add <br>
+ <strong>Purpose</strong>:  To perform an addition: This = This + Other. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    CALL This%Add(Other)</p>
+      </div>
+    <ul class="list-group">
+        <li class="list-group-item">
+                  <h3>
+    private  interface ApInt64_Add_I32()  
+</h3>
+
+  
+
+  <h4>Arguments</h4>
+    <em>None</em>
+
+        </li>
+        <li class="list-group-item">
+                  <h3>
+    private  interface ApInt64_Add_I64()  
+</h3>
+
+  
+
+  <h4>Arguments</h4>
+    <em>None</em>
+
+        </li>
+        <li class="list-group-item">
+                  <h3>
+    private  interface ApInt64_Add_I128()  
+</h3>
+
+  
+
+  <h4>Arguments</h4>
+    <em>None</em>
+
+        </li>
+        <li class="list-group-item">
+                  <h3>
+    private  interface ApInt64_Add_ApInt64()  
+</h3>
+
+  
+
+  <h4>Arguments</h4>
+    <em>None</em>
+
+        </li>
+    </ul>
+  </div>
+
+          </div>
+          <div class="row">
+              <div class="card mt-3">
+    <div class="card-header codesum">
+      <span class="anchor" id="boundprocedure-subtract"></span>
+      <h3>
+          generic, public ::
+  <strong>Subtract</strong> => ApInt64_Subtract_I32, ApInt64_Subtract_I64, ApInt64_Subtract_I128, ApInt64_Subtract_ApInt64
+        
+      </h3>
+    </div>
+      <div class="card-body">
+        
+        <p><strong>Type-Bound Subroutine</strong>: Subtract <br>
+ <strong>Purpose</strong>:  To perform a subtraction: This = This - Other. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    CALL This%Subtract(Other)</p>
+      </div>
+    <ul class="list-group">
+        <li class="list-group-item">
+                  <h3>
+    private  interface ApInt64_Subtract_I32()  
+</h3>
+
+  
+
+  <h4>Arguments</h4>
+    <em>None</em>
+
+        </li>
+        <li class="list-group-item">
+                  <h3>
+    private  interface ApInt64_Subtract_I64()  
+</h3>
+
+  
+
+  <h4>Arguments</h4>
+    <em>None</em>
+
+        </li>
+        <li class="list-group-item">
+                  <h3>
+    private  interface ApInt64_Subtract_I128()  
+</h3>
+
+  
+
+  <h4>Arguments</h4>
+    <em>None</em>
+
+        </li>
+        <li class="list-group-item">
+                  <h3>
+    private  interface ApInt64_Subtract_ApInt64()  
+</h3>
+
+  
+
+  <h4>Arguments</h4>
+    <em>None</em>
+
+        </li>
+    </ul>
+  </div>
+
+          </div>
+          <div class="row">
+              <div class="card mt-3">
+    <div class="card-header codesum">
+      <span class="anchor" id="boundprocedure-multiply"></span>
+      <h3>
+          generic, public ::
+  <strong>Multiply</strong> => ApInt64_Times_I32, ApInt64_Times_I64, ApInt64_Times_I128, ApInt64_Times_ApInt64
+        
+      </h3>
+    </div>
+      <div class="card-body">
+        
+        <p><strong>Type-Bound Subroutine</strong>: Multiply <br>
+ <strong>Purpose</strong>:  To perform a multiplication: This = This * Other. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    CALL This%Multiply(Other)</p>
+      </div>
+    <ul class="list-group">
+        <li class="list-group-item">
+                  <h3>
+    private  interface ApInt64_Times_I32()  
+</h3>
+
+  
+
+  <h4>Arguments</h4>
+    <em>None</em>
+
+        </li>
+        <li class="list-group-item">
+                  <h3>
+    private  interface ApInt64_Times_I64()  
+</h3>
+
+  
+
+  <h4>Arguments</h4>
+    <em>None</em>
+
+        </li>
+        <li class="list-group-item">
+                  <h3>
+    private  interface ApInt64_Times_I128()  
+</h3>
+
+  
+
+  <h4>Arguments</h4>
+    <em>None</em>
+
+        </li>
+        <li class="list-group-item">
+                  <h3>
+    private  interface ApInt64_Times_ApInt64()  
+</h3>
+
+  
+
+  <h4>Arguments</h4>
+    <em>None</em>
+
+        </li>
+    </ul>
+  </div>
+
+          </div>
+          <div class="row">
+              <div class="card mt-3">
+    <div class="card-header codesum">
+      <span class="anchor" id="boundprocedure-divide"></span>
+      <h3>
+          generic, public ::
+  <strong>Divide</strong> => ApInt64_Over_I32, ApInt64_Over_I64, ApInt64_Over_I128, ApInt64_Over_ApInt64
+        
+      </h3>
+    </div>
+      <div class="card-body">
+        
+        <p><strong>Type-Bound Subroutine</strong>: Divide <br>
+ <strong>Purpose</strong>:  To perform a division: This = This / Other.  Optionally,
+               return the remainder if present. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    CALL This%Divide(Other) <br>
+  ---&gt;    CALL This%Divide(Other, Remainder)</p>
+      </div>
+    <ul class="list-group">
+        <li class="list-group-item">
+                  <h3>
+    private  interface ApInt64_Over_I32()  
+</h3>
+
+  
+
+  <h4>Arguments</h4>
+    <em>None</em>
+
+        </li>
+        <li class="list-group-item">
+                  <h3>
+    private  interface ApInt64_Over_I64()  
+</h3>
+
+  
+
+  <h4>Arguments</h4>
+    <em>None</em>
+
+        </li>
+        <li class="list-group-item">
+                  <h3>
+    private  interface ApInt64_Over_I128()  
+</h3>
+
+  
+
+  <h4>Arguments</h4>
+    <em>None</em>
+
+        </li>
+        <li class="list-group-item">
+                  <h3>
+    private  interface ApInt64_Over_ApInt64()  
+</h3>
+
+  
+
+  <h4>Arguments</h4>
+    <em>None</em>
+
+        </li>
+    </ul>
+  </div>
+
+          </div>
+          <div class="row">
+              <div class="card mt-3">
+    <div class="card-header codesum">
+      <span class="anchor" id="boundprocedure-divmod"></span>
+      <h3>
+          generic, public ::
+  <strong>DivMod</strong> => ApInt64_DivMod_I32, ApInt64_DivMod_I64, ApInt64_DivMod_I128, ApInt64_DivMod_ApInt64
+        
+      </h3>
+    </div>
+      <div class="card-body">
+        
+        <p><strong>Type-Bound Subroutine</strong>: DivMod <br>
+ <strong>Purpose</strong>:  To perform a division and return both quotient and remainder. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    CALL Numerator%DivMod(Denominator, Quotient, Remainder)</p>
+      </div>
+    <ul class="list-group">
+        <li class="list-group-item">
+                  <h3>
+    private  interface ApInt64_DivMod_I32()  
+</h3>
+
+  
+
+  <h4>Arguments</h4>
+    <em>None</em>
+
+        </li>
+        <li class="list-group-item">
+                  <h3>
+    private  interface ApInt64_DivMod_I64()  
+</h3>
+
+  
+
+  <h4>Arguments</h4>
+    <em>None</em>
+
+        </li>
+        <li class="list-group-item">
+                  <h3>
+    private  interface ApInt64_DivMod_I128()  
+</h3>
+
+  
+
+  <h4>Arguments</h4>
+    <em>None</em>
+
+        </li>
+        <li class="list-group-item">
+                  <h3>
+    private  interface ApInt64_DivMod_ApInt64()  
+</h3>
+
+  
+
+  <h4>Arguments</h4>
+    <em>None</em>
+
+        </li>
+    </ul>
+  </div>
+
+          </div>
+          <div class="row">
+              <div class="card mt-3">
+    <div class="card-header codesum">
+      <span class="anchor" id="boundprocedure-addxp"></span>
+      <h3>
+          procedure, public ::
+  <strong>AddXp</strong> => ApInt64_Add_Xp
+        
+      </h3>
+    </div>
+      <div class="card-body">
+        
+        <p><strong>Type-Bound Subroutine</strong>: AddXp <br>
+ <strong>Purpose</strong>:  To perform an addition: This = This + Other. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    CALL This%AddXp(Other, Algorithm) <br>
+ <strong>Note</strong>: Algorithm must be between 1 and 3.</p>
+      </div>
+    <ul class="list-group">
+        <li class="list-group-item">
+              <h3>interface </h3>
+                  <h3>
+    private module subroutine ApInt64_Add_Xp(This, Other, Algorithm)  
+</h3>
+
+  <p>To perform addition: This = This + Other.  Valid value of
+ <em>Algorithm</em> is between 1 and 3.</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(<a href='../type/apint64.html'>ApInt64</a>),
+            </td>
+<td>intent(inout)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>This</strong></td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              type(<a href='../type/apint64.html'>ApInt64</a>),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Other</strong></td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              integer(kind=kInt32),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Algorithm</strong></td>
+            <td>
+                
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+        </li>
+    </ul>
+  </div>
+
+          </div>
+          <div class="row">
+              <div class="card mt-3">
+    <div class="card-header codesum">
+      <span class="anchor" id="boundprocedure-subtractxp"></span>
+      <h3>
+          procedure, public ::
+  <strong>SubtractXp</strong> => ApInt64_Subtract_Xp
+        
+      </h3>
+    </div>
+      <div class="card-body">
+        
+        <p><strong>Type-Bound Subroutine</strong>: SubtractXp <br>
+ <strong>Purpose</strong>:  To perform a subtraction: This = This - Other. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    CALL This%SubtractXp(Other, Algorithm) <br>
+ <strong>Note</strong>: Algorithm must be between 1 and 3.</p>
+      </div>
+    <ul class="list-group">
+        <li class="list-group-item">
+              <h3>interface </h3>
+                  <h3>
+    private module subroutine ApInt64_Subtract_Xp(This, Other, Algorithm)  
+</h3>
+
+  <p>To perform subtraction: This = This - Other.  Valid value of
+ <em>Algorithm</em> is between 1 and 3.</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(<a href='../type/apint64.html'>ApInt64</a>),
+            </td>
+<td>intent(inout)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>This</strong></td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              type(<a href='../type/apint64.html'>ApInt64</a>),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Other</strong></td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              integer(kind=kInt32),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Algorithm</strong></td>
+            <td>
+                
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+        </li>
+    </ul>
+  </div>
+
+          </div>
+          <div class="row">
+              <div class="card mt-3">
+    <div class="card-header codesum">
+      <span class="anchor" id="boundprocedure-dividexp"></span>
+      <h3>
+          procedure, public ::
+  <strong>DivideXp</strong> => ApInt64_Over_Xp
+        
+      </h3>
+    </div>
+      <div class="card-body">
+        
+        <p><strong>Type-Bound Subroutine</strong>: DivideXp <br>
+ <strong>Purpose</strong>:  To perform a division: This = This / Other. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    CALL This%DivideXp(Other, Algorithm) <br>
+ <strong>Note</strong>: Algorithm must be between 1 and 5.</p>
+      </div>
+    <ul class="list-group">
+        <li class="list-group-item">
+              <h3>interface </h3>
+                  <h3>
+    private module subroutine ApInt64_Over_Xp(This, Other, Algorithm, Remainder)  
+</h3>
+
+  <p>To perform division: This = This / Other.  Valid value of
+ <em>Algorithm</em> is between 1 and 5.  Optionally, return the
+ remainder if present.</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(<a href='../type/apint64.html'>ApInt64</a>),
+            </td>
+<td>intent(inout)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>This</strong></td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              type(<a href='../type/apint64.html'>ApInt64</a>),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Other</strong></td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              integer(kind=kInt32),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Algorithm</strong></td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              type(<a href='../type/apint64.html'>ApInt64</a>),
+            </td>
+<td>intent(out),</td>
+              <td>optional</td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Remainder</strong></td>
+            <td>
+                
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+        </li>
+    </ul>
+  </div>
+
+          </div>
+          <div class="row">
+              <div class="card mt-3">
+    <div class="card-header codesum">
+      <span class="anchor" id="boundprocedure-divmodxp"></span>
+      <h3>
+          procedure, public ::
+  <strong>DivModXp</strong> => ApInt64_DivMod_Xp
+        
+      </h3>
+    </div>
+      <div class="card-body">
+        
+        <p><strong>Type-Bound Subroutine</strong>: DivModXp <br>
+ <strong>Purpose</strong>:  To perform a division and return both quotient and remainder. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    CALL Numerator%DivModXp(Denominator, Algorithm, Quotient, Remainder) <br>
+ <strong>Note</strong>: Algorithm must be between 1 and 5.</p>
+      </div>
+    <ul class="list-group">
+        <li class="list-group-item">
+              <h3>interface </h3>
+                  <h3>
+    private module subroutine ApInt64_DivMod_Xp(Dividend, Divisor, Algorithm, Quotient, Remainder)  
+</h3>
+
+  <p>To perform division (Dividend/Divisor) and return both the quotient
+ and the remainder.  Valid value of <em>Algorithm</em> is between 1 and 5.</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(<a href='../type/apint64.html'>ApInt64</a>),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Dividend</strong></td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              type(<a href='../type/apint64.html'>ApInt64</a>),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Divisor</strong></td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              integer(kind=kInt32),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Algorithm</strong></td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              type(<a href='../type/apint64.html'>ApInt64</a>),
+            </td>
+<td>intent(out)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Quotient</strong></td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              type(<a href='../type/apint64.html'>ApInt64</a>),
+            </td>
+<td>intent(out)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Remainder</strong></td>
+            <td>
+                
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+        </li>
+    </ul>
+  </div>
+
+          </div>
+      </section>
+
+    <section>
+    <h3><span class="anchor" id="src"></span>Source Code</h3>
+    <div class="hl codehilite"><pre><span></span><span class="w">    </span><span class="k">TYPE </span><span class="n">ApInt64</span>
+<span class="w">        </span><span class="k">PRIVATE</span>
+<span class="w">        </span><span class="c">!&gt; The sign of this number. &lt;br&gt;</span>
+<span class="w">        </span><span class="c">! -&gt; +1 for positive numbers and -1 for negative numbers. &lt;br&gt;</span>
+<span class="w">        </span><span class="c">! -&gt; Zero can have either sign.</span>
+<span class="w">        </span><span class="n">tSInt32</span><span class="w">                 </span><span class="kd">::</span><span class="w"> </span><span class="nb">Sign</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span>
+<span class="w">        </span><span class="c">!% The number of digits of the number (in base 2&lt;sup&gt;64&lt;/sup&gt;).</span>
+<span class="w">        </span><span class="n">tIndex</span><span class="w">                  </span><span class="kd">::</span><span class="w"> </span><span class="n">Length</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0_kIndex</span>
+<span class="w">        </span><span class="c">!&gt; The digits of the number, i.e., the magnitude array. &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  Values are treated as unsigned integer</span>
+<span class="w">        </span><span class="n">tUInt64</span><span class="p">,</span><span class="w"> </span><span class="k">ALLOCATABLE</span><span class="w">    </span><span class="kd">::</span><span class="w"> </span><span class="n">Digit</span><span class="p">(:)</span>
+<span class="w">    </span><span class="k">CONTAINS</span>
+<span class="w">        </span><span class="c">! ---------------------------------------------------------------------</span>
+<span class="w">        </span><span class="c">! -----                 Private Procedures                        -----</span>
+<span class="w">        </span><span class="c">! ---------------------------------------------------------------------</span>
+<span class="w">        </span><span class="k">PROCEDURE</span><span class="p">,</span><span class="w"> </span><span class="k">PRIVATE</span><span class="w">  </span><span class="kd">::</span><span class="w"> </span><span class="n">ApInt64_Add_I32</span>
+<span class="w">        </span><span class="k">PROCEDURE</span><span class="p">,</span><span class="w"> </span><span class="k">PRIVATE</span><span class="w">  </span><span class="kd">::</span><span class="w"> </span><span class="n">ApInt64_Add_I64</span>
+<span class="w">        </span><span class="k">PROCEDURE</span><span class="p">,</span><span class="w"> </span><span class="k">PRIVATE</span><span class="w">  </span><span class="kd">::</span><span class="w"> </span><span class="n">ApInt64_Add_I128</span>
+<span class="w">        </span><span class="k">PROCEDURE</span><span class="p">,</span><span class="w"> </span><span class="k">PRIVATE</span><span class="w">  </span><span class="kd">::</span><span class="w"> </span><span class="n">ApInt64_Add_ApInt64</span>
+<span class="w">        </span><span class="k">PROCEDURE</span><span class="p">,</span><span class="w"> </span><span class="k">PRIVATE</span><span class="w">  </span><span class="kd">::</span><span class="w"> </span><span class="n">ApInt64_Subtract_I32</span>
+<span class="w">        </span><span class="k">PROCEDURE</span><span class="p">,</span><span class="w"> </span><span class="k">PRIVATE</span><span class="w">  </span><span class="kd">::</span><span class="w"> </span><span class="n">ApInt64_Subtract_I64</span>
+<span class="w">        </span><span class="k">PROCEDURE</span><span class="p">,</span><span class="w"> </span><span class="k">PRIVATE</span><span class="w">  </span><span class="kd">::</span><span class="w"> </span><span class="n">ApInt64_Subtract_I128</span>
+<span class="w">        </span><span class="k">PROCEDURE</span><span class="p">,</span><span class="w"> </span><span class="k">PRIVATE</span><span class="w">  </span><span class="kd">::</span><span class="w"> </span><span class="n">ApInt64_Subtract_ApInt64</span>
+<span class="w">        </span><span class="k">PROCEDURE</span><span class="p">,</span><span class="w"> </span><span class="k">PRIVATE</span><span class="w">  </span><span class="kd">::</span><span class="w"> </span><span class="n">ApInt64_Times_I32</span>
+<span class="w">        </span><span class="k">PROCEDURE</span><span class="p">,</span><span class="w"> </span><span class="k">PRIVATE</span><span class="w">  </span><span class="kd">::</span><span class="w"> </span><span class="n">ApInt64_Times_I64</span>
+<span class="w">        </span><span class="k">PROCEDURE</span><span class="p">,</span><span class="w"> </span><span class="k">PRIVATE</span><span class="w">  </span><span class="kd">::</span><span class="w"> </span><span class="n">ApInt64_Times_I128</span>
+<span class="w">        </span><span class="k">PROCEDURE</span><span class="p">,</span><span class="w"> </span><span class="k">PRIVATE</span><span class="w">  </span><span class="kd">::</span><span class="w"> </span><span class="n">ApInt64_Times_ApInt64</span>
+<span class="w">        </span><span class="k">PROCEDURE</span><span class="p">,</span><span class="w"> </span><span class="k">PRIVATE</span><span class="w">  </span><span class="kd">::</span><span class="w"> </span><span class="n">ApInt64_Over_I32</span>
+<span class="w">        </span><span class="k">PROCEDURE</span><span class="p">,</span><span class="w"> </span><span class="k">PRIVATE</span><span class="w">  </span><span class="kd">::</span><span class="w"> </span><span class="n">ApInt64_Over_I64</span>
+<span class="w">        </span><span class="k">PROCEDURE</span><span class="p">,</span><span class="w"> </span><span class="k">PRIVATE</span><span class="w">  </span><span class="kd">::</span><span class="w"> </span><span class="n">ApInt64_Over_I128</span>
+<span class="w">        </span><span class="k">PROCEDURE</span><span class="p">,</span><span class="w"> </span><span class="k">PRIVATE</span><span class="w">  </span><span class="kd">::</span><span class="w"> </span><span class="n">ApInt64_Over_ApInt64</span>
+<span class="w">        </span><span class="k">PROCEDURE</span><span class="p">,</span><span class="w"> </span><span class="k">PRIVATE</span><span class="w">  </span><span class="kd">::</span><span class="w"> </span><span class="n">ApInt64_DivMod_I32</span>
+<span class="w">        </span><span class="k">PROCEDURE</span><span class="p">,</span><span class="w"> </span><span class="k">PRIVATE</span><span class="w">  </span><span class="kd">::</span><span class="w"> </span><span class="n">ApInt64_DivMod_I64</span>
+<span class="w">        </span><span class="k">PROCEDURE</span><span class="p">,</span><span class="w"> </span><span class="k">PRIVATE</span><span class="w">  </span><span class="kd">::</span><span class="w"> </span><span class="n">ApInt64_DivMod_I128</span>
+<span class="w">        </span><span class="k">PROCEDURE</span><span class="p">,</span><span class="w"> </span><span class="k">PRIVATE</span><span class="w">  </span><span class="kd">::</span><span class="w"> </span><span class="n">ApInt64_DivMod_ApInt64</span>
+<span class="w">        </span><span class="c">! ---------------------------------------------------------------------</span>
+<span class="w">        </span><span class="c">! -----                 Public Procedures                         -----</span>
+<span class="w">        </span><span class="c">! ---------------------------------------------------------------------</span>
+<span class="w">        </span><span class="c">!&gt; **Type-Bound Subroutine**: Increment &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Purpose**:  To increase value of the ApInt64 number by one. &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Usage**: &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!   ---&gt;    CALL ApNum%Increment()</span>
+<span class="w">        </span><span class="k">PROCEDURE</span><span class="w">   </span><span class="kd">::</span><span class="w"> </span><span class="n">Increment</span><span class="w">    </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">ApInt64_Increment</span>
+<span class="w">        </span><span class="c">!&gt; **Type-Bound Subroutine**: Decrement &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Purpose**:  To decrease value of the ApInt64 number by one. &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Usage**: &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!   ---&gt;    CALL ApNum%Decrement()</span>
+<span class="w">        </span><span class="k">PROCEDURE</span><span class="w">   </span><span class="kd">::</span><span class="w"> </span><span class="n">Decrement</span><span class="w">    </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">ApInt64_Decrement</span>
+<span class="w">        </span><span class="c">!&gt; **Type-Bound Subroutine**: Square &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Purpose**:  To return the ApInt64 number (ApInt64) where its value is</span>
+<span class="w">        </span><span class="c">!                computed by: ApNum = ApNum * ApNum. &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Usage**: &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!   ---&gt;    CALL ApNum%Square()</span>
+<span class="w">        </span><span class="k">PROCEDURE</span><span class="w">   </span><span class="kd">::</span><span class="w"> </span><span class="n">Square</span><span class="w">       </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">ApInt64_SquareSub</span>
+<span class="w">        </span><span class="c">!&gt; **Type-Bound Function**: Compare &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Purpose**:  To compare two ApInt64 numbers (LHS and RHS) and return &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!   -1 if LHS &lt; RHS, &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!    0 if LHS == RHS, or &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!    1 if LHS &gt; RHS. &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Usage**: &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!   ---&gt;    Flag = LHS%Compare(RHS) &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!   ---&gt;    IF (LHS%Compare(RHS) /= 0) DoSomething</span>
+<span class="w">        </span><span class="k">PROCEDURE</span><span class="w">   </span><span class="kd">::</span><span class="w"> </span><span class="n">Compare</span><span class="w">      </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">ApInt64_Compare</span>
+<span class="w">        </span><span class="c">!&gt; **Type-Bound Subroutine**: LShift &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Purpose**:  To perform logical left shift where ShiftPos is non-negative. &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Usage**: &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!   ---&gt;    CALL ApNum%LShift(112)</span>
+<span class="w">        </span><span class="k">PROCEDURE</span><span class="w">   </span><span class="kd">::</span><span class="w"> </span><span class="nb">LShift</span><span class="w">       </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">ApInt64_LeftShift</span>
+<span class="w">        </span><span class="c">!&gt; **Type-Bound Subroutine**: RShift &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Purpose**:  To perform logical right shift where ShiftPos is non-negative. &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Usage**: &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!   ---&gt;    CALL ApNum%RShift(112)</span>
+<span class="w">        </span><span class="k">PROCEDURE</span><span class="w">   </span><span class="kd">::</span><span class="w"> </span><span class="nb">RShift</span><span class="w">       </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">ApInt64_RightShift</span>
+<span class="w">        </span><span class="c">!&gt; **Type-Bound Function**: IsZero &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Purpose**:  To check whether the ApInt64 number has value of zero or not. &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Usage**: &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!   ---&gt;    Flag = ApNum%IsZero() &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!   ---&gt;    IF (.NOT.ApNum%IsZero()) DoSomething</span>
+<span class="w">        </span><span class="k">PROCEDURE</span><span class="w">   </span><span class="kd">::</span><span class="w"> </span><span class="n">IsZero</span><span class="w">       </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">ApInt64_Is_Zero_II</span>
+<span class="w">        </span><span class="c">!&gt; **Type-Bound Function**: IsOne &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Purpose**:  To check whether the ApInt64 number has value of one or not. &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Usage**: &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!   ---&gt;    Flag = ApNum%IsOne() &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!   ---&gt;    IF (.NOT.ApNum%IsOne()) DoSomething</span>
+<span class="w">        </span><span class="k">PROCEDURE</span><span class="w">   </span><span class="kd">::</span><span class="w"> </span><span class="n">IsOne</span><span class="w">        </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">ApInt64_Is_One</span>
+<span class="w">        </span><span class="c">!&gt; **Type-Bound Function**: IsPositive &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Purpose**:  To check whether the ApInt64 number has positive value or not. &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Usage**: &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!   ---&gt;    Flag = ApNum%IsPositive() &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!   ---&gt;    IF (.NOT.ApNum%IsPositive()) DoSomething</span>
+<span class="w">        </span><span class="k">PROCEDURE</span><span class="w">   </span><span class="kd">::</span><span class="w"> </span><span class="n">IsPositive</span><span class="w">   </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">ApInt64_Is_Positive</span>
+<span class="w">        </span><span class="c">!&gt; **Type-Bound Function**: IsNegative &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Purpose**:  To check whether the ApInt64 number has negative value or not. &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Usage**: &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!   ---&gt;    Flag = ApNum%IsNegative() &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!   ---&gt;    IF (.NOT.ApNum%IsNegative()) DoSomething</span>
+<span class="w">        </span><span class="k">PROCEDURE</span><span class="w">   </span><span class="kd">::</span><span class="w"> </span><span class="n">IsNegative</span><span class="w">   </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">ApInt64_Is_Negative</span>
+<span class="w">        </span><span class="c">!&gt; **Type-Bound Subroutine**: RandNum &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Purpose**:  To generate the ApIn64 number with random value. &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Usage**: &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!   ! generate random number with default settings &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!   ---&gt;    CALL ApNum%RandNum() &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!   ! generate random number with specified PRNG &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!   ---&gt;    CALL ApNum%RandNum(PRNG) &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!   ! generate random number with negative value &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!   ---&gt;    CALL ApNum%RandNum(Positive=.FALSE.) &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!   ! generate random number with specified length of magnitude array &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!   ---&gt;    CALL ApNum%RandNum(Length=MagLen)</span>
+<span class="w">        </span><span class="k">PROCEDURE</span><span class="w">   </span><span class="kd">::</span><span class="w"> </span><span class="n">RandNum</span><span class="w">      </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">ApInt64_RandNumSub</span>
+<span class="w">        </span><span class="c">!&gt; **Type-Bound Function**: Copy &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Purpose**:  To make a copy of the ApInt64 number. &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Usage**: &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!   ! make a copy of the ApInt64 number &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!   ---&gt;    DstApNum = SrcApNum%Copy() &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!   ! make a copy of the ApInt64 number with the specified capacity</span>
+<span class="w">        </span><span class="c">!   (size of magnitude array) of the destination number &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!   ---&gt;    DstApNum = SrcApNum%Copy(DstCap)</span>
+<span class="w">        </span><span class="k">PROCEDURE</span><span class="w">   </span><span class="kd">::</span><span class="w"> </span><span class="n">Copy</span><span class="w">         </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">ApInt64_Copy</span>
+<span class="w">        </span><span class="c">!&gt; **Type-Bound Subroutine**: Display &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Purpose**:  To write/display the &#39;ApInt64&#39; number to the screen (or the specified unit). &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Usage**: &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!   ! To display (signed) value of ApNum as a decimal string to the screen &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!   ---&gt;    CALL ApNum%Display() &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!   ! To display (signed) value of ApNum as a decimal string to the output logical unit &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!   ---&gt;    CALL ApNum%Display(11) &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!   ! To display (signed) value of ApNum as a decimal string to the output logical unit &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!   with input/output status and message &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!   ---&gt;    CALL ApNum%Display(11, IOStat, IOMsg) &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!   ! To display (signed) values of components of ApNum as a decimal string to the screen &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!   ---&gt;    CALL ApNum%Display(ShowComponent=.TRUE.) &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!   ! To display (signed) value of ApNum as a decimal string to the screen with a prefix string &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!   ---&gt;    CALL ApNum%Display(Prefix=&#39;Signed value of ApNum&#39;)</span>
+<span class="w">        </span><span class="k">PROCEDURE</span><span class="w">   </span><span class="kd">::</span><span class="w"> </span><span class="n">Display</span><span class="w">      </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">ApInt64_Write</span>
+<span class="w">        </span><span class="c">!&gt; **Type-Bound Function**: GetLength &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Purpose**:  To return the length of the magnitude array (the number of</span>
+<span class="w">        </span><span class="c">!                digits counted as the ApNum number). &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Usage**: &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!   ---&gt;    MagLen = ApNum%GetLength()</span>
+<span class="w">        </span><span class="k">PROCEDURE</span><span class="w">   </span><span class="kd">::</span><span class="w"> </span><span class="n">GetLength</span><span class="w">    </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">ApInt64_GetLength</span>
+<span class="w">        </span><span class="c">! ---------------------------------------------------------------------</span>
+<span class="w">        </span><span class="c">! -----                 Generic Interfaces                         -----</span>
+<span class="w">        </span><span class="c">! ---------------------------------------------------------------------</span>
+<span class="w">        </span><span class="c">!&gt; **Type-Bound Subroutine**: Add &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Purpose**:  To perform an addition: This = This + Other. &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Usage**: &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!   ---&gt;    CALL This%Add(Other)</span>
+<span class="w">        </span><span class="k">GENERIC</span><span class="w">     </span><span class="kd">::</span><span class="w"> </span><span class="n">Add</span><span class="w">          </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">ApInt64_Add_I32</span><span class="p">,</span><span class="w">       </span><span class="n">ApInt64_Add_I64</span><span class="p">,</span><span class="w">      </span><span class="p">&amp;</span>
+<span class="w">                                       </span><span class="n">ApInt64_Add_I128</span><span class="p">,</span><span class="w">      </span><span class="n">ApInt64_Add_ApInt64</span>
+<span class="w">        </span><span class="c">!&gt; **Type-Bound Subroutine**: Subtract &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Purpose**:  To perform a subtraction: This = This - Other. &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Usage**: &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!   ---&gt;    CALL This%Subtract(Other)</span>
+<span class="w">        </span><span class="k">GENERIC</span><span class="w">     </span><span class="kd">::</span><span class="w"> </span><span class="n">Subtract</span><span class="w">     </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">ApInt64_Subtract_I32</span><span class="p">,</span><span class="w">  </span><span class="n">ApInt64_Subtract_I64</span><span class="p">,</span><span class="w"> </span><span class="p">&amp;</span>
+<span class="w">                                       </span><span class="n">ApInt64_Subtract_I128</span><span class="p">,</span><span class="w"> </span><span class="n">ApInt64_Subtract_ApInt64</span>
+<span class="w">        </span><span class="c">!&gt; **Type-Bound Subroutine**: Multiply &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Purpose**:  To perform a multiplication: This = This * Other. &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Usage**: &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!   ---&gt;    CALL This%Multiply(Other)</span>
+<span class="w">        </span><span class="k">GENERIC</span><span class="w">     </span><span class="kd">::</span><span class="w"> </span><span class="n">Multiply</span><span class="w">     </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">ApInt64_Times_I32</span><span class="p">,</span><span class="w">     </span><span class="n">ApInt64_Times_I64</span><span class="p">,</span><span class="w">    </span><span class="p">&amp;</span>
+<span class="w">                                       </span><span class="n">ApInt64_Times_I128</span><span class="p">,</span><span class="w">    </span><span class="n">ApInt64_Times_ApInt64</span>
+<span class="w">        </span><span class="c">!&gt; **Type-Bound Subroutine**: Divide &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Purpose**:  To perform a division: This = This / Other.  Optionally,</span>
+<span class="w">        </span><span class="c">!                return the remainder if present. &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Usage**: &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!   ---&gt;    CALL This%Divide(Other) &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!   ---&gt;    CALL This%Divide(Other, Remainder)</span>
+<span class="w">        </span><span class="k">GENERIC</span><span class="w">     </span><span class="kd">::</span><span class="w"> </span><span class="n">Divide</span><span class="w">       </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">ApInt64_Over_I32</span><span class="p">,</span><span class="w">      </span><span class="n">ApInt64_Over_I64</span><span class="p">,</span><span class="w">     </span><span class="p">&amp;</span>
+<span class="w">                                       </span><span class="n">ApInt64_Over_I128</span><span class="p">,</span><span class="w">     </span><span class="n">ApInt64_Over_ApInt64</span>
+<span class="w">        </span><span class="c">!&gt; **Type-Bound Subroutine**: DivMod &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Purpose**:  To perform a division and return both quotient and remainder. &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Usage**: &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!   ---&gt;    CALL Numerator%DivMod(Denominator, Quotient, Remainder)</span>
+<span class="w">        </span><span class="k">GENERIC</span><span class="w">     </span><span class="kd">::</span><span class="w"> </span><span class="n">DivMod</span><span class="w">       </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">ApInt64_DivMod_I32</span><span class="p">,</span><span class="w">    </span><span class="n">ApInt64_DivMod_I64</span><span class="p">,</span><span class="w">   </span><span class="p">&amp;</span>
+<span class="w">                                       </span><span class="n">ApInt64_DivMod_I128</span><span class="p">,</span><span class="w">   </span><span class="n">ApInt64_DivMod_ApInt64</span>
+<span class="w">        </span><span class="c">! ---------------------------------------------------------------------</span>
+<span class="w">        </span><span class="c">! -----                 Experimental Procedures                   -----</span>
+<span class="w">        </span><span class="c">! ---------------------------------------------------------------------</span>
+<span class="w">        </span><span class="c">!&gt; **Type-Bound Subroutine**: AddXp &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Purpose**:  To perform an addition: This = This + Other. &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Usage**: &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!   ---&gt;    CALL This%AddXp(Other, Algorithm) &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Note**: Algorithm must be between 1 and 3.</span>
+<span class="w">        </span><span class="k">PROCEDURE</span><span class="w">   </span><span class="kd">::</span><span class="w"> </span><span class="n">AddXp</span><span class="w">        </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">ApInt64_Add_Xp</span>
+<span class="w">        </span><span class="c">!&gt; **Type-Bound Subroutine**: SubtractXp &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Purpose**:  To perform a subtraction: This = This - Other. &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Usage**: &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!   ---&gt;    CALL This%SubtractXp(Other, Algorithm) &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Note**: Algorithm must be between 1 and 3.</span>
+<span class="w">        </span><span class="k">PROCEDURE</span><span class="w">   </span><span class="kd">::</span><span class="w"> </span><span class="n">SubtractXp</span><span class="w">   </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">ApInt64_Subtract_Xp</span>
+<span class="w">        </span><span class="c">!&gt; **Type-Bound Subroutine**: DivideXp &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Purpose**:  To perform a division: This = This / Other. &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Usage**: &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!   ---&gt;    CALL This%DivideXp(Other, Algorithm) &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Note**: Algorithm must be between 1 and 5.</span>
+<span class="w">        </span><span class="k">PROCEDURE</span><span class="w">   </span><span class="kd">::</span><span class="w"> </span><span class="n">DivideXp</span><span class="w">     </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">ApInt64_Over_Xp</span>
+<span class="w">        </span><span class="c">!&gt; **Type-Bound Subroutine**: DivModXp &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Purpose**:  To perform a division and return both quotient and remainder. &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Usage**: &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!   ---&gt;    CALL Numerator%DivModXp(Denominator, Algorithm, Quotient, Remainder) &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Note**: Algorithm must be between 1 and 5.</span>
+<span class="w">        </span><span class="k">PROCEDURE</span><span class="w">   </span><span class="kd">::</span><span class="w"> </span><span class="n">DivModXp</span><span class="w">     </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">ApInt64_DivMod_Xp</span>
+<span class="w">        </span><span class="c">! ---------------------------------------------------------------------</span>
+<span class="w">    </span><span class="k">END TYPE </span><span class="n">ApInt64</span>
+</pre></div>
+
+    </section>
+    
+    </div>
+  </div>
+
+      <hr>
+    </div> <!-- /container -->
+    <footer>
+      <div class="container">
+        <div class="row justify-content-between">
+          <div class="col"><p>eXPerimental Fortran Library (XpfLib) Documentation was developed by Niranama<br>&copy; 2024 
+</p>
+          </div>
+          <div class="col">
+            <p class="text-end">
+              Documentation generated by
+              <a href="https://github.com/Fortran-FOSS-Programmers/ford">FORD</a>
+            </p>
+          </div>
+        </div>
+        <br>
+      </div> <!-- /container -->
+    </footer>
+
+    <!-- Bootstrap core JavaScript -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>    
+
+    <!-- MathJax JavaScript
+             ================================================== -->
+             <!-- Placed at the end of the document so the pages load faster -->
+        <script type="text/x-mathjax-config">
+          MathJax.Hub.Config({
+          TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } },
+          jax: ['input/TeX','input/MathML','output/HTML-CSS'],
+          extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']
+          });
+        </script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+          <script src="../tipuesearch/tipuesearch_content.js"></script>
+          <script src="../tipuesearch/tipuesearch_set.js"></script>
+          <script src="../tipuesearch/tipuesearch.js"></script>
+
+  </body>
+</html>

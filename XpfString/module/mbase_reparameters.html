@@ -1,0 +1,1451 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta name="description" content="Experimental Fortran Package - String">
+    <meta name="author" content="Niranama" >
+    <link rel="icon" href="../favicon.png">
+
+    <title>MBase_REParameters &ndash; eXPerimental Fortran Library (XpfLib) Documentation</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link href="../css/pygments.css" rel="stylesheet">
+    <link href="../css/font-awesome.min.css" rel="stylesheet">
+    <link href="../css/local.css" rel="stylesheet">
+      <link  href="../tipuesearch/tipuesearch.css" rel="stylesheet">
+
+    <script src="https://code.jquery.com/jquery-3.7.0.slim.min.js" integrity="sha256-tG5mcZUtJsZvyKAxYLVXrmjKBVLd6VpVccqz/r4ypFE=" crossorigin="anonymous"></script>
+  </head>
+
+  <body>
+
+    <!-- Fixed navbar -->
+    <div class="container-fluid mb-sm-4 mb-xl-2">
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container">
+          <a class="navbar-brand" href="../index.html">eXPerimental Fortran Library (XpfLib) Documentation </a>
+          <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar"
+                  aria-expanded="false" aria-controls="navbar" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon">
+          </button>
+
+          <div id="navbar" class="navbar-collapse collapse">
+            <ul class="navbar-nav">
+                  <li class="nav-item">
+                    <a class="nav-link" href="../lists/files.html">Source Files</a>
+                  </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../lists/modules.html">Modules</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../lists/procedures.html">Procedures</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../lists/types.html">Derived Types</a>
+                </li>
+            </ul>
+              <div class="d-flex align-items-end flex-grow-1">
+                <form action="../search.html" role="search" class="ms-auto">
+                  <input type="text" class="form-control" aria-label="Search" placeholder="Search" name="q" id="tipue_search_input" autocomplete="off" required>
+                </form>
+              </div>
+          </div><!--/.nav-collapse -->
+        </div>
+      </nav>
+    </div>
+
+    <div class="container">
+  <div class="row">
+    <h1>MBase_REParameters
+      <small>Module</small>
+      
+    </h1>
+      <div class="container p-2 mb-4 bg-light border rounded-3">
+    <div class="row align-items-center justify-content-between" id="info-bar">
+      <div class="col">
+        <ul class="list-inline" style="margin-bottom:0px;display:inline">
+
+            <li class="list-inline-item" id="statements"><i class="fa fa-list-ol"></i>
+              <a data-bs-toggle="tooltip"
+                 data-bs-placement="bottom" data-html="true"
+                 title=" 0.7% of total for modules and submodules.">87 statements</a>
+            </li>
+
+            <li class="list-inline-item" id="source-file">
+              <i class="fa fa-code"></i>
+              <a href="../src/MBase_REParameters.f90"> Source File</a>
+            </li>
+        </ul>
+      </div>
+      <div class="col">
+        <nav aria-label="breadcrumb">
+          <ol class="breadcrumb justify-content-end mb-0">
+                <li class="breadcrumb-item"><a href='../sourcefile/mbase_reparameters.f90.html'>MBase_REParameters.f90</a></li>
+            <li class="breadcrumb-item active" aria-current="page">MBase_REParameters</li>
+          </ol>
+        </nav>
+      </div>
+    </div>
+  </div>
+  <script>
+    $(function () {
+    $('[data-bs-toggle="tooltip"]').tooltip()
+    })
+  </script>
+
+  </div>
+
+  <div class="row">
+    <div class="col-md-3">
+        <div id="sidebar">
+      <h3>Contents</h3>
+  
+      <div class="card mb-4">
+      <a data-bs-toggle="collapse" href="#vars-0"
+         aria-expanded="false" aria-controls="vars-0">
+         <h4 class="card-header bg-primary text-white">Variables</h4>
+      </a>
+      <div id="vars-0" class="collapse">
+        <div class="list-group list-group-flush">
+            <a class="list-group-item" href="../module/mbase_reparameters.html#variable-opt_hasbackrefs">OPT_HASBACKREFS</a>
+            <a class="list-group-item" href="../module/mbase_reparameters.html#variable-opt_hasbol">OPT_HASBOL</a>
+            <a class="list-group-item" href="../module/mbase_reparameters.html#variable-node_normal">NODE_NORMAL</a>
+            <a class="list-group-item" href="../module/mbase_reparameters.html#variable-node_nullable">NODE_NULLABLE</a>
+            <a class="list-group-item" href="../module/mbase_reparameters.html#variable-node_toplevel">NODE_TOPLEVEL</a>
+            <a class="list-group-item" href="../module/mbase_reparameters.html#variable-esc_mask">ESC_MASK</a>
+            <a class="list-group-item" href="../module/mbase_reparameters.html#variable-esc_backref">ESC_BACKREF</a>
+            <a class="list-group-item" href="../module/mbase_reparameters.html#variable-esc_complex">ESC_COMPLEX</a>
+            <a class="list-group-item" href="../module/mbase_reparameters.html#variable-esc_class">ESC_CLASS</a>
+            <a class="list-group-item" href="../module/mbase_reparameters.html#variable-bracketunbounded">bracketUnbounded</a>
+            <a class="list-group-item" href="../module/mbase_reparameters.html#variable-match_normal">MATCH_NORMAL</a>
+            <a class="list-group-item" href="../module/mbase_reparameters.html#variable-match_caseindependent">MATCH_CASEINDEPENDENT</a>
+            <a class="list-group-item" href="../module/mbase_reparameters.html#variable-match_multiline">MATCH_MULTILINE</a>
+            <a class="list-group-item" href="../module/mbase_reparameters.html#variable-match_singleline">MATCH_SINGLELINE</a>
+            <a class="list-group-item" href="../module/mbase_reparameters.html#variable-op_end">OP_END</a>
+            <a class="list-group-item" href="../module/mbase_reparameters.html#variable-op_bol">OP_BOL</a>
+            <a class="list-group-item" href="../module/mbase_reparameters.html#variable-op_eol">OP_EOL</a>
+            <a class="list-group-item" href="../module/mbase_reparameters.html#variable-op_any">OP_ANY</a>
+            <a class="list-group-item" href="../module/mbase_reparameters.html#variable-op_anyof">OP_ANYOF</a>
+            <a class="list-group-item" href="../module/mbase_reparameters.html#variable-op_branch">OP_BRANCH</a>
+            <a class="list-group-item" href="../module/mbase_reparameters.html#variable-op_atom">OP_ATOM</a>
+            <a class="list-group-item" href="../module/mbase_reparameters.html#variable-op_star">OP_STAR</a>
+            <a class="list-group-item" href="../module/mbase_reparameters.html#variable-op_plus">OP_PLUS</a>
+            <a class="list-group-item" href="../module/mbase_reparameters.html#variable-op_maybe">OP_MAYBE</a>
+            <a class="list-group-item" href="../module/mbase_reparameters.html#variable-op_escape">OP_ESCAPE</a>
+            <a class="list-group-item" href="../module/mbase_reparameters.html#variable-op_open">OP_OPEN</a>
+            <a class="list-group-item" href="../module/mbase_reparameters.html#variable-op_open_cluster">OP_OPEN_CLUSTER</a>
+            <a class="list-group-item" href="../module/mbase_reparameters.html#variable-op_close">OP_CLOSE</a>
+            <a class="list-group-item" href="../module/mbase_reparameters.html#variable-op_close_cluster">OP_CLOSE_CLUSTER</a>
+            <a class="list-group-item" href="../module/mbase_reparameters.html#variable-op_backref">OP_BACKREF</a>
+            <a class="list-group-item" href="../module/mbase_reparameters.html#variable-op_goto">OP_GOTO</a>
+            <a class="list-group-item" href="../module/mbase_reparameters.html#variable-op_nothing">OP_NOTHING</a>
+            <a class="list-group-item" href="../module/mbase_reparameters.html#variable-op_continue">OP_CONTINUE</a>
+            <a class="list-group-item" href="../module/mbase_reparameters.html#variable-op_reluctantstar">OP_RELUCTANTSTAR</a>
+            <a class="list-group-item" href="../module/mbase_reparameters.html#variable-op_reluctantplus">OP_RELUCTANTPLUS</a>
+            <a class="list-group-item" href="../module/mbase_reparameters.html#variable-op_reluctantmaybe">OP_RELUCTANTMAYBE</a>
+            <a class="list-group-item" href="../module/mbase_reparameters.html#variable-op_posixclass">OP_POSIXCLASS</a>
+            <a class="list-group-item" href="../module/mbase_reparameters.html#variable-e_alnum">E_ALNUM</a>
+            <a class="list-group-item" href="../module/mbase_reparameters.html#variable-e_nalnum">E_NALNUM</a>
+            <a class="list-group-item" href="../module/mbase_reparameters.html#variable-e_bound">E_BOUND</a>
+            <a class="list-group-item" href="../module/mbase_reparameters.html#variable-e_nbound">E_NBOUND</a>
+            <a class="list-group-item" href="../module/mbase_reparameters.html#variable-e_space">E_SPACE</a>
+            <a class="list-group-item" href="../module/mbase_reparameters.html#variable-e_nspace">E_NSPACE</a>
+            <a class="list-group-item" href="../module/mbase_reparameters.html#variable-e_digit">E_DIGIT</a>
+            <a class="list-group-item" href="../module/mbase_reparameters.html#variable-e_ndigit">E_NDIGIT</a>
+            <a class="list-group-item" href="../module/mbase_reparameters.html#variable-posix_class_alnum">POSIX_CLASS_ALNUM</a>
+            <a class="list-group-item" href="../module/mbase_reparameters.html#variable-posix_class_alpha">POSIX_CLASS_ALPHA</a>
+            <a class="list-group-item" href="../module/mbase_reparameters.html#variable-posix_class_blank">POSIX_CLASS_BLANK</a>
+            <a class="list-group-item" href="../module/mbase_reparameters.html#variable-posix_class_cntrl">POSIX_CLASS_CNTRL</a>
+            <a class="list-group-item" href="../module/mbase_reparameters.html#variable-posix_class_digit">POSIX_CLASS_DIGIT</a>
+            <a class="list-group-item" href="../module/mbase_reparameters.html#variable-posix_class_graph">POSIX_CLASS_GRAPH</a>
+            <a class="list-group-item" href="../module/mbase_reparameters.html#variable-posix_class_lower">POSIX_CLASS_LOWER</a>
+            <a class="list-group-item" href="../module/mbase_reparameters.html#variable-posix_class_print">POSIX_CLASS_PRINT</a>
+            <a class="list-group-item" href="../module/mbase_reparameters.html#variable-posix_class_punct">POSIX_CLASS_PUNCT</a>
+            <a class="list-group-item" href="../module/mbase_reparameters.html#variable-posix_class_space">POSIX_CLASS_SPACE</a>
+            <a class="list-group-item" href="../module/mbase_reparameters.html#variable-posix_class_upper">POSIX_CLASS_UPPER</a>
+            <a class="list-group-item" href="../module/mbase_reparameters.html#variable-posix_class_hexdg">POSIX_CLASS_HEXDG</a>
+            <a class="list-group-item" href="../module/mbase_reparameters.html#variable-maxnode">maxNode</a>
+            <a class="list-group-item" href="../module/mbase_reparameters.html#variable-max_paren">MAX_PAREN</a>
+            <a class="list-group-item" href="../module/mbase_reparameters.html#variable-offsetopcode">offsetOpcode</a>
+            <a class="list-group-item" href="../module/mbase_reparameters.html#variable-offsetopdata">offsetOpdata</a>
+            <a class="list-group-item" href="../module/mbase_reparameters.html#variable-offsetnext">offsetNext</a>
+            <a class="list-group-item" href="../module/mbase_reparameters.html#variable-nodesize">nodeSize</a>
+            <a class="list-group-item" href="../module/mbase_reparameters.html#variable-hashposix">hashPOSIX</a>
+        </div>
+      </div>
+    </div>
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+      <div class="card mb-4">
+      <a data-bs-toggle="collapse" href="#funcs-0"
+         aria-expanded="false" aria-controls="funcs-0">
+         <h4 class="card-header bg-primary text-white">Functions</h4>
+      </a>
+      <div id="funcs-0" class="collapse">
+        <div class="list-group list-group-flush">
+            <a class="list-group-item" href="../module/mbase_reparameters.html#proc-hashposix_getchar">hashPOSIX_GetChar</a>
+        </div>
+      </div>
+    </div>
+
+  
+  
+  
+  
+  
+  
+  
+  
+
+
+  </div>
+
+    </div>
+
+    <div class="col-md-9" id='text'>
+      <p><strong>PURPOSE OF THIS MODULE</strong>: <br>
+  This module contains the <em>REProgram</em> type and its related helper types and routines.
+  The <em>REProgram</em> type is a string type that provides various efficient algorithms for
+  a <em>substring searching</em> operation.  The <em>substring searching</em> is a fundamental string
+  operation where given a <em>text</em> string of length N and a <em>pattern</em> string of length M,
+  find an occurrence of the <em>pattern</em> within the <em>text</em>.  <br>
+ <strong>REFERENCES</strong>: <br>
+  [1] <a href="https:!jakarta.apache.org/regexp/">The Apache Jakarta Project. <br></p>
+<br>          <div class="card mb-4">
+      <h3 class="card-header card-title bg-light">Uses</h3>
+      <div class="card-body">
+        <ul class="list-group list-group-flush">
+            <li class="list-group-item">
+              <ul class="list-inline">
+                  <li class="list-inline-item"><a href='../../XpfBase/module/mbase_common.html'>MBase_Common</a></li>
+              </ul>
+            </li>
+        </ul>
+      </div>
+    </div>
+
+      
+      <br>
+
+
+        <section>
+          <h2>Variables</h2>
+            <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Visibility</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+<th></th><th scope="col">Initial</th>        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-opt_hasbackrefs"></span>
+              integer(kind=kInt32),
+            </td>
+              <td>public,</td>
+            <td>
+parameter               
+            </td>
+            <td>::</td>
+            <td><strong>OPT_HASBACKREFS</strong></td>
+<td> =</td>
+                <td>1</td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-opt_hasbol"></span>
+              integer(kind=kInt32),
+            </td>
+              <td>public,</td>
+            <td>
+parameter               
+            </td>
+            <td>::</td>
+            <td><strong>OPT_HASBOL</strong></td>
+<td> =</td>
+                <td>2</td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-node_normal"></span>
+              integer(kind=kInt32),
+            </td>
+              <td>public,</td>
+            <td>
+parameter               
+            </td>
+            <td>::</td>
+            <td><strong>NODE_NORMAL</strong></td>
+<td> =</td>
+                <td>0</td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-node_nullable"></span>
+              integer(kind=kInt32),
+            </td>
+              <td>public,</td>
+            <td>
+parameter               
+            </td>
+            <td>::</td>
+            <td><strong>NODE_NULLABLE</strong></td>
+<td> =</td>
+                <td>1</td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-node_toplevel"></span>
+              integer(kind=kInt32),
+            </td>
+              <td>public,</td>
+            <td>
+parameter               
+            </td>
+            <td>::</td>
+            <td><strong>NODE_TOPLEVEL</strong></td>
+<td> =</td>
+                <td>2</td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-esc_mask"></span>
+              integer(kind=kInt32),
+            </td>
+              <td>public,</td>
+            <td>
+parameter               
+            </td>
+            <td>::</td>
+            <td><strong>ESC_MASK</strong></td>
+<td> =</td>
+                <td>INT(Z&#39;000FFFF0&#39;, KIND=kInt32)</td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-esc_backref"></span>
+              integer(kind=kInt32),
+            </td>
+              <td>public,</td>
+            <td>
+parameter               
+            </td>
+            <td>::</td>
+            <td><strong>ESC_BACKREF</strong></td>
+<td> =</td>
+                <td>INT(Z&#39;000FFFFF&#39;, KIND=kInt32)</td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-esc_complex"></span>
+              integer(kind=kInt32),
+            </td>
+              <td>public,</td>
+            <td>
+parameter               
+            </td>
+            <td>::</td>
+            <td><strong>ESC_COMPLEX</strong></td>
+<td> =</td>
+                <td>INT(Z&#39;000FFFFE&#39;, KIND=kInt32)</td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-esc_class"></span>
+              integer(kind=kInt32),
+            </td>
+              <td>public,</td>
+            <td>
+parameter               
+            </td>
+            <td>::</td>
+            <td><strong>ESC_CLASS</strong></td>
+<td> =</td>
+                <td>INT(Z&#39;000FFFFD&#39;, KIND=kInt32)</td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-bracketunbounded"></span>
+              integer(kind=kInt32),
+            </td>
+              <td>public,</td>
+            <td>
+parameter               
+            </td>
+            <td>::</td>
+            <td><strong>bracketUnbounded</strong></td>
+<td> =</td>
+                <td>-1</td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-match_normal"></span>
+              integer(kind=kInt32),
+            </td>
+              <td>public,</td>
+            <td>
+parameter               
+            </td>
+            <td>::</td>
+            <td><strong>MATCH_NORMAL</strong></td>
+<td> =</td>
+                <td>INT(Z&#39;00000000&#39;, KIND=kInt32)</td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-match_caseindependent"></span>
+              integer(kind=kInt32),
+            </td>
+              <td>public,</td>
+            <td>
+parameter               
+            </td>
+            <td>::</td>
+            <td><strong>MATCH_CASEINDEPENDENT</strong></td>
+<td> =</td>
+                <td>INT(Z&#39;00000001&#39;, KIND=kInt32)</td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-match_multiline"></span>
+              integer(kind=kInt32),
+            </td>
+              <td>public,</td>
+            <td>
+parameter               
+            </td>
+            <td>::</td>
+            <td><strong>MATCH_MULTILINE</strong></td>
+<td> =</td>
+                <td>INT(Z&#39;00000002&#39;, KIND=kInt32)</td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-match_singleline"></span>
+              integer(kind=kInt32),
+            </td>
+              <td>public,</td>
+            <td>
+parameter               
+            </td>
+            <td>::</td>
+            <td><strong>MATCH_SINGLELINE</strong></td>
+<td> =</td>
+                <td>INT(Z&#39;00000004&#39;, KIND=kInt32)</td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-op_end"></span>
+              character(kind=kChar, len=1),
+            </td>
+              <td>public,</td>
+            <td>
+parameter               
+            </td>
+            <td>::</td>
+            <td><strong>OP_END</strong></td>
+<td> =</td>
+                <td>&#39;E&#39;</td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-op_bol"></span>
+              character(kind=kChar, len=1),
+            </td>
+              <td>public,</td>
+            <td>
+parameter               
+            </td>
+            <td>::</td>
+            <td><strong>OP_BOL</strong></td>
+<td> =</td>
+                <td>&#39;^&#39;</td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-op_eol"></span>
+              character(kind=kChar, len=1),
+            </td>
+              <td>public,</td>
+            <td>
+parameter               
+            </td>
+            <td>::</td>
+            <td><strong>OP_EOL</strong></td>
+<td> =</td>
+                <td>&#39;$&#39;</td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-op_any"></span>
+              character(kind=kChar, len=1),
+            </td>
+              <td>public,</td>
+            <td>
+parameter               
+            </td>
+            <td>::</td>
+            <td><strong>OP_ANY</strong></td>
+<td> =</td>
+                <td>&#39;.&#39;</td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-op_anyof"></span>
+              character(kind=kChar, len=1),
+            </td>
+              <td>public,</td>
+            <td>
+parameter               
+            </td>
+            <td>::</td>
+            <td><strong>OP_ANYOF</strong></td>
+<td> =</td>
+                <td>&#39;[&#39;</td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-op_branch"></span>
+              character(kind=kChar, len=1),
+            </td>
+              <td>public,</td>
+            <td>
+parameter               
+            </td>
+            <td>::</td>
+            <td><strong>OP_BRANCH</strong></td>
+<td> =</td>
+                <td>&#39;|&#39;</td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-op_atom"></span>
+              character(kind=kChar, len=1),
+            </td>
+              <td>public,</td>
+            <td>
+parameter               
+            </td>
+            <td>::</td>
+            <td><strong>OP_ATOM</strong></td>
+<td> =</td>
+                <td>&#39;A&#39;</td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-op_star"></span>
+              character(kind=kChar, len=1),
+            </td>
+              <td>public,</td>
+            <td>
+parameter               
+            </td>
+            <td>::</td>
+            <td><strong>OP_STAR</strong></td>
+<td> =</td>
+                <td>&#39;*&#39;</td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-op_plus"></span>
+              character(kind=kChar, len=1),
+            </td>
+              <td>public,</td>
+            <td>
+parameter               
+            </td>
+            <td>::</td>
+            <td><strong>OP_PLUS</strong></td>
+<td> =</td>
+                <td>&#39;+&#39;</td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-op_maybe"></span>
+              character(kind=kChar, len=1),
+            </td>
+              <td>public,</td>
+            <td>
+parameter               
+            </td>
+            <td>::</td>
+            <td><strong>OP_MAYBE</strong></td>
+<td> =</td>
+                <td>&#39;?&#39;</td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-op_escape"></span>
+              character(kind=kChar, len=1),
+            </td>
+              <td>public,</td>
+            <td>
+parameter               
+            </td>
+            <td>::</td>
+            <td><strong>OP_ESCAPE</strong></td>
+<td> =</td>
+                <td>&#39;\&#39;</td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-op_open"></span>
+              character(kind=kChar, len=1),
+            </td>
+              <td>public,</td>
+            <td>
+parameter               
+            </td>
+            <td>::</td>
+            <td><strong>OP_OPEN</strong></td>
+<td> =</td>
+                <td>&#39;(&#39;</td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-op_open_cluster"></span>
+              character(kind=kChar, len=1),
+            </td>
+              <td>public,</td>
+            <td>
+parameter               
+            </td>
+            <td>::</td>
+            <td><strong>OP_OPEN_CLUSTER</strong></td>
+<td> =</td>
+                <td>&#39;&lt;&#39;</td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-op_close"></span>
+              character(kind=kChar, len=1),
+            </td>
+              <td>public,</td>
+            <td>
+parameter               
+            </td>
+            <td>::</td>
+            <td><strong>OP_CLOSE</strong></td>
+<td> =</td>
+                <td>&#39;)&#39;</td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-op_close_cluster"></span>
+              character(kind=kChar, len=1),
+            </td>
+              <td>public,</td>
+            <td>
+parameter               
+            </td>
+            <td>::</td>
+            <td><strong>OP_CLOSE_CLUSTER</strong></td>
+<td> =</td>
+                <td>&#39;&gt;&#39;</td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-op_backref"></span>
+              character(kind=kChar, len=1),
+            </td>
+              <td>public,</td>
+            <td>
+parameter               
+            </td>
+            <td>::</td>
+            <td><strong>OP_BACKREF</strong></td>
+<td> =</td>
+                <td>&#39;#&#39;</td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-op_goto"></span>
+              character(kind=kChar, len=1),
+            </td>
+              <td>public,</td>
+            <td>
+parameter               
+            </td>
+            <td>::</td>
+            <td><strong>OP_GOTO</strong></td>
+<td> =</td>
+                <td>&#39;G&#39;</td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-op_nothing"></span>
+              character(kind=kChar, len=1),
+            </td>
+              <td>public,</td>
+            <td>
+parameter               
+            </td>
+            <td>::</td>
+            <td><strong>OP_NOTHING</strong></td>
+<td> =</td>
+                <td>&#39;N&#39;</td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-op_continue"></span>
+              character(kind=kChar, len=1),
+            </td>
+              <td>public,</td>
+            <td>
+parameter               
+            </td>
+            <td>::</td>
+            <td><strong>OP_CONTINUE</strong></td>
+<td> =</td>
+                <td>&#39;C&#39;</td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-op_reluctantstar"></span>
+              character(kind=kChar, len=1),
+            </td>
+              <td>public,</td>
+            <td>
+parameter               
+            </td>
+            <td>::</td>
+            <td><strong>OP_RELUCTANTSTAR</strong></td>
+<td> =</td>
+                <td>&#39;8&#39;</td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-op_reluctantplus"></span>
+              character(kind=kChar, len=1),
+            </td>
+              <td>public,</td>
+            <td>
+parameter               
+            </td>
+            <td>::</td>
+            <td><strong>OP_RELUCTANTPLUS</strong></td>
+<td> =</td>
+                <td>&#39;=&#39;</td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-op_reluctantmaybe"></span>
+              character(kind=kChar, len=1),
+            </td>
+              <td>public,</td>
+            <td>
+parameter               
+            </td>
+            <td>::</td>
+            <td><strong>OP_RELUCTANTMAYBE</strong></td>
+<td> =</td>
+                <td>&#39;/&#39;</td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-op_posixclass"></span>
+              character(kind=kChar, len=1),
+            </td>
+              <td>public,</td>
+            <td>
+parameter               
+            </td>
+            <td>::</td>
+            <td><strong>OP_POSIXCLASS</strong></td>
+<td> =</td>
+                <td>&#39;P&#39;</td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-e_alnum"></span>
+              character(kind=kChar, len=1),
+            </td>
+              <td>public,</td>
+            <td>
+parameter               
+            </td>
+            <td>::</td>
+            <td><strong>E_ALNUM</strong></td>
+<td> =</td>
+                <td>&#39;w&#39;</td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-e_nalnum"></span>
+              character(kind=kChar, len=1),
+            </td>
+              <td>public,</td>
+            <td>
+parameter               
+            </td>
+            <td>::</td>
+            <td><strong>E_NALNUM</strong></td>
+<td> =</td>
+                <td>&#39;W&#39;</td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-e_bound"></span>
+              character(kind=kChar, len=1),
+            </td>
+              <td>public,</td>
+            <td>
+parameter               
+            </td>
+            <td>::</td>
+            <td><strong>E_BOUND</strong></td>
+<td> =</td>
+                <td>&#39;b&#39;</td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-e_nbound"></span>
+              character(kind=kChar, len=1),
+            </td>
+              <td>public,</td>
+            <td>
+parameter               
+            </td>
+            <td>::</td>
+            <td><strong>E_NBOUND</strong></td>
+<td> =</td>
+                <td>&#39;B&#39;</td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-e_space"></span>
+              character(kind=kChar, len=1),
+            </td>
+              <td>public,</td>
+            <td>
+parameter               
+            </td>
+            <td>::</td>
+            <td><strong>E_SPACE</strong></td>
+<td> =</td>
+                <td>&#39;s&#39;</td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-e_nspace"></span>
+              character(kind=kChar, len=1),
+            </td>
+              <td>public,</td>
+            <td>
+parameter               
+            </td>
+            <td>::</td>
+            <td><strong>E_NSPACE</strong></td>
+<td> =</td>
+                <td>&#39;S&#39;</td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-e_digit"></span>
+              character(kind=kChar, len=1),
+            </td>
+              <td>public,</td>
+            <td>
+parameter               
+            </td>
+            <td>::</td>
+            <td><strong>E_DIGIT</strong></td>
+<td> =</td>
+                <td>&#39;d&#39;</td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-e_ndigit"></span>
+              character(kind=kChar, len=1),
+            </td>
+              <td>public,</td>
+            <td>
+parameter               
+            </td>
+            <td>::</td>
+            <td><strong>E_NDIGIT</strong></td>
+<td> =</td>
+                <td>&#39;D&#39;</td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-posix_class_alnum"></span>
+              character(kind=kChar, len=1),
+            </td>
+              <td>public,</td>
+            <td>
+parameter               
+            </td>
+            <td>::</td>
+            <td><strong>POSIX_CLASS_ALNUM</strong></td>
+<td> =</td>
+                <td>&#39;w&#39;</td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-posix_class_alpha"></span>
+              character(kind=kChar, len=1),
+            </td>
+              <td>public,</td>
+            <td>
+parameter               
+            </td>
+            <td>::</td>
+            <td><strong>POSIX_CLASS_ALPHA</strong></td>
+<td> =</td>
+                <td>&#39;a&#39;</td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-posix_class_blank"></span>
+              character(kind=kChar, len=1),
+            </td>
+              <td>public,</td>
+            <td>
+parameter               
+            </td>
+            <td>::</td>
+            <td><strong>POSIX_CLASS_BLANK</strong></td>
+<td> =</td>
+                <td>&#39;b&#39;</td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-posix_class_cntrl"></span>
+              character(kind=kChar, len=1),
+            </td>
+              <td>public,</td>
+            <td>
+parameter               
+            </td>
+            <td>::</td>
+            <td><strong>POSIX_CLASS_CNTRL</strong></td>
+<td> =</td>
+                <td>&#39;c&#39;</td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-posix_class_digit"></span>
+              character(kind=kChar, len=1),
+            </td>
+              <td>public,</td>
+            <td>
+parameter               
+            </td>
+            <td>::</td>
+            <td><strong>POSIX_CLASS_DIGIT</strong></td>
+<td> =</td>
+                <td>&#39;d&#39;</td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-posix_class_graph"></span>
+              character(kind=kChar, len=1),
+            </td>
+              <td>public,</td>
+            <td>
+parameter               
+            </td>
+            <td>::</td>
+            <td><strong>POSIX_CLASS_GRAPH</strong></td>
+<td> =</td>
+                <td>&#39;g&#39;</td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-posix_class_lower"></span>
+              character(kind=kChar, len=1),
+            </td>
+              <td>public,</td>
+            <td>
+parameter               
+            </td>
+            <td>::</td>
+            <td><strong>POSIX_CLASS_LOWER</strong></td>
+<td> =</td>
+                <td>&#39;l&#39;</td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-posix_class_print"></span>
+              character(kind=kChar, len=1),
+            </td>
+              <td>public,</td>
+            <td>
+parameter               
+            </td>
+            <td>::</td>
+            <td><strong>POSIX_CLASS_PRINT</strong></td>
+<td> =</td>
+                <td>&#39;p&#39;</td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-posix_class_punct"></span>
+              character(kind=kChar, len=1),
+            </td>
+              <td>public,</td>
+            <td>
+parameter               
+            </td>
+            <td>::</td>
+            <td><strong>POSIX_CLASS_PUNCT</strong></td>
+<td> =</td>
+                <td>&#39;!&#39;</td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-posix_class_space"></span>
+              character(kind=kChar, len=1),
+            </td>
+              <td>public,</td>
+            <td>
+parameter               
+            </td>
+            <td>::</td>
+            <td><strong>POSIX_CLASS_SPACE</strong></td>
+<td> =</td>
+                <td>&#39;s&#39;</td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-posix_class_upper"></span>
+              character(kind=kChar, len=1),
+            </td>
+              <td>public,</td>
+            <td>
+parameter               
+            </td>
+            <td>::</td>
+            <td><strong>POSIX_CLASS_UPPER</strong></td>
+<td> =</td>
+                <td>&#39;u&#39;</td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-posix_class_hexdg"></span>
+              character(kind=kChar, len=1),
+            </td>
+              <td>public,</td>
+            <td>
+parameter               
+            </td>
+            <td>::</td>
+            <td><strong>POSIX_CLASS_HEXDG</strong></td>
+<td> =</td>
+                <td>&#39;x&#39;</td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-maxnode"></span>
+              integer(kind=kInt32),
+            </td>
+              <td>public,</td>
+            <td>
+parameter               
+            </td>
+            <td>::</td>
+            <td><strong>maxNode</strong></td>
+<td> =</td>
+                <td>65536</td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-max_paren"></span>
+              integer(kind=kInt32),
+            </td>
+              <td>public,</td>
+            <td>
+parameter               
+            </td>
+            <td>::</td>
+            <td><strong>MAX_PAREN</strong></td>
+<td> =</td>
+                <td>16</td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-offsetopcode"></span>
+              integer(kind=kInt32),
+            </td>
+              <td>public,</td>
+            <td>
+parameter               
+            </td>
+            <td>::</td>
+            <td><strong>offsetOpcode</strong></td>
+<td> =</td>
+                <td>0</td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-offsetopdata"></span>
+              integer(kind=kInt32),
+            </td>
+              <td>public,</td>
+            <td>
+parameter               
+            </td>
+            <td>::</td>
+            <td><strong>offsetOpdata</strong></td>
+<td> =</td>
+                <td>1</td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-offsetnext"></span>
+              integer(kind=kInt32),
+            </td>
+              <td>public,</td>
+            <td>
+parameter               
+            </td>
+            <td>::</td>
+            <td><strong>offsetNext</strong></td>
+<td> =</td>
+                <td>2</td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-nodesize"></span>
+              integer(kind=kInt32),
+            </td>
+              <td>public,</td>
+            <td>
+parameter               
+            </td>
+            <td>::</td>
+            <td><strong>nodeSize</strong></td>
+<td> =</td>
+                <td>3</td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-hashposix"></span>
+              type(PosixPair),
+            </td>
+              <td>public,</td>
+            <td>
+parameter               
+            </td>
+            <td>::</td>
+            <td><strong>hashPOSIX</strong>(*)</td>
+<td> =</td>
+                <td>[PosixPair(&#34;alnum&#34;, POSIX_CLASS_ALNUM), PosixPair(&#34;alpha&#34;, POSIX_CLASS_ALPHA), PosixPair(&#34;blank&#34;, POSIX_CLASS_BLANK), PosixPair(&#34;cntrl&#34;, POSIX_CLASS_CNTRL), PosixPair(&#34;digit&#34;, POSIX_CLASS_DIGIT), PosixPair(&#34;graph&#34;, POSIX_CLASS_GRAPH), PosixPair(&#34;lower&#34;, POSIX_CLASS_LOWER), PosixPair(&#34;print&#34;, POSIX_CLASS_PRINT), PosixPair(&#34;punct&#34;, POSIX_CLASS_PUNCT), PosixPair(&#34;space&#34;, POSIX_CLASS_SPACE), PosixPair(&#34;upper&#34;, POSIX_CLASS_UPPER), PosixPair(&#34;hexdg&#34;, POSIX_CLASS_HEXDG)]</td>
+            <td>
+                
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+        </section>
+        <br>
+
+
+
+
+
+        <section>
+          <h2>Functions</h2>
+              <div class="card">
+    <div class="card-header codesum"><span class="anchor" id="proc-hashposix_getchar"></span><h3>public  function <a href='../proc/hashposix_getchar.html'>hashPOSIX_GetChar</a>(Name) result(C)  
+</h3></div>
+    <div class="card-body">
+          
+  
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-name"></span>
+              character(kind=kChar, len=5),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Name</strong></td>
+            <td>
+<p>To check whether the given character is in the given ASCII range
+  from ASCII_Min to ASCII_Max.
+** SUBROUTINE ARGUMENT DECLARATIONS:</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+    <h4>
+    Return Value
+    <small>character(kind=kChar, len=1)</small>
+    </h4>
+    
+
+    </div>
+  </div>
+
+        </section>
+        <br>
+
+
+
+
+    </div>
+  </div>
+
+      <hr>
+    </div> <!-- /container -->
+    <footer>
+      <div class="container">
+        <div class="row justify-content-between">
+          <div class="col"><p>eXPerimental Fortran Library (XpfLib) Documentation was developed by Niranama<br>&copy; 2024 
+</p>
+          </div>
+          <div class="col">
+            <p class="text-end">
+              Documentation generated by
+              <a href="https://github.com/Fortran-FOSS-Programmers/ford">FORD</a>
+            </p>
+          </div>
+        </div>
+        <br>
+      </div> <!-- /container -->
+    </footer>
+
+    <!-- Bootstrap core JavaScript -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>    
+
+    <!-- MathJax JavaScript
+             ================================================== -->
+             <!-- Placed at the end of the document so the pages load faster -->
+        <script type="text/x-mathjax-config">
+          MathJax.Hub.Config({
+          TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } },
+          jax: ['input/TeX','input/MathML','output/HTML-CSS'],
+          extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']
+          });
+        </script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+          <script src="../tipuesearch/tipuesearch_content.js"></script>
+          <script src="../tipuesearch/tipuesearch_set.js"></script>
+          <script src="../tipuesearch/tipuesearch.js"></script>
+
+  </body>
+</html>

@@ -1,0 +1,1095 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta name="description" content="Experimental Fortran Package - Base Modules and Classes">
+    <meta name="author" content="Niranama" >
+    <link rel="icon" href="../favicon.png">
+
+    <title>KeyUnordered &ndash; eXPerimental Fortran Library (XpfLib) Documentation </title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link href="../css/pygments.css" rel="stylesheet">
+    <link href="../css/font-awesome.min.css" rel="stylesheet">
+    <link href="../css/local.css" rel="stylesheet">
+      <link  href="../tipuesearch/tipuesearch.css" rel="stylesheet">
+
+    <script src="https://code.jquery.com/jquery-3.7.0.slim.min.js" integrity="sha256-tG5mcZUtJsZvyKAxYLVXrmjKBVLd6VpVccqz/r4ypFE=" crossorigin="anonymous"></script>
+  </head>
+
+  <body>
+
+    <!-- Fixed navbar -->
+    <div class="container-fluid mb-sm-4 mb-xl-2">
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container">
+          <a class="navbar-brand" href="../index.html">eXPerimental Fortran Library (XpfLib) Documentation </a>
+          <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar"
+                  aria-expanded="false" aria-controls="navbar" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon">
+          </button>
+
+          <div id="navbar" class="navbar-collapse collapse">
+            <ul class="navbar-nav">
+                  <li class="nav-item">
+                    <a class="nav-link" href="../lists/files.html">Source Files</a>
+                  </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../lists/modules.html">Modules</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../lists/procedures.html">Procedures</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../lists/absint.html">Abstract Interfaces</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../lists/types.html">Derived Types</a>
+                </li>
+            </ul>
+              <div class="d-flex align-items-end flex-grow-1">
+                <form action="../search.html" role="search" class="ms-auto">
+                  <input type="text" class="form-control" aria-label="Search" placeholder="Search" name="q" id="tipue_search_input" autocomplete="off" required>
+                </form>
+              </div>
+          </div><!--/.nav-collapse -->
+        </div>
+      </nav>
+    </div>
+
+    <div class="container">
+  <div class="row">
+    <h1>KeyUnordered
+      <small>Derived Type</small>
+      
+    </h1>
+      <div class="container p-2 mb-4 bg-light border rounded-3">
+    <div class="row align-items-center justify-content-between" id="info-bar">
+      <div class="col">
+        <ul class="list-inline" style="margin-bottom:0px;display:inline">
+
+            <li class="list-inline-item" id="statements"><i class="fa fa-list-ol"></i>
+              <a data-bs-toggle="tooltip"
+                 data-bs-placement="bottom" data-html="true"
+                 title="<p> 0.7% of total for derived types.</p>Including implementation: 221 statements,  3.2% of total for derived types.">6 statements</a>
+            </li>
+
+            <li class="list-inline-item" id="source-file">
+              <i class="fa fa-code"></i>
+              <a href="../src/MClass_KeyUnordered.f90"> Source File</a>
+            </li>
+        </ul>
+      </div>
+      <div class="col">
+        <nav aria-label="breadcrumb">
+          <ol class="breadcrumb justify-content-end mb-0">
+                <li class="breadcrumb-item"><a href='../sourcefile/mclass_keyunordered.f90.html'>MClass_KeyUnordered.f90</a></li>
+                <li class="breadcrumb-item"><a href='../module/mclass_keyunordered.html'>MClass_KeyUnordered</a></li>
+            <li class="breadcrumb-item active" aria-current="page">KeyUnordered</li>
+          </ol>
+        </nav>
+      </div>
+    </div>
+  </div>
+  <script>
+    $(function () {
+    $('[data-bs-toggle="tooltip"]').tooltip()
+    })
+  </script>
+
+  </div>
+  
+  <div class="row">
+    <div class="col-md-3 hidden-xs hidden-sm visible-md visible-lg">
+      <div id="sidebar">
+      <h3>Contents</h3>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+      <div class="card mb-4">
+      <a data-bs-toggle="collapse" href="#fins-0"
+         aria-expanded="false" aria-controls="fins-0">
+         <h4 class="card-header bg-primary text-white">Finalization Procedures</h4>
+      </a>
+      <div id="fins-0" class="collapse">
+        <div class="list-group list-group-flush">
+            <a class="list-group-item" href="../type/keyunordered.html#finalproc-keyunordered_finalize">KeyUnordered_Finalize</a>
+        </div>
+      </div>
+    </div>
+
+      <div class="card mb-4">
+      <a data-bs-toggle="collapse" href="#boundprocs-0"
+         aria-expanded="false" aria-controls="boundprocs-0">
+         <h4 class="card-header bg-primary text-white">Type-Bound Procedures</h4>
+      </a>
+      <div id="boundprocs-0" class="collapse">
+        <div class="list-group list-group-flush">
+            <a class="list-group-item" href="../type/keyunordered.html#boundprocedure-get">Get</a>
+            <a class="list-group-item" href="../type/keyunordered.html#boundprocedure-isempty~2">IsEmpty</a>
+            <a class="list-group-item" href="../type/keyunordered.html#boundprocedure-gettype">GetType</a>
+            <a class="list-group-item" href="../type/keyunordered.html#boundprocedure-getsize~2">GetSize</a>
+            <a class="list-group-item" href="../type/keyunordered.html#boundprocedure-copy">Copy</a>
+            <a class="list-group-item" href="../type/keyunordered.html#boundprocedure-isequalto">IsEqualTo</a>
+            <a class="list-group-item" href="../type/keyunordered.html#boundprocedure-memfree">MemFree</a>
+            <a class="list-group-item" href="../type/keyunordered.html#boundprocedure-hashcode~18">HashCode</a>
+            <a class="list-group-item" href="../type/keyunordered.html#boundprocedure-tostring~3">ToString</a>
+            <a class="list-group-item" href="../type/keyunordered.html#boundprocedure-set~2">Set</a>
+        </div>
+      </div>
+    </div>
+
+  
+  
+    <div class="card card-primary">
+      <div class="card-header text-left"><h3 class="card-title">Source Code</h3></div>
+      <div class="list-group">
+        <a class="list-group-item" href="../type/keyunordered.html#src">KeyUnordered</a>
+      </div>
+    </div>
+
+
+  </div>
+
+    </div>
+    
+    <div class="col-md-9" id='text'>
+      <h2>type, public, extends(<a href='../type/gendata.html'>GenData</a>) :: KeyUnordered</h2>
+    <p>The <em>KeyUnordered</em> type is a storage type that can hold any data types,
+ except the <em>LOGICAL</em> type.</p>
+    <br>
+
+    
+
+      <section>
+        <h2>Finalization Procedures</h2>
+            <div class="card">
+    <div class="card-header codesum">
+      <span class="anchor" id="finalproc-keyunordered_finalize"></span>
+      <h3>final :: <strong>KeyUnordered_Finalize</strong> </h3>
+    </div>
+    <div class="card-body">
+      
+      <p>To perform finalization of the object.</p>
+    </div>
+    <ul class="list-group">
+      <li class="list-group-item">
+            <h3>
+    private  subroutine KeyUnordered_Finalize(Obj)  
+
+    </h3>
+  <p>To perform finalization of the KeyUnordered object.</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-obj~13"></span>
+              type(<a href='../type/keyunordered.html'>KeyUnordered</a>),
+            </td>
+<td>intent(inout)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Obj</strong></td>
+            <td>
+                
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+      </li>
+    </ul>
+  </div>
+
+      </section>
+      <br>
+
+      <section>
+        <h2>Type-Bound Procedures</h2>
+          <div class="row">
+              <div class="card mt-3">
+    <div class="card-header codesum">
+      <span class="anchor" id="boundprocedure-get"></span>
+      <h3>
+          procedure, public ::
+  <strong>Get</strong> => GenData_GetData
+        
+      </h3>
+    </div>
+      <div class="card-body">
+        
+        <p><strong>Type-Bound Function</strong>: Get <br>
+<strong>Purpose</strong>:  To retrieve the data content from the storage.  If type of the specified
+              output content does not match that of stored content, return false and the
+              output content is not modified.  Otherwise, return true and copy the stored
+              content to the output content. <br>
+ <strong>Usage</strong>: <br>
+  ! to get data of an intrinsic type or a derived type in the Object class <br>
+  ---&gt;    Valid = Store%Get(Data) <br>
+  ! to get data of a derived type NOT in the Object class <br>
+  ---&gt;    Valid = Store%Get(Data, CopyProc) <br>
+ <strong>Important Note</strong>: To use this method properly, the following conditions are applied. <br>
+  1. The type of stored data must be known.  The <em>GetType</em> method can be used to inquire
+     the type of stored data. <br>
+  2. If the type of stored data is <em>CHARACTER</em>.  Length of the specified output data should
+     be equal to or greater than that of the stored data. Otherwise, the output data would
+     contain a truncated string.  The <em>GetSize</em> method can be used to inquire this required
+     length. <br>
+  3. If the type of stored data is a derived type, the specified output data must have the
+     same concrete type as that of the stored data. <br>
+  4. If the derived type NOT in the <em>Object</em> class has allocatable and/or pointer components,
+     a procedure to copy the data must be specified.  Alternative, the specified output data
+     and the stored data must have the same storage sizes (i.e. those allocatable/pointer
+     components are allocated to the same sizes).  Otherwise, the routine will set the Valid
+     flag to false and return without modifying the specified output data content. <br></p>
+      </div>
+    <ul class="list-group">
+        <li class="list-group-item">
+                  <h3>
+    private  function GenData_GetData(Store, Content, PolyCopy) result(Valid)  
+</h3>
+
+  <p>To get the data content from the <em>GenData</em> object.  If type of the specified data content
+ does not match that of stored data content, return false and the content is not modified.
+ Otherwise, return true and copy the stored content to the output content. <br>
+ <strong>Important Note</strong>: <br>
+ 1. If the data type is CHARACTER, length of the specified character string (content) must
+    be greater than or equal to that of stored data.  Otherwise, the returned data content
+    is a truncated string. <br>
+ 2. If the data type is a derived one, its concrete type must be the same as that of stored
+    data.
+ 3. If the derived data type has allocatable and/or pointer components and this type is NOT
+    in the <em>Object</em> class, a procedure to copy the data must be specified.  Alternative, the
+    specified data content may allocate those components to the same sizes as those allocated
+    components of the stored data (i.e. the storage sizes of the specified data and the stored
+    data must be the same).  Otherwise, the routine will return without modifying the specified
+    data content (i.e. <em>Valid</em> is set to false). <br></p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(<a href='../type/gendata.html'>GenData</a>),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Store</strong></td>
+            <td>
+                <p><em>GenData</em> object</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(*),
+            </td>
+<td>intent(inout)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Content</strong></td>
+            <td>
+                <p>data content</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              procedure(<a href='../interface/ifacepolycopy.html'>IfacePolyCopy</a>),
+            </td>
+<td></td>
+              <td>optional</td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>PolyCopy</strong></td>
+            <td>
+                <p>a procedure to copy stored data for a derived type not in the Object class; <br>
+ required if this type has allocatable/pointer component(s).</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+    <h4>
+    Return Value
+    <small>logical</small>
+    </h4>
+    <p>true if the type of the specified item matches that of the stored content</p>
+
+        </li>
+    </ul>
+  </div>
+
+          </div>
+          <div class="row">
+              <div class="card mt-3">
+    <div class="card-header codesum">
+      <span class="anchor" id="boundprocedure-isempty~2"></span>
+      <h3>
+          procedure, public ::
+  <strong>IsEmpty</strong> => GenData_IsEmpty
+        
+      </h3>
+    </div>
+      <div class="card-body">
+        
+        <p><strong>Type-Bound Function</strong>: IsEmpty <br>
+ <strong>Purpose</strong>:  To check whether the storage is currently empty or not. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    Flag = Store%IsEmpty() <br>
+  ---&gt;    IF (.NOT.Store%IsEmpty()) DoSomething <br></p>
+      </div>
+    <ul class="list-group">
+        <li class="list-group-item">
+                  <h3>
+    private  function GenData_IsEmpty(Obj) result(Flag)  
+</h3>
+
+  <p>To check whether the storage is empty or not.</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(<a href='../type/gendata.html'>GenData</a>),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Obj</strong></td>
+            <td>
+                
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+    <h4>
+    Return Value
+    <small>logical</small>
+    </h4>
+    
+
+        </li>
+    </ul>
+  </div>
+
+          </div>
+          <div class="row">
+              <div class="card mt-3">
+    <div class="card-header codesum">
+      <span class="anchor" id="boundprocedure-gettype"></span>
+      <h3>
+          procedure, public ::
+  <strong>GetType</strong> => GenData_GetType
+        
+      </h3>
+    </div>
+      <div class="card-body">
+        
+        <p><strong>Type-Bound Function</strong>: GetType <br>
+ <strong>Purpose</strong>:  To get type of the stored content. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    DatType = Store%GetType() <br></p>
+      </div>
+    <ul class="list-group">
+        <li class="list-group-item">
+                  <h3>
+    private  function GenData_GetType(Obj) result(Type)  
+</h3>
+
+  <p>To get the type of stored data content.</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(<a href='../type/gendata.html'>GenData</a>),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Obj</strong></td>
+            <td>
+                
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+    <h4>
+    Return Value
+    <small>integer(kind=kInt32)</small>
+    </h4>
+    
+
+        </li>
+    </ul>
+  </div>
+
+          </div>
+          <div class="row">
+              <div class="card mt-3">
+    <div class="card-header codesum">
+      <span class="anchor" id="boundprocedure-getsize~2"></span>
+      <h3>
+          procedure, public ::
+  <strong>GetSize</strong> => GenData_GetSize
+        
+      </h3>
+    </div>
+      <div class="card-body">
+        
+        <p><strong>Size-Bound Function</strong>: GetSize <br>
+ <strong>Purpose</strong>:  To get size of the stored content in bytes. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    DatSize = Store%GetSize() <br>
+ <strong>Note</strong>: This method is only useful if the data type is <em>CHARACTER</em>. <br></p>
+      </div>
+    <ul class="list-group">
+        <li class="list-group-item">
+                  <h3>
+    private  function GenData_GetSize(Obj) result(Size)  
+</h3>
+
+  <p>To get the size of stored data content in bytes.</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(<a href='../type/gendata.html'>GenData</a>),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Obj</strong></td>
+            <td>
+                
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+    <h4>
+    Return Value
+    <small>integer(kind=kInt32)</small>
+    </h4>
+    
+
+        </li>
+    </ul>
+  </div>
+
+          </div>
+          <div class="row">
+              <div class="card mt-3">
+    <div class="card-header codesum">
+      <span class="anchor" id="boundprocedure-copy"></span>
+      <h3>
+          procedure, public ::
+  <strong>Copy</strong> => GenData_Copy
+        
+      </h3>
+    </div>
+      <div class="card-body">
+        
+        <p><strong>Type-Bound Subroutine</strong>: Copy <br>
+ <strong>Purpose</strong>: To make a copy of the source object. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    CALL SrcObj%Copy(DstObj) <br></p>
+      </div>
+    <ul class="list-group">
+        <li class="list-group-item">
+                  <h3>
+    private  subroutine GenData_Copy(SrcObj, DstObj, IsDeep)  
+</h3>
+
+  <p>To copy the GenData object.  This is a deferred procedure.</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(<a href='../type/gendata.html'>GenData</a>),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>SrcObj</strong></td>
+            <td>
+                <p>source object</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(<a href='../type/object.html'>Object</a>),
+            </td>
+<td>intent(out)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>DstObj</strong></td>
+            <td>
+                <p>destination object</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              logical,
+            </td>
+<td>intent(in),</td>
+              <td>optional</td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>IsDeep</strong></td>
+            <td>
+                <p>Flag indicating whether to perform deep copy or shallow copy. <br>
+ - If present and true, perform a deep copy. <br>
+ - If present and false, perform a shallow copy. <br>
+ - If not present, perform either a shallow or a deep copy that is naturally most suitable
+   for the object's components.</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+        </li>
+    </ul>
+  </div>
+
+          </div>
+          <div class="row">
+              <div class="card mt-3">
+    <div class="card-header codesum">
+      <span class="anchor" id="boundprocedure-isequalto"></span>
+      <h3>
+          procedure, public ::
+  <strong>IsEqualTo</strong> => GenData_IsEqualTo
+        
+      </h3>
+    </div>
+      <div class="card-body">
+        
+        <p><strong>Type-Bound Function</strong>: IsEqualTo <br>
+ <strong>Purpose</strong>: To check whether two objects are equal to one another or not. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    Flag = ObjA%IsEqualTo(ObjB) <br>
+  ---&gt;    IF (ObjA%IsEqualTo(ObjB)) DoSomething</p>
+      </div>
+    <ul class="list-group">
+        <li class="list-group-item">
+                  <h3>
+    private  function GenData_IsEqualTo(LhsObj, RhsObj) result(Flag)  
+</h3>
+
+  <p>To check whether LhsObj and RhsObj are equal or not.
+ This is a deferred procedure.</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(<a href='../type/gendata.html'>GenData</a>),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>LhsObj</strong></td>
+            <td>
+                <p>an object</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(<a href='../type/object.html'>Object</a>),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>RhsObj</strong></td>
+            <td>
+                <p>another object</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+    <h4>
+    Return Value
+    <small>logical</small>
+    </h4>
+    <p>true if both objects are equal</p>
+
+        </li>
+    </ul>
+  </div>
+
+          </div>
+          <div class="row">
+              <div class="card mt-3">
+    <div class="card-header codesum">
+      <span class="anchor" id="boundprocedure-memfree"></span>
+      <h3>
+          procedure, public ::
+  <strong>MemFree</strong> => GenData_MemFree
+        
+      </h3>
+    </div>
+      <div class="card-body">
+        
+        <p><strong>Type-Bound Subroutine</strong>: MemFree <br>
+ <strong>Purpose</strong>: To free memory/storage occupied by the object. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    CALL Obj%MemFree() <br></p>
+      </div>
+    <ul class="list-group">
+        <li class="list-group-item">
+                  <h3>
+    private  subroutine GenData_MemFree(Obj)  
+</h3>
+
+  <p>To free memory of the GenData object.  This is a deferred procedure.</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(<a href='../type/gendata.html'>GenData</a>),
+            </td>
+<td>intent(inout)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Obj</strong></td>
+            <td>
+                
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+        </li>
+    </ul>
+  </div>
+
+          </div>
+          <div class="row">
+              <div class="card mt-3">
+    <div class="card-header codesum">
+      <span class="anchor" id="boundprocedure-hashcode~18"></span>
+      <h3>
+          procedure, public ::
+  <strong>HashCode</strong> => GenData_HashCode
+        
+      </h3>
+    </div>
+      <div class="card-body">
+        
+        <p><strong>Type-Bound Function</strong>: HashCode <br>
+ <strong>Purpose</strong>:  To compute the hash code of this object. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    Code = Obj%HashCode() <br></p>
+      </div>
+    <ul class="list-group">
+        <li class="list-group-item">
+                  <h3>
+    private  function GenData_HashCode(Obj) result(Code)  
+</h3>
+
+  <p>To compute hash code for this object.</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(<a href='../type/gendata.html'>GenData</a>),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Obj</strong></td>
+            <td>
+                
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+    <h4>
+    Return Value
+    <small>integer(kind=kInt32)</small>
+    </h4>
+    
+
+        </li>
+    </ul>
+  </div>
+
+          </div>
+          <div class="row">
+              <div class="card mt-3">
+    <div class="card-header codesum">
+      <span class="anchor" id="boundprocedure-tostring~3"></span>
+      <h3>
+          procedure, public ::
+  <strong>ToString</strong> => KeyUnordered_ToString
+        
+      </h3>
+    </div>
+      <div class="card-body">
+        
+        <p><strong>Type-Bound Function</strong>: ToString <br>
+ <strong>Purpose</strong>:  To return the string representation of this object. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    Str = Obj%ToString() <br></p>
+      </div>
+    <ul class="list-group">
+        <li class="list-group-item">
+                  <h3>
+    private  function KeyUnordered_ToString(Obj) result(Str)  
+</h3>
+
+  <p>To get the string representation of this object.</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(<a href='../type/keyunordered.html'>KeyUnordered</a>),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Obj</strong></td>
+            <td>
+                
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+    <h4>
+    Return Value
+    <small>character(kind=kChar, len=:), ALLOCATABLE</small>
+    </h4>
+    <p>string representation of the object</p>
+
+        </li>
+    </ul>
+  </div>
+
+          </div>
+          <div class="row">
+              <div class="card mt-3">
+    <div class="card-header codesum">
+      <span class="anchor" id="boundprocedure-set~2"></span>
+      <h3>
+          procedure, public ::
+  <strong>Set</strong> => KeyUnordered_SetData
+        
+      </h3>
+    </div>
+      <div class="card-body">
+        
+        <p><strong>Type-Bound Subroutine</strong>: Set <br>
+<strong>Purpose</strong>:  To store the specified data content in the storage. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    CALL Store%Set(Data, Pool)</p>
+      </div>
+    <ul class="list-group">
+        <li class="list-group-item">
+                  <h3>
+    private  subroutine KeyUnordered_SetData(Store, Content, Pool)  
+</h3>
+
+  <p>To store the data content in the <em>KeyUnordered</em> object.</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(<a href='../type/keyunordered.html'>KeyUnordered</a>),
+            </td>
+<td>intent(inout)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Store</strong></td>
+            <td>
+                <p><em>KeyUnordered</em> object</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(*),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Content</strong></td>
+            <td>
+                <p>data content</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              type(<a href='../type/memorypool.html'>MemoryPool</a>),
+            </td>
+<td>intent(inout),</td>
+              <td></td>            <td>
+              TARGET
+            </td>
+            <td>::</td>
+            <td><strong>Pool</strong></td>
+            <td>
+                <p>memory pool that actually stores the data</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+        </li>
+    </ul>
+  </div>
+
+          </div>
+      </section>
+
+    <section>
+    <h3><span class="anchor" id="src"></span>Source Code</h3>
+    <div class="hl codehilite"><pre><span></span><span class="w">    </span><span class="k">TYPE</span><span class="p">,</span><span class="w"> </span><span class="k">EXTENDS</span><span class="p">(</span><span class="n">GenData</span><span class="p">)</span><span class="w">  </span><span class="kd">::</span><span class="w"> </span><span class="n">KeyUnordered</span>
+<span class="w">    </span><span class="k">CONTAINS</span>
+<span class="w">        </span><span class="c">! ---------------------------------------------------------------------</span>
+<span class="w">        </span><span class="c">! -----                     Overridden Procedure                  -----</span>
+<span class="w">        </span><span class="c">! ---------------------------------------------------------------------</span>
+<span class="w">        </span><span class="c">!&gt; **Type-Bound Function**: ToString &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Purpose**:  To return the string representation of this object. &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Usage**: &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!   ---&gt;    Str = Obj%ToString() &lt;br&gt;</span>
+<span class="w">        </span><span class="k">PROCEDURE</span><span class="w">   </span><span class="kd">::</span><span class="w"> </span><span class="n">ToString</span><span class="w">     </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">KeyUnordered_ToString</span>
+<span class="w">        </span><span class="c">!&gt; **Type-Bound Subroutine**: Set &lt;br&gt;</span>
+<span class="w">        </span><span class="c">! **Purpose**:  To store the specified data content in the storage. &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Usage**: &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!   ---&gt;    CALL Store%Set(Data, Pool)</span>
+<span class="w">        </span><span class="k">PROCEDURE</span><span class="w">   </span><span class="kd">::</span><span class="w"> </span><span class="n">Set</span><span class="w">          </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">KeyUnordered_SetData</span>
+<span class="w">        </span><span class="c">! ---------------------------------------------------------------------</span>
+<span class="w">        </span><span class="c">! -----                   Finalize Procedure                      -----</span>
+<span class="w">        </span><span class="c">! ---------------------------------------------------------------------</span>
+<span class="w">        </span><span class="c">!&gt; To perform finalization of the object.</span>
+<span class="w">        </span><span class="k">FINAL</span><span class="w">       </span><span class="kd">::</span><span class="w"> </span><span class="n">KeyUnordered_Finalize</span>
+<span class="w">        </span><span class="c">! ---------------------------------------------------------------------</span>
+<span class="w">    </span><span class="k">END TYPE </span><span class="n">KeyUnordered</span>
+</pre></div>
+
+    </section>
+    
+    </div>
+  </div>
+
+      <hr>
+    </div> <!-- /container -->
+    <footer>
+      <div class="container">
+        <div class="row justify-content-between">
+          <div class="col"><p>eXPerimental Fortran Library (XpfLib) Documentation was developed by Niranama<br>&copy; 2024 
+</p>
+          </div>
+          <div class="col">
+            <p class="text-end">
+              Documentation generated by
+              <a href="https://github.com/Fortran-FOSS-Programmers/ford">FORD</a>
+            </p>
+          </div>
+        </div>
+        <br>
+      </div> <!-- /container -->
+    </footer>
+
+    <!-- Bootstrap core JavaScript -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>    
+
+    <!-- MathJax JavaScript
+             ================================================== -->
+             <!-- Placed at the end of the document so the pages load faster -->
+        <script type="text/x-mathjax-config">
+          MathJax.Hub.Config({
+          TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } },
+          jax: ['input/TeX','input/MathML','output/HTML-CSS'],
+          extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']
+          });
+        </script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+          <script src="../tipuesearch/tipuesearch_content.js"></script>
+          <script src="../tipuesearch/tipuesearch_set.js"></script>
+          <script src="../tipuesearch/tipuesearch.js"></script>
+
+  </body>
+</html>

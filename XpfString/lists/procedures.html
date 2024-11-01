@@ -1,0 +1,853 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta name="description" content="Experimental Fortran Package - String">
+    <meta name="author" content="Niranama" >
+    <link rel="icon" href="../favicon.png">
+
+    <title>All Procedures &ndash; eXPerimental Fortran Library (XpfLib) Documentation
+</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link href="../css/pygments.css" rel="stylesheet">
+    <link href="../css/font-awesome.min.css" rel="stylesheet">
+    <link href="../css/local.css" rel="stylesheet">
+      <link  href="../tipuesearch/tipuesearch.css" rel="stylesheet">
+
+    <script src="https://code.jquery.com/jquery-3.7.0.slim.min.js" integrity="sha256-tG5mcZUtJsZvyKAxYLVXrmjKBVLd6VpVccqz/r4ypFE=" crossorigin="anonymous"></script>
+  </head>
+
+  <body>
+
+    <!-- Fixed navbar -->
+    <div class="container-fluid mb-sm-4 mb-xl-2">
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container">
+          <a class="navbar-brand" href="../index.html">eXPerimental Fortran Library (XpfLib) Documentation </a>
+          <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar"
+                  aria-expanded="false" aria-controls="navbar" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon">
+          </button>
+
+          <div id="navbar" class="navbar-collapse collapse">
+            <ul class="navbar-nav">
+                  <li class="nav-item">
+                    <a class="nav-link" href="../lists/files.html">Source Files</a>
+                  </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../lists/modules.html">Modules</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../lists/procedures.html">Procedures</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../lists/types.html">Derived Types</a>
+                </li>
+            </ul>
+              <div class="d-flex align-items-end flex-grow-1">
+                <form action="../search.html" role="search" class="ms-auto">
+                  <input type="text" class="form-control" aria-label="Search" placeholder="Search" name="q" id="tipue_search_input" autocomplete="off" required>
+                </form>
+              </div>
+          </div><!--/.nav-collapse -->
+        </div>
+      </nav>
+    </div>
+
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12" id='text'>
+			 <h1>Procedures</h1>
+			 <table class="table table-striped">
+			 <thead><tr><th>Procedure</th><th>Location</th><th>Procedure Type</th><th>Description</th></tr></thead>
+			 <tbody>
+			   <tr><td><a href='../interface/achar.html'>ACHAR</a></td><td><a href='../module/mclass_fvlstr.html'>MClass_FvlStr</a></td><td>Interface</td><td><p><strong>Function Interface</strong>: ACHAR <br>
+ <strong>Purpose</strong>:  To return a FvlStr object with length of 1 representing the
+      character in the specified position of the ASCII character set. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    Chr = ACHAR(I) <br></p></td></tr>
+			   <tr><td><a href='../interface/adjustl.html'>ADJUSTL</a></td><td><a href='../module/mclass_fvlstr.html'>MClass_FvlStr</a></td><td>Interface</td><td><p><strong>Function Interface</strong>: ADJUSTL <br>
+ <strong>Purpose</strong>:  To adjust the string of FvlStr object to the left, removing
+      leading blanks and inserting trailing blanks. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    vStrOut = ADJUSTL(vStrIn) <br></p></td></tr>
+			   <tr><td><a href='../interface/adjustr.html'>ADJUSTR</a></td><td><a href='../module/mclass_fvlstr.html'>MClass_FvlStr</a></td><td>Interface</td><td><p><strong>Function Interface</strong>: ADJUSTR <br>
+ <strong>Purpose</strong>:  To adjust the string of FvlStr object to the right, removing
+      trailing blanks and inserting leading blanks. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    vStrOut = ADJUSTR(vStrIn) <br></p></td></tr>
+			   <tr><td><a href='../interface/americanflagsort.html'>AmericanFlagSort</a></td><td><a href='../module/mbase_stringsorts.html'>MBase_StringSorts</a></td><td>Interface</td><td><p><strong>Subroutine Interface</strong>: AmericanFlagSort <br>
+ <strong>Purpose</strong>:  To sort an array of strings in an ascending order using the
+      American-flag algorithm. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    CALL AmericanFlagSort(Arr) <br></p></td></tr>
+			   <tr><td><a href='../interface/assignment(=).html'>ASSIGNMENT(=)</a></td><td><a href='../module/mclass_fvlstr.html'>MClass_FvlStr</a></td><td>Interface</td><td><p><strong>Operator Overload</strong>: ASSIGNMENT(=) <br>
+ <strong>Purpose</strong>:  To convert between a FvlStr object and an other (Fortran
+      intrinsic) type via an assignment expression. <br>
+ <strong>Usage</strong>: <br>
+  ! convert a 64-bit integer number to a FvlStr object <br>
+  ---&gt;    vStr = I64Num <br>
+  ! convert a FvlStr object to a quadruple-precision real number <br>
+  ---&gt;    RQPNum = vStr <br>
+ <strong>Important Note</strong>: The <em>assignment</em> and <em>conversion</em> operations are
+      functionally similar but have some subtle differences.  In particular
+      for those procedures that convert from a decimal string to a number,
+      the <em>assignment</em> procedures will silently convert to a proper value
+      (representation) if the input string is <em>INVALID</em> whereas the <em>conversion</em>
+      procedures can optionally report the error occurred. <br></p><a href="../interface/assignment(=).html" class="pull-right"><emph>Read more&hellip;</emph></a></td></tr>
+			   <tr><td><a href='../interface/assignment(=)~2.html'>ASSIGNMENT(=)</a></td><td><a href='../module/mbase_chrstr.html'>MBase_ChrStr</a></td><td>Interface</td><td><p><strong>Operator Overload</strong>: ASSIGNMENT(=) <br>
+ <strong>Purpose</strong>:  To convert between a character string and an other
+               (Fortran intrinsic) type via an assignment expression. <br>
+ <strong>Usage</strong>: <br>
+  ! convert a 64-bit integer number to a character string <br>
+  ---&gt;    cStr = I64Num <br>
+  ! convert a character string to a quadruple-precision real number <br>
+  ---&gt;    RQPNum = cStr <br>
+ <strong>Important Note</strong>: The <em>assignment</em> and <em>conversion</em> operations are
+           functionally similar but have some subtle differences.  In
+           particular for those procedures that convert from a decimal
+           string to a number, the <em>assignment</em> procedures will silently
+           convert to a proper representation if the input string is
+           <em>INVALID</em> whereas the <em>conversion</em> procedures can optionally
+           report the error occurred. <br></p></td></tr>
+			   <tr><td><a href='../proc/bitmapnode_new.html'>BitMapNode_New</a></td><td><a href='../module/mclass_bitmapstate.html'>MClass_BitmapState</a></td><td>Subroutine</td><td><p>To allocate the state and specify its ID.</p></td></tr>
+			   <tr><td><a href='../proc/bitmapstate_free.html'>BitmapState_Free</a></td><td><a href='../module/mclass_bitmapstate.html'>MClass_BitmapState</a></td><td>Subroutine</td><td><p>To free all the nodes linked to the specified node.</p></td></tr>
+			   <tr><td><a href='../proc/bitmapstate_new.html'>BitmapState_New</a></td><td><a href='../module/mclass_bitmapstate.html'>MClass_BitmapState</a></td><td>Subroutine</td><td><p>To allocate the state and specify its ID.</p></td></tr>
+			   <tr><td><a href='../proc/bitmapstatepack_new.html'>BitmapStatePack_New</a></td><td><a href='../module/mclass_bitmapstate.html'>MClass_BitmapState</a></td><td>Subroutine</td><td><p>To allocate the state and specify its ID.</p></td></tr>
+			   <tr><td><a href='../interface/blankcompresschangecase.html'>BlankCompressChangeCase</a></td><td><a href='../module/mbase_chrstr.html'>MBase_ChrStr</a></td><td>Interface</td><td><p><strong>Function Interface</strong>: BlankCompressChangeCase <br>
+ <strong>Purpose</strong>:  To first remove all blank characters and then change case of all
+               alphabet characters of the specified character string according
+               to the given flag. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    OutStr = BlankCompressChangeCase(InStr, .TRUE.)</p></td></tr>
+			   <tr><td><a href='../interface/changecase.html'>ChangeCase</a></td><td><a href='../module/mbase_chrstr.html'>MBase_ChrStr</a></td><td>Interface</td><td><p><strong>Subroutine Interface</strong>: ChangeCase <br>
+ <strong>Purpose</strong>:  To change case of all alphabet characters of the specified
+               character string according to the given flag.  If protected
+               regions are specified, only characters in unprotected regions
+               are changed. <br>
+ <strong>Usage</strong>: <br>
+  ! change all alphabet characters to upper cases <br>
+  ---&gt;    CALL ChangeCase(String, .TRUE.) <br>
+  ! change all alphabet characters only in unprotected regions to lower cases <br>
+  ---&gt;    CALL ChangeCase(String, nRegion, lPos, rPos, .FALSE.)</p></td></tr>
+			   <tr><td><a href='../interface/changecasecharacter.html'>ChangeCaseCharacter</a></td><td><a href='../module/mbase_chrstr.html'>MBase_ChrStr</a></td><td>Interface</td><td><p><strong>Subroutine Interface</strong>: ChangeCaseCharacter <br>
+ <strong>Purpose</strong>:  To change case of the given character according to flag. <br>
+ <strong>Usage</strong>: <br>
+  ! if <em>Char</em> is an alphabet character, change it to its upper case <br>
+  ---&gt;    CALL ChangeCaseCharacter(Char, .TRUE.)
+  ! if <em>Char</em> is an alphabet character, change it to its lower case <br>
+  ---&gt;    CALL ChangeCaseCharacter(Char, .FALSE.)
+  ! if <em>Char</em> is NOT an alphabet character, nothing done <br>
+  ---&gt;    CALL ChangeCaseCharacter(Char, .TRUE.)</p></td></tr>
+			   <tr><td><a href='../interface/char.html'>CHAR</a></td><td><a href='../module/mclass_fvlstr.html'>MClass_FvlStr</a></td><td>Interface</td><td><p><strong>Function Interface</strong>: CHAR <br>
+ <strong>Purpose</strong>:  To return a FvlStr object with length of 1 representing the
+      character in the specified position of the compiler's character set. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    Chr = CHAR(I) <br></p></td></tr>
+			   <tr><td><a href='../interface/characterdescription.html'>CharacterDescription</a></td><td><a href='../module/mbase_chrstr.html'>MBase_ChrStr</a></td><td>Interface</td><td><p><strong>Function Interface</strong>: CharacterDescription <br>
+ <strong>Purpose</strong>:  To provide a description of the given character. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    Description = CharacterDescription('~')</p></td></tr>
+			   <tr><td><a href='../interface/charstring.html'>CharString</a></td><td><a href='../module/mbase_chrstr.html'>MBase_ChrStr</a></td><td>Interface</td><td><p><strong>Function Interface</strong>: CharString <br>
+ <strong>Purpose</strong>:  To construct a character string based on specified input. <br>
+ <strong>Usage</strong>: <br>
+  ! construct a character string from an array of characters <br>
+  ---&gt;    cStr = CharString(cArray) <br>
+  ! construct a character string from double-precision real number <br>
+  ---&gt;    cStr = CharString(R64, IsScientific=.TRUE.) <br></p></td></tr>
+			   <tr><td><a href='../interface/compactstring.html'>CompactString</a></td><td><a href='../module/mbase_chrstr.html'>MBase_ChrStr</a></td><td>Interface</td><td><p><strong>Function Interface</strong>: CompactString <br>
+ <strong>Purpose</strong>:  To convert multiple spaces and tabs into a single space,
+               delete control characters and removes initial (leading
+               and trailing) spaces. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    OutStr = CompactString(InStr)</p></td></tr>
+			   <tr><td><a href='../interface/compressstring.html'>CompressString</a></td><td><a href='../module/mbase_chrstr.html'>MBase_ChrStr</a></td><td>Interface</td><td><p><strong>Function Interface</strong>: CompressString <br>
+ <strong>Purpose</strong>:  To remove spaces, tabs and control characters from the
+               character string. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    OutStr = CompressString(InStr) <br>
+ <strong>Note</strong>: Unlike the <em>CompactString</em> procedure, the output string
+           contains no space between its characters.</p></td></tr>
+			   <tr><td><a href='../interface/countcharacters.html'>CountCharacters</a></td><td><a href='../module/mbase_chrstr.html'>MBase_ChrStr</a></td><td>Interface</td><td><p><strong>Function Interface</strong>: CountCharacters <br>
+ <strong>Purpose</strong>:  To count the number of occurrences of character(s) in the
+               specified character string for any character appearing in
+               the given character set. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    Count = CountCharacters(String, CharSet)</p></td></tr>
+			   <tr><td><a href='../interface/countcharactersprotect.html'>CountCharactersProtect</a></td><td><a href='../module/mbase_chrstr.html'>MBase_ChrStr</a></td><td>Interface</td><td><p><strong>Function Interface</strong>: CountCharactersProtect <br>
+ <strong>Purpose</strong>:  To count the number of occurrences of delimiter(s) in the
+               unprotected region(s) of the specified character string
+               where a delimiter is any character appearing in the
+               given character set. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    Count = CountCharactersProtect(String, CharSet) <br>
+  ---&gt;    Count = CountCharactersProtect(String, CharSet, ExclMrk=.FALSE.) <br></p></td></tr>
+			   <tr><td><a href='../interface/countsubstring.html'>CountSubstring</a></td><td><a href='../module/mbase_chrstr.html'>MBase_ChrStr</a></td><td>Interface</td><td><p><strong>Function Interface</strong>: CountSubstring <br>
+ <strong>Purpose</strong>:  To count the number of occurrences of the given
+               substring in the specified character string. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    Count = CountSubstring(String, SubStr) <br>
+  ---&gt;    Count = CountSubstring(String, SubStr, Overlap=.TRUE.)</p></td></tr>
+			   <tr><td><a href='../interface/countwords.html'>CountWords</a></td><td><a href='../module/mbase_chrstr.html'>MBase_ChrStr</a></td><td>Interface</td><td><p><strong>Function Interface</strong>: CountWords <br>
+ <strong>Purpose</strong>:  To count the number of words (separated by blanks) in the
+               specified character string where blanks are characters in
+               the <a href="../module/mbase_chrstr.html#variable-set_blanks">
+               SET_BLANKS</a> character set. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    Count = CountWords(String)</p></td></tr>
+			   <tr><td><a href='../interface/cropblanks.html'>CropBlanks</a></td><td><a href='../module/mbase_chrstr.html'>MBase_ChrStr</a></td><td>Interface</td><td><p><strong>Function Interface</strong>: CropBlanks <br>
+ <strong>Purpose</strong>:  To remove leading and trailing blanks from the character string. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    OutStr = CropBlanks(InStr) <br>
+  ---&gt;    OutStr = CropBlanks(InStr, SpaceOnly=.TRUE.) <br>
+ <strong>Note</strong>: CropBlanks(InStr,.TRUE.) is the same as TRIM(ADJUSTL(InStr)).</p></td></tr>
+			   <tr><td><a href='../interface/endwith.html'>EndWith</a></td><td><a href='../module/mbase_chrstr.html'>MBase_ChrStr</a></td><td>Interface</td><td><p><strong>Function Interface</strong>: EndWith <br>
+ <strong>Purpose</strong>:  To check whether the given character string ends with the
+               specified substring or not.  Both the string and the substring
+               must not have a zero length. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    Flag = EndWith(String, Substring) <br>
+  ---&gt;    IF (.NOT.EndWith(String, Substring)) DoSomething</p></td></tr>
+			   <tr><td><a href='../interface/finddelimiters.html'>FindDelimiters</a></td><td><a href='../module/mbase_chrstr.html'>MBase_ChrStr</a></td><td>Interface</td><td><p><strong>Function Interface</strong>: FindDelimiters <br>
+ <strong>Purpose</strong>:  To count the number of occurrences of delimiter(s) in the specified
+               character string and also return position(s) of the delimiter(s) found.
+               A delimiter is any character appearing in the given character set. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    Count = FindDelimiters(String, CharSet, DPos)</p></td></tr>
+			   <tr><td><a href='../interface/finddelimitersprotect.html'>FindDelimitersProtect</a></td><td><a href='../module/mbase_chrstr.html'>MBase_ChrStr</a></td><td>Interface</td><td><p><strong>Function Interface</strong>: FindDelimitersProtect <br>
+ <strong>Purpose</strong>:  To count the number of occurrences of delimiter(s) in unprotected
+               regions of the specified character string and also return position(s)
+               of the delimiter(s) found.  A delimiter is any character appearing
+               in the given character set. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    Count = FindDelimitersProtect(String, CharSet, DPos) <br>
+  ---&gt;    Count = FindDelimitersProtect(String, CharSet, DPos, ExclMrk=.FALSE.)</p></td></tr>
+			   <tr><td><a href='../interface/findprotectedregions.html'>FindProtectedRegions</a></td><td><a href='../module/mbase_chrstr.html'>MBase_ChrStr</a></td><td>Interface</td><td><p><strong>Function Interface</strong>: FindProtectedRegions <br>
+ <strong>Purpose</strong>:  To find the number of protected regions marked by two (single
+               or double) quotes and/or by an exclamation mark.  Also, return
+               positions of the first and last characters of each region. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    nRegion = FindProtectedRegions(String, lPos, rPos) <br>
+  ---&gt;    nRegion = FindProtectedRegions(String, lPos, rPos, ExclMrk=.FALSE.)</p></td></tr>
+			   <tr><td><a href='../interface/findseparators.html'>FindSeparators</a></td><td><a href='../module/mbase_chrstr.html'>MBase_ChrStr</a></td><td>Interface</td><td><p><strong>Function Interface</strong>: FindSeparators <br>
+ <strong>Purpose</strong>:  To count the number of occurrences of separator(s) in the
+               specified character string and also return (the first)
+               position(s) of the separator(s) found. <br>
+ <strong>Usage</strong>: <br>
+  ! a separator is any (single) character in the <em>Separator</em> argument <br>
+  ---&gt;    Count = FindSeparators(String, Separator, .TRUE., Pos) <br>
+  ! a separator is a character string specified by the <em>Separator</em> argument <br>
+  ---&gt;    Count = FindSeparators(String, Separator, .FALSE., Pos)</p></td></tr>
+			   <tr><td><a href='../interface/findseparatorsprotect.html'>FindSeparatorsProtect</a></td><td><a href='../module/mbase_chrstr.html'>MBase_ChrStr</a></td><td>Interface</td><td><p><strong>Function Interface</strong>: FindSeparatorsProtect <br>
+ <strong>Purpose</strong>:  To count the number of occurrences of separator(s) in the
+               specified character string and also return (the first)
+               position(s) of the separator(s) found. <br>
+ <strong>Usage</strong>: <br>
+  ! both quotes and an exclamation mark used to define protected regions.  <br>
+  ---&gt;    Count = FindSeparatorsProtect(String, Separator, .TRUE., Pos)  ! separator is a single character <br>
+  ---&gt;    Count = FindSeparatorsProtect(String, Separator, .FALSE., Pos) ! separator is a character string <br>
+  ! only quotes used to define protected regions.  <br>
+  ---&gt;    Count = FindSeparatorsProtect(String, Separator, .TRUE., Pos, ExclMrk=.FALSE.) <br>
+  ---&gt;    Count = FindSeparatorsProtect(String, Separator, .FALSE., Pos, ExclMrk=.FALSE.)</p></td></tr>
+			   <tr><td><a href='../interface/findsubstring.html'>FindSubstring</a></td><td><a href='../module/mbase_chrstr.html'>MBase_ChrStr</a></td><td>Interface</td><td><p><strong>Function Interface</strong>: FindSubstring <br>
+ <strong>Purpose</strong>:  To count the number of non-overlapping occurrences of the given
+               substring in the specified character string and also return
+               position(s) of the first character of substring found. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    Count = FindSubstring(String, SubStr, FirstPos)</p></td></tr>
+			   <tr><td><a href='../interface/findsubstringprotect.html'>FindSubstringProtect</a></td><td><a href='../module/mbase_chrstr.html'>MBase_ChrStr</a></td><td>Interface</td><td><p><strong>Function Interface</strong>: FindSubstringProtect <br>
+ <strong>Purpose</strong>:  To count the number of non-overlapping occurrences of the given
+               substring in unprotected regions of the specified character
+               string and also return position(s) of the first character of
+               substring found. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    Count = FindSubstringProtect(String, SubStr, FirstPos) <br>
+  ---&gt;    Count = FindSubstringProtect(String, SubStr, FirstPos, ExclMrk=.FALSE.)</p></td></tr>
+			   <tr><td><a href='../interface/fvlstr.html'>FvlStr</a></td><td><a href='../module/mclass_fvlstr.html'>MClass_FvlStr</a></td><td>Interface</td><td><p><strong>Function Interface</strong>: FvlStr <br>
+ <strong>Purpose</strong>:  To construct a FvlStr object based on specified input. <br>
+ <strong>Usage</strong>: <br>
+  ! construct a FvlStr object from an array of characters <br>
+  ---&gt;    vStr = FvlStr(cArray) <br>
+  ! construct a FvlStr object from double-precision real number <br>
+  ---&gt;    vStr = FvlStr(R64, IsScientific=.TRUE.) <br></p></td></tr>
+			   <tr><td><a href='../interface/getlen.html'>GETLEN</a></td><td><a href='../module/mclass_fvlstr.html'>MClass_FvlStr</a></td><td>Interface</td><td><p><strong>Function Interface</strong>: GETLEN <br>
+ <strong>Purpose</strong>:  To return length of the character string of a FvlStr object. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    Length = GETLEN(vStr) <br></p></td></tr>
+			   <tr><td><a href='../interface/getslice.html'>GetSlice</a></td><td><a href='../module/mbase_chrstr.html'>MBase_ChrStr</a></td><td>Interface</td><td><p><strong>Function Interface</strong>: GetSlice <br>
+ <strong>Purpose</strong>:  To extract characters from the region between the first and
+               last indices (both inclusive) of the given string by taking
+               strides of length <em>Stride</em>. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    Slice = GetSlice(String, FirstIndx, LastIndx, Stride)</p></td></tr>
+			   <tr><td><a href='../interface/getsubstring.html'>GetSubstring</a></td><td><a href='../module/mbase_chrstr.html'>MBase_ChrStr</a></td><td>Interface</td><td><p><strong>Function Interface</strong>: GetSubstring <br>
+ <strong>Purpose</strong>:  To get a substring (specified by the leftmost and rightmost
+               indices) of the given character string. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    Substring = GetSubstring(String, LeftIndx, RightIndx)</p></td></tr>
+			   <tr><td><a href='../proc/hashposix_getchar.html'>hashPOSIX_GetChar</a></td><td><a href='../module/mbase_reparameters.html'>MBase_REParameters</a></td><td>Function</td><td></td></tr>
+			   <tr><td><a href='../interface/i32_fromchar_cc_fortnum.html'>I32_FromChar_CC_FortNum</a></td><td><a href='../module/mbase_charconv.html'>MBase_CharConv</a></td><td>Interface</td><td></td></tr>
+			   <tr><td><a href='../interface/i32_fromchar_cc_fortplus.html'>I32_FromChar_CC_FortPlus</a></td><td><a href='../module/mbase_charconv.html'>MBase_CharConv</a></td><td>Interface</td><td></td></tr>
+			   <tr><td><a href='../interface/i32_fromchar_cc_jsonnum.html'>I32_FromChar_CC_JsonNum</a></td><td><a href='../module/mbase_charconv.html'>MBase_CharConv</a></td><td>Interface</td><td></td></tr>
+			   <tr><td><a href='../interface/i32_fromchar_lemire_fortplus.html'>I32_FromChar_Lemire_FortPlus</a></td><td><a href='../module/mbase_charconv.html'>MBase_CharConv</a></td><td>Interface</td><td></td></tr>
+			   <tr><td><a href='../interface/i32_fromchar_yy_jsonnum.html'>I32_FromChar_YY_JsonNum</a></td><td><a href='../module/mbase_charconv.html'>MBase_CharConv</a></td><td>Interface</td><td></td></tr>
+			   <tr><td><a href='../interface/i32_tochar_basic.html'>I32_ToChar_Basic</a></td><td><a href='../module/mbase_charconv.html'>MBase_CharConv</a></td><td>Interface</td><td></td></tr>
+			   <tr><td><a href='../interface/i32_tochar_cc.html'>I32_ToChar_CC</a></td><td><a href='../module/mbase_charconv.html'>MBase_CharConv</a></td><td>Interface</td><td></td></tr>
+			   <tr><td><a href='../interface/i32_tochar_jea.html'>I32_ToChar_JEA</a></td><td><a href='../module/mbase_charconv.html'>MBase_CharConv</a></td><td>Interface</td><td></td></tr>
+			   <tr><td><a href='../interface/i32_tochar_yy.html'>I32_ToChar_YY</a></td><td><a href='../module/mbase_charconv.html'>MBase_CharConv</a></td><td>Interface</td><td></td></tr>
+			   <tr><td><a href='../interface/i32_tochar_yyll.html'>I32_ToChar_YYLL</a></td><td><a href='../module/mbase_charconv.html'>MBase_CharConv</a></td><td>Interface</td><td></td></tr>
+			   <tr><td><a href='../interface/i64_fromchar_cc_fortnum.html'>I64_FromChar_CC_FortNum</a></td><td><a href='../module/mbase_charconv.html'>MBase_CharConv</a></td><td>Interface</td><td></td></tr>
+			   <tr><td><a href='../interface/i64_fromchar_cc_fortplus.html'>I64_FromChar_CC_FortPlus</a></td><td><a href='../module/mbase_charconv.html'>MBase_CharConv</a></td><td>Interface</td><td></td></tr>
+			   <tr><td><a href='../interface/i64_fromchar_cc_jsonnum.html'>I64_FromChar_CC_JsonNum</a></td><td><a href='../module/mbase_charconv.html'>MBase_CharConv</a></td><td>Interface</td><td></td></tr>
+			   <tr><td><a href='../interface/i64_fromchar_lemire_fortplus.html'>I64_FromChar_Lemire_FortPlus</a></td><td><a href='../module/mbase_charconv.html'>MBase_CharConv</a></td><td>Interface</td><td></td></tr>
+			   <tr><td><a href='../interface/i64_fromchar_yy_jsonnum.html'>I64_FromChar_YY_JsonNum</a></td><td><a href='../module/mbase_charconv.html'>MBase_CharConv</a></td><td>Interface</td><td></td></tr>
+			   <tr><td><a href='../interface/i64_tochar_basic.html'>I64_ToChar_Basic</a></td><td><a href='../module/mbase_charconv.html'>MBase_CharConv</a></td><td>Interface</td><td></td></tr>
+			   <tr><td><a href='../interface/i64_tochar_cc.html'>I64_ToChar_CC</a></td><td><a href='../module/mbase_charconv.html'>MBase_CharConv</a></td><td>Interface</td><td></td></tr>
+			   <tr><td><a href='../interface/i64_tochar_jea.html'>I64_ToChar_JEA</a></td><td><a href='../module/mbase_charconv.html'>MBase_CharConv</a></td><td>Interface</td><td></td></tr>
+			   <tr><td><a href='../interface/i64_tochar_yy.html'>I64_ToChar_YY</a></td><td><a href='../module/mbase_charconv.html'>MBase_CharConv</a></td><td>Interface</td><td></td></tr>
+			   <tr><td><a href='../interface/i64_tochar_yyll.html'>I64_ToChar_YYLL</a></td><td><a href='../module/mbase_charconv.html'>MBase_CharConv</a></td><td>Interface</td><td></td></tr>
+			   <tr><td><a href='../interface/iachar.html'>IACHAR</a></td><td><a href='../module/mclass_fvlstr.html'>MClass_FvlStr</a></td><td>Interface</td><td><p><strong>Function Interface</strong>: IACHAR <br>
+ <strong>Purpose</strong>:  To return the character code based on the ASCII character set
+      of the specified character of the FvlStr object. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    I = IACHAR(vStr, Pos) <br>
+ <strong>Note</strong>: A character code is a position of the character in a character set. <br></p></td></tr>
+			   <tr><td><a href='../interface/ichar.html'>ICHAR</a></td><td><a href='../module/mclass_fvlstr.html'>MClass_FvlStr</a></td><td>Interface</td><td><p><strong>Function Interface</strong>: ICHAR <br>
+ <strong>Purpose</strong>:  To return the character code based on the compiler's character set
+      of the specified character of the FvlStr object. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    I = ICHAR(vStr, Pos) <br>
+ <strong>Note</strong>: A character code is a position of the character in a character set. <br></p></td></tr>
+			   <tr><td><a href='../interface/index.html'>INDEX</a></td><td><a href='../module/mclass_fvlstr.html'>MClass_FvlStr</a></td><td>Interface</td><td><p><strong>Function Interface</strong>: INDEX <br>
+ <strong>Purpose</strong>:  To return the starting position of a substring within the string
+      of a FvlStr object. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    Indx = INDEX(vStr, sStr) <br>
+  ---&gt;    Indx = INDEX(vStr, sStr, Back=.TRUE.) <br></p></td></tr>
+			   <tr><td><a href='../interface/insertsubstring.html'>InsertSubstring</a></td><td><a href='../module/mbase_chrstr.html'>MBase_ChrStr</a></td><td>Interface</td><td><p><strong>Function Interface</strong>: InsertSubstring <br>
+ <strong>Purpose</strong>:  To insert a given substring into the character string at a
+               specified position. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    OutStr = InsertSubstring(InStr, Pos, SubStr)</p></td></tr>
+			   <tr><td><a href='../interface/ischaracterinclass.html'>IsCharacterInClass</a></td><td><a href='../module/mbase_chrstr.html'>MBase_ChrStr</a></td><td>Interface</td><td><p><strong>Function Interface</strong>: IsCharacterInClass <br>
+ <strong>Purpose</strong>:  To check whether a given character is in the specified class. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    Flag = IsCharacterInClass('A', 'ASCII', FailIndex) <br>
+  ---&gt;    IF (.NOT.IsCharacterInClass('5', 'ALPHANUM')) DoSomething</p></td></tr>
+			   <tr><td><a href='../interface/isready.html'>IsReady</a></td><td><a href='../module/mclass_fvlstr.html'>MClass_FvlStr</a></td><td>Interface</td><td><p><strong>Function Interface</strong>: IsReady <br>
+ <strong>Purpose</strong>:  To check whether the FvlStr object is ready to be used or not.
+      Return true if the object's string is allocated.  Otherwise, return false.  <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    Flag = IsReady(vStr) <br>
+  ---&gt;    IF (.NOT.IsReady(vStr)) DoSomething <br></p></td></tr>
+			   <tr><td><a href='../interface/isstringincharacterset.html'>IsStringInCharacterSet</a></td><td><a href='../module/mbase_chrstr.html'>MBase_ChrStr</a></td><td>Interface</td><td><p><strong>Function Interface</strong>: IsStringInCharacterSet <br>
+ <strong>Purpose</strong>:  To check whether all characters in the character string are
+               in the specified character set. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    Flag = IsStringInCharacterSet('Ab23Cd', SET_ALPHANUM, FailIndex) <br>
+  ---&gt;    IF (.NOT.IsStringInCharacterSet('32.105Q-32', SET_NUMERICS) DoSomething</p></td></tr>
+			   <tr><td><a href='../interface/isstringinclass.html'>IsStringInClass</a></td><td><a href='../module/mbase_chrstr.html'>MBase_ChrStr</a></td><td>Interface</td><td><p><strong>Function Interface</strong>: IsStringInClass <br>
+ <strong>Purpose</strong>:  To check whether a given string is in the specified class. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    Flag = IsStringInClass('AbCd', 'ASCII', FailIndex) <br>
+  ---&gt;    IF (.NOT.IsStringInClass('32.105e-32', 'REAL') DoSomething</p></td></tr>
+			   <tr><td><a href='../interface/isstringlogical.html'>IsStringLogical</a></td><td><a href='../module/mbase_chrstr.html'>MBase_ChrStr</a></td><td>Interface</td><td><p><strong>Function Interface</strong>: IsStringLogical <br>
+ <strong>Purpose</strong>: To check whether a character string is a logical value where
+              valid one include 'T', 'F', 't', 'f', 'TRUE', 'FALSE', 'true',
+              'false'. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    Flag = IsStringLogical('a') <br>
+  ---&gt;    Flag = IsStringLogical('f', LogVal)</p></td></tr>
+			   <tr><td><a href='../interface/isstringnumber.html'>IsStringNumber</a></td><td><a href='../module/mbase_chrstr.html'>MBase_ChrStr</a></td><td>Interface</td><td><p><strong>Function Interface</strong>: IsStringNumber <br>
+ <strong>Purpose</strong>:  To check whether a character string is a valid number and
+               return a flag indicating what kind of number the string is. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    NumFlag = IsStringNumber('123a31')                        ! return -1 <br>
+  ---&gt;    NumFlag = IsStringNumber('123')                           ! return 0 <br>
+  ---&gt;    NumFlag = IsStringNumber('1.23')                          ! return 0 <br>
+  ---&gt;    NumFlag = IsStringNumber('123', Strict=.TRUE.)            ! return 1 <br>
+  ---&gt;    NumFlag = IsStringNumber('1.23', Strict=.TRUE.)           ! return 2 <br>
+  ---&gt;    NumFlag = IsStringNumber('(123, 456)')                    ! return 3 <br>
+  ---&gt;    NumFlag = IsStringNumber('(12.3, 4.56)', NumVal=CmplxNum) ! return 3 and also get number <br>
+ <strong>Technical Notes</strong>: <br>
+  A (strict) integer number is a whole number with no decimal point.
+  It can have a leading sign and is interpreted as a decimal number.
+  It takes a general form of [s]n[n...] where <br>
+  - s is a sign; required if negative (-), optional if positive (+). <br>
+  - n is a decimal digit (0 through 9). <br>
+  A (strict) real number is a number with decimal point or an exponent part.
+  The general form of a real number with no exponent part is [s]n[n...] and
+  a real number with an exponent part has a general form of [s]n[n...]E[s]nn...
+  where  <br>
+  - s is a sign; required if negative (-), optional if positive (+). <br>
+  - n is a decimal digit (0 through 9). A decimal point must appear if
+    the real number has no exponent part. <br>
+  - E is an exponent indicator where it can be 'E', 'e', 'D', 'd'. <br>
+  A complex number is a pair of real or integer numbers, separated by a comma,
+  and enclosed in parentheses.  The first number represents the real part and
+  the second number represents the imaginary part.</p></td></tr>
+			   <tr><td><a href='../interface/len_trim.html'>LEN_TRIM</a></td><td><a href='../module/mclass_fvlstr.html'>MClass_FvlStr</a></td><td>Interface</td><td><p><strong>Function Interface</strong>: LEN_TRIM <br>
+ <strong>Purpose</strong>:  To return length of the character string of a FvlStr object
+      without counting trailing blank characters. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    Length = LEN_TRIM(vStr) <br></p></td></tr>
+			   <tr><td><a href='../interface/lge.html'>LGE</a></td><td><a href='../module/mclass_fvlstr.html'>MClass_FvlStr</a></td><td>Interface</td><td><p><strong>Function Interface</strong>: LGE <br>
+ <strong>Purpose</strong>:  To check whether LHS string is lexically greater than or equal
+      to RHS string or not, based on the ASCII collating sequence, even if the
+      compiler's default collating sequence is different. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    Flag = LGE(LHS, RHS) <br>
+  ---&gt;    IF (.NOT.LGE(LHS, RHS)) DoSomething</p></td></tr>
+			   <tr><td><a href='../interface/lgt.html'>LGT</a></td><td><a href='../module/mclass_fvlstr.html'>MClass_FvlStr</a></td><td>Interface</td><td><p><strong>Function Interface</strong>: LGT <br>
+ <strong>Purpose</strong>:  To check whether LHS string is lexically greater than
+      RHS string or not, based on the ASCII collating sequence, even
+      if the compiler's default collating sequence is different. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    Flag = LGT(LHS, RHS) <br>
+  ---&gt;    IF (.NOT.LGT(LHS, RHS)) DoSomething</p></td></tr>
+			   <tr><td><a href='../interface/lle.html'>LLE</a></td><td><a href='../module/mclass_fvlstr.html'>MClass_FvlStr</a></td><td>Interface</td><td><p><strong>Function Interface</strong>: LLE <br>
+ <strong>Purpose</strong>:  To check whether LHS string is lexically less than or equal
+      to RHS string or not, based on the ASCII collating sequence, even if the
+      compiler's default collating sequence is different. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    Flag = LLE(LHS, RHS) <br>
+  ---&gt;    IF (.NOT.LLE(LHS, RHS)) DoSomething</p></td></tr>
+			   <tr><td><a href='../interface/llt.html'>LLT</a></td><td><a href='../module/mclass_fvlstr.html'>MClass_FvlStr</a></td><td>Interface</td><td><p><strong>Function Interface</strong>: LLT <br>
+ <strong>Purpose</strong>:  To check whether LHS string is lexically less than
+      RHS string or not, based on the ASCII collating sequence, even
+      if the compiler's default collating sequence is different. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    Flag = LLT(LHS, RHS) <br>
+  ---&gt;    IF (.NOT.LLT(LHS, RHS)) DoSomething</p></td></tr>
+			   <tr><td><a href='../interface/lsdsort.html'>LSDSort</a></td><td><a href='../module/mbase_stringsorts.html'>MBase_StringSorts</a></td><td>Interface</td><td><p><strong>Subroutine Interface</strong>: LSDSort <br>
+ <strong>Purpose</strong>:  To sort an array of strings in an ascending order using the LSD
+      string sorting algorithm. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    CALL LSDSort(cStrArr) <br>
+ <strong>Note</strong>: <br>
+  This procedure is only applicable for Fortran character strings. <br></p></td></tr>
+			   <tr><td><a href='../interface/msdinplacesort.html'>MSDInplaceSort</a></td><td><a href='../module/mbase_stringsorts.html'>MBase_StringSorts</a></td><td>Interface</td><td><p><strong>Subroutine Interface</strong>: MSDInplaceSort <br>
+ <strong>Purpose</strong>:  To sort an array of strings in an ascending order using the
+      in-place MSD string sorting algorithm.  Optionally, if all characters
+      of the strings are in a particular alphabet set, a user can specify an
+      <em>Alphabet</em> data type of that particular alphabet set. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    CALL MSDInplaceSort(Arr) <br>
+  ---&gt;    CALL MSDInplaceSort(Arr, Alphabet) <br>
+ <strong>Usage</strong>: See the <a href="../module/mclass_alphabets.html">Class_Alphabets</a>
+      module for various <em>alphabet</em> data types available to be used with the
+      <em>MSDInplaceSort</em> procedure.</p></td></tr>
+			   <tr><td><a href='../interface/msdsort.html'>MSDSort</a></td><td><a href='../module/mbase_stringsorts.html'>MBase_StringSorts</a></td><td>Interface</td><td><p><strong>Subroutine Interface</strong>: MSDSort <br>
+ <strong>Purpose</strong>:  To sort an array of strings in an ascending order using the MSD
+      string sorting algorithm. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    CALL MSDSort(Arr) <br></p></td></tr>
+			   <tr><td><a href='../proc/nfastate_free.html'>NFAState_Free</a></td><td><a href='../module/mclass_nfastate.html'>MClass_NFAState</a></td><td>Subroutine</td><td><p>To free all the nodes linked to the specified node.</p></td></tr>
+			   <tr><td><a href='../proc/nfastate_new.html'>NFAState_New</a></td><td><a href='../module/mclass_nfastate.html'>MClass_NFAState</a></td><td>Subroutine</td><td><p>To allocate the state and specify its ID.</p></td></tr>
+			   <tr><td><a href='../interface/operator(.html'>OPERATOR(</a></td><td><a href='../module/mclass_fvlstr.html'>MClass_FvlStr</a></td><td>Interface</td><td><p><strong>Operator Overload</strong>: OPERATOR('//') <br>
+ <strong>Purpose</strong>:  To concatenate the first and second strings. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    vStrOut = Str1st '//' Str2nd <br></p></td></tr>
+			   <tr><td><a href='../interface/operator(+).html'>OPERATOR(+)</a></td><td><a href='../module/mclass_fvlstr.html'>MClass_FvlStr</a></td><td>Interface</td><td><p><strong>Operator Overload</strong>: OPERATOR(+) <br>
+ <strong>Purpose</strong>:  To concatenate the first and second strings. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    vStrOut = Str1st + Str2nd <br></p></td></tr>
+			   <tr><td><a href='../interface/operator(SLASH=).html'>OPERATOR(/=)</a></td><td><a href='../module/mclass_fvlstr.html'>MClass_FvlStr</a></td><td>Interface</td><td><p><strong>Operator Overload</strong>: OPERATOR(/=) <br>
+ <strong>Purpose</strong>:  To check whether two strings are NOT equal or not. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    Flag = LHS /= RHS <br>
+  ---&gt;    IF (LHS .NE. RHS) DoSomething</p></td></tr>
+			   <tr><td><a href='../interface/operator(lt).html'>OPERATOR(<)</a></td><td><a href='../module/mclass_fvlstr.html'>MClass_FvlStr</a></td><td>Interface</td><td><p><strong>Operator Overload</strong>: OPERATOR(&lt;) <br>
+ <strong>Purpose</strong>:  To check whether LHS string is less than RHS string or not. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    Flag = LHS &lt; RHS <br>
+  ---&gt;    IF (LHS .LT. RHS) DoSomething</p></td></tr>
+			   <tr><td><a href='../interface/operator(lt=).html'>OPERATOR(<=)</a></td><td><a href='../module/mclass_fvlstr.html'>MClass_FvlStr</a></td><td>Interface</td><td><p><strong>Operator Overload</strong>: OPERATOR(&lt;=) <br>
+ <strong>Purpose</strong>:  To check whether LHS string is less than or equal to
+      RHS string or not. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    Flag = LHS &lt;= RHS <br>
+  ---&gt;    IF (LHS .LE. RHS) DoSomething</p></td></tr>
+			   <tr><td><a href='../interface/operator(==).html'>OPERATOR(==)</a></td><td><a href='../module/mclass_fvlstr.html'>MClass_FvlStr</a></td><td>Interface</td><td><p><strong>Operator Overload</strong>: OPERATOR(==) <br>
+ <strong>Purpose</strong>:  To check whether two strings are equal or not. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    Flag = LHS == RHS <br>
+  ---&gt;    IF (LHS .EQ. RHS) DoSomething</p></td></tr>
+			   <tr><td><a href='../interface/operator(gt).html'>OPERATOR(>)</a></td><td><a href='../module/mclass_fvlstr.html'>MClass_FvlStr</a></td><td>Interface</td><td><p><strong>Operator Overload</strong>: OPERATOR(&gt;) <br>
+ <strong>Purpose</strong>:  To check whether LHS string is greater than RHS string or not. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    Flag = LHS &gt; RHS <br>
+  ---&gt;    IF (LHS .GT. RHS) DoSomething</p></td></tr>
+			   <tr><td><a href='../interface/operator(gt=).html'>OPERATOR(>=)</a></td><td><a href='../module/mclass_fvlstr.html'>MClass_FvlStr</a></td><td>Interface</td><td><p><strong>Operator Overload</strong>: OPERATOR(&gt;=) <br>
+ <strong>Purpose</strong>:  To check whether LHS string is greater than or equal to
+      RHS string or not. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    Flag = LHS &gt;= RHS <br>
+  ---&gt;    IF (LHS .GE. RHS) DoSomething</p></td></tr>
+			   <tr><td><a href='../interface/parsebyte.html'>ParseByte</a></td><td><a href='../module/mbase_chrstr.html'>MBase_ChrStr</a></td><td>Interface</td><td><p><strong>Function Interface</strong>: ParseByte <br>
+ <strong>Purpose</strong>:  To parse a character string as a 8-bit integer number. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    IntNum = ParseByte(cStr) <br>
+  ---&gt;    IntNum = ParseByte(cStr, ErrFlag, ErrMsg) <br></p></td></tr>
+			   <tr><td><a href='../interface/parsecdouble.html'>ParseCDouble</a></td><td><a href='../module/mbase_chrstr.html'>MBase_ChrStr</a></td><td>Interface</td><td><p><strong>Function Interface</strong>: ParseCDouble <br>
+ <strong>Purpose</strong>:  To parse a character string as a double-precision complex number. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    CmpxNum = ParseCDouble(cStr) <br>
+  ---&gt;    CmpxNum = ParseCDouble(cStr, ErrFlag, ErrMsg) <br>
+ <strong>Note</strong>: A valid string representing a complex number consists of a pair of
+           real-number (or integer-number) strings, separated by a comma, and
+           enclosed in parentheses.</p></td></tr>
+			   <tr><td><a href='../interface/parsecquad.html'>ParseCQuad</a></td><td><a href='../module/mbase_chrstr.html'>MBase_ChrStr</a></td><td>Interface</td><td><p><strong>Function Interface</strong>: ParseCQuad <br>
+ <strong>Purpose</strong>:  To parse a character string as a quadruple-precision complex number. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    CmpxNum = ParseCQuad(cStr) <br>
+  ---&gt;    CmpxNum = ParseCQuad(cStr, ErrFlag, ErrMsg) <br>
+ <strong>Note</strong>: A valid string representing a complex number consists of a pair of
+           real-number (or integer-number) strings, separated by a comma, and
+           enclosed in parentheses.</p></td></tr>
+			   <tr><td><a href='../interface/parsecsingle.html'>ParseCSingle</a></td><td><a href='../module/mbase_chrstr.html'>MBase_ChrStr</a></td><td>Interface</td><td><p><strong>Function Interface</strong>: ParseCSingle <br>
+ <strong>Purpose</strong>:  To parse a character string as a single-precision complex number. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    CmpxNum = ParseCSingle(cStr) <br>
+  ---&gt;    CmpxNum = ParseCSingle(cStr, ErrFlag, ErrMsg) <br>
+ <strong>Note</strong>: A valid string representing a complex number consists of a pair of
+           real-number (or integer-number) strings, separated by a comma, and
+           enclosed in parentheses.</p></td></tr>
+			   <tr><td><a href='../interface/parseinteger.html'>ParseInteger</a></td><td><a href='../module/mbase_chrstr.html'>MBase_ChrStr</a></td><td>Interface</td><td><p><strong>Function Interface</strong>: ParseInteger <br>
+ <strong>Purpose</strong>:  To parse a character string as a 32-bit integer number. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    IntNum = ParseInteger(cStr) <br>
+  ---&gt;    IntNum = ParseInteger(cStr, ErrFlag, ErrMsg) <br></p></td></tr>
+			   <tr><td><a href='../interface/parselogical.html'>ParseLogical</a></td><td><a href='../module/mbase_chrstr.html'>MBase_ChrStr</a></td><td>Interface</td><td><p><strong>Function Interface</strong>: ParseLogical <br>
+ <strong>Purpose</strong>:  To parse a character string as a logical value. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    Boolean = ParseLogical(cStr) <br></p></td></tr>
+			   <tr><td><a href='../interface/parselong.html'>ParseLong</a></td><td><a href='../module/mbase_chrstr.html'>MBase_ChrStr</a></td><td>Interface</td><td><p><strong>Function Interface</strong>: ParseLong <br>
+ <strong>Purpose</strong>:  To parse a character string as a 64-bit integer number. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    IntNum = ParseLong(cStr) <br>
+  ---&gt;    IntNum = ParseLong(cStr, ErrFlag, ErrMsg) <br></p></td></tr>
+			   <tr><td><a href='../interface/parserdouble.html'>ParseRDouble</a></td><td><a href='../module/mbase_chrstr.html'>MBase_ChrStr</a></td><td>Interface</td><td><p><strong>Function Interface</strong>: ParseRDouble <br>
+ <strong>Purpose</strong>:  To parse a character string as a double-precision real number. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    RealNum = ParseRDouble(cStr) <br>
+  ---&gt;    RealNum = ParseRDouble(cStr, ErrFlag, ErrMsg) <br></p></td></tr>
+			   <tr><td><a href='../interface/parserquad.html'>ParseRQuad</a></td><td><a href='../module/mbase_chrstr.html'>MBase_ChrStr</a></td><td>Interface</td><td><p><strong>Function Interface</strong>: ParseRQuad <br>
+ <strong>Purpose</strong>:  To parse a character string as a quadruple-precision real number. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    RealNum = ParseRQuad(cStr) <br>
+  ---&gt;    RealNum = ParseRQuad(cStr, ErrFlag, ErrMsg) <br></p></td></tr>
+			   <tr><td><a href='../interface/parsersingle.html'>ParseRSingle</a></td><td><a href='../module/mbase_chrstr.html'>MBase_ChrStr</a></td><td>Interface</td><td><p><strong>Function Interface</strong>: ParseRSingle <br>
+ <strong>Purpose</strong>:  To parse a character string as a single-precision real number. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    RealNum = ParseRSingle(cStr) <br>
+  ---&gt;    RealNum = ParseRSingle(cStr, ErrFlag, ErrMsg) <br></p></td></tr>
+			   <tr><td><a href='../interface/parseshort.html'>ParseShort</a></td><td><a href='../module/mbase_chrstr.html'>MBase_ChrStr</a></td><td>Interface</td><td><p><strong>Function Interface</strong>: ParseShort <br>
+ <strong>Purpose</strong>:  To parse a character string as a 16-bit integer number. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    IntNum = ParseShort(cStr) <br>
+  ---&gt;    IntNum = ParseShort(cStr, ErrFlag, ErrMsg) <br></p></td></tr>
+			   <tr><td><a href='../interface/partition.html'>Partition</a></td><td><a href='../module/mbase_chrstr.html'>MBase_ChrStr</a></td><td>Interface</td><td><p><strong>Subroutine Interface</strong>: Partition <br>
+ <strong>Purpose</strong>:  To partition a character string into two substrings by a
+               separator (single character or a multiple-character string).
+               The partition occurs at the first occurrence of the separator
+               found. <br>
+ <strong>Usage</strong>: <br>
+  ! <em>SepSub</em> is a multiple-character string separator. <br>
+  ---&gt;    CALL Partition(cStr, SepSub, bStr, aStr) <br>
+  ! <em>SepSet</em> is a set of characters where a character in the set is a valid <br>
+  ! separator.  Also, search the first separator from the back. <br>
+  ---&gt;    CALL Partition(cStr, SepSet, bStr, aStr, SepChr, Back=.TRUE.) <br></p></td></tr>
+			   <tr><td><a href='../interface/ptrtostr.html'>PtrToStr</a></td><td><a href='../module/mclass_fvlstr.html'>MClass_FvlStr</a></td><td>Interface</td><td><p><strong>Function Interface</strong>: PtrToStr <br>
+ <strong>Purpose</strong>:  To set a pointer to the string of the FvlStr object.  <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    StrPtr =&gt; PtrToStr(vStr) <br>
+  ---&gt;    IF (.NOT.ASSOCIATED(PtrToStr(vStr))) DoSomething <br>
+ <strong>Important Note</strong>:  This procedure is intended to be used internally only. <br></p></td></tr>
+			   <tr><td><a href='../interface/quickmultikeysort.html'>QuickMultiKeySort</a></td><td><a href='../module/mbase_stringsorts.html'>MBase_StringSorts</a></td><td>Interface</td><td><p><strong>Subroutine Interface</strong>: QuickMultiKeySort <br>
+ <strong>Purpose</strong>:  To sort an array of strings in an ascending order using the
+      multi-key quicksort (or 3-way radix quicksort) algorithm. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    CALL QuickMultiKeySort(Arr) <br></p></td></tr>
+			   <tr><td><a href='../interface/rank_insensitive.html'>Rank_Insensitive</a></td><td><a href='../module/mbase_stringsorts.html'>MBase_StringSorts</a></td><td>Interface</td><td><p><strong>Subroutine Interface</strong>: Rank_Insensitive <br>
+ <strong>Purpose</strong>:  To rank an array of strings in an ascending order using the specified
+      ranking procedure where the strings are treated as case-insensitive strings.
+      An applicable user-supplied procedure or any applicable ranking procedure (e.g.
+      Wise_RankChar, PDQ_RankChar, QuickMo3_RankComp, MergeHalfCopy_RankComp, etc.) in
+      the <a href="../module/mbase_ranking.html">MBase_Ranking</a> module can be
+      used as an argument. <br>
+ <strong>Usage</strong>: <br>
+  ! rank an array of Fortran intrinsic character strings <br>
+  ---&gt;    CALL Rank_Insensitive(cStrArr, cStrInd, Wise_RankChar) <br>
+  ! rank an array of FvlStr objects <br>
+  ---&gt;    CALL Rank_Insensitive(vStrArr, vStrInd, Wise_RankComp) <br>
+ <strong>Note</strong>: <br>
+  The <em>Wise_RankChar</em> and <em>Wise_RankComp</em> are examples of applicable ranking procedures
+  for Fortran intrinsic character strings and FvlStr objects, respectively. <br></p></td></tr>
+			   <tr><td><a href='../interface/read(formatted).html'>READ(FORMATTED)</a></td><td><a href='../module/mclass_fvlstr.html'>MClass_FvlStr</a></td><td>Interface</td><td><p><strong>Subroutine Interface</strong>: READ(FORMATTED) <br>
+ <strong>Purpose</strong>:  To read a character sequence from a connected formatted unit
+      into the FvlStr object. <br>
+ <strong>Usage</strong>: <br>
+  ! using the list-directed format input <br>
+  ---&gt;    READ(UNIT=IOUnit, FMT=<em>) vStr <br>
+  ---&gt;    READ(UNIT=IOUnit, FMT=</em>, IOSTAT=IOStat, IOMSG=IOMsg) vStr <br>
+  ! using the DT edit descriptor <br>
+  ---&gt;    READ(UNIT=IOUnit, FMT='(DT)') vStr <br>
+  ---&gt;    READ(UNIT=IOUnit, FMT='(DT)', IOSTAT=IOStat, IOMSG=IOMsg) vStr <br></p></td></tr>
+			   <tr><td><a href='../interface/read(unformatted).html'>READ(UNFORMATTED)</a></td><td><a href='../module/mclass_fvlstr.html'>MClass_FvlStr</a></td><td>Interface</td><td><p><strong>Subroutine Interface</strong>: READ(UNFORMATTED) <br>
+ <strong>Purpose</strong>:  To read a character sequence from a connected unformatted unit
+      into the FvlStr object. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    READ(UNIT=IOUnit) vStr <br></p></td></tr>
+			   <tr><td><a href='../interface/realdp_fromstring_fastfloat.html'>RealDP_FromString_FastFloat</a></td><td><a href='../module/mbase_charconv.html'>MBase_CharConv</a></td><td>Interface</td><td></td></tr>
+			   <tr><td><a href='../interface/realdp_fromstring_lemire.html'>RealDP_FromString_Lemire</a></td><td><a href='../module/mbase_charconv.html'>MBase_CharConv</a></td><td>Interface</td><td></td></tr>
+			   <tr><td><a href='../interface/realdp_fromstring_libc.html'>RealDP_FromString_LibC</a></td><td><a href='../module/mbase_charconv.html'>MBase_CharConv</a></td><td>Interface</td><td></td></tr>
+			   <tr><td><a href='../interface/realdp_fromstring_yy.html'>RealDP_FromString_YY</a></td><td><a href='../module/mbase_charconv.html'>MBase_CharConv</a></td><td>Interface</td><td></td></tr>
+			   <tr><td><a href='../interface/realdp_tostring_dragonbox.html'>RealDP_ToString_DragonBox</a></td><td><a href='../module/mbase_charconv.html'>MBase_CharConv</a></td><td>Interface</td><td></td></tr>
+			   <tr><td><a href='../interface/realdp_tostring_ryu.html'>RealDP_ToString_Ryu</a></td><td><a href='../module/mbase_charconv.html'>MBase_CharConv</a></td><td>Interface</td><td></td></tr>
+			   <tr><td><a href='../interface/realdp_tostring_schubfach.html'>RealDP_ToString_Schubfach</a></td><td><a href='../module/mbase_charconv.html'>MBase_CharConv</a></td><td>Interface</td><td></td></tr>
+			   <tr><td><a href='../interface/realqp_fromstring_fastfloat.html'>RealQP_FromString_FastFloat</a></td><td><a href='../module/mbase_charconv.html'>MBase_CharConv</a></td><td>Interface</td><td></td></tr>
+			   <tr><td><a href='../interface/realqp_fromstring_lemire.html'>RealQP_FromString_Lemire</a></td><td><a href='../module/mbase_charconv.html'>MBase_CharConv</a></td><td>Interface</td><td></td></tr>
+			   <tr><td><a href='../interface/realqp_fromstring_libc.html'>RealQP_FromString_LibC</a></td><td><a href='../module/mbase_charconv.html'>MBase_CharConv</a></td><td>Interface</td><td></td></tr>
+			   <tr><td><a href='../interface/realqp_fromstring_yy.html'>RealQP_FromString_YY</a></td><td><a href='../module/mbase_charconv.html'>MBase_CharConv</a></td><td>Interface</td><td></td></tr>
+			   <tr><td><a href='../interface/realqp_tostring_dragonbox.html'>RealQP_ToString_DragonBox</a></td><td><a href='../module/mbase_charconv.html'>MBase_CharConv</a></td><td>Interface</td><td></td></tr>
+			   <tr><td><a href='../interface/realqp_tostring_ryu.html'>RealQP_ToString_Ryu</a></td><td><a href='../module/mbase_charconv.html'>MBase_CharConv</a></td><td>Interface</td><td></td></tr>
+			   <tr><td><a href='../interface/realqp_tostring_schubfach.html'>RealQP_ToString_Schubfach</a></td><td><a href='../module/mbase_charconv.html'>MBase_CharConv</a></td><td>Interface</td><td></td></tr>
+			   <tr><td><a href='../interface/realsp_fromstring_fastfloat.html'>RealSP_FromString_FastFloat</a></td><td><a href='../module/mbase_charconv.html'>MBase_CharConv</a></td><td>Interface</td><td></td></tr>
+			   <tr><td><a href='../interface/realsp_fromstring_lemire.html'>RealSP_FromString_Lemire</a></td><td><a href='../module/mbase_charconv.html'>MBase_CharConv</a></td><td>Interface</td><td></td></tr>
+			   <tr><td><a href='../interface/realsp_fromstring_libc.html'>RealSP_FromString_LibC</a></td><td><a href='../module/mbase_charconv.html'>MBase_CharConv</a></td><td>Interface</td><td></td></tr>
+			   <tr><td><a href='../interface/realsp_fromstring_yy.html'>RealSP_FromString_YY</a></td><td><a href='../module/mbase_charconv.html'>MBase_CharConv</a></td><td>Interface</td><td></td></tr>
+			   <tr><td><a href='../interface/realsp_tostring_dragonbox.html'>RealSP_ToString_DragonBox</a></td><td><a href='../module/mbase_charconv.html'>MBase_CharConv</a></td><td>Interface</td><td></td></tr>
+			   <tr><td><a href='../interface/realsp_tostring_ryu.html'>RealSP_ToString_Ryu</a></td><td><a href='../module/mbase_charconv.html'>MBase_CharConv</a></td><td>Interface</td><td></td></tr>
+			   <tr><td><a href='../interface/realsp_tostring_schubfach.html'>RealSP_ToString_Schubfach</a></td><td><a href='../module/mbase_charconv.html'>MBase_CharConv</a></td><td>Interface</td><td></td></tr>
+			   <tr><td><a href='../interface/removecharacters.html'>RemoveCharacters</a></td><td><a href='../module/mbase_chrstr.html'>MBase_ChrStr</a></td><td>Interface</td><td><p><strong>Function Interface</strong>: RemoveCharacters <br>
+ <strong>Purpose</strong>:  To remove characters from the character string depending on
+               specified input. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    OutStr = RemoveCharacters(InStr, CharSet) <br>
+  ---&gt;    OutStr = RemoveCharacters(InStr, CharSet, Option=2)</p></td></tr>
+			   <tr><td><a href='../interface/removecharactersprotect.html'>RemoveCharactersProtect</a></td><td><a href='../module/mbase_chrstr.html'>MBase_ChrStr</a></td><td>Interface</td><td><p><strong>Function Interface</strong>: RemoveCharactersProtect <br>
+ <strong>Purpose</strong>:  To remove characters from the character string depending on
+               specified input. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    OutStr = RemoveCharactersProtect(InStr, CharSet) <br>
+  ---&gt;    OutStr = RemoveCharactersProtect(InStr, CharSet, Option=2) <br>
+  ---&gt;    OutStr = RemoveCharactersProtect(InStr, CharSet, ExclMrk=.FALSE.) <br>
+  ---&gt;    OutStr = RemoveCharactersProtect(InStr, CharSet, 3, .FALSE.)</p></td></tr>
+			   <tr><td><a href='../interface/removesubstring.html'>RemoveSubstring</a></td><td><a href='../module/mbase_chrstr.html'>MBase_ChrStr</a></td><td>Interface</td><td><p><strong>Function Interface</strong>: RemoveSubstring <br>
+ <strong>Purpose</strong>:  To remove the substring from the character string based on
+               specified input. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    OutStr = RemoveSubstring(InStr, SubStr) <br>
+  ---&gt;    OutStr = RemoveSubstring(InStr, SubStr, FirstOnly=.TRUE.) <br>
+  ---&gt;    OutStr = RemoveSubstring(InStr, sLen, sCount, sPos) <br>
+  ---&gt;    OutStr = RemoveSubstring(InStr, lPos, rPos) <br></p></td></tr>
+			   <tr><td><a href='../interface/removesubstringprotect.html'>RemoveSubstringProtect</a></td><td><a href='../module/mbase_chrstr.html'>MBase_ChrStr</a></td><td>Interface</td><td><p><strong>Function Interface</strong>: RemoveSubstringProtect <br>
+ <strong>Purpose</strong>:  To remove the substring from the unprotected regions of the
+               character string based on specified input. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    OutStr = RemoveSubstringProtect(InStr, SubStr) <br>
+  ---&gt;    OutStr = RemoveSubstringProtect(InStr, SubStr, ExclMrk=.FALSE.) <br>
+  ---&gt;    OutStr = RemoveSubstringProtect(InStr, SubStr, FirstOnly=.TRUE.) <br>
+  ---&gt;    OutStr = RemoveSubstringProtect(InStr, SubStr, .FALSE., .TRUE.) <br></p></td></tr>
+			   <tr><td><a href='../interface/repeat.html'>REPEAT</a></td><td><a href='../module/mclass_fvlstr.html'>MClass_FvlStr</a></td><td>Interface</td><td><p><strong>Function Interface</strong>: REPEAT <br>
+ <strong>Purpose</strong>:  To concatenate several copies of the string of the specified
+      FvlStr object. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    vStrOut = REPEAT(vStrIn, nCopies) <br></p></td></tr>
+			   <tr><td><a href='../interface/replacesubstring.html'>ReplaceSubstring</a></td><td><a href='../module/mbase_chrstr.html'>MBase_ChrStr</a></td><td>Interface</td><td><p><strong>Function Interface</strong>: ReplaceSubstring <br>
+ <strong>Purpose</strong>:  To replace all occurrences of the original substring found
+               in the given character string with the new substring based
+               on specified input. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    OutStr = ReplaceSubstring(InStr, OldSub, NewSub) <br>
+  ---&gt;    OutStr = ReplaceSubstring(InStr, NewSub, OldLen, OldCount, OldPos)</p></td></tr>
+			   <tr><td><a href='../interface/replacesubstringprotect.html'>ReplaceSubstringProtect</a></td><td><a href='../module/mbase_chrstr.html'>MBase_ChrStr</a></td><td>Interface</td><td><p><strong>Function Interface</strong>: ReplaceSubstringProtect <br>
+ <strong>Purpose</strong>:  To replace all occurrences of the original substring found
+               in unprotected regions of the given character string with
+               the new substring. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    OutStr = ReplaceSubstringProtect(InStr, OldSub, NewSub) <br>
+  ---&gt;    OutStr = ReplaceSubstringProtect(InStr, OldSub, NewSub, ExclMrk=.FALSE.)</p></td></tr>
+			   <tr><td><a href='../interface/replacesubstringrecursive.html'>ReplaceSubstringRecursive</a></td><td><a href='../module/mbase_chrstr.html'>MBase_ChrStr</a></td><td>Interface</td><td><p><strong>Function Interface</strong>: ReplaceSubstringRecursive <br>
+ <strong>Purpose</strong>:  To replace all occurrences of the original substring found
+               in the given character string with the new substring in
+               a recursive way. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    OutStr = ReplaceSubstringRecursive(InStr, OldSub, NewSub) <br>
+ <strong>Example</strong>: <br>
+  <em>Input</em>: cStrIn = 'abbbbb', oStr = 'ab', nStr = 'a' <br>
+  <em>Output</em> - non-recursive: cStrOut = 'abbbb' <br>
+  <em>Output</em> - recursive: cStrOut = 'ab'</p></td></tr>
+			   <tr><td><a href='../interface/scan.html'>SCAN</a></td><td><a href='../module/mclass_fvlstr.html'>MClass_FvlStr</a></td><td>Interface</td><td><p><strong>Function Interface</strong>: SCAN <br>
+ <strong>Purpose</strong>:  To scan the string of a FvlStr object for any character in a set
+      of characters and return the position of the first character found in the
+      string that is in the specified set depending on the scanning direction. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    Pos = SCAN(vStr, ChrSet) <br>
+  ---&gt;    Pos = SCAN(vStr, ChrSet, Back=.TRUE.) <br></p></td></tr>
+			   <tr><td><a href='../interface/sortascend_insensitive.html'>SortAscend_Insensitive</a></td><td><a href='../module/mbase_stringsorts.html'>MBase_StringSorts</a></td><td>Interface</td><td><p><strong>Subroutine Interface</strong>: SortAscend_Insensitive <br>
+ <strong>Purpose</strong>:  To sort an array of strings in an ascending order using the specified
+      ranking procedure where the strings are treated as case-insensitive strings.
+      An applicable user-supplied procedure or any applicable ranking procedure (e.g.
+      Wise_RankChar, PDQ_RankChar, QuickMo3_RankComp, MergeHalfCopy_RankComp, etc.) in
+      the <a href="../module/mbase_ranking.html">MBase_Ranking</a> module can be
+      used as an argument. <br>
+ <strong>Usage</strong>: <br>
+  ! sort an array of Fortran intrinsic character strings <br>
+  ---&gt;    CALL SortAscend_Insensitive(cStrArr, cStrInd, Wise_RankChar) <br>
+  ! sort an array of FvlStr objects <br>
+  ---&gt;    CALL SortAscend_Insensitive(vStrArr, vStrInd, Wise_RankComp) <br>
+ <strong>Note</strong>: <br>
+  The <em>Wise_RankChar</em> and <em>Wise_RankComp</em> are examples of applicable ranking procedures
+  for Fortran intrinsic character strings and FvlStr objects, respectively. <br></p></td></tr>
+			   <tr><td><a href='../interface/sortdescend_insensitive.html'>SortDescend_Insensitive</a></td><td><a href='../module/mbase_stringsorts.html'>MBase_StringSorts</a></td><td>Interface</td><td><p><strong>Subroutine Interface</strong>: SortDescend_Insensitive <br>
+ <strong>Purpose</strong>:  To sort an array of strings in a descending order using the specified
+      ranking procedure where the strings are treated as case-insensitive strings.
+      An applicable user-supplied procedure or any applicable ranking procedure (e.g.
+      Wise_RankChar, PDQ_RankChar, QuickMo3_RankComp, MergeHalfCopy_RankComp, etc.) in
+      the <a href="../module/mbase_ranking.html">MBase_Ranking</a> module can be
+      used as an argument. <br>
+ <strong>Usage</strong>: <br>
+  ! sort an array of Fortran intrinsic character strings <br>
+  ---&gt;    CALL SortDescend_Insensitive(cStrArr, cStrInd, Wise_RankChar) <br>
+  ! sort an array of FvlStr objects <br>
+  ---&gt;    CALL SortDescend_Insensitive(vStrArr, vStrInd, Wise_RankComp) <br>
+ <strong>Note</strong>: <br>
+  The <em>Wise_RankChar</em> and <em>Wise_RankComp</em> are examples of applicable ranking procedures
+  for Fortran intrinsic character strings and FvlStr objects, respectively. <br></p></td></tr>
+			   <tr><td><a href='../interface/split.html'>Split</a></td><td><a href='../module/mbase_chrstr.html'>MBase_ChrStr</a></td><td>Interface</td><td><p><strong>Subroutine Interface</strong>: Split <br>
+ <strong>Purpose</strong>:  To split a character string into multiple substrings by a
+               separator (single character or a multiple-character string). <br>
+ <strong>Usage</strong>: <br>
+  ! <em>SepSub</em> is a multiple-character string separator. <br>
+  ---&gt;    CALL Split(cStr, SepSub, qStr) <br>
+  ! <em>SepSet</em> is a set of characters where a character in the set is a valid separator. <br>
+  ---&gt;    CALL Split(cStr, SepSet, qStr, SepChr) <br></p></td></tr>
+			   <tr><td><a href='../interface/splitprotect.html'>SplitProtect</a></td><td><a href='../module/mbase_chrstr.html'>MBase_ChrStr</a></td><td>Interface</td><td><p><strong>Subroutine Interface</strong>: SplitProtect <br>
+ <strong>Purpose</strong>:  To split a character string into multiple substrings by a
+               separator (single character or a multiple-character string)
+               found in unprotected region(s). <br>
+ <strong>Usage</strong>: <br>
+  ! <em>SepSub</em> is a multiple-character string separator. <br>
+  ---&gt;    CALL SplitProtect(cStr, SepSub, qStr) <br>
+  ! <em>SepSet</em> is a set of characters where a character in the set is a valid separator. <br>
+  ---&gt;    CALL SplitProtect(cStr, SepSet, qStr, SepChr) <br>
+  ! The exclamation mark is NOT used to define the protected regions. <br>
+  ---&gt;    CALL SplitProtect(cStr, SepSub, qStr, ExclMrk=.FALSE.) <br></p></td></tr>
+			   <tr><td><a href='../interface/startwith.html'>StartWith</a></td><td><a href='../module/mbase_chrstr.html'>MBase_ChrStr</a></td><td>Interface</td><td><p><strong>Function Interface</strong>: StartWith <br>
+ <strong>Purpose</strong>:  To check whether the given character string starts with the
+               specified substring or not.  Both the string and the substring
+               must not have a zero length. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    Flag = StartWith(String, Substring) <br>
+  ---&gt;    IF (.NOT.StartWith(String, Substring)) DoSomething</p></td></tr>
+			   <tr><td><a href='../interface/swap.html'>Swap</a></td><td><a href='../module/mclass_fvlstr.html'>MClass_FvlStr</a></td><td>Interface</td><td><p><strong>Subroutine Interface</strong>: Swap <br>
+ <strong>Purpose</strong>:  To swap values of two FvlStr objects or two arrays
+      of FvlStr objects. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    CALL Swap(vStrA, vStrB) <br>
+  ---&gt;    CALL Swap(vStrArrA, vStrArrB) <br></p></td></tr>
+			   <tr><td><a href='../proc/syntaxnode_free.html'>SyntaxNode_Free</a></td><td><a href='../module/mclass_syntaxnode.html'>MClass_SyntaxNode</a></td><td>Subroutine</td><td><p>To free all the nodes linked to the specified node.</p></td></tr>
+			   <tr><td><a href='../proc/syntaxnode_new.html'>SyntaxNode_New</a></td><td><a href='../module/mclass_syntaxnode.html'>MClass_SyntaxNode</a></td><td>Subroutine</td><td><p>To allocate the node and specify its type.</p></td></tr>
+			   <tr><td><a href='../interface/tocharstar.html'>ToCharStar</a></td><td><a href='../module/mclass_fvlstr.html'>MClass_FvlStr</a></td><td>Interface</td><td><p><strong>Subroutine Interface</strong>: ToCharStar <br>
+ <strong>Purpose</strong>:  To convert a FvlStr object to an assumed-length character string.  <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    CALL ToCharStar(vStr, cStr) <br>
+ <strong>Important Note</strong>:  This procedure is intended to be used internally only. <br></p></td></tr>
+			   <tr><td><a href='../interface/tochrarralloc.html'>ToChrArrAlloc</a></td><td><a href='../module/mbase_chrstr.html'>MBase_ChrStr</a></td><td>Interface</td><td><p><strong>Function Interface</strong>: ToChrArrAlloc <br>
+ <strong>Purpose</strong>:  To convert a character string to an allocatable array
+               of characters. <br>
+ <strong>Usage</strong>: <br>
+  ! convert a character string to a character array <br>
+  ---&gt;    cArray = ToChrArrAlloc(cStr) <br>
+  ! convert a character string to a character array with a null character <br>
+  ---&gt;    cArray = ToChrArrAlloc(cStr, IsCString=.TRUE.) <br></p></td></tr>
+			   <tr><td><a href='../interface/tochrarrfixed.html'>ToChrArrFixed</a></td><td><a href='../module/mbase_chrstr.html'>MBase_ChrStr</a></td><td>Interface</td><td><p><strong>Function Interface</strong>: ToChrArrFixed <br>
+ <strong>Purpose</strong>:  To convert a character string to an explicit-shape array
+               of characters. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    cArray = ToChrArrFixed(cStr)</p></td></tr>
+			   <tr><td><a href='../interface/tocstring.html'>ToCString</a></td><td><a href='../module/mbase_chrstr.html'>MBase_ChrStr</a></td><td>Interface</td><td><p><strong>Function Interface</strong>: ToCString <br>
+ <strong>Purpose</strong>:  To convert a character string to a 'C' style string, which is an
+               explicit-shape array of characters with a null character added. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    cArray = ToCString(cStr)</p></td></tr>
+			   <tr><td><a href='../interface/trim.html'>TRIM</a></td><td><a href='../module/mclass_fvlstr.html'>MClass_FvlStr</a></td><td>Interface</td><td><p><strong>Function Interface</strong>: TRIM <br>
+ <strong>Purpose</strong>:  To return the argument with trailing blanks removed. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    vStrOut = TRIM(vStrIn) <br></p></td></tr>
+			   <tr><td><a href='../interface/verify.html'>VERIFY</a></td><td><a href='../module/mclass_fvlstr.html'>MClass_FvlStr</a></td><td>Interface</td><td><p><strong>Function Interface</strong>: VERIFY <br>
+ <strong>Purpose</strong>:  To verify that a set of characters contains all the characters
+      in the string of a FvlStr object by identifying the first character in
+      the string that is not in the set and to return the position of the
+      first character found in the string that is NOT in the specified set
+      depending on the scanning direction. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    Pos = VERIFY(vStr, ChrSet) <br>
+  ---&gt;    Pos = VERIFY(vStr, ChrSet, Back=.TRUE.) <br></p></td></tr>
+			   <tr><td><a href='../interface/write(formatted).html'>WRITE(FORMATTED)</a></td><td><a href='../module/mclass_fvlstr.html'>MClass_FvlStr</a></td><td>Interface</td><td><p><strong>Subroutine Interface</strong>: WRITE(FORMATTED) <br>
+ <strong>Purpose</strong>:  To write a character string of the FvlStr object to a connected
+      formatted unit. <br>
+ <strong>Usage</strong>: <br>
+  ! using the list-directed format output <br>
+  ---&gt;    WRITE(UNIT=IOUnit, FMT=<em>) vStr <br>
+  ---&gt;    WRITE(UNIT=IOUnit, FMT=</em>, IOSTAT=IOStat, IOMSG=IOMsg) vStr <br>
+  ! using the DT edit descriptor <br>
+  ---&gt;    WRITE(UNIT=IOUnit, FMT='(DT)') vStr <br>
+  ---&gt;    WRITE(UNIT=IOUnit, FMT='(DT)', IOSTAT=IOStat, IOMSG=IOMsg) vStr <br></p></td></tr>
+			   <tr><td><a href='../interface/write(unformatted).html'>WRITE(UNFORMATTED)</a></td><td><a href='../module/mclass_fvlstr.html'>MClass_FvlStr</a></td><td>Interface</td><td><p><strong>Subroutine Interface</strong>: WRITE(UNFORMATTED) <br>
+ <strong>Purpose</strong>:  To write a character string of the FvlStr object to a connected
+      unformatted unit. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    WRITE(UNIT=IOUnit) vStr <br></p></td></tr>
+			 </tbody></table>
+             
+        </div>
+      </div>
+      <hr>
+    </div> <!-- /container -->
+    <footer>
+      <div class="container">
+        <div class="row justify-content-between">
+          <div class="col"><p>eXPerimental Fortran Library (XpfLib) Documentation was developed by Niranama<br>&copy; 2024 
+</p>
+          </div>
+          <div class="col">
+            <p class="text-end">
+              Documentation generated by
+              <a href="https://github.com/Fortran-FOSS-Programmers/ford">FORD</a>
+            </p>
+          </div>
+        </div>
+        <br>
+      </div> <!-- /container -->
+    </footer>
+
+    <!-- Bootstrap core JavaScript -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>    
+
+    <!-- MathJax JavaScript
+             ================================================== -->
+             <!-- Placed at the end of the document so the pages load faster -->
+        <script type="text/x-mathjax-config">
+          MathJax.Hub.Config({
+          TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } },
+          jax: ['input/TeX','input/MathML','output/HTML-CSS'],
+          extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']
+          });
+        </script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+          <script src="../tipuesearch/tipuesearch_content.js"></script>
+          <script src="../tipuesearch/tipuesearch_set.js"></script>
+          <script src="../tipuesearch/tipuesearch.js"></script>
+
+  </body>
+</html>

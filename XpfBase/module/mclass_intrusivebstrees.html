@@ -1,0 +1,1180 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta name="description" content="Experimental Fortran Package - Base Modules and Classes">
+    <meta name="author" content="Niranama" >
+    <link rel="icon" href="../favicon.png">
+
+    <title>MClass_IntrusiveBSTrees &ndash; eXPerimental Fortran Library (XpfLib) Documentation</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link href="../css/pygments.css" rel="stylesheet">
+    <link href="../css/font-awesome.min.css" rel="stylesheet">
+    <link href="../css/local.css" rel="stylesheet">
+      <link  href="../tipuesearch/tipuesearch.css" rel="stylesheet">
+
+    <script src="https://code.jquery.com/jquery-3.7.0.slim.min.js" integrity="sha256-tG5mcZUtJsZvyKAxYLVXrmjKBVLd6VpVccqz/r4ypFE=" crossorigin="anonymous"></script>
+  </head>
+
+  <body>
+
+    <!-- Fixed navbar -->
+    <div class="container-fluid mb-sm-4 mb-xl-2">
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container">
+          <a class="navbar-brand" href="../index.html">eXPerimental Fortran Library (XpfLib) Documentation </a>
+          <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar"
+                  aria-expanded="false" aria-controls="navbar" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon">
+          </button>
+
+          <div id="navbar" class="navbar-collapse collapse">
+            <ul class="navbar-nav">
+                  <li class="nav-item">
+                    <a class="nav-link" href="../lists/files.html">Source Files</a>
+                  </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../lists/modules.html">Modules</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../lists/procedures.html">Procedures</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../lists/absint.html">Abstract Interfaces</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../lists/types.html">Derived Types</a>
+                </li>
+            </ul>
+              <div class="d-flex align-items-end flex-grow-1">
+                <form action="../search.html" role="search" class="ms-auto">
+                  <input type="text" class="form-control" aria-label="Search" placeholder="Search" name="q" id="tipue_search_input" autocomplete="off" required>
+                </form>
+              </div>
+          </div><!--/.nav-collapse -->
+        </div>
+      </nav>
+    </div>
+
+    <div class="container">
+  <div class="row">
+    <h1>MClass_IntrusiveBSTrees
+      <small>Module</small>
+      
+    </h1>
+      <div class="container p-2 mb-4 bg-light border rounded-3">
+    <div class="row align-items-center justify-content-between" id="info-bar">
+      <div class="col">
+        <ul class="list-inline" style="margin-bottom:0px;display:inline">
+
+            <li class="list-inline-item" id="statements"><i class="fa fa-list-ol"></i>
+              <a data-bs-toggle="tooltip"
+                 data-bs-placement="bottom" data-html="true"
+                 title=" 0.8% of total for modules and submodules.">353 statements</a>
+            </li>
+
+            <li class="list-inline-item" id="source-file">
+              <i class="fa fa-code"></i>
+              <a href="../src/MClass_IntrusiveBSTrees.f90"> Source File</a>
+            </li>
+        </ul>
+      </div>
+      <div class="col">
+        <nav aria-label="breadcrumb">
+          <ol class="breadcrumb justify-content-end mb-0">
+                <li class="breadcrumb-item"><a href='../sourcefile/mclass_intrusivebstrees.f90.html'>MClass_IntrusiveBSTrees.f90</a></li>
+            <li class="breadcrumb-item active" aria-current="page">MClass_IntrusiveBSTrees</li>
+          </ol>
+        </nav>
+      </div>
+    </div>
+  </div>
+  <script>
+    $(function () {
+    $('[data-bs-toggle="tooltip"]').tooltip()
+    })
+  </script>
+
+  </div>
+
+  <div class="row">
+    <div class="col-md-3">
+        <div id="sidebar">
+      <h3>Contents</h3>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+      <div class="card mb-4">
+      <a data-bs-toggle="collapse" href="#types-0"
+         aria-expanded="false" aria-controls="types-0">
+         <h4 class="card-header bg-primary text-white">Derived Types</h4>
+      </a>
+      <div id="types-0" class="collapse">
+        <div class="list-group list-group-flush">
+            <a class="list-group-item" href="../module/mclass_intrusivebstrees.html#type-bstnode">BSTNode</a>
+            <a class="list-group-item" href="../module/mclass_intrusivebstrees.html#type-intrusiveavltree">IntrusiveAVLTree</a>
+            <a class="list-group-item" href="../module/mclass_intrusivebstrees.html#type-intrusiverbtree">IntrusiveRBTree</a>
+        </div>
+      </div>
+    </div>
+
+  
+      <div class="card mb-4">
+      <a data-bs-toggle="collapse" href="#subs-0"
+         aria-expanded="false" aria-controls="subs-0">
+         <h4 class="card-header bg-primary text-white">Subroutines</h4>
+      </a>
+      <div id="subs-0" class="collapse">
+        <div class="list-group list-group-flush">
+            <a class="list-group-item" href="../module/mclass_intrusivebstrees.html#proc-find_inorder_predecessor">Find_Inorder_Predecessor</a>
+            <a class="list-group-item" href="../module/mclass_intrusivebstrees.html#proc-find_inorder_successor">Find_Inorder_Successor</a>
+        </div>
+      </div>
+    </div>
+
+  
+  
+  
+  
+  
+  
+  
+
+
+  </div>
+
+    </div>
+
+    <div class="col-md-9" id='text'>
+      <p><strong>PURPOSE OF THIS MODULE</strong>: <br>
+  This module contains <em>intrusive-based</em> balanced-tree container types and their
+  related routines.  The module provides application programming interfaces (APIs)
+  for two balanced-tree containers: the AVL tree (by the <em>IntrusiveAVLTree</em> type)
+  and the red-black tree (by the <em>IntrusiveRBTree</em> type).  The module also provides
+  a binary-search tree node type (<em>BSTNode</em>) to be used with the containers. <br>
+  Both balanced-tree container types employ the so-called <strong>intrusive</strong> technique.
+  See the <a href="../module/MClass_IntrusiveLinkedLists.html">MClass_IntrusiveLinkedLists</a>
+  module for detailed explanation of the intrusive technique. <br>
+  Similar to the <a href="../module/MClass_IntrusiveLinkedLists.html#type-doublylinkednode">DoublyLinkedNode</a>
+  type, a user must define a new node type that extends the <em>BSTNode</em> type in order to
+  use an intrusive tree container provided.  This new type typically contains user data
+  as its additional component(s).  However, unlike a user type that extends the
+  <em>DoublyLinkedNode</em> type, this new type must be able to compare to itself and provides
+  a total ordering on the user objects.  This is due to the fact that the new user type
+  is in the <em>Comparable</em> class (as the <em>BSTNode</em> type is a subtype of the <em>Comparable</em>
+  type).  Therefore, the user must implement deferred procedures required by a
+  <em>Comparable</em> object.  This means that user data of the new user type typically contain
+  a key and other data.  The key then is commonly used to provide a comparison of two
+  <em>Comparable</em> objects. <br>
+  The <em>IntrusiveAVLTree</em> type is a balanced-tree container type that uses the AVL
+  (Adelson-Velsky and Landis) tree whereas the <em>IntrusiveRBTree</em> type is also a
+  balanced-tree container type but employs a left-leaning red-black (RB) tree.
+  Both tree container types stores objects (or nodes) in the <em>BSTNode</em> class.  Thus,
+  a user type that extends the <em>BSTNode</em> type can be used in both tree containers.</p>
+<br>          <div class="card mb-4">
+      <h3 class="card-header card-title bg-light">Uses</h3>
+      <div class="card-body">
+        <ul class="list-group list-group-flush">
+            <li class="list-group-item">
+              <ul class="list-inline">
+                  <li class="list-inline-item"><a href='../module/mbase_common.html'>MBase_Common</a></li>
+                  <li class="list-inline-item"><a href='../module/mclass_compnodepool.html'>MClass_CompNodePool</a></li>
+              </ul>
+            </li>
+        </ul>
+      </div>
+    </div>
+
+      
+      <br>
+
+
+
+
+
+
+        <section>
+          <h2>Derived Types</h2>
+              <div class="card">
+    <div class="card-header codesum">
+      <span class="anchor" id="type-bstnode"></span>
+      <h3>
+        type, public, extends(<a href='../type/compnode.html'>CompNode</a>)&nbsp;::&nbsp;
+        <a href='../type/bstnode.html'>BSTNode</a>
+        
+      </h3>
+    </div>
+    <div class="card-body">
+      <p><em>BSTNode</em> is a binary-search tree node type provided to be used with both
+ the <em>IntrusiveAVLTree</em> and <em>IntrusiveRBTree</em> container types.   Like the
+ <em>DoublyLinkedNode</em> type, the <em>BSTNode</em>  contains no data content.  Therefore,
+ an intrusive container working with objects (or nodes) in the <em>BSTNode</em> class
+ can operate without having to manage the data content. <br>
+ However, to use the intrusive container properly, for example, a user would
+ typically define a new node type that extends the <em>BSTNode</em> type as follows:
+ 
+<Pre><Code style="color:MidnightBlue;">
+ ! a tree-node object with default integer as type of its key and
+   default real as type of its content
+ TYPE, EXTENDS(BSTNode) :: IntegerRealNode
+     INTEGER     :: key          ! stored key
+     REAL        :: content      ! stored content
+ END TYPE
+ </Code></Pre></p><a href="../type/bstnode.html" class="pull-right"><emph>Read more&hellip;</emph></a>
+
+
+
+
+        <h4>Type-Bound Procedures</h4>
+        <table class="table table-striped varlist">
+          <tbody>
+              <tr>
+                <td>  procedure(IfaceCopy), public, deferred ::
+  <strong><a href='../type/object.html#boundprocedure-copy~8'>Copy</a></strong></td>
+                <td><p><em>Copy</em> is a deferred procedure to perform a copy of this (source) object.</p></td>
+              </tr>
+              <tr>
+                <td>  procedure(IfaceEqual), public, deferred ::
+  <strong><a href='../type/object.html#boundprocedure-isequalto~10'>IsEqualTo</a></strong></td>
+                <td><p><em>IsEqualTo</em> is a deferred procedure to compare whether this object is equal to the
+ other object or not.</p></td>
+              </tr>
+              <tr>
+                <td>  procedure(IfaceFree), public, deferred ::
+  <strong><a href='../type/object.html#boundprocedure-memfree~9'>MemFree</a></strong></td>
+                <td><p><em>MemFree</em> is a deferred procedure to free storage currently occupied by this object.</p></td>
+              </tr>
+              <tr>
+                <td>  procedure(Iface2String), public, deferred ::
+  <strong><a href='../type/object.html#boundprocedure-tostring~9'>ToString</a></strong></td>
+                <td><p><em>ToString</em> is a deferred procedure to get the string representation of this object.</p></td>
+              </tr>
+              <tr>
+                <td>  procedure, public ::
+  <strong><a href='../type/object.html#boundprocedure-hashcode~36'>HashCode</a></strong> => Object_HashCode</td>
+                <td><p><strong>Type-Bound Function</strong>: HashCode <br>
+ <strong>Purpose</strong>:  To compute the hash code of this object. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    Code = Obj%HashCode() <br>
+ <strong>Note</strong>: The method provided here as a default implementation compute the hash code
+      based on the string representation of this object and a simple hash algorithm.
+      It should be overridden by a better and more efficient implementation if possible. <br></p></td>
+              </tr>
+              <tr>
+                <td>  procedure(IfaceCompare), public, deferred ::
+  <strong><a href='../type/comparable.html#boundprocedure-compareto'>CompareTo</a></strong></td>
+                <td><p><em>CompareTo</em> is a deferred procedure to provide a natural comparison of two
+ <em>Comparable</em> objects.</p></td>
+              </tr>
+              <tr>
+                <td>  generic, public ::
+  <strong><a href='../type/bstnode.html#boundprocedure-operator%28%3D%3D%29~5'>OPERATOR(==)</a></strong> => Comparable_EqualTo</td>
+                <td><p><strong>Operator Overload</strong>: OPERATOR(==) <br>
+ <strong>Purpose</strong>:  To check if the LHS value is equal to the RHS value <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    Flag = LHS == RHS <br>
+  ---&gt;    IF (LHS == RHS) DoSomething</p></td>
+              </tr>
+              <tr>
+                <td>  generic, public ::
+  <strong><a href='../type/bstnode.html#boundprocedure-operator%28SLASH%3D%29~5'>OPERATOR(/=)</a></strong> => Comparable_NotEqualTo</td>
+                <td><p><strong>Operator Overload</strong>: OPERATOR(/=) <br>
+ <strong>Purpose</strong>:  To check if the LHS value is NOT equal to the RHS value <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    Flag = LHS /= RHS <br>
+  ---&gt;    IF (LHS /= RHS) DoSomething</p></td>
+              </tr>
+              <tr>
+                <td>  generic, public ::
+  <strong><a href='../type/bstnode.html#boundprocedure-operator%28lt%29~5'>OPERATOR(<)</a></strong> => Comparable_LessThan</td>
+                <td><p><strong>Operator Overload</strong>: OPERATOR(&lt;) <br>
+ <strong>Purpose</strong>:  To check if the LHS value is less than the RHS value <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    Flag = LHS &lt; RHS <br>
+  ---&gt;    IF (LHS &lt; RHS) DoSomething</p></td>
+              </tr>
+              <tr>
+                <td>  generic, public ::
+  <strong><a href='../type/bstnode.html#boundprocedure-operator%28gt%29~5'>OPERATOR(>)</a></strong> => Comparable_GreaterThan</td>
+                <td><p><strong>Operator Overload</strong>: OPERATOR(&gt;) <br>
+ <strong>Purpose</strong>:  To check if the LHS value is greater than the RHS value <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    Flag = LHS &gt; RHS <br>
+  ---&gt;    IF (LHS &gt; RHS) DoSomething</p></td>
+              </tr>
+              <tr>
+                <td>  generic, public ::
+  <strong><a href='../type/bstnode.html#boundprocedure-operator%28lt%3D%29~5'>OPERATOR(<=)</a></strong> => Comparable_LessEqual</td>
+                <td><p><strong>Operator Overload</strong>: OPERATOR(&lt;=) <br>
+ <strong>Purpose</strong>:  To check if the LHS value is less than or equal to the RHS value <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    Flag = LHS &lt;= RHS <br>
+  ---&gt;    IF (LHS &lt;= RHS) DoSomething</p></td>
+              </tr>
+              <tr>
+                <td>  generic, public ::
+  <strong><a href='../type/bstnode.html#boundprocedure-operator%28gt%3D%29~5'>OPERATOR(>=)</a></strong> => Comparable_GreaterEqual</td>
+                <td><p><strong>Operator Overload</strong>: OPERATOR(&gt;=) <br>
+ <strong>Purpose</strong>:  To check if the LHS value is greater than or equal to the RHS value <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    Flag = LHS &gt;= RHS <br>
+  ---&gt;    IF (LHS &gt;= RHS) DoSomething</p></td>
+              </tr>
+              <tr>
+                <td>  procedure, public ::
+  <strong><a href='../type/compnode.html#boundprocedure-copycompnode'>CopyCompNode</a></strong> => ThisNode_CopyPIndx</td>
+                <td><p><strong>Type-Bound Subroutine</strong>: CopyCompNode <br>
+ <strong>Purpose</strong>:  To copy the <em>PIndx</em> component of the source to the destination.
+               This method is provided to help user implement deferred procedure(s)
+               required by an object in the <em>Object</em> class. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    CALL SrcNode%CopyCompNode(DstNode)</p></td>
+              </tr>
+              <tr>
+                <td>  procedure, public ::
+  <strong><a href='../type/compnode.html#boundprocedure-ispindxequal'>IsPIndxEqual</a></strong> => ThisNode_EqualTo</td>
+                <td><p><strong>Type-Bound Subroutine</strong>: IsPIndxEqual <br>
+ <strong>Purpose</strong>:  To compare whether the "PIndx" component of both objects are equal
+               or not.  This method is provided to help user implement deferred
+               procedure(s) required by an object in the <em>Object</em> class. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    Flag = LhsNode%IsPIndxEqual(RhsNode) <br>
+  ---&gt;    IF (.NOT.LhsNode%IsPIndxEqual(RhsNode)) DoSomething</p></td>
+              </tr>
+              <tr>
+                <td>  procedure, public ::
+  <strong><a href='../type/bstnode.html#boundprocedure-getleft'>GetLeft</a></strong> => BSTNode_GetLeftNode</td>
+                <td><p><strong>Type-Bound Function</strong>: GetLeft <br>
+ <strong>Purpose</strong>:  To get a pointer to the left node of the current node. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    LeftNode =&gt; CurrNode%GetLeft()</p></td>
+              </tr>
+              <tr>
+                <td>  procedure, public ::
+  <strong><a href='../type/bstnode.html#boundprocedure-getright'>GetRight</a></strong> => BSTNode_GetRightNode</td>
+                <td><p><strong>Type-Bound Function</strong>: GetRight <br>
+ <strong>Purpose</strong>:  To get a pointer to the right node of the current node. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    RightNode =&gt; CurrNode%GetRight()</p></td>
+              </tr>
+              <tr>
+                <td>  procedure, public ::
+  <strong><a href='../type/bstnode.html#boundprocedure-getsize~9'>GetSize</a></strong> => BSTNode_GetSize</td>
+                <td><p><strong>Type-Bound Function</strong>: GetSize <br>
+ <strong>Purpose</strong>:  To get number of nodes in subtree rooted by this node. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    Size = CurrNode%GetSize()</p></td>
+              </tr>
+              <tr>
+                <td>  procedure, public ::
+  <strong><a href='../type/bstnode.html#boundprocedure-freepointers~2'>FreePointers</a></strong> => BSTNode_FreePointers</td>
+                <td><p><strong>Type-Bound Subroutine</strong>: FreePointers <br>
+ <strong>Purpose</strong>:  To nullify the pointer components of the node. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    CALL CurrNode%FreePointers()</p></td>
+              </tr>
+              <tr>
+                <td>  procedure, public ::
+  <strong><a href='../type/bstnode.html#boundprocedure-setnew~2'>SetNew</a></strong> => BSTNode_SetNew</td>
+                <td><p><strong>Type-Bound Subroutine</strong>: SetNew <br>
+ <strong>Purpose</strong>:  To set the node as a new node in the tree container. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    CALL Node%SetNew()</p></td>
+              </tr>
+              <tr>
+                <td>  procedure, public ::
+  <strong><a href='../type/bstnode.html#boundprocedure-resetbstnode'>ResetBSTNode</a></strong> => BSTNode_Reset</td>
+                <td><p><strong>Type-Bound Subroutine</strong>: ResetBSTNode <br>
+ <strong>Purpose</strong>:  To reset the node to its initialized state. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    CALL Node%ResetBSTNode()</p></td>
+              </tr>
+              <tr>
+                <td>  procedure, public ::
+  <strong><a href='../type/bstnode.html#boundprocedure-copybstnode'>CopyBSTNode</a></strong> => BSTNode_CopyBSTNode</td>
+                <td><p><strong>Type-Bound Subroutine</strong>: CopyBSTNode <br>
+ <strong>Purpose</strong>:  To copy members of the source to the destination.  This method
+               is provided to help user implement deferred procedure(s) required
+               by an object in the <em>Object</em> class. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    CALL SrcNode%CopyBSTNode(DstNode)</p></td>
+              </tr>
+              <tr>
+                <td>  procedure, public ::
+  <strong><a href='../type/bstnode.html#boundprocedure-isbstnodeequal'>IsBSTNodeEqual</a></strong> => BSTNode_EqualTo</td>
+                <td><p><strong>Type-Bound Function</strong>: IsBSTNodeEqual <br>
+ <strong>Purpose</strong>:  To compare whether all members of both objects are equal or not.
+               This method is provided to help user implement deferred procedure(s)
+               required by an object in the <em>Object</em> class. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    Flag = LhsNode%IsBSTNodeEqual(RhsNode) <br>
+  ---&gt;    IF (.NOT.LhsNode%IsBSTNodeEqual(RhsNode)) DoSomething</p></td>
+              </tr>
+          </tbody>
+        </table>
+    </div>
+  </div>
+
+              <div class="card">
+    <div class="card-header codesum">
+      <span class="anchor" id="type-intrusiveavltree"></span>
+      <h3>
+        type, public&nbsp;::&nbsp;
+        <a href='../type/intrusiveavltree.html'>IntrusiveAVLTree</a>
+        
+      </h3>
+    </div>
+    <div class="card-body">
+      <p><em>IntrusiveAVLTree</em> is a binary-search tree container type that represents an
+ ordered symbol table of objects in the <em>BSTNode</em> class.  It supports various
+ common operations including the <em>Insert</em>, <em>Remove</em>, <em>Contain</em>, <em>GetSize</em>, and
+ <em>IsEmpty</em> methods.  It also provides ordered methods for finding the minimum,
+ maximum, floor, and ceiling objects.  In addition, it provides methods to
+ perform an iteration over all nodes (or objects) in two directions (from minimum
+ node to maximum node, and vice versa).  <br>
+ The <em>IntrusiveAVLTree</em> type internally employs the AVL tree (Georgy Adelson-
+ Velsky and Evgenii Landis' tree), which is a self-balancing tree.  In an AVL
+ tree, the heights of the two child subtrees of any node differ by at most one;
+ if at any time they differ by more than one, re-balancing is done to restore
+ this property.  <br>
+ As previously discussed, the <em>IntrusiveAVLTree</em> type provides methods that
+ allow an iteration over all objects in two directions.
+ The following code snippet illustrates how to perform an inorder traversal over
+ the tree from the minimum object to the maximum object.
+ 
+<Pre><Code style="color:MidnightBlue;">
+ ! start (forward) inorder traversal (from the minimum object)
+ IsEmpty = Tree%StartMin()
+ IF (.NOT.IsEmpty) DoSomeThing...
+ DO
+     ! move to the next (successor) object
+     IsTheEnd = Tree%MoveForward()
+     ! check whether we reach the end of the tree or not
+     IF (IsTheEnd) EXIT
+     ! if not, do the task we need
+     DoSomeThing...
+ END DO
+ </Code></Pre></p><a href="../type/intrusiveavltree.html" class="pull-right"><emph>Read more&hellip;</emph></a>
+
+
+
+        <h4>Finalizations Procedures</h4>
+        <table class="table table-striped varlist">
+          <tbody>
+              <tr>
+                <td>final :: <strong>AVLTree_Finalizer</strong></td>
+                <td><p>To perform finalization of the list.</p></td>
+              </tr>
+          </tbody>
+        </table>
+
+        <h4>Type-Bound Procedures</h4>
+        <table class="table table-striped varlist">
+          <tbody>
+              <tr>
+                <td>  procedure, public ::
+  <strong><a href='../type/intrusiveavltree.html#boundprocedure-cloneto~6'>CloneTo</a></strong> => BSTree_Clone</td>
+                <td><p><strong>Type-Bound Subroutine</strong>: Clone <br>
+ <strong>Purpose</strong>:  To perform cloning of the source tree. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    CALL SrcTree%CloneTo(DstTree) <br></p></td>
+              </tr>
+              <tr>
+                <td>  procedure, public ::
+  <strong><a href='../type/intrusiveavltree.html#boundprocedure-clear~4'>Clear</a></strong> => BSTree_RemoveAll</td>
+                <td><p><strong>Type-Bound Subroutine</strong>: Clear <br>
+ <strong>Purpose</strong>:  To remove all nodes from the tree. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    CALL Tree%Clear()</p></td>
+              </tr>
+              <tr>
+                <td>  procedure, public ::
+  <strong><a href='../type/intrusiveavltree.html#boundprocedure-startmin'>StartMin</a></strong> => BSTree_StartMin</td>
+                <td><p><strong>Type-Bound Function</strong>: StartMin <br>
+ <strong>Purpose</strong>:  To start an iteration at minimum node and return a flag
+               indicating whether the tree is empty or not. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    IsEmpty = Tree%StartMin() <br>
+  ---&gt;    IsEmpty = Tree%StartMin(FirstNode)</p></td>
+              </tr>
+              <tr>
+                <td>  procedure, public ::
+  <strong><a href='../type/intrusiveavltree.html#boundprocedure-startmax'>StartMax</a></strong> => BSTree_StartMax</td>
+                <td><p><strong>Type-Bound Function</strong>: StartMax <br>
+ <strong>Purpose</strong>:  To start an iteration at maximum node and return a flag
+               indicating whether the tree is empty or not. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    IsEmpty = Tree%StartMax() <br>
+  ---&gt;    IsEmpty = Tree%StartMax(FirstNode)</p></td>
+              </tr>
+              <tr>
+                <td>  procedure, public ::
+  <strong><a href='../type/intrusiveavltree.html#boundprocedure-moveforward~4'>MoveForward</a></strong> => BSTree_Move2Next</td>
+                <td><p><strong>Type-Bound Function</strong>: MoveForward <br>
+ <strong>Purpose</strong>:  To move <em>forward</em> to the next (successor) node and return
+               a flag indicating whether the cursor has reached the end
+               of the tree or not. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    IsTheEnd = Tree%MoveForward() <br>
+  ---&gt;    IsTheEnd = Tree%MoveForward(NextNode) <br></p></td>
+              </tr>
+              <tr>
+                <td>  procedure, public ::
+  <strong><a href='../type/intrusiveavltree.html#boundprocedure-movebackward~3'>MoveBackward</a></strong> => BSTree_Move2Prev</td>
+                <td><p><strong>Type-Bound Function</strong>: MoveBackward <br>
+ <strong>Purpose</strong>:  To move <em>backward</em> to the previous (predecessor) node and
+               return a flag indicating whether the cursor has reached
+               the end of the tree or not. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    IsTheEnd = Tree%MoveBackward() <br>
+  ---&gt;    IsTheEnd = Tree%MoveBackward(PrevNode) <br></p></td>
+              </tr>
+              <tr>
+                <td>  procedure, public ::
+  <strong><a href='../type/intrusiveavltree.html#boundprocedure-isempty~12'>IsEmpty</a></strong> => BSTree_IsEmpty</td>
+                <td><p><strong>Type-Bound Function</strong>: IsEmpty <br>
+ <strong>Purpose</strong>:  To check whether the container is empty or not. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    Flag = Tree%IsEmpty() <br>
+  ---&gt;    IF (.NOT.Tree%IsEmpty()) DoSomeThing</p></td>
+              </tr>
+              <tr>
+                <td>  procedure, public ::
+  <strong><a href='../type/intrusiveavltree.html#boundprocedure-contain~3'>Contain</a></strong> => BSTree_Contain</td>
+                <td><p><strong>Type-Bound Function</strong>: Contain <br>
+ <strong>Purpose</strong>:  To check whether the specified node is currently stored in
+               the container or not. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    Flag = Tree%Contain(NodeA) <br>
+  ---&gt;    IF (.NOT.Tree%Contain(NodeB)) DoSomething</p></td>
+              </tr>
+              <tr>
+                <td>  procedure, public ::
+  <strong><a href='../type/intrusiveavltree.html#boundprocedure-getsize~10'>GetSize</a></strong> => BSTree_GetSize</td>
+                <td><p><strong>Type-Bound Function</strong>: GetSize <br>
+ <strong>Purpose</strong>:  To get size of the container (number of nodes). <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    TreeSize = Tree%GetSize()</p></td>
+              </tr>
+              <tr>
+                <td>  procedure, public ::
+  <strong><a href='../type/intrusiveavltree.html#boundprocedure-getrangesize'>GetRangeSize</a></strong> => BSTree_GetRangeSize</td>
+                <td><p><strong>Type-Bound Function</strong>: GetRangeSize <br>
+ <strong>Purpose</strong>:  To get the number of nodes in the tree in the given range.
+               It is the number of nodes between LowNode (inclusive) and
+               HighNode (inclusive). <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    RangeSize = Tree%GetRangeSize(LowNode, HighNode)</p></td>
+              </tr>
+              <tr>
+                <td>  procedure, public ::
+  <strong><a href='../type/intrusiveavltree.html#boundprocedure-getminnode'>GetMinNode</a></strong> => BSTree_GetSmallestNode</td>
+                <td><p><strong>Type-Bound Function</strong>: GetMinNode <br>
+ <strong>Purpose</strong>:  To get a pointer to the node with the smallest value.
+               If the tree is empty, return null pointer. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    MinNode =&gt; Tree%GetMinNode()</p></td>
+              </tr>
+              <tr>
+                <td>  procedure, public ::
+  <strong><a href='../type/intrusiveavltree.html#boundprocedure-getmaxnode'>GetMaxNode</a></strong> => BSTree_GetLargestNode</td>
+                <td><p><strong>Type-Bound Function</strong>: GetMaxNode <br>
+ <strong>Purpose</strong>:  To get a pointer to the node with the largest value.
+               If the tree is empty, return null pointer. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    MaxNode =&gt; Tree%GetMaxNode()</p></td>
+              </tr>
+              <tr>
+                <td>  procedure, public ::
+  <strong><a href='../type/intrusiveavltree.html#boundprocedure-getcursor~3'>GetCursor</a></strong> => BSTree_GetCursor</td>
+                <td><p><strong>Type-Bound Function</strong>: GetCursor <br>
+ <strong>Purpose</strong>:  To get a pointer to the node the cursor points to.
+      This usually points to the current node when performing an
+      iteration over the tree. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    CurrNode =&gt; Tree%GetCursor()</p></td>
+              </tr>
+              <tr>
+                <td>  procedure, public ::
+  <strong><a href='../type/intrusiveavltree.html#boundprocedure-getroot'>GetRoot</a></strong> => BSTree_GetRoot</td>
+                <td><p><strong>Type-Bound Function</strong>: GetRoot <br>
+ <strong>Purpose</strong>:  To get a pointer to the root node of the tree. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    CurrNode =&gt; Tree%GetRoot()</p></td>
+              </tr>
+              <tr>
+                <td>  procedure, public ::
+  <strong><a href='../type/intrusiveavltree.html#boundprocedure-floor'>Floor</a></strong> => BSTree_Floor</td>
+                <td><p><strong>Type-Bound Function</strong>: Floor <br>
+ <strong>Purpose</strong>:  To return a pointer to the largest node in the tree less
+               than or equal to the given node.  Return null pointer if
+               the tree is empty or such node does not exist. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    FloorNode =&gt; Tree%Floor(InNode)</p></td>
+              </tr>
+              <tr>
+                <td>  procedure, public ::
+  <strong><a href='../type/intrusiveavltree.html#boundprocedure-ceiling'>Ceiling</a></strong> => BSTree_Ceiling</td>
+                <td><p><strong>Type-Bound Function</strong>: Ceiling <br>
+ <strong>Purpose</strong>:  To return a pointer to the smallest node in the tree greater
+               than or equal to the given node.  Return null pointer if the
+               tree is empty or such node does not exist. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    CeilingNode =&gt; Tree%Ceiling(InNode)</p></td>
+              </tr>
+              <tr>
+                <td>  procedure, public ::
+  <strong><a href='../type/intrusiveavltree.html#boundprocedure-select'>Select</a></strong> => BSTree_Select</td>
+                <td><p><strong>Type-Bound Function</strong>: Select <br>
+ <strong>Purpose</strong>:  To return a pointer to the node in the tree of a given rank.
+               This node has the property that there are rank nodes in the
+               tree that are smaller.  Applicable range of rank is between
+               0 and tree_size-1 where this rank number is zero-based. <br>
+               Return null pointer if the tree is empty, such node does not
+               exist or the input is invalid. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    OutNode =&gt; Tree%Select(Rank)</p></td>
+              </tr>
+              <tr>
+                <td>  procedure, public ::
+  <strong><a href='../type/intrusiveavltree.html#boundprocedure-rank'>Rank</a></strong> => BSTree_Rank</td>
+                <td><p><strong>Type-Bound Function</strong>: Rank <br>
+ <strong>Purpose</strong>:  To return the number of nodes in the tree strictly less than
+               the given node. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    Rank = Tree%Rank(InNode)</p></td>
+              </tr>
+              <tr>
+                <td>  procedure, public ::
+  <strong><a href='../type/intrusiveavltree.html#boundprocedure-insert~4'>Insert</a></strong> => AVLTree_Insert</td>
+                <td><p><strong>Type-Bound Subroutine</strong>: Insert <br>
+ <strong>Purpose</strong>:  To insert a new node into the tree.  If the tree already
+               contains a node that is equal to the new node, replace
+               that node with the new one. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    CALL Tree%Insert(NewNode) <br></p></td>
+              </tr>
+              <tr>
+                <td>  procedure, public ::
+  <strong><a href='../type/intrusiveavltree.html#boundprocedure-remove~3'>Remove</a></strong> => AVLTree_Remove</td>
+                <td><p><strong>Type-Bound Function</strong>: Remove <br>
+ <strong>Purpose</strong>:  To remove the specified node from the tree.  Return the flag
+               indicating whether the node is removed successfully or not. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    Success = Tree%Remove(NodeA) <br>
+  ---&gt;    IF (.NOT.Tree%Remove(NodeB)) DoSomething</p></td>
+              </tr>
+              <tr>
+                <td>  procedure, public ::
+  <strong><a href='../type/intrusiveavltree.html#boundprocedure-removemin'>RemoveMin</a></strong> => AVLTree_RemoveMin</td>
+                <td><p><strong>Type-Bound Function</strong>: RemoveMin <br>
+ <strong>Purpose</strong>:  To remove the node with the smallest value from the tree.
+               Return the flag indicating whether the node is removed
+               successfully or not. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    Success = Tree%RemoveMin(MinNode) <br>
+  ---&gt;    IF (.NOT.Tree%RemoveMin()) DoSomething</p></td>
+              </tr>
+              <tr>
+                <td>  procedure, public ::
+  <strong><a href='../type/intrusiveavltree.html#boundprocedure-removemax'>RemoveMax</a></strong> => AVLTree_RemoveMax</td>
+                <td><p><strong>Type-Bound Function</strong>: RemoveMax <br>
+ <strong>Purpose</strong>:  To remove the node with the largest value from the tree.
+               Return the flag indicating whether the node is removed
+               successfully or not. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    Success = Tree%RemoveMax(MaxNode) <br>
+  ---&gt;    IF (.NOT.Tree%RemoveMax()) DoSomething</p></td>
+              </tr>
+              <tr>
+                <td>  procedure, public ::
+  <strong><a href='../type/intrusiveavltree.html#boundprocedure-check'>Check</a></strong> => AVLTree_CheckIntegrity</td>
+                <td><p><strong>Type-Bound Function</strong>: Check <br>
+ <strong>Purpose</strong>:  To check integrity of the BST data structure. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    Flag = Tree%Check() <br>
+  ---&gt;    IF (.NOT.Tree%Check(ErrMsg)) DoSomething</p></td>
+              </tr>
+          </tbody>
+        </table>
+    </div>
+  </div>
+
+              <div class="card">
+    <div class="card-header codesum">
+      <span class="anchor" id="type-intrusiverbtree"></span>
+      <h3>
+        type, public, extends(<a href='../type/intrusiveavltree.html'>IntrusiveAVLTree</a>)&nbsp;::&nbsp;
+        <a href='../type/intrusiverbtree.html'>IntrusiveRBTree</a>
+        
+      </h3>
+    </div>
+    <div class="card-body">
+      <p><em>IntrusiveRBTree</em> is a binary-search tree container type that represents an
+ ordered symbol table of objects in the <em>BSTNode</em> class.  It is a subtype of
+ the <em>IntrusiveAVLTree</em> type and thus inherits all methods from its super class.
+ Internally, the <em>IntrusiveRBTree</em> type utilizes a left-leaning red-black (RB)
+ tree, which is also a self-balancing tree.  It only overrides those methods
+ that require a different implementation.</p>
+
+
+
+        <h4>Finalizations Procedures</h4>
+        <table class="table table-striped varlist">
+          <tbody>
+              <tr>
+                <td>final :: <strong>RBTree_Finalizer</strong></td>
+                <td><p>To perform finalization of the list.</p></td>
+              </tr>
+          </tbody>
+        </table>
+
+        <h4>Type-Bound Procedures</h4>
+        <table class="table table-striped varlist">
+          <tbody>
+              <tr>
+                <td>  procedure, public ::
+  <strong><a href='../type/intrusiveavltree.html#boundprocedure-cloneto~6'>CloneTo</a></strong> => BSTree_Clone</td>
+                <td><p><strong>Type-Bound Subroutine</strong>: Clone <br>
+ <strong>Purpose</strong>:  To perform cloning of the source tree. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    CALL SrcTree%CloneTo(DstTree) <br></p></td>
+              </tr>
+              <tr>
+                <td>  procedure, public ::
+  <strong><a href='../type/intrusiveavltree.html#boundprocedure-clear~4'>Clear</a></strong> => BSTree_RemoveAll</td>
+                <td><p><strong>Type-Bound Subroutine</strong>: Clear <br>
+ <strong>Purpose</strong>:  To remove all nodes from the tree. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    CALL Tree%Clear()</p></td>
+              </tr>
+              <tr>
+                <td>  procedure, public ::
+  <strong><a href='../type/intrusiveavltree.html#boundprocedure-startmin'>StartMin</a></strong> => BSTree_StartMin</td>
+                <td><p><strong>Type-Bound Function</strong>: StartMin <br>
+ <strong>Purpose</strong>:  To start an iteration at minimum node and return a flag
+               indicating whether the tree is empty or not. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    IsEmpty = Tree%StartMin() <br>
+  ---&gt;    IsEmpty = Tree%StartMin(FirstNode)</p></td>
+              </tr>
+              <tr>
+                <td>  procedure, public ::
+  <strong><a href='../type/intrusiveavltree.html#boundprocedure-startmax'>StartMax</a></strong> => BSTree_StartMax</td>
+                <td><p><strong>Type-Bound Function</strong>: StartMax <br>
+ <strong>Purpose</strong>:  To start an iteration at maximum node and return a flag
+               indicating whether the tree is empty or not. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    IsEmpty = Tree%StartMax() <br>
+  ---&gt;    IsEmpty = Tree%StartMax(FirstNode)</p></td>
+              </tr>
+              <tr>
+                <td>  procedure, public ::
+  <strong><a href='../type/intrusiveavltree.html#boundprocedure-moveforward~4'>MoveForward</a></strong> => BSTree_Move2Next</td>
+                <td><p><strong>Type-Bound Function</strong>: MoveForward <br>
+ <strong>Purpose</strong>:  To move <em>forward</em> to the next (successor) node and return
+               a flag indicating whether the cursor has reached the end
+               of the tree or not. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    IsTheEnd = Tree%MoveForward() <br>
+  ---&gt;    IsTheEnd = Tree%MoveForward(NextNode) <br></p></td>
+              </tr>
+              <tr>
+                <td>  procedure, public ::
+  <strong><a href='../type/intrusiveavltree.html#boundprocedure-movebackward~3'>MoveBackward</a></strong> => BSTree_Move2Prev</td>
+                <td><p><strong>Type-Bound Function</strong>: MoveBackward <br>
+ <strong>Purpose</strong>:  To move <em>backward</em> to the previous (predecessor) node and
+               return a flag indicating whether the cursor has reached
+               the end of the tree or not. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    IsTheEnd = Tree%MoveBackward() <br>
+  ---&gt;    IsTheEnd = Tree%MoveBackward(PrevNode) <br></p></td>
+              </tr>
+              <tr>
+                <td>  procedure, public ::
+  <strong><a href='../type/intrusiveavltree.html#boundprocedure-isempty~12'>IsEmpty</a></strong> => BSTree_IsEmpty</td>
+                <td><p><strong>Type-Bound Function</strong>: IsEmpty <br>
+ <strong>Purpose</strong>:  To check whether the container is empty or not. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    Flag = Tree%IsEmpty() <br>
+  ---&gt;    IF (.NOT.Tree%IsEmpty()) DoSomeThing</p></td>
+              </tr>
+              <tr>
+                <td>  procedure, public ::
+  <strong><a href='../type/intrusiveavltree.html#boundprocedure-contain~3'>Contain</a></strong> => BSTree_Contain</td>
+                <td><p><strong>Type-Bound Function</strong>: Contain <br>
+ <strong>Purpose</strong>:  To check whether the specified node is currently stored in
+               the container or not. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    Flag = Tree%Contain(NodeA) <br>
+  ---&gt;    IF (.NOT.Tree%Contain(NodeB)) DoSomething</p></td>
+              </tr>
+              <tr>
+                <td>  procedure, public ::
+  <strong><a href='../type/intrusiveavltree.html#boundprocedure-getsize~10'>GetSize</a></strong> => BSTree_GetSize</td>
+                <td><p><strong>Type-Bound Function</strong>: GetSize <br>
+ <strong>Purpose</strong>:  To get size of the container (number of nodes). <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    TreeSize = Tree%GetSize()</p></td>
+              </tr>
+              <tr>
+                <td>  procedure, public ::
+  <strong><a href='../type/intrusiveavltree.html#boundprocedure-getrangesize'>GetRangeSize</a></strong> => BSTree_GetRangeSize</td>
+                <td><p><strong>Type-Bound Function</strong>: GetRangeSize <br>
+ <strong>Purpose</strong>:  To get the number of nodes in the tree in the given range.
+               It is the number of nodes between LowNode (inclusive) and
+               HighNode (inclusive). <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    RangeSize = Tree%GetRangeSize(LowNode, HighNode)</p></td>
+              </tr>
+              <tr>
+                <td>  procedure, public ::
+  <strong><a href='../type/intrusiveavltree.html#boundprocedure-getminnode'>GetMinNode</a></strong> => BSTree_GetSmallestNode</td>
+                <td><p><strong>Type-Bound Function</strong>: GetMinNode <br>
+ <strong>Purpose</strong>:  To get a pointer to the node with the smallest value.
+               If the tree is empty, return null pointer. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    MinNode =&gt; Tree%GetMinNode()</p></td>
+              </tr>
+              <tr>
+                <td>  procedure, public ::
+  <strong><a href='../type/intrusiveavltree.html#boundprocedure-getmaxnode'>GetMaxNode</a></strong> => BSTree_GetLargestNode</td>
+                <td><p><strong>Type-Bound Function</strong>: GetMaxNode <br>
+ <strong>Purpose</strong>:  To get a pointer to the node with the largest value.
+               If the tree is empty, return null pointer. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    MaxNode =&gt; Tree%GetMaxNode()</p></td>
+              </tr>
+              <tr>
+                <td>  procedure, public ::
+  <strong><a href='../type/intrusiveavltree.html#boundprocedure-getcursor~3'>GetCursor</a></strong> => BSTree_GetCursor</td>
+                <td><p><strong>Type-Bound Function</strong>: GetCursor <br>
+ <strong>Purpose</strong>:  To get a pointer to the node the cursor points to.
+      This usually points to the current node when performing an
+      iteration over the tree. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    CurrNode =&gt; Tree%GetCursor()</p></td>
+              </tr>
+              <tr>
+                <td>  procedure, public ::
+  <strong><a href='../type/intrusiveavltree.html#boundprocedure-getroot'>GetRoot</a></strong> => BSTree_GetRoot</td>
+                <td><p><strong>Type-Bound Function</strong>: GetRoot <br>
+ <strong>Purpose</strong>:  To get a pointer to the root node of the tree. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    CurrNode =&gt; Tree%GetRoot()</p></td>
+              </tr>
+              <tr>
+                <td>  procedure, public ::
+  <strong><a href='../type/intrusiveavltree.html#boundprocedure-floor'>Floor</a></strong> => BSTree_Floor</td>
+                <td><p><strong>Type-Bound Function</strong>: Floor <br>
+ <strong>Purpose</strong>:  To return a pointer to the largest node in the tree less
+               than or equal to the given node.  Return null pointer if
+               the tree is empty or such node does not exist. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    FloorNode =&gt; Tree%Floor(InNode)</p></td>
+              </tr>
+              <tr>
+                <td>  procedure, public ::
+  <strong><a href='../type/intrusiveavltree.html#boundprocedure-ceiling'>Ceiling</a></strong> => BSTree_Ceiling</td>
+                <td><p><strong>Type-Bound Function</strong>: Ceiling <br>
+ <strong>Purpose</strong>:  To return a pointer to the smallest node in the tree greater
+               than or equal to the given node.  Return null pointer if the
+               tree is empty or such node does not exist. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    CeilingNode =&gt; Tree%Ceiling(InNode)</p></td>
+              </tr>
+              <tr>
+                <td>  procedure, public ::
+  <strong><a href='../type/intrusiveavltree.html#boundprocedure-select'>Select</a></strong> => BSTree_Select</td>
+                <td><p><strong>Type-Bound Function</strong>: Select <br>
+ <strong>Purpose</strong>:  To return a pointer to the node in the tree of a given rank.
+               This node has the property that there are rank nodes in the
+               tree that are smaller.  Applicable range of rank is between
+               0 and tree_size-1 where this rank number is zero-based. <br>
+               Return null pointer if the tree is empty, such node does not
+               exist or the input is invalid. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    OutNode =&gt; Tree%Select(Rank)</p></td>
+              </tr>
+              <tr>
+                <td>  procedure, public ::
+  <strong><a href='../type/intrusiveavltree.html#boundprocedure-rank'>Rank</a></strong> => BSTree_Rank</td>
+                <td><p><strong>Type-Bound Function</strong>: Rank <br>
+ <strong>Purpose</strong>:  To return the number of nodes in the tree strictly less than
+               the given node. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    Rank = Tree%Rank(InNode)</p></td>
+              </tr>
+              <tr>
+                <td>  procedure, public ::
+  <strong><a href='../type/intrusiverbtree.html#boundprocedure-insert~5'>Insert</a></strong> => RBTree_Insert</td>
+                <td><p><strong>Type-Bound Subroutine</strong>: Insert <br>
+ <strong>Purpose</strong>:  To insert a new node into the tree.  If the tree already
+               contains a node that is equal to the new node, replace
+               that node with the new one. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    CALL Tree%Insert(NewNode) <br></p></td>
+              </tr>
+              <tr>
+                <td>  procedure, public ::
+  <strong><a href='../type/intrusiverbtree.html#boundprocedure-remove~4'>Remove</a></strong> => RBTree_Remove</td>
+                <td><p><strong>Type-Bound Function</strong>: Remove <br>
+ <strong>Purpose</strong>:  To remove the specified node from the tree.  Return the flag
+               indicating whether the node is removed successfully or not. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    Success = Tree%Remove(NodeA) <br>
+  ---&gt;    IF (.NOT.Tree%Remove(NodeB)) DoSomething</p></td>
+              </tr>
+              <tr>
+                <td>  procedure, public ::
+  <strong><a href='../type/intrusiverbtree.html#boundprocedure-removemin~2'>RemoveMin</a></strong> => RBTree_RemoveMin</td>
+                <td><p><strong>Type-Bound Function</strong>: RemoveMin <br>
+ <strong>Purpose</strong>:  To remove the node with the smallest value from the tree.
+               Return the flag indicating whether the node is removed
+               successfully or not. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    Success = Tree%RemoveMin(MinNode) <br>
+  ---&gt;    IF (.NOT.Tree%RemoveMin()) DoSomething</p></td>
+              </tr>
+              <tr>
+                <td>  procedure, public ::
+  <strong><a href='../type/intrusiverbtree.html#boundprocedure-removemax~2'>RemoveMax</a></strong> => RBTree_RemoveMax</td>
+                <td><p><strong>Type-Bound Function</strong>: RemoveMax <br>
+ <strong>Purpose</strong>:  To remove the node with the largest value from the tree.
+               Return the flag indicating whether the node is removed
+               successfully or not. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    Success = Tree%RemoveMax(MaxNode) <br>
+  ---&gt;    IF (.NOT.Tree%RemoveMax()) DoSomething</p></td>
+              </tr>
+              <tr>
+                <td>  procedure, public ::
+  <strong><a href='../type/intrusiverbtree.html#boundprocedure-check~2'>Check</a></strong> => RBTree_CheckIntegrity</td>
+                <td><p><strong>Type-Bound Function</strong>: Check <br>
+ <strong>Purpose</strong>:  To check integrity of the BST data structure. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    Flag = Tree%Check() <br>
+  ---&gt;    IF (.NOT.Tree%Check(ErrMsg)) DoSomething</p></td>
+              </tr>
+          </tbody>
+        </table>
+    </div>
+  </div>
+
+        </section>
+        <br>
+
+
+        <section>
+          <h2>Subroutines</h2>
+              <div class="card">
+    <div class="card-header codesum"><span class="anchor" id="proc-find_inorder_predecessor"></span><h3>public recursive subroutine <a href='../proc/find_inorder_predecessor.html'>Find_Inorder_Predecessor</a>(Root, InNode, PrvNode)  
+</h3></div>
+    <div class="card-body">
+          
+  
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-root~2"></span>
+              class(<a href='../type/bstnode.html'>BSTNode</a>),
+            </td>
+<td>intent(in),</td>
+              <td></td>            <td>
+              POINTER
+            </td>
+            <td>::</td>
+            <td><strong>Root</strong></td>
+            <td>
+<p>To search for the previous node in inorder traversal of the tree
+   of the specified node. <br>
+ Note: The first call of this routine should provide the root
+   of the tree as an input node.
+** SUBROUTINE ARGUMENT DECLARATIONS:
+ input node</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-innode~5"></span>
+              class(<a href='../type/bstnode.html'>BSTNode</a>),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>InNode</strong></td>
+            <td>
+<p>the specified node</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-prvnode"></span>
+              class(<a href='../type/bstnode.html'>BSTNode</a>),
+            </td>
+<td>intent(inout),</td>
+              <td></td>            <td>
+              POINTER
+            </td>
+            <td>::</td>
+            <td><strong>PrvNode</strong></td>
+            <td>
+<p>output node</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+    </div>
+  </div>
+
+              <div class="card">
+    <div class="card-header codesum"><span class="anchor" id="proc-find_inorder_successor"></span><h3>public recursive subroutine <a href='../proc/find_inorder_successor.html'>Find_Inorder_Successor</a>(Root, InNode, NxtNode)  
+</h3></div>
+    <div class="card-body">
+          
+  
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-root~3"></span>
+              class(<a href='../type/bstnode.html'>BSTNode</a>),
+            </td>
+<td>intent(in),</td>
+              <td></td>            <td>
+              POINTER
+            </td>
+            <td>::</td>
+            <td><strong>Root</strong></td>
+            <td>
+<p>To search for the next node in inorder traversal of the tree
+   of the specified node. <br>
+ Note: The first call of this routine should provide the root
+   of the tree as an input node.
+** SUBROUTINE ARGUMENT DECLARATIONS:
+ input node</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-innode~6"></span>
+              class(<a href='../type/bstnode.html'>BSTNode</a>),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>InNode</strong></td>
+            <td>
+<p>the specified node</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-nxtnode"></span>
+              class(<a href='../type/bstnode.html'>BSTNode</a>),
+            </td>
+<td>intent(inout),</td>
+              <td></td>            <td>
+              POINTER
+            </td>
+            <td>::</td>
+            <td><strong>NxtNode</strong></td>
+            <td>
+<p>output node</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+    </div>
+  </div>
+
+        </section>
+        <br>
+
+
+
+    </div>
+  </div>
+
+      <hr>
+    </div> <!-- /container -->
+    <footer>
+      <div class="container">
+        <div class="row justify-content-between">
+          <div class="col"><p>eXPerimental Fortran Library (XpfLib) Documentation was developed by Niranama<br>&copy; 2024 
+</p>
+          </div>
+          <div class="col">
+            <p class="text-end">
+              Documentation generated by
+              <a href="https://github.com/Fortran-FOSS-Programmers/ford">FORD</a>
+            </p>
+          </div>
+        </div>
+        <br>
+      </div> <!-- /container -->
+    </footer>
+
+    <!-- Bootstrap core JavaScript -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>    
+
+    <!-- MathJax JavaScript
+             ================================================== -->
+             <!-- Placed at the end of the document so the pages load faster -->
+        <script type="text/x-mathjax-config">
+          MathJax.Hub.Config({
+          TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } },
+          jax: ['input/TeX','input/MathML','output/HTML-CSS'],
+          extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']
+          });
+        </script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+          <script src="../tipuesearch/tipuesearch_content.js"></script>
+          <script src="../tipuesearch/tipuesearch_set.js"></script>
+          <script src="../tipuesearch/tipuesearch.js"></script>
+
+  </body>
+</html>

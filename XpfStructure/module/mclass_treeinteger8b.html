@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta name="description" content="Experimental Fortran Package - Data Structures">
+    <meta name="author" content="Niranama" >
+    <link rel="icon" href="../favicon.png">
+
+    <title>MClass_TreeInteger8B &ndash; eXPerimental Fortran Library (XpfLib) Documentation</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link href="../css/pygments.css" rel="stylesheet">
+    <link href="../css/font-awesome.min.css" rel="stylesheet">
+    <link href="../css/local.css" rel="stylesheet">
+      <link  href="../tipuesearch/tipuesearch.css" rel="stylesheet">
+
+    <script src="https://code.jquery.com/jquery-3.7.0.slim.min.js" integrity="sha256-tG5mcZUtJsZvyKAxYLVXrmjKBVLd6VpVccqz/r4ypFE=" crossorigin="anonymous"></script>
+  </head>
+
+  <body>
+
+    <!-- Fixed navbar -->
+    <div class="container-fluid mb-sm-4 mb-xl-2">
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container">
+          <a class="navbar-brand" href="../index.html">eXPerimental Fortran Library (XpfLib) Documentation </a>
+          <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar"
+                  aria-expanded="false" aria-controls="navbar" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon">
+          </button>
+
+          <div id="navbar" class="navbar-collapse collapse">
+            <ul class="navbar-nav">
+                  <li class="nav-item">
+                    <a class="nav-link" href="../lists/files.html">Source Files</a>
+                  </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../lists/modules.html">Modules</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../lists/types.html">Derived Types</a>
+                </li>
+            </ul>
+              <div class="d-flex align-items-end flex-grow-1">
+                <form action="../search.html" role="search" class="ms-auto">
+                  <input type="text" class="form-control" aria-label="Search" placeholder="Search" name="q" id="tipue_search_input" autocomplete="off" required>
+                </form>
+              </div>
+          </div><!--/.nav-collapse -->
+        </div>
+      </nav>
+    </div>
+
+    <div class="container">
+  <div class="row">
+    <h1>MClass_TreeInteger8B
+      <small>Module</small>
+      
+    </h1>
+      <div class="container p-2 mb-4 bg-light border rounded-3">
+    <div class="row align-items-center justify-content-between" id="info-bar">
+      <div class="col">
+        <ul class="list-inline" style="margin-bottom:0px;display:inline">
+
+            <li class="list-inline-item" id="statements"><i class="fa fa-list-ol"></i>
+              <a data-bs-toggle="tooltip"
+                 data-bs-placement="bottom" data-html="true"
+                 title=" 2.9% of total for modules and submodules.">1214 statements</a>
+            </li>
+
+            <li class="list-inline-item" id="source-file">
+              <i class="fa fa-code"></i>
+              <a href="../src/MClass_TreeInteger8B.f90"> Source File</a>
+            </li>
+        </ul>
+      </div>
+      <div class="col">
+        <nav aria-label="breadcrumb">
+          <ol class="breadcrumb justify-content-end mb-0">
+                <li class="breadcrumb-item"><a href='../sourcefile/mclass_treeinteger8b.f90.html'>MClass_TreeInteger8B.f90</a></li>
+            <li class="breadcrumb-item active" aria-current="page">MClass_TreeInteger8B</li>
+          </ol>
+        </nav>
+      </div>
+    </div>
+  </div>
+  <script>
+    $(function () {
+    $('[data-bs-toggle="tooltip"]').tooltip()
+    })
+  </script>
+
+  </div>
+
+  <div class="row">
+    <div class="col-md-3">
+        <div id="sidebar">
+      <h3>Contents</h3>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+      <div class="card mb-4">
+      <a data-bs-toggle="collapse" href="#types-0"
+         aria-expanded="false" aria-controls="types-0">
+         <h4 class="card-header bg-primary text-white">Derived Types</h4>
+      </a>
+      <div id="types-0" class="collapse">
+        <div class="list-group list-group-flush">
+            <a class="list-group-item" href="../module/mclass_treeinteger8b.html#type-treeinteger8b">TreeInteger8B</a>
+        </div>
+      </div>
+    </div>
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+
+
+  </div>
+
+    </div>
+
+    <div class="col-md-9" id='text'>
+      <p><strong>PURPOSE OF THIS MODULE</strong>: <br>
+  This module contains the <em>TreeInteger8B</em> type and its related helper type and routines.
+  The <em>TreeInteger8B</em> type is a container type representing an ordered symbol table, which
+  is a container that associates a <em>value</em> with a <em>key</em> where keys are stored in a sorted
+  order.  It employs a balanced binary-search-tree (BST) implementation to provide common
+  operations for an ordered symbol table.  As an ordered symbol table, the <em>TreeInteger8B</em>
+  type uses the Fortran intrinsic <em>INTEGER(KIND=kInt64)</em> type as the type of its stored keys
+  and an unlimited polymorphic type as the type of its stored values. <br>
+  As a symbol table, the <em>TreeInteger8B</em> type does not allow duplicated keys.  Therefore,
+  if an inserted key is equal to a key stored in the table, an associated value of the
+  stored key is replaced by an associated value of the inserted key.  Technically, the
+  <em>TreeInteger8B</em> type employs a left-leaning red-black (RB) tree as the balanced BST. <br>
+  See the <a href="../module/mbase_balancedtrees.html">MBase_BalancedTrees</a> module
+  for an overview of a <em>balanced-tree-based</em> type.  A user may use the <em>MBase_BalancedTrees</em>
+  module instead of using this module directly. <br>
+  See the <a href="../module/mclass_treetable.html">MClass_TreeTable</a> module for a balanced
+  tree container type that is functionally similar to the <em>TreeInteger8B</em> type but utilizes
+  a different implementation.  Also, unlike the <em>TreeInteger8B</em> type, the <em>TreeTable</em> type
+  is designed as a generic ordered symbol table that allows keys with various types to be
+  inserted into the table. <br></p>
+<br>          <div class="card mb-4">
+      <h3 class="card-header card-title bg-light">Uses</h3>
+      <div class="card-body">
+        <ul class="list-group list-group-flush">
+            <li class="list-group-item">
+              <ul class="list-inline">
+                  <li class="list-inline-item"><a href='../../XpfBase/module/mbase_memhandlers.html'>MBase_MemHandlers</a></li>
+                  <li class="list-inline-item"><a href='../module/mbase_doublylinkedlists.html'>MBase_DoublyLinkedLists</a></li>
+                  <li class="list-inline-item"><a href='../../XpfBase/module/mbase_errhandlers.html'>MBase_ErrHandlers</a></li>
+                  <li class="list-inline-item"><a href='../../XpfBase/module/mbase_common.html'>MBase_Common</a></li>
+                  <li class="list-inline-item"><a href='../../XpfBase/module/mbase_sintutil.html'>MBase_SIntUtil</a></li>
+                  <li class="list-inline-item"><a href='../../XpfBase/module/mclass_object.html'>MClass_Object</a></li>
+              </ul>
+            </li>
+        </ul>
+      </div>
+    </div>
+
+      
+      <br>
+
+
+
+
+
+
+        <section>
+          <h2>Derived Types</h2>
+              <div class="card">
+    <div class="card-header codesum">
+      <span class="anchor" id="type-treeinteger8b"></span>
+      <h3>
+        type, public&nbsp;::&nbsp;
+        <a href='../type/treeinteger8b.html'>TreeInteger8B</a>
+        
+      </h3>
+    </div>
+    <div class="card-body">
+      <p><em>TreeInteger8B</em> is a container type that employs a left-leaning red-black (RB) tree
+  implementation to provide common operations for an ordered symbol table.</p>
+
+
+
+        <h4>Finalizations Procedures</h4>
+        <table class="table table-striped varlist">
+          <tbody>
+              <tr>
+                <td>final :: <strong>BSTree_Finalizer</strong></td>
+                <td><p>To perform finalization of the tree.</p></td>
+              </tr>
+          </tbody>
+        </table>
+
+        <h4>Type-Bound Procedures</h4>
+        <table class="table table-striped varlist">
+          <tbody>
+              <tr>
+                <td>  procedure, public ::
+  <strong><a href='../type/treeinteger8b.html#boundprocedure-construct~28'>Construct</a></strong> => BSTree_ConstructByArray</td>
+                <td><p><strong>Type-Bound Subroutine</strong>: Construct <br>
+<strong>Purpose</strong>:  To construct a tree from arrays of keys and values.  <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    CALL Tree%Construct(10, KeyArr, ValArr)</p></td>
+              </tr>
+              <tr>
+                <td>  generic, public ::
+  <strong><a href='../type/treeinteger8b.html#boundprocedure-destruct~28'>Destruct</a></strong> => BSTree_Destructor_I, BSTree_Destructor_II</td>
+                <td><p><strong>Type-Bound Subroutine</strong>: Destruct <br>
+ <strong>Purpose</strong>:  To remove all key-value pairs from the tree and optionally to
+               retrieve stored keys and values. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    CALL Tree%Destruct() <br>
+  ---&gt;    CALL Tree%Destruct(KeyQueue, ValQueue) <br></p></td>
+              </tr>
+              <tr>
+                <td>  procedure, public ::
+  <strong><a href='../type/treeinteger8b.html#boundprocedure-insert~21'>Insert</a></strong> => BSTree_Insert</td>
+                <td><p><strong>Type-Bound Subroutine</strong>: Insert <br>
+ <strong>Purpose</strong>:  To insert the specified key-value pair to the tree. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    CALL Tree%Insert(Key, Value) <br></p></td>
+              </tr>
+              <tr>
+                <td>  procedure, public ::
+  <strong><a href='../type/treeinteger8b.html#boundprocedure-remove~23'>Remove</a></strong> => BSTree_Remove</td>
+                <td><p><strong>Type-Bound Subroutine</strong>: Remove <br>
+ <strong>Purpose</strong>:  To remove the specified key (and its associated value) from the tree
+      and return a flag indicating whether the key-value pair is successfully removed
+      or not.  Optionally, the associated value of the specified key can be retrieved. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    Flag = Tree%Remove(Key) <br>
+  ---&gt;    IF (.NOT.Tree%Remove(Key, Value)) DoSomething <br></p></td>
+              </tr>
+              <tr>
+                <td>  procedure, public ::
+  <strong><a href='../type/treeinteger8b.html#boundprocedure-removemin~6'>RemoveMin</a></strong> => BSTree_RemoveMin</td>
+                <td><p><strong>Type-Bound Subroutine</strong>: RemoveMin <br>
+ <strong>Purpose</strong>:  To remove the smallest key (and its associated value) from the tree
+      and return a flag indicating whether the key-value pair is successfully removed
+      or not.  Optionally, the smallest key and/or its associated value can be retrieved. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    Flag = Tree%RemoveMin() <br>
+  ---&gt;    Flag = Tree%RemoveMin(Key) <br>
+  ---&gt;    IF (.NOT.Tree%RemoveMin(Value=Value)) DoSomething <br>
+  ---&gt;    IF (.NOT.Tree%RemoveMin(Key, Value)) DoSomething <br></p></td>
+              </tr>
+              <tr>
+                <td>  procedure, public ::
+  <strong><a href='../type/treeinteger8b.html#boundprocedure-removemax~6'>RemoveMax</a></strong> => BSTree_RemoveMax</td>
+                <td><p><strong>Type-Bound Subroutine</strong>: RemoveMax <br>
+ <strong>Purpose</strong>:  To remove the largest key (and its associated value) from the tree
+      and return a flag indicating whether the key-value pair is successfully removed
+      or not.  Optionally, the largest key and/or its associated valuecan be retrieved. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    Flag = Tree%RemoveMax() <br>
+  ---&gt;    Flag = Tree%RemoveMax(Key) <br>
+  ---&gt;    IF (.NOT.Tree%RemoveMax(Value=Value)) DoSomething <br>
+  ---&gt;    IF (.NOT.Tree%RemoveMax(Key, Value)) DoSomething <br></p></td>
+              </tr>
+              <tr>
+                <td>  procedure, public ::
+  <strong><a href='../type/treeinteger8b.html#boundprocedure-startfirst~25'>StartFirst</a></strong> => BSTree_Move2First</td>
+                <td><p><strong>Type-Bound Function</strong>: StartFirst <br>
+ <strong>Purpose</strong>:  To start an iteration (at a node with the smallest key) and return a flag
+               indicating whether the tree is empty or not. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    IsEmpty = Tree%StartFirst() <br>
+  ---&gt;    IsEmpty = Tree%StartFirst(FirstKey) <br>
+  ---&gt;    IsEmpty = Tree%StartFirst(Value=FirstVal) <br>
+  ---&gt;    IsEmpty = Tree%StartFirst(FirstKey, FirstVal)</p></td>
+              </tr>
+              <tr>
+                <td>  procedure, public ::
+  <strong><a href='../type/treeinteger8b.html#boundprocedure-moveforward~25'>MoveForward</a></strong> => BSTree_Move2NextPair</td>
+                <td><p><strong>Type-Bound Function</strong>: MoveForward <br>
+ <strong>Purpose</strong>:  To move to the next key-value pair and return a flag indicating whether
+               the cursor pointer has reached the end of the tree or not. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    IsTheEnd = Tree%MoveForward() <br>
+  ---&gt;    IsTheEnd = Tree%MoveForward(NextKey) <br>
+  ---&gt;    IsTheEnd = Tree%MoveForward(Value=NextVal) <br>
+  ---&gt;    IsTheEnd = Tree%MoveForward(NextKey, NextVal)</p></td>
+              </tr>
+              <tr>
+                <td>  procedure, public ::
+  <strong><a href='../type/treeinteger8b.html#boundprocedure-startlast~15'>StartLast</a></strong> => BSTree_Move2Last</td>
+                <td><p><strong>Type-Bound Function</strong>: StartLast <br>
+ <strong>Purpose</strong>:  To start an iteration in a reversed order (at a node with the largest key)
+               and return a flag indicating whether the tree is empty or not. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    IsEmpty = Tree%StartLast() <br>
+  ---&gt;    IsEmpty = Tree%StartLast(LastKey) <br>
+  ---&gt;    IsEmpty = Tree%StartLast(Value=LastVal) <br>
+  ---&gt;    IsEmpty = Tree%StartLast(LastKey, LastVal)</p></td>
+              </tr>
+              <tr>
+                <td>  procedure, public ::
+  <strong><a href='../type/treeinteger8b.html#boundprocedure-movebackward~15'>MoveBackward</a></strong> => BSTree_Move2PrevPair</td>
+                <td><p><strong>Type-Bound Function</strong>: MoveBackward <br>
+ <strong>Purpose</strong>:  To move to the previous key-value pair and return a flag indicating whether
+               the cursor pointer has reached the end of the tree or not. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    IsTheEnd = Tree%MoveBackward() <br>
+  ---&gt;    IsTheEnd = Tree%MoveBackward(PrevKey) <br>
+  ---&gt;    IsTheEnd = Tree%MoveBackward(Value=PrevVal) <br>
+  ---&gt;    IsTheEnd = Tree%MoveBackward(PrevKey, PrevVal)</p></td>
+              </tr>
+              <tr>
+                <td>  procedure, public ::
+  <strong><a href='../type/treeinteger8b.html#boundprocedure-isempty~56'>IsEmpty</a></strong> => BSTree_IsEmpty</td>
+                <td><p><strong>Type-Bound Function</strong>: IsEmpty <br>
+ <strong>Purpose</strong>:  To check whether the three is empty or not. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    Flag = Tree%IsEmpty() <br>
+  ---&gt;    IF (.NOT.Tree%IsEmpty()) DoSomeThing</p></td>
+              </tr>
+              <tr>
+                <td>  procedure, public ::
+  <strong><a href='../type/treeinteger8b.html#boundprocedure-contain~14'>Contain</a></strong> => BSTree_FindKey</td>
+                <td><p><strong>Type-Bound Function</strong>: Contain <br>
+ <strong>Purpose</strong>:  To find the specified key in the tree.  Return true if the specified key
+               is found.  Otherwise, return false. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    Flag = Tree%Contain(Key) <br>
+  ---&gt;    IF (.NOT.Tree%Contain(Key)) DoSomething</p></td>
+              </tr>
+              <tr>
+                <td>  procedure, public ::
+  <strong><a href='../type/treeinteger8b.html#boundprocedure-getsize~28'>GetSize</a></strong> => BSTree_GetSize</td>
+                <td><p><strong>Type-Bound Function</strong>: GetSize <br>
+ <strong>Purpose</strong>:  To get size of the tree (the number of key-value pair stored in the tree). <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    TreeSize = Tree%GetSize()</p></td>
+              </tr>
+              <tr>
+                <td>  procedure, public ::
+  <strong><a href='../type/treeinteger8b.html#boundprocedure-getrangesize~6'>GetRangeSize</a></strong> => BSTree_GetSize_Range</td>
+                <td><p><strong>Type-Bound Function</strong>: GetRangeSize <br>
+ <strong>Purpose</strong>:  To return the number of keys between <em>KeyLo</em> (inclusive)
+               and <em>KeyHi</em> (inclusive). <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    RangeSize = Tree%GetRangeSize(KeyLo, KeyHi)</p></td>
+              </tr>
+              <tr>
+                <td>  procedure, public ::
+  <strong><a href='../type/treeinteger8b.html#boundprocedure-getvalue~12'>GetValue</a></strong> => BSTree_GetValue</td>
+                <td><p><strong>Type-Bound Function</strong>: GetValue <br>
+ <strong>Purpose</strong>:  To get the value associated with the specified key in the tree.  Also, return
+               a flag indicating whether the key-value pair is successfully found or not. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    Flag = Tree%GetValue(Key, Value) <br>
+  ---&gt;    IF (.NOT.Tree%GetValue(Key, Value)) DoSomething</p></td>
+              </tr>
+              <tr>
+                <td>  procedure, public ::
+  <strong><a href='../type/treeinteger8b.html#boundprocedure-getminkey~6'>GetMinKey</a></strong> => BSTree_GetSmallestKey</td>
+                <td><p><strong>Type-Bound Function</strong>: GetMinKey <br>
+ <strong>Purpose</strong>:  To get the smallest key (and optionally a value associated with it) in the
+               tree.  Also, return a flag indicating whether the key is successfully retrieved
+               or not.  If the tree is not empty, the returned flag is always true. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    Flag = Tree%GetMinKey(Key) <br>
+  ---&gt;    IF (.NOT.Tree%GetMinKey(Key, Value)) DoSomething</p></td>
+              </tr>
+              <tr>
+                <td>  procedure, public ::
+  <strong><a href='../type/treeinteger8b.html#boundprocedure-getmaxkey~6'>GetMaxKey</a></strong> => BSTree_GetLargestKey</td>
+                <td><p><strong>Type-Bound Function</strong>: GetMaxKey <br>
+ <strong>Purpose</strong>:  To get the largest key (and optionally a value associated with it) in the
+               tree.  Also, return a flag indicating whether the key is successfully retrieved
+               or not.  If the tree is not empty, the returned flag is always true. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    Flag = Tree%GetMaxKey(Key) <br>
+  ---&gt;    IF (.NOT.Tree%GetMaxKey(Key, Value)) DoSomething</p></td>
+              </tr>
+              <tr>
+                <td>  generic, public ::
+  <strong><a href='../type/treeinteger8b.html#boundprocedure-getkeys~12'>GetKeys</a></strong> => BSTree_GetKeys_Range, BSTree_GetKeys_All</td>
+                <td><p><strong>Type-Bound Subroutine</strong>: GetKeys <br>
+ <strong>Purpose</strong>:  To return all keys (in the tree or in the specified range) and
+               optionally all associated values. <br>
+ <strong>Usage</strong>: <br>
+  ! return all keys in the tree <br>
+  ---&gt;    CALL Tree%GetKeys(Keys) <br>
+  ---&gt;    CALL Tree%GetKeys(Keys, Values) <br>
+  ! return all keys in the specified range <br>
+  ---&gt;    CALL Tree%GetKeys(LoKey, HiKey, Keys) <br>
+  ---&gt;    CALL Tree%GetKeys(LoKey, HiKey, Keys, Values) <br></p></td>
+              </tr>
+              <tr>
+                <td>  procedure, public ::
+  <strong><a href='../type/treeinteger8b.html#boundprocedure-floor~6'>Floor</a></strong> => BSTree_Floor</td>
+                <td><p><strong>Type-Bound Function</strong>: Floor <br>
+ <strong>Purpose</strong>:  To get the largest key (and optionally a value associated with it) in the
+               tree less than or equal to the given key.  Also, return a flag indicating
+               whether the floor key is successfully retrieved or not. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    Flag = Tree%Floor(KeyIn, KeyOut) <br>
+  ---&gt;    IF (.NOT.Tree%Floor(KeyIn, KeyOut, Value)) DoSomething</p></td>
+              </tr>
+              <tr>
+                <td>  procedure, public ::
+  <strong><a href='../type/treeinteger8b.html#boundprocedure-ceiling~6'>Ceiling</a></strong> => BSTree_Ceiling</td>
+                <td><p><strong>Type-Bound Function</strong>: Ceiling <br>
+ <strong>Purpose</strong>:  To get the smallest key (and optionally a value associated with it) in the
+               tree greater than or equal to the given key.  Also, return a flag indicating
+               whether the ceiling key is successfully retrieved or not. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    Flag = Tree%Ceiling(KeyIn, KeyOut) <br>
+  ---&gt;    IF (.NOT.Tree%Ceiling(KeyIn, KeyOut, Value)) DoSomething</p></td>
+              </tr>
+              <tr>
+                <td>  procedure, public ::
+  <strong><a href='../type/treeinteger8b.html#boundprocedure-select~6'>Select</a></strong> => BSTree_Select</td>
+                <td><p><strong>Type-Bound Subroutine</strong>: Select <br>
+ <strong>Purpose</strong>:  To get the key (and optionally its associated value) of the specified rank
+               where the applicable range of rank is between 0 and TableSize-1. Also, return
+               a flag indicating whether the ranked key is successfully retrieved or not. <br>
+  ---&gt;    Flag = Tree%Select(Rank, Key) <br>
+  ---&gt;    IF (.NOT.Tree%Select(Rank, Key, Value)) DoSomething</p></td>
+              </tr>
+              <tr>
+                <td>  procedure, public ::
+  <strong><a href='../type/treeinteger8b.html#boundprocedure-getrank~6'>GetRank</a></strong> => BSTree_Rank</td>
+                <td><p><strong>Type-Bound Function</strong>: GetRank <br>
+ <strong>Purpose</strong>:  To return the number of keys in the tree strictly less than the given key. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    KeyRank = Tree%GetRank(Key)</p></td>
+              </tr>
+              <tr>
+                <td>  procedure, public ::
+  <strong><a href='../type/treeinteger8b.html#boundprocedure-check~5'>Check</a></strong> => BSTree_CheckBST</td>
+                <td><p><strong>Type-Bound Function</strong>: Check <br>
+ <strong>Purpose</strong>:  To check integrity of the BST data structure. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    Flag = Tree%Check() <br>
+  ---&gt;    IF (.NOT.Tree%Check(ErrMsg)) DoSomething</p></td>
+              </tr>
+          </tbody>
+        </table>
+    </div>
+  </div>
+
+        </section>
+        <br>
+
+
+
+
+
+    </div>
+  </div>
+
+      <hr>
+    </div> <!-- /container -->
+    <footer>
+      <div class="container">
+        <div class="row justify-content-between">
+          <div class="col"><p>eXPerimental Fortran Library (XpfLib) Documentation was developed by Niranama<br>&copy; 2024 
+</p>
+          </div>
+          <div class="col">
+            <p class="text-end">
+              Documentation generated by
+              <a href="https://github.com/Fortran-FOSS-Programmers/ford">FORD</a>
+            </p>
+          </div>
+        </div>
+        <br>
+      </div> <!-- /container -->
+    </footer>
+
+    <!-- Bootstrap core JavaScript -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>    
+
+    <!-- MathJax JavaScript
+             ================================================== -->
+             <!-- Placed at the end of the document so the pages load faster -->
+        <script type="text/x-mathjax-config">
+          MathJax.Hub.Config({
+          TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } },
+          jax: ['input/TeX','input/MathML','output/HTML-CSS'],
+          extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']
+          });
+        </script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+          <script src="../tipuesearch/tipuesearch_content.js"></script>
+          <script src="../tipuesearch/tipuesearch_set.js"></script>
+          <script src="../tipuesearch/tipuesearch.js"></script>
+
+  </body>
+</html>

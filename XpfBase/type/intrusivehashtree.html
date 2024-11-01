@@ -1,0 +1,1629 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta name="description" content="Experimental Fortran Package - Base Modules and Classes">
+    <meta name="author" content="Niranama" >
+    <link rel="icon" href="../favicon.png">
+
+    <title>IntrusiveHashTree &ndash; eXPerimental Fortran Library (XpfLib) Documentation </title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link href="../css/pygments.css" rel="stylesheet">
+    <link href="../css/font-awesome.min.css" rel="stylesheet">
+    <link href="../css/local.css" rel="stylesheet">
+      <link  href="../tipuesearch/tipuesearch.css" rel="stylesheet">
+
+    <script src="https://code.jquery.com/jquery-3.7.0.slim.min.js" integrity="sha256-tG5mcZUtJsZvyKAxYLVXrmjKBVLd6VpVccqz/r4ypFE=" crossorigin="anonymous"></script>
+  </head>
+
+  <body>
+
+    <!-- Fixed navbar -->
+    <div class="container-fluid mb-sm-4 mb-xl-2">
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container">
+          <a class="navbar-brand" href="../index.html">eXPerimental Fortran Library (XpfLib) Documentation </a>
+          <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar"
+                  aria-expanded="false" aria-controls="navbar" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon">
+          </button>
+
+          <div id="navbar" class="navbar-collapse collapse">
+            <ul class="navbar-nav">
+                  <li class="nav-item">
+                    <a class="nav-link" href="../lists/files.html">Source Files</a>
+                  </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../lists/modules.html">Modules</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../lists/procedures.html">Procedures</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../lists/absint.html">Abstract Interfaces</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../lists/types.html">Derived Types</a>
+                </li>
+            </ul>
+              <div class="d-flex align-items-end flex-grow-1">
+                <form action="../search.html" role="search" class="ms-auto">
+                  <input type="text" class="form-control" aria-label="Search" placeholder="Search" name="q" id="tipue_search_input" autocomplete="off" required>
+                </form>
+              </div>
+          </div><!--/.nav-collapse -->
+        </div>
+      </nav>
+    </div>
+
+    <div class="container">
+  <div class="row">
+    <h1>IntrusiveHashTree
+      <small>Derived Type</small>
+      
+    </h1>
+      <div class="container p-2 mb-4 bg-light border rounded-3">
+    <div class="row align-items-center justify-content-between" id="info-bar">
+      <div class="col">
+        <ul class="list-inline" style="margin-bottom:0px;display:inline">
+
+            <li class="list-inline-item" id="statements"><i class="fa fa-list-ol"></i>
+              <a data-bs-toggle="tooltip"
+                 data-bs-placement="bottom" data-html="true"
+                 title="<p> 3.4% of total for derived types.</p>Including implementation: 383 statements,  5.6% of total for derived types.">27 statements</a>
+            </li>
+
+            <li class="list-inline-item" id="source-file">
+              <i class="fa fa-code"></i>
+              <a href="../src/MClass_IntrusiveHashTree.f90"> Source File</a>
+            </li>
+        </ul>
+      </div>
+      <div class="col">
+        <nav aria-label="breadcrumb">
+          <ol class="breadcrumb justify-content-end mb-0">
+                <li class="breadcrumb-item"><a href='../sourcefile/mclass_intrusivehashtree.f90.html'>MClass_IntrusiveHashTree.f90</a></li>
+                <li class="breadcrumb-item"><a href='../module/mclass_intrusivehashtree.html'>MClass_IntrusiveHashTree</a></li>
+            <li class="breadcrumb-item active" aria-current="page">IntrusiveHashTree</li>
+          </ol>
+        </nav>
+      </div>
+    </div>
+  </div>
+  <script>
+    $(function () {
+    $('[data-bs-toggle="tooltip"]').tooltip()
+    })
+  </script>
+
+  </div>
+  
+  <div class="row">
+    <div class="col-md-3 hidden-xs hidden-sm visible-md visible-lg">
+      <div id="sidebar">
+      <h3>Contents</h3>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+      <div class="card mb-4">
+      <a data-bs-toggle="collapse" href="#fins-0"
+         aria-expanded="false" aria-controls="fins-0">
+         <h4 class="card-header bg-primary text-white">Finalization Procedures</h4>
+      </a>
+      <div id="fins-0" class="collapse">
+        <div class="list-group list-group-flush">
+            <a class="list-group-item" href="../type/intrusivehashtree.html#finalproc-hashtable_finalize">HashTable_Finalize</a>
+        </div>
+      </div>
+    </div>
+
+      <div class="card mb-4">
+      <a data-bs-toggle="collapse" href="#boundprocs-0"
+         aria-expanded="false" aria-controls="boundprocs-0">
+         <h4 class="card-header bg-primary text-white">Type-Bound Procedures</h4>
+      </a>
+      <div id="boundprocs-0" class="collapse">
+        <div class="list-group list-group-flush">
+            <a class="list-group-item" href="../type/intrusivehashtree.html#boundprocedure-cloneto~5">CloneTo</a>
+            <a class="list-group-item" href="../type/intrusivehashtree.html#boundprocedure-construct~6">Construct</a>
+            <a class="list-group-item" href="../type/intrusivehashtree.html#boundprocedure-destruct~6">Destruct</a>
+            <a class="list-group-item" href="../type/intrusivehashtree.html#boundprocedure-insert~3">Insert</a>
+            <a class="list-group-item" href="../type/intrusivehashtree.html#boundprocedure-remove~2">Remove</a>
+            <a class="list-group-item" href="../type/intrusivehashtree.html#boundprocedure-delete">Delete</a>
+            <a class="list-group-item" href="../type/intrusivehashtree.html#boundprocedure-clear~3">Clear</a>
+            <a class="list-group-item" href="../type/intrusivehashtree.html#boundprocedure-startfirst~2">StartFirst</a>
+            <a class="list-group-item" href="../type/intrusivehashtree.html#boundprocedure-moveforward~3">MoveForward</a>
+            <a class="list-group-item" href="../type/intrusivehashtree.html#boundprocedure-getsize~8">GetSize</a>
+            <a class="list-group-item" href="../type/intrusivehashtree.html#boundprocedure-isempty~10">IsEmpty</a>
+            <a class="list-group-item" href="../type/intrusivehashtree.html#boundprocedure-contain~2">Contain</a>
+            <a class="list-group-item" href="../type/intrusivehashtree.html#boundprocedure-findnode">FindNode</a>
+            <a class="list-group-item" href="../type/intrusivehashtree.html#boundprocedure-getcursor~2">GetCursor</a>
+        </div>
+      </div>
+    </div>
+
+  
+  
+    <div class="card card-primary">
+      <div class="card-header text-left"><h3 class="card-title">Source Code</h3></div>
+      <div class="list-group">
+        <a class="list-group-item" href="../type/intrusivehashtree.html#src">IntrusiveHashTree</a>
+      </div>
+    </div>
+
+
+  </div>
+
+    </div>
+    
+    <div class="col-md-9" id='text'>
+      <h2>type, public :: IntrusiveHashTree</h2>
+    <p>The <em>IntrusiveHashTree</em> type is an intrusive container type that employs a
+ separate-chaining hash table implementation to provide common operations for
+ an unordered symbol table.  The separate-chaining technique combines a balanced
+ binary-search tree with a hash table to solve the collision problem.  <br>
+ The <em>IntrusiveHashTree</em> type employs an array of the <em>IntrusiveRBTree</em> type
+ as its component (i.e. using an array of balanced trees as its buckets) to store
+ <em>HashTreeNode</em> objects.  Although the <em>IntrusiveHashTree</em> type handles a memory
+ management of its working trees, these working trees (as intrusive containers)
+ only provide a linking/unlinking task for common balanced-tree operations.  This
+ means that the memory management task of the inserted <em>HashTreeNode</em> objects
+ is essentially handled by a user who is an owner of those inserted objects. <br>
+ As a symbol table, the <em>IntrusiveHashTree</em> type does not allow duplicated keys;
+ therefore, if an inserted key node has a key equal to that of a key node stored
+ in the table, the stored key node is replaced by the inserted key node.  <br>
+ In order to avoid large balanced trees (due to many keys hashed to the same indices),
+ the <em>IntrusiveHashTree</em> type employs the dynamic-array technique to resize the
+ balanced-tree array.  As a result, the <em>IntrusiveHashTree</em> type requires an explicit
+ construction via the <em>Construct</em> method before using other provided operations.
+ When the <em>Destruct</em> method is called, the hash table also needs to be re-construct
+ because this method essentially deallocates the working array.  <br></p>
+    <br>
+
+    
+
+      <section>
+        <h2>Finalization Procedures</h2>
+            <div class="card">
+    <div class="card-header codesum">
+      <span class="anchor" id="finalproc-hashtable_finalize"></span>
+      <h3>final :: <strong>HashTable_Finalize</strong> </h3>
+    </div>
+    <div class="card-body">
+      
+      <p>To perform finalization of the object.</p>
+    </div>
+    <ul class="list-group">
+      <li class="list-group-item">
+            <h3>
+    private  subroutine HashTable_Finalize(Table)  
+
+    </h3>
+  <p>To perform finalization of the object.</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-table~31"></span>
+              type(<a href='../type/intrusivehashtree.html'>IntrusiveHashTree</a>),
+            </td>
+<td>intent(inout)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Table</strong></td>
+            <td>
+                
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+      </li>
+    </ul>
+  </div>
+
+      </section>
+      <br>
+
+      <section>
+        <h2>Type-Bound Procedures</h2>
+          <div class="row">
+              <div class="card mt-3">
+    <div class="card-header codesum">
+      <span class="anchor" id="boundprocedure-cloneto~5"></span>
+      <h3>
+          procedure, public ::
+  <strong>CloneTo</strong> => HashTable_Clone
+        
+      </h3>
+    </div>
+      <div class="card-body">
+        
+        <p><strong>Type-Bound Subroutine</strong>: CloneTo <br>
+ <strong>Purpose</strong>:  To perform cloning of the source hash table. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    CALL SrcTab%CloneTo(DstTab) <br></p>
+      </div>
+    <ul class="list-group">
+        <li class="list-group-item">
+                  <h3>
+    private  subroutine HashTable_Clone(SrcTab, DstTab)  
+</h3>
+
+  <p>To perform cloning of the source list.</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(<a href='../type/intrusivehashtree.html'>IntrusiveHashTree</a>),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>SrcTab</strong></td>
+            <td>
+                <p>source</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(<a href='../type/intrusivehashtree.html'>IntrusiveHashTree</a>),
+            </td>
+<td>intent(out)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>DstTab</strong></td>
+            <td>
+                <p>destination</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+        </li>
+    </ul>
+  </div>
+
+          </div>
+          <div class="row">
+              <div class="card mt-3">
+    <div class="card-header codesum">
+      <span class="anchor" id="boundprocedure-construct~6"></span>
+      <h3>
+          generic, public ::
+  <strong>Construct</strong> => CreateEmpty, CreateByArray
+        
+      </h3>
+    </div>
+      <div class="card-body">
+        
+        <p><strong>Type-Bound Subroutine</strong>: Construct <br>
+ <strong>Purpose</strong>:  To construct a new empty table with default or specified capacity, or
+               a new non-empty table from an array of key nodes. <br>
+ <strong>Usage</strong>: <br>
+  ! construct an empty table <br>
+  ---&gt;    CALL Table%Construct()          ! use default initial capacity <br>
+  ---&gt;    CALL Table%Construct(InitCap)   ! specify initial capacity <br>
+  ! construct a non-empty table from an array of 25 key nodes <br>
+  ---&gt;    CALL Table%Construct(25, KeyNodes) <br></p>
+      </div>
+    <ul class="list-group">
+        <li class="list-group-item">
+                  <h3>
+    private  subroutine HashTable_CreateEmpty(Table, InitCap)  
+</h3>
+
+  <p>To create an empty hash table with a <em>power of 2</em> capacity.</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(<a href='../type/intrusivehashtree.html'>IntrusiveHashTree</a>),
+            </td>
+<td>intent(inout)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Table</strong></td>
+            <td>
+                <p>symbol-table object</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              integer(kind=kInt32),
+            </td>
+<td>intent(in),</td>
+              <td>optional</td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>InitCap</strong></td>
+            <td>
+                <p>initial capacity of the hash table (must be a power of 2)</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+        </li>
+        <li class="list-group-item">
+                  <h3>
+    private  subroutine HashTable_CreateByArray(Table, N, KeyNodes)  
+</h3>
+
+  <p>To create a table from an array of key nodes.</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(<a href='../type/intrusivehashtree.html'>IntrusiveHashTree</a>),
+            </td>
+<td>intent(inout)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Table</strong></td>
+            <td>
+                <p>symbol-table object</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              integer(kind=kInt32),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>N</strong></td>
+            <td>
+                <p>number of key nodes</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(<a href='../type/hashtreenode.html'>HashTreeNode</a>),
+            </td>
+<td>intent(inout)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>KeyNodes</strong>(:)</td>
+            <td>
+                <p>the key nodes to be added to the table</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+        </li>
+    </ul>
+  </div>
+
+          </div>
+          <div class="row">
+              <div class="card mt-3">
+    <div class="card-header codesum">
+      <span class="anchor" id="boundprocedure-destruct~6"></span>
+      <h3>
+          procedure, public ::
+  <strong>Destruct</strong> => HashTable_Destroy
+        
+      </h3>
+    </div>
+      <div class="card-body">
+        
+        <p><strong>Type-Bound Subroutine</strong>: Destruct <br>
+ <strong>Purpose</strong>:  To remove all key nodes from the table, free memory of the allocatable
+               component, and reset all other components.<br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    CALL Table%Destruct() <br>
+ <strong>Note</strong>:  This method is NOT equivalent to the <em>Clear</em> method where the allocatable
+            component is NOT deallocated.</p>
+      </div>
+    <ul class="list-group">
+        <li class="list-group-item">
+                  <h3>
+    private  subroutine HashTable_Destroy(Table)  
+</h3>
+
+  <p>To destruct the table. <br></p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(<a href='../type/intrusivehashtree.html'>IntrusiveHashTree</a>),
+            </td>
+<td>intent(inout)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Table</strong></td>
+            <td>
+                <p>symbol-table object</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+        </li>
+    </ul>
+  </div>
+
+          </div>
+          <div class="row">
+              <div class="card mt-3">
+    <div class="card-header codesum">
+      <span class="anchor" id="boundprocedure-insert~3"></span>
+      <h3>
+          procedure, public ::
+  <strong>Insert</strong> => HashTable_Insert
+        
+      </h3>
+    </div>
+      <div class="card-body">
+        
+        <p><strong>Type-Bound Subroutine</strong>: Insert <br>
+ <strong>Purpose</strong>:  To insert the specified key node into the table. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    CALL Table%Insert(KeyNode) <br></p>
+      </div>
+    <ul class="list-group">
+        <li class="list-group-item">
+                  <h3>
+    private  subroutine HashTable_Insert(Table, KeyNode)  
+</h3>
+
+  <p>To add a key node into a symbol table.  If the specified key node has the key component
+ equal to that of a key node stored in the table, replace the stored key node by the
+ specified one.  <br></p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(<a href='../type/intrusivehashtree.html'>IntrusiveHashTree</a>),
+            </td>
+<td>intent(inout)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Table</strong></td>
+            <td>
+                <p>symbol-table object</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(<a href='../type/hashtreenode.html'>HashTreeNode</a>),
+            </td>
+<td>intent(inout)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>KeyNode</strong></td>
+            <td>
+                <p>the key node to be added to the table</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+        </li>
+    </ul>
+  </div>
+
+          </div>
+          <div class="row">
+              <div class="card mt-3">
+    <div class="card-header codesum">
+      <span class="anchor" id="boundprocedure-remove~2"></span>
+      <h3>
+          procedure, public ::
+  <strong>Remove</strong> => HashTable_Remove
+        
+      </h3>
+    </div>
+      <div class="card-body">
+        
+        <p><strong>Type-Bound Function</strong>: Remove <br>
+ <strong>Purpose</strong>:  To remove a stored key node that has the key component equal to that
+               of the specified key node.  Also, return a flag indicating whether
+               a stored key node is successfully removed or not.  <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    Flag = Table%Remove(KeyNode) <br>
+  ---&gt;    IF (.NOT.Table%Remove(KeyNode)) DoSomething</p>
+      </div>
+    <ul class="list-group">
+        <li class="list-group-item">
+                  <h3>
+    private  function HashTable_Remove(Table, KeyNode) result(Flag)  
+</h3>
+
+  <p>To remove a stored key node that has the key component equal to that
+ of the specified key node.  Also, return a flag indicating whether
+ a stored key node is successfully removed or not.  <br></p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(<a href='../type/intrusivehashtree.html'>IntrusiveHashTree</a>),
+            </td>
+<td>intent(inout)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Table</strong></td>
+            <td>
+                <p>symbol-table object</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(<a href='../type/hashtreenode.html'>HashTreeNode</a>),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>KeyNode</strong></td>
+            <td>
+                <p>the key node where its key is the same as that of a stored node to be removed</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+    <h4>
+    Return Value
+    <small>logical</small>
+    </h4>
+    <p>flag indicating whether a stored key node is successfully removed or not.</p>
+
+        </li>
+    </ul>
+  </div>
+
+          </div>
+          <div class="row">
+              <div class="card mt-3">
+    <div class="card-header codesum">
+      <span class="anchor" id="boundprocedure-delete"></span>
+      <h3>
+          procedure, public ::
+  <strong>Delete</strong> => HashTable_Delete
+        
+      </h3>
+    </div>
+      <div class="card-body">
+        
+        <p><strong>Type-Bound Subroutine</strong>: Delete <br>
+ <strong>Purpose</strong>:  To delete the current node from the collection. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    CALL Collection%Delete() <br>
+  ---&gt;    CALL Collection%Delete(DelNode) <br>
+ <strong>Note</strong>: This method is intended to be used in conjunction with the
+ <em>StartFirst</em> and <em>MoveForward</em> methods.  Therefore, after the call to
+ one of those methods and then calling this one will result in a removal
+ of the current node of the iteration.</p>
+      </div>
+    <ul class="list-group">
+        <li class="list-group-item">
+                  <h3>
+    private  subroutine HashTable_Delete(Table, DelNode)  
+</h3>
+
+  <p>To remove a stored key node at the current iteration.  <br></p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(<a href='../type/intrusivehashtree.html'>IntrusiveHashTree</a>),
+            </td>
+<td>intent(inout)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Table</strong></td>
+            <td>
+                <p>symbol-table object</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(<a href='../type/hashtreenode.html'>HashTreeNode</a>),
+            </td>
+<td>intent(out),</td>
+              <td>optional,</td>            <td>
+              POINTER
+            </td>
+            <td>::</td>
+            <td><strong>DelNode</strong></td>
+            <td>
+                
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+        </li>
+    </ul>
+  </div>
+
+          </div>
+          <div class="row">
+              <div class="card mt-3">
+    <div class="card-header codesum">
+      <span class="anchor" id="boundprocedure-clear~3"></span>
+      <h3>
+          procedure, public ::
+  <strong>Clear</strong> => HashTable_Clear
+        
+      </h3>
+    </div>
+      <div class="card-body">
+        
+        <p><strong>Type-Bound Subroutine</strong>: Clear <br>
+ <strong>Purpose</strong>:  To remove all stored key nodes from the table. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    CALL Table%Clear()</p>
+      </div>
+    <ul class="list-group">
+        <li class="list-group-item">
+                  <h3>
+    private  subroutine HashTable_Clear(Table)  
+</h3>
+
+  <p>To remove all of the stored key nodes from the table. <br></p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(<a href='../type/intrusivehashtree.html'>IntrusiveHashTree</a>),
+            </td>
+<td>intent(inout)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Table</strong></td>
+            <td>
+                <p>symbol-table object</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+        </li>
+    </ul>
+  </div>
+
+          </div>
+          <div class="row">
+              <div class="card mt-3">
+    <div class="card-header codesum">
+      <span class="anchor" id="boundprocedure-startfirst~2"></span>
+      <h3>
+          procedure, public ::
+  <strong>StartFirst</strong> => HashTable_Move2FirstNode
+        
+      </h3>
+    </div>
+      <div class="card-body">
+        
+        <p><strong>Type-Bound Function</strong>: StartFirst <br>
+ <strong>Purpose</strong>:  To start the <em>forward</em> iteration and return a flag
+               indicating whether the table is empty or not. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    IsEmpty = Table%StartFirst() <br>
+  ---&gt;    IsEmpty = Table%StartFirst(FirstNode)</p>
+      </div>
+    <ul class="list-group">
+        <li class="list-group-item">
+                  <h3>
+    private  function HashTable_Move2FirstNode(Table, KeyNode) result(IsEmpty)  
+</h3>
+
+  <p>To move to the first (starting) key node in a symbol table.  For this hash table,
+ which is an unordered symbol table, the starting key node is the first key node
+ inserted into the first non-empty work list (the first work list is the list with
+ index = 0) .  <br></p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(<a href='../type/intrusivehashtree.html'>IntrusiveHashTree</a>),
+            </td>
+<td>intent(inout)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Table</strong></td>
+            <td>
+                <p>symbol-table object</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(<a href='../type/hashtreenode.html'>HashTreeNode</a>),
+            </td>
+<td>intent(out),</td>
+              <td>optional,</td>            <td>
+              POINTER
+            </td>
+            <td>::</td>
+            <td><strong>KeyNode</strong></td>
+            <td>
+                <p>the first key node as output if requested (and available)</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+    <h4>
+    Return Value
+    <small>logical</small>
+    </h4>
+    <p>a flag indicating whether the table contains no key node or not <br>
+- true if the table is empty. <br>
+- otherwise the first key node is available.</p>
+
+        </li>
+    </ul>
+  </div>
+
+          </div>
+          <div class="row">
+              <div class="card mt-3">
+    <div class="card-header codesum">
+      <span class="anchor" id="boundprocedure-moveforward~3"></span>
+      <h3>
+          procedure, public ::
+  <strong>MoveForward</strong> => HashTable_Move2NextNode
+        
+      </h3>
+    </div>
+      <div class="card-body">
+        
+        <p><strong>Type-Bound Function</strong>: MoveForward <br>
+ <strong>Purpose</strong>:  To move <em>forward</em> to the next iteration and return a flag
+               indicating whether the cursor has reached the end of the
+               table or not. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    IsTheEnd = Table%MoveForward() <br>
+  ---&gt;    IsTheEnd = Table%MoveForward(NextNode) <br></p>
+      </div>
+    <ul class="list-group">
+        <li class="list-group-item">
+                  <h3>
+    private  function HashTable_Move2NextNode(Table, KeyNode) result(IsTheEnd)  
+</h3>
+
+  <p>To move to the next key node in a symbol table.  For this hash table,
+ which is an unordered symbol table, the key node is the node inserted
+ after the previous one if it is in the same list.  Or it is the first
+ node in non-empty next list. <br></p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(<a href='../type/intrusivehashtree.html'>IntrusiveHashTree</a>),
+            </td>
+<td>intent(inout)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Table</strong></td>
+            <td>
+                <p>symbol-table object</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(<a href='../type/hashtreenode.html'>HashTreeNode</a>),
+            </td>
+<td>intent(out),</td>
+              <td>optional,</td>            <td>
+              POINTER
+            </td>
+            <td>::</td>
+            <td><strong>KeyNode</strong></td>
+            <td>
+                <p>the next key node as output if requested (and available)</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+    <h4>
+    Return Value
+    <small>logical</small>
+    </h4>
+    <p>a flag indicating whether the move to the end of the table occurs or not <br>
+- true if next node is NOT available. <br>
+- otherwise next node is available.</p>
+
+        </li>
+    </ul>
+  </div>
+
+          </div>
+          <div class="row">
+              <div class="card mt-3">
+    <div class="card-header codesum">
+      <span class="anchor" id="boundprocedure-getsize~8"></span>
+      <h3>
+          procedure, public ::
+  <strong>GetSize</strong> => HashTable_GetSize
+        
+      </h3>
+    </div>
+      <div class="card-body">
+        
+        <p><strong>Type-Bound Function</strong>: GetSize <br>
+ <strong>Purpose</strong>:  To get size of the table (number of total nodes stored). <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    TableSize = Table%GetSize()</p>
+      </div>
+    <ul class="list-group">
+        <li class="list-group-item">
+                  <h3>
+    private  function HashTable_GetSize(Table) result(Size)  
+</h3>
+
+  <p>To get size of the table (a number of total stored nodes).</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(<a href='../type/intrusivehashtree.html'>IntrusiveHashTree</a>),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Table</strong></td>
+            <td>
+                <p>symbol table object</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+    <h4>
+    Return Value
+    <small>integer(kind=kInt32)</small>
+    </h4>
+    <p>current size (number of nodes stored)</p>
+
+        </li>
+    </ul>
+  </div>
+
+          </div>
+          <div class="row">
+              <div class="card mt-3">
+    <div class="card-header codesum">
+      <span class="anchor" id="boundprocedure-isempty~10"></span>
+      <h3>
+          procedure, public ::
+  <strong>IsEmpty</strong> => HashTable_IsEmpty
+        
+      </h3>
+    </div>
+      <div class="card-body">
+        
+        <p><strong>Type-Bound Function</strong>: IsEmpty <br>
+ <strong>Purpose</strong>:  To check whether the table is empty or not. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    Flag = Table%IsEmpty() <br>
+  ---&gt;    IF (.NOT.Table%IsEmpty()) DoSomeThing</p>
+      </div>
+    <ul class="list-group">
+        <li class="list-group-item">
+                  <h3>
+    private  function HashTable_IsEmpty(Table) result(Flag)  
+</h3>
+
+  <p>To check whether the table is empty or not.</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(<a href='../type/intrusivehashtree.html'>IntrusiveHashTree</a>),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Table</strong></td>
+            <td>
+                <p>symbol table object</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+    <h4>
+    Return Value
+    <small>logical</small>
+    </h4>
+    <p>true if the table is empty</p>
+
+        </li>
+    </ul>
+  </div>
+
+          </div>
+          <div class="row">
+              <div class="card mt-3">
+    <div class="card-header codesum">
+      <span class="anchor" id="boundprocedure-contain~2"></span>
+      <h3>
+          procedure, public ::
+  <strong>Contain</strong> => HashTable_Contain
+        
+      </h3>
+    </div>
+      <div class="card-body">
+        
+        <p><strong>Type-Bound Function</strong>: Contain <br>
+ <strong>Purpose</strong>:  To find a stored key node that has the key component equal to
+               that of specified key node.  Return a flag indicating whether
+               such node is found or not.  <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    Flag = Table%Contain(KeyNode) <br>
+  ---&gt;    IF (.NOT.Table%Contain(KeyNode)) DoSomething</p>
+      </div>
+    <ul class="list-group">
+        <li class="list-group-item">
+                  <h3>
+    private  function HashTable_Contain(Table, KeyNode) result(Found)  
+</h3>
+
+  <p>To find a stored key node that has the key component equal to that of
+ specified key node.  Return a flag indicating whether such node is found
+ or not.  <br></p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(<a href='../type/intrusivehashtree.html'>IntrusiveHashTree</a>),
+            </td>
+<td>intent(inout)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Table</strong></td>
+            <td>
+                <p>symbol-table object</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(<a href='../type/hashtreenode.html'>HashTreeNode</a>),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>KeyNode</strong></td>
+            <td>
+                <p>the key node</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+    <h4>
+    Return Value
+    <small>logical</small>
+    </h4>
+    <p>flag indicating whether a stored key node with key equal to that of the
+ specified key node exists in the table or not.</p>
+
+        </li>
+    </ul>
+  </div>
+
+          </div>
+          <div class="row">
+              <div class="card mt-3">
+    <div class="card-header codesum">
+      <span class="anchor" id="boundprocedure-findnode"></span>
+      <h3>
+          procedure, public ::
+  <strong>FindNode</strong> => HashTable_FindNode
+        
+      </h3>
+    </div>
+      <div class="card-body">
+        
+        <p><strong>Type-Bound Function</strong>: FindNode <br>
+ <strong>Purpose</strong>:  To find the specified key node in the table.  Return true if
+               the specified key node is found.  Otherwise, return false. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    Flag = Table%FindNode(KeyNode, StoredNode) <br>
+  ---&gt;    IF (.NOT.Table%FindNode(KeyNode)) DoSomething</p>
+      </div>
+    <ul class="list-group">
+        <li class="list-group-item">
+                  <h3>
+    private  function HashTable_FindNode(Table, KeyNode, StoredNode, KeyHash, TabIndx) result(Found)  
+</h3>
+
+  <p>To find the specified KeyNode in a symbol table.</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(<a href='../type/intrusivehashtree.html'>IntrusiveHashTree</a>),
+            </td>
+<td>intent(inout)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Table</strong></td>
+            <td>
+                <p>symbol-table object</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(<a href='../type/hashtreenode.html'>HashTreeNode</a>),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>KeyNode</strong></td>
+            <td>
+                <p>the key node to be looked for in the table</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(<a href='../type/hashtreenode.html'>HashTreeNode</a>),
+            </td>
+<td>intent(out),</td>
+              <td>optional,</td>            <td>
+              POINTER
+            </td>
+            <td>::</td>
+            <td><strong>StoredNode</strong></td>
+            <td>
+                <p>the stored node where the key is equal to that of the specified key node;
+ null pointer if the key is not found</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              integer(kind=kInt32),
+            </td>
+<td>intent(out),</td>
+              <td>optional</td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>KeyHash</strong></td>
+            <td>
+                <p>hash code of the specified key node</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              integer(kind=kInt32),
+            </td>
+<td>intent(out),</td>
+              <td>optional</td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>TabIndx</strong></td>
+            <td>
+                <p>index of the working list</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+    <h4>
+    Return Value
+    <small>logical</small>
+    </h4>
+    <p>flag indicating whether the specified key is found or not.</p>
+
+        </li>
+    </ul>
+  </div>
+
+          </div>
+          <div class="row">
+              <div class="card mt-3">
+    <div class="card-header codesum">
+      <span class="anchor" id="boundprocedure-getcursor~2"></span>
+      <h3>
+          procedure, public ::
+  <strong>GetCursor</strong> => HashTable_GetCursor
+        
+      </h3>
+    </div>
+      <div class="card-body">
+        
+        <p><strong>Type-Bound Function</strong>: GetCursor <br>
+ <strong>Purpose</strong>:  To get a pointer to the current node of the iteration. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    CursorNode =&gt; Table%GetCursor()</p>
+      </div>
+    <ul class="list-group">
+        <li class="list-group-item">
+                  <h3>
+    private  function HashTable_GetCursor(Table) result(Cursor)  
+</h3>
+
+  <p>To get a pointer to the cursor node of the current tree of the hash table</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(<a href='../type/intrusivehashtree.html'>IntrusiveHashTree</a>),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Table</strong></td>
+            <td>
+                <p>hash table</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+    <h4>
+    Return Value
+    <small>class(<a href='../type/hashtreenode.html'>HashTreeNode</a>), POINTER</small>
+    </h4>
+    <p>pointer to the cursor node</p>
+
+        </li>
+    </ul>
+  </div>
+
+          </div>
+      </section>
+
+    <section>
+    <h3><span class="anchor" id="src"></span>Source Code</h3>
+    <div class="hl codehilite"><pre><span></span><span class="w">    </span><span class="k">TYPE</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">IntrusiveHashTree</span>
+<span class="w">        </span><span class="k">PRIVATE</span>
+<span class="w">        </span><span class="c">!% initial capacity of the hash table</span>
+<span class="w">        </span><span class="n">tIndex</span><span class="w">                              </span><span class="kd">::</span><span class="w"> </span><span class="n">InitCap</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">16_kIndex</span>
+<span class="w">        </span><span class="c">!% current size (number of stored nodes) of the hash table</span>
+<span class="w">        </span><span class="n">tIndex</span><span class="w">                              </span><span class="kd">::</span><span class="w"> </span><span class="n">Size</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0_kIndex</span>
+<span class="w">        </span><span class="c">!% current capacity of the hash table</span>
+<span class="w">        </span><span class="n">tIndex</span><span class="w">                              </span><span class="kd">::</span><span class="w"> </span><span class="n">Capacity</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0_kIndex</span>
+<span class="w">        </span><span class="c">!% working balanced tree</span>
+<span class="w">        </span><span class="k">TYPE</span><span class="p">(</span><span class="n">IntrusiveRBTree</span><span class="p">),</span><span class="w"> </span><span class="k">ALLOCATABLE</span><span class="w">  </span><span class="kd">::</span><span class="w"> </span><span class="n">WrkTree</span><span class="p">(:)</span>
+<span class="w">        </span><span class="c">!% current index into the working lists (used for iteration purpose)</span>
+<span class="w">        </span><span class="n">tIndex</span><span class="w">                              </span><span class="kd">::</span><span class="w"> </span><span class="n">Indx</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0_kIndex</span>
+<span class="w">    </span><span class="k">CONTAINS</span>
+<span class="w">        </span><span class="c">! ---------------------------------------------------------------------</span>
+<span class="w">        </span><span class="c">! -----                     Private Procedures                    -----</span>
+<span class="w">        </span><span class="c">! ---------------------------------------------------------------------</span>
+<span class="w">        </span><span class="c">!&gt; **Type-Bound Subroutine**: Resize &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Purpose**:  To resize the table to the specified capacity. &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Usage**: &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!   ---&gt;    CALL Table%Resize(64)</span>
+<span class="w">        </span><span class="k">PROCEDURE</span><span class="p">,</span><span class="w"> </span><span class="k">PRIVATE</span><span class="w">  </span><span class="kd">::</span><span class="w"> </span><span class="n">Resize</span><span class="w">           </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">HashTable_Resize</span>
+<span class="w">        </span><span class="c">!&gt; To create an empty table; use the *Construct* method instead.</span>
+<span class="w">        </span><span class="k">PROCEDURE</span><span class="p">,</span><span class="w"> </span><span class="k">PRIVATE</span><span class="w">  </span><span class="kd">::</span><span class="w"> </span><span class="n">CreateEmpty</span><span class="w">      </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">HashTable_CreateEmpty</span>
+<span class="w">        </span><span class="c">!&gt; To create a non-empty table; use the *Construct* method instead.</span>
+<span class="w">        </span><span class="k">PROCEDURE</span><span class="p">,</span><span class="w"> </span><span class="k">PRIVATE</span><span class="w">  </span><span class="kd">::</span><span class="w"> </span><span class="n">CreateByArray</span><span class="w">    </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">HashTable_CreateByArray</span>
+<span class="w">        </span><span class="c">! ---------------------------------------------------------------------</span>
+<span class="w">        </span><span class="c">! -----             Cloning Procedure                             -----</span>
+<span class="w">        </span><span class="c">! ---------------------------------------------------------------------</span>
+<span class="w">        </span><span class="c">!&gt; **Type-Bound Subroutine**: CloneTo &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Purpose**:  To perform cloning of the source hash table. &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Usage**: &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!   ---&gt;    CALL SrcTab%CloneTo(DstTab) &lt;br&gt;</span>
+<span class="w">        </span><span class="k">PROCEDURE</span><span class="w">   </span><span class="kd">::</span><span class="w"> </span><span class="n">CloneTo</span><span class="w">      </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">HashTable_Clone</span>
+<span class="w">        </span><span class="c">! ---------------------------------------------------------------------</span>
+<span class="w">        </span><span class="c">! -----         Constructor and Destructor Procedures             -----</span>
+<span class="w">        </span><span class="c">! ---------------------------------------------------------------------</span>
+<span class="w">        </span><span class="c">!&gt; **Type-Bound Subroutine**: Construct &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Purpose**:  To construct a new empty table with default or specified capacity, or</span>
+<span class="w">        </span><span class="c">!                a new non-empty table from an array of key nodes. &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Usage**: &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!   ! construct an empty table &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!   ---&gt;    CALL Table%Construct()          ! use default initial capacity &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!   ---&gt;    CALL Table%Construct(InitCap)   ! specify initial capacity &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!   ! construct a non-empty table from an array of 25 key nodes &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!   ---&gt;    CALL Table%Construct(25, KeyNodes) &lt;br&gt;</span>
+<span class="w">        </span><span class="k">GENERIC</span><span class="w">     </span><span class="kd">::</span><span class="w"> </span><span class="n">Construct</span><span class="w">    </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">CreateEmpty</span><span class="p">,</span><span class="w"> </span><span class="n">CreateByArray</span>
+<span class="w">        </span><span class="c">!&gt; **Type-Bound Subroutine**: Destruct &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Purpose**:  To remove all key nodes from the table, free memory of the allocatable</span>
+<span class="w">        </span><span class="c">!                component, and reset all other components.&lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Usage**: &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!   ---&gt;    CALL Table%Destruct() &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Note**:  This method is NOT equivalent to the *Clear* method where the allocatable</span>
+<span class="w">        </span><span class="c">!             component is NOT deallocated.</span>
+<span class="w">        </span><span class="k">PROCEDURE</span><span class="w">   </span><span class="kd">::</span><span class="w"> </span><span class="n">Destruct</span><span class="w">     </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">HashTable_Destroy</span>
+<span class="w">        </span><span class="c">! ---------------------------------------------------------------------</span>
+<span class="w">        </span><span class="c">! -----             Adding and Removing procedures                -----</span>
+<span class="w">        </span><span class="c">! ---------------------------------------------------------------------</span>
+<span class="w">        </span><span class="c">!&gt; **Type-Bound Subroutine**: Insert &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Purpose**:  To insert the specified key node into the table. &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Usage**: &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!   ---&gt;    CALL Table%Insert(KeyNode) &lt;br&gt;</span>
+<span class="w">        </span><span class="k">PROCEDURE</span><span class="w">   </span><span class="kd">::</span><span class="w"> </span><span class="n">Insert</span><span class="w">       </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">HashTable_Insert</span>
+<span class="w">        </span><span class="c">!&gt; **Type-Bound Function**: Remove &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Purpose**:  To remove a stored key node that has the key component equal to that</span>
+<span class="w">        </span><span class="c">!                of the specified key node.  Also, return a flag indicating whether</span>
+<span class="w">        </span><span class="c">!                a stored key node is successfully removed or not.  &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Usage**: &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!   ---&gt;    Flag = Table%Remove(KeyNode) &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!   ---&gt;    IF (.NOT.Table%Remove(KeyNode)) DoSomething</span>
+<span class="w">        </span><span class="k">PROCEDURE</span><span class="w">   </span><span class="kd">::</span><span class="w"> </span><span class="n">Remove</span><span class="w">       </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">HashTable_Remove</span>
+<span class="w">        </span><span class="c">!&gt; **Type-Bound Subroutine**: Delete &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Purpose**:  To delete the current node from the collection. &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Usage**: &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!   ---&gt;    CALL Collection%Delete() &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!   ---&gt;    CALL Collection%Delete(DelNode) &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Note**: This method is intended to be used in conjunction with the</span>
+<span class="w">        </span><span class="c">!  *StartFirst* and *MoveForward* methods.  Therefore, after the call to</span>
+<span class="w">        </span><span class="c">!  one of those methods and then calling this one will result in a removal</span>
+<span class="w">        </span><span class="c">!  of the current node of the iteration.</span>
+<span class="w">        </span><span class="k">PROCEDURE</span><span class="w">   </span><span class="kd">::</span><span class="w"> </span><span class="n">Delete</span><span class="w">       </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">HashTable_Delete</span>
+<span class="w">        </span><span class="c">!&gt; **Type-Bound Subroutine**: Clear &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Purpose**:  To remove all stored key nodes from the table. &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Usage**: &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!   ---&gt;    CALL Table%Clear()</span>
+<span class="w">        </span><span class="k">PROCEDURE</span><span class="w">   </span><span class="kd">::</span><span class="w"> </span><span class="n">Clear</span><span class="w">        </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">HashTable_Clear</span>
+<span class="w">        </span><span class="c">! ---------------------------------------------------------------------</span>
+<span class="w">        </span><span class="c">! -----                 Iteration Procedures                      -----</span>
+<span class="w">        </span><span class="c">! ---------------------------------------------------------------------</span>
+<span class="w">        </span><span class="c">!&gt; **Type-Bound Function**: StartFirst &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Purpose**:  To start the *forward* iteration and return a flag</span>
+<span class="w">        </span><span class="c">!                indicating whether the table is empty or not. &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Usage**: &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!   ---&gt;    IsEmpty = Table%StartFirst() &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!   ---&gt;    IsEmpty = Table%StartFirst(FirstNode)</span>
+<span class="w">        </span><span class="k">PROCEDURE</span><span class="w">   </span><span class="kd">::</span><span class="w"> </span><span class="n">StartFirst</span><span class="w">   </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">HashTable_Move2FirstNode</span>
+<span class="w">        </span><span class="c">!&gt; **Type-Bound Function**: MoveForward &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Purpose**:  To move *forward* to the next iteration and return a flag</span>
+<span class="w">        </span><span class="c">!                indicating whether the cursor has reached the end of the</span>
+<span class="w">        </span><span class="c">!                table or not. &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Usage**: &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!   ---&gt;    IsTheEnd = Table%MoveForward() &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!   ---&gt;    IsTheEnd = Table%MoveForward(NextNode) &lt;br&gt;</span>
+<span class="w">        </span><span class="k">PROCEDURE</span><span class="w">   </span><span class="kd">::</span><span class="w"> </span><span class="n">MoveForward</span><span class="w">  </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">HashTable_Move2NextNode</span>
+<span class="w">        </span><span class="c">! ---------------------------------------------------------------------</span>
+<span class="w">        </span><span class="c">! -----               Inquiry Procedures                         ------</span>
+<span class="w">        </span><span class="c">! ---------------------------------------------------------------------</span>
+<span class="w">        </span><span class="c">!&gt; **Type-Bound Function**: GetSize &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Purpose**:  To get size of the table (number of total nodes stored). &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Usage**: &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!   ---&gt;    TableSize = Table%GetSize()</span>
+<span class="w">        </span><span class="k">PROCEDURE</span><span class="w">   </span><span class="kd">::</span><span class="w"> </span><span class="n">GetSize</span><span class="w">      </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">HashTable_GetSize</span>
+<span class="w">        </span><span class="c">!&gt; **Type-Bound Function**: IsEmpty &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Purpose**:  To check whether the table is empty or not. &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Usage**: &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!   ---&gt;    Flag = Table%IsEmpty() &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!   ---&gt;    IF (.NOT.Table%IsEmpty()) DoSomeThing</span>
+<span class="w">        </span><span class="k">PROCEDURE</span><span class="w">   </span><span class="kd">::</span><span class="w"> </span><span class="n">IsEmpty</span><span class="w">      </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">HashTable_IsEmpty</span>
+<span class="w">        </span><span class="c">!&gt; **Type-Bound Function**: Contain &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Purpose**:  To find a stored key node that has the key component equal to</span>
+<span class="w">        </span><span class="c">!                that of specified key node.  Return a flag indicating whether</span>
+<span class="w">        </span><span class="c">!                such node is found or not.  &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Usage**: &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!   ---&gt;    Flag = Table%Contain(KeyNode) &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!   ---&gt;    IF (.NOT.Table%Contain(KeyNode)) DoSomething</span>
+<span class="w">        </span><span class="k">PROCEDURE</span><span class="w">   </span><span class="kd">::</span><span class="w"> </span><span class="n">Contain</span><span class="w">      </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">HashTable_Contain</span>
+<span class="w">        </span><span class="c">!&gt; **Type-Bound Function**: FindNode &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Purpose**:  To find the specified key node in the table.  Return true if</span>
+<span class="w">        </span><span class="c">!                the specified key node is found.  Otherwise, return false. &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Usage**: &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!   ---&gt;    Flag = Table%FindNode(KeyNode, StoredNode) &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!   ---&gt;    IF (.NOT.Table%FindNode(KeyNode)) DoSomething</span>
+<span class="w">        </span><span class="k">PROCEDURE</span><span class="w">   </span><span class="kd">::</span><span class="w"> </span><span class="n">FindNode</span><span class="w">     </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">HashTable_FindNode</span>
+<span class="w">        </span><span class="c">!&gt; **Type-Bound Function**: GetCursor &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Purpose**:  To get a pointer to the current node of the iteration. &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Usage**: &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!   ---&gt;    CursorNode =&gt; Table%GetCursor()</span>
+<span class="w">        </span><span class="k">PROCEDURE</span><span class="w">   </span><span class="kd">::</span><span class="w"> </span><span class="n">GetCursor</span><span class="w">    </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">HashTable_GetCursor</span>
+<span class="w">        </span><span class="c">! ---------------------------------------------------------------------</span>
+<span class="w">        </span><span class="c">! -----                   Finalize Procedure                      -----</span>
+<span class="w">        </span><span class="c">! ---------------------------------------------------------------------</span>
+<span class="w">        </span><span class="c">!&gt; To perform finalization of the object.</span>
+<span class="w">        </span><span class="k">FINAL</span><span class="w">       </span><span class="kd">::</span><span class="w"> </span><span class="n">HashTable_Finalize</span>
+<span class="w">        </span><span class="c">! ---------------------------------------------------------------------</span>
+<span class="w">    </span><span class="k">END TYPE </span><span class="n">IntrusiveHashTree</span>
+</pre></div>
+
+    </section>
+    
+    </div>
+  </div>
+
+      <hr>
+    </div> <!-- /container -->
+    <footer>
+      <div class="container">
+        <div class="row justify-content-between">
+          <div class="col"><p>eXPerimental Fortran Library (XpfLib) Documentation was developed by Niranama<br>&copy; 2024 
+</p>
+          </div>
+          <div class="col">
+            <p class="text-end">
+              Documentation generated by
+              <a href="https://github.com/Fortran-FOSS-Programmers/ford">FORD</a>
+            </p>
+          </div>
+        </div>
+        <br>
+      </div> <!-- /container -->
+    </footer>
+
+    <!-- Bootstrap core JavaScript -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>    
+
+    <!-- MathJax JavaScript
+             ================================================== -->
+             <!-- Placed at the end of the document so the pages load faster -->
+        <script type="text/x-mathjax-config">
+          MathJax.Hub.Config({
+          TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } },
+          jax: ['input/TeX','input/MathML','output/HTML-CSS'],
+          extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']
+          });
+        </script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+          <script src="../tipuesearch/tipuesearch_content.js"></script>
+          <script src="../tipuesearch/tipuesearch_set.js"></script>
+          <script src="../tipuesearch/tipuesearch.js"></script>
+
+  </body>
+</html>

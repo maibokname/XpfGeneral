@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta name="description" content="Experimental Fortran Package - Data Structures">
+    <meta name="author" content="Niranama" >
+    <link rel="icon" href="../favicon.png">
+
+    <title>MClass_HTabRealQP &ndash; eXPerimental Fortran Library (XpfLib) Documentation</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link href="../css/pygments.css" rel="stylesheet">
+    <link href="../css/font-awesome.min.css" rel="stylesheet">
+    <link href="../css/local.css" rel="stylesheet">
+      <link  href="../tipuesearch/tipuesearch.css" rel="stylesheet">
+
+    <script src="https://code.jquery.com/jquery-3.7.0.slim.min.js" integrity="sha256-tG5mcZUtJsZvyKAxYLVXrmjKBVLd6VpVccqz/r4ypFE=" crossorigin="anonymous"></script>
+  </head>
+
+  <body>
+
+    <!-- Fixed navbar -->
+    <div class="container-fluid mb-sm-4 mb-xl-2">
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container">
+          <a class="navbar-brand" href="../index.html">eXPerimental Fortran Library (XpfLib) Documentation </a>
+          <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar"
+                  aria-expanded="false" aria-controls="navbar" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon">
+          </button>
+
+          <div id="navbar" class="navbar-collapse collapse">
+            <ul class="navbar-nav">
+                  <li class="nav-item">
+                    <a class="nav-link" href="../lists/files.html">Source Files</a>
+                  </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../lists/modules.html">Modules</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../lists/types.html">Derived Types</a>
+                </li>
+            </ul>
+              <div class="d-flex align-items-end flex-grow-1">
+                <form action="../search.html" role="search" class="ms-auto">
+                  <input type="text" class="form-control" aria-label="Search" placeholder="Search" name="q" id="tipue_search_input" autocomplete="off" required>
+                </form>
+              </div>
+          </div><!--/.nav-collapse -->
+        </div>
+      </nav>
+    </div>
+
+    <div class="container">
+  <div class="row">
+    <h1>MClass_HTabRealQP
+      <small>Module</small>
+      
+    </h1>
+      <div class="container p-2 mb-4 bg-light border rounded-3">
+    <div class="row align-items-center justify-content-between" id="info-bar">
+      <div class="col">
+        <ul class="list-inline" style="margin-bottom:0px;display:inline">
+
+            <li class="list-inline-item" id="statements"><i class="fa fa-list-ol"></i>
+              <a data-bs-toggle="tooltip"
+                 data-bs-placement="bottom" data-html="true"
+                 title=" 1.2% of total for modules and submodules.">528 statements</a>
+            </li>
+
+            <li class="list-inline-item" id="source-file">
+              <i class="fa fa-code"></i>
+              <a href="../src/MClass_HTabRealQP.f90"> Source File</a>
+            </li>
+        </ul>
+      </div>
+      <div class="col">
+        <nav aria-label="breadcrumb">
+          <ol class="breadcrumb justify-content-end mb-0">
+                <li class="breadcrumb-item"><a href='../sourcefile/mclass_htabrealqp.f90.html'>MClass_HTabRealQP.f90</a></li>
+            <li class="breadcrumb-item active" aria-current="page">MClass_HTabRealQP</li>
+          </ol>
+        </nav>
+      </div>
+    </div>
+  </div>
+  <script>
+    $(function () {
+    $('[data-bs-toggle="tooltip"]').tooltip()
+    })
+  </script>
+
+  </div>
+
+  <div class="row">
+    <div class="col-md-3">
+        <div id="sidebar">
+      <h3>Contents</h3>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+      <div class="card mb-4">
+      <a data-bs-toggle="collapse" href="#types-0"
+         aria-expanded="false" aria-controls="types-0">
+         <h4 class="card-header bg-primary text-white">Derived Types</h4>
+      </a>
+      <div id="types-0" class="collapse">
+        <div class="list-group list-group-flush">
+            <a class="list-group-item" href="../module/mclass_htabrealqp.html#type-htabrealqp">HTabRealQP</a>
+        </div>
+      </div>
+    </div>
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+
+
+  </div>
+
+    </div>
+
+    <div class="col-md-9" id='text'>
+      <p><strong>PURPOSE OF THIS MODULE</strong>: <br>
+  This module contains the <em>HTabRealQP</em> type, the <em>TabItem</em> type and their
+  related routines.  The <em>TabItem</em> type is a helper and private type used to
+  store a key-value pair.  The <em>HTabRealQP</em> type is a container type that
+  employs an open-addressing hash table implementation to provide common
+  operations for an unordered symbol table. <br>
+  Unlike the <em>list-based</em> and <em>tree-based</em> types, which can be used instantly
+  by inserting objects into a container, the <em>HTabRealQP</em> type requires an
+  explicit construction before using other provided operations.  There are two
+  methods provided to create the container.  The <em>CreateEmpty</em> method constructs
+  an empty table with optional multiple arguments (including an initial capacity,
+  a load factor, a probing algorithm, and a hash function used to compute
+  a hash code of a key) whereas the <em>Construct</em> method constructs a table from
+  arrays of keys and values. <br>
+  As an unordered symbol table, the <em>HTabRealQP</em> type uses the Fortran intrinsic
+  <em>REAL(KIND=kQuad)</em> type as the type of its stored keys and an unlimited polymorphic type
+  as the type of its stored values.  As a symbol table, the <em>HTabRealQP</em> type
+  does not allow duplicated keys.  Therefore, if an inserted key is equal to a key
+  stored in the table, an associated value of the stored key is replaced by an
+  associated value of the inserted key. <br>
+  Technically, the <em>HTabRealQP</em> type employs the open-addressing as a collision
+  resolution technique where the hash resolution is performed through probing.  It
+  provides three probing algorithms: linear probing, quadratic probing and double
+  hashing.  By default, the linear probing algorithm is used.  However, a user can
+  specify other probing algorithm during the construction of the table. <br></p>
+<br>          <div class="card mb-4">
+      <h3 class="card-header card-title bg-light">Uses</h3>
+      <div class="card-body">
+        <ul class="list-group list-group-flush">
+            <li class="list-group-item">
+              <ul class="list-inline">
+                  <li class="list-inline-item"><a href='../module/mbase_doublylinkedlists.html'>MBase_DoublyLinkedLists</a></li>
+                  <li class="list-inline-item"><a href='../../XpfBase/module/mbase_errhandlers.html'>MBase_ErrHandlers</a></li>
+                  <li class="list-inline-item"><a href='../../XpfBase/module/mbase_simplehash32.html'>MBase_SimpleHash32</a></li>
+                  <li class="list-inline-item"><a href='../../XpfBase/module/mbase_mathutil.html'>MBase_MathUtil</a></li>
+                  <li class="list-inline-item"><a href='../../XpfBase/module/mbase_common.html'>MBase_Common</a></li>
+                  <li class="list-inline-item"><a href='../../XpfBase/module/mbase_sintutil.html'>MBase_SIntUtil</a></li>
+                  <li class="list-inline-item"><a href='http://fortranwiki.org/fortran/show/iso_c_binding'>iso_c_binding</a></li>
+              </ul>
+            </li>
+        </ul>
+      </div>
+    </div>
+
+      
+      <br>
+
+
+
+
+
+
+        <section>
+          <h2>Derived Types</h2>
+              <div class="card">
+    <div class="card-header codesum">
+      <span class="anchor" id="type-htabrealqp"></span>
+      <h3>
+        type, public&nbsp;::&nbsp;
+        <a href='../type/htabrealqp.html'>HTabRealQP</a>
+        
+      </h3>
+    </div>
+    <div class="card-body">
+      <p>The <em>HTabRealQP</em> type is a container type that employs an open-addressing hash
+ table implementation to provide common operations for an unordered symbol table.</p>
+
+
+
+        <h4>Finalizations Procedures</h4>
+        <table class="table table-striped varlist">
+          <tbody>
+              <tr>
+                <td>final :: <strong>HashTable_Finalize</strong></td>
+                <td><p>To perform finalization of the hash table.</p></td>
+              </tr>
+          </tbody>
+        </table>
+
+        <h4>Type-Bound Procedures</h4>
+        <table class="table table-striped varlist">
+          <tbody>
+              <tr>
+                <td>  procedure, public ::
+  <strong><a href='../type/htabrealqp.html#boundprocedure-createempty~31'>CreateEmpty</a></strong> => HashTable_CreateEmpty</td>
+                <td><p><strong>Type-Bound Subroutine</strong>: CreateEmpty <br>
+ <strong>Purpose</strong>:  To construct an empty table. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    CALL Table%CreateEmpty()                           ! use default options  <br>
+  ---&gt;    CALL Table%CreateEmpty(InitCap=25)                 ! specify initial capacity <br>
+  ---&gt;    CALL Table%CreateEmpty(LoadFactor=0.5)             ! specify load factor <br>
+  ---&gt;    CALL Table%CreateEmpty(ProbAlgo=2)                 ! specify probing algorithm <br>
+  ---&gt;    CALL Table%CreateEmpty(HashCal=Murmur3_Hash32_Opt) ! specify hash function <br>
+  ---&gt;    CALL Table%CreateEmpty(30, 0.75, 3, XX_Hash64_Opt) ! specify all options <br>
+ <strong>Note</strong>: Any suitable hash function routine from the <em>ModBase_SimpleHash32</em>,
+      <em>ModBase_SimpleHash64</em>, <em>ModBase_ReferenceHash32</em>, <em>ModBase_ReferenceHash64</em>
+      <em>ModBase_OptimalHash32</em>, and <em>ModBase_OptimalHash64</em> modules can be used to
+      specify the <em>HashCal</em> argument.  The term <em>suitable</em> means that any routine
+      that has exactly the same interface as the <em>HashFunc</em> abstract function
+      is the suitable one.  <br>
+ <strong>Note2</strong>: Depending on a type of indices defined in the '<em>Macro - Basic Definitions.f90</em>'
+      file, a 32-bit hash-function routine is a suitable one for 32-bit integer indices
+      while a 64-bit hash-function routine is a suitable one for 64-bit integer indices.
+      This is a compile-time choice.  <br></p></td>
+              </tr>
+              <tr>
+                <td>  procedure, public ::
+  <strong><a href='../type/htabrealqp.html#boundprocedure-construct~50'>Construct</a></strong> => HashTable_CreateByArray</td>
+                <td><p><strong>Type-Bound Subroutine</strong>: Construct <br>
+ <strong>Purpose</strong>:  To construct a hash table from the specified key and value arrays. <br>
+ <strong>Usage</strong>: <br>
+  ! use default options  <br>
+  ---&gt;    CALL Table%Construct(40, KeyArr, ValArr) <br>
+  ! specify all options (initial capacity is twice of the size of the given arrays) <br>
+  ---&gt;    CALL Table%Construct(20, KeyArr, ValArr, LoadFactor, ProbAlgo, HashFunc) <br></p></td>
+              </tr>
+              <tr>
+                <td>  procedure, public ::
+  <strong><a href='../type/htabrealqp.html#boundprocedure-clear~35'>Clear</a></strong> => HashTable_ClearItems</td>
+                <td><p><strong>Type-Bound Subroutine</strong>: Clear <br>
+ <strong>Purpose</strong>:  To free components of the items from the table. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    CALL Table%Clear()</p></td>
+              </tr>
+              <tr>
+                <td>  procedure, public ::
+  <strong><a href='../type/htabrealqp.html#boundprocedure-destruct~51'>Destruct</a></strong> => HashTable_Destroy</td>
+                <td><p><strong>Type-Bound Subroutine</strong>: Destruct <br>
+ <strong>Purpose</strong>:  To free all memory currently used by the table.<br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    CALL Table%Destruct() <br>
+ <strong>Note</strong>:  This method is NOT equivalent to the <em>Clear</em> method.  After the <em>Clear</em> method
+      is called, other methods (the <em>Insert</em> method in particular) can be immediately used.
+      However, after the <em>Destruct</em> method is called, the <em>Construct</em> method must be called
+      again before other methods can be used. <br></p></td>
+              </tr>
+              <tr>
+                <td>  procedure, public ::
+  <strong><a href='../type/htabrealqp.html#boundprocedure-insert~35'>Insert</a></strong> => HashTable_Insert</td>
+                <td><p><strong>Type-Bound Subroutine</strong>: Insert <br>
+ <strong>Purpose</strong>:  To insert the specified key-value pair to the table. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    CALL Table%Insert(Key, Value) <br></p></td>
+              </tr>
+              <tr>
+                <td>  procedure, public ::
+  <strong><a href='../type/htabrealqp.html#boundprocedure-remove~38'>Remove</a></strong> => HashTable_Remove</td>
+                <td><p><strong>Type-Bound Function</strong>: Remove <br>
+ <strong>Purpose</strong>:  To remove the specified key (and its associated value) from the table.
+               Also, return a flag indicating whether the key-value pair is successfully
+               removed or not.  Optionally, retrieve the associated value if the key
+               exists in the table.  <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    Flag = Table%Remove(Key, Value) <br>
+  ---&gt;    IF (.NOT.Table%Remove(Key)) DoSomething</p></td>
+              </tr>
+              <tr>
+                <td>  procedure, public ::
+  <strong><a href='../type/htabrealqp.html#boundprocedure-startfirst~42'>StartFirst</a></strong> => HashTable_Move2FirstPair</td>
+                <td><p><strong>Type-Bound Function</strong>: StartFirst <br>
+ <strong>Purpose</strong>:  To start an iteration and return a flag indicating whether
+               the table is empty or not. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    IsEmpty = Table%StartFirst() <br>
+  ---&gt;    IsEmpty = Table%StartFirst(FirstKey) <br>
+  ---&gt;    IsEmpty = Table%StartFirst(Value=FirstVal) <br>
+  ---&gt;    IsEmpty = Table%StartFirst(FirstKey, FirstVal)</p></td>
+              </tr>
+              <tr>
+                <td>  procedure, public ::
+  <strong><a href='../type/htabrealqp.html#boundprocedure-moveforward~42'>MoveForward</a></strong> => HashTable_Move2NextPair</td>
+                <td><p><strong>Type-Bound Function</strong>: MoveForward <br>
+ <strong>Purpose</strong>:  To move to the next key-value pair and return a flag
+               indicating whether the cursor pointer has reached the end of
+               the table or not. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    IsTheEnd = Table%MoveForward() <br>
+  ---&gt;    IsTheEnd = Table%MoveForward(NextKey) <br>
+  ---&gt;    IsTheEnd = Table%MoveForward(Value=NextVal) <br>
+  ---&gt;    IsTheEnd = Table%MoveForward(NextKey, NextVal) <br>
+ <strong>Important Note</strong>: <br>
+  After the start of the current iteration (i.e. a call to the <em>StartFirst</em> method),
+  a user should not insert or remove any key-value pair.  Otherwise, the <em>MoveForward</em>
+  method is not valid for the current iteration and the user must re-start the iteration
+  in order to use the <em>MoveForward</em> method.</p></td>
+              </tr>
+              <tr>
+                <td>  procedure, public ::
+  <strong><a href='../type/htabrealqp.html#boundprocedure-isempty~100'>IsEmpty</a></strong> => HashTable_IsEmpty</td>
+                <td><p><strong>Type-Bound Function</strong>: IsEmpty <br>
+ <strong>Purpose</strong>:  To check whether the table is empty or not. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    Flag = Table%IsEmpty() <br>
+  ---&gt;    IF (.NOT.Table%IsEmpty()) DoSomeThing</p></td>
+              </tr>
+              <tr>
+                <td>  procedure, public ::
+  <strong><a href='../type/htabrealqp.html#boundprocedure-getsize~51'>GetSize</a></strong> => HashTable_GetSize</td>
+                <td><p><strong>Type-Bound Function</strong>: GetSize <br>
+ <strong>Purpose</strong>:  To get the current size (number of keys and their associated values) of the table. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    Size = Table%GetSize()</p></td>
+              </tr>
+              <tr>
+                <td>  procedure, public ::
+  <strong><a href='../type/htabrealqp.html#boundprocedure-contain~20'>Contain</a></strong> => HashTable_Contain</td>
+                <td><p><strong>Type-Bound Function</strong>: Contain <br>
+ <strong>Purpose</strong>:  To find the specified key in the table.  Return true if
+               the specified key is found.  Otherwise, return false. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    Flag = Table%Contain(Key) <br>
+  ---&gt;    IF (.NOT.Table%Contain(Key)) DoSomething</p></td>
+              </tr>
+              <tr>
+                <td>  procedure, public ::
+  <strong><a href='../type/htabrealqp.html#boundprocedure-getvalue~17'>GetValue</a></strong> => HashTable_GetValue</td>
+                <td><p><strong>Type-Bound Function</strong>: GetValue <br>
+ <strong>Purpose</strong>:  To get a value associated with the specified key in the table.
+               Also, return a flag indicating whether the key-value pair is
+               successfully found or not. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    Flag = Table%GetValue(Key, Value) <br>
+  ---&gt;    IF (.NOT.Table%GetValue(Key, Value)) DoSomething</p></td>
+              </tr>
+              <tr>
+                <td>  procedure, public ::
+  <strong><a href='../type/htabrealqp.html#boundprocedure-getkeys~20'>GetKeys</a></strong> => HashTable_GetAllKeys</td>
+                <td><p><strong>Type-Bound Subroutine</strong>: GetKeys <br>
+ <strong>Purpose</strong>:  To return a queue of all keys and optionally a queue of all associated values. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    CALL Tree%GetKeys(KeyQueue) <br>
+  ---&gt;    CALL Tree%GetKeys(KeyQueue, ValueQueue) <br></p></td>
+              </tr>
+          </tbody>
+        </table>
+    </div>
+  </div>
+
+        </section>
+        <br>
+
+
+
+
+
+    </div>
+  </div>
+
+      <hr>
+    </div> <!-- /container -->
+    <footer>
+      <div class="container">
+        <div class="row justify-content-between">
+          <div class="col"><p>eXPerimental Fortran Library (XpfLib) Documentation was developed by Niranama<br>&copy; 2024 
+</p>
+          </div>
+          <div class="col">
+            <p class="text-end">
+              Documentation generated by
+              <a href="https://github.com/Fortran-FOSS-Programmers/ford">FORD</a>
+            </p>
+          </div>
+        </div>
+        <br>
+      </div> <!-- /container -->
+    </footer>
+
+    <!-- Bootstrap core JavaScript -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>    
+
+    <!-- MathJax JavaScript
+             ================================================== -->
+             <!-- Placed at the end of the document so the pages load faster -->
+        <script type="text/x-mathjax-config">
+          MathJax.Hub.Config({
+          TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } },
+          jax: ['input/TeX','input/MathML','output/HTML-CSS'],
+          extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']
+          });
+        </script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+          <script src="../tipuesearch/tipuesearch_content.js"></script>
+          <script src="../tipuesearch/tipuesearch_set.js"></script>
+          <script src="../tipuesearch/tipuesearch.js"></script>
+
+  </body>
+</html>

@@ -1,0 +1,1716 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta name="description" content="Experimental Fortran Package - Hash Functions">
+    <meta name="author" content="Niranama" >
+    <link rel="icon" href="../favicon.png">
+
+    <title>XX3Hasher128 &ndash; eXPerimental Fortran Library (XpfLib) Documentation </title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link href="../css/pygments.css" rel="stylesheet">
+    <link href="../css/font-awesome.min.css" rel="stylesheet">
+    <link href="../css/local.css" rel="stylesheet">
+      <link  href="../tipuesearch/tipuesearch.css" rel="stylesheet">
+
+    <script src="https://code.jquery.com/jquery-3.7.0.slim.min.js" integrity="sha256-tG5mcZUtJsZvyKAxYLVXrmjKBVLd6VpVccqz/r4ypFE=" crossorigin="anonymous"></script>
+  </head>
+
+  <body>
+
+    <!-- Fixed navbar -->
+    <div class="container-fluid mb-sm-4 mb-xl-2">
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container">
+          <a class="navbar-brand" href="../index.html">eXPerimental Fortran Library (XpfLib) Documentation </a>
+          <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar"
+                  aria-expanded="false" aria-controls="navbar" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon">
+          </button>
+
+          <div id="navbar" class="navbar-collapse collapse">
+            <ul class="navbar-nav">
+                  <li class="nav-item">
+                    <a class="nav-link" href="../lists/files.html">Source Files</a>
+                  </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../lists/modules.html">Modules</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../lists/procedures.html">Procedures</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../lists/absint.html">Abstract Interfaces</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../lists/types.html">Derived Types</a>
+                </li>
+            </ul>
+              <div class="d-flex align-items-end flex-grow-1">
+                <form action="../search.html" role="search" class="ms-auto">
+                  <input type="text" class="form-control" aria-label="Search" placeholder="Search" name="q" id="tipue_search_input" autocomplete="off" required>
+                </form>
+              </div>
+          </div><!--/.nav-collapse -->
+        </div>
+      </nav>
+    </div>
+
+    <div class="container">
+  <div class="row">
+    <h1>XX3Hasher128
+      <small>Derived Type</small>
+      
+    </h1>
+      <div class="container p-2 mb-4 bg-light border rounded-3">
+    <div class="row align-items-center justify-content-between" id="info-bar">
+      <div class="col">
+        <ul class="list-inline" style="margin-bottom:0px;display:inline">
+
+            <li class="list-inline-item" id="statements"><i class="fa fa-list-ol"></i>
+              <a data-bs-toggle="tooltip"
+                 data-bs-placement="bottom" data-html="true"
+                 title="<p> 0.7% of total for derived types.</p>Including implementation: 260 statements,  1.6% of total for derived types.">8 statements</a>
+            </li>
+
+            <li class="list-inline-item" id="source-file">
+              <i class="fa fa-code"></i>
+              <a href="../src/MClass_XX3Hasher64.f90"> Source File</a>
+            </li>
+        </ul>
+      </div>
+      <div class="col">
+        <nav aria-label="breadcrumb">
+          <ol class="breadcrumb justify-content-end mb-0">
+                <li class="breadcrumb-item"><a href='../sourcefile/mclass_xx3hasher64.f90.html'>MClass_XX3Hasher64.f90</a></li>
+                <li class="breadcrumb-item"><a href='../module/mclass_xx3hasher64.html'>MClass_XX3Hasher64</a></li>
+            <li class="breadcrumb-item active" aria-current="page">XX3Hasher128</li>
+          </ol>
+        </nav>
+      </div>
+    </div>
+  </div>
+  <script>
+    $(function () {
+    $('[data-bs-toggle="tooltip"]').tooltip()
+    })
+  </script>
+
+  </div>
+  
+  <div class="row">
+    <div class="col-md-3 hidden-xs hidden-sm visible-md visible-lg">
+      <div id="sidebar">
+      <h3>Contents</h3>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+      <div class="card mb-4">
+      <a data-bs-toggle="collapse" href="#boundprocs-0"
+         aria-expanded="false" aria-controls="boundprocs-0">
+         <h4 class="card-header bg-primary text-white">Type-Bound Procedures</h4>
+      </a>
+      <div id="boundprocs-0" class="collapse">
+        <div class="list-group list-group-flush">
+            <a class="list-group-item" href="../type/xx3hasher128.html#boundprocedure-reset~12">Reset</a>
+            <a class="list-group-item" href="../type/xx3hasher128.html#boundprocedure-getblockcount">GetBlockCount</a>
+            <a class="list-group-item" href="../type/xx3hasher128.html#boundprocedure-getbuflen~2">GetBufLen</a>
+            <a class="list-group-item" href="../type/xx3hasher128.html#boundprocedure-update">Update</a>
+            <a class="list-group-item" href="../type/xx3hasher128.html#boundprocedure-getblocklength~15">GetBlockLength</a>
+            <a class="list-group-item" href="../type/xx3hasher128.html#boundprocedure-setbufptr~37">SetBufPtr</a>
+            <a class="list-group-item" href="../type/xx3hasher128.html#boundprocedure-processblock~37">ProcessBlock</a>
+            <a class="list-group-item" href="../type/xx3hasher128.html#boundprocedure-initialize~44">Initialize</a>
+            <a class="list-group-item" href="../type/xx3hasher128.html#boundprocedure-initializewsecret">InitializeWSecret</a>
+            <a class="list-group-item" href="../type/xx3hasher128.html#boundprocedure-hashdirect~15">HashDirect</a>
+            <a class="list-group-item" href="../type/xx3hasher128.html#boundprocedure-hashdirectwsecret">HashDirectWSecret</a>
+            <a class="list-group-item" href="../type/xx3hasher128.html#boundprocedure-getname~46">GetName</a>
+            <a class="list-group-item" href="../type/xx3hasher128.html#boundprocedure-finalize~17">Finalize</a>
+            <a class="list-group-item" href="../type/xx3hasher128.html#boundprocedure-finalize128~3">Finalize128</a>
+            <a class="list-group-item" href="../type/xx3hasher128.html#boundprocedure-hashdirect128~3">HashDirect128</a>
+            <a class="list-group-item" href="../type/xx3hasher128.html#boundprocedure-hashdirect128wsecret">HashDirect128WSecret</a>
+        </div>
+      </div>
+    </div>
+
+  
+  
+    <div class="card card-primary">
+      <div class="card-header text-left"><h3 class="card-title">Source Code</h3></div>
+      <div class="list-group">
+        <a class="list-group-item" href="../type/xx3hasher128.html#src">XX3Hasher128</a>
+      </div>
+    </div>
+
+
+  </div>
+
+    </div>
+    
+    <div class="col-md-9" id='text'>
+      <h2>type, public, extends(<a href='../type/xx3hasher64.html'>XX3Hasher64</a>) :: XX3Hasher128</h2>
+    <p><em>XX3Hasher128</em> is a hasher type that outputs the hash value as a 128-bit integer.
+ It is a subtype of the <em>XX3Hasher64</em> type.</p>
+    <br>
+
+    
+
+
+      <section>
+        <h2>Type-Bound Procedures</h2>
+          <div class="row">
+              <div class="card mt-3">
+    <div class="card-header codesum">
+      <span class="anchor" id="boundprocedure-reset~12"></span>
+      <h3>
+          procedure, public ::
+  <strong>Reset</strong> => HS_Reset
+        
+      </h3>
+    </div>
+      <div class="card-body">
+        
+        <p><em>Reset</em> is a procedure to reset components of the hasher to their initial values. <br>
+ This procedure is NOT intended to be used by a user.</p>
+      </div>
+    <ul class="list-group">
+        <li class="list-group-item">
+                  <h3>
+    private  subroutine HS_Reset(HS)  
+</h3>
+
+  <p>To reset components of the hasher.</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(<a href='../type/basehasher.html'>BaseHasher</a>),
+            </td>
+<td>intent(inout)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>HS</strong></td>
+            <td>
+                <p>a hasher (HS) object</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+        </li>
+    </ul>
+  </div>
+
+          </div>
+          <div class="row">
+              <div class="card mt-3">
+    <div class="card-header codesum">
+      <span class="anchor" id="boundprocedure-getblockcount"></span>
+      <h3>
+          procedure, public ::
+  <strong>GetBlockCount</strong> => HS_BlockCount
+        
+      </h3>
+    </div>
+      <div class="card-body">
+        
+        <p><em>GetBlockCount</em> is a procedure to get the number of blocks of input processed. <br>
+ This procedure is NOT intended to be used by a user.</p>
+      </div>
+    <ul class="list-group">
+        <li class="list-group-item">
+                  <h3>
+    private  function HS_BlockCount(HS) result(BlockCount)  
+</h3>
+
+  <p>To get the number of blocks of input processed.</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(<a href='../type/basehasher.html'>BaseHasher</a>),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>HS</strong></td>
+            <td>
+                <p>a hasher (HS) object</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+    <h4>
+    Return Value
+    <small>integer(kind=kInt32)</small>
+    </h4>
+    <p>number of blocks</p>
+
+        </li>
+    </ul>
+  </div>
+
+          </div>
+          <div class="row">
+              <div class="card mt-3">
+    <div class="card-header codesum">
+      <span class="anchor" id="boundprocedure-getbuflen~2"></span>
+      <h3>
+          procedure, public ::
+  <strong>GetBufLen</strong> => HS_BufLen
+        
+      </h3>
+    </div>
+      <div class="card-body">
+        
+        <p><em>GetBufLen</em> is a procedure to get the number of bytes of input currently
+ stored in the buffer. <br>
+ This procedure is NOT intended to be used by a user.</p>
+      </div>
+    <ul class="list-group">
+        <li class="list-group-item">
+                  <h3>
+    private  function HS_BufLen(HS) result(BufLen)  
+</h3>
+
+  <p>To get the number of bytes of input currently stored in the buffer.</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(<a href='../type/basehasher.html'>BaseHasher</a>),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>HS</strong></td>
+            <td>
+                <p>a hasher (HS) object</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+    <h4>
+    Return Value
+    <small>integer(kind=kInt32)</small>
+    </h4>
+    <p>number of bytes</p>
+
+        </li>
+    </ul>
+  </div>
+
+          </div>
+          <div class="row">
+              <div class="card mt-3">
+    <div class="card-header codesum">
+      <span class="anchor" id="boundprocedure-update"></span>
+      <h3>
+          procedure, public ::
+  <strong>Update</strong> => HS_Update
+        
+      </h3>
+    </div>
+      <div class="card-body">
+        
+        <p><strong>Type-Bound Subroutine</strong>: Update <br>
+ <strong>Purpose</strong>:  To insert input data into the hasher (i.e. temporarily stored in the
+               buffer array) and process block(s) of data if necessary. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    CALL Hasher%Update(Input, InpSize) <br>
+ <strong>Important Note</strong>: The specified input can be any type and any rank where
+              its size is the number of bytes of storage used by the input.</p>
+      </div>
+    <ul class="list-group">
+        <li class="list-group-item">
+                  <h3>
+    private  subroutine HS_Update(HS, Input, InpSize)  
+</h3>
+
+  <p>To insert input data into the hasher (i.e. temporary stored in the buffer array)
+ and process block(s) of data if necessary.</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(<a href='../type/basehasher.html'>BaseHasher</a>),
+            </td>
+<td>intent(inout)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>HS</strong></td>
+            <td>
+                <p>a hasher (HS) object</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              type(*),
+            </td>
+<td>intent(in),</td>
+              <td></td>            <td>
+              CONTIGUOUS
+            </td>
+            <td>::</td>
+            <td><strong>Input</strong>(..)</td>
+            <td>
+                <p>input data (any type and rank)</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              integer(kind=kInt32),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>InpSize</strong></td>
+            <td>
+                <p>size of the input (in bytes)</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+        </li>
+    </ul>
+  </div>
+
+          </div>
+          <div class="row">
+              <div class="card mt-3">
+    <div class="card-header codesum">
+      <span class="anchor" id="boundprocedure-getblocklength~15"></span>
+      <h3>
+          procedure, public ::
+  <strong>GetBlockLength</strong> => XX3_BlockLength
+        
+      </h3>
+    </div>
+      <div class="card-body">
+        
+        <p><em>GetBlockLength</em> is a procedure to return the block length of this hasher. <br>
+ This procedure is NOT intended to be used by a user.</p>
+      </div>
+    <ul class="list-group">
+        <li class="list-group-item">
+                  <h3>
+    private  function XX3_BlockLength(HS) result(Length)  
+</h3>
+
+  <p>To return the <em>block length</em> for the hash function.</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(<a href='../type/xx3hasher64.html'>XX3Hasher64</a>),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>HS</strong></td>
+            <td>
+                <p>a hasher (HS) object</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+    <h4>
+    Return Value
+    <small>integer(kind=kInt32)</small>
+    </h4>
+    <p>the block length</p>
+
+        </li>
+    </ul>
+  </div>
+
+          </div>
+          <div class="row">
+              <div class="card mt-3">
+    <div class="card-header codesum">
+      <span class="anchor" id="boundprocedure-setbufptr~37"></span>
+      <h3>
+          procedure, public ::
+  <strong>SetBufPtr</strong> => XX3_SetBufPtr
+        
+      </h3>
+    </div>
+      <div class="card-body">
+        
+        <p><em>SetBufPtr</em> is a procedure to set a pointer to the buffer array of this hasher. <br>
+ This procedure is NOT intended to be used by a user.</p>
+      </div>
+    <ul class="list-group">
+        <li class="list-group-item">
+                  <h3>
+    private  subroutine XX3_SetBufPtr(HS, BufPtr)  
+</h3>
+
+  <p>To set the pointer <em>BufPtr</em> to the actual buffer array with starting index of zero.</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(<a href='../type/xx3hasher64.html'>XX3Hasher64</a>),
+            </td>
+<td>intent(inout),</td>
+              <td></td>            <td>
+              TARGET
+            </td>
+            <td>::</td>
+            <td><strong>HS</strong></td>
+            <td>
+                <p>a hasher (HS) object</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              integer(kind=kInt8),
+            </td>
+<td>intent(inout),</td>
+              <td></td>            <td>
+              POINTER
+            </td>
+            <td>::</td>
+            <td><strong>BufPtr</strong>(:)</td>
+            <td>
+                <p>a buffer pointer</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+        </li>
+    </ul>
+  </div>
+
+          </div>
+          <div class="row">
+              <div class="card mt-3">
+    <div class="card-header codesum">
+      <span class="anchor" id="boundprocedure-processblock~37"></span>
+      <h3>
+          procedure, public ::
+  <strong>ProcessBlock</strong> => XX3_ProcessBlock
+        
+      </h3>
+    </div>
+      <div class="card-body">
+        
+        <p><em>ProcessBlock</em> is a procedure to process one block of data for this hasher. <br>
+ This procedure is NOT intended to be used by a user.</p>
+      </div>
+    <ul class="list-group">
+        <li class="list-group-item">
+                  <h3>
+    private  subroutine XX3_ProcessBlock(HS, BytesIn)  
+</h3>
+
+  <p>To process one block of data.</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(<a href='../type/xx3hasher64.html'>XX3Hasher64</a>),
+            </td>
+<td>intent(inout)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>HS</strong></td>
+            <td>
+                <p>a hasher (HS) object</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              integer(kind=kInt8),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>BytesIn</strong>(0:)</td>
+            <td>
+                <p>the data block</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+        </li>
+    </ul>
+  </div>
+
+          </div>
+          <div class="row">
+              <div class="card mt-3">
+    <div class="card-header codesum">
+      <span class="anchor" id="boundprocedure-initialize~44"></span>
+      <h3>
+          procedure, public ::
+  <strong>Initialize</strong> => XX3_Initialize
+        
+      </h3>
+    </div>
+      <div class="card-body">
+        
+        <p><strong>Type-Bound Subroutine</strong>: Initialize <br>
+ <strong>Purpose</strong>:  To initialize the hasher. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    CALL Hasher%Initialize(Seed)            ! hash value with sign <br>
+  ---&gt;    CALL Hasher%Initialize(Seed, .TRUE.)    ! remove sign from hash value <br></p>
+      </div>
+    <ul class="list-group">
+        <li class="list-group-item">
+                  <h3>
+    private  subroutine XX3_Initialize(HS, Seed, RemoveSign)  
+</h3>
+
+  <p>To initialize the hasher without seed or with one seed.</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(<a href='../type/xx3hasher64.html'>XX3Hasher64</a>),
+            </td>
+<td>intent(inout),</td>
+              <td></td>            <td>
+              TARGET
+            </td>
+            <td>::</td>
+            <td><strong>HS</strong></td>
+            <td>
+                <p>a hasher (HS) object</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              integer(kind=kInt64),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Seed</strong></td>
+            <td>
+                <p>seed</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              logical,
+            </td>
+<td>intent(in),</td>
+              <td>optional</td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>RemoveSign</strong></td>
+            <td>
+                <p>flag indicating whether to remove sign bit or not. <br>
+ - If true, always returns a positive value of the hash code. <br>
+ - If false, returns either a positive or negative value of the hash code. <br>
+ - default is false.</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+        </li>
+    </ul>
+  </div>
+
+          </div>
+          <div class="row">
+              <div class="card mt-3">
+    <div class="card-header codesum">
+      <span class="anchor" id="boundprocedure-initializewsecret"></span>
+      <h3>
+          procedure, public ::
+  <strong>InitializeWSecret</strong> => XX3_Initialize_wSecret
+        
+      </h3>
+    </div>
+      <div class="card-body">
+        
+        <p><strong>Type-Bound Subroutine</strong>: InitializeWSecret <br>
+ <strong>Purpose</strong>:  To initialize the hasher with specified secret. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    CALL Hasher%InitializeWSecret(Seed, Secret)         ! hash value with sign <br>
+  ---&gt;    CALL Hasher%InitializeWSecret(Seed, Secret, .TRUE.) ! remove sign from hash value <br></p>
+      </div>
+    <ul class="list-group">
+        <li class="list-group-item">
+                  <h3>
+    private  subroutine XX3_Initialize_wSecret(HS, Seed, Secret, RemoveSign)  
+</h3>
+
+  <p>To initialize the hasher without seed or with one seed.</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(<a href='../type/xx3hasher64.html'>XX3Hasher64</a>),
+            </td>
+<td>intent(inout),</td>
+              <td></td>            <td>
+              TARGET
+            </td>
+            <td>::</td>
+            <td><strong>HS</strong></td>
+            <td>
+                <p>a hasher (HS) object</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              integer(kind=kInt64),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Seed</strong></td>
+            <td>
+                <p>seed</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              integer(kind=kInt8),
+            </td>
+<td>intent(in),</td>
+              <td></td>            <td>
+              TARGET
+            </td>
+            <td>::</td>
+            <td><strong>Secret</strong>(0:)</td>
+            <td>
+                <p>a byte (8-bit integer) array (of at least 192 bytes) representing
+ a custom secret <br></p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              logical,
+            </td>
+<td>intent(in),</td>
+              <td>optional</td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>RemoveSign</strong></td>
+            <td>
+                <p>flag indicating whether to remove sign bit or not. <br>
+ - If true, always returns a positive value of the hash code. <br>
+ - If false, returns either a positive or negative value of the hash code. <br>
+ - default is false.</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+        </li>
+    </ul>
+  </div>
+
+          </div>
+          <div class="row">
+              <div class="card mt-3">
+    <div class="card-header codesum">
+      <span class="anchor" id="boundprocedure-hashdirect~15"></span>
+      <h3>
+          procedure, public ::
+  <strong>HashDirect</strong> => XX3_HashDirect
+        
+      </h3>
+    </div>
+      <div class="card-body">
+        
+        <p><strong>Type-Bound Function</strong>: HashDirect <br>
+ <strong>Purpose</strong>:  To compute the hash value directly (non-incrementally). <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    HashCode = Hasher%HashDirect(Input, InpSize) <br>
+  ---&gt;    HashCode = Hasher%HashDirect(Input, InpSize, Seed) <br>
+  ---&gt;    HashCode = Hasher%HashDirect(Input, InpSize, RemoveSign=.TRUE.) <br>
+ <strong>Note</strong>: The specified input can be any type and any rank where its size is
+           the number of bytes of storage used by the input.</p>
+      </div>
+    <ul class="list-group">
+        <li class="list-group-item">
+                  <h3>
+    private  function XX3_HashDirect(HS, Input, InpSize, Seed, RemoveSign) result(HashCode)  
+</h3>
+
+  <p>To compute the hash value directly (non-incremental) without seed or with one seed.</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(<a href='../type/xx3hasher64.html'>XX3Hasher64</a>),
+            </td>
+<td>intent(inout)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>HS</strong></td>
+            <td>
+                <p>a hasher (HS) object</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              type(*),
+            </td>
+<td>intent(in),</td>
+              <td></td>            <td>
+              CONTIGUOUS
+            </td>
+            <td>::</td>
+            <td><strong>Input</strong>(..)</td>
+            <td>
+                <p>input data (any type and rank)</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              integer(kind=kInt32),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>InpSize</strong></td>
+            <td>
+                <p>size of the input (in bytes)</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              integer(kind=kInt64),
+            </td>
+<td>intent(in),</td>
+              <td>optional</td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Seed</strong></td>
+            <td>
+                <p>seed</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              logical,
+            </td>
+<td>intent(in),</td>
+              <td>optional</td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>RemoveSign</strong></td>
+            <td>
+                <p>flag indicating whether to remove sign bit or not. <br>
+ - If true, always returns a positive value of the hash code. <br>
+ - If false, returns either a positive or negative value of the hash code. <br>
+ - default is false.</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+    <h4>
+    Return Value
+    <small>integer(kind=kInt64)</small>
+    </h4>
+    <p>hash code</p>
+
+        </li>
+    </ul>
+  </div>
+
+          </div>
+          <div class="row">
+              <div class="card mt-3">
+    <div class="card-header codesum">
+      <span class="anchor" id="boundprocedure-hashdirectwsecret"></span>
+      <h3>
+          procedure, public ::
+  <strong>HashDirectWSecret</strong> => XX3_HashDirect_wSecret
+        
+      </h3>
+    </div>
+      <div class="card-body">
+        
+        <p><strong>Type-Bound Function</strong>: HashDirectWSecret <br>
+ <strong>Purpose</strong>:  To compute the hash value directly with specified seed and secret. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    HashCode = Hasher%HashDirectWSecret(Input, InpSize, Seed, Secret) <br>
+  ---&gt;    HashCode = Hasher%HashDirectWSecret(Input, InpSize, Seed, Secret, RemoveSign=.TRUE.) <br>
+ <strong>Note</strong>: The specified input can be any type and any rank where its size is
+           the number of bytes of storage used by the input.</p>
+      </div>
+    <ul class="list-group">
+        <li class="list-group-item">
+                  <h3>
+    private  function XX3_HashDirect_wSecret(HS, Input, InpSize, Seed, Secret, RemoveSign) result(HashCode)  
+</h3>
+
+  <p>To compute the hash value directly (non-incremental) without seed or with one seed.</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(<a href='../type/xx3hasher64.html'>XX3Hasher64</a>),
+            </td>
+<td>intent(inout)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>HS</strong></td>
+            <td>
+                <p>a hasher (HS) object</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              type(*),
+            </td>
+<td>intent(in),</td>
+              <td></td>            <td>
+              CONTIGUOUS
+            </td>
+            <td>::</td>
+            <td><strong>Input</strong>(..)</td>
+            <td>
+                <p>input data (any type and rank)</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              integer(kind=kInt32),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>InpSize</strong></td>
+            <td>
+                <p>size of the input (in bytes)</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              integer(kind=kInt64),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Seed</strong></td>
+            <td>
+                <p>seed</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              integer(kind=kInt8),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Secret</strong>(:)</td>
+            <td>
+                <p>a byte (8-bit integer) array (of at least 192 bytes) representing
+ a custom secret <br></p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              logical,
+            </td>
+<td>intent(in),</td>
+              <td>optional</td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>RemoveSign</strong></td>
+            <td>
+                <p>flag indicating whether to remove sign bit or not. <br>
+ - If true, always returns a positive value of the hash code. <br>
+ - If false, returns either a positive or negative value of the hash code. <br>
+ - default is false.</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+    <h4>
+    Return Value
+    <small>integer(kind=kInt64)</small>
+    </h4>
+    <p>hash code</p>
+
+        </li>
+    </ul>
+  </div>
+
+          </div>
+          <div class="row">
+              <div class="card mt-3">
+    <div class="card-header codesum">
+      <span class="anchor" id="boundprocedure-getname~46"></span>
+      <h3>
+          procedure, public ::
+  <strong>GetName</strong> => XX3_GetName128
+        
+      </h3>
+    </div>
+      <div class="card-body">
+        
+        <p><strong>Type-Bound Function</strong>: GetName <br>
+ <strong>Purpose</strong>:  To get the name of the hasher. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    Name = Hasher%GetName()</p>
+      </div>
+    <ul class="list-group">
+        <li class="list-group-item">
+                  <h3>
+    private  function XX3_GetName128(HS) result(Name)  
+</h3>
+
+  <p>To get the display name for this hasher.</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(<a href='../type/xx3hasher128.html'>XX3Hasher128</a>),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>HS</strong></td>
+            <td>
+                <p>a hasher (HS) object</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+    <h4>
+    Return Value
+    <small>character(kind=kChar, len=:), ALLOCATABLE</small>
+    </h4>
+    <p>name of the hash function</p>
+
+        </li>
+    </ul>
+  </div>
+
+          </div>
+          <div class="row">
+              <div class="card mt-3">
+    <div class="card-header codesum">
+      <span class="anchor" id="boundprocedure-finalize~17"></span>
+      <h3>
+          procedure, public ::
+  <strong>Finalize</strong> => XX3_Finalize64
+        
+      </h3>
+    </div>
+      <div class="card-body">
+        
+        <p><strong>Type-Bound Function</strong>: Finalize <br>
+ <strong>Purpose</strong>:  To finalize the current hash computation and return the hash value
+               in a 64-bit integer.  The object is reset. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    HashCode = Hasher%Finalize()</p>
+      </div>
+    <ul class="list-group">
+        <li class="list-group-item">
+                  <h3>
+    private  function XX3_Finalize64(HS) result(HashCode)  
+</h3>
+
+  <p>To finalize the current hash computation and return the hash value
+ in a 64-bit integer.  The object is reset.</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(<a href='../type/xx3hasher128.html'>XX3Hasher128</a>),
+            </td>
+<td>intent(inout)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>HS</strong></td>
+            <td>
+                <p>a hasher (HS) object</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+    <h4>
+    Return Value
+    <small>integer(kind=kInt64)</small>
+    </h4>
+    <p>hash code</p>
+
+        </li>
+    </ul>
+  </div>
+
+          </div>
+          <div class="row">
+              <div class="card mt-3">
+    <div class="card-header codesum">
+      <span class="anchor" id="boundprocedure-finalize128~3"></span>
+      <h3>
+          procedure, public ::
+  <strong>Finalize128</strong> => XX3_Finalize128
+        
+      </h3>
+    </div>
+      <div class="card-body">
+        
+        <p><strong>Type-Bound Function</strong>: Finalize128 <br>
+ <strong>Purpose</strong>:  To finalize the current hash computation and return the hash value
+               in a 128-bit integer.  The object is reset. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    HashCode = Hasher%Finalize128()</p>
+      </div>
+    <ul class="list-group">
+        <li class="list-group-item">
+                  <h3>
+    private  function XX3_Finalize128(HS) result(HashCode)  
+</h3>
+
+  <p>To finalize the current hash computation and return the hash value
+ in a 128-bit integer.  The object is reset.</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(<a href='../type/xx3hasher128.html'>XX3Hasher128</a>),
+            </td>
+<td>intent(inout)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>HS</strong></td>
+            <td>
+                <p>a hasher (HS) object</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+    <h4>
+    Return Value
+    <small>type(SInt128)</small>
+    </h4>
+    <p>hash code</p>
+
+        </li>
+    </ul>
+  </div>
+
+          </div>
+          <div class="row">
+              <div class="card mt-3">
+    <div class="card-header codesum">
+      <span class="anchor" id="boundprocedure-hashdirect128~3"></span>
+      <h3>
+          procedure, public ::
+  <strong>HashDirect128</strong> => XX3_HashDirect128
+        
+      </h3>
+    </div>
+      <div class="card-body">
+        
+        <p><strong>Type-Bound Function</strong>: HashDirect128 <br>
+ <strong>Purpose</strong>:  To compute the hash value directly (non-incrementally). <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    HashCode = Hasher%HashDirect128(Input, InpSize) <br>
+  ---&gt;    HashCode = Hasher%HashDirect128(Input, InpSize, Seed) <br>
+  ---&gt;    HashCode = Hasher%HashDirect128(Input, InpSize, RemoveSign=.TRUE.) <br>
+ <strong>Note</strong>: The specified input can be any type and any rank where its size is
+           the number of bytes of storage used by the input.</p>
+      </div>
+    <ul class="list-group">
+        <li class="list-group-item">
+                  <h3>
+    private  function XX3_HashDirect128(HS, Input, InpSize, Seed, RemoveSign) result(HashCode)  
+</h3>
+
+  <p>To compute the hash value directly (non-incremental) without seed or with one seed.</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(<a href='../type/xx3hasher128.html'>XX3Hasher128</a>),
+            </td>
+<td>intent(inout)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>HS</strong></td>
+            <td>
+                <p>a hasher (HS) object</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              type(*),
+            </td>
+<td>intent(in),</td>
+              <td></td>            <td>
+              CONTIGUOUS
+            </td>
+            <td>::</td>
+            <td><strong>Input</strong>(..)</td>
+            <td>
+                <p>input data (any type and rank)</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              integer(kind=kInt32),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>InpSize</strong></td>
+            <td>
+                <p>size of the input (in bytes)</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              integer(kind=kInt64),
+            </td>
+<td>intent(in),</td>
+              <td>optional</td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Seed</strong></td>
+            <td>
+                <p>seed</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              logical,
+            </td>
+<td>intent(in),</td>
+              <td>optional</td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>RemoveSign</strong></td>
+            <td>
+                <p>flag indicating whether to remove sign bit or not. <br>
+ - If true, always returns a positive value of the hash code. <br>
+ - If false, returns either a positive or negative value of the hash code. <br>
+ - default is false.</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+    <h4>
+    Return Value
+    <small>type(SInt128)</small>
+    </h4>
+    <p>hash code</p>
+
+        </li>
+    </ul>
+  </div>
+
+          </div>
+          <div class="row">
+              <div class="card mt-3">
+    <div class="card-header codesum">
+      <span class="anchor" id="boundprocedure-hashdirect128wsecret"></span>
+      <h3>
+          procedure, public ::
+  <strong>HashDirect128WSecret</strong> => XX3_HashDirect128_wSecret
+        
+      </h3>
+    </div>
+      <div class="card-body">
+        
+        <p><strong>Type-Bound Function</strong>: HashDirect128WSecret <br>
+ <strong>Purpose</strong>:  To compute the hash value directly with specified seed and secret. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    HashCode = Hasher%HashDirect128WSecret(Input, InpSize, Seed, Secret) <br>
+  ---&gt;    HashCode = Hasher%HashDirect128WSecret(Input, InpSize, Seed, Secret, RemoveSign=.TRUE.) <br>
+ <strong>Note</strong>: The specified input can be any type and any rank where its size is
+           the number of bytes of storage used by the input.</p>
+      </div>
+    <ul class="list-group">
+        <li class="list-group-item">
+                  <h3>
+    private  function XX3_HashDirect128_wSecret(HS, Input, InpSize, Seed, Secret, RemoveSign) result(HashCode)  
+</h3>
+
+  <p>To compute the hash value directly (non-incremental) with seed and secret.</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(<a href='../type/xx3hasher128.html'>XX3Hasher128</a>),
+            </td>
+<td>intent(inout)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>HS</strong></td>
+            <td>
+                <p>a hasher (HS) object</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              type(*),
+            </td>
+<td>intent(in),</td>
+              <td></td>            <td>
+              CONTIGUOUS
+            </td>
+            <td>::</td>
+            <td><strong>Input</strong>(..)</td>
+            <td>
+                <p>input data (any type and rank)</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              integer(kind=kInt32),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>InpSize</strong></td>
+            <td>
+                <p>size of the input (in bytes)</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              integer(kind=kInt64),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Seed</strong></td>
+            <td>
+                <p>seed</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              integer(kind=kInt8),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Secret</strong>(:)</td>
+            <td>
+                <p>a byte (8-bit integer) array (of at least 192 bytes) representing
+ a custom secret <br></p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              logical,
+            </td>
+<td>intent(in),</td>
+              <td>optional</td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>RemoveSign</strong></td>
+            <td>
+                <p>flag indicating whether to remove sign bit or not. <br>
+ - If true, always returns a positive value of the hash code. <br>
+ - If false, returns either a positive or negative value of the hash code. <br>
+ - default is false.</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+    <h4>
+    Return Value
+    <small>type(SInt128)</small>
+    </h4>
+    <p>hash code</p>
+
+        </li>
+    </ul>
+  </div>
+
+          </div>
+      </section>
+
+    <section>
+    <h3><span class="anchor" id="src"></span>Source Code</h3>
+    <div class="hl codehilite"><pre><span></span><span class="w">    </span><span class="k">TYPE</span><span class="p">,</span><span class="w"> </span><span class="k">EXTENDS</span><span class="p">(</span><span class="n">XX3Hasher64</span><span class="p">)</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">XX3Hasher128</span>
+<span class="w">    </span><span class="k">CONTAINS</span>
+<span class="w">        </span><span class="c">!&gt; **Type-Bound Function**: GetName &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Purpose**:  To get the name of the hasher. &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Usage**: &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!   ---&gt;    Name = Hasher%GetName()</span>
+<span class="w">        </span><span class="k">PROCEDURE</span><span class="w">   </span><span class="kd">::</span><span class="w"> </span><span class="n">GetName</span><span class="w">              </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">XX3_GetName128</span>
+<span class="w">        </span><span class="c">!&gt; **Type-Bound Function**: Finalize &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Purpose**:  To finalize the current hash computation and return the hash value</span>
+<span class="w">        </span><span class="c">!                in a 64-bit integer.  The object is reset. &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Usage**: &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!   ---&gt;    HashCode = Hasher%Finalize()</span>
+<span class="w">        </span><span class="k">PROCEDURE</span><span class="w">   </span><span class="kd">::</span><span class="w"> </span><span class="n">Finalize</span><span class="w">             </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">XX3_Finalize64</span>
+<span class="w">        </span><span class="c">!&gt; **Type-Bound Function**: Finalize128 &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Purpose**:  To finalize the current hash computation and return the hash value</span>
+<span class="w">        </span><span class="c">!                in a 128-bit integer.  The object is reset. &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Usage**: &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!   ---&gt;    HashCode = Hasher%Finalize128()</span>
+<span class="w">        </span><span class="k">PROCEDURE</span><span class="w">   </span><span class="kd">::</span><span class="w"> </span><span class="n">Finalize128</span><span class="w">          </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">XX3_Finalize128</span>
+<span class="w">        </span><span class="c">!&gt; **Type-Bound Function**: HashDirect128 &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Purpose**:  To compute the hash value directly (non-incrementally). &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Usage**: &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!   ---&gt;    HashCode = Hasher%HashDirect128(Input, InpSize) &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!   ---&gt;    HashCode = Hasher%HashDirect128(Input, InpSize, Seed) &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!   ---&gt;    HashCode = Hasher%HashDirect128(Input, InpSize, RemoveSign=.TRUE.) &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Note**: The specified input can be any type and any rank where its size is</span>
+<span class="w">        </span><span class="c">!            the number of bytes of storage used by the input.</span>
+<span class="w">        </span><span class="k">PROCEDURE</span><span class="w">   </span><span class="kd">::</span><span class="w"> </span><span class="n">HashDirect128</span><span class="w">        </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">XX3_HashDirect128</span>
+<span class="w">        </span><span class="c">!&gt; **Type-Bound Function**: HashDirect128WSecret &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Purpose**:  To compute the hash value directly with specified seed and secret. &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Usage**: &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!   ---&gt;    HashCode = Hasher%HashDirect128WSecret(Input, InpSize, Seed, Secret) &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!   ---&gt;    HashCode = Hasher%HashDirect128WSecret(Input, InpSize, Seed, Secret, RemoveSign=.TRUE.) &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Note**: The specified input can be any type and any rank where its size is</span>
+<span class="w">        </span><span class="c">!            the number of bytes of storage used by the input.</span>
+<span class="w">        </span><span class="k">PROCEDURE</span><span class="w">   </span><span class="kd">::</span><span class="w"> </span><span class="n">HashDirect128WSecret</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">XX3_HashDirect128_wSecret</span>
+<span class="w">    </span><span class="k">END TYPE </span><span class="n">XX3Hasher128</span>
+</pre></div>
+
+    </section>
+    
+    </div>
+  </div>
+
+      <hr>
+    </div> <!-- /container -->
+    <footer>
+      <div class="container">
+        <div class="row justify-content-between">
+          <div class="col"><p>eXPerimental Fortran Library (XpfLib) Documentation was developed by Niranama<br>&copy; 2024 
+</p>
+          </div>
+          <div class="col">
+            <p class="text-end">
+              Documentation generated by
+              <a href="https://github.com/Fortran-FOSS-Programmers/ford">FORD</a>
+            </p>
+          </div>
+        </div>
+        <br>
+      </div> <!-- /container -->
+    </footer>
+
+    <!-- Bootstrap core JavaScript -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>    
+
+    <!-- MathJax JavaScript
+             ================================================== -->
+             <!-- Placed at the end of the document so the pages load faster -->
+        <script type="text/x-mathjax-config">
+          MathJax.Hub.Config({
+          TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } },
+          jax: ['input/TeX','input/MathML','output/HTML-CSS'],
+          extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']
+          });
+        </script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+          <script src="../tipuesearch/tipuesearch_content.js"></script>
+          <script src="../tipuesearch/tipuesearch_set.js"></script>
+          <script src="../tipuesearch/tipuesearch.js"></script>
+
+  </body>
+</html>

@@ -1,0 +1,968 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta name="description" content="Experimental Fortran Package - Base Modules and Classes">
+    <meta name="author" content="Niranama" >
+    <link rel="icon" href="../favicon.png">
+
+    <title>MClass_KeyUnordered &ndash; eXPerimental Fortran Library (XpfLib) Documentation</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link href="../css/pygments.css" rel="stylesheet">
+    <link href="../css/font-awesome.min.css" rel="stylesheet">
+    <link href="../css/local.css" rel="stylesheet">
+      <link  href="../tipuesearch/tipuesearch.css" rel="stylesheet">
+
+    <script src="https://code.jquery.com/jquery-3.7.0.slim.min.js" integrity="sha256-tG5mcZUtJsZvyKAxYLVXrmjKBVLd6VpVccqz/r4ypFE=" crossorigin="anonymous"></script>
+  </head>
+
+  <body>
+
+    <!-- Fixed navbar -->
+    <div class="container-fluid mb-sm-4 mb-xl-2">
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container">
+          <a class="navbar-brand" href="../index.html">eXPerimental Fortran Library (XpfLib) Documentation </a>
+          <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar"
+                  aria-expanded="false" aria-controls="navbar" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon">
+          </button>
+
+          <div id="navbar" class="navbar-collapse collapse">
+            <ul class="navbar-nav">
+                  <li class="nav-item">
+                    <a class="nav-link" href="../lists/files.html">Source Files</a>
+                  </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../lists/modules.html">Modules</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../lists/procedures.html">Procedures</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../lists/absint.html">Abstract Interfaces</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../lists/types.html">Derived Types</a>
+                </li>
+            </ul>
+              <div class="d-flex align-items-end flex-grow-1">
+                <form action="../search.html" role="search" class="ms-auto">
+                  <input type="text" class="form-control" aria-label="Search" placeholder="Search" name="q" id="tipue_search_input" autocomplete="off" required>
+                </form>
+              </div>
+          </div><!--/.nav-collapse -->
+        </div>
+      </nav>
+    </div>
+
+    <div class="container">
+  <div class="row">
+    <h1>MClass_KeyUnordered
+      <small>Module</small>
+      
+    </h1>
+      <div class="container p-2 mb-4 bg-light border rounded-3">
+    <div class="row align-items-center justify-content-between" id="info-bar">
+      <div class="col">
+        <ul class="list-inline" style="margin-bottom:0px;display:inline">
+
+            <li class="list-inline-item" id="statements"><i class="fa fa-list-ol"></i>
+              <a data-bs-toggle="tooltip"
+                 data-bs-placement="bottom" data-html="true"
+                 title=" 1.6% of total for modules and submodules.">724 statements</a>
+            </li>
+
+            <li class="list-inline-item" id="source-file">
+              <i class="fa fa-code"></i>
+              <a href="../src/MClass_KeyUnordered.f90"> Source File</a>
+            </li>
+        </ul>
+      </div>
+      <div class="col">
+        <nav aria-label="breadcrumb">
+          <ol class="breadcrumb justify-content-end mb-0">
+                <li class="breadcrumb-item"><a href='../sourcefile/mclass_keyunordered.f90.html'>MClass_KeyUnordered.f90</a></li>
+            <li class="breadcrumb-item active" aria-current="page">MClass_KeyUnordered</li>
+          </ol>
+        </nav>
+      </div>
+    </div>
+  </div>
+  <script>
+    $(function () {
+    $('[data-bs-toggle="tooltip"]').tooltip()
+    })
+  </script>
+
+  </div>
+
+  <div class="row">
+    <div class="col-md-3">
+        <div id="sidebar">
+      <h3>Contents</h3>
+  
+  
+  
+  
+  
+  
+  
+  
+      <div class="card mb-4">
+      <a data-bs-toggle="collapse" href="#inters-0"
+         aria-expanded="false" aria-controls="inters-0">
+         <h4 class="card-header bg-primary text-white">Interfaces</h4>
+      </a>
+      <div id="inters-0" class="collapse">
+        <div class="list-group list-group-flush">
+            <a class="list-group-item" href="../module/mclass_keyunordered.html#interface-memfree~3">MemFree</a>
+            <a class="list-group-item" href="../module/mclass_keyunordered.html#interface-memalloc~3">MemAlloc</a>
+            <a class="list-group-item" href="../module/mclass_keyunordered.html#interface-memresize~3">MemResize</a>
+        </div>
+      </div>
+    </div>
+
+  
+      <div class="card mb-4">
+      <a data-bs-toggle="collapse" href="#types-0"
+         aria-expanded="false" aria-controls="types-0">
+         <h4 class="card-header bg-primary text-white">Derived Types</h4>
+      </a>
+      <div id="types-0" class="collapse">
+        <div class="list-group list-group-flush">
+            <a class="list-group-item" href="../module/mclass_keyunordered.html#type-keyunordered">KeyUnordered</a>
+        </div>
+      </div>
+    </div>
+
+      <div class="card mb-4">
+      <a data-bs-toggle="collapse" href="#funcs-0"
+         aria-expanded="false" aria-controls="funcs-0">
+         <h4 class="card-header bg-primary text-white">Functions</h4>
+      </a>
+      <div id="funcs-0" class="collapse">
+        <div class="list-group list-group-flush">
+            <a class="list-group-item" href="../module/mclass_keyunordered.html#proc-iskeyunordered">IsKeyUnordered</a>
+        </div>
+      </div>
+    </div>
+
+  
+  
+  
+  
+  
+  
+  
+  
+
+
+  </div>
+
+    </div>
+
+    <div class="col-md-9" id='text'>
+      <p><strong>PURPOSE OF THIS MODULE</strong>: <br>
+  This module contains the <em>KeyUnordered</em> type and its related routines.  The <em>KeyUnordered</em>
+  type is a data type that provides a storage for an unordered key.  It can be used to store
+  any data types, except the <em>LOGICAL</em> type.  The <em>KeyUnordered</em> type is a subtype extended
+  from the <em>GenData</em> type. <br>
+  <em>Note</em>: By design, the <em>GenData</em> type requires the user to supply the <em>MemoryPool</em> type
+  when the <em>Set</em> method is called.  This means that the user is an owner of the specified
+  <em>MemoryPool</em> type and must be responsible for managing the memory pool.  If the type of
+  the data to be stored is a derived one, the user may specify a null pointer as an argument
+  to the <em>Set</em> method. <br></p>
+<br>          <div class="card mb-4">
+      <h3 class="card-header card-title bg-light">Uses</h3>
+      <div class="card-body">
+        <ul class="list-group list-group-flush">
+            <li class="list-group-item">
+              <ul class="list-inline">
+                  <li class="list-inline-item"><a href='../module/mbase_errhandlers.html'>MBase_ErrHandlers</a></li>
+                  <li class="list-inline-item"><a href='../module/mbase_common.html'>MBase_Common</a></li>
+                  <li class="list-inline-item"><a href='../module/mclass_gendata.html'>MClass_GenData</a></li>
+                  <li class="list-inline-item"><a href='../module/mclass_memorypool.html'>MClass_MemoryPool</a></li>
+              </ul>
+            </li>
+        </ul>
+      </div>
+    </div>
+
+      
+      <br>
+
+
+
+
+        <section>
+          <h2>Interfaces</h2>
+              <div class="card">
+    <div class="card-header bg-light codesum">
+      <span class="anchor" id="interface-memfree~3"></span>
+      <h3>public        interface <a href='../interface/memfree~3.html'>MemFree</a> 
+      </h3>
+    </div>
+      <div class="card-body">
+        <p><strong>Subroutine Interface</strong>: MemFree <br>
+ <strong>Purpose</strong>:  To free memory of the specified argument. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    CALL MemFree(A) <br></p>
+      </div>
+    <ul class="list-group">
+          <li class="list-group-item">
+                <h3>
+    private  subroutine KeyUnordered_MemFree_Alloc(A)  
+
+    </h3>
+  <p>To free memory of an allocatable/pointer entity.</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-a~137"></span>
+              type(<a href='../type/keyunordered.html'>KeyUnordered</a>),
+            </td>
+<td>intent(inout),</td>
+              <td></td>            <td>
+              ALLOCATABLE
+            </td>
+            <td>::</td>
+            <td><strong>A</strong>(..)</td>
+            <td>
+                
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+          </li>
+          <li class="list-group-item">
+                <h3>
+    private  subroutine KeyUnordered_MemFree_Ptr(A)  
+
+    </h3>
+  <p>To free memory of an allocatable/pointer entity.</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-a~138"></span>
+              type(<a href='../type/keyunordered.html'>KeyUnordered</a>),
+            </td>
+<td>intent(inout),</td>
+              <td></td>            <td>
+              POINTER
+            </td>
+            <td>::</td>
+            <td><strong>A</strong>(..)</td>
+            <td>
+                
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+          </li>
+    </ul>
+  </div>
+
+              <div class="card">
+    <div class="card-header bg-light codesum">
+      <span class="anchor" id="interface-memalloc~3"></span>
+      <h3>public        interface <a href='../interface/memalloc~3.html'>MemAlloc</a> 
+      </h3>
+    </div>
+      <div class="card-body">
+        <p><strong>Subroutine Interface</strong>: MemAlloc <br>
+ <strong>Purpose</strong>:  To allocate memory of the specified argument. <br>
+ <strong>Usage</strong>: <br>
+  ! allocate a 1-D array <br>
+  ---&gt;    CALL MemAlloc(Arr1D, 25) <br>
+  ---&gt;    CALL MemAlloc(Arr1D, 50, StartID=-20) <br>
+  ---&gt;    CALL MemAlloc(Arr1D, [25]) <br>
+  ---&gt;    CALL MemAlloc(Arr1D, [50], StartID=[-20]) <br>
+  ! allocate an array of any rank <br>
+  ---&gt;    CALL MemAlloc(Arr2D, [30, 30]) <br>
+  ---&gt;    CALL MemAlloc(Arr2D, [30, 30], StartID=[-10, 10]) <br>
+  ---&gt;    CALL MemAlloc(Arr3D, [30, 40, 50]) <br>
+  ---&gt;    CALL MemAlloc(Arr3D, [30, 40, 50], StartID=[0, 0, 0]) <br>
+  ---&gt;    CALL MemAlloc(Arr7D, ASize) <br>
+  ---&gt;    CALL MemAlloc(Arr7D, ASize, StartID) <br>
+ <strong>Note</strong>: For an array of rank greater than 1, the "ASize" and "StartID" arguments must be
+      arrays where their size are equal to the rank of the specified array argument. <br></p>
+      </div>
+    <ul class="list-group">
+          <li class="list-group-item">
+                <h3>
+    private  subroutine KeyUnordered_MemAlloc_Alloc(A, ASize, StartID)  
+
+    </h3>
+  <p>To allocate memory of an allocatable/pointer entity.</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-a~77"></span>
+              type(<a href='../type/keyunordered.html'>KeyUnordered</a>),
+            </td>
+<td>intent(inout),</td>
+              <td></td>            <td>
+              ALLOCATABLE
+            </td>
+            <td>::</td>
+            <td><strong>A</strong>(..)</td>
+            <td>
+                <p>An array of any rank between 1 and 7.</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-asize~51"></span>
+              integer(kind=kInt32),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>ASize</strong>(RANK(A))</td>
+            <td>
+                <p>An array specifying sizes of A in each dimension.  All its element values must be non-negative.</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-startid~51"></span>
+              integer(kind=kInt32),
+            </td>
+<td>intent(in),</td>
+              <td>optional</td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>StartID</strong>(RANK(A))</td>
+            <td>
+                <p>An array specifying starting indices of A in each dimension.</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+          </li>
+          <li class="list-group-item">
+                <h3>
+    private  subroutine KeyUnordered_MemAlloc_Ptr(A, ASize, StartID)  
+
+    </h3>
+  <p>To allocate memory of an allocatable/pointer entity.</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-a~80"></span>
+              type(<a href='../type/keyunordered.html'>KeyUnordered</a>),
+            </td>
+<td>intent(inout),</td>
+              <td></td>            <td>
+              POINTER
+            </td>
+            <td>::</td>
+            <td><strong>A</strong>(..)</td>
+            <td>
+                <p>An array of any rank between 1 and 7.</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-asize~53"></span>
+              integer(kind=kInt32),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>ASize</strong>(RANK(A))</td>
+            <td>
+                <p>An array specifying sizes of A in each dimension.  All its element values must be non-negative.</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-startid~53"></span>
+              integer(kind=kInt32),
+            </td>
+<td>intent(in),</td>
+              <td>optional</td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>StartID</strong>(RANK(A))</td>
+            <td>
+                <p>An array specifying starting indices of A in each dimension.</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+          </li>
+          <li class="list-group-item">
+                <h3>
+    private  subroutine KeyUnordered_MemAlloc_Alloc1D(A, ASize, StartID)  
+
+    </h3>
+  <p>To allocate memory of an allocatable/pointer entity.</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-a~78"></span>
+              type(<a href='../type/keyunordered.html'>KeyUnordered</a>),
+            </td>
+<td>intent(inout),</td>
+              <td></td>            <td>
+              ALLOCATABLE
+            </td>
+            <td>::</td>
+            <td><strong>A</strong>(:)</td>
+            <td>
+                <p>A 1-D array.</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-asize~52"></span>
+              integer(kind=kInt32),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>ASize</strong></td>
+            <td>
+                <p>size of A.</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-startid~52"></span>
+              integer(kind=kInt32),
+            </td>
+<td>intent(in),</td>
+              <td>optional</td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>StartID</strong></td>
+            <td>
+                <p>starting index of A</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+          </li>
+          <li class="list-group-item">
+                <h3>
+    private  subroutine KeyUnordered_MemAlloc_Ptr1D(A, ASize, StartID)  
+
+    </h3>
+  <p>To allocate memory of an allocatable/pointer entity.</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-a~81"></span>
+              type(<a href='../type/keyunordered.html'>KeyUnordered</a>),
+            </td>
+<td>intent(inout),</td>
+              <td></td>            <td>
+              POINTER
+            </td>
+            <td>::</td>
+            <td><strong>A</strong>(:)</td>
+            <td>
+                <p>A 1-D array.</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-asize~54"></span>
+              integer(kind=kInt32),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>ASize</strong></td>
+            <td>
+                <p>size of A.</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-startid~54"></span>
+              integer(kind=kInt32),
+            </td>
+<td>intent(in),</td>
+              <td>optional</td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>StartID</strong></td>
+            <td>
+                <p>starting index of A</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+          </li>
+    </ul>
+  </div>
+
+              <div class="card">
+    <div class="card-header bg-light codesum">
+      <span class="anchor" id="interface-memresize~3"></span>
+      <h3>public        interface <a href='../interface/memresize~3.html'>MemResize</a> 
+      </h3>
+    </div>
+      <div class="card-body">
+        <p><strong>Subroutine Interface</strong>: MemResize <br>
+ <strong>Purpose</strong>:  To re-allocate memory of the specified argument (and preserve its data). <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    CALL MemResize(Arr1D, [25]) <br>
+  ---&gt;    CALL MemResize(Arr2D, [30, 30]) <br>
+  ---&gt;    CALL MemResize(Arr3D, [30, 40, 50]) <br>
+  ---&gt;    CALL MemResize(Arr7D, NewSize) <br>
+ <strong>Note</strong>: The "NewSize" argument must be an array where its size is equal to the rank of
+      the specified array argument.  <br></p>
+      </div>
+    <ul class="list-group">
+          <li class="list-group-item">
+                <h3>
+    private  subroutine KeyUnordered_MemResize_Alloc(A, NewSize)  
+
+    </h3>
+  <p>To re-allocate memory of an allocatable/pointer entity and preserve its data.</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-a~79"></span>
+              type(<a href='../type/keyunordered.html'>KeyUnordered</a>),
+            </td>
+<td>intent(inout),</td>
+              <td></td>            <td>
+              ALLOCATABLE
+            </td>
+            <td>::</td>
+            <td><strong>A</strong>(..)</td>
+            <td>
+                <p>An array of any rank between 1 and 7.</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-newsize~27"></span>
+              integer(kind=kInt32),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>NewSize</strong>(RANK(A))</td>
+            <td>
+                <p>An array specifying new sizes of A in each dimension. All its element values
+ must be non-negative.</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+          </li>
+          <li class="list-group-item">
+                <h3>
+    private  subroutine KeyUnordered_MemResize_Ptr(A, NewSize)  
+
+    </h3>
+  <p>To re-allocate memory of an allocatable/pointer entity and preserve its data.</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-a~82"></span>
+              type(<a href='../type/keyunordered.html'>KeyUnordered</a>),
+            </td>
+<td>intent(inout),</td>
+              <td></td>            <td>
+              POINTER
+            </td>
+            <td>::</td>
+            <td><strong>A</strong>(..)</td>
+            <td>
+                <p>An array of any rank between 1 and 7.</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-newsize~28"></span>
+              integer(kind=kInt32),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>NewSize</strong>(RANK(A))</td>
+            <td>
+                <p>An array specifying new sizes of A in each dimension. All its element values
+ must be non-negative.</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+          </li>
+    </ul>
+  </div>
+
+        </section>
+        <br>
+
+
+        <section>
+          <h2>Derived Types</h2>
+              <div class="card">
+    <div class="card-header codesum">
+      <span class="anchor" id="type-keyunordered"></span>
+      <h3>
+        type, public, extends(<a href='../type/gendata.html'>GenData</a>)&nbsp;::&nbsp;
+        <a href='../type/keyunordered.html'>KeyUnordered</a>
+        
+      </h3>
+    </div>
+    <div class="card-body">
+      <p>The <em>KeyUnordered</em> type is a storage type that can hold any data types,
+ except the <em>LOGICAL</em> type.</p>
+
+
+
+        <h4>Finalizations Procedures</h4>
+        <table class="table table-striped varlist">
+          <tbody>
+              <tr>
+                <td>final :: <strong>KeyUnordered_Finalize</strong></td>
+                <td><p>To perform finalization of the object.</p></td>
+              </tr>
+          </tbody>
+        </table>
+
+        <h4>Type-Bound Procedures</h4>
+        <table class="table table-striped varlist">
+          <tbody>
+              <tr>
+                <td>  procedure, public ::
+  <strong><a href='../type/gendata.html#boundprocedure-get'>Get</a></strong> => GenData_GetData</td>
+                <td><p><strong>Type-Bound Function</strong>: Get <br>
+<strong>Purpose</strong>:  To retrieve the data content from the storage.  If type of the specified
+              output content does not match that of stored content, return false and the
+              output content is not modified.  Otherwise, return true and copy the stored
+              content to the output content. <br>
+ <strong>Usage</strong>: <br>
+  ! to get data of an intrinsic type or a derived type in the Object class <br>
+  ---&gt;    Valid = Store%Get(Data) <br>
+  ! to get data of a derived type NOT in the Object class <br>
+  ---&gt;    Valid = Store%Get(Data, CopyProc) <br>
+ <strong>Important Note</strong>: To use this method properly, the following conditions are applied. <br>
+  1. The type of stored data must be known.  The <em>GetType</em> method can be used to inquire
+     the type of stored data. <br>
+  2. If the type of stored data is <em>CHARACTER</em>.  Length of the specified output data should
+     be equal to or greater than that of the stored data. Otherwise, the output data would
+     contain a truncated string.  The <em>GetSize</em> method can be used to inquire this required
+     length. <br>
+  3. If the type of stored data is a derived type, the specified output data must have the
+     same concrete type as that of the stored data. <br>
+  4. If the derived type NOT in the <em>Object</em> class has allocatable and/or pointer components,
+     a procedure to copy the data must be specified.  Alternative, the specified output data
+     and the stored data must have the same storage sizes (i.e. those allocatable/pointer
+     components are allocated to the same sizes).  Otherwise, the routine will set the Valid
+     flag to false and return without modifying the specified output data content. <br></p></td>
+              </tr>
+              <tr>
+                <td>  procedure, public ::
+  <strong><a href='../type/gendata.html#boundprocedure-isempty~2'>IsEmpty</a></strong> => GenData_IsEmpty</td>
+                <td><p><strong>Type-Bound Function</strong>: IsEmpty <br>
+ <strong>Purpose</strong>:  To check whether the storage is currently empty or not. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    Flag = Store%IsEmpty() <br>
+  ---&gt;    IF (.NOT.Store%IsEmpty()) DoSomething <br></p></td>
+              </tr>
+              <tr>
+                <td>  procedure, public ::
+  <strong><a href='../type/gendata.html#boundprocedure-gettype'>GetType</a></strong> => GenData_GetType</td>
+                <td><p><strong>Type-Bound Function</strong>: GetType <br>
+ <strong>Purpose</strong>:  To get type of the stored content. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    DatType = Store%GetType() <br></p></td>
+              </tr>
+              <tr>
+                <td>  procedure, public ::
+  <strong><a href='../type/gendata.html#boundprocedure-getsize~2'>GetSize</a></strong> => GenData_GetSize</td>
+                <td><p><strong>Size-Bound Function</strong>: GetSize <br>
+ <strong>Purpose</strong>:  To get size of the stored content in bytes. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    DatSize = Store%GetSize() <br>
+ <strong>Note</strong>: This method is only useful if the data type is <em>CHARACTER</em>. <br></p></td>
+              </tr>
+              <tr>
+                <td>  procedure, public ::
+  <strong><a href='../type/gendata.html#boundprocedure-copy'>Copy</a></strong> => GenData_Copy</td>
+                <td><p><strong>Type-Bound Subroutine</strong>: Copy <br>
+ <strong>Purpose</strong>: To make a copy of the source object. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    CALL SrcObj%Copy(DstObj) <br></p></td>
+              </tr>
+              <tr>
+                <td>  procedure, public ::
+  <strong><a href='../type/gendata.html#boundprocedure-isequalto'>IsEqualTo</a></strong> => GenData_IsEqualTo</td>
+                <td><p><strong>Type-Bound Function</strong>: IsEqualTo <br>
+ <strong>Purpose</strong>: To check whether two objects are equal to one another or not. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    Flag = ObjA%IsEqualTo(ObjB) <br>
+  ---&gt;    IF (ObjA%IsEqualTo(ObjB)) DoSomething</p></td>
+              </tr>
+              <tr>
+                <td>  procedure, public ::
+  <strong><a href='../type/gendata.html#boundprocedure-memfree'>MemFree</a></strong> => GenData_MemFree</td>
+                <td><p><strong>Type-Bound Subroutine</strong>: MemFree <br>
+ <strong>Purpose</strong>: To free memory/storage occupied by the object. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    CALL Obj%MemFree() <br></p></td>
+              </tr>
+              <tr>
+                <td>  procedure, public ::
+  <strong><a href='../type/gendata.html#boundprocedure-hashcode~18'>HashCode</a></strong> => GenData_HashCode</td>
+                <td><p><strong>Type-Bound Function</strong>: HashCode <br>
+ <strong>Purpose</strong>:  To compute the hash code of this object. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    Code = Obj%HashCode() <br></p></td>
+              </tr>
+              <tr>
+                <td>  procedure, public ::
+  <strong><a href='../type/keyunordered.html#boundprocedure-tostring~3'>ToString</a></strong> => KeyUnordered_ToString</td>
+                <td><p><strong>Type-Bound Function</strong>: ToString <br>
+ <strong>Purpose</strong>:  To return the string representation of this object. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    Str = Obj%ToString() <br></p></td>
+              </tr>
+              <tr>
+                <td>  procedure, public ::
+  <strong><a href='../type/keyunordered.html#boundprocedure-set~2'>Set</a></strong> => KeyUnordered_SetData</td>
+                <td><p><strong>Type-Bound Subroutine</strong>: Set <br>
+<strong>Purpose</strong>:  To store the specified data content in the storage. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    CALL Store%Set(Data, Pool)</p></td>
+              </tr>
+          </tbody>
+        </table>
+    </div>
+  </div>
+
+        </section>
+        <br>
+
+        <section>
+          <h2>Functions</h2>
+              <div class="card">
+    <div class="card-header codesum"><span class="anchor" id="proc-iskeyunordered"></span><h3>public  function <a href='../proc/iskeyunordered.html'>IsKeyUnordered</a>(Content) result(Flag)  
+</h3></div>
+    <div class="card-body">
+          
+  <p>To check whether type of the specified input is a valid <em>KeyUnordered</em> type.</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-content~21"></span>
+              class(*),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Content</strong></td>
+            <td>
+
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+    <h4>
+    Return Value
+    <small>logical</small>
+    </h4>
+    
+
+    </div>
+  </div>
+
+        </section>
+        <br>
+
+
+
+
+    </div>
+  </div>
+
+      <hr>
+    </div> <!-- /container -->
+    <footer>
+      <div class="container">
+        <div class="row justify-content-between">
+          <div class="col"><p>eXPerimental Fortran Library (XpfLib) Documentation was developed by Niranama<br>&copy; 2024 
+</p>
+          </div>
+          <div class="col">
+            <p class="text-end">
+              Documentation generated by
+              <a href="https://github.com/Fortran-FOSS-Programmers/ford">FORD</a>
+            </p>
+          </div>
+        </div>
+        <br>
+      </div> <!-- /container -->
+    </footer>
+
+    <!-- Bootstrap core JavaScript -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>    
+
+    <!-- MathJax JavaScript
+             ================================================== -->
+             <!-- Placed at the end of the document so the pages load faster -->
+        <script type="text/x-mathjax-config">
+          MathJax.Hub.Config({
+          TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } },
+          jax: ['input/TeX','input/MathML','output/HTML-CSS'],
+          extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']
+          });
+        </script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+          <script src="../tipuesearch/tipuesearch_content.js"></script>
+          <script src="../tipuesearch/tipuesearch_set.js"></script>
+          <script src="../tipuesearch/tipuesearch.js"></script>
+
+  </body>
+</html>

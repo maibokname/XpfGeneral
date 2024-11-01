@@ -1,0 +1,1057 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta name="description" content="Experimental Fortran Package - Base Modules and Classes">
+    <meta name="author" content="Niranama" >
+    <link rel="icon" href="../favicon.png">
+
+    <title>MBase_ByteUtil &ndash; eXPerimental Fortran Library (XpfLib) Documentation</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link href="../css/pygments.css" rel="stylesheet">
+    <link href="../css/font-awesome.min.css" rel="stylesheet">
+    <link href="../css/local.css" rel="stylesheet">
+      <link  href="../tipuesearch/tipuesearch.css" rel="stylesheet">
+
+    <script src="https://code.jquery.com/jquery-3.7.0.slim.min.js" integrity="sha256-tG5mcZUtJsZvyKAxYLVXrmjKBVLd6VpVccqz/r4ypFE=" crossorigin="anonymous"></script>
+  </head>
+
+  <body>
+
+    <!-- Fixed navbar -->
+    <div class="container-fluid mb-sm-4 mb-xl-2">
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container">
+          <a class="navbar-brand" href="../index.html">eXPerimental Fortran Library (XpfLib) Documentation </a>
+          <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar"
+                  aria-expanded="false" aria-controls="navbar" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon">
+          </button>
+
+          <div id="navbar" class="navbar-collapse collapse">
+            <ul class="navbar-nav">
+                  <li class="nav-item">
+                    <a class="nav-link" href="../lists/files.html">Source Files</a>
+                  </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../lists/modules.html">Modules</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../lists/procedures.html">Procedures</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../lists/absint.html">Abstract Interfaces</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../lists/types.html">Derived Types</a>
+                </li>
+            </ul>
+              <div class="d-flex align-items-end flex-grow-1">
+                <form action="../search.html" role="search" class="ms-auto">
+                  <input type="text" class="form-control" aria-label="Search" placeholder="Search" name="q" id="tipue_search_input" autocomplete="off" required>
+                </form>
+              </div>
+          </div><!--/.nav-collapse -->
+        </div>
+      </nav>
+    </div>
+
+    <div class="container">
+  <div class="row">
+    <h1>MBase_ByteUtil
+      <small>Module</small>
+      
+    </h1>
+      <div class="container p-2 mb-4 bg-light border rounded-3">
+    <div class="row align-items-center justify-content-between" id="info-bar">
+      <div class="col">
+        <ul class="list-inline" style="margin-bottom:0px;display:inline">
+
+            <li class="list-inline-item" id="statements"><i class="fa fa-list-ol"></i>
+              <a data-bs-toggle="tooltip"
+                 data-bs-placement="bottom" data-html="true"
+                 title=" 0.7% of total for modules and submodules.">316 statements</a>
+            </li>
+
+            <li class="list-inline-item" id="source-file">
+              <i class="fa fa-code"></i>
+              <a href="../src/MBase_ByteUtil.f90"> Source File</a>
+            </li>
+        </ul>
+      </div>
+      <div class="col">
+        <nav aria-label="breadcrumb">
+          <ol class="breadcrumb justify-content-end mb-0">
+                <li class="breadcrumb-item"><a href='../sourcefile/mbase_byteutil.f90.html'>MBase_ByteUtil.f90</a></li>
+            <li class="breadcrumb-item active" aria-current="page">MBase_ByteUtil</li>
+          </ol>
+        </nav>
+      </div>
+    </div>
+  </div>
+  <script>
+    $(function () {
+    $('[data-bs-toggle="tooltip"]').tooltip()
+    })
+  </script>
+
+  </div>
+
+  <div class="row">
+    <div class="col-md-3">
+        <div id="sidebar">
+      <h3>Contents</h3>
+  
+  
+  
+  
+  
+  
+  
+  
+      <div class="card mb-4">
+      <a data-bs-toggle="collapse" href="#inters-0"
+         aria-expanded="false" aria-controls="inters-0">
+         <h4 class="card-header bg-primary text-white">Interfaces</h4>
+      </a>
+      <div id="inters-0" class="collapse">
+        <div class="list-group list-group-flush">
+            <a class="list-group-item" href="../module/mbase_byteutil.html#interface-tohexstr_be">ToHexStr_BE</a>
+            <a class="list-group-item" href="../module/mbase_byteutil.html#interface-tohexstr_le">ToHexStr_LE</a>
+            <a class="list-group-item" href="../module/mbase_byteutil.html#interface-hextobytes_be">HexToBytes_BE</a>
+            <a class="list-group-item" href="../module/mbase_byteutil.html#interface-hextobytes_le">HexToBytes_LE</a>
+            <a class="list-group-item" href="../module/mbase_byteutil.html#interface-swapbytes">SwapBytes</a>
+        </div>
+      </div>
+    </div>
+
+  
+  
+      <div class="card mb-4">
+      <a data-bs-toggle="collapse" href="#funcs-0"
+         aria-expanded="false" aria-controls="funcs-0">
+         <h4 class="card-header bg-primary text-white">Functions</h4>
+      </a>
+      <div id="funcs-0" class="collapse">
+        <div class="list-group list-group-flush">
+            <a class="list-group-item" href="../module/mbase_byteutil.html#proc-anytype_getbytesize">AnyType_GetByteSize</a>
+        </div>
+      </div>
+    </div>
+
+      <div class="card mb-4">
+      <a data-bs-toggle="collapse" href="#subs-0"
+         aria-expanded="false" aria-controls="subs-0">
+         <h4 class="card-header bg-primary text-white">Subroutines</h4>
+      </a>
+      <div id="subs-0" class="collapse">
+        <div class="list-group list-group-flush">
+            <a class="list-group-item" href="../module/mbase_byteutil.html#proc-anytype_2_bytearray">AnyType_2_ByteArray</a>
+            <a class="list-group-item" href="../module/mbase_byteutil.html#proc-anytype_2_bytearrptr">AnyType_2_ByteArrPtr</a>
+            <a class="list-group-item" href="../module/mbase_byteutil.html#proc-bytearray_2_anytype">ByteArray_2_AnyType</a>
+            <a class="list-group-item" href="../module/mbase_byteutil.html#proc-swaptwobytes">SwapTwoBytes</a>
+            <a class="list-group-item" href="../module/mbase_byteutil.html#proc-swapbytearray">SwapByteArray</a>
+        </div>
+      </div>
+    </div>
+
+  
+  
+  
+  
+  
+  
+  
+
+
+  </div>
+
+    </div>
+
+    <div class="col-md-9" id='text'>
+      <p><strong>PURPOSE OF THIS MODULE</strong>: <br>
+  This module contains various byte (8-bit integer) utility routines.</p>
+<br>          <div class="card mb-4">
+      <h3 class="card-header card-title bg-light">Uses</h3>
+      <div class="card-body">
+        <ul class="list-group list-group-flush">
+            <li class="list-group-item">
+              <ul class="list-inline">
+                  <li class="list-inline-item"><a href='../module/mbase_common.html'>MBase_Common</a></li>
+                  <li class="list-inline-item"><a href='../module/mbase_charutil.html'>MBase_CharUtil</a></li>
+                  <li class="list-inline-item"><a href='http://fortranwiki.org/fortran/show/iso_fortran_env'>iso_fortran_env</a></li>
+                  <li class="list-inline-item"><a href='http://fortranwiki.org/fortran/show/iso_c_binding'>iso_c_binding</a></li>
+                  <li class="list-inline-item"><a href='../module/mbase_errhandlers.html'>MBase_ErrHandlers</a></li>
+              </ul>
+            </li>
+        </ul>
+      </div>
+    </div>
+
+      
+      <br>
+
+
+
+
+        <section>
+          <h2>Interfaces</h2>
+              <div class="card">
+    <div class="card-header bg-light codesum">
+      <span class="anchor" id="interface-tohexstr_be"></span>
+      <h3>public        interface <a href='../interface/tohexstr_be.html'>ToHexStr_BE</a> 
+      </h3>
+    </div>
+      <div class="card-body">
+        <p><strong>Subroutine Interface</strong>: ToHexStr_BE <br>
+ <strong>Purpose</strong>:  To convert an array of 8-bit integer numbers (stored in
+               big-endian order) to a hexadecimal string. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    CALL ToHexStr_BE(ByteArr, HexStr)</p>
+      </div>
+    <ul class="list-group">
+          <li class="list-group-item">
+                <h3>
+    private  subroutine BE_ByteArray_ToHexStr(ByteArr, RetStr)  
+
+    </h3>
+  <p>To convert an array of 8-bit integer numbers (stored in big-endian order)
+ into a hexadecimal string. <br>
+ <em>Note</em>: For a big-endian number, the most significant value is stored in
+         the first array element and the least significant value is stored
+         in the last array element.</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-bytearr~5"></span>
+              integer(kind=kInt8),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>ByteArr</strong>(0:)</td>
+            <td>
+                <p>array of 8-bit integers</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-retstr"></span>
+              character(kind=kChar, len=:),
+            </td>
+<td>intent(out),</td>
+              <td></td>            <td>
+              ALLOCATABLE
+            </td>
+            <td>::</td>
+            <td><strong>RetStr</strong></td>
+            <td>
+                <p>returned hexadecimal string</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+          </li>
+    </ul>
+  </div>
+
+              <div class="card">
+    <div class="card-header bg-light codesum">
+      <span class="anchor" id="interface-tohexstr_le"></span>
+      <h3>public        interface <a href='../interface/tohexstr_le.html'>ToHexStr_LE</a> 
+      </h3>
+    </div>
+      <div class="card-body">
+        <p><strong>Subroutine Interface</strong>: ToHexStr_LE <br>
+ <strong>Purpose</strong>:  To convert an array of 8-bit integer numbers (stored in
+               little-endian order) to a hexadecimal string. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    CALL ToHexStr_LE(ByteArr, HexStr)</p>
+      </div>
+    <ul class="list-group">
+          <li class="list-group-item">
+                <h3>
+    private  subroutine LE_ByteArray_ToHexStr(ByteArr, RetStr)  
+
+    </h3>
+  <p>To convert an array of 8-bit integer numbers (stored in little-endian order)
+ into a hexadecimal string. <br>
+ <em>Note</em>: For a little-endian number, the most significant value is stored in
+         the last array element and the least significant value is stored
+         in the first array element.</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-bytearr~6"></span>
+              integer(kind=kInt8),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>ByteArr</strong>(0:)</td>
+            <td>
+                <p>array of 8-bit integers</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-retstr~2"></span>
+              character(kind=kChar, len=:),
+            </td>
+<td>intent(out),</td>
+              <td></td>            <td>
+              ALLOCATABLE
+            </td>
+            <td>::</td>
+            <td><strong>RetStr</strong></td>
+            <td>
+                <p>returned hexadecimal string</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+          </li>
+    </ul>
+  </div>
+
+              <div class="card">
+    <div class="card-header bg-light codesum">
+      <span class="anchor" id="interface-hextobytes_be"></span>
+      <h3>public        interface <a href='../interface/hextobytes_be.html'>HexToBytes_BE</a> 
+      </h3>
+    </div>
+      <div class="card-body">
+        <p><strong>Subroutine Interface</strong>: HexToBytes_BE <br>
+ <strong>Purpose</strong>:  To convert a hexadecimal string to an array of 8-bit
+               integer numbers (stored in big-endian order). <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    CALL HexToBytes_BE(HexStr, ByteArr)</p>
+      </div>
+    <ul class="list-group">
+          <li class="list-group-item">
+                <h3>
+    private  subroutine HexStr_2_ByteArray_BE(Str, Bytes)  
+
+    </h3>
+  <p>To convert a hexadecimal string to an array of 8-bit integer numbers
+ (stored in big-endian order). <br>
+ <em>Note</em>: For a big-endian number, the most significant value is stored in
+         the first array element and the least significant value is stored
+         in the last array element.</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-str~12"></span>
+              character(kind=kChar, len=*),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Str</strong></td>
+            <td>
+                <p>input string</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-bytes"></span>
+              integer(kind=kInt8),
+            </td>
+<td>intent(out),</td>
+              <td></td>            <td>
+              ALLOCATABLE
+            </td>
+            <td>::</td>
+            <td><strong>Bytes</strong>(:)</td>
+            <td>
+                <p>array of 8-bit integers</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+          </li>
+    </ul>
+  </div>
+
+              <div class="card">
+    <div class="card-header bg-light codesum">
+      <span class="anchor" id="interface-hextobytes_le"></span>
+      <h3>public        interface <a href='../interface/hextobytes_le.html'>HexToBytes_LE</a> 
+      </h3>
+    </div>
+      <div class="card-body">
+        <p><strong>Subroutine Interface</strong>: HexToBytes_LE <br>
+ <strong>Purpose</strong>:  To convert a hexadecimal string to an array of 8-bit
+               integer numbers (stored in little-endian order). <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    CALL HexToBytes_LE(HexStr, ByteArr)</p>
+      </div>
+    <ul class="list-group">
+          <li class="list-group-item">
+                <h3>
+    private  subroutine HexStr_2_ByteArray_LE(Str, Bytes)  
+
+    </h3>
+  <p>To convert a hexadecimal string to an array of 8-bit integer numbers
+ (stored in little-endian order). <br>
+ <em>Note</em>: For a little-endian number, the most significant value is stored in
+         the last array element and the least significant value is stored
+         in the first array element.</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-str~13"></span>
+              character(kind=kChar, len=*),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Str</strong></td>
+            <td>
+                <p>input string</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-bytes~2"></span>
+              integer(kind=kInt8),
+            </td>
+<td>intent(out),</td>
+              <td></td>            <td>
+              ALLOCATABLE
+            </td>
+            <td>::</td>
+            <td><strong>Bytes</strong>(:)</td>
+            <td>
+                <p>array of 8-bit integers</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+          </li>
+    </ul>
+  </div>
+
+              <div class="card">
+    <div class="card-header bg-light codesum">
+      <span class="anchor" id="interface-swapbytes"></span>
+      <h3>public        interface <a href='../interface/swapbytes.html'>SwapBytes</a> 
+      </h3>
+    </div>
+      <div class="card-body">
+        <p><strong>Function Interface</strong>: SwapBytes <br>
+ <strong>Purpose</strong>:  To perform swapping of bytes of an integer. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    Output = SwapBytes(Input)</p>
+      </div>
+    <ul class="list-group">
+          <li class="list-group-item">
+                <h3>
+    private elemental function SwapBytes_I16(Input) result(Output)  
+
+    </h3>
+  <p>To perform swapping of bytes of a 16-bit integer.</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-input~8"></span>
+              integer(kind=kInt16),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Input</strong></td>
+            <td>
+                
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+    <h4>
+    Return Value
+    <small>integer(kind=kInt16)</small>
+    </h4>
+    
+
+          </li>
+          <li class="list-group-item">
+                <h3>
+    private elemental function SwapBytes_I32(Input) result(Output)  
+
+    </h3>
+  <p>To perform swapping of bytes of a 32-bit integer.</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-input~9"></span>
+              integer(kind=kInt32),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Input</strong></td>
+            <td>
+                
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+    <h4>
+    Return Value
+    <small>integer(kind=kInt32)</small>
+    </h4>
+    
+
+          </li>
+          <li class="list-group-item">
+                <h3>
+    private elemental function SwapBytes_I64(Input) result(Output)  
+
+    </h3>
+  <p>To perform swapping of bytes of a 64-bit integer.</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-input~10"></span>
+              integer(kind=kInt64),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Input</strong></td>
+            <td>
+                
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+    <h4>
+    Return Value
+    <small>integer(kind=kInt64)</small>
+    </h4>
+    
+
+          </li>
+    </ul>
+  </div>
+
+        </section>
+        <br>
+
+
+
+        <section>
+          <h2>Functions</h2>
+              <div class="card">
+    <div class="card-header codesum"><span class="anchor" id="proc-anytype_getbytesize"></span><h3>public  function <a href='../proc/anytype_getbytesize.html'>AnyType_GetByteSize</a>(Input) result(ByteSize)  
+</h3></div>
+    <div class="card-body">
+          
+  <p>To return the size in bytes of the specified input.</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-input~7"></span>
+              class(*),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Input</strong></td>
+            <td>
+
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+    <h4>
+    Return Value
+    <small>integer(kind=kInt32)</small>
+    </h4>
+    
+
+    </div>
+  </div>
+
+        </section>
+        <br>
+
+        <section>
+          <h2>Subroutines</h2>
+              <div class="card">
+    <div class="card-header codesum"><span class="anchor" id="proc-anytype_2_bytearray"></span><h3>public  subroutine <a href='../proc/anytype_2_bytearray.html'>AnyType_2_ByteArray</a>(Input, ByteSize, Output)  
+</h3></div>
+    <div class="card-body">
+          
+  <p>To convert the given input to an array of 8-bit integers where the input
+ can be any type and its size (in bytes) must be known.</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-input~2"></span>
+              type(*),
+            </td>
+<td>intent(in),</td>
+              <td></td>            <td>
+              TARGET, CONTIGUOUS
+            </td>
+            <td>::</td>
+            <td><strong>Input</strong>(..)</td>
+            <td>
+<p>input (can be any type and rank)</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-bytesize"></span>
+              integer(kind=kInt32),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>ByteSize</strong></td>
+            <td>
+<p>size of the input (in bytes)</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-output~2"></span>
+              integer(kind=kInt8),
+            </td>
+<td>intent(out)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Output</strong>(ByteSize)</td>
+            <td>
+<p>array of 8-bit integers</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+    </div>
+  </div>
+
+              <div class="card">
+    <div class="card-header codesum"><span class="anchor" id="proc-anytype_2_bytearrptr"></span><h3>public  subroutine <a href='../proc/anytype_2_bytearrptr.html'>AnyType_2_ByteArrPtr</a>(Input, ByteSize, Output)  
+</h3></div>
+    <div class="card-body">
+          
+  <p>To convert the given input to a pointer array of 8-bit integers where the input
+ can be any type and its size (in bytes) must be known.</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-input~3"></span>
+              type(*),
+            </td>
+<td>intent(in),</td>
+              <td></td>            <td>
+              TARGET, CONTIGUOUS
+            </td>
+            <td>::</td>
+            <td><strong>Input</strong>(..)</td>
+            <td>
+<p>input (can be any type and rank)</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-bytesize~2"></span>
+              integer(kind=kInt32),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>ByteSize</strong></td>
+            <td>
+<p>size of the input (in bytes)</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-output~3"></span>
+              integer(kind=kInt8),
+            </td>
+<td>intent(inout),</td>
+              <td></td>            <td>
+              POINTER
+            </td>
+            <td>::</td>
+            <td><strong>Output</strong>(:)</td>
+            <td>
+<p>Fortran data pointer</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+    </div>
+  </div>
+
+              <div class="card">
+    <div class="card-header codesum"><span class="anchor" id="proc-bytearray_2_anytype"></span><h3>public  subroutine <a href='../proc/bytearray_2_anytype.html'>ByteArray_2_AnyType</a>(Input, Output)  
+</h3></div>
+    <div class="card-body">
+          
+  <p>To convert an array of 8-bit integers to the specified output.</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-input~4"></span>
+              integer(kind=kInt8),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Input</strong>(:)</td>
+            <td>
+<p>array of 8-bit integers</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-output~4"></span>
+              type(*),
+            </td>
+<td>intent(inout),</td>
+              <td></td>            <td>
+              TARGET, CONTIGUOUS
+            </td>
+            <td>::</td>
+            <td><strong>Output</strong>(..)</td>
+            <td>
+<p>output (can be any type)</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+    </div>
+  </div>
+
+              <div class="card">
+    <div class="card-header codesum"><span class="anchor" id="proc-swaptwobytes"></span><h3>public  subroutine <a href='../proc/swaptwobytes.html'>SwapTwoBytes</a>(ByteArr, I, J)  
+</h3></div>
+    <div class="card-body">
+          
+  <p>To swap element I and element J of the specified byte array.</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-bytearr~7"></span>
+              integer(kind=kInt8),
+            </td>
+<td>intent(inout)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>ByteArr</strong>(:)</td>
+            <td>
+<p>byte array</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-i"></span>
+              integer(kind=kInt32),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>I</strong></td>
+            <td>
+<p>index of element I</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-j"></span>
+              integer(kind=kInt32),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>J</strong></td>
+            <td>
+<p>index of element J</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+    </div>
+  </div>
+
+              <div class="card">
+    <div class="card-header codesum"><span class="anchor" id="proc-swapbytearray"></span><h3>public  subroutine <a href='../proc/swapbytearray.html'>SwapByteArray</a>(ByteArr)  
+</h3></div>
+    <div class="card-body">
+          
+  <p>To swap elements of the specified byte array.</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-bytearr~8"></span>
+              integer(kind=kInt8),
+            </td>
+<td>intent(inout)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>ByteArr</strong>(:)</td>
+            <td>
+<p>byte array</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+    </div>
+  </div>
+
+        </section>
+        <br>
+
+
+
+    </div>
+  </div>
+
+      <hr>
+    </div> <!-- /container -->
+    <footer>
+      <div class="container">
+        <div class="row justify-content-between">
+          <div class="col"><p>eXPerimental Fortran Library (XpfLib) Documentation was developed by Niranama<br>&copy; 2024 
+</p>
+          </div>
+          <div class="col">
+            <p class="text-end">
+              Documentation generated by
+              <a href="https://github.com/Fortran-FOSS-Programmers/ford">FORD</a>
+            </p>
+          </div>
+        </div>
+        <br>
+      </div> <!-- /container -->
+    </footer>
+
+    <!-- Bootstrap core JavaScript -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>    
+
+    <!-- MathJax JavaScript
+             ================================================== -->
+             <!-- Placed at the end of the document so the pages load faster -->
+        <script type="text/x-mathjax-config">
+          MathJax.Hub.Config({
+          TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } },
+          jax: ['input/TeX','input/MathML','output/HTML-CSS'],
+          extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']
+          });
+        </script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+          <script src="../tipuesearch/tipuesearch_content.js"></script>
+          <script src="../tipuesearch/tipuesearch_set.js"></script>
+          <script src="../tipuesearch/tipuesearch.js"></script>
+
+  </body>
+</html>

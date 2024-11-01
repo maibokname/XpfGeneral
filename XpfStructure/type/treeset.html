@@ -1,0 +1,2700 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta name="description" content="Experimental Fortran Package - Data Structures">
+    <meta name="author" content="Niranama" >
+    <link rel="icon" href="../favicon.png">
+
+    <title>TreeSet &ndash; eXPerimental Fortran Library (XpfLib) Documentation </title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link href="../css/pygments.css" rel="stylesheet">
+    <link href="../css/font-awesome.min.css" rel="stylesheet">
+    <link href="../css/local.css" rel="stylesheet">
+      <link  href="../tipuesearch/tipuesearch.css" rel="stylesheet">
+
+    <script src="https://code.jquery.com/jquery-3.7.0.slim.min.js" integrity="sha256-tG5mcZUtJsZvyKAxYLVXrmjKBVLd6VpVccqz/r4ypFE=" crossorigin="anonymous"></script>
+  </head>
+
+  <body>
+
+    <!-- Fixed navbar -->
+    <div class="container-fluid mb-sm-4 mb-xl-2">
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container">
+          <a class="navbar-brand" href="../index.html">eXPerimental Fortran Library (XpfLib) Documentation </a>
+          <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar"
+                  aria-expanded="false" aria-controls="navbar" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon">
+          </button>
+
+          <div id="navbar" class="navbar-collapse collapse">
+            <ul class="navbar-nav">
+                  <li class="nav-item">
+                    <a class="nav-link" href="../lists/files.html">Source Files</a>
+                  </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../lists/modules.html">Modules</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../lists/types.html">Derived Types</a>
+                </li>
+            </ul>
+              <div class="d-flex align-items-end flex-grow-1">
+                <form action="../search.html" role="search" class="ms-auto">
+                  <input type="text" class="form-control" aria-label="Search" placeholder="Search" name="q" id="tipue_search_input" autocomplete="off" required>
+                </form>
+              </div>
+          </div><!--/.nav-collapse -->
+        </div>
+      </nav>
+    </div>
+
+    <div class="container">
+  <div class="row">
+    <h1>TreeSet
+      <small>Derived Type</small>
+      
+    </h1>
+      <div class="container p-2 mb-4 bg-light border rounded-3">
+    <div class="row align-items-center justify-content-between" id="info-bar">
+      <div class="col">
+        <ul class="list-inline" style="margin-bottom:0px;display:inline">
+
+            <li class="list-inline-item" id="statements"><i class="fa fa-list-ol"></i>
+              <a data-bs-toggle="tooltip"
+                 data-bs-placement="bottom" data-html="true"
+                 title="<p> 1.3% of total for derived types.</p>Including implementation: 558 statements,  1.6% of total for derived types.">34 statements</a>
+            </li>
+
+            <li class="list-inline-item" id="source-file">
+              <i class="fa fa-code"></i>
+              <a href="../src/MClass_TreeSet.f90"> Source File</a>
+            </li>
+        </ul>
+      </div>
+      <div class="col">
+        <nav aria-label="breadcrumb">
+          <ol class="breadcrumb justify-content-end mb-0">
+                <li class="breadcrumb-item"><a href='../sourcefile/mclass_treeset.f90.html'>MClass_TreeSet.f90</a></li>
+                <li class="breadcrumb-item"><a href='../module/mclass_treeset.html'>MClass_TreeSet</a></li>
+            <li class="breadcrumb-item active" aria-current="page">TreeSet</li>
+          </ol>
+        </nav>
+      </div>
+    </div>
+  </div>
+  <script>
+    $(function () {
+    $('[data-bs-toggle="tooltip"]').tooltip()
+    })
+  </script>
+
+  </div>
+  
+  <div class="row">
+    <div class="col-md-3 hidden-xs hidden-sm visible-md visible-lg">
+      <div id="sidebar">
+      <h3>Contents</h3>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+      <div class="card mb-4">
+      <a data-bs-toggle="collapse" href="#fins-0"
+         aria-expanded="false" aria-controls="fins-0">
+         <h4 class="card-header bg-primary text-white">Finalization Procedures</h4>
+      </a>
+      <div id="fins-0" class="collapse">
+        <div class="list-group list-group-flush">
+            <a class="list-group-item" href="../type/treeset.html#finalproc-treeset_finalize">TreeSet_Finalize</a>
+        </div>
+      </div>
+    </div>
+
+      <div class="card mb-4">
+      <a data-bs-toggle="collapse" href="#boundprocs-0"
+         aria-expanded="false" aria-controls="boundprocs-0">
+         <h4 class="card-header bg-primary text-white">Type-Bound Procedures</h4>
+      </a>
+      <div id="boundprocs-0" class="collapse">
+        <div class="list-group list-group-flush">
+            <a class="list-group-item" href="../type/treeset.html#boundprocedure-isempty~86">IsEmpty</a>
+            <a class="list-group-item" href="../type/treeset.html#boundprocedure-getitemptr">GetItemPtr</a>
+            <a class="list-group-item" href="../type/treeset.html#boundprocedure-setmold">SetMold</a>
+            <a class="list-group-item" href="../type/treeset.html#boundprocedure-freemold">FreeMold</a>
+            <a class="list-group-item" href="../type/treeset.html#boundprocedure-isitemvalid">IsItemValid</a>
+            <a class="list-group-item" href="../type/treeset.html#boundprocedure-copycollection~11">CopyCollection</a>
+            <a class="list-group-item" href="../type/treeset.html#boundprocedure-clear~34">Clear</a>
+            <a class="list-group-item" href="../type/treeset.html#boundprocedure-destruct~49">Destruct</a>
+            <a class="list-group-item" href="../type/treeset.html#boundprocedure-getsize~49">GetSize</a>
+            <a class="list-group-item" href="../type/treeset.html#boundprocedure-startfirst~41">StartFirst</a>
+            <a class="list-group-item" href="../type/treeset.html#boundprocedure-moveforward~41">MoveForward</a>
+            <a class="list-group-item" href="../type/treeset.html#boundprocedure-startlast~27">StartLast</a>
+            <a class="list-group-item" href="../type/treeset.html#boundprocedure-movebackward~27">MoveBackward</a>
+            <a class="list-group-item" href="../type/treeset.html#boundprocedure-insert~33">Insert</a>
+            <a class="list-group-item" href="../type/treeset.html#boundprocedure-delete~27">Delete</a>
+            <a class="list-group-item" href="../type/treeset.html#boundprocedure-toarray~29">ToArray</a>
+            <a class="list-group-item" href="../type/treeset.html#boundprocedure-getall~29">GetAll</a>
+            <a class="list-group-item" href="../type/treeset.html#boundprocedure-construct~48">Construct</a>
+            <a class="list-group-item" href="../type/treeset.html#boundprocedure-contain~19">Contain</a>
+            <a class="list-group-item" href="../type/treeset.html#boundprocedure-remove~36">Remove</a>
+            <a class="list-group-item" href="../type/treeset.html#boundprocedure-useavltree~2">UseAVLTree</a>
+            <a class="list-group-item" href="../type/treeset.html#boundprocedure-userbtree~2">UseRBTree</a>
+            <a class="list-group-item" href="../type/treeset.html#boundprocedure-copy~16">Copy</a>
+            <a class="list-group-item" href="../type/treeset.html#boundprocedure-isequalto~16">IsEqualTo</a>
+            <a class="list-group-item" href="../type/treeset.html#boundprocedure-memfree~16">MemFree</a>
+            <a class="list-group-item" href="../type/treeset.html#boundprocedure-tostring~21">ToString</a>
+            <a class="list-group-item" href="../type/treeset.html#boundprocedure-hashcode~23">HashCode</a>
+        </div>
+      </div>
+    </div>
+
+  
+  
+    <div class="card card-primary">
+      <div class="card-header text-left"><h3 class="card-title">Source Code</h3></div>
+      <div class="list-group">
+        <a class="list-group-item" href="../type/treeset.html#src">TreeSet</a>
+      </div>
+    </div>
+
+
+  </div>
+
+    </div>
+    
+    <div class="col-md-9" id='text'>
+      <h2>type, public, extends(<a href='../type/baseiterable.html'>BaseIterable</a>) :: TreeSet</h2>
+    <p>The <em>TreeSet</em> type is a collection type that utilizes a balanced BST implementation
+ to provide common operations for an ordered set.  The <em>TreeSet</em> type employs the
+ <em>IntrusiveRBTree</em> type as its component to store <em>SetNode</em> objects.  As an intrusive
+ BST container, the <em>IntrusiveRBTree</em> type provides common binary-search-tree operations
+ without a memory management task.  The memory management task of the inserted <em>SetNode</em>
+ objects is handled by the <em>TreeSet</em> type.  <br>
+ The <em>TreeSet</em> type is a subtype of the <em>BaseIterable</em> type.  Thus, it implements all
+ deferred procedures required by the <em>BaseIterable</em> type and all its super classes.  As
+ a set container, the <em>TreeSet</em> type does not allow duplicated items.  Also, the <em>TreeSet</em>
+ type, as an <em>ordered</em> set, provides an ordered iteration over its stored items, which are
+ sorted according to the natural ordering of its items.  It can be traversed in either
+ ascending or descending order. <br>
+ Because the <em>IntrusiveRBTree</em> type is a subtype of the <em>IntrusiveAVLTree</em> type, the
+ <em>WrkTree</em> component can be employed as a red-black tree or an AVL tree.  Therefore, the
+ <em>TreeSet</em> type allows a user to specify which type of binary-search tree implementation
+ to be used.  By default, the red-black tree implementation is used.  The user can call the
+ <em>UseAVLTree</em> method to change to AVL tree implementation.  The <em>UseAVLTree</em> method must
+ be called before inserting an object into the set (i.e when the set is empty).  Otherwise,
+ the red-black tree implementation is employed.  <br></p>
+    <br>
+
+    
+
+      <section>
+        <h2>Finalization Procedures</h2>
+            <div class="card">
+    <div class="card-header codesum">
+      <span class="anchor" id="finalproc-treeset_finalize"></span>
+      <h3>final :: <strong>TreeSet_Finalize</strong> </h3>
+    </div>
+    <div class="card-body">
+      
+      <p>To perform finalization of the hash set.</p>
+    </div>
+    <ul class="list-group">
+      <li class="list-group-item">
+            <h3>
+    private  subroutine TreeSet_Finalize(Collection)  
+
+    </h3>
+  <p>To perform finalization of the collection.</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-collection~238"></span>
+              type(<a href='../type/treeset.html'>TreeSet</a>),
+            </td>
+<td>intent(inout)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Collection</strong></td>
+            <td>
+                <p>collection</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+      </li>
+    </ul>
+  </div>
+
+      </section>
+      <br>
+
+      <section>
+        <h2>Type-Bound Procedures</h2>
+          <div class="row">
+              <div class="card mt-3">
+    <div class="card-header codesum">
+      <span class="anchor" id="boundprocedure-isempty~86"></span>
+      <h3>
+          procedure, public ::
+  <strong>IsEmpty</strong> => BaseCollection_IsEmpty
+        
+      </h3>
+    </div>
+      <div class="card-body">
+        
+        <p><strong>Type-Bound Function</strong>: IsEmpty <br>
+ <strong>Purpose</strong>:  To check whether the collection is empty or not. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    Flag = Collection%IsEmpty() <br>
+  ---&gt;    IF (.NOT.Collection%IsEmpty()) DoSomeThing</p>
+      </div>
+    <ul class="list-group">
+        <li class="list-group-item">
+                  <h3>
+    private  function BaseCollection_IsEmpty(Collection) result(Flag)  
+</h3>
+
+  <p>To check whether the collection is currently empty or not.</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(<a href='../type/basecollection.html'>BaseCollection</a>),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Collection</strong></td>
+            <td>
+                <p>collection object</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+    <h4>
+    Return Value
+    <small>logical</small>
+    </h4>
+    <p>true if the collection currently contains no item.</p>
+
+        </li>
+    </ul>
+  </div>
+
+          </div>
+          <div class="row">
+              <div class="card mt-3">
+    <div class="card-header codesum">
+      <span class="anchor" id="boundprocedure-getitemptr"></span>
+      <h3>
+          procedure, public ::
+  <strong>GetItemPtr</strong> => BaseIterable_GetItemPtr
+        
+      </h3>
+    </div>
+      <div class="card-body">
+        
+        <p><strong>Type-Bound Function</strong>: GetItemPtr <br>
+ <strong>Purpose</strong>:  To get a pointer to an item stored in a collection.  The pointer is
+      intended to be used as a mold for the item (i.e. to provide type of the stored
+      items).  Return null pointer if the table is empty. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    ValPtr =&gt; Collection%GetItemPtr()</p>
+      </div>
+    <ul class="list-group">
+        <li class="list-group-item">
+                  <h3>
+    private  function BaseIterable_GetItemPtr(Collection) result(Val)  
+</h3>
+
+  <p>To get a pointer to an item stored in a collection.  The pointer is intended to be
+ used as a mold for the item (i.e. provides type of the stored items).  Return null
+ pointer if the table is empty.</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(<a href='../type/baseiterable.html'>BaseIterable</a>),
+            </td>
+<td>intent(in),</td>
+              <td></td>            <td>
+              TARGET
+            </td>
+            <td>::</td>
+            <td><strong>Collection</strong></td>
+            <td>
+                <p>collection</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+    <h4>
+    Return Value
+    <small>class(*), POINTER</small>
+    </h4>
+    <p>pointer to a stored item</p>
+
+        </li>
+    </ul>
+  </div>
+
+          </div>
+          <div class="row">
+              <div class="card mt-3">
+    <div class="card-header codesum">
+      <span class="anchor" id="boundprocedure-setmold"></span>
+      <h3>
+          procedure, public ::
+  <strong>SetMold</strong> => BaseIterable_SetMold
+        
+      </h3>
+    </div>
+      <div class="card-body">
+        
+        <p><em>SetMold</em> is a procedure to set a mold of stored items.  This procedure is intended
+  to be used only by a subtype of the <em>BaseIterable</em> type, not by a user.</p>
+      </div>
+    <ul class="list-group">
+        <li class="list-group-item">
+                  <h3>
+    private  subroutine BaseIterable_SetMold(Collection, Mold)  
+</h3>
+
+  <p>To set the "Mold" component. <br></p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(<a href='../type/baseiterable.html'>BaseIterable</a>),
+            </td>
+<td>intent(inout)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Collection</strong></td>
+            <td>
+                <p>collection object</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(*),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Mold</strong></td>
+            <td>
+                <p>mold for stored items</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+        </li>
+    </ul>
+  </div>
+
+          </div>
+          <div class="row">
+              <div class="card mt-3">
+    <div class="card-header codesum">
+      <span class="anchor" id="boundprocedure-freemold"></span>
+      <h3>
+          procedure, public ::
+  <strong>FreeMold</strong> => BaseIterable_FreeMold
+        
+      </h3>
+    </div>
+      <div class="card-body">
+        
+        <p><em>FreeMold</em> is a procedure to free the mold of stored items.  This procedure is intended
+  to be used only by a subtype of the <em>BaseIterable</em> type, not by a user.</p>
+      </div>
+    <ul class="list-group">
+        <li class="list-group-item">
+                  <h3>
+    private  subroutine BaseIterable_FreeMold(Collection)  
+</h3>
+
+  <p>To free the "Mold" component. <br></p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(<a href='../type/baseiterable.html'>BaseIterable</a>),
+            </td>
+<td>intent(inout)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Collection</strong></td>
+            <td>
+                <p>collection object</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+        </li>
+    </ul>
+  </div>
+
+          </div>
+          <div class="row">
+              <div class="card mt-3">
+    <div class="card-header codesum">
+      <span class="anchor" id="boundprocedure-isitemvalid"></span>
+      <h3>
+          procedure, public ::
+  <strong>IsItemValid</strong> => BaseIterable_IsItemValid
+        
+      </h3>
+    </div>
+      <div class="card-body">
+        
+        <p><em>IsItemValid</em> is a procedure to check whether the specified item is valid or not.  This
+  procedure is intended to be used only by a subtype of the <em>BaseIterable</em> type, not by
+  a user.</p>
+      </div>
+    <ul class="list-group">
+        <li class="list-group-item">
+                  <h3>
+    private  function BaseIterable_IsItemValid(Collection, Item) result(Valid)  
+</h3>
+
+  <p>To check whether the type of specified item is valid or not.</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(<a href='../type/baseiterable.html'>BaseIterable</a>),
+            </td>
+<td>intent(inout)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Collection</strong></td>
+            <td>
+                <p>collection object</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(*),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Item</strong></td>
+            <td>
+                <p>the item to be added to the collection</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+    <h4>
+    Return Value
+    <small>logical</small>
+    </h4>
+    <p>true if type of the specified item is valid</p>
+
+        </li>
+    </ul>
+  </div>
+
+          </div>
+          <div class="row">
+              <div class="card mt-3">
+    <div class="card-header codesum">
+      <span class="anchor" id="boundprocedure-copycollection~11"></span>
+      <h3>
+          procedure, public ::
+  <strong>CopyCollection</strong> => TreeSet_CopyCollection
+        
+      </h3>
+    </div>
+      <div class="card-body">
+        
+        <p>Use the <em>Construct</em> method to construct the collection from another collection.</p>
+      </div>
+    <ul class="list-group">
+        <li class="list-group-item">
+                  <h3>
+    private  subroutine TreeSet_CopyCollection(This, Other, ItemCopy, ValCopy)  
+</h3>
+
+  <p>To creates a new collection (This) with the same items as the given collection (Other).
+ This is a deferred procedure by the <em>BaseCollection</em> class. <br>
+ <em>Note</em>:  Other must be in the <em>BaseIterable</em> class.</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(<a href='../type/treeset.html'>TreeSet</a>),
+            </td>
+<td>intent(inout)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>This</strong></td>
+            <td>
+                <p>collection object to be created</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(<a href='../type/basecollection.html'>BaseCollection</a>),
+            </td>
+<td>intent(inout)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Other</strong></td>
+            <td>
+                <p>collection object to be copied</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              procedure(IfacePolyCopy),
+            </td>
+<td></td>
+              <td>optional</td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>ItemCopy</strong></td>
+            <td>
+                <p>a helper procedure to copy stored items for a derived type not in the <em>Object</em> class;
+ required if the derived type has allocatable/pointer component(s).</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              procedure(IfacePolyCopy),
+            </td>
+<td></td>
+              <td>optional</td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>ValCopy</strong></td>
+            <td>
+                <p>a helper procedure to copy stored values for a derived type not in the <em>Object</em>
+ class; required if the derived type has allocatable/pointer component(s).</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+        </li>
+    </ul>
+  </div>
+
+          </div>
+          <div class="row">
+              <div class="card mt-3">
+    <div class="card-header codesum">
+      <span class="anchor" id="boundprocedure-clear~34"></span>
+      <h3>
+          procedure, public ::
+  <strong>Clear</strong> => TreeSet_ClearItems
+        
+      </h3>
+    </div>
+      <div class="card-body">
+        
+        <p><strong>Type-Bound Subroutine</strong>: Clear <br>
+ <strong>Purpose</strong>:  To remove all items from the collection. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    CALL Collection%Clear()</p>
+      </div>
+    <ul class="list-group">
+        <li class="list-group-item">
+                  <h3>
+    private  subroutine TreeSet_ClearItems(Collection)  
+</h3>
+
+  <p>To free components of the items from the set.</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(<a href='../type/treeset.html'>TreeSet</a>),
+            </td>
+<td>intent(inout)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Collection</strong></td>
+            <td>
+                <p>collection</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+        </li>
+    </ul>
+  </div>
+
+          </div>
+          <div class="row">
+              <div class="card mt-3">
+    <div class="card-header codesum">
+      <span class="anchor" id="boundprocedure-destruct~49"></span>
+      <h3>
+          procedure, public ::
+  <strong>Destruct</strong> => TreeSet_Destroy
+        
+      </h3>
+    </div>
+      <div class="card-body">
+        
+        <p><strong>Type-Bound Subroutine</strong>: Destruct <br>
+ <strong>Purpose</strong>:  To remove all items from the collection and free memory
+               of items stored in the collection.<br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    CALL Collection%Destruct() <br></p>
+      </div>
+    <ul class="list-group">
+        <li class="list-group-item">
+                  <h3>
+    private  subroutine TreeSet_Destroy(Collection)  
+</h3>
+
+  <p>To destruct the set.</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(<a href='../type/treeset.html'>TreeSet</a>),
+            </td>
+<td>intent(inout)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Collection</strong></td>
+            <td>
+                <p>collection</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+        </li>
+    </ul>
+  </div>
+
+          </div>
+          <div class="row">
+              <div class="card mt-3">
+    <div class="card-header codesum">
+      <span class="anchor" id="boundprocedure-getsize~49"></span>
+      <h3>
+          procedure, public ::
+  <strong>GetSize</strong> => TreeSet_GetSize
+        
+      </h3>
+    </div>
+      <div class="card-body">
+        
+        <p><strong>Type-Bound Function</strong>: GetSize <br>
+ <strong>Purpose</strong>:  To get the current size of the collection. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    Size = Collection%GetSize()</p>
+      </div>
+    <ul class="list-group">
+        <li class="list-group-item">
+                  <h3>
+    private  function TreeSet_GetSize(Collection) result(Size)  
+</h3>
+
+  <p>To return the number of items currently in the hash set.</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(<a href='../type/treeset.html'>TreeSet</a>),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Collection</strong></td>
+            <td>
+                <p>collection</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+    <h4>
+    Return Value
+    <small>integer(kind=kInt32)</small>
+    </h4>
+    <p>the number of items</p>
+
+        </li>
+    </ul>
+  </div>
+
+          </div>
+          <div class="row">
+              <div class="card mt-3">
+    <div class="card-header codesum">
+      <span class="anchor" id="boundprocedure-startfirst~41"></span>
+      <h3>
+          procedure, public ::
+  <strong>StartFirst</strong> => TreeSet_Move2FirstItem
+        
+      </h3>
+    </div>
+      <div class="card-body">
+        
+        <p><strong>Type-Bound Function</strong>: StartFirst <br>
+ <strong>Purpose</strong>:  To start the <em>forward</em> iteration and return a flag indicating
+               whether the collection is empty or not. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    IsEmpty = Collection%StartFirst() <br>
+  ---&gt;    IsEmpty = Collection%StartFirst(FirstItem)</p>
+      </div>
+    <ul class="list-group">
+        <li class="list-group-item">
+                  <h3>
+    private  function TreeSet_Move2FirstItem(Collection, Item, ItemCopy) result(IsEmpty)  
+</h3>
+
+  <p>To move to the first (starting) item in a collection.   For the hash set, which is
+ an unordered set, the starting item is the first item found in the non-empty bucket.  <br></p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(<a href='../type/treeset.html'>TreeSet</a>),
+            </td>
+<td>intent(inout)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Collection</strong></td>
+            <td>
+                <p>collection</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(*),
+            </td>
+<td>intent(inout),</td>
+              <td>optional</td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Item</strong></td>
+            <td>
+                <p>the first item as output if requested (and available)</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              procedure(IfacePolyCopy),
+            </td>
+<td></td>
+              <td>optional</td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>ItemCopy</strong></td>
+            <td>
+                <p>a procedure to copy stored items for a derived type not in the <em>Object</em> class; <br>
+ required if the derived type has allocatable/pointer component(s).</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+    <h4>
+    Return Value
+    <small>logical</small>
+    </h4>
+    <p>a flag indicating whether the table contains no item or not <br>
+- true if the table is empty. <br>
+- otherwise the first item is available.</p>
+
+        </li>
+    </ul>
+  </div>
+
+          </div>
+          <div class="row">
+              <div class="card mt-3">
+    <div class="card-header codesum">
+      <span class="anchor" id="boundprocedure-moveforward~41"></span>
+      <h3>
+          procedure, public ::
+  <strong>MoveForward</strong> => TreeSet_Move2NextItem
+        
+      </h3>
+    </div>
+      <div class="card-body">
+        
+        <p><strong>Type-Bound Function</strong>: MoveForward <br>
+ <strong>Purpose</strong>:  To move to the next iteration and return a flag indicating whether
+               the cursor pointer has reached the end of the collection or not. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    IsTheEnd = Collection%MoveForward() <br>
+  ---&gt;    IsTheEnd = Collection%MoveForward(NextItem) <br>
+ <strong>Note</strong>: See the <a href="../module/mclass_baseiterable.html">BaseIterable</a> type
+           for illustrations of an iteration over a collection using the <em>StartFirst</em>
+           and <em>MoveForward</em> methods.<br></p>
+      </div>
+    <ul class="list-group">
+        <li class="list-group-item">
+                  <h3>
+    private  function TreeSet_Move2NextItem(Collection, Item, ItemCopy) result(IsTheEnd)  
+</h3>
+
+  <p>To move to the next item in a collection.  For the hash set, which is an unordered set,
+ the next item is a item inserted in the first non-empty bucket after the previous one.  <br>
+ The routine will report an error if an alteration to stored item(s) (either by an insertion
+ or a removal) has been occurred during current iteration.  <br></p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(<a href='../type/treeset.html'>TreeSet</a>),
+            </td>
+<td>intent(inout)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Collection</strong></td>
+            <td>
+                <p>collection</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(*),
+            </td>
+<td>intent(inout),</td>
+              <td>optional</td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Item</strong></td>
+            <td>
+                <p>the next item as output if requested (and available)</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              procedure(IfacePolyCopy),
+            </td>
+<td></td>
+              <td>optional</td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>ItemCopy</strong></td>
+            <td>
+                <p>a procedure to copy stored items for a derived type not in the <em>Object</em> class; <br>
+ required if the derived type has allocatable/pointer component(s).</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+    <h4>
+    Return Value
+    <small>logical</small>
+    </h4>
+    <p>a flag indicating whether the move to the end of the table occurs or not <br>
+- true if next item is NOT available. <br>
+- otherwise next item is available.</p>
+
+        </li>
+    </ul>
+  </div>
+
+          </div>
+          <div class="row">
+              <div class="card mt-3">
+    <div class="card-header codesum">
+      <span class="anchor" id="boundprocedure-startlast~27"></span>
+      <h3>
+          procedure, public ::
+  <strong>StartLast</strong> => TreeSet_Move2LastItem
+        
+      </h3>
+    </div>
+      <div class="card-body">
+        
+        <p><strong>Type-Bound Function</strong>: StartLast <br>
+ <strong>Purpose</strong>:  To start an iteration in a reversed order and return a flag
+               indicating whether the collection is empty or not. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    IsEmpty = Collection%StartLast() <br>
+  ---&gt;    IsEmpty = Collection%StartLast(LastItem) <br></p>
+      </div>
+    <ul class="list-group">
+        <li class="list-group-item">
+                  <h3>
+    private  function TreeSet_Move2LastItem(Collection, Item) result(IsEmpty)  
+</h3>
+
+  <p>To move to the last (starting in a reversed order) item in a symbol table. For the
+ <em>TreeSet</em>, which is an ordered symbol table, the starting item in a reversed order
+ is the item with greatest key.  <br></p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(<a href='../type/treeset.html'>TreeSet</a>),
+            </td>
+<td>intent(inout)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Collection</strong></td>
+            <td>
+                <p>symbol-table collection object</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(*),
+            </td>
+<td>intent(inout),</td>
+              <td>optional</td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Item</strong></td>
+            <td>
+                <p>the greatest key as output if requested (and available)</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+    <h4>
+    Return Value
+    <small>logical</small>
+    </h4>
+    <p>a flag indicating whether the collection contains no item or not <br>
+- true if the collection is empty. <br>
+- otherwise the first item is available.</p>
+
+        </li>
+    </ul>
+  </div>
+
+          </div>
+          <div class="row">
+              <div class="card mt-3">
+    <div class="card-header codesum">
+      <span class="anchor" id="boundprocedure-movebackward~27"></span>
+      <h3>
+          procedure, public ::
+  <strong>MoveBackward</strong> => TreeSet_Move2PrevItem
+        
+      </h3>
+    </div>
+      <div class="card-body">
+        
+        <p><strong>Type-Bound Function</strong>: MoveBackward <br>
+ <strong>Purpose</strong>:  To move to the previous item and return a flag
+               indicating whether the cursor pointer has reached the end of
+               the collection or not. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    IsTheEnd = Collection%MoveBackward() <br>
+  ---&gt;    IsTheEnd = Collection%MoveBackward(PrevItem) <br></p>
+      </div>
+    <ul class="list-group">
+        <li class="list-group-item">
+                  <h3>
+    private  function TreeSet_Move2PrevItem(Collection, Item) result(IsTheEnd)  
+</h3>
+
+  <p>To move to the previous item in a symbol table.  For the <em>TreeSet</em>, which is an
+ ordered symbol table,  the previous item is the so-called predecessor item.  <br></p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(<a href='../type/treeset.html'>TreeSet</a>),
+            </td>
+<td>intent(inout)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Collection</strong></td>
+            <td>
+                <p>symbol-table collection object</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(*),
+            </td>
+<td>intent(inout),</td>
+              <td>optional</td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Item</strong></td>
+            <td>
+                <p>the previous key as output if requested (and available)</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+    <h4>
+    Return Value
+    <small>logical</small>
+    </h4>
+    <p>a flag indicating whether the move to the end of the
+ collection occurs or not <br>
+- true if next item is NOT available. <br>
+- otherwise next item is available.</p>
+
+        </li>
+    </ul>
+  </div>
+
+          </div>
+          <div class="row">
+              <div class="card mt-3">
+    <div class="card-header codesum">
+      <span class="anchor" id="boundprocedure-insert~33"></span>
+      <h3>
+          procedure, public ::
+  <strong>Insert</strong> => TreeSet_Insert
+        
+      </h3>
+    </div>
+      <div class="card-body">
+        
+        <p><strong>Type-Bound Subroutine</strong>: Insert <br>
+ <strong>Purpose</strong>:  To insert the specified item to the collection. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    CALL Collection%Insert(Item) <br></p>
+      </div>
+    <ul class="list-group">
+        <li class="list-group-item">
+                  <h3>
+    private  subroutine TreeSet_Insert(Collection, Item)  
+</h3>
+
+  <p>To add an item into the hash set.  If the specified item is already stored
+ in the set, report severe error and return immediately.  <br></p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(<a href='../type/treeset.html'>TreeSet</a>),
+            </td>
+<td>intent(inout)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Collection</strong></td>
+            <td>
+                <p>collection</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(*),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Item</strong></td>
+            <td>
+                <p>item to be inserted</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+        </li>
+    </ul>
+  </div>
+
+          </div>
+          <div class="row">
+              <div class="card mt-3">
+    <div class="card-header codesum">
+      <span class="anchor" id="boundprocedure-delete~27"></span>
+      <h3>
+          procedure, public ::
+  <strong>Delete</strong> => TreeSet_Delete
+        
+      </h3>
+    </div>
+      <div class="card-body">
+        
+        <p><strong>Type-Bound Subroutine</strong>: Delete <br>
+ <strong>Purpose</strong>:  To delete the current item from the collection. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    CALL Collection%Delete() <br>
+ <strong>Note</strong>: This method is intended to be used in conjunction with the <em>StartFirst</em> and
+      <em>MoveForward</em> methods.  Therefore, after the call to one of those methods and then
+      calling this one will result in a removal of the current item of the iteration
+      (i.e. the same item that can be retrieved via the <em>StartFirst</em> and <em>MoveForward</em>
+      methods). <br></p>
+      </div>
+    <ul class="list-group">
+        <li class="list-group-item">
+                  <h3>
+    private  subroutine TreeSet_Delete(Collection)  
+</h3>
+
+  <p>To delete a item of the current iteration from a collection.</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(<a href='../type/treeset.html'>TreeSet</a>),
+            </td>
+<td>intent(inout)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Collection</strong></td>
+            <td>
+                <p>symbol-table collection object</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+        </li>
+    </ul>
+  </div>
+
+          </div>
+          <div class="row">
+              <div class="card mt-3">
+    <div class="card-header codesum">
+      <span class="anchor" id="boundprocedure-toarray~29"></span>
+      <h3>
+          procedure, public ::
+  <strong>ToArray</strong> => TreeSet_ToArray
+        
+      </h3>
+    </div>
+      <div class="card-body">
+        
+        <p><strong>Type-Bound Function</strong>: ToArray <br>
+ <strong>Purpose</strong>:  To get and remove all items from the collection.  Also, return a flag
+      indicating whether the items are successfully retrieved and removed or not. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    Success = Collection%ToArray(Items) <br>
+  ---&gt;    IF (.NOT.Collection%ToArray(Items)) DoSomething</p>
+      </div>
+    <ul class="list-group">
+        <li class="list-group-item">
+                  <h3>
+    private  function TreeSet_ToArray(Collection, Items, ItemCopy) result(Success)  
+</h3>
+
+  <p>To get and remove all items from the collection.  Also, return
+ a flag indicating whether the items are successfully removed.</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(<a href='../type/treeset.html'>TreeSet</a>),
+            </td>
+<td>intent(inout)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Collection</strong></td>
+            <td>
+                <p>TreeSet object</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(*),
+            </td>
+<td>intent(inout)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Items</strong>(:)</td>
+            <td>
+                <p>the item to be removed from the collection</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              procedure(IfacePolyCopy),
+            </td>
+<td></td>
+              <td>optional</td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>ItemCopy</strong></td>
+            <td>
+                <p>a procedure to copy stored items for a derived type not in the <em>Object</em> class; <br>
+ required if the derived type has allocatable/pointer component(s).</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+    <h4>
+    Return Value
+    <small>logical</small>
+    </h4>
+    <p>flag indicating whether the items are successfully retrieved and removed. <br></p>
+
+        </li>
+    </ul>
+  </div>
+
+          </div>
+          <div class="row">
+              <div class="card mt-3">
+    <div class="card-header codesum">
+      <span class="anchor" id="boundprocedure-getall~29"></span>
+      <h3>
+          procedure, public ::
+  <strong>GetAll</strong> => TreeSet_GetAll
+        
+      </h3>
+    </div>
+      <div class="card-body">
+        
+        <p><strong>Type-Bound Function</strong>: GetAll <br>
+ <strong>Purpose</strong>:  To get all items (without removing them) from the collection. Also, return
+               a flag indicating whether the items are successfully retrieved or not. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    Success = Collection%GetAll(Items) <br>
+  ---&gt;    IF (.NOT.Collection%GetAll(Items)) DoSomething</p>
+      </div>
+    <ul class="list-group">
+        <li class="list-group-item">
+                  <h3>
+    private  function TreeSet_GetAll(Collection, Items, ItemCopy) result(Success)  
+</h3>
+
+  <p>To get all items (without removing them) from the collection.  Also,
+ return a flag indicating whether the items are successfully retrieved.</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(<a href='../type/treeset.html'>TreeSet</a>),
+            </td>
+<td>intent(inout)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Collection</strong></td>
+            <td>
+                <p>TreeSet object</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(*),
+            </td>
+<td>intent(inout)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Items</strong>(1:)</td>
+            <td>
+                <p>the item to be removed from the collection</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              procedure(IfacePolyCopy),
+            </td>
+<td></td>
+              <td>optional</td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>ItemCopy</strong></td>
+            <td>
+                <p>a procedure to copy stored items for a derived type not in the <em>Object</em> class; <br>
+ required if the derived type has allocatable/pointer component(s).</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+    <h4>
+    Return Value
+    <small>logical</small>
+    </h4>
+    <p>flag indicating whether the items are successfully retrieved. <br></p>
+
+        </li>
+    </ul>
+  </div>
+
+          </div>
+          <div class="row">
+              <div class="card mt-3">
+    <div class="card-header codesum">
+      <span class="anchor" id="boundprocedure-construct~48"></span>
+      <h3>
+          generic, public ::
+  <strong>Construct</strong> => <a href='../type/treeset.html#boundprocedure-copycollection~11'>CopyCollection</a>, TreeSet_CreateByArray
+        
+      </h3>
+    </div>
+      <div class="card-body">
+        
+        <p><strong>Type-Bound Subroutine</strong>: Construct <br>
+ <strong>Purpose</strong>:  To construct a new collection from an array of items or from another
+               collection. <br>
+ <strong>Usage</strong>: <br>
+  ! create a collection from an array of 25 items <br>
+  ---&gt;    CALL Collection%Construct(25, Arr) <br>
+  ! create a collection from another collection <br>
+  ---&gt;    CALL Collection%Construct(OtherCollection)</p>
+      </div>
+    <ul class="list-group">
+        <li class="list-group-item">
+                  <h3>
+    private  subroutine TreeSet_CopyCollection(This, Other, ItemCopy, ValCopy)  
+</h3>
+
+  <p>To creates a new collection (This) with the same items as the given collection (Other).
+ This is a deferred procedure by the <em>BaseCollection</em> class. <br>
+ <em>Note</em>:  Other must be in the <em>BaseIterable</em> class.</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(<a href='../type/treeset.html'>TreeSet</a>),
+            </td>
+<td>intent(inout)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>This</strong></td>
+            <td>
+                <p>collection object to be created</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(<a href='../type/basecollection.html'>BaseCollection</a>),
+            </td>
+<td>intent(inout)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Other</strong></td>
+            <td>
+                <p>collection object to be copied</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              procedure(IfacePolyCopy),
+            </td>
+<td></td>
+              <td>optional</td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>ItemCopy</strong></td>
+            <td>
+                <p>a helper procedure to copy stored items for a derived type not in the <em>Object</em> class;
+ required if the derived type has allocatable/pointer component(s).</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              procedure(IfacePolyCopy),
+            </td>
+<td></td>
+              <td>optional</td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>ValCopy</strong></td>
+            <td>
+                <p>a helper procedure to copy stored values for a derived type not in the <em>Object</em>
+ class; required if the derived type has allocatable/pointer component(s).</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+        </li>
+        <li class="list-group-item">
+                  <h3>
+    private  subroutine TreeSet_CreateByArray(Collection, N, Items)  
+</h3>
+
+  <p>To create a table from an array of items.</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(<a href='../type/treeset.html'>TreeSet</a>),
+            </td>
+<td>intent(inout)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Collection</strong></td>
+            <td>
+                <p>collection</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              integer(kind=kInt32),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>N</strong></td>
+            <td>
+                <p>number of items</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(*),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Items</strong>(N)</td>
+            <td>
+                <p>the items to be added to the set</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+        </li>
+    </ul>
+  </div>
+
+          </div>
+          <div class="row">
+              <div class="card mt-3">
+    <div class="card-header codesum">
+      <span class="anchor" id="boundprocedure-contain~19"></span>
+      <h3>
+          procedure, public ::
+  <strong>Contain</strong> => TreeSet_Contain
+        
+      </h3>
+    </div>
+      <div class="card-body">
+        
+        <p><strong>Type-Bound Function</strong>: Contain <br>
+ <strong>Purpose</strong>:  To find the specified item in the collection.  Return true if
+               the specified item is found.  Otherwise, return false. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    Flag = Collection%Contain(Item) <br>
+  ---&gt;    IF (.NOT.Collection%Contain(Item)) DoSomething</p>
+      </div>
+    <ul class="list-group">
+        <li class="list-group-item">
+                  <h3>
+    private  function TreeSet_Contain(Collection, Item) result(Found)  
+</h3>
+
+  <p>To check whether the specified item is currently stored in a collection.  <br></p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(<a href='../type/treeset.html'>TreeSet</a>),
+            </td>
+<td>intent(inout)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Collection</strong></td>
+            <td>
+                <p>collection</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(*),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Item</strong></td>
+            <td>
+                <p>item to be looked for</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+    <h4>
+    Return Value
+    <small>logical</small>
+    </h4>
+    <p>flag indicating whether the specified item is found or not.</p>
+
+        </li>
+    </ul>
+  </div>
+
+          </div>
+          <div class="row">
+              <div class="card mt-3">
+    <div class="card-header codesum">
+      <span class="anchor" id="boundprocedure-remove~36"></span>
+      <h3>
+          procedure, public ::
+  <strong>Remove</strong> => TreeSet_Remove
+        
+      </h3>
+    </div>
+      <div class="card-body">
+        
+        <p><strong>Type-Bound Function</strong>: Remove <br>
+ <strong>Purpose</strong>:  To remove the specified item from the collection.  Also, return a flag
+               indicating whether the item is successfully removed or not. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    Flag = Collection%Remove(Item) <br>
+  ---&gt;    IF (.NOT.Collection%Remove(Item)) DoSomething</p>
+      </div>
+    <ul class="list-group">
+        <li class="list-group-item">
+                  <h3>
+    private  function TreeSet_Remove(Collection, Item) result(Flag)  
+</h3>
+
+  <p>To remove the specified item (and its associated value) from a collection.  Also,
+ return a flag indicating whether the item is successfully removed or not. <br></p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(<a href='../type/treeset.html'>TreeSet</a>),
+            </td>
+<td>intent(inout)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Collection</strong></td>
+            <td>
+                <p>collection</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(*),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Item</strong></td>
+            <td>
+                <p>item to be removed</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+    <h4>
+    Return Value
+    <small>logical</small>
+    </h4>
+    <p>flag indicating whether the specified item and its associated
+ value are successfully removed or not.</p>
+
+        </li>
+    </ul>
+  </div>
+
+          </div>
+          <div class="row">
+              <div class="card mt-3">
+    <div class="card-header codesum">
+      <span class="anchor" id="boundprocedure-useavltree~2"></span>
+      <h3>
+          procedure, public ::
+  <strong>UseAVLTree</strong> => TreeSet_UseAVLTree
+        
+      </h3>
+    </div>
+      <div class="card-body">
+        
+        <p><strong>Type-Bound Subroutine</strong>: UseAVLTree <br>
+ <strong>Purpose</strong>:  To set the working tree component to work as an AVL tree.  <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    CALL Collection%UseAVLTree() <br>
+ <em>Note</em>: The collection must be empty when calling this method.</p>
+      </div>
+    <ul class="list-group">
+        <li class="list-group-item">
+                  <h3>
+    private  subroutine TreeSet_UseAVLTree(Collection)  
+</h3>
+
+  <p>To set the <em>IsRBTree</em> component to false.</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(<a href='../type/treeset.html'>TreeSet</a>),
+            </td>
+<td>intent(inout)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Collection</strong></td>
+            <td>
+                <p>collection object</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+        </li>
+    </ul>
+  </div>
+
+          </div>
+          <div class="row">
+              <div class="card mt-3">
+    <div class="card-header codesum">
+      <span class="anchor" id="boundprocedure-userbtree~2"></span>
+      <h3>
+          procedure, public ::
+  <strong>UseRBTree</strong> => TreeSet_UseRBTree
+        
+      </h3>
+    </div>
+      <div class="card-body">
+        
+        <p><strong>Type-Bound Subroutine</strong>: UseRBTree <br>
+ <strong>Purpose</strong>:  To set the working tree component to work as an red-black RB tree.  <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    CALL Collection%UseRBTree() <br>
+ <em>Note</em>: The collection must be empty when calling this method.</p>
+      </div>
+    <ul class="list-group">
+        <li class="list-group-item">
+                  <h3>
+    private  subroutine TreeSet_UseRBTree(Collection)  
+</h3>
+
+  <p>To set the <em>IsRBTree</em> component to true.</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(<a href='../type/treeset.html'>TreeSet</a>),
+            </td>
+<td>intent(inout)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Collection</strong></td>
+            <td>
+                <p>collection object</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+        </li>
+    </ul>
+  </div>
+
+          </div>
+          <div class="row">
+              <div class="card mt-3">
+    <div class="card-header codesum">
+      <span class="anchor" id="boundprocedure-copy~16"></span>
+      <h3>
+          procedure, public ::
+  <strong>Copy</strong> => TreeSet_Copy
+        
+      </h3>
+    </div>
+      <div class="card-body">
+        
+        <p><strong>Type-Bound Subroutine</strong>: Copy <br>
+ <strong>Purpose</strong>: To make a copy of the source object. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    CALL SrcObj%Copy(DstObj) <br></p>
+      </div>
+    <ul class="list-group">
+        <li class="list-group-item">
+                  <h3>
+    private  subroutine TreeSet_Copy(SrcObj, DstObj, IsDeep)  
+</h3>
+
+  <p>To copy the source object to the destination object.
+ This is a deferred procedure inherited from the <em>Object</em> type.</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(<a href='../type/treeset.html'>TreeSet</a>),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>SrcObj</strong></td>
+            <td>
+                <p>source object</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(Object),
+            </td>
+<td>intent(out)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>DstObj</strong></td>
+            <td>
+                <p>destination object</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              logical,
+            </td>
+<td>intent(in),</td>
+              <td>optional</td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>IsDeep</strong></td>
+            <td>
+                <p>Flag indicating whether to perform deep copy or shallow copy. <br>
+ - If present and true, perform a deep copy. <br>
+ - If present and false, perform a shallow copy. <br>
+ - If not present, perform either a shallow or a deep copy that is naturally most
+   suitable for the object's components.</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+        </li>
+    </ul>
+  </div>
+
+          </div>
+          <div class="row">
+              <div class="card mt-3">
+    <div class="card-header codesum">
+      <span class="anchor" id="boundprocedure-isequalto~16"></span>
+      <h3>
+          procedure, public ::
+  <strong>IsEqualTo</strong> => TreeSet_IsEqualTo
+        
+      </h3>
+    </div>
+      <div class="card-body">
+        
+        <p><strong>Type-Bound Function</strong>: IsEqualTo <br>
+ <strong>Purpose</strong>: To check whether two objects are equal to one another or not. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    Flag = ObjA%IsEqualTo(ObjB) <br>
+  ---&gt;    IF (ObjA%IsEqualTo(ObjB)) DoSomething</p>
+      </div>
+    <ul class="list-group">
+        <li class="list-group-item">
+                  <h3>
+    private  function TreeSet_IsEqualTo(LhsObj, RhsObj) result(Flag)  
+</h3>
+
+  <p>To check whether LhsObj and RhsObj are equal or not.
+ This is a deferred procedure inherited from the <em>Object</em> type.</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(<a href='../type/treeset.html'>TreeSet</a>),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>LhsObj</strong></td>
+            <td>
+                <p>an object</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(Object),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>RhsObj</strong></td>
+            <td>
+                <p>another object</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+    <h4>
+    Return Value
+    <small>logical</small>
+    </h4>
+    <p>true if both objects are equal</p>
+
+        </li>
+    </ul>
+  </div>
+
+          </div>
+          <div class="row">
+              <div class="card mt-3">
+    <div class="card-header codesum">
+      <span class="anchor" id="boundprocedure-memfree~16"></span>
+      <h3>
+          procedure, public ::
+  <strong>MemFree</strong> => TreeSet_MemFree
+        
+      </h3>
+    </div>
+      <div class="card-body">
+        
+        <p><strong>Type-Bound Subroutine</strong>: MemFree <br>
+ <strong>Purpose</strong>: To free memory/storage occupied by the object. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    CALL Obj%MemFree() <br></p>
+      </div>
+    <ul class="list-group">
+        <li class="list-group-item">
+                  <h3>
+    private  subroutine TreeSet_MemFree(Obj)  
+</h3>
+
+  <p>To free memory of the TreeSet object.
+ This is a deferred procedure inherited from the <em>Object</em> type.</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(<a href='../type/treeset.html'>TreeSet</a>),
+            </td>
+<td>intent(inout)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Obj</strong></td>
+            <td>
+                
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+        </li>
+    </ul>
+  </div>
+
+          </div>
+          <div class="row">
+              <div class="card mt-3">
+    <div class="card-header codesum">
+      <span class="anchor" id="boundprocedure-tostring~21"></span>
+      <h3>
+          procedure, public ::
+  <strong>ToString</strong> => TreeSet_ToString
+        
+      </h3>
+    </div>
+      <div class="card-body">
+        
+        <p><strong>Type-Bound Function</strong>: ToString <br>
+ <strong>Purpose</strong>:  To return the string representation of this object. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    Str = Obj%ToString() <br></p>
+      </div>
+    <ul class="list-group">
+        <li class="list-group-item">
+                  <h3>
+    private  function TreeSet_ToString(Obj) result(Str)  
+</h3>
+
+  <p>To get the name of the TreeSet type.
+ This is a deferred procedure inherited from the <em>Object</em> type.</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(<a href='../type/treeset.html'>TreeSet</a>),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Obj</strong></td>
+            <td>
+                
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+    <h4>
+    Return Value
+    <small>character(kind=kChar, len=:), ALLOCATABLE</small>
+    </h4>
+    
+
+        </li>
+    </ul>
+  </div>
+
+          </div>
+          <div class="row">
+              <div class="card mt-3">
+    <div class="card-header codesum">
+      <span class="anchor" id="boundprocedure-hashcode~23"></span>
+      <h3>
+          procedure, public ::
+  <strong>HashCode</strong> => TreeSet_HashCode
+        
+      </h3>
+    </div>
+      <div class="card-body">
+        
+        <p><strong>Type-Bound Function</strong>: HashCode <br>
+ <strong>Purpose</strong>:  To compute the hash code of this object. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    Code = Obj%HashCode() <br></p>
+      </div>
+    <ul class="list-group">
+        <li class="list-group-item">
+                  <h3>
+    private  function TreeSet_HashCode(Obj) result(Code)  
+</h3>
+
+  <p>To compute hash code for this object.</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(<a href='../type/treeset.html'>TreeSet</a>),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Obj</strong></td>
+            <td>
+                
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+    <h4>
+    Return Value
+    <small>integer(kind=kInt32)</small>
+    </h4>
+    
+
+        </li>
+    </ul>
+  </div>
+
+          </div>
+      </section>
+
+    <section>
+    <h3><span class="anchor" id="src"></span>Source Code</h3>
+    <div class="hl codehilite"><pre><span></span><span class="w">    </span><span class="k">TYPE</span><span class="p">,</span><span class="w"> </span><span class="k">EXTENDS</span><span class="p">(</span><span class="n">BaseIterable</span><span class="p">)</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">TreeSet</span>
+<span class="w">        </span><span class="k">PRIVATE</span>
+<span class="w">        </span><span class="c">!&gt; a flag indicating whether to use the red-black tree implementation</span>
+<span class="w">        </span><span class="c">!  or the AVL tree implementation</span>
+<span class="w">        </span><span class="n">tLogical</span><span class="w">                </span><span class="kd">::</span><span class="w"> </span><span class="n">IsRBTree</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">TrueVal</span>
+<span class="w">        </span><span class="c">!% a working binary-search tree</span>
+<span class="w">        </span><span class="k">TYPE</span><span class="p">(</span><span class="n">IntrusiveRBTree</span><span class="p">)</span><span class="w">   </span><span class="kd">::</span><span class="w"> </span><span class="n">WrkTree</span>
+<span class="w">        </span><span class="c">!&gt; direction of the iteration &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  - positive -&gt; forward iteration</span>
+<span class="w">        </span><span class="c">!  - negative -&gt; backward iteration</span>
+<span class="w">        </span><span class="c">!  - zero     -&gt; iteration not yet start</span>
+<span class="w">        </span><span class="n">tSInt32</span><span class="w">                 </span><span class="kd">::</span><span class="w"> </span><span class="n">Dir</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span>
+<span class="w">        </span><span class="c">!&gt; memory pool of tree nodes </span>
+<span class="w">        </span><span class="k">TYPE</span><span class="p">(</span><span class="n">CompNodePool</span><span class="p">)</span><span class="w">      </span><span class="kd">::</span><span class="w"> </span><span class="n">NodePool</span>
+<span class="w">        </span><span class="c">!&gt; memory pool of stored items</span>
+<span class="w">        </span><span class="k">TYPE</span><span class="p">(</span><span class="n">MemoryPool</span><span class="p">)</span><span class="w">        </span><span class="kd">::</span><span class="w"> </span><span class="n">ItemPool</span>
+<span class="w">    </span><span class="k">CONTAINS</span>
+<span class="w">        </span><span class="c">! ---------------------------------------------------------------------</span>
+<span class="w">        </span><span class="c">! -----                     Private Procedures                    -----</span>
+<span class="w">        </span><span class="c">! ---------------------------------------------------------------------</span>
+<span class="w">        </span><span class="c">!&gt; **Type-Bound Function**: FindItem &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Purpose**:  To find the specified item in the collection.  Return true if</span>
+<span class="w">        </span><span class="c">!                the specified item is found.  Otherwise, return false. &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Usage**: &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!   ---&gt;    Flag = Collection%FindItem(Item) &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!   ---&gt;    IF (.NOT.Collection%FindItem(Item)) DoSomething</span>
+<span class="w">        </span><span class="k">PROCEDURE</span><span class="p">,</span><span class="w"> </span><span class="k">PRIVATE</span><span class="w">  </span><span class="kd">::</span><span class="w"> </span><span class="n">FindItem</span><span class="w">     </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">TreeSet_FindItem</span>
+<span class="w">        </span><span class="c">!&gt; Use the *Construct* method to construct the collection from an array of items.</span>
+<span class="w">        </span><span class="k">PROCEDURE</span><span class="p">,</span><span class="w"> </span><span class="k">PRIVATE</span><span class="w">  </span><span class="kd">::</span><span class="w"> </span><span class="n">TreeSet_CreateByArray</span>
+<span class="w">        </span><span class="c">! ---------------------------------------------------------------------</span>
+<span class="w">        </span><span class="c">! -----  Deferred/Overridden Procedures from BaseCollection Type  -----</span>
+<span class="w">        </span><span class="c">! ---------------------------------------------------------------------</span>
+<span class="w">        </span><span class="c">!&gt; Use the *Construct* method to construct the collection from another collection.</span>
+<span class="w">        </span><span class="k">PROCEDURE</span><span class="w">   </span><span class="kd">::</span><span class="w"> </span><span class="n">CopyCollection</span><span class="w">   </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">TreeSet_CopyCollection</span>
+<span class="w">        </span><span class="c">!&gt; **Type-Bound Subroutine**: Clear &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Purpose**:  To remove all items from the collection. &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Usage**: &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!   ---&gt;    CALL Collection%Clear()</span>
+<span class="w">        </span><span class="k">PROCEDURE</span><span class="w">   </span><span class="kd">::</span><span class="w"> </span><span class="n">Clear</span><span class="w">            </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">TreeSet_ClearItems</span>
+<span class="w">        </span><span class="c">!&gt; **Type-Bound Subroutine**: Destruct &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Purpose**:  To remove all items from the collection and free memory</span>
+<span class="w">        </span><span class="c">!                of items stored in the collection.&lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Usage**: &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!   ---&gt;    CALL Collection%Destruct() &lt;br&gt;</span>
+<span class="w">        </span><span class="k">PROCEDURE</span><span class="w">   </span><span class="kd">::</span><span class="w"> </span><span class="n">Destruct</span><span class="w">         </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">TreeSet_Destroy</span>
+<span class="w">        </span><span class="c">!&gt; **Type-Bound Function**: GetSize &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Purpose**:  To get the current size of the collection. &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Usage**: &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!   ---&gt;    Size = Collection%GetSize()</span>
+<span class="w">        </span><span class="k">PROCEDURE</span><span class="w">   </span><span class="kd">::</span><span class="w"> </span><span class="n">GetSize</span><span class="w">          </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">TreeSet_GetSize</span>
+<span class="w">        </span><span class="c">! ---------------------------------------------------------------------</span>
+<span class="w">        </span><span class="c">! -----         Deferred Procedures from BaseIterable Type        -----</span>
+<span class="w">        </span><span class="c">! ---------------------------------------------------------------------</span>
+<span class="w">        </span><span class="c">!&gt; **Type-Bound Function**: StartFirst &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Purpose**:  To start the *forward* iteration and return a flag indicating</span>
+<span class="w">        </span><span class="c">!                whether the collection is empty or not. &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Usage**: &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!   ---&gt;    IsEmpty = Collection%StartFirst() &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!   ---&gt;    IsEmpty = Collection%StartFirst(FirstItem)</span>
+<span class="w">        </span><span class="k">PROCEDURE</span><span class="w">   </span><span class="kd">::</span><span class="w"> </span><span class="n">StartFirst</span><span class="w">       </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">TreeSet_Move2FirstItem</span>
+<span class="w">        </span><span class="c">!&gt; **Type-Bound Function**: MoveForward &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Purpose**:  To move to the next iteration and return a flag indicating whether</span>
+<span class="w">        </span><span class="c">!                the cursor pointer has reached the end of the collection or not. &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Usage**: &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!   ---&gt;    IsTheEnd = Collection%MoveForward() &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!   ---&gt;    IsTheEnd = Collection%MoveForward(NextItem) &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Note**: See the &lt;a href=&quot;../module/mclass_baseiterable.html&quot;&gt;BaseIterable&lt;/a&gt; type</span>
+<span class="w">        </span><span class="c">!            for illustrations of an iteration over a collection using the *StartFirst*</span>
+<span class="w">        </span><span class="c">!            and *MoveForward* methods.&lt;br&gt;</span>
+<span class="w">        </span><span class="k">PROCEDURE</span><span class="w">   </span><span class="kd">::</span><span class="w"> </span><span class="n">MoveForward</span><span class="w">      </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">TreeSet_Move2NextItem</span>
+<span class="w">        </span><span class="c">!&gt; **Type-Bound Function**: StartLast &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Purpose**:  To start an iteration in a reversed order and return a flag</span>
+<span class="w">        </span><span class="c">!                indicating whether the collection is empty or not. &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Usage**: &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!   ---&gt;    IsEmpty = Collection%StartLast() &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!   ---&gt;    IsEmpty = Collection%StartLast(LastItem) &lt;br&gt;</span>
+<span class="w">        </span><span class="k">PROCEDURE</span><span class="w">   </span><span class="kd">::</span><span class="w"> </span><span class="n">StartLast</span><span class="w">        </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">TreeSet_Move2LastItem</span>
+<span class="w">        </span><span class="c">!&gt; **Type-Bound Function**: MoveBackward &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Purpose**:  To move to the previous item and return a flag</span>
+<span class="w">        </span><span class="c">!                indicating whether the cursor pointer has reached the end of</span>
+<span class="w">        </span><span class="c">!                the collection or not. &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Usage**: &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!   ---&gt;    IsTheEnd = Collection%MoveBackward() &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!   ---&gt;    IsTheEnd = Collection%MoveBackward(PrevItem) &lt;br&gt;</span>
+<span class="w">        </span><span class="k">PROCEDURE</span><span class="w">   </span><span class="kd">::</span><span class="w"> </span><span class="n">MoveBackward</span><span class="w">     </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">TreeSet_Move2PrevItem</span>
+<span class="w">        </span><span class="c">!&gt; **Type-Bound Subroutine**: Insert &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Purpose**:  To insert the specified item to the collection. &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Usage**: &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!   ---&gt;    CALL Collection%Insert(Item) &lt;br&gt;</span>
+<span class="w">        </span><span class="k">PROCEDURE</span><span class="w">   </span><span class="kd">::</span><span class="w"> </span><span class="n">Insert</span><span class="w">           </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">TreeSet_Insert</span>
+<span class="w">        </span><span class="c">!&gt; **Type-Bound Subroutine**: Delete &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Purpose**:  To delete the current item from the collection. &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Usage**: &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!   ---&gt;    CALL Collection%Delete() &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Note**: This method is intended to be used in conjunction with the *StartFirst* and</span>
+<span class="w">        </span><span class="c">!       *MoveForward* methods.  Therefore, after the call to one of those methods and then</span>
+<span class="w">        </span><span class="c">!       calling this one will result in a removal of the current item of the iteration</span>
+<span class="w">        </span><span class="c">!       (i.e. the same item that can be retrieved via the *StartFirst* and *MoveForward*</span>
+<span class="w">        </span><span class="c">!       methods). &lt;br&gt;</span>
+<span class="w">        </span><span class="k">PROCEDURE</span><span class="w">   </span><span class="kd">::</span><span class="w"> </span><span class="n">Delete</span><span class="w">           </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">TreeSet_Delete</span>
+<span class="w">        </span><span class="c">!&gt; **Type-Bound Function**: ToArray &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Purpose**:  To get and remove all items from the collection.  Also, return a flag</span>
+<span class="w">        </span><span class="c">!       indicating whether the items are successfully retrieved and removed or not. &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Usage**: &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!   ---&gt;    Success = Collection%ToArray(Items) &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!   ---&gt;    IF (.NOT.Collection%ToArray(Items)) DoSomething</span>
+<span class="w">        </span><span class="k">PROCEDURE</span><span class="w">   </span><span class="kd">::</span><span class="w"> </span><span class="n">ToArray</span><span class="w">          </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">TreeSet_ToArray</span>
+<span class="w">        </span><span class="c">!&gt; **Type-Bound Function**: GetAll &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Purpose**:  To get all items (without removing them) from the collection. Also, return</span>
+<span class="w">        </span><span class="c">!                a flag indicating whether the items are successfully retrieved or not. &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Usage**: &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!   ---&gt;    Success = Collection%GetAll(Items) &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!   ---&gt;    IF (.NOT.Collection%GetAll(Items)) DoSomething</span>
+<span class="w">        </span><span class="k">PROCEDURE</span><span class="w">   </span><span class="kd">::</span><span class="w"> </span><span class="n">GetAll</span><span class="w">           </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">TreeSet_GetAll</span>
+<span class="w">        </span><span class="c">! ---------------------------------------------------------------------</span>
+<span class="w">        </span><span class="c">! -----                      Specific Procedures                  -----</span>
+<span class="w">        </span><span class="c">! ---------------------------------------------------------------------</span>
+<span class="w">        </span><span class="c">!&gt; **Type-Bound Subroutine**: Construct &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Purpose**:  To construct a new collection from an array of items or from another</span>
+<span class="w">        </span><span class="c">!                collection. &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Usage**: &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!   ! create a collection from an array of 25 items &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!   ---&gt;    CALL Collection%Construct(25, Arr) &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!   ! create a collection from another collection &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!   ---&gt;    CALL Collection%Construct(OtherCollection)</span>
+<span class="w">        </span><span class="k">GENERIC</span><span class="w">     </span><span class="kd">::</span><span class="w"> </span><span class="n">Construct</span><span class="w">    </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">TreeSet_CreateByArray</span>
+<span class="w">        </span><span class="c">!&gt; **Type-Bound Function**: Contain &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Purpose**:  To find the specified item in the collection.  Return true if</span>
+<span class="w">        </span><span class="c">!                the specified item is found.  Otherwise, return false. &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Usage**: &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!   ---&gt;    Flag = Collection%Contain(Item) &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!   ---&gt;    IF (.NOT.Collection%Contain(Item)) DoSomething</span>
+<span class="w">        </span><span class="k">PROCEDURE</span><span class="w">   </span><span class="kd">::</span><span class="w"> </span><span class="n">Contain</span><span class="w">      </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">TreeSet_Contain</span>
+<span class="w">        </span><span class="c">!&gt; **Type-Bound Function**: Remove &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Purpose**:  To remove the specified item from the collection.  Also, return a flag</span>
+<span class="w">        </span><span class="c">!                indicating whether the item is successfully removed or not. &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Usage**: &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!   ---&gt;    Flag = Collection%Remove(Item) &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!   ---&gt;    IF (.NOT.Collection%Remove(Item)) DoSomething</span>
+<span class="w">        </span><span class="k">PROCEDURE</span><span class="w">   </span><span class="kd">::</span><span class="w"> </span><span class="n">Remove</span><span class="w">       </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">TreeSet_Remove</span>
+<span class="w">        </span><span class="c">!&gt; **Type-Bound Subroutine**: UseAVLTree &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Purpose**:  To set the working tree component to work as an AVL tree.  &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Usage**: &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!   ---&gt;    CALL Collection%UseAVLTree() &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  *Note*: The collection must be empty when calling this method.</span>
+<span class="w">        </span><span class="k">PROCEDURE</span><span class="w">   </span><span class="kd">::</span><span class="w"> </span><span class="n">UseAVLTree</span><span class="w">   </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">TreeSet_UseAVLTree</span>
+<span class="w">        </span><span class="c">!&gt; **Type-Bound Subroutine**: UseRBTree &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Purpose**:  To set the working tree component to work as an red-black RB tree.  &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Usage**: &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!   ---&gt;    CALL Collection%UseRBTree() &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  *Note*: The collection must be empty when calling this method.</span>
+<span class="w">        </span><span class="k">PROCEDURE</span><span class="w">   </span><span class="kd">::</span><span class="w"> </span><span class="n">UseRBTree</span><span class="w">   </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">TreeSet_UseRBTree</span>
+<span class="w">        </span><span class="c">! ---------------------------------------------------------------------</span>
+<span class="w">        </span><span class="c">! -----     Deferred/Overridden Procedures from Object Type       -----</span>
+<span class="w">        </span><span class="c">! ---------------------------------------------------------------------</span>
+<span class="w">        </span><span class="c">!&gt; **Type-Bound Subroutine**: Copy &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Purpose**: To make a copy of the source object. &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Usage**: &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!   ---&gt;    CALL SrcObj%Copy(DstObj) &lt;br&gt;</span>
+<span class="w">        </span><span class="k">PROCEDURE</span><span class="w">   </span><span class="kd">::</span><span class="w"> </span><span class="n">Copy</span><span class="w">         </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">TreeSet_Copy</span>
+<span class="w">        </span><span class="c">!&gt; **Type-Bound Function**: IsEqualTo &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Purpose**: To check whether two objects are equal to one another or not. &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Usage**: &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!   ---&gt;    Flag = ObjA%IsEqualTo(ObjB) &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!   ---&gt;    IF (ObjA%IsEqualTo(ObjB)) DoSomething</span>
+<span class="w">        </span><span class="k">PROCEDURE</span><span class="w">   </span><span class="kd">::</span><span class="w"> </span><span class="n">IsEqualTo</span><span class="w">    </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">TreeSet_IsEqualTo</span>
+<span class="w">        </span><span class="c">!&gt; **Type-Bound Subroutine**: MemFree &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Purpose**: To free memory/storage occupied by the object. &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Usage**: &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!   ---&gt;    CALL Obj%MemFree() &lt;br&gt;</span>
+<span class="w">        </span><span class="k">PROCEDURE</span><span class="w">   </span><span class="kd">::</span><span class="w"> </span><span class="n">MemFree</span><span class="w">      </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">TreeSet_MemFree</span>
+<span class="w">        </span><span class="c">!&gt; **Type-Bound Function**: ToString &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Purpose**:  To return the string representation of this object. &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Usage**: &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!   ---&gt;    Str = Obj%ToString() &lt;br&gt;</span>
+<span class="w">        </span><span class="k">PROCEDURE</span><span class="w">   </span><span class="kd">::</span><span class="w"> </span><span class="n">ToString</span><span class="w">     </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">TreeSet_ToString</span>
+<span class="w">        </span><span class="c">!&gt; **Type-Bound Function**: HashCode &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Purpose**:  To compute the hash code of this object. &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Usage**: &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!   ---&gt;    Code = Obj%HashCode() &lt;br&gt;</span>
+<span class="w">        </span><span class="k">PROCEDURE</span><span class="w">   </span><span class="kd">::</span><span class="w"> </span><span class="n">HashCode</span><span class="w">     </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">TreeSet_HashCode</span>
+<span class="w">        </span><span class="c">! ---------------------------------------------------------------------</span>
+<span class="w">        </span><span class="c">! -----                   Finalize Procedure                      -----</span>
+<span class="w">        </span><span class="c">! ---------------------------------------------------------------------</span>
+<span class="w">        </span><span class="c">!&gt; To perform finalization of the hash set.</span>
+<span class="w">        </span><span class="k">FINAL</span><span class="w">       </span><span class="kd">::</span><span class="w"> </span><span class="n">TreeSet_Finalize</span>
+<span class="w">        </span><span class="c">! ---------------------------------------------------------------------</span>
+<span class="w">    </span><span class="k">END TYPE </span><span class="n">TreeSet</span>
+</pre></div>
+
+    </section>
+    
+    </div>
+  </div>
+
+      <hr>
+    </div> <!-- /container -->
+    <footer>
+      <div class="container">
+        <div class="row justify-content-between">
+          <div class="col"><p>eXPerimental Fortran Library (XpfLib) Documentation was developed by Niranama<br>&copy; 2024 
+</p>
+          </div>
+          <div class="col">
+            <p class="text-end">
+              Documentation generated by
+              <a href="https://github.com/Fortran-FOSS-Programmers/ford">FORD</a>
+            </p>
+          </div>
+        </div>
+        <br>
+      </div> <!-- /container -->
+    </footer>
+
+    <!-- Bootstrap core JavaScript -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>    
+
+    <!-- MathJax JavaScript
+             ================================================== -->
+             <!-- Placed at the end of the document so the pages load faster -->
+        <script type="text/x-mathjax-config">
+          MathJax.Hub.Config({
+          TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } },
+          jax: ['input/TeX','input/MathML','output/HTML-CSS'],
+          extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']
+          });
+        </script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+          <script src="../tipuesearch/tipuesearch_content.js"></script>
+          <script src="../tipuesearch/tipuesearch_set.js"></script>
+          <script src="../tipuesearch/tipuesearch.js"></script>
+
+  </body>
+</html>

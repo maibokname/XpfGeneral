@@ -1,0 +1,826 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta name="description" content="Experimental Fortran Package - Hash Functions">
+    <meta name="author" content="Niranama" >
+    <link rel="icon" href="../favicon.png">
+
+    <title>BaseHasher &ndash; eXPerimental Fortran Library (XpfLib) Documentation </title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link href="../css/pygments.css" rel="stylesheet">
+    <link href="../css/font-awesome.min.css" rel="stylesheet">
+    <link href="../css/local.css" rel="stylesheet">
+      <link  href="../tipuesearch/tipuesearch.css" rel="stylesheet">
+
+    <script src="https://code.jquery.com/jquery-3.7.0.slim.min.js" integrity="sha256-tG5mcZUtJsZvyKAxYLVXrmjKBVLd6VpVccqz/r4ypFE=" crossorigin="anonymous"></script>
+  </head>
+
+  <body>
+
+    <!-- Fixed navbar -->
+    <div class="container-fluid mb-sm-4 mb-xl-2">
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container">
+          <a class="navbar-brand" href="../index.html">eXPerimental Fortran Library (XpfLib) Documentation </a>
+          <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar"
+                  aria-expanded="false" aria-controls="navbar" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon">
+          </button>
+
+          <div id="navbar" class="navbar-collapse collapse">
+            <ul class="navbar-nav">
+                  <li class="nav-item">
+                    <a class="nav-link" href="../lists/files.html">Source Files</a>
+                  </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../lists/modules.html">Modules</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../lists/procedures.html">Procedures</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../lists/absint.html">Abstract Interfaces</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../lists/types.html">Derived Types</a>
+                </li>
+            </ul>
+              <div class="d-flex align-items-end flex-grow-1">
+                <form action="../search.html" role="search" class="ms-auto">
+                  <input type="text" class="form-control" aria-label="Search" placeholder="Search" name="q" id="tipue_search_input" autocomplete="off" required>
+                </form>
+              </div>
+          </div><!--/.nav-collapse -->
+        </div>
+      </nav>
+    </div>
+
+    <div class="container">
+  <div class="row">
+    <h1>BaseHasher
+      <small>Derived Type</small>
+      
+    </h1>
+      <div class="container p-2 mb-4 bg-light border rounded-3">
+    <div class="row align-items-center justify-content-between" id="info-bar">
+      <div class="col">
+        <ul class="list-inline" style="margin-bottom:0px;display:inline">
+
+            <li class="list-inline-item" id="statements"><i class="fa fa-list-ol"></i>
+              <a data-bs-toggle="tooltip"
+                 data-bs-placement="bottom" data-html="true"
+                 title="<p> 1.2% of total for derived types.</p>Including implementation: 60 statements,  0.4% of total for derived types.">14 statements</a>
+            </li>
+
+            <li class="list-inline-item" id="source-file">
+              <i class="fa fa-code"></i>
+              <a href="../src/MClass_BaseHasher.f90"> Source File</a>
+            </li>
+        </ul>
+      </div>
+      <div class="col">
+        <nav aria-label="breadcrumb">
+          <ol class="breadcrumb justify-content-end mb-0">
+                <li class="breadcrumb-item"><a href='../sourcefile/mclass_basehasher.f90.html'>MClass_BaseHasher.f90</a></li>
+                <li class="breadcrumb-item"><a href='../module/mclass_basehasher.html'>MClass_BaseHasher</a></li>
+            <li class="breadcrumb-item active" aria-current="page">BaseHasher</li>
+          </ol>
+        </nav>
+      </div>
+    </div>
+  </div>
+  <script>
+    $(function () {
+    $('[data-bs-toggle="tooltip"]').tooltip()
+    })
+  </script>
+
+  </div>
+  
+  <div class="row">
+    <div class="col-md-3 hidden-xs hidden-sm visible-md visible-lg">
+      <div id="sidebar">
+      <h3>Contents</h3>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+      <div class="card mb-4">
+      <a data-bs-toggle="collapse" href="#boundprocs-0"
+         aria-expanded="false" aria-controls="boundprocs-0">
+         <h4 class="card-header bg-primary text-white">Type-Bound Procedures</h4>
+      </a>
+      <div id="boundprocs-0" class="collapse">
+        <div class="list-group list-group-flush">
+            <a class="list-group-item" href="../type/basehasher.html#boundprocedure-getname~18">GetName</a>
+            <a class="list-group-item" href="../type/basehasher.html#boundprocedure-getblocklength~6">GetBlockLength</a>
+            <a class="list-group-item" href="../type/basehasher.html#boundprocedure-setbufptr~14">SetBufPtr</a>
+            <a class="list-group-item" href="../type/basehasher.html#boundprocedure-processblock~14">ProcessBlock</a>
+            <a class="list-group-item" href="../type/basehasher.html#boundprocedure-reset~12">Reset</a>
+            <a class="list-group-item" href="../type/basehasher.html#boundprocedure-getblockcount">GetBlockCount</a>
+            <a class="list-group-item" href="../type/basehasher.html#boundprocedure-getbuflen~2">GetBufLen</a>
+            <a class="list-group-item" href="../type/basehasher.html#boundprocedure-update">Update</a>
+        </div>
+      </div>
+    </div>
+
+  
+  
+    <div class="card card-primary">
+      <div class="card-header text-left"><h3 class="card-title">Source Code</h3></div>
+      <div class="list-group">
+        <a class="list-group-item" href="../type/basehasher.html#src">BaseHasher</a>
+      </div>
+    </div>
+
+
+  </div>
+
+    </div>
+    
+    <div class="col-md-9" id='text'>
+      <h2>type, public, ABSTRACT :: BaseHasher</h2>
+    <p><em>BaseHasher</em> is an abstract type representing a base hasher that
+ defines an <em>incomplete</em> application programming interface (API)
+ for an incremental non-cryptographic hash function.</p>
+    <br>
+
+    
+
+
+      <section>
+        <h2>Type-Bound Procedures</h2>
+          <div class="row">
+              <div class="card mt-3">
+    <div class="card-header codesum">
+      <span class="anchor" id="boundprocedure-getname~18"></span>
+      <h3>
+          procedure(HSName), public, deferred ::
+  <strong>GetName</strong>
+        
+      </h3>
+    </div>
+      <div class="card-body">
+        
+        <p><em>GetName</em> is a binding name of the <em>HSName</em> deferred procedure. <br>
+ <strong>Type-Bound Function</strong>: GetName <br>
+ <strong>Purpose</strong>:  To get the name of the hasher. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    Name = Hasher%GetName()</p>
+      </div>
+    <ul class="list-group">
+        <li class="list-group-item">
+                  <h3>
+     function HSName(HS) result(Name)  
+<small>Prototype</small></h3>
+
+  <p>HSName is a deferred procedure to return the name of the hasher. <br></p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(<a href='../type/basehasher.html'>BaseHasher</a>),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>HS</strong></td>
+            <td>
+                <p>a hasher (HS) object</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+    <h4>
+    Return Value
+    <small>character(kind=kChar, len=:), ALLOCATABLE</small>
+    </h4>
+    <p>name of the hash function</p>
+
+        </li>
+    </ul>
+  </div>
+
+          </div>
+          <div class="row">
+              <div class="card mt-3">
+    <div class="card-header codesum">
+      <span class="anchor" id="boundprocedure-getblocklength~6"></span>
+      <h3>
+          procedure(HSBlockLen), public, deferred ::
+  <strong>GetBlockLength</strong>
+        
+      </h3>
+    </div>
+      <div class="card-body">
+        
+        <p><em>GetBlockLength</em> is a binding name of the <em>HSBlockLen</em> deferred procedure. <br>
+ This procedure is NOT intended to be used by a user.</p>
+      </div>
+    <ul class="list-group">
+        <li class="list-group-item">
+                  <h3>
+     function HSBlockLen(HS) result(Length)  
+<small>Prototype</small></h3>
+
+  <p>HSBlockLen is a deferred procedure to return the <em>block length</em>
+ for the hash function. <br></p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(<a href='../type/basehasher.html'>BaseHasher</a>),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>HS</strong></td>
+            <td>
+                <p>a hasher (HS) object</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+    <h4>
+    Return Value
+    <small>integer(kind=kInt32)</small>
+    </h4>
+    <p>the block length</p>
+
+        </li>
+    </ul>
+  </div>
+
+          </div>
+          <div class="row">
+              <div class="card mt-3">
+    <div class="card-header codesum">
+      <span class="anchor" id="boundprocedure-setbufptr~14"></span>
+      <h3>
+          procedure(HSSetPtr), public, deferred ::
+  <strong>SetBufPtr</strong>
+        
+      </h3>
+    </div>
+      <div class="card-body">
+        
+        <p><em>SetBufPtr</em> is a binding name of the <em>HSSetPtr</em> deferred procedure. <br>
+ This procedure is NOT intended to be used by a user.</p>
+      </div>
+    <ul class="list-group">
+        <li class="list-group-item">
+                  <h3>
+     subroutine HSSetPtr(HS, BufPtr)  
+<small>Prototype</small></h3>
+
+  <p>HSSetPtr is a deferred procedure to set the pointer <em>BufPtr</em> to
+ the actual buffer array with starting index of zero. <br></p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(<a href='../type/basehasher.html'>BaseHasher</a>),
+            </td>
+<td>intent(inout),</td>
+              <td></td>            <td>
+              TARGET
+            </td>
+            <td>::</td>
+            <td><strong>HS</strong></td>
+            <td>
+                <p>a hasher (HS) object</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              integer(kind=kInt8),
+            </td>
+<td>intent(inout),</td>
+              <td></td>            <td>
+              POINTER
+            </td>
+            <td>::</td>
+            <td><strong>BufPtr</strong>(:)</td>
+            <td>
+                <p>a buffer pointer</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+        </li>
+    </ul>
+  </div>
+
+          </div>
+          <div class="row">
+              <div class="card mt-3">
+    <div class="card-header codesum">
+      <span class="anchor" id="boundprocedure-processblock~14"></span>
+      <h3>
+          procedure(HSProcess), public, deferred ::
+  <strong>ProcessBlock</strong>
+        
+      </h3>
+    </div>
+      <div class="card-body">
+        
+        <p><em>ProcessBlock</em> is a binding name of the <em>HSProcess</em> deferred procedure. <br>
+ This procedure is NOT intended to be used by a user.</p>
+      </div>
+    <ul class="list-group">
+        <li class="list-group-item">
+                  <h3>
+     subroutine HSProcess(HS, BytesIn)  
+<small>Prototype</small></h3>
+
+  <p>HSProcess is a deferred procedure to process one block of data. <br></p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(<a href='../type/basehasher.html'>BaseHasher</a>),
+            </td>
+<td>intent(inout)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>HS</strong></td>
+            <td>
+                <p>a hasher (HS) object</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              integer(kind=kInt8),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>BytesIn</strong>(0:)</td>
+            <td>
+                <p>the data block</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+        </li>
+    </ul>
+  </div>
+
+          </div>
+          <div class="row">
+              <div class="card mt-3">
+    <div class="card-header codesum">
+      <span class="anchor" id="boundprocedure-reset~12"></span>
+      <h3>
+          procedure, public ::
+  <strong>Reset</strong> => HS_Reset
+        
+      </h3>
+    </div>
+      <div class="card-body">
+        
+        <p><em>Reset</em> is a procedure to reset components of the hasher to their initial values. <br>
+ This procedure is NOT intended to be used by a user.</p>
+      </div>
+    <ul class="list-group">
+        <li class="list-group-item">
+                  <h3>
+    private  subroutine HS_Reset(HS)  
+</h3>
+
+  <p>To reset components of the hasher.</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(<a href='../type/basehasher.html'>BaseHasher</a>),
+            </td>
+<td>intent(inout)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>HS</strong></td>
+            <td>
+                <p>a hasher (HS) object</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+        </li>
+    </ul>
+  </div>
+
+          </div>
+          <div class="row">
+              <div class="card mt-3">
+    <div class="card-header codesum">
+      <span class="anchor" id="boundprocedure-getblockcount"></span>
+      <h3>
+          procedure, public ::
+  <strong>GetBlockCount</strong> => HS_BlockCount
+        
+      </h3>
+    </div>
+      <div class="card-body">
+        
+        <p><em>GetBlockCount</em> is a procedure to get the number of blocks of input processed. <br>
+ This procedure is NOT intended to be used by a user.</p>
+      </div>
+    <ul class="list-group">
+        <li class="list-group-item">
+                  <h3>
+    private  function HS_BlockCount(HS) result(BlockCount)  
+</h3>
+
+  <p>To get the number of blocks of input processed.</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(<a href='../type/basehasher.html'>BaseHasher</a>),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>HS</strong></td>
+            <td>
+                <p>a hasher (HS) object</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+    <h4>
+    Return Value
+    <small>integer(kind=kInt32)</small>
+    </h4>
+    <p>number of blocks</p>
+
+        </li>
+    </ul>
+  </div>
+
+          </div>
+          <div class="row">
+              <div class="card mt-3">
+    <div class="card-header codesum">
+      <span class="anchor" id="boundprocedure-getbuflen~2"></span>
+      <h3>
+          procedure, public ::
+  <strong>GetBufLen</strong> => HS_BufLen
+        
+      </h3>
+    </div>
+      <div class="card-body">
+        
+        <p><em>GetBufLen</em> is a procedure to get the number of bytes of input currently
+ stored in the buffer. <br>
+ This procedure is NOT intended to be used by a user.</p>
+      </div>
+    <ul class="list-group">
+        <li class="list-group-item">
+                  <h3>
+    private  function HS_BufLen(HS) result(BufLen)  
+</h3>
+
+  <p>To get the number of bytes of input currently stored in the buffer.</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(<a href='../type/basehasher.html'>BaseHasher</a>),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>HS</strong></td>
+            <td>
+                <p>a hasher (HS) object</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+    <h4>
+    Return Value
+    <small>integer(kind=kInt32)</small>
+    </h4>
+    <p>number of bytes</p>
+
+        </li>
+    </ul>
+  </div>
+
+          </div>
+          <div class="row">
+              <div class="card mt-3">
+    <div class="card-header codesum">
+      <span class="anchor" id="boundprocedure-update"></span>
+      <h3>
+          procedure, public ::
+  <strong>Update</strong> => HS_Update
+        
+      </h3>
+    </div>
+      <div class="card-body">
+        
+        <p><strong>Type-Bound Subroutine</strong>: Update <br>
+ <strong>Purpose</strong>:  To insert input data into the hasher (i.e. temporarily stored in the
+               buffer array) and process block(s) of data if necessary. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    CALL Hasher%Update(Input, InpSize) <br>
+ <strong>Important Note</strong>: The specified input can be any type and any rank where
+              its size is the number of bytes of storage used by the input.</p>
+      </div>
+    <ul class="list-group">
+        <li class="list-group-item">
+                  <h3>
+    private  subroutine HS_Update(HS, Input, InpSize)  
+</h3>
+
+  <p>To insert input data into the hasher (i.e. temporary stored in the buffer array)
+ and process block(s) of data if necessary.</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(<a href='../type/basehasher.html'>BaseHasher</a>),
+            </td>
+<td>intent(inout)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>HS</strong></td>
+            <td>
+                <p>a hasher (HS) object</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              type(*),
+            </td>
+<td>intent(in),</td>
+              <td></td>            <td>
+              CONTIGUOUS
+            </td>
+            <td>::</td>
+            <td><strong>Input</strong>(..)</td>
+            <td>
+                <p>input data (any type and rank)</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              integer(kind=kInt32),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>InpSize</strong></td>
+            <td>
+                <p>size of the input (in bytes)</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+        </li>
+    </ul>
+  </div>
+
+          </div>
+      </section>
+
+    <section>
+    <h3><span class="anchor" id="src"></span>Source Code</h3>
+    <div class="hl codehilite"><pre><span></span><span class="w">    </span><span class="k">TYPE</span><span class="p">,</span><span class="w"> </span><span class="k">ABSTRACT</span><span class="w">  </span><span class="kd">::</span><span class="w"> </span><span class="n">BaseHasher</span>
+<span class="w">        </span><span class="k">PRIVATE</span>
+<span class="w">        </span><span class="c">!% the number of blocks of input processed</span>
+<span class="w">        </span><span class="n">tIndex</span><span class="w">          </span><span class="kd">::</span><span class="w"> </span><span class="n">BlockCount</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0_kIndex</span>
+<span class="w">        </span><span class="c">!% the number of bytes of input currently stored in the buffer</span>
+<span class="w">        </span><span class="n">tIndex</span><span class="w">          </span><span class="kd">::</span><span class="w"> </span><span class="n">BufLen</span><span class="w">     </span><span class="o">=</span><span class="w"> </span><span class="mi">0_kIndex</span>
+<span class="w">    </span><span class="k">CONTAINS</span>
+<span class="w">        </span><span class="c">! ---------------------------------------------------------------------</span>
+<span class="w">        </span><span class="c">! -----                     Deferred Procedures                   -----</span>
+<span class="w">        </span><span class="c">! ---------------------------------------------------------------------</span>
+<span class="w">        </span><span class="c">!&gt; *GetName* is a binding name of the *HSName* deferred procedure. &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Type-Bound Function**: GetName &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Purpose**:  To get the name of the hasher. &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Usage**: &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!   ---&gt;    Name = Hasher%GetName()</span>
+<span class="w">        </span><span class="k">PROCEDURE</span><span class="p">(</span><span class="n">HSName</span><span class="p">),</span><span class="w">     </span><span class="k">DEFERRED</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">GetName</span>
+<span class="w">        </span><span class="c">!&gt; *GetBlockLength* is a binding name of the *HSBlockLen* deferred procedure. &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  This procedure is NOT intended to be used by a user.</span>
+<span class="w">        </span><span class="k">PROCEDURE</span><span class="p">(</span><span class="n">HSBlockLen</span><span class="p">),</span><span class="w"> </span><span class="k">DEFERRED</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">GetBlockLength</span>
+<span class="w">        </span><span class="c">!&gt; *SetBufPtr* is a binding name of the *HSSetPtr* deferred procedure. &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  This procedure is NOT intended to be used by a user.</span>
+<span class="w">        </span><span class="k">PROCEDURE</span><span class="p">(</span><span class="n">HSSetPtr</span><span class="p">),</span><span class="w">   </span><span class="k">DEFERRED</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">SetBufPtr</span>
+<span class="w">        </span><span class="c">!&gt; *ProcessBlock* is a binding name of the *HSProcess* deferred procedure. &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  This procedure is NOT intended to be used by a user.</span>
+<span class="w">        </span><span class="k">PROCEDURE</span><span class="p">(</span><span class="n">HSProcess</span><span class="p">),</span><span class="w">  </span><span class="k">DEFERRED</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">ProcessBlock</span>
+<span class="w">        </span><span class="c">! ---------------------------------------------------------------------</span>
+<span class="w">        </span><span class="c">! -----                     Public Procedures                     -----</span>
+<span class="w">        </span><span class="c">! ---------------------------------------------------------------------</span>
+<span class="w">        </span><span class="c">!&gt; *Reset* is a procedure to reset components of the hasher to their initial values. &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  This procedure is NOT intended to be used by a user.</span>
+<span class="w">        </span><span class="k">PROCEDURE</span><span class="w">   </span><span class="kd">::</span><span class="w"> </span><span class="n">Reset</span><span class="w">            </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">HS_Reset</span>
+<span class="w">        </span><span class="c">!&gt; *GetBlockCount* is a procedure to get the number of blocks of input processed. &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  This procedure is NOT intended to be used by a user.</span>
+<span class="w">        </span><span class="k">PROCEDURE</span><span class="w">   </span><span class="kd">::</span><span class="w"> </span><span class="n">GetBlockCount</span><span class="w">    </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">HS_BlockCount</span>
+<span class="w">        </span><span class="c">!&gt; *GetBufLen* is a procedure to get the number of bytes of input currently</span>
+<span class="w">        </span><span class="c">!  stored in the buffer. &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  This procedure is NOT intended to be used by a user.</span>
+<span class="w">        </span><span class="k">PROCEDURE</span><span class="w">   </span><span class="kd">::</span><span class="w"> </span><span class="n">GetBufLen</span><span class="w">        </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">HS_BufLen</span>
+<span class="w">        </span><span class="c">!&gt; **Type-Bound Subroutine**: Update &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Purpose**:  To insert input data into the hasher (i.e. temporarily stored in the</span>
+<span class="w">        </span><span class="c">!                buffer array) and process block(s) of data if necessary. &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Usage**: &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!   ---&gt;    CALL Hasher%Update(Input, InpSize) &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Important Note**: The specified input can be any type and any rank where</span>
+<span class="w">        </span><span class="c">!               its size is the number of bytes of storage used by the input.</span>
+<span class="w">        </span><span class="k">PROCEDURE</span><span class="w">   </span><span class="kd">::</span><span class="w"> </span><span class="n">Update</span><span class="w">           </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">HS_Update</span>
+<span class="w">    </span><span class="k">END TYPE </span><span class="n">BaseHasher</span>
+</pre></div>
+
+    </section>
+    
+    </div>
+  </div>
+
+      <hr>
+    </div> <!-- /container -->
+    <footer>
+      <div class="container">
+        <div class="row justify-content-between">
+          <div class="col"><p>eXPerimental Fortran Library (XpfLib) Documentation was developed by Niranama<br>&copy; 2024 
+</p>
+          </div>
+          <div class="col">
+            <p class="text-end">
+              Documentation generated by
+              <a href="https://github.com/Fortran-FOSS-Programmers/ford">FORD</a>
+            </p>
+          </div>
+        </div>
+        <br>
+      </div> <!-- /container -->
+    </footer>
+
+    <!-- Bootstrap core JavaScript -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>    
+
+    <!-- MathJax JavaScript
+             ================================================== -->
+             <!-- Placed at the end of the document so the pages load faster -->
+        <script type="text/x-mathjax-config">
+          MathJax.Hub.Config({
+          TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } },
+          jax: ['input/TeX','input/MathML','output/HTML-CSS'],
+          extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']
+          });
+        </script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+          <script src="../tipuesearch/tipuesearch_content.js"></script>
+          <script src="../tipuesearch/tipuesearch_set.js"></script>
+          <script src="../tipuesearch/tipuesearch.js"></script>
+
+  </body>
+</html>

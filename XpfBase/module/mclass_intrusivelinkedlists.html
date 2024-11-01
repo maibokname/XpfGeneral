@@ -1,0 +1,1386 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta name="description" content="Experimental Fortran Package - Base Modules and Classes">
+    <meta name="author" content="Niranama" >
+    <link rel="icon" href="../favicon.png">
+
+    <title>MClass_IntrusiveLinkedLists &ndash; eXPerimental Fortran Library (XpfLib) Documentation</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link href="../css/pygments.css" rel="stylesheet">
+    <link href="../css/font-awesome.min.css" rel="stylesheet">
+    <link href="../css/local.css" rel="stylesheet">
+      <link  href="../tipuesearch/tipuesearch.css" rel="stylesheet">
+
+    <script src="https://code.jquery.com/jquery-3.7.0.slim.min.js" integrity="sha256-tG5mcZUtJsZvyKAxYLVXrmjKBVLd6VpVccqz/r4ypFE=" crossorigin="anonymous"></script>
+  </head>
+
+  <body>
+
+    <!-- Fixed navbar -->
+    <div class="container-fluid mb-sm-4 mb-xl-2">
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container">
+          <a class="navbar-brand" href="../index.html">eXPerimental Fortran Library (XpfLib) Documentation </a>
+          <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar"
+                  aria-expanded="false" aria-controls="navbar" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon">
+          </button>
+
+          <div id="navbar" class="navbar-collapse collapse">
+            <ul class="navbar-nav">
+                  <li class="nav-item">
+                    <a class="nav-link" href="../lists/files.html">Source Files</a>
+                  </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../lists/modules.html">Modules</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../lists/procedures.html">Procedures</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../lists/absint.html">Abstract Interfaces</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../lists/types.html">Derived Types</a>
+                </li>
+            </ul>
+              <div class="d-flex align-items-end flex-grow-1">
+                <form action="../search.html" role="search" class="ms-auto">
+                  <input type="text" class="form-control" aria-label="Search" placeholder="Search" name="q" id="tipue_search_input" autocomplete="off" required>
+                </form>
+              </div>
+          </div><!--/.nav-collapse -->
+        </div>
+      </nav>
+    </div>
+
+    <div class="container">
+  <div class="row">
+    <h1>MClass_IntrusiveLinkedLists
+      <small>Module</small>
+      
+    </h1>
+      <div class="container p-2 mb-4 bg-light border rounded-3">
+    <div class="row align-items-center justify-content-between" id="info-bar">
+      <div class="col">
+        <ul class="list-inline" style="margin-bottom:0px;display:inline">
+
+            <li class="list-inline-item" id="statements"><i class="fa fa-list-ol"></i>
+              <a data-bs-toggle="tooltip"
+                 data-bs-placement="bottom" data-html="true"
+                 title=" 0.8% of total for modules and submodules.">374 statements</a>
+            </li>
+
+            <li class="list-inline-item" id="source-file">
+              <i class="fa fa-code"></i>
+              <a href="../src/MClass_IntrusiveLinkedLists.f90"> Source File</a>
+            </li>
+        </ul>
+      </div>
+      <div class="col">
+        <nav aria-label="breadcrumb">
+          <ol class="breadcrumb justify-content-end mb-0">
+                <li class="breadcrumb-item"><a href='../sourcefile/mclass_intrusivelinkedlists.f90.html'>MClass_IntrusiveLinkedLists.f90</a></li>
+            <li class="breadcrumb-item active" aria-current="page">MClass_IntrusiveLinkedLists</li>
+          </ol>
+        </nav>
+      </div>
+    </div>
+  </div>
+  <script>
+    $(function () {
+    $('[data-bs-toggle="tooltip"]').tooltip()
+    })
+  </script>
+
+  </div>
+
+  <div class="row">
+    <div class="col-md-3">
+        <div id="sidebar">
+      <h3>Contents</h3>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+      <div class="card mb-4">
+      <a data-bs-toggle="collapse" href="#absints-0"
+         aria-expanded="false" aria-controls="absints-0">
+         <h4 class="card-header bg-primary text-white">Abstract Interfaces</h4>
+      </a>
+      <div id="absints-0" class="collapse">
+        <div class="list-group list-group-flush">
+            <a class="list-group-item" href="../module/mclass_intrusivelinkedlists.html#interface-ifacenodeequal">IfaceNodeEqual</a>
+            <a class="list-group-item" href="../module/mclass_intrusivelinkedlists.html#interface-ifacenodecompare">IfaceNodeCompare</a>
+        </div>
+      </div>
+    </div>
+
+      <div class="card mb-4">
+      <a data-bs-toggle="collapse" href="#types-0"
+         aria-expanded="false" aria-controls="types-0">
+         <h4 class="card-header bg-primary text-white">Derived Types</h4>
+      </a>
+      <div id="types-0" class="collapse">
+        <div class="list-group list-group-flush">
+            <a class="list-group-item" href="../module/mclass_intrusivelinkedlists.html#type-doublylinkednode">DoublyLinkedNode</a>
+            <a class="list-group-item" href="../module/mclass_intrusivelinkedlists.html#type-intrusiveringlist">IntrusiveRingList</a>
+            <a class="list-group-item" href="../module/mclass_intrusivelinkedlists.html#type-intrusivelinearlist">IntrusiveLinearList</a>
+        </div>
+      </div>
+    </div>
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+
+
+  </div>
+
+    </div>
+
+    <div class="col-md-9" id='text'>
+      <p><strong>PURPOSE OF THIS MODULE</strong>: <br>
+  This module contains <em>intrusive-based</em> linked-list container types and their
+  related routines.  The module provides application programming interfaces (APIs)
+  for two linked-list containers: the linear list (by the <em>IntrusiveLinearList</em>
+  type) and the ring list (by <em>IntrusiveRingList</em> type).  The module also provides
+  a base linked node (<em>DoublyLinkedNode</em>) type to be used with both containers. <br>
+  The <em>DoublyLinkedNode</em> type is a base linked node type that can connect to
+  its adjacent nodes in two directions.  The node allows a doubly-linked list to
+  be formed.  This indicates that both containers are doubly-linked list containers.
+  To use the list containers provided, a user must define a new node type that extends
+  the <em>DoublyLinkedNode</em> type.  This new type typically contains user data as its
+  additional component(s). <br>
+  The <em>IntrusiveLinearList</em> type is an <em>intrusive linearly-linked-list</em> container
+  while the <em>IntrusiveRingList</em> type is an <em>intrusive circularly-linked-list</em> container.
+  Unlike the <em>IntrusiveLinearList</em> type, the next pointer of the last node of the
+  <em>IntrusiveRingList</em> list points to its first node, rather than pointing to NULL.
+  Similarly, the previous pointer of the first node of the <em>IntrusiveRingList</em> list
+  points to its last node allowing the list to be formed as a ring.  Both containers
+  stores objects (or nodes) in the <em>DoublyLinkedNode</em> class (i.e. objects/nodes that
+  are subtypes of the <em>DoublyLinkedNode</em> type). <br>
+ <br>
+ <strong>Intrusive Technique</strong>: <br>
+  Both intrusive list container types employ the so-called <strong>intrusive</strong> technique.
+  To illustrate the intrusive technique and highlight its distinction from the
+  non-intrusive (i.e. tradition) one, let consider a derived type that defines
+  a point in a 2-dimensional coordinate system.
+<br>
+<Pre><Code style="color:MidnightBlue;">
+  TYPE Point2D
+      REAL   :: X, Y
+  END TYPE
+  </Code></Pre></p>
+<p>In a traditional non-intrusive implementation of a doubly-linked list for
+  a 2-D point data, a linked node is then usually defined as:
+<br>
+<Pre><Code style="color:MidnightBlue;">
+  TYPE LinkedNode
+      TYPE(Point2D)               :: Data
+      TYPE(LinkedNode), POINTER   :: Next => NULL()
+      TYPE(LinkedNode), POINTER   :: Prev => NULL()
+  END TYPE
+  </Code></Pre></p>
+<p>To add a 2-D point data to the non-intrusive doubly-linked list, the conventional
+  implementation commonly performs the following steps: <br>
+  1. Allocating a <em>LinkedNode</em>. <br>
+  2. Copying the 2-D point input data into the <em>Data</em> component of the <em>LinkedNode</em>. <br>
+  3. Linking the <em>Next</em> and <em>Prev</em> pointers of the <em>LinkedNode</em> into the list. <br>
+  <br>
+  Removing a 2-D point data requires similar steps in reverse order: <br>
+  1. Unlinking the two pointers. <br>
+  2. Copying the <em>Data</em> component to a 2-D point output data. <br>
+  3. Deallocating the <em>LinkedNode</em>. <br>
+ <br>
+  In an implementation of an intrusive doubly-linked list, a base linked node
+  can be defined as:
+<br>
+<Pre><Code style="color:MidnightBlue;">
+  TYPE BaseNode
+      CLASS(BaseNode), POINTER   :: Next => NULL()
+      CLASS(BaseNode), POINTER   :: Prev => NULL()
+  END TYPE
+  </Code></Pre></p>
+<p>Then, when using the intrusive list, an object for a 2-D point may be defined
+  as:
+<br>
+<Pre><Code style="color:MidnightBlue;">
+  TYPE, EXTENDS(BaseNode) :: Point2DNode
+      TYPE(Point2D)   :: Data
+  END TYPE
+  </Code></Pre></p>
+<p>or it can also be defined as:
+<br>
+<Pre><Code style="color:MidnightBlue;">
+  TYPE, EXTENDS(BaseNode) Point2DObj
+      REAL   :: X, Y
+  END TYPE
+  </Code></Pre></p>
+<p>Both 2-D point objects are in the <em>BaseNode</em> class; hence, they both can
+  be used with the intrusive list.  <br>
+  At first glance, both 2-D point objects shown for the intrusive list appear to
+  be very similar to the <em>LinkedNode</em> object shown for the non-intrusive list.
+  However, unlike the non-intrusive implementation, only the <em>linking/unlinking</em>
+  task is done by the intrusive list when adding/removing a 2-D point object to/from
+  the list.  The memory management (i.e. allocation and/or deallocation) task of the
+  2-D point object is external to the intrusive list and thus must be managed by the
+  user who is the owner of the 2-D point object.  The <em>Copying</em> task is typically not
+  necessary for the intrusive list case because the 2-D point object already contains
+  the 2-D point data where the user (as the owner of the object) can manipulate the
+  data directly. <br>
+ <br>
+  <strong>Pros:</strong>  <br>
+  As demonstrated above, the intrusive implementation has some advantages over
+  a traditional implementation including:  <br>
+  - Both intrusive list types provided here can be used as generic containers.
+    To use an intrusive container, a user must define an object that extends the
+    <em>DoublyLinkedNode</em> type and contains user data as additional component(s) where
+    the data can be defined by any data types (i.e. intrinsic or derived types). <br>
+  - An intrusive container requires fewer memory allocations/deallocations than
+    a generic non-intrusive container using unlimited polymorphism.  In Fortran,
+    a generic linked list employing unlimited polymorphism requires two memory
+    allocations when adding data to the list: one for the data and one for the
+    linked node.  On the other hand, the intrusive list requires only one memory
+    allocation for the user object as the data is already embedded in the object. <br>
+  - Because the user is the owner of the object, the <em>Copying</em> task is usually not
+    required for an intrusive container whereas it is essential for a non-intrusive
+    container as previously discussed. <br>
+ <br>
+  <strong>Cons:</strong>  <br>
+  The intrusive technique also has some disadvantages as follows: <br>
+  - As discussed above, a user must always define a user object as a subtype of the
+    <em>DoublyLinkedNode</em> type in order to use either the <em>IntrusiveLinearList</em> type
+    or the <em>IntrusiveRingList</em> type as an intrusive list container. <br>
+  - As the owner of objects inserted into an intrusive container, the user is also
+    responsible for their memory management.  This means that the user must manage
+    the lifetime of all inserted objects and be careful that these objects are not
+    destroyed (e.g. deallocated) before they get removed from the container. <br>
+  - Rather than storing a copy of an inserted object, an intrusive container just
+    links the inserted object with other previously inserted objects in the container.
+    Therefore, the user must be aware of the possible side effects whenever he/she
+    changes the data content of those inserted objects.  This is especially important
+    if the intrusive container is an ordered one.  <br></p>
+<br>          <div class="card mb-4">
+      <h3 class="card-header card-title bg-light">Uses</h3>
+      <div class="card-body">
+        <ul class="list-group list-group-flush">
+            <li class="list-group-item">
+              <ul class="list-inline">
+                  <li class="list-inline-item"><a href='../module/mbase_common.html'>MBase_Common</a></li>
+                  <li class="list-inline-item"><a href='../module/mclass_basenodepool.html'>MClass_BaseNodePool</a></li>
+              </ul>
+            </li>
+        </ul>
+      </div>
+    </div>
+
+      
+      <br>
+
+
+
+
+
+        <section>
+          <h2>Abstract Interfaces</h2>
+              <div class="card">
+    <div class="card-header codesum"><span class="anchor" id="interface-ifacenodeequal"></span><h3>abstract interface
+        
+    </h3></div>
+    <ul class="list-group">
+      <li class="list-group-item">
+            <h3>
+    public  function IfaceNodeEqual(A, B) result(Flag)  
+
+    </h3>
+  <p><em>IfaceNodeEqual</em> is an interface for a procedure to check whether two objects in the
+ <em>DoublyLinkedNode</em> class are equal to one another or not.  The output flag should be
+ set to true if they are equal. Otherwise, the flag should be set to false.</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-a~106"></span>
+              class(<a href='../type/doublylinkednode.html'>DoublyLinkedNode</a>),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>A</strong></td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-b~13"></span>
+              class(<a href='../type/doublylinkednode.html'>DoublyLinkedNode</a>),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>B</strong></td>
+            <td>
+                
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+    <h4>
+    Return Value
+    <small>logical</small>
+    </h4>
+    
+
+      </li>
+    </ul>
+  </div>
+
+              <div class="card">
+    <div class="card-header codesum"><span class="anchor" id="interface-ifacenodecompare"></span><h3>abstract interface
+        
+    </h3></div>
+    <ul class="list-group">
+      <li class="list-group-item">
+            <h3>
+    public  function IfaceNodeCompare(A, B) result(Flag)  
+
+    </h3>
+  <p><em>IfaceNodeCompare</em> is an interface for a procedure to compare two objects in the
+ <em>DoublyLinkedNode</em> class where the output flag should be set to the following value: <br>
+  1 (or positive value) if A is greater than B, <br>
+  0 if A is equal to B, <br>
+ -1 (or negative value) if A is less than B.</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-a~107"></span>
+              class(<a href='../type/doublylinkednode.html'>DoublyLinkedNode</a>),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>A</strong></td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-b~14"></span>
+              class(<a href='../type/doublylinkednode.html'>DoublyLinkedNode</a>),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>B</strong></td>
+            <td>
+                
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+    <h4>
+    Return Value
+    <small>integer(kind=kInt32)</small>
+    </h4>
+    
+
+      </li>
+    </ul>
+  </div>
+
+        </section>
+        <br>
+
+        <section>
+          <h2>Derived Types</h2>
+              <div class="card">
+    <div class="card-header codesum">
+      <span class="anchor" id="type-doublylinkednode"></span>
+      <h3>
+        type, public, extends(<a href='../type/basenode.html'>BaseNode</a>)&nbsp;::&nbsp;
+        <a href='../type/doublylinkednode.html'>DoublyLinkedNode</a>
+        
+      </h3>
+    </div>
+    <div class="card-body">
+      <p><em>DoublyLinkedNode</em> is a doubly-linked node type that contains two pointer
+  components that can point to its adjacent nodes (next node and previous
+  node) in two directions, which allow a doubly-linked list to be formed.
+  Unlike a traditional (non-intrusive) list node, the <em>DoublyLinkedNode</em> type
+  contains no data content.  Therefore, an intrusive container working with
+  nodes in the <em>DoublyLinkedNode</em> class can operate without having to manage
+  the data content. <br>
+  However, to use the intrusive container properly, for example, a user must
+  define a new node type that extends the <em>DoublyLinkedNode</em> type as follows:
+<br>
+<Pre><Code style="color:MidnightBlue;">
+  ! a list-node object with default integer as type of its data content
+  TYPE, EXTENDS(DoublyLinkedNode) :: IntegerListNode
+      INTEGER     :: content      ! stored content
+  END TYPE
+  </Code></Pre></p><a href="../type/doublylinkednode.html" class="pull-right"><emph>Read more&hellip;</emph></a>
+
+
+
+
+        <h4>Type-Bound Procedures</h4>
+        <table class="table table-striped varlist">
+          <tbody>
+              <tr>
+                <td>  procedure(IfaceCopy), public, deferred ::
+  <strong><a href='../type/object.html#boundprocedure-copy~8'>Copy</a></strong></td>
+                <td><p><em>Copy</em> is a deferred procedure to perform a copy of this (source) object.</p></td>
+              </tr>
+              <tr>
+                <td>  procedure(IfaceEqual), public, deferred ::
+  <strong><a href='../type/object.html#boundprocedure-isequalto~10'>IsEqualTo</a></strong></td>
+                <td><p><em>IsEqualTo</em> is a deferred procedure to compare whether this object is equal to the
+ other object or not.</p></td>
+              </tr>
+              <tr>
+                <td>  procedure(IfaceFree), public, deferred ::
+  <strong><a href='../type/object.html#boundprocedure-memfree~9'>MemFree</a></strong></td>
+                <td><p><em>MemFree</em> is a deferred procedure to free storage currently occupied by this object.</p></td>
+              </tr>
+              <tr>
+                <td>  procedure(Iface2String), public, deferred ::
+  <strong><a href='../type/object.html#boundprocedure-tostring~9'>ToString</a></strong></td>
+                <td><p><em>ToString</em> is a deferred procedure to get the string representation of this object.</p></td>
+              </tr>
+              <tr>
+                <td>  procedure, public ::
+  <strong><a href='../type/object.html#boundprocedure-hashcode~36'>HashCode</a></strong> => Object_HashCode</td>
+                <td><p><strong>Type-Bound Function</strong>: HashCode <br>
+ <strong>Purpose</strong>:  To compute the hash code of this object. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    Code = Obj%HashCode() <br>
+ <strong>Note</strong>: The method provided here as a default implementation compute the hash code
+      based on the string representation of this object and a simple hash algorithm.
+      It should be overridden by a better and more efficient implementation if possible. <br></p></td>
+              </tr>
+              <tr>
+                <td>  procedure, public ::
+  <strong><a href='../type/basenode.html#boundprocedure-copybasenode'>CopyBaseNode</a></strong> => ThisNode_CopyPIndx</td>
+                <td><p><strong>Type-Bound Subroutine</strong>: CopyBaseNode <br>
+ <strong>Purpose</strong>:  To copy the <em>PIndx</em> component of the source to the destination.
+               This method is provided to help user implement deferred procedure(s)
+               required by an object in the <em>Object</em> class. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    CALL SrcNode%CopyBaseNode(DstNode)</p></td>
+              </tr>
+              <tr>
+                <td>  procedure, public ::
+  <strong><a href='../type/basenode.html#boundprocedure-ispindxequal~2'>IsPIndxEqual</a></strong> => ThisNode_EqualTo</td>
+                <td><p><strong>Type-Bound Subroutine</strong>: IsPIndxEqual <br>
+ <strong>Purpose</strong>:  To compare whether the "PIndx" component of both objects are equal
+               or not.  This method is provided to help user implement deferred
+               procedure(s) required by an object in the <em>Object</em> class. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    Flag = LhsNode%IsPIndxEqual(RhsNode) <br>
+  ---&gt;    IF (.NOT.LhsNode%IsPIndxEqual(RhsNode)) DoSomething</p></td>
+              </tr>
+              <tr>
+                <td>  procedure, public ::
+  <strong><a href='../type/doublylinkednode.html#boundprocedure-getnext'>GetNext</a></strong> => ListNode_GetNextNode</td>
+                <td><p><strong>Type-Bound Function</strong>: GetNext <br>
+ <strong>Purpose</strong>:  To get a pointer to the next node of the current node. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    NextNode =&gt; CurrNode%GetNext()</p></td>
+              </tr>
+              <tr>
+                <td>  procedure, public ::
+  <strong><a href='../type/doublylinkednode.html#boundprocedure-getprevious'>GetPrevious</a></strong> => ListNode_GetPreviousNode</td>
+                <td><p><strong>Type-Bound Function</strong>: GetPrevious <br>
+ <strong>Purpose</strong>:  To get a pointer to the previous node of the current node. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    PrevNode =&gt; CurrNode%GetPrevious()</p></td>
+              </tr>
+              <tr>
+                <td>  procedure, public ::
+  <strong><a href='../type/doublylinkednode.html#boundprocedure-setnext'>SetNext</a></strong> => ListNode_SetNextNode</td>
+                <td><p><strong>Type-Bound Subroutine</strong>: SetNext <br>
+ <strong>Purpose</strong>:  To set a pointer to the next node of the current node. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    CALL CurrNode%SetNext(NextNode)</p></td>
+              </tr>
+              <tr>
+                <td>  procedure, public ::
+  <strong><a href='../type/doublylinkednode.html#boundprocedure-setprevious'>SetPrevious</a></strong> => ListNode_SetPreviousNode</td>
+                <td><p><strong>Type-Bound Subroutine</strong>: SetPrevious <br>
+ <strong>Purpose</strong>:  To set a pointer to the previous node of the current node. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    CALL CurrNode%SetPrevious(PrevNode)</p></td>
+              </tr>
+              <tr>
+                <td>  procedure, public ::
+  <strong><a href='../type/doublylinkednode.html#boundprocedure-freepointers'>FreePointers</a></strong> => ListNode_FreePointers</td>
+                <td><p><strong>Type-Bound Subroutine</strong>: FreePointers <br>
+ <strong>Purpose</strong>:  To nullify the pointer components of the node. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    CALL CurrNode%FreePointers()</p></td>
+              </tr>
+              <tr>
+                <td>  procedure, public ::
+  <strong><a href='../type/doublylinkednode.html#boundprocedure-copydllnode'>CopyDLLNode</a></strong> => ListNode_CopyDLLNode</td>
+                <td><p><strong>Type-Bound Subroutine</strong>: CopyDLLNode <br>
+ <strong>Purpose</strong>:  To copy members of the source to the destination.  This method
+               is provided to help user implement deferred procedure(s) required
+               by an object in the <em>Object</em> class. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    CALL SrcNode%CopyDLLNode(DstNode)</p></td>
+              </tr>
+              <tr>
+                <td>  procedure, public ::
+  <strong><a href='../type/doublylinkednode.html#boundprocedure-isdllnodeequal'>IsDLLNodeEqual</a></strong> => ListNode_EqualTo</td>
+                <td><p><strong>Type-Bound Function</strong>: IsDLLNodeEqual <br>
+ <strong>Purpose</strong>:  To compare whether all members of both objects are equal or not.
+               This method is provided to help user implement deferred procedure(s)
+               required by an object in the <em>Object</em> class. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    Flag = LhsNode%IsDLLNodeEqual(RhsNode) <br>
+  ---&gt;    IF (.NOT.LhsNode%IsDLLNodeEqual(RhsNode)) DoSomething</p></td>
+              </tr>
+          </tbody>
+        </table>
+    </div>
+  </div>
+
+              <div class="card">
+    <div class="card-header codesum">
+      <span class="anchor" id="type-intrusiveringlist"></span>
+      <h3>
+        type, public&nbsp;::&nbsp;
+        <a href='../type/intrusiveringlist.html'>IntrusiveRingList</a>
+        
+      </h3>
+    </div>
+    <div class="card-body">
+      <p><em>IntrusiveRingList</em> is an intrusive circularly-linked list container type
+  that provides common linked-list operations without a memory management
+  task.  The management of objects inserted in the list must be done by
+  a user, which is the owner of those objects. <br>
+  See the <a href="../module/MClass_IntrusiveLinkedLists.html#type-doublylinkednode">DoublyLinkedNode</a>
+  type for how to define an object to be inserted into an intrusive container. <br>
+  Similar to the <em>IntrusiveLinearList</em> type, the <em>IntrusiveRingList</em> type provides
+  four methods that allow iterations over its objects in two directions.  See the
+  <a href="../module/MClass_IntrusiveLinkedLists.html#type-intrusivelinearlist">IntrusiveLinearList</a>
+  for various illustrations of an iteration over an intrusive list. <br>
+  Nonetheless, unlike the <em>IntrusiveLinearList</em> type, the meanings of the returned
+  <em>EndOfList</em> flag from the <em>MoveForward</em> and <em>MoveBackward</em> methods are NOT the same
+  for the two intrusive list types.  For the linear list, the end of list means that
+  the next pointer of the cursor node points to NULL (i.e. its association status is
+  disassociated).  However, for the circular list, the end of list means that the
+  next pointer of the cursor node points back to the starting node.  Therefore, for
+  the circular list, the user can ignore the <em>EndOfList</em> flag and loop over the list
+  once more if necessary without having to call the <em>StartFirst</em> or <em>StartLast</em>
+  method again. <br>
+  It is important to note that the intrusive circular list allows insertion of
+  duplicated objects (i.e. objects that are equal to one another).  It even allows
+  the same object to be inserted twice (i.e. it does not check  whether the same
+  object is actually inserted more than once).  Therefore, it is the user as the
+  owner of inserted objects who must be responsible for how to handle those inserted
+  objects properly.</p>
+
+
+
+        <h4>Finalizations Procedures</h4>
+        <table class="table table-striped varlist">
+          <tbody>
+              <tr>
+                <td>final :: <strong>RingList_Finalizer</strong></td>
+                <td><p>To perform finalization of the list.</p></td>
+              </tr>
+          </tbody>
+        </table>
+
+        <h4>Type-Bound Procedures</h4>
+        <table class="table table-striped varlist">
+          <tbody>
+              <tr>
+                <td>  procedure, public ::
+  <strong><a href='../type/intrusiveringlist.html#boundprocedure-cloneto~3'>CloneTo</a></strong> => RingList_Clone</td>
+                <td><p><strong>Type-Bound Subroutine</strong>: CloneTo <br>
+ <strong>Purpose</strong>:  To perform cloning of the source list. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    CALL SrcList%CloneTo(DstList) <br></p></td>
+              </tr>
+              <tr>
+                <td>  procedure, public ::
+  <strong><a href='../type/intrusiveringlist.html#boundprocedure-addfirst'>AddFirst</a></strong> => RingList_AddFirst</td>
+                <td><p><strong>Type-Bound Subroutine</strong>: AddFirst <br>
+ <strong>Purpose</strong>:  To insert a new node to the front of the list. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    CALL List%AddFirst(NewNode) <br>
+ <strong>Note</strong>:  For the circular list, the <em>AddFirst</em> and <em>AddLast</em> methods are
+            mostly the same since the new node is inserted between the head
+            (the first node inserted) and the tail (the last one inserted),
+            except that the <em>AddFirst</em> method set the <em>Head</em> pointer to
+            the new node whereas the <em>AddLast</em> method does not.</p></td>
+              </tr>
+              <tr>
+                <td>  procedure, public ::
+  <strong><a href='../type/intrusiveringlist.html#boundprocedure-addlast'>AddLast</a></strong> => RingList_AddLast</td>
+                <td><p><strong>Type-Bound Subroutine</strong>: AddLast <br>
+ <strong>Purpose</strong>:  To insert a new node to the back of the list. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    CALL List%AddLast(NewNode)</p></td>
+              </tr>
+              <tr>
+                <td>  procedure, public ::
+  <strong><a href='../type/intrusiveringlist.html#boundprocedure-addat'>AddAt</a></strong> => RingList_AddAt</td>
+                <td><p><strong>Type-Bound Function</strong>: AddAt <br>
+ <strong>Purpose</strong>:  To add a new node at the specified position of the list where
+               the position must be between 1 and the list size.  Also, return
+               a flag indicating whether the node is successfully added. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    Success = List%AddAt(NewNode, 3) <br>
+  ---&gt;    IF (.NOT.List%AddAt(NewNode, 5)) DoSomething</p></td>
+              </tr>
+              <tr>
+                <td>  procedure, public ::
+  <strong><a href='../type/intrusiveringlist.html#boundprocedure-addbefore'>AddBefore</a></strong> => RingList_AddBefore</td>
+                <td><p><strong>Type-Bound Function</strong>: AddBefore <br>
+ <strong>Purpose</strong>:  To add a new node into the list before the specified node.  Also,
+               return a flag indicating whether the node is successfully added.
+               If the list is empty or the specified node does not exist in the
+               list, return false.  Otherwise, return true. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    Success = List%AddBefore(NewNode, ThisNode) <br>
+  ---&gt;    IF (.NOT.List%AddBefore(NewNode, ThisNoode)) DoSomething</p></td>
+              </tr>
+              <tr>
+                <td>  procedure, public ::
+  <strong><a href='../type/intrusiveringlist.html#boundprocedure-addafter'>AddAfter</a></strong> => RingList_AddAfter</td>
+                <td><p><strong>Type-Bound Function</strong>: AddAfter <br>
+ <strong>Purpose</strong>:  To add a new node into the list after the specified node.  Also,
+               return a flag indicating whether the node is successfully added.
+               If the list is empty or the specified node does not exist in the
+               list, return false.  Otherwise, return true. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    Success = List%AddAfter(NewNode, ThisNode) <br>
+  ---&gt;    IF (.NOT.List%AddAfter(NewNode, ThisNoode)) DoSomething</p></td>
+              </tr>
+              <tr>
+                <td>  procedure, public ::
+  <strong><a href='../type/intrusiveringlist.html#boundprocedure-removefirst'>RemoveFirst</a></strong> => RingList_RemoveFirst</td>
+                <td><p><strong>Type-Bound Function</strong>: RemoveFirst <br>
+ <strong>Purpose</strong>:  To remove the first (head) node from the list.  Also, return
+               a flag indicating whether the node is successfully removed.<br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    Success = List%RemoveFirst() <br>
+  ---&gt;    IF (.NOT.List%RemoveFirst(HeadNode)) DoSomething</p></td>
+              </tr>
+              <tr>
+                <td>  procedure, public ::
+  <strong><a href='../type/intrusiveringlist.html#boundprocedure-removelast'>RemoveLast</a></strong> => RingList_RemoveLast</td>
+                <td><p><strong>Type-Bound Function</strong>: RemoveLast <br>
+ <strong>Purpose</strong>:  To remove the last (tail) node from the list.  Also, return
+               a flag indicating whether the node is successfully removed.<br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    Success = List%RemoveLast() <br>
+  ---&gt;    IF (.NOT.List%RemoveLast(TailNode)) DoSomething</p></td>
+              </tr>
+              <tr>
+                <td>  procedure, public ::
+  <strong><a href='../type/intrusiveringlist.html#boundprocedure-removeat'>RemoveAt</a></strong> => RingList_RemoveAt</td>
+                <td><p><strong>Type-Bound Function</strong>: RemoveAt <br>
+ <strong>Purpose</strong>:  To remove the Nth node from the list.  The index N is one-based
+               where N &lt;= the size of the list.   Also, return a flag indicating
+               whether the node is successfully removed.<br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    Success = List%RemoveAt(5) <br>
+  ---&gt;    Success = List%RemoveAt(7, Node7) <br>
+  ---&gt;    IF (.NOT.List%RemoveAt(3, Node3)) DoSomething</p></td>
+              </tr>
+              <tr>
+                <td>  procedure, public ::
+  <strong><a href='../type/intrusiveringlist.html#boundprocedure-removenode'>RemoveNode</a></strong> => RingList_RemoveNode</td>
+                <td><p><strong>Type-Bound Function</strong>: RemoveNode <br>
+ <strong>Purpose</strong>:  To remove a node associated with the specified node from the list.
+               Also, return a flag indicating whether the node is successfully
+               removed. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    Success = List%RemoveNode(NodeA) <br>
+  ---&gt;    IF (.NOT.List%RemoveNode(NodeB)) DoSomething</p></td>
+              </tr>
+              <tr>
+                <td>  procedure, public ::
+  <strong><a href='../type/intrusiveringlist.html#boundprocedure-clear~2'>Clear</a></strong> => RingList_Clear</td>
+                <td><p><strong>Type-Bound Subroutine</strong>: Clear <br>
+ <strong>Purpose</strong>:  To remove all nodes from the list. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    CALL List%Clear()</p></td>
+              </tr>
+              <tr>
+                <td>  procedure, public ::
+  <strong><a href='../type/intrusiveringlist.html#boundprocedure-startfirst'>StartFirst</a></strong> => RingList_StartFirst</td>
+                <td><p><strong>Type-Bound Function</strong>: StartFirst <br>
+ <strong>Purpose</strong>:  To start the <em>forward</em> iteration and return a flag
+               indicating whether the list is empty or not. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    IsEmpty = List%StartFirst() <br>
+  ---&gt;    IsEmpty = List%StartFirst(FirstNode)</p></td>
+              </tr>
+              <tr>
+                <td>  procedure, public ::
+  <strong><a href='../type/intrusiveringlist.html#boundprocedure-startlast'>StartLast</a></strong> => RingList_StartLast</td>
+                <td><p><strong>Type-Bound Function</strong>: StartLast <br>
+ <strong>Purpose</strong>:  To start the <em>backward</em> iteration and return a flag
+               indicating whether the list is empty or not. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    IsEmpty = List%StartLast() <br>
+  ---&gt;    IsEmpty = List%StartLast(FirstNode)</p></td>
+              </tr>
+              <tr>
+                <td>  procedure, public ::
+  <strong><a href='../type/intrusiveringlist.html#boundprocedure-moveforward'>MoveForward</a></strong> => RingList_Move2Next</td>
+                <td><p><strong>Type-Bound Function</strong>: MoveForward <br>
+ <strong>Purpose</strong>:  To move <em>forward</em> to the next iteration and return a flag
+               indicating whether the cursor has reached the end of the
+               list or not. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    IsTheEnd = List%MoveForward() <br>
+  ---&gt;    IsTheEnd = List%MoveForward(NextNode) <br></p></td>
+              </tr>
+              <tr>
+                <td>  procedure, public ::
+  <strong><a href='../type/intrusiveringlist.html#boundprocedure-movebackward'>MoveBackward</a></strong> => RingList_Move2Prev</td>
+                <td><p><strong>Type-Bound Function</strong>: MoveBackward <br>
+ <strong>Purpose</strong>:  To move <em>backward</em> to the next iteration and return a flag
+               indicating whether the cursor has reached the end of the
+               list or not. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    IsTheEnd = List%MoveBackward() <br>
+  ---&gt;    IsTheEnd = List%MoveBackward(PrevNode) <br></p></td>
+              </tr>
+              <tr>
+                <td>  procedure, public ::
+  <strong><a href='../type/intrusiveringlist.html#boundprocedure-gethead'>GetHead</a></strong> => RingList_GetHead</td>
+                <td><p><strong>Type-Bound Function</strong>: GetHead <br>
+ <strong>Purpose</strong>:  To get a pointer to the first node. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    FirstNode =&gt; List%GetHead()</p></td>
+              </tr>
+              <tr>
+                <td>  procedure, public ::
+  <strong><a href='../type/intrusiveringlist.html#boundprocedure-gettail'>GetTail</a></strong> => RingList_GetTail</td>
+                <td><p><strong>Type-Bound Function</strong>: GetTail <br>
+ <strong>Purpose</strong>:  To get a pointer to the last node. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    LastNode =&gt; List%GetTail()</p></td>
+              </tr>
+              <tr>
+                <td>  procedure, public ::
+  <strong><a href='../type/intrusiveringlist.html#boundprocedure-getcursor'>GetCursor</a></strong> => RingList_GetCursor</td>
+                <td><p><strong>Type-Bound Function</strong>: GetCursor <br>
+ <strong>Purpose</strong>:  To get a pointer to the node the cursor points to.
+      This usually points to the current node when performing an
+      iteration over the list. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    CurrNode =&gt; List%GetCursor()</p></td>
+              </tr>
+              <tr>
+                <td>  procedure, public ::
+  <strong><a href='../type/intrusiveringlist.html#boundprocedure-getat'>GetAt</a></strong> => RingList_GetAt</td>
+                <td><p><strong>Type-Bound Function</strong>: GetAt <br>
+ <strong>Purpose</strong>:  To get a pointer to the Nth node where N must be
+               between 1 and the list size.  If the list is empty
+               or N is not in a valid range, return Null pointer.<br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    CurrNode =&gt; List%GetAt(5)</p></td>
+              </tr>
+              <tr>
+                <td>  procedure, public ::
+  <strong><a href='../type/intrusiveringlist.html#boundprocedure-getsize~7'>GetSize</a></strong> => RingList_GetSize</td>
+                <td><p><strong>Type-Bound Function</strong>: GetSize <br>
+ <strong>Purpose</strong>:  To get size of the container. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    ListSize = List%GetSize()</p></td>
+              </tr>
+              <tr>
+                <td>  procedure, public ::
+  <strong><a href='../type/intrusiveringlist.html#boundprocedure-isempty~6'>IsEmpty</a></strong> => RingList_IsEmpty</td>
+                <td><p><strong>Type-Bound Function</strong>: IsEmpty <br>
+ <strong>Purpose</strong>:  To check whether the container is empty or not. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    Flag = List%IsEmpty() <br>
+  ---&gt;    IF (.NOT.List%IsEmpty()) DoSomeThing</p></td>
+              </tr>
+              <tr>
+                <td>  procedure, public ::
+  <strong><a href='../type/intrusiveringlist.html#boundprocedure-contain'>Contain</a></strong> => RingList_Contain</td>
+                <td><p><strong>Type-Bound Function</strong>: Contain <br>
+ <strong>Purpose</strong>:  To check whether the specified node is currently stored in
+               the container or not. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    Flag = List%Contain(NodeA) <br>
+  ---&gt;    IF (.NOT.List%Contain(NodeB)) DoSomething</p></td>
+              </tr>
+              <tr>
+                <td>  procedure, public ::
+  <strong><a href='../type/intrusiveringlist.html#boundprocedure-indexof'>IndexOf</a></strong> => RingList_IndexOf</td>
+                <td><p><strong>Type-Bound Function</strong>: IndexOf <br>
+ <strong>Purpose</strong>:  To determine the index indicating the position where the
+               specified node is stored in the list.  Return the one-based
+               index of the first node found or return zero if the given
+               node is not stored in the list. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    Index = List%IndexOf(NodeA)</p></td>
+              </tr>
+              <tr>
+                <td>  procedure, public ::
+  <strong><a href='../type/intrusiveringlist.html#boundprocedure-lastindexof'>LastIndexOf</a></strong> => RingList_LastIndexOf</td>
+                <td><p><strong>Type-Bound Function</strong>: LastIndexOf <br>
+ <strong>Purpose</strong>:  To determine the index indicating the position where the
+               given node is stored in the list.  Return the one-based
+               index of the last node found (i.e. the first node when
+               searching backward from the tail node) or return the
+               list size plus one if the given node is not stored in
+               the list. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    Index = List%LastIndexOf(NodeA)</p></td>
+              </tr>
+              <tr>
+                <td>  procedure, public ::
+  <strong><a href='../type/intrusiveringlist.html#boundprocedure-findfirstequal'>FindFirstEqual</a></strong> => RingList_FindFirstEqual</td>
+                <td><p><strong>Type-Bound Function</strong>: FindFirstEqual <br>
+ <strong>Purpose</strong>:  To determine whether there is a node in the list that is
+               equal to the specified node.  Return the one-based index
+               indicating the position of the first node found or return
+               zero if none of the nodes is equal to the given node. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    Index = List%FindFirstEqual(NodeA, IsEqualTo) <br>
+ <strong>Note</strong>:  User must supply the <em>IsEqualTo</em> function to check whether two
+            objects (nodes) in the <em>DoublyLinkedNode</em> class are equal to
+            one another or not.</p></td>
+              </tr>
+              <tr>
+                <td>  procedure, public ::
+  <strong><a href='../type/intrusiveringlist.html#boundprocedure-findlastequal'>FindLastEqual</a></strong> => RingList_FindLastEqual</td>
+                <td><p><strong>Type-Bound Function</strong>: FindLastEqual <br>
+ <strong>Purpose</strong>:  To determine whether there is a node in the list that is
+               equal to the specified node.  Return the one-based index
+               indicating the position of the last node found (i.e. the
+               first node when searching backward from the tail node) or
+               return the list size plus one if none of the nodes is equal
+               to the given node. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    Index = List%FindLastEqual(NodeA, IsEqualTo) <br>
+ <strong>Note</strong>:  User must supply the <em>IsEqualTo</em> function to check whether two
+            objects (nodes) in the <em>DoublyLinkedNode</em> class are equal to
+            one another or not.</p></td>
+              </tr>
+              <tr>
+                <td>  procedure, public ::
+  <strong><a href='../type/intrusiveringlist.html#boundprocedure-sortascend'>SortAscend</a></strong> => RingList_SortAscend</td>
+                <td><p><strong>Type-Bound Subroutine</strong>: SortAscend <br>
+ <strong>Purpose</strong>:  To sort nodes in the list in ascending order. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    CALL List%SortAscend(Compare) <br>
+ <strong>Note</strong>:  User must supply the <em>Compare</em> function to compare two objects
+            (nodes) in the <em>DoublyLinkedNode</em> class.</p></td>
+              </tr>
+          </tbody>
+        </table>
+    </div>
+  </div>
+
+              <div class="card">
+    <div class="card-header codesum">
+      <span class="anchor" id="type-intrusivelinearlist"></span>
+      <h3>
+        type, public, extends(<a href='../type/intrusiveringlist.html'>IntrusiveRingList</a>)&nbsp;::&nbsp;
+        <a href='../type/intrusivelinearlist.html'>IntrusiveLinearList</a>
+        
+      </h3>
+    </div>
+    <div class="card-body">
+      <p><em>IntrusiveLinearList</em> is an intrusive doubly-linked list container type
+  that provides common linked-list operations without a memory management
+  task.  The management of objects inserted in the list must be done by
+  a user, which is the owner of those objects. <br>
+  See the <a href="../module/MClass_IntrusiveLinkedLists.html#type-doublylinkednode">DoublyLinkedNode</a>
+  type for how to define an object to be inserted into the intrusive list. <br>
+  As a doubly-linked list type, the <em>IntrusiveLinearList</em> type provides
+  four methods that allow iterations over its objects in two directions.
+  The following code snippet illustrates how to typically traverse the list.
+<br>
+<Pre><Code style="color:MidnightBlue;">
+  ! start forward iteration (from the first or head node)
+  IsEmpty = List%StartFirst()
+  IF (.NOT.IsEmpty) DoSomeThing...
+  DO
+      ! move to the next iteration
+      IsTheEnd = List%MoveForward()
+      ! check whether we reach the end of the list or not
+      IF (IsTheEnd) EXIT
+      ! if not, do the task we need
+      DoSomeThing...
+  END DO
+  </Code></Pre></p><a href="../type/intrusivelinearlist.html" class="pull-right"><emph>Read more&hellip;</emph></a>
+
+
+
+        <h4>Finalizations Procedures</h4>
+        <table class="table table-striped varlist">
+          <tbody>
+              <tr>
+                <td>final :: <strong>LinearList_Finalizer</strong></td>
+                <td><p>To perform finalization of the list.</p></td>
+              </tr>
+          </tbody>
+        </table>
+
+        <h4>Type-Bound Procedures</h4>
+        <table class="table table-striped varlist">
+          <tbody>
+              <tr>
+                <td>  procedure, public ::
+  <strong><a href='../type/intrusiveringlist.html#boundprocedure-addbefore'>AddBefore</a></strong> => RingList_AddBefore</td>
+                <td><p><strong>Type-Bound Function</strong>: AddBefore <br>
+ <strong>Purpose</strong>:  To add a new node into the list before the specified node.  Also,
+               return a flag indicating whether the node is successfully added.
+               If the list is empty or the specified node does not exist in the
+               list, return false.  Otherwise, return true. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    Success = List%AddBefore(NewNode, ThisNode) <br>
+  ---&gt;    IF (.NOT.List%AddBefore(NewNode, ThisNoode)) DoSomething</p></td>
+              </tr>
+              <tr>
+                <td>  procedure, public ::
+  <strong><a href='../type/intrusiveringlist.html#boundprocedure-clear~2'>Clear</a></strong> => RingList_Clear</td>
+                <td><p><strong>Type-Bound Subroutine</strong>: Clear <br>
+ <strong>Purpose</strong>:  To remove all nodes from the list. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    CALL List%Clear()</p></td>
+              </tr>
+              <tr>
+                <td>  procedure, public ::
+  <strong><a href='../type/intrusiveringlist.html#boundprocedure-startfirst'>StartFirst</a></strong> => RingList_StartFirst</td>
+                <td><p><strong>Type-Bound Function</strong>: StartFirst <br>
+ <strong>Purpose</strong>:  To start the <em>forward</em> iteration and return a flag
+               indicating whether the list is empty or not. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    IsEmpty = List%StartFirst() <br>
+  ---&gt;    IsEmpty = List%StartFirst(FirstNode)</p></td>
+              </tr>
+              <tr>
+                <td>  procedure, public ::
+  <strong><a href='../type/intrusiveringlist.html#boundprocedure-gethead'>GetHead</a></strong> => RingList_GetHead</td>
+                <td><p><strong>Type-Bound Function</strong>: GetHead <br>
+ <strong>Purpose</strong>:  To get a pointer to the first node. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    FirstNode =&gt; List%GetHead()</p></td>
+              </tr>
+              <tr>
+                <td>  procedure, public ::
+  <strong><a href='../type/intrusiveringlist.html#boundprocedure-getcursor'>GetCursor</a></strong> => RingList_GetCursor</td>
+                <td><p><strong>Type-Bound Function</strong>: GetCursor <br>
+ <strong>Purpose</strong>:  To get a pointer to the node the cursor points to.
+      This usually points to the current node when performing an
+      iteration over the list. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    CurrNode =&gt; List%GetCursor()</p></td>
+              </tr>
+              <tr>
+                <td>  procedure, public ::
+  <strong><a href='../type/intrusiveringlist.html#boundprocedure-getat'>GetAt</a></strong> => RingList_GetAt</td>
+                <td><p><strong>Type-Bound Function</strong>: GetAt <br>
+ <strong>Purpose</strong>:  To get a pointer to the Nth node where N must be
+               between 1 and the list size.  If the list is empty
+               or N is not in a valid range, return Null pointer.<br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    CurrNode =&gt; List%GetAt(5)</p></td>
+              </tr>
+              <tr>
+                <td>  procedure, public ::
+  <strong><a href='../type/intrusiveringlist.html#boundprocedure-getsize~7'>GetSize</a></strong> => RingList_GetSize</td>
+                <td><p><strong>Type-Bound Function</strong>: GetSize <br>
+ <strong>Purpose</strong>:  To get size of the container. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    ListSize = List%GetSize()</p></td>
+              </tr>
+              <tr>
+                <td>  procedure, public ::
+  <strong><a href='../type/intrusiveringlist.html#boundprocedure-isempty~6'>IsEmpty</a></strong> => RingList_IsEmpty</td>
+                <td><p><strong>Type-Bound Function</strong>: IsEmpty <br>
+ <strong>Purpose</strong>:  To check whether the container is empty or not. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    Flag = List%IsEmpty() <br>
+  ---&gt;    IF (.NOT.List%IsEmpty()) DoSomeThing</p></td>
+              </tr>
+              <tr>
+                <td>  procedure, public ::
+  <strong><a href='../type/intrusiveringlist.html#boundprocedure-contain'>Contain</a></strong> => RingList_Contain</td>
+                <td><p><strong>Type-Bound Function</strong>: Contain <br>
+ <strong>Purpose</strong>:  To check whether the specified node is currently stored in
+               the container or not. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    Flag = List%Contain(NodeA) <br>
+  ---&gt;    IF (.NOT.List%Contain(NodeB)) DoSomething</p></td>
+              </tr>
+              <tr>
+                <td>  procedure, public ::
+  <strong><a href='../type/intrusiveringlist.html#boundprocedure-indexof'>IndexOf</a></strong> => RingList_IndexOf</td>
+                <td><p><strong>Type-Bound Function</strong>: IndexOf <br>
+ <strong>Purpose</strong>:  To determine the index indicating the position where the
+               specified node is stored in the list.  Return the one-based
+               index of the first node found or return zero if the given
+               node is not stored in the list. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    Index = List%IndexOf(NodeA)</p></td>
+              </tr>
+              <tr>
+                <td>  procedure, public ::
+  <strong><a href='../type/intrusiveringlist.html#boundprocedure-lastindexof'>LastIndexOf</a></strong> => RingList_LastIndexOf</td>
+                <td><p><strong>Type-Bound Function</strong>: LastIndexOf <br>
+ <strong>Purpose</strong>:  To determine the index indicating the position where the
+               given node is stored in the list.  Return the one-based
+               index of the last node found (i.e. the first node when
+               searching backward from the tail node) or return the
+               list size plus one if the given node is not stored in
+               the list. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    Index = List%LastIndexOf(NodeA)</p></td>
+              </tr>
+              <tr>
+                <td>  procedure, public ::
+  <strong><a href='../type/intrusiveringlist.html#boundprocedure-findfirstequal'>FindFirstEqual</a></strong> => RingList_FindFirstEqual</td>
+                <td><p><strong>Type-Bound Function</strong>: FindFirstEqual <br>
+ <strong>Purpose</strong>:  To determine whether there is a node in the list that is
+               equal to the specified node.  Return the one-based index
+               indicating the position of the first node found or return
+               zero if none of the nodes is equal to the given node. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    Index = List%FindFirstEqual(NodeA, IsEqualTo) <br>
+ <strong>Note</strong>:  User must supply the <em>IsEqualTo</em> function to check whether two
+            objects (nodes) in the <em>DoublyLinkedNode</em> class are equal to
+            one another or not.</p></td>
+              </tr>
+              <tr>
+                <td>  procedure, public ::
+  <strong><a href='../type/intrusiveringlist.html#boundprocedure-findlastequal'>FindLastEqual</a></strong> => RingList_FindLastEqual</td>
+                <td><p><strong>Type-Bound Function</strong>: FindLastEqual <br>
+ <strong>Purpose</strong>:  To determine whether there is a node in the list that is
+               equal to the specified node.  Return the one-based index
+               indicating the position of the last node found (i.e. the
+               first node when searching backward from the tail node) or
+               return the list size plus one if none of the nodes is equal
+               to the given node. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    Index = List%FindLastEqual(NodeA, IsEqualTo) <br>
+ <strong>Note</strong>:  User must supply the <em>IsEqualTo</em> function to check whether two
+            objects (nodes) in the <em>DoublyLinkedNode</em> class are equal to
+            one another or not.</p></td>
+              </tr>
+              <tr>
+                <td>  procedure, public ::
+  <strong><a href='../type/intrusiveringlist.html#boundprocedure-sortascend'>SortAscend</a></strong> => RingList_SortAscend</td>
+                <td><p><strong>Type-Bound Subroutine</strong>: SortAscend <br>
+ <strong>Purpose</strong>:  To sort nodes in the list in ascending order. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    CALL List%SortAscend(Compare) <br>
+ <strong>Note</strong>:  User must supply the <em>Compare</em> function to compare two objects
+            (nodes) in the <em>DoublyLinkedNode</em> class.</p></td>
+              </tr>
+              <tr>
+                <td>  procedure, public ::
+  <strong><a href='../type/intrusivelinearlist.html#boundprocedure-cloneto~4'>CloneTo</a></strong> => LinearList_Clone</td>
+                <td><p><strong>Type-Bound Subroutine</strong>: CloneTo <br>
+ <strong>Purpose</strong>:  To perform cloning of the source list. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    CALL SrcList%CloneTo(DstList) <br></p></td>
+              </tr>
+              <tr>
+                <td>  procedure, public ::
+  <strong><a href='../type/intrusivelinearlist.html#boundprocedure-addfirst~2'>AddFirst</a></strong> => LinearList_AddFirst</td>
+                <td><p><strong>Type-Bound Subroutine</strong>: AddFirst <br>
+ <strong>Purpose</strong>:  To insert a new node to the front of the list. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    CALL List%AddFirst(NewNode)</p></td>
+              </tr>
+              <tr>
+                <td>  procedure, public ::
+  <strong><a href='../type/intrusivelinearlist.html#boundprocedure-addlast~2'>AddLast</a></strong> => LinearList_AddLast</td>
+                <td><p><strong>Type-Bound Subroutine</strong>: AddLast <br>
+ <strong>Purpose</strong>:  To insert a new node to the back of the list. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    CALL List%AddLast(NewNode)</p></td>
+              </tr>
+              <tr>
+                <td>  procedure, public ::
+  <strong><a href='../type/intrusivelinearlist.html#boundprocedure-addat~2'>AddAt</a></strong> => LinearList_AddAt</td>
+                <td><p><strong>Type-Bound Function</strong>: AddAt <br>
+ <strong>Purpose</strong>:  To add a new node at the specified position of the list where
+               the position must be between 1 and the list size.  Also, return
+               a flag indicating whether the node is successfully added. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    Success = List%AddAt(NewNode, 3) <br>
+  ---&gt;    IF (.NOT.List%AddAt(NewNode, 5)) DoSomething</p></td>
+              </tr>
+              <tr>
+                <td>  procedure, public ::
+  <strong><a href='../type/intrusivelinearlist.html#boundprocedure-addafter~2'>AddAfter</a></strong> => LinearList_AddAfter</td>
+                <td><p><strong>Type-Bound Function</strong>: AddAfter <br>
+ <strong>Purpose</strong>:  To add a new node into the list after the specified node.  Also,
+               return a flag indicating whether the node is successfully added.
+               If the list is empty or the specified node does not exist in the
+               list, return false.  Otherwise, return true. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    Success = List%AddAfter(NewNode, ThisNode) <br>
+  ---&gt;    IF (.NOT.List%AddAfter(NewNode, ThisNoode)) DoSomething</p></td>
+              </tr>
+              <tr>
+                <td>  procedure, public ::
+  <strong><a href='../type/intrusivelinearlist.html#boundprocedure-removefirst~2'>RemoveFirst</a></strong> => LinearList_RemoveFirst</td>
+                <td><p><strong>Type-Bound Function</strong>: RemoveFirst <br>
+ <strong>Purpose</strong>:  To remove the first (head) node from the list.  Also, return
+               a flag indicating whether the node is successfully removed.<br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    Success = List%RemoveFirst() <br>
+  ---&gt;    IF (.NOT.List%RemoveFirst(HeadNode)) DoSomething</p></td>
+              </tr>
+              <tr>
+                <td>  procedure, public ::
+  <strong><a href='../type/intrusivelinearlist.html#boundprocedure-removelast~2'>RemoveLast</a></strong> => LinearList_RemoveLast</td>
+                <td><p><strong>Type-Bound Function</strong>: RemoveLast <br>
+ <strong>Purpose</strong>:  To remove the last (tail) node from the list.  Also, return
+               a flag indicating whether the node is successfully removed.<br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    Success = List%RemoveLast() <br>
+  ---&gt;    IF (.NOT.List%RemoveLast(TailNode)) DoSomething</p></td>
+              </tr>
+              <tr>
+                <td>  procedure, public ::
+  <strong><a href='../type/intrusivelinearlist.html#boundprocedure-removeat~2'>RemoveAt</a></strong> => LinearList_RemoveAt</td>
+                <td><p><strong>Type-Bound Function</strong>: RemoveAt <br>
+ <strong>Purpose</strong>:  To remove the Nth node from the list.  The index N is one-based
+               where N &lt;= the size of the list.   Also, return a flag indicating
+               whether the node is successfully removed.<br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    Success = List%RemoveAt(5) <br>
+  ---&gt;    Success = List%RemoveAt(7, Node7) <br>
+  ---&gt;    IF (.NOT.List%RemoveAt(3, Node3)) DoSomething</p></td>
+              </tr>
+              <tr>
+                <td>  procedure, public ::
+  <strong><a href='../type/intrusivelinearlist.html#boundprocedure-removenode~2'>RemoveNode</a></strong> => LinearList_RemoveNode</td>
+                <td><p><strong>Type-Bound Function</strong>: RemoveNode <br>
+ <strong>Purpose</strong>:  To remove a node associated with the specified node from the list.
+               Also, return a flag indicating whether the node is successfully
+               removed. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    Success = List%RemoveNode(NodeA) <br>
+  ---&gt;    IF (.NOT.List%RemoveNode(NodeB)) DoSomething</p></td>
+              </tr>
+              <tr>
+                <td>  procedure, public ::
+  <strong><a href='../type/intrusivelinearlist.html#boundprocedure-replacenode'>ReplaceNode</a></strong> => LinearList_ReplaceNode</td>
+                <td><p><strong>Type-Bound Function</strong>: ReplaceNode <br>
+ <strong>Purpose</strong>:  To replace a node associated with the specified old node with the specified
+               new node.  Also, return a flag indicating whether the node is successfully
+               replaced. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    Success = List%ReplaceNode(OldNode, NewNode) <br>
+  ---&gt;    IF (.NOT.List%ReplaceNode(OldNode, NewNode)) DoSomething</p></td>
+              </tr>
+              <tr>
+                <td>  procedure, public ::
+  <strong><a href='../type/intrusivelinearlist.html#boundprocedure-startlast~2'>StartLast</a></strong> => LinearList_StartLast</td>
+                <td><p><strong>Type-Bound Function</strong>: StartLast <br>
+ <strong>Purpose</strong>:  To start the <em>backward</em> iteration and return a flag
+               indicating whether the list is empty or not. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    IsEmpty = List%StartLast() <br>
+  ---&gt;    IsEmpty = List%StartLast(FirstNode)</p></td>
+              </tr>
+              <tr>
+                <td>  procedure, public ::
+  <strong><a href='../type/intrusivelinearlist.html#boundprocedure-moveforward~2'>MoveForward</a></strong> => LinearList_Move2Next</td>
+                <td><p><strong>Type-Bound Function</strong>: MoveForward <br>
+ <strong>Purpose</strong>:  To move <em>forward</em> to the next iteration and return a flag
+               indicating whether the cursor has reached the end of the
+               list or not. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    IsTheEnd = List%MoveForward() <br>
+  ---&gt;    IsTheEnd = List%MoveForward(NextNode) <br></p></td>
+              </tr>
+              <tr>
+                <td>  procedure, public ::
+  <strong><a href='../type/intrusivelinearlist.html#boundprocedure-movebackward~2'>MoveBackward</a></strong> => LinearList_Move2Prev</td>
+                <td><p><strong>Type-Bound Function</strong>: MoveBackward <br>
+ <strong>Purpose</strong>:  To move <em>backward</em> to the next iteration and return a flag
+               indicating whether the cursor has reached the end of the
+               list or not. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    IsTheEnd = List%MoveBackward() <br>
+  ---&gt;    IsTheEnd = List%MoveBackward(PrevNode) <br></p></td>
+              </tr>
+              <tr>
+                <td>  procedure, public ::
+  <strong><a href='../type/intrusivelinearlist.html#boundprocedure-gettail~2'>GetTail</a></strong> => LinearList_GetTail</td>
+                <td><p><strong>Type-Bound Function</strong>: GetTail <br>
+ <strong>Purpose</strong>:  To get a pointer to the last node. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    LastNode =&gt; List%GetTail()</p></td>
+              </tr>
+              <tr>
+                <td>  procedure, public ::
+  <strong><a href='../type/intrusivelinearlist.html#boundprocedure-enqueue'>EnQueue</a></strong> => LinearList_AddLast</td>
+                <td><p><strong>Type-Bound Subroutine</strong>: EnQueue <br>
+<strong>Purpose</strong>:  To add a new item to the end of the queue. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    CALL Queue%EnQueue(NewItem) <br>
+ <strong>Note</strong>: <em>EnQueue</em> is an alias of <em>AddLast</em>.</p></td>
+              </tr>
+              <tr>
+                <td>  procedure, public ::
+  <strong><a href='../type/intrusivelinearlist.html#boundprocedure-dequeue'>DeQueue</a></strong> => LinearList_RemoveFirst</td>
+                <td><p><strong>Type-Bound Function</strong>: DeQueue <br>
+ <strong>Purpose</strong>:  To get and remove the front (first) item of the queue.
+               Also, return a flag indicating whether the item is
+               successfully removed. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    Success = Queue%DeQueue(Item) <br>
+  ---&gt;    IF (.NOT.Queue%DeQueue(Item)) DoSomething <br>
+ <strong>Note</strong>: <em>DeQueue</em> is an alias of <em>RemoveFirst</em>.</p></td>
+              </tr>
+              <tr>
+                <td>  procedure, public ::
+  <strong><a href='../type/intrusivelinearlist.html#boundprocedure-push~4'>Push</a></strong> => LinearList_AddLast</td>
+                <td><p><strong>Type-Bound Subroutine</strong>: Push <br>
+<strong>Purpose</strong>:  To add a new item to the top of the stack. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    CALL Stack%Push(NewItem) <br>
+ <strong>Note</strong>: <em>Push</em> is an alias of <em>AddLast</em>.</p></td>
+              </tr>
+              <tr>
+                <td>  procedure, public ::
+  <strong><a href='../type/intrusivelinearlist.html#boundprocedure-pop~4'>Pop</a></strong> => LinearList_RemoveLast</td>
+                <td><p><strong>Type-Bound Function</strong>: Pop <br>
+ <strong>Purpose</strong>:  To get and remove the top item of the stack.
+               Also, return a flag indicating whether the item is
+               successfully removed. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    Success = Stack%Pop(Item) <br>
+  ---&gt;    IF (.NOT.Stack%Pop(Item)) DoSomething <br>
+ <strong>Note</strong>: <em>Pop</em> is an alias of <em>RemoveLast</em>.</p></td>
+              </tr>
+              <tr>
+                <td>  procedure, public ::
+  <strong><a href='../type/intrusivelinearlist.html#boundprocedure-peektop'>PeekTop</a></strong> => LinearList_GetTail</td>
+                <td><p><strong>Type-Bound Function</strong>: PeekTop <br>
+ <strong>Purpose</strong>:  To get the last item (without removing it from the stack).
+               Also, return a flag indicating whether the item is available or not. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    TopNode =&gt; Stack%PeekTop() <br>
+ <strong>Note</strong>: <em>PeekTop</em> is an alias of <em>GetTail</em>.</p></td>
+              </tr>
+          </tbody>
+        </table>
+    </div>
+  </div>
+
+        </section>
+        <br>
+
+
+
+
+
+    </div>
+  </div>
+
+      <hr>
+    </div> <!-- /container -->
+    <footer>
+      <div class="container">
+        <div class="row justify-content-between">
+          <div class="col"><p>eXPerimental Fortran Library (XpfLib) Documentation was developed by Niranama<br>&copy; 2024 
+</p>
+          </div>
+          <div class="col">
+            <p class="text-end">
+              Documentation generated by
+              <a href="https://github.com/Fortran-FOSS-Programmers/ford">FORD</a>
+            </p>
+          </div>
+        </div>
+        <br>
+      </div> <!-- /container -->
+    </footer>
+
+    <!-- Bootstrap core JavaScript -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>    
+
+    <!-- MathJax JavaScript
+             ================================================== -->
+             <!-- Placed at the end of the document so the pages load faster -->
+        <script type="text/x-mathjax-config">
+          MathJax.Hub.Config({
+          TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } },
+          jax: ['input/TeX','input/MathML','output/HTML-CSS'],
+          extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']
+          });
+        </script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+          <script src="../tipuesearch/tipuesearch_content.js"></script>
+          <script src="../tipuesearch/tipuesearch_set.js"></script>
+          <script src="../tipuesearch/tipuesearch.js"></script>
+
+  </body>
+</html>

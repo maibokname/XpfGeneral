@@ -1,0 +1,1776 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta name="description" content="Experimental Fortran Package - Psuedo-Random Number Generators (PRNGs)">
+    <meta name="author" content="Niranama" >
+    <link rel="icon" href="../favicon.png">
+
+    <title>MBase_PrgnBuilder &ndash; eXPerimental Fortran Library (XpfLib) Documentation</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link href="../css/pygments.css" rel="stylesheet">
+    <link href="../css/font-awesome.min.css" rel="stylesheet">
+    <link href="../css/local.css" rel="stylesheet">
+      <link  href="../tipuesearch/tipuesearch.css" rel="stylesheet">
+
+    <script src="https://code.jquery.com/jquery-3.7.0.slim.min.js" integrity="sha256-tG5mcZUtJsZvyKAxYLVXrmjKBVLd6VpVccqz/r4ypFE=" crossorigin="anonymous"></script>
+  </head>
+
+  <body>
+
+    <!-- Fixed navbar -->
+    <div class="container-fluid mb-sm-4 mb-xl-2">
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container">
+          <a class="navbar-brand" href="../index.html">eXPerimental Fortran Library (XpfLib) Documentation </a>
+          <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar"
+                  aria-expanded="false" aria-controls="navbar" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon">
+          </button>
+
+          <div id="navbar" class="navbar-collapse collapse">
+            <ul class="navbar-nav">
+                  <li class="nav-item">
+                    <a class="nav-link" href="../lists/files.html">Source Files</a>
+                  </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../lists/modules.html">Modules</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../lists/procedures.html">Procedures</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../lists/absint.html">Abstract Interfaces</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../lists/types.html">Derived Types</a>
+                </li>
+            </ul>
+              <div class="d-flex align-items-end flex-grow-1">
+                <form action="../search.html" role="search" class="ms-auto">
+                  <input type="text" class="form-control" aria-label="Search" placeholder="Search" name="q" id="tipue_search_input" autocomplete="off" required>
+                </form>
+              </div>
+          </div><!--/.nav-collapse -->
+        </div>
+      </nav>
+    </div>
+
+    <div class="container">
+  <div class="row">
+    <h1>MBase_PrgnBuilder
+      <small>Module</small>
+      
+    </h1>
+      <div class="container p-2 mb-4 bg-light border rounded-3">
+    <div class="row align-items-center justify-content-between" id="info-bar">
+      <div class="col">
+        <ul class="list-inline" style="margin-bottom:0px;display:inline">
+
+            <li class="list-inline-item" id="statements"><i class="fa fa-list-ol"></i>
+              <a data-bs-toggle="tooltip"
+                 data-bs-placement="bottom" data-html="true"
+                 title=" 8.3% of total for modules and submodules.">647 statements</a>
+            </li>
+
+            <li class="list-inline-item" id="source-file">
+              <i class="fa fa-code"></i>
+              <a href="../src/MBase_PrngBuilder.f90"> Source File</a>
+            </li>
+        </ul>
+      </div>
+      <div class="col">
+        <nav aria-label="breadcrumb">
+          <ol class="breadcrumb justify-content-end mb-0">
+                <li class="breadcrumb-item"><a href='../sourcefile/mbase_prngbuilder.f90.html'>MBase_PrngBuilder.f90</a></li>
+            <li class="breadcrumb-item active" aria-current="page">MBase_PrgnBuilder</li>
+          </ol>
+        </nav>
+      </div>
+    </div>
+  </div>
+  <script>
+    $(function () {
+    $('[data-bs-toggle="tooltip"]').tooltip()
+    })
+  </script>
+
+  </div>
+
+  <div class="row">
+    <div class="col-md-3">
+        <div id="sidebar">
+      <h3>Contents</h3>
+  
+      <div class="card mb-4">
+      <a data-bs-toggle="collapse" href="#vars-0"
+         aria-expanded="false" aria-controls="vars-0">
+         <h4 class="card-header bg-primary text-white">Variables</h4>
+      </a>
+      <div id="vars-0" class="collapse">
+        <div class="list-group list-group-flush">
+            <a class="list-group-item" href="../module/mbase_prgnbuilder.html#variable-i32_cmwc">I32_CMWC</a>
+            <a class="list-group-item" href="../module/mbase_prgnbuilder.html#variable-i32_isacc">I32_ISACC</a>
+            <a class="list-group-item" href="../module/mbase_prgnbuilder.html#variable-i32_jsf">I32_JSF</a>
+            <a class="list-group-item" href="../module/mbase_prgnbuilder.html#variable-i32_kiss">I32_KISS</a>
+            <a class="list-group-item" href="../module/mbase_prgnbuilder.html#variable-i32_l32_x64_m1">I32_L32_X64_M1</a>
+            <a class="list-group-item" href="../module/mbase_prgnbuilder.html#variable-i32_l32_x64_m2">I32_L32_X64_M2</a>
+            <a class="list-group-item" href="../module/mbase_prgnbuilder.html#variable-i32_lfsr113">I32_LFSR113</a>
+            <a class="list-group-item" href="../module/mbase_prgnbuilder.html#variable-i32_mrg32k3a">I32_MRG32K3A</a>
+            <a class="list-group-item" href="../module/mbase_prgnbuilder.html#variable-i32_mt">I32_MT</a>
+            <a class="list-group-item" href="../module/mbase_prgnbuilder.html#variable-i32_mwc">I32_MWC</a>
+            <a class="list-group-item" href="../module/mbase_prgnbuilder.html#variable-i32_pcg_lcg_xrs">I32_PCG_LCG_XRS</a>
+            <a class="list-group-item" href="../module/mbase_prgnbuilder.html#variable-i32_pcg_lcg_xrr">I32_PCG_LCG_XRR</a>
+            <a class="list-group-item" href="../module/mbase_prgnbuilder.html#variable-i32_pcg_mcg_xrs">I32_PCG_MCG_XRS</a>
+            <a class="list-group-item" href="../module/mbase_prgnbuilder.html#variable-i32_pcg_mcg_xrr">I32_PCG_MCG_XRR</a>
+            <a class="list-group-item" href="../module/mbase_prgnbuilder.html#variable-i32_ranlux">I32_RANLUX</a>
+            <a class="list-group-item" href="../module/mbase_prgnbuilder.html#variable-i32_sfc">I32_SFC</a>
+            <a class="list-group-item" href="../module/mbase_prgnbuilder.html#variable-i32_superkiss">I32_SUPERKISS</a>
+            <a class="list-group-item" href="../module/mbase_prgnbuilder.html#variable-i32_tuas88">I32_TUAS88</a>
+            <a class="list-group-item" href="../module/mbase_prgnbuilder.html#variable-i32_well512a">I32_WELL512A</a>
+            <a class="list-group-item" href="../module/mbase_prgnbuilder.html#variable-i32_well1024a">I32_WELL1024A</a>
+            <a class="list-group-item" href="../module/mbase_prgnbuilder.html#variable-i32_well19937a">I32_WELL19937A</a>
+            <a class="list-group-item" href="../module/mbase_prgnbuilder.html#variable-i32_well19937c">I32_WELL19937C</a>
+            <a class="list-group-item" href="../module/mbase_prgnbuilder.html#variable-i32_well49937a">I32_WELL49937A</a>
+            <a class="list-group-item" href="../module/mbase_prgnbuilder.html#variable-i32_well49937b">I32_WELL49937B</a>
+            <a class="list-group-item" href="../module/mbase_prgnbuilder.html#variable-i32_xoroshiro64s">I32_XOROSHIRO64S</a>
+            <a class="list-group-item" href="../module/mbase_prgnbuilder.html#variable-i32_xoroshiro64ss">I32_XOROSHIRO64SS</a>
+            <a class="list-group-item" href="../module/mbase_prgnbuilder.html#variable-i32_xoshiro128ss">I32_XOSHIRO128SS</a>
+            <a class="list-group-item" href="../module/mbase_prgnbuilder.html#variable-i32_xoshiro128p">I32_XOSHIRO128P</a>
+            <a class="list-group-item" href="../module/mbase_prgnbuilder.html#variable-i32_xoshiro128pp">I32_XOSHIRO128PP</a>
+            <a class="list-group-item" href="../module/mbase_prgnbuilder.html#variable-i64_chacha">I64_CHACHA</a>
+            <a class="list-group-item" href="../module/mbase_prgnbuilder.html#variable-i64_jsf">I64_JSF</a>
+            <a class="list-group-item" href="../module/mbase_prgnbuilder.html#variable-i64_kiss">I64_KISS</a>
+            <a class="list-group-item" href="../module/mbase_prgnbuilder.html#variable-i64_komi">I64_KOMI</a>
+            <a class="list-group-item" href="../module/mbase_prgnbuilder.html#variable-i64_l64_x128_m1">I64_L64_X128_M1</a>
+            <a class="list-group-item" href="../module/mbase_prgnbuilder.html#variable-i64_l64_x128_ss1">I64_L64_X128_SS1</a>
+            <a class="list-group-item" href="../module/mbase_prgnbuilder.html#variable-i64_l64_x256_m1">I64_L64_X256_M1</a>
+            <a class="list-group-item" href="../module/mbase_prgnbuilder.html#variable-i64_l64_x1024_m1">I64_L64_X1024_M1</a>
+            <a class="list-group-item" href="../module/mbase_prgnbuilder.html#variable-i64_l128_x128_m1">I64_L128_X128_M1</a>
+            <a class="list-group-item" href="../module/mbase_prgnbuilder.html#variable-i64_l128_x256_m1">I64_L128_X256_M1</a>
+            <a class="list-group-item" href="../module/mbase_prgnbuilder.html#variable-i64_l128_x1024_m1">I64_L128_X1024_M1</a>
+            <a class="list-group-item" href="../module/mbase_prgnbuilder.html#variable-i64_l64_x128_m2">I64_L64_X128_M2</a>
+            <a class="list-group-item" href="../module/mbase_prgnbuilder.html#variable-i64_l64_x128_ss2">I64_L64_X128_SS2</a>
+            <a class="list-group-item" href="../module/mbase_prgnbuilder.html#variable-i64_l64_x256_m2">I64_L64_X256_M2</a>
+            <a class="list-group-item" href="../module/mbase_prgnbuilder.html#variable-i64_l64_x1024_m2">I64_L64_X1024_M2</a>
+            <a class="list-group-item" href="../module/mbase_prgnbuilder.html#variable-i64_l128_x128_m2">I64_L128_X128_M2</a>
+            <a class="list-group-item" href="../module/mbase_prgnbuilder.html#variable-i64_l128_x256_m2">I64_L128_X256_M2</a>
+            <a class="list-group-item" href="../module/mbase_prgnbuilder.html#variable-i64_l128_x1024_m2">I64_L128_X1024_M2</a>
+            <a class="list-group-item" href="../module/mbase_prgnbuilder.html#variable-i64_lfsr258">I64_LFSR258</a>
+            <a class="list-group-item" href="../module/mbase_prgnbuilder.html#variable-i64_mrg63k3a">I64_MRG63K3A</a>
+            <a class="list-group-item" href="../module/mbase_prgnbuilder.html#variable-i64_msws">I64_MSWS</a>
+            <a class="list-group-item" href="../module/mbase_prgnbuilder.html#variable-i64_mt">I64_MT</a>
+            <a class="list-group-item" href="../module/mbase_prgnbuilder.html#variable-i64_pcg_rxs_m_xs">I64_PCG_RXS_M_XS</a>
+            <a class="list-group-item" href="../module/mbase_prgnbuilder.html#variable-i64_ranluxpp">I64_RANLUXPP</a>
+            <a class="list-group-item" href="../module/mbase_prgnbuilder.html#variable-i64_sfc">I64_SFC</a>
+            <a class="list-group-item" href="../module/mbase_prgnbuilder.html#variable-i64_sip24">I64_SIP24</a>
+            <a class="list-group-item" href="../module/mbase_prgnbuilder.html#variable-i64_splitmix">I64_SPLITMIX</a>
+            <a class="list-group-item" href="../module/mbase_prgnbuilder.html#variable-i64_superkiss">I64_SUPERKISS</a>
+            <a class="list-group-item" href="../module/mbase_prgnbuilder.html#variable-i64_wy">I64_WY</a>
+            <a class="list-group-item" href="../module/mbase_prgnbuilder.html#variable-i64_xoroshiro128ss">I64_XOROSHIRO128SS</a>
+            <a class="list-group-item" href="../module/mbase_prgnbuilder.html#variable-i64_xoroshiro128p">I64_XOROSHIRO128P</a>
+            <a class="list-group-item" href="../module/mbase_prgnbuilder.html#variable-i64_xoroshiro128pp">I64_XOROSHIRO128PP</a>
+            <a class="list-group-item" href="../module/mbase_prgnbuilder.html#variable-i64_xoroshiro1024s">I64_XOROSHIRO1024S</a>
+            <a class="list-group-item" href="../module/mbase_prgnbuilder.html#variable-i64_xoroshiro1024ss">I64_XOROSHIRO1024SS</a>
+            <a class="list-group-item" href="../module/mbase_prgnbuilder.html#variable-i64_xoroshiro1024pp">I64_XOROSHIRO1024PP</a>
+            <a class="list-group-item" href="../module/mbase_prgnbuilder.html#variable-i64_xoshiro256ss">I64_XOSHIRO256SS</a>
+            <a class="list-group-item" href="../module/mbase_prgnbuilder.html#variable-i64_xoshiro256p">I64_XOSHIRO256P</a>
+            <a class="list-group-item" href="../module/mbase_prgnbuilder.html#variable-i64_xoshiro256pp">I64_XOSHIRO256PP</a>
+            <a class="list-group-item" href="../module/mbase_prgnbuilder.html#variable-i64_xoshiro512ss">I64_XOSHIRO512SS</a>
+            <a class="list-group-item" href="../module/mbase_prgnbuilder.html#variable-i64_xoshiro512p">I64_XOSHIRO512P</a>
+            <a class="list-group-item" href="../module/mbase_prgnbuilder.html#variable-i64_xoshiro512pp">I64_XOSHIRO512PP</a>
+        </div>
+      </div>
+    </div>
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+      <div class="card mb-4">
+      <a data-bs-toggle="collapse" href="#funcs-0"
+         aria-expanded="false" aria-controls="funcs-0">
+         <h4 class="card-header bg-primary text-white">Functions</h4>
+      </a>
+      <div id="funcs-0" class="collapse">
+        <div class="list-group list-group-flush">
+            <a class="list-group-item" href="../module/mbase_prgnbuilder.html#proc-createintegerrng">CreateIntegerRng</a>
+            <a class="list-group-item" href="../module/mbase_prgnbuilder.html#proc-createlongrng">CreateLongRng</a>
+            <a class="list-group-item" href="../module/mbase_prgnbuilder.html#proc-getseedsizeintegerrng">GetSeedSizeIntegerRng</a>
+            <a class="list-group-item" href="../module/mbase_prgnbuilder.html#proc-getseedsizelongrng">GetSeedSizeLongRng</a>
+        </div>
+      </div>
+    </div>
+
+  
+  
+  
+  
+  
+  
+  
+  
+
+
+  </div>
+
+    </div>
+
+    <div class="col-md-9" id='text'>
+      <p><strong>PURPOSE OF THIS MODULE</strong>: <br>
+  This module provides access to random number generator classes and two groups of
+  general routines that perform the following tasks: <br>
+  - Construct a random-number generator class based on the specified algorithm. <br>
+  - Return a number of seeds required to construct the specified generator.</p>
+<br>          <div class="card mb-4">
+      <h3 class="card-header card-title bg-light">Uses</h3>
+      <div class="card-body">
+        <ul class="list-group list-group-flush">
+            <li class="list-group-item">
+              <ul class="list-inline">
+                  <li class="list-inline-item"><a href='../module/mclass_l32x64rng.html'>MClass_L32X64RNG</a></li>
+                  <li class="list-inline-item"><a href='../module/mclass_l128x256rng.html'>MClass_L128X256RNG</a></li>
+                  <li class="list-inline-item"><a href='../module/mclass_isaccrng.html'>MClass_IsaccRNG</a></li>
+                  <li class="list-inline-item"><a href='../module/mclass_xoroshiro128rng.html'>MClass_XoRoShiRo128RNG</a></li>
+                  <li class="list-inline-item"><a href='../module/mclass_mrg32k3arng.html'>MClass_Mrg32k3aRNG</a></li>
+                  <li class="list-inline-item"><a href='../module/mclass_l64x1024rng.html'>MClass_L64X1024RNG</a></li>
+                  <li class="list-inline-item"><a href='../module/mclass_xoshiro128rng.html'>MClass_XoShiRo128RNG</a></li>
+                  <li class="list-inline-item"><a href='../module/mclass_l64xmrng.html'>MClass_L64XMRNG</a></li>
+                  <li class="list-inline-item"><a href='../module/mclass_cmwc4096rng.html'>MClass_Cmwc4096RNG</a></li>
+                  <li class="list-inline-item"><a href='../module/mclass_komirng.html'>MClass_KomiRNG</a></li>
+                  <li class="list-inline-item"><a href='../module/mclass_jsf64rng.html'>MClass_Jsf64RNG</a></li>
+                  <li class="list-inline-item"><a href='../module/mclass_xoroshiro1024rng.html'>MClass_XoRoShiRo1024RNG</a></li>
+                  <li class="list-inline-item"><a href='../module/mclass_xoshiro256rng.html'>MClass_XoShiRo256RNG</a></li>
+                  <li class="list-inline-item"><a href='../module/mclass_l128xmrng.html'>MClass_L128XMRNG</a></li>
+                  <li class="list-inline-item"><a href='../../XpfBase/module/mbase_common.html'>MBase_Common</a></li>
+                  <li class="list-inline-item"><a href='../module/mclass_splitmixrng.html'>MClass_SplitMixRNG</a></li>
+                  <li class="list-inline-item"><a href='../module/mclass_baserng.html'>MClass_BaseRNG</a></li>
+                  <li class="list-inline-item"><a href='../module/mclass_pcgrxsmxs64rng.html'>MClass_PcgRxsMXs64RNG</a></li>
+                  <li class="list-inline-item"><a href='../module/mclass_l32x64mrng.html'>MClass_L32X64MRNG</a></li>
+                  <li class="list-inline-item"><a href='../module/mclass_l64x256rng.html'>MClass_L64X256RNG</a></li>
+                  <li class="list-inline-item"><a href='../module/mclass_sip24rng.html'>MClass_Sip24RNG</a></li>
+                  <li class="list-inline-item"><a href='../module/mclass_sfc64rng.html'>MClass_Sfc64RNG</a></li>
+                  <li class="list-inline-item"><a href='../module/mclass_superkiss64rng.html'>MClass_SuperKiss64RNG</a></li>
+                  <li class="list-inline-item"><a href='../module/mclass_pcglcg32rng.html'>MClass_PcgLcg32RNG</a></li>
+                  <li class="list-inline-item"><a href='../module/mclass_l128x1024rng.html'>MClass_L128X1024RNG</a></li>
+                  <li class="list-inline-item"><a href='../module/mclass_longrng.html'>MClass_LongRNG</a></li>
+                  <li class="list-inline-item"><a href='../module/mclass_wyrng.html'>MClass_WyRNG</a></li>
+                  <li class="list-inline-item"><a href='../module/mclass_kiss32rng.html'>MClass_Kiss32RNG</a></li>
+                  <li class="list-inline-item"><a href='../module/mclass_mt32rng.html'>MClass_Mt32RNG</a></li>
+                  <li class="list-inline-item"><a href='../module/mclass_superkiss32rng.html'>MClass_SuperKiss32RNG</a></li>
+                  <li class="list-inline-item"><a href='../module/mclass_l128x128rng.html'>MClass_L128X128RNG</a></li>
+                  <li class="list-inline-item"><a href='../module/mclass_mwc256rng.html'>MClass_Mwc256RNG</a></li>
+                  <li class="list-inline-item"><a href='../module/mclass_lfsr113rng.html'>MClass_Lfsr113RNG</a></li>
+                  <li class="list-inline-item"><a href='../module/mclass_integerrng.html'>MClass_IntegerRNG</a></li>
+                  <li class="list-inline-item"><a href='../module/mclass_xoshiro512rng.html'>MClass_XoShiRo512RNG</a></li>
+                  <li class="list-inline-item"><a href='../module/mclass_mrg63k3arng.html'>MClass_Mrg63k3aRNG</a></li>
+                  <li class="list-inline-item"><a href='../module/mclass_jsf32rng.html'>MClass_Jsf32RNG</a></li>
+                  <li class="list-inline-item"><a href='../module/mclass_lfsr258rng.html'>MClass_Lfsr258RNG</a></li>
+                  <li class="list-inline-item"><a href='../module/mclass_taus88rng.html'>MClass_Taus88RNG</a></li>
+                  <li class="list-inline-item"><a href='../module/mclass_well32rng.html'>MClass_Well32RNG</a></li>
+                  <li class="list-inline-item"><a href='../module/mclass_chacharng.html'>MClass_ChaChaRNG</a></li>
+                  <li class="list-inline-item"><a href='../module/mclass_pcgmcg32rng.html'>MClass_PcgMcg32RNG</a></li>
+                  <li class="list-inline-item"><a href='../module/mclass_mt64rng.html'>MClass_Mt64RNG</a></li>
+                  <li class="list-inline-item"><a href='../module/mclass_kiss64rng.html'>MClass_Kiss64RNG</a></li>
+                  <li class="list-inline-item"><a href='../module/mclass_xoroshiro64rng.html'>MClass_XoRoShiRo64RNG</a></li>
+                  <li class="list-inline-item"><a href='../module/mclass_ranluxpprng.html'>MClass_RanLuxPpRNG</a></li>
+                  <li class="list-inline-item"><a href='../module/mclass_sfc32rng.html'>MClass_Sfc32RNG</a></li>
+                  <li class="list-inline-item"><a href='../module/mclass_ranluxrng.html'>MClass_RanLuxRNG</a></li>
+                  <li class="list-inline-item"><a href='../module/mclass_l64x128rng.html'>MClass_L64X128RNG</a></li>
+                  <li class="list-inline-item"><a href='../module/mclass_mswsrng.html'>MClass_MswsRNG</a></li>
+              </ul>
+            </li>
+        </ul>
+      </div>
+    </div>
+
+      
+      <br>
+
+
+        <section>
+          <h2>Variables</h2>
+            <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Visibility</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+<th></th><th scope="col">Initial</th>        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-i32_cmwc"></span>
+              integer(kind=kInt32),
+            </td>
+              <td>public,</td>
+            <td>
+parameter               
+            </td>
+            <td>::</td>
+            <td><strong>I32_CMWC</strong></td>
+<td> =</td>
+                <td>1</td>
+            <td>
+                <p>CMWC (Complimentary-Multiply-With-Carry)</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-i32_isacc"></span>
+              integer(kind=kInt32),
+            </td>
+              <td>public,</td>
+            <td>
+parameter               
+            </td>
+            <td>::</td>
+            <td><strong>I32_ISACC</strong></td>
+<td> =</td>
+                <td>2</td>
+            <td>
+                <p>ISAAC (Indirection, Shift, Accumulate, Add, and Count)</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-i32_jsf"></span>
+              integer(kind=kInt32),
+            </td>
+              <td>public,</td>
+            <td>
+parameter               
+            </td>
+            <td>::</td>
+            <td><strong>I32_JSF</strong></td>
+<td> =</td>
+                <td>3</td>
+            <td>
+                <p>Jenkins's small fast non-cryptographic (32-bit variant)</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-i32_kiss"></span>
+              integer(kind=kInt32),
+            </td>
+              <td>public,</td>
+            <td>
+parameter               
+            </td>
+            <td>::</td>
+            <td><strong>I32_KISS</strong></td>
+<td> =</td>
+                <td>4</td>
+            <td>
+                <p>Marsaglia's 32-bit KISS (Keep it Simple Stupid)</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-i32_l32_x64_m1"></span>
+              integer(kind=kInt32),
+            </td>
+              <td>public,</td>
+            <td>
+parameter               
+            </td>
+            <td>::</td>
+            <td><strong>I32_L32_X64_M1</strong></td>
+<td> =</td>
+                <td>5</td>
+            <td>
+                <p>L32-X64-Mix based on Java's JDK.Random</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-i32_l32_x64_m2"></span>
+              integer(kind=kInt32),
+            </td>
+              <td>public,</td>
+            <td>
+parameter               
+            </td>
+            <td>::</td>
+            <td><strong>I32_L32_X64_M2</strong></td>
+<td> =</td>
+                <td>6</td>
+            <td>
+                <p>L32-X64-Mix based on Apache Commons RNG</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-i32_lfsr113"></span>
+              integer(kind=kInt32),
+            </td>
+              <td>public,</td>
+            <td>
+parameter               
+            </td>
+            <td>::</td>
+            <td><strong>I32_LFSR113</strong></td>
+<td> =</td>
+                <td>7</td>
+            <td>
+                <p>L'Ecuyer's 1999 32-bit Composite LFSR</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-i32_mrg32k3a"></span>
+              integer(kind=kInt32),
+            </td>
+              <td>public,</td>
+            <td>
+parameter               
+            </td>
+            <td>::</td>
+            <td><strong>I32_MRG32K3A</strong></td>
+<td> =</td>
+                <td>8</td>
+            <td>
+                <p>L'Ecuyer's 32-bit combined Multiple Recursive Generator (cMRG)</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-i32_mt"></span>
+              integer(kind=kInt32),
+            </td>
+              <td>public,</td>
+            <td>
+parameter               
+            </td>
+            <td>::</td>
+            <td><strong>I32_MT</strong></td>
+<td> =</td>
+                <td>9</td>
+            <td>
+                <p>32-bit Mersenne Twister (MT)</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-i32_mwc"></span>
+              integer(kind=kInt32),
+            </td>
+              <td>public,</td>
+            <td>
+parameter               
+            </td>
+            <td>::</td>
+            <td><strong>I32_MWC</strong></td>
+<td> =</td>
+                <td>10</td>
+            <td>
+                <p>Marsaglia's Multiply-With-Carry (MWC)</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-i32_pcg_lcg_xrs"></span>
+              integer(kind=kInt32),
+            </td>
+              <td>public,</td>
+            <td>
+parameter               
+            </td>
+            <td>::</td>
+            <td><strong>I32_PCG_LCG_XRS</strong></td>
+<td> =</td>
+                <td>11</td>
+            <td>
+                <p>32-bit PCG's LCG-XorShift-RandomShift</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-i32_pcg_lcg_xrr"></span>
+              integer(kind=kInt32),
+            </td>
+              <td>public,</td>
+            <td>
+parameter               
+            </td>
+            <td>::</td>
+            <td><strong>I32_PCG_LCG_XRR</strong></td>
+<td> =</td>
+                <td>12</td>
+            <td>
+                <p>32-bit PCG's LCG-XorShift-RandomRotate</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-i32_pcg_mcg_xrs"></span>
+              integer(kind=kInt32),
+            </td>
+              <td>public,</td>
+            <td>
+parameter               
+            </td>
+            <td>::</td>
+            <td><strong>I32_PCG_MCG_XRS</strong></td>
+<td> =</td>
+                <td>13</td>
+            <td>
+                <p>32-bit PCG's MCG-XorShift-RandomShift</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-i32_pcg_mcg_xrr"></span>
+              integer(kind=kInt32),
+            </td>
+              <td>public,</td>
+            <td>
+parameter               
+            </td>
+            <td>::</td>
+            <td><strong>I32_PCG_MCG_XRR</strong></td>
+<td> =</td>
+                <td>14</td>
+            <td>
+                <p>32-bit PCG's MCG-XorShift-RandomRotate</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-i32_ranlux"></span>
+              integer(kind=kInt32),
+            </td>
+              <td>public,</td>
+            <td>
+parameter               
+            </td>
+            <td>::</td>
+            <td><strong>I32_RANLUX</strong></td>
+<td> =</td>
+                <td>15</td>
+            <td>
+                <p>32-bit RANLUX</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-i32_sfc"></span>
+              integer(kind=kInt32),
+            </td>
+              <td>public,</td>
+            <td>
+parameter               
+            </td>
+            <td>::</td>
+            <td><strong>I32_SFC</strong></td>
+<td> =</td>
+                <td>16</td>
+            <td>
+                <p>Doty-Humphrey's 32-bit Small, Fast, Counting (SFC)</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-i32_superkiss"></span>
+              integer(kind=kInt32),
+            </td>
+              <td>public,</td>
+            <td>
+parameter               
+            </td>
+            <td>::</td>
+            <td><strong>I32_SUPERKISS</strong></td>
+<td> =</td>
+                <td>17</td>
+            <td>
+                <p>Marsaglia's 32-bit SuperKISS</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-i32_tuas88"></span>
+              integer(kind=kInt32),
+            </td>
+              <td>public,</td>
+            <td>
+parameter               
+            </td>
+            <td>::</td>
+            <td><strong>I32_TUAS88</strong></td>
+<td> =</td>
+                <td>18</td>
+            <td>
+                <p>L'Ecuyer's 1996 Three-Component Tausworthe</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-i32_well512a"></span>
+              integer(kind=kInt32),
+            </td>
+              <td>public,</td>
+            <td>
+parameter               
+            </td>
+            <td>::</td>
+            <td><strong>I32_WELL512A</strong></td>
+<td> =</td>
+                <td>19</td>
+            <td>
+                <p>Well Equidistributed Long-period Linear (WELL) 512a</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-i32_well1024a"></span>
+              integer(kind=kInt32),
+            </td>
+              <td>public,</td>
+            <td>
+parameter               
+            </td>
+            <td>::</td>
+            <td><strong>I32_WELL1024A</strong></td>
+<td> =</td>
+                <td>20</td>
+            <td>
+                <p>Well Equidistributed Long-period Linear (WELL) 1024a</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-i32_well19937a"></span>
+              integer(kind=kInt32),
+            </td>
+              <td>public,</td>
+            <td>
+parameter               
+            </td>
+            <td>::</td>
+            <td><strong>I32_WELL19937A</strong></td>
+<td> =</td>
+                <td>21</td>
+            <td>
+                <p>Well Equidistributed Long-period Linear (WELL) 19937a</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-i32_well19937c"></span>
+              integer(kind=kInt32),
+            </td>
+              <td>public,</td>
+            <td>
+parameter               
+            </td>
+            <td>::</td>
+            <td><strong>I32_WELL19937C</strong></td>
+<td> =</td>
+                <td>22</td>
+            <td>
+                <p>Well Equidistributed Long-period Linear (WELL) 19937c</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-i32_well49937a"></span>
+              integer(kind=kInt32),
+            </td>
+              <td>public,</td>
+            <td>
+parameter               
+            </td>
+            <td>::</td>
+            <td><strong>I32_WELL49937A</strong></td>
+<td> =</td>
+                <td>23</td>
+            <td>
+                <p>Well Equidistributed Long-period Linear (WELL) 49937a</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-i32_well49937b"></span>
+              integer(kind=kInt32),
+            </td>
+              <td>public,</td>
+            <td>
+parameter               
+            </td>
+            <td>::</td>
+            <td><strong>I32_WELL49937B</strong></td>
+<td> =</td>
+                <td>24</td>
+            <td>
+                <p>Well Equidistributed Long-period Linear (WELL) 49937b</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-i32_xoroshiro64s"></span>
+              integer(kind=kInt32),
+            </td>
+              <td>public,</td>
+            <td>
+parameter               
+            </td>
+            <td>::</td>
+            <td><strong>I32_XOROSHIRO64S</strong></td>
+<td> =</td>
+                <td>25</td>
+            <td>
+                <p>XOR_Rotate_Shift_Rotate (XoRoShiRo) 64Star</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-i32_xoroshiro64ss"></span>
+              integer(kind=kInt32),
+            </td>
+              <td>public,</td>
+            <td>
+parameter               
+            </td>
+            <td>::</td>
+            <td><strong>I32_XOROSHIRO64SS</strong></td>
+<td> =</td>
+                <td>26</td>
+            <td>
+                <p>XOR_Rotate_Shift_Rotate (XoRoShiRo) 64StarStar</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-i32_xoshiro128ss"></span>
+              integer(kind=kInt32),
+            </td>
+              <td>public,</td>
+            <td>
+parameter               
+            </td>
+            <td>::</td>
+            <td><strong>I32_XOSHIRO128SS</strong></td>
+<td> =</td>
+                <td>27</td>
+            <td>
+                <p>XOR_Shift_Rotate (XoShiRo) 128StarStar</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-i32_xoshiro128p"></span>
+              integer(kind=kInt32),
+            </td>
+              <td>public,</td>
+            <td>
+parameter               
+            </td>
+            <td>::</td>
+            <td><strong>I32_XOSHIRO128P</strong></td>
+<td> =</td>
+                <td>28</td>
+            <td>
+                <p>XOR_Shift_Rotate (XoShiRo) 128Plus</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-i32_xoshiro128pp"></span>
+              integer(kind=kInt32),
+            </td>
+              <td>public,</td>
+            <td>
+parameter               
+            </td>
+            <td>::</td>
+            <td><strong>I32_XOSHIRO128PP</strong></td>
+<td> =</td>
+                <td>29</td>
+            <td>
+                <p>XOR_Shift_Rotate (XoShiRo) 128PlusPlus</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-i64_chacha"></span>
+              integer(kind=kInt32),
+            </td>
+              <td>public,</td>
+            <td>
+parameter               
+            </td>
+            <td>::</td>
+            <td><strong>I64_CHACHA</strong></td>
+<td> =</td>
+                <td>1</td>
+            <td>
+                <p>Chacha cipher</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-i64_jsf"></span>
+              integer(kind=kInt32),
+            </td>
+              <td>public,</td>
+            <td>
+parameter               
+            </td>
+            <td>::</td>
+            <td><strong>I64_JSF</strong></td>
+<td> =</td>
+                <td>2</td>
+            <td>
+                <p>Jenkins's small fast non-cryptographic (64-bit variant)</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-i64_kiss"></span>
+              integer(kind=kInt32),
+            </td>
+              <td>public,</td>
+            <td>
+parameter               
+            </td>
+            <td>::</td>
+            <td><strong>I64_KISS</strong></td>
+<td> =</td>
+                <td>3</td>
+            <td>
+                <p>Marsaglia's 64-bit KISS (Keep it Simple Stupid)</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-i64_komi"></span>
+              integer(kind=kInt32),
+            </td>
+              <td>public,</td>
+            <td>
+parameter               
+            </td>
+            <td>::</td>
+            <td><strong>I64_KOMI</strong></td>
+<td> =</td>
+                <td>4</td>
+            <td>
+                <p>Vaneev's KomiRand</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-i64_l64_x128_m1"></span>
+              integer(kind=kInt32),
+            </td>
+              <td>public,</td>
+            <td>
+parameter               
+            </td>
+            <td>::</td>
+            <td><strong>I64_L64_X128_M1</strong></td>
+<td> =</td>
+                <td>5</td>
+            <td>
+                <p>L64-X128-Mix based on Java's JDK.Random</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-i64_l64_x128_ss1"></span>
+              integer(kind=kInt32),
+            </td>
+              <td>public,</td>
+            <td>
+parameter               
+            </td>
+            <td>::</td>
+            <td><strong>I64_L64_X128_SS1</strong></td>
+<td> =</td>
+                <td>6</td>
+            <td>
+                <p>L64-X128-StarStar based on Java's JDK.Random</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-i64_l64_x256_m1"></span>
+              integer(kind=kInt32),
+            </td>
+              <td>public,</td>
+            <td>
+parameter               
+            </td>
+            <td>::</td>
+            <td><strong>I64_L64_X256_M1</strong></td>
+<td> =</td>
+                <td>7</td>
+            <td>
+                <p>L64-X256-Mix based on Java's JDK.Random</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-i64_l64_x1024_m1"></span>
+              integer(kind=kInt32),
+            </td>
+              <td>public,</td>
+            <td>
+parameter               
+            </td>
+            <td>::</td>
+            <td><strong>I64_L64_X1024_M1</strong></td>
+<td> =</td>
+                <td>8</td>
+            <td>
+                <p>L64-X1024-Mix based on Java's JDK.Random</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-i64_l128_x128_m1"></span>
+              integer(kind=kInt32),
+            </td>
+              <td>public,</td>
+            <td>
+parameter               
+            </td>
+            <td>::</td>
+            <td><strong>I64_L128_X128_M1</strong></td>
+<td> =</td>
+                <td>9</td>
+            <td>
+                <p>L128-X128-Mix based on Java's JDK.Random</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-i64_l128_x256_m1"></span>
+              integer(kind=kInt32),
+            </td>
+              <td>public,</td>
+            <td>
+parameter               
+            </td>
+            <td>::</td>
+            <td><strong>I64_L128_X256_M1</strong></td>
+<td> =</td>
+                <td>10</td>
+            <td>
+                <p>L128-X256-Mix based on Java's JDK.Random</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-i64_l128_x1024_m1"></span>
+              integer(kind=kInt32),
+            </td>
+              <td>public,</td>
+            <td>
+parameter               
+            </td>
+            <td>::</td>
+            <td><strong>I64_L128_X1024_M1</strong></td>
+<td> =</td>
+                <td>11</td>
+            <td>
+                <p>L128-X1024-Mix based on Java's JDK.Random</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-i64_l64_x128_m2"></span>
+              integer(kind=kInt32),
+            </td>
+              <td>public,</td>
+            <td>
+parameter               
+            </td>
+            <td>::</td>
+            <td><strong>I64_L64_X128_M2</strong></td>
+<td> =</td>
+                <td>12</td>
+            <td>
+                <p>L64-X128-Mix based on Apache Commons RNG</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-i64_l64_x128_ss2"></span>
+              integer(kind=kInt32),
+            </td>
+              <td>public,</td>
+            <td>
+parameter               
+            </td>
+            <td>::</td>
+            <td><strong>I64_L64_X128_SS2</strong></td>
+<td> =</td>
+                <td>13</td>
+            <td>
+                <p>L64-X128-StarStar based on Apache Commons RNG</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-i64_l64_x256_m2"></span>
+              integer(kind=kInt32),
+            </td>
+              <td>public,</td>
+            <td>
+parameter               
+            </td>
+            <td>::</td>
+            <td><strong>I64_L64_X256_M2</strong></td>
+<td> =</td>
+                <td>14</td>
+            <td>
+                <p>L64-X256-Mix based on Apache Commons RNG</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-i64_l64_x1024_m2"></span>
+              integer(kind=kInt32),
+            </td>
+              <td>public,</td>
+            <td>
+parameter               
+            </td>
+            <td>::</td>
+            <td><strong>I64_L64_X1024_M2</strong></td>
+<td> =</td>
+                <td>15</td>
+            <td>
+                <p>L64-X1024-Mix based on Apache Commons RNG</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-i64_l128_x128_m2"></span>
+              integer(kind=kInt32),
+            </td>
+              <td>public,</td>
+            <td>
+parameter               
+            </td>
+            <td>::</td>
+            <td><strong>I64_L128_X128_M2</strong></td>
+<td> =</td>
+                <td>16</td>
+            <td>
+                <p>L128-X128-Mix based on Apache Commons RNG</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-i64_l128_x256_m2"></span>
+              integer(kind=kInt32),
+            </td>
+              <td>public,</td>
+            <td>
+parameter               
+            </td>
+            <td>::</td>
+            <td><strong>I64_L128_X256_M2</strong></td>
+<td> =</td>
+                <td>17</td>
+            <td>
+                <p>L128-X256-Mix based on Apache Commons RNG</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-i64_l128_x1024_m2"></span>
+              integer(kind=kInt32),
+            </td>
+              <td>public,</td>
+            <td>
+parameter               
+            </td>
+            <td>::</td>
+            <td><strong>I64_L128_X1024_M2</strong></td>
+<td> =</td>
+                <td>18</td>
+            <td>
+                <p>L128-X1024-Mix based on Apache Commons RNG</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-i64_lfsr258"></span>
+              integer(kind=kInt32),
+            </td>
+              <td>public,</td>
+            <td>
+parameter               
+            </td>
+            <td>::</td>
+            <td><strong>I64_LFSR258</strong></td>
+<td> =</td>
+                <td>19</td>
+            <td>
+                <p>L'Ecuyer's 1999 64-bit Composite LFSR</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-i64_mrg63k3a"></span>
+              integer(kind=kInt32),
+            </td>
+              <td>public,</td>
+            <td>
+parameter               
+            </td>
+            <td>::</td>
+            <td><strong>I64_MRG63K3A</strong></td>
+<td> =</td>
+                <td>20</td>
+            <td>
+                <p>L'Ecuyer's 63-bit combined Multiple Recursive Generator (cMRG)</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-i64_msws"></span>
+              integer(kind=kInt32),
+            </td>
+              <td>public,</td>
+            <td>
+parameter               
+            </td>
+            <td>::</td>
+            <td><strong>I64_MSWS</strong></td>
+<td> =</td>
+                <td>21</td>
+            <td>
+                <p>Middle-Square Weyl Sequence (MSWS)</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-i64_mt"></span>
+              integer(kind=kInt32),
+            </td>
+              <td>public,</td>
+            <td>
+parameter               
+            </td>
+            <td>::</td>
+            <td><strong>I64_MT</strong></td>
+<td> =</td>
+                <td>22</td>
+            <td>
+                <p>64-bit Mersenne Twister (MT)</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-i64_pcg_rxs_m_xs"></span>
+              integer(kind=kInt32),
+            </td>
+              <td>public,</td>
+            <td>
+parameter               
+            </td>
+            <td>::</td>
+            <td><strong>I64_PCG_RXS_M_XS</strong></td>
+<td> =</td>
+                <td>23</td>
+            <td>
+                <p>64-bit PCG's LCG-RandomXorshift-Multiply-Xorshift</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-i64_ranluxpp"></span>
+              integer(kind=kInt32),
+            </td>
+              <td>public,</td>
+            <td>
+parameter               
+            </td>
+            <td>::</td>
+            <td><strong>I64_RANLUXPP</strong></td>
+<td> =</td>
+                <td>24</td>
+            <td>
+                <p>64-bit RANLUX++</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-i64_sfc"></span>
+              integer(kind=kInt32),
+            </td>
+              <td>public,</td>
+            <td>
+parameter               
+            </td>
+            <td>::</td>
+            <td><strong>I64_SFC</strong></td>
+<td> =</td>
+                <td>25</td>
+            <td>
+                <p>Doty-Humphrey's 64-bit Small, Fast, Counting (SFC)</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-i64_sip24"></span>
+              integer(kind=kInt32),
+            </td>
+              <td>public,</td>
+            <td>
+parameter               
+            </td>
+            <td>::</td>
+            <td><strong>I64_SIP24</strong></td>
+<td> =</td>
+                <td>26</td>
+            <td>
+                <p>SipHash24</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-i64_splitmix"></span>
+              integer(kind=kInt32),
+            </td>
+              <td>public,</td>
+            <td>
+parameter               
+            </td>
+            <td>::</td>
+            <td><strong>I64_SPLITMIX</strong></td>
+<td> =</td>
+                <td>27</td>
+            <td>
+                <p>SplitMix</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-i64_superkiss"></span>
+              integer(kind=kInt32),
+            </td>
+              <td>public,</td>
+            <td>
+parameter               
+            </td>
+            <td>::</td>
+            <td><strong>I64_SUPERKISS</strong></td>
+<td> =</td>
+                <td>28</td>
+            <td>
+                <p>Marsaglia's 64-bit SuperKISS</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-i64_wy"></span>
+              integer(kind=kInt32),
+            </td>
+              <td>public,</td>
+            <td>
+parameter               
+            </td>
+            <td>::</td>
+            <td><strong>I64_WY</strong></td>
+<td> =</td>
+                <td>29</td>
+            <td>
+                <p>Wang Yi's WyRand</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-i64_xoroshiro128ss"></span>
+              integer(kind=kInt32),
+            </td>
+              <td>public,</td>
+            <td>
+parameter               
+            </td>
+            <td>::</td>
+            <td><strong>I64_XOROSHIRO128SS</strong></td>
+<td> =</td>
+                <td>30</td>
+            <td>
+                <p>XOR_Rotate_Shift_Rotate (XoRoShiRo) 128StarStar</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-i64_xoroshiro128p"></span>
+              integer(kind=kInt32),
+            </td>
+              <td>public,</td>
+            <td>
+parameter               
+            </td>
+            <td>::</td>
+            <td><strong>I64_XOROSHIRO128P</strong></td>
+<td> =</td>
+                <td>31</td>
+            <td>
+                <p>XOR_Rotate_Shift_Rotate (XoRoShiRo) 128Plus</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-i64_xoroshiro128pp"></span>
+              integer(kind=kInt32),
+            </td>
+              <td>public,</td>
+            <td>
+parameter               
+            </td>
+            <td>::</td>
+            <td><strong>I64_XOROSHIRO128PP</strong></td>
+<td> =</td>
+                <td>32</td>
+            <td>
+                <p>XOR_Rotate_Shift_Rotate (XoRoShiRo) 128PlusPlus</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-i64_xoroshiro1024s"></span>
+              integer(kind=kInt32),
+            </td>
+              <td>public,</td>
+            <td>
+parameter               
+            </td>
+            <td>::</td>
+            <td><strong>I64_XOROSHIRO1024S</strong></td>
+<td> =</td>
+                <td>33</td>
+            <td>
+                <p>XOR_Rotate_Shift_Rotate (XoRoShiRo) 1024Star</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-i64_xoroshiro1024ss"></span>
+              integer(kind=kInt32),
+            </td>
+              <td>public,</td>
+            <td>
+parameter               
+            </td>
+            <td>::</td>
+            <td><strong>I64_XOROSHIRO1024SS</strong></td>
+<td> =</td>
+                <td>34</td>
+            <td>
+                <p>XOR_Rotate_Shift_Rotate (XoRoShiRo) 1024StarStar</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-i64_xoroshiro1024pp"></span>
+              integer(kind=kInt32),
+            </td>
+              <td>public,</td>
+            <td>
+parameter               
+            </td>
+            <td>::</td>
+            <td><strong>I64_XOROSHIRO1024PP</strong></td>
+<td> =</td>
+                <td>35</td>
+            <td>
+                <p>XOR_Rotate_Shift_Rotate (XoRoShiRo) 1024PlusPlus</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-i64_xoshiro256ss"></span>
+              integer(kind=kInt32),
+            </td>
+              <td>public,</td>
+            <td>
+parameter               
+            </td>
+            <td>::</td>
+            <td><strong>I64_XOSHIRO256SS</strong></td>
+<td> =</td>
+                <td>36</td>
+            <td>
+                <p>XOR_Shift_Rotate (XoShiRo) 256StarStar</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-i64_xoshiro256p"></span>
+              integer(kind=kInt32),
+            </td>
+              <td>public,</td>
+            <td>
+parameter               
+            </td>
+            <td>::</td>
+            <td><strong>I64_XOSHIRO256P</strong></td>
+<td> =</td>
+                <td>37</td>
+            <td>
+                <p>XOR_Shift_Rotate (XoShiRo) 256Plus</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-i64_xoshiro256pp"></span>
+              integer(kind=kInt32),
+            </td>
+              <td>public,</td>
+            <td>
+parameter               
+            </td>
+            <td>::</td>
+            <td><strong>I64_XOSHIRO256PP</strong></td>
+<td> =</td>
+                <td>38</td>
+            <td>
+                <p>XOR_Shift_Rotate (XoShiRo) 256PlusPlus</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-i64_xoshiro512ss"></span>
+              integer(kind=kInt32),
+            </td>
+              <td>public,</td>
+            <td>
+parameter               
+            </td>
+            <td>::</td>
+            <td><strong>I64_XOSHIRO512SS</strong></td>
+<td> =</td>
+                <td>39</td>
+            <td>
+                <p>XOR_Shift_Rotate (XoShiRo) 512StarStar</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-i64_xoshiro512p"></span>
+              integer(kind=kInt32),
+            </td>
+              <td>public,</td>
+            <td>
+parameter               
+            </td>
+            <td>::</td>
+            <td><strong>I64_XOSHIRO512P</strong></td>
+<td> =</td>
+                <td>40</td>
+            <td>
+                <p>XOR_Shift_Rotate (XoShiRo) 512Plus</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-i64_xoshiro512pp"></span>
+              integer(kind=kInt32),
+            </td>
+              <td>public,</td>
+            <td>
+parameter               
+            </td>
+            <td>::</td>
+            <td><strong>I64_XOSHIRO512PP</strong></td>
+<td> =</td>
+                <td>41</td>
+            <td>
+                <p>XOR_Shift_Rotate (XoShiRo) 512PlusPlus</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+        </section>
+        <br>
+
+
+
+
+
+        <section>
+          <h2>Functions</h2>
+              <div class="card">
+    <div class="card-header codesum"><span class="anchor" id="proc-createintegerrng"></span><h3>public  function <a href='../proc/createintegerrng.html'>CreateIntegerRng</a>(RngAlgo, Seed) result(NewRng)  
+</h3></div>
+    <div class="card-body">
+          
+  <p>To create an instance of the specified <em>Integer</em> random number generator
+ as well as to initialize the generator.</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-rngalgo"></span>
+              integer(kind=kInt32),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>RngAlgo</strong></td>
+            <td>
+<p>flag indicating algorithm (1-29)</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-seed~63"></span>
+              integer(kind=kInt32),
+            </td>
+<td>intent(in),</td>
+              <td>optional</td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Seed</strong>(:)</td>
+            <td>
+<p>seed(s)</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+    <h4>
+    Return Value
+    <small>class(<a href='../type/baserng.html'>BaseRNG</a>), ALLOCATABLE</small>
+    </h4>
+    <p>'BaseRNG' object</p>
+
+    </div>
+  </div>
+
+              <div class="card">
+    <div class="card-header codesum"><span class="anchor" id="proc-createlongrng"></span><h3>public  function <a href='../proc/createlongrng.html'>CreateLongRng</a>(RngAlgo, Seed) result(NewRng)  
+</h3></div>
+    <div class="card-body">
+          
+  <p>To create an instance of the specified <em>Long</em> random number generator
+ as well as to initialize the generator.</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-rngalgo~2"></span>
+              integer(kind=kInt32),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>RngAlgo</strong></td>
+            <td>
+<p>flag indicating algorithm (1-41)</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-seed~64"></span>
+              integer(kind=kInt64),
+            </td>
+<td>intent(in),</td>
+              <td>optional</td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Seed</strong>(:)</td>
+            <td>
+<p>seed(s)</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+    <h4>
+    Return Value
+    <small>class(<a href='../type/baserng.html'>BaseRNG</a>), ALLOCATABLE</small>
+    </h4>
+    <p>'BaseRNG' object</p>
+
+    </div>
+  </div>
+
+              <div class="card">
+    <div class="card-header codesum"><span class="anchor" id="proc-getseedsizeintegerrng"></span><h3>public  function <a href='../proc/getseedsizeintegerrng.html'>GetSeedSizeIntegerRng</a>(RngAlgo) result(Number)  
+</h3></div>
+    <div class="card-body">
+          
+  <p>To return the number of seeds required by the specified algorithm.</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-rngalgo~3"></span>
+              integer(kind=kInt32),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>RngAlgo</strong></td>
+            <td>
+<p>flag indicating algorithm (1-29)</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+    <h4>
+    Return Value
+    <small>integer(kind=kInt32)</small>
+    </h4>
+    <p>number of seeds required by the specified algorithm</p>
+
+    </div>
+  </div>
+
+              <div class="card">
+    <div class="card-header codesum"><span class="anchor" id="proc-getseedsizelongrng"></span><h3>public  function <a href='../proc/getseedsizelongrng.html'>GetSeedSizeLongRng</a>(RngAlgo) result(Number)  
+</h3></div>
+    <div class="card-body">
+          
+  <p>To return the number of seeds required by the specified algorithm.</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-rngalgo~4"></span>
+              integer(kind=kInt32),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>RngAlgo</strong></td>
+            <td>
+<p>flag indicating algorithm (1-41)</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+    <h4>
+    Return Value
+    <small>integer(kind=kInt32)</small>
+    </h4>
+    <p>number of seeds required by the specified algorithm</p>
+
+    </div>
+  </div>
+
+        </section>
+        <br>
+
+
+
+
+    </div>
+  </div>
+
+      <hr>
+    </div> <!-- /container -->
+    <footer>
+      <div class="container">
+        <div class="row justify-content-between">
+          <div class="col"><p>eXPerimental Fortran Library (XpfLib) Documentation was developed by Niranama<br>&copy; 2024 
+</p>
+          </div>
+          <div class="col">
+            <p class="text-end">
+              Documentation generated by
+              <a href="https://github.com/Fortran-FOSS-Programmers/ford">FORD</a>
+            </p>
+          </div>
+        </div>
+        <br>
+      </div> <!-- /container -->
+    </footer>
+
+    <!-- Bootstrap core JavaScript -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>    
+
+    <!-- MathJax JavaScript
+             ================================================== -->
+             <!-- Placed at the end of the document so the pages load faster -->
+        <script type="text/x-mathjax-config">
+          MathJax.Hub.Config({
+          TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } },
+          jax: ['input/TeX','input/MathML','output/HTML-CSS'],
+          extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']
+          });
+        </script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+          <script src="../tipuesearch/tipuesearch_content.js"></script>
+          <script src="../tipuesearch/tipuesearch_set.js"></script>
+          <script src="../tipuesearch/tipuesearch.js"></script>
+
+  </body>
+</html>

@@ -1,0 +1,1509 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta name="description" content="Experimental Fortran Package - Psuedo-Random Number Generators (PRNGs)">
+    <meta name="author" content="Niranama" >
+    <link rel="icon" href="../favicon.png">
+
+    <title>All Modules &ndash; eXPerimental Fortran Library (XpfLib) Documentation
+</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link href="../css/pygments.css" rel="stylesheet">
+    <link href="../css/font-awesome.min.css" rel="stylesheet">
+    <link href="../css/local.css" rel="stylesheet">
+      <link  href="../tipuesearch/tipuesearch.css" rel="stylesheet">
+
+    <script src="https://code.jquery.com/jquery-3.7.0.slim.min.js" integrity="sha256-tG5mcZUtJsZvyKAxYLVXrmjKBVLd6VpVccqz/r4ypFE=" crossorigin="anonymous"></script>
+  </head>
+
+  <body>
+
+    <!-- Fixed navbar -->
+    <div class="container-fluid mb-sm-4 mb-xl-2">
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container">
+          <a class="navbar-brand" href="../index.html">eXPerimental Fortran Library (XpfLib) Documentation </a>
+          <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar"
+                  aria-expanded="false" aria-controls="navbar" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon">
+          </button>
+
+          <div id="navbar" class="navbar-collapse collapse">
+            <ul class="navbar-nav">
+                  <li class="nav-item">
+                    <a class="nav-link" href="../lists/files.html">Source Files</a>
+                  </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../lists/modules.html">Modules</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../lists/procedures.html">Procedures</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../lists/absint.html">Abstract Interfaces</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../lists/types.html">Derived Types</a>
+                </li>
+            </ul>
+              <div class="d-flex align-items-end flex-grow-1">
+                <form action="../search.html" role="search" class="ms-auto">
+                  <input type="text" class="form-control" aria-label="Search" placeholder="Search" name="q" id="tipue_search_input" autocomplete="off" required>
+                </form>
+              </div>
+          </div><!--/.nav-collapse -->
+        </div>
+      </nav>
+    </div>
+
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12" id='text'>
+			 <h1>Modules</h1>
+			 <table class="table">
+			 <thead><tr><th>Module</th><th>Source File</th><th>Description</th></tr></thead>
+			 <tbody>
+			   <tr class="active"><td><a href='../module/mbase_prgnbuilder.html'>MBase_PrgnBuilder</a></td><td><a href='../sourcefile/mbase_prngbuilder.f90.html'>MBase_PrngBuilder.f90</a></td><td><p><strong>PURPOSE OF THIS MODULE</strong>: <br>
+  This module provides access to random number generator classes and two groups of
+  general routines that perform the following tasks: <br>
+  - Construct a random-number generator class based on the specified algorithm. <br>
+  - Return a number of seeds required to construct the specified generator.</p></td></tr>
+<!--active-->			   <tr class=""><td><a href='../module/mclass_baserng.html'>MClass_BaseRNG</a></td><td><a href='../sourcefile/mclass_baserng.f90.html'>MClass_BaseRNG.f90</a></td><td><p><strong>PURPOSE OF THIS MODULE</strong>: <br>
+  This module contains the <em>BaseRNG</em> type and its related routines.
+  The <em>BaseRNG</em> type is an abstract type representing a pseudo random
+  number generator (PRNG).  It defines an application programming
+  interface (API) for uniformly-distributed random number generations.
+  Except for the <em>NextGaussian</em> and <em>NextExponential</em> methods, all other
+  so-called <em>Next</em> methods provided produce a sequence of random numbers
+  that follow a uniform distribution.  <br>
+  The <em>BaseRNG</em> type also provides a number of default implementations
+  of random number generations.  For better accuracy and performance,
+  these methods with a default implementation can be overridden.  All
+  other PRNG types should extend from this base type. <br>
+  By design, all pseudo random number generators should be initialized
+  before being used.  This means that the <em>Initialize</em> method must be
+  called before all other methods (with the exception of the <em>GetName</em>
+  and <em>GetSeedSize</em> methods) are used.  Otherwise, the generated output
+  sequence may not be a desirable one. <br>
+  The API and various implementations of this PRNG base type and many
+  of its subtypes are greatly influenced by those in the references
+  provided below. <br>
+  <br>
+<strong>REFERENCES</strong>: <br>
+  [1] <a href="https://commons.apache.org/proper/commons-rng/index.html">
+      Apache Commons RNG: Random Numbers Generators</a> <br>
+  [2] <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/random/package-summary.html">
+      Package: Java.Util.Random</a> <br>
+  [3] <a href="http://simul.iro.umontreal.ca/">Random Number Generators
+      by Pierre L'Ecuyer</a> <br>
+  [4] <a href="https://wp.csiro.au/alanmiller/random.html">Uniform Random Number Generation
+      by Alan J. Miller</a></p></td></tr>
+<!---->			   <tr class="active"><td><a href='../module/mclass_chacharng.html'>MClass_ChaChaRNG</a></td><td><a href='../sourcefile/mclass_chacharng.f90.html'>MClass_ChaChaRNG.f90</a></td><td><p><strong>PURPOSE OF THIS MODULE</strong>: <br>
+  This module contains the <em>ChaChaRNG</em> type and its related routines.
+  The <em>ChaChaRNG</em> type is a <em>Long</em> PRNG type that directly extends
+  the <em>LongRNG</em> type.  Therefore, it provides all remaining deferred
+  procedures required by a <em>Long</em> PRNG type.  <br>
+  In particular, the <em>ChaChaRNG</em> type provides an implementation of the
+  <em>NextLongImpl</em> deferred procedure based on the <em>ChaCha</em> algorithm.
+  The <em>ChaCha</em> algorithm is a member of the ChaCha family of stream ciphers
+  (a variant of the Salsa20 family of stream ciphers) designed by D.J.
+  Bernstein.  As a result, the <em>ChaCha</em> PRNG is a cryptographic-level PRNG
+  as the stream cypher on which it is based. <br>
+  It is important to note that the <em>ChaCha</em> PRNG requires an explicit
+  initialization by first calling the <em>Initialize</em> method before using
+  any other methods.  Otherwise, the generator may produce undesirable
+  random sequences.  <br>
+  <br>
+<strong>REFERENCES</strong>: <br>
+  [1] <a href="https://cr.yp.to/chacha.html">The ChaCha family of stream ciphers</a> <br>
+  [2] <a href="https://github.com/vnmakarov/mum-hash/blob/master/src/chacha-prng.h">
+      Pseudo Random Number Generator (PRNG) based on ChaCha stream cipher.</a></p></td></tr>
+<!--active-->			   <tr class=""><td><a href='../module/mclass_cmwc4096rng.html'>MClass_Cmwc4096RNG</a></td><td><a href='../sourcefile/mclass_cmwc4096rng.f90.html'>MClass_Cmwc4096RNG.f90</a></td><td><p><strong>PURPOSE OF THIS MODULE</strong>: <br>
+  This module contains the <em>Cmwc4096RNG</em> type and its related routines.
+  The <em>Cmwc4096RNG</em> type is an <em>Integer</em> PRNG type that directly extends
+  the <em>IntegerRNG</em> type.  Therefore, it provides all remaining deferred
+  procedures required by an <em>Integer</em> PRNG type.  <br>
+  In particular, the <em>Cmwc4096RNG</em> type provides an implementation of the
+  <em>NextIntegerImpl</em> deferred procedure based on the <em>Complimentary-Multiply-With-Carry</em>
+  (CMWC) algorithm by George Marsaglia.  Its memory footprint is 131104 bits
+  and its period is roughly 2<sup>131104</sup>.
+  It is important to note that the <em>CMWC</em> PRNG requires an explicit
+  initialization by first calling the <em>Initialize</em> method before using
+  any other methods.  Otherwise, the generator may produce undesirable
+  random sequences.  <br>
+  <br>
+<strong>REFERENCES</strong>: <br>
+  [1] <a href="https://en.wikipedia.org/wiki/Multiply-with-carry_pseudorandom_number_generator">
+      Multiply-with-carry pseudorandom number generator</a> <br>
+  [2] <a href="https://crypto.stackexchange.com/questions/10359/what-stops-the-multiply-with-carry-rng-from-being-a-cryptographically-secure-prn">
+      What stops the Multiply-With-Carry RNG from being a Cryptographically Secure PRNG?</a></p></td></tr>
+<!---->			   <tr class="active"><td><a href='../module/mclass_integerrng.html'>MClass_IntegerRNG</a></td><td><a href='../sourcefile/mclass_integerrng.f90.html'>MClass_IntegerRNG.f90</a></td><td><p><strong>PURPOSE OF THIS MODULE</strong>: <br>
+  This module contains the <em>IntegerRNG</em> type and its related routines.
+  The <em>IntegerRNG</em> type is an abstract PRNG type that directly extends
+  the <em>BaseRNG</em> type.   It defines additional methods for a so-called
+  <em>Integer</em> PRNG.  It also provides default implementations of some
+  deferred procedures required by a PRNG where other deferred procedures
+  must be implemented by its subtypes.  <br>
+  By design, the <em>IntegerRNG</em> type is provided as a base type for an
+  <em>Integer</em> PRNG whose main purpose is to produce a 32-bit integer random
+  number.   Therefore, all so-called <em>Integer</em> PRNGs are particularly
+  required to implement the <em>NextIntegerImpl</em> deferred procedure.</p></td></tr>
+<!--active-->			   <tr class=""><td><a href='../module/mclass_isaccrng.html'>MClass_IsaccRNG</a></td><td><a href='../sourcefile/mclass_isaacrng.f90.html'>MClass_IsaacRNG.f90</a></td><td><p><strong>PURPOSE OF THIS MODULE</strong>: <br>
+  This module contains the <em>IsaccRNG</em> type and its related routines.
+  The <em>IsaccRNG</em> type is an <em>Integer</em> PRNG type that directly extends
+  the <em>IntegerRNG</em> type.  Therefore, it provides all remaining deferred
+  procedures required by an <em>Integer</em> PRNG type.  <br>
+  In particular, the <em>IsaccRNG</em> type provides an implementation of the
+  <em>NextIntegerImpl</em> deferred procedure based on the ISAAC (Indirection,
+  Shift, Accumulate, Add, and Count) algorithm.  the <em>IsaccRNG</em> type is
+  a fast cryptographic pseudo-random number generator due to the fact
+  that the ISAAC algorithm  has been designed to be cryptographically
+  secure and is inspired by the stream cipher <em>RC4</em>. <br>
+  Cycles of generated random sequences are guaranteed to be at least
+  2<sup>40</sup> values long, and they are 2<sup>8295</sup> values long
+  on average.   The results are uniformly distributed, unbiased, and
+  unpredictable unless the seed is known. <br>
+  It is important to note that the <em>ISAAC</em> PRNG requires an explicit
+  initialization by first calling the <em>Initialize</em> method before using
+  any other methods.  Otherwise, the generator may produce undesirable
+  random sequences.  <br>
+  <br>
+<strong>REFERENCES</strong>: <br>
+  [1] <a href="http://burtleburtle.net/bob/rand/isaacafa.html">ISAAC: a fast
+      cryptographic pseudo-random number generator</a> <br>
+  [2] <a href="https://en.wikipedia.org/wiki/ISAAC_(cipher)">ISAAC (cipher)
+      - Wikipedia</a> <br>
+  [3] <a href="https://commons.apache.org/proper/commons-rng/commons-rng-core/apidocs/org/apache/commons/rng/core/source32/ISAACRandom.html">
+      Apache Commons RNG: Class ISAACRandom</a></p></td></tr>
+<!---->			   <tr class="active"><td><a href='../module/mclass_jsf32rng.html'>MClass_Jsf32RNG</a></td><td><a href='../sourcefile/mclass_jsf32rng.f90.html'>MClass_Jsf32RNG.f90</a></td><td><p><strong>PURPOSE OF THIS MODULE</strong>: <br>
+  This module contains the <em>Jsf32RNG</em> type and its related routines.
+  The <em>Jsf32RNG</em> type is an <em>Integer</em> PRNG type that directly extends
+  the <em>IntegerRNG</em> type.  Therefore, it provides all remaining deferred
+  procedures required by an <em>Integer</em> PRNG type.  <br>
+  In particular, the <em>Jsf32RNG</em> type provides an implementation of the
+  <em>NextIntegerImpl</em> deferred procedure based on Bob Jenkins's small fast
+  non-cryptographic (32-bit variant) PRNG.  It has a state size of 128-bits.
+  The shortest period is expected to be about 2<sup>94</sup> and it is expected
+  that about one seed will run into another seed within 2<sup>64</sup> values. <br>
+  It is important to note that the <em>Jsf32</em> PRNG requires an explicit
+  initialization by first calling the <em>Initialize</em> method before using
+  any other methods.  Otherwise, the generator may produce undesirable
+  random sequences.  <br>
+  <br>
+<strong>REFERENCES</strong>: <br>
+  [1] <a href="https://burtleburtle.net/bob/rand/smallprng.html">
+      A small non-cryptographic PRNG</a> <br>
+  [2] <a href="https://commons.apache.org/proper/commons-rng/commons-rng-core/apidocs/org/apache/commons/rng/core/source32/JenkinsSmallFast32.html">
+      Apache Commons RNG: Class JenkinsSmallFast32</a></p></td></tr>
+<!--active-->			   <tr class=""><td><a href='../module/mclass_jsf64rng.html'>MClass_Jsf64RNG</a></td><td><a href='../sourcefile/mclass_jsf64rng.f90.html'>MClass_Jsf64RNG.f90</a></td><td><p><strong>PURPOSE OF THIS MODULE</strong>: <br>
+  This module contains the <em>Jsf64RNG</em> type and its related routines.
+  The <em>Jsf64RNG</em> type is a <em>Long</em> PRNG type that directly extends
+  the <em>LongRNG</em> type.  Therefore, it provides all remaining deferred
+  procedures required by a <em>Long</em> PRNG type.  <br>
+  In particular, the <em>Jsf64RNG</em> type provides an implementation of the
+  <em>NextLongImpl</em> deferred procedure based on Bob Jenkins's small fast
+  non-cryptographic (64-bit variant) PRNG.  It has a state size of 256-bits. <br>
+  It is important to note that the <em>Jsf64</em> PRNG requires an explicit
+  initialization by first calling the <em>Initialize</em> method before using
+  any other methods.  Otherwise, the generator may produce undesirable
+  random sequences.  <br>
+  <br>
+<strong>REFERENCES</strong>: <br>
+  [1] <a href="https://burtleburtle.net/bob/rand/smallprng.html">
+      A small non-cryptographic PRNG</a> <br>
+  [2] <a href="https://commons.apache.org/proper/commons-rng/commons-rng-core/apidocs/org/apache/commons/rng/core/source64/JenkinsSmallFast64.html">
+      Apache Commons RNG: Class JenkinsSmallFast64</a></p></td></tr>
+<!---->			   <tr class="active"><td><a href='../module/mclass_kiss32rng.html'>MClass_Kiss32RNG</a></td><td><a href='../sourcefile/mclass_kiss32rng.f90.html'>MClass_Kiss32RNG.f90</a></td><td><p><strong>PURPOSE OF THIS MODULE</strong>: <br>
+  This module contains the <em>Kiss32RNG</em> type and its related routines.
+  The <em>Kiss32RNG</em> type is an <em>Integer</em> PRNG type that directly extends
+  the <em>IntegerRNG</em> type.  Therefore, it provides all remaining deferred
+  procedures required by an <em>Integer</em> PRNG type.  <br>
+  In particular, the <em>Kiss32RNG</em> type provides an implementation of the
+  <em>NextIntegerImpl</em> deferred procedure based on the 32-bit <em>KISS</em> (Keep
+  it Simple Stupid) algorithm by George Marsaglia. <br>
+  The 32-bit <em>KISS</em> algorithm consists of a combination of four sub-generators,
+  each with 32 bits of state, of three kinds: <br>
+  - one linear congruential generator modulo 2<sup>32</sup> <br>
+  - one general binary linear generator over the vector space GF(2)<sup>32</sup> <br>
+  - two multiply-with-carry generators modulo 2<sup>16</sup>, with different
+    parameters <br>
+  The four generators are updated independently, and their states are combined
+  to form a sequence of 32-bit output words with period of about 2<sup>123</sup>. <br>
+  It is important to note that the <em>KISS</em> PRNG requires an explicit
+  initialization by first calling the <em>Initialize</em> method before using
+  any other methods.  Otherwise, the generator may produce undesirable
+  random sequences.  <br>
+  <br>
+<strong>REFERENCES</strong>: <br>
+  [1] <a href="http://www.cse.yorku.ca/~oz/marsaglia-rng.html">
+      Random Number for C: End, at last?</a> <br>
+  [2] <a href="https://programmingpraxis.com/2010/10/05/george-marsaglias-random-number-generators/">
+      George Marsaglia's Random Number Generators</a> <br>
+  [3] <a href="https://commons.apache.org/proper/commons-rng/commons-rng-core/apidocs/org/apache/commons/rng/core/source32/KISSRandom.html">
+      Apache Commons RNG: Class KISSRandom</a></p></td></tr>
+<!--active-->			   <tr class=""><td><a href='../module/mclass_kiss64rng.html'>MClass_Kiss64RNG</a></td><td><a href='../sourcefile/mclass_kiss64rng.f90.html'>MClass_Kiss64RNG.f90</a></td><td><p><strong>PURPOSE OF THIS MODULE</strong>: <br>
+  This module contains the <em>Kiss64RNG</em> type and its related routines.
+  The <em>Kiss64RNG</em> type is an <em>Long</em> PRNG type that directly extends
+  the <em>LongRNG</em> type.  Therefore, it provides all remaining deferred
+  procedures required by an <em>Long</em> PRNG type.  <br>
+  In particular, the <em>Kiss64RNG</em> type provides an implementation of the
+  <em>NextLongImpl</em> deferred procedure based on the 64-bit <em>KISS</em> (Keep it
+  Simple Stupid) algorithm by George Marsaglia. <br>
+  The 64-bit <em>KISS</em> algorithm consists of a combination of four sub-generators,
+  each with 64 bits of state, of three kinds: <br>
+  - one linear congruential generator modulo 2<sup>64</sup> <br>
+  - one general binary linear generator over the vector space GF(2)<sup>64</sup> <br>
+  - two multiply-with-carry generators modulo 2<sup>32</sup>, with different
+    parameters <br>
+  The four generators are updated independently, and their states are combined
+  to form a sequence of 64-bit output words with period of about 2<sup>250</sup>. <br>
+  It is important to note that the <em>Kiss64</em> PRNG requires an explicit
+  initialization by first calling the <em>BaseInit</em> method before using
+  any other methods.  Otherwise, the generator may produce undesirable
+  random sequences.  <br>
+  <br>
+<strong>REFERENCES</strong>: <br>
+  [1] <a href="https://en.wikipedia.org/wiki/KISS_(algorithm)">
+      KISS (algorithm)</a> <br>
+  [2] <a href="http://www0.cs.ucl.ac.uk/staff/d.jones/GoodPracticeRNG.pdf">
+      David Jones.  Good Practice in (Pseudo) Random Number Generation for
+      Bioinformatics Applications.</a> <br>
+  [3] <a href="https://github.com/jenetics/prngine/blob/master/prngine/src/main/java/io/jenetics/prngine/KISS64Random.java">
+      PRNGine - Pseudo Random Number Engines for Monte Carlo simulations:
+      Class KISS64Random</a></p></td></tr>
+<!---->			   <tr class="active"><td><a href='../module/mclass_komirng.html'>MClass_KomiRNG</a></td><td><a href='../sourcefile/mclass_komirng.f90.html'>MClass_KomiRNG.f90</a></td><td><p><strong>PURPOSE OF THIS MODULE</strong>: <br>
+  This module contains the <em>KomiRNG</em> type and its related routines.
+  The <em>KomiRNG</em> type is a <em>Long</em> PRNG type that directly extends
+  the <em>LongRNG</em> type.  Therefore, it provides all remaining deferred
+  procedures required by a <em>Long</em> PRNG type.  <br>
+  In particular, the <em>KomiRNG</em> type provides an implementation of the
+  <em>NextLongImpl</em> deferred procedure based on the KomiRand algorithm by
+  Aleksey Vaneev.  It has a state size of 128-bits and a period of
+  2<sup>64</sup>. <br>
+  It is important to note that the <em>Komi</em> PRNG requires an explicit
+  initialization by first calling the <em>Initialize</em> method before using
+  any other methods.  Otherwise, the generator may produce undesirable
+  random sequences.  <br>
+  <br>
+<strong>REFERENCES</strong>: <br>
+  [1] <a href="https://github.com/avaneev/komihash">KOMIHASH - Very fast, high-quality
+      hash function, discrete-incremental and streamed hashing-capable (non-cryptographic,
+      in C) + PRNG.</a> <br></p></td></tr>
+<!--active-->			   <tr class=""><td><a href='../module/mclass_l128x1024rng.html'>MClass_L128X1024RNG</a></td><td><a href='../sourcefile/mclass_l128x1024rng.f90.html'>MClass_L128X1024RNG.f90</a></td><td><p><strong>PURPOSE OF THIS MODULE</strong>: <br>
+  This module contains the <em>L128X1024RNG</em> type and its related routines.
+  The <em>L128X1024RNG</em> type is a <em>Long</em> PRNG type that directly extends
+  the <em>LongRNG</em> type.  Therefore, it provides all remaining deferred
+  procedures required by a <em>Long</em> PRNG type. <br>
+  In particular, the <em>L128X1024RNG</em> type provides an implementation of the
+  <em>NextLongImpl</em> deferred procedure based on the <em>L128X1024</em> algorithm.  The
+  <em>L128X1024</em> algorithm is a specific member of the LXM family of algorithms
+  for pseudo-random number generators where <br>
+  -  L stands for Linear congruential generator (LCG); <br>
+  -  X stands for Xor-based generator (XBG); and <br>
+  -  M stands for Mix. <br>
+  The <em>L128X1024RNG</em> type employs a 128-bit LCG, a 1024-bit XBG and a mixing function
+  where its memory footprint is 1312 bits and its period is roughly 2<sup>1152</sup>. <br>
+  In addition to common operations of a PRNG, the <em>L128X1024RNG</em> type provides
+  the <em>Split</em> method to split a generator into two instances (the original and
+  a new instance) where the two generators can be used concurrently.  Presumably,
+  the new generator is statistically independent and uniform.  <br>
+  It is important to note that the <em>L128X1024</em> PRNG requires an explicit
+  initialization by first calling the <em>Initialize</em> method before using
+  any other methods.  Otherwise, the generator may produce undesirable
+  random sequences. <br>
+  <br>
+<strong>REFERENCES</strong>: <br>
+  [1] <a href="https://dl.acm.org/doi/abs/10.1145/3485525">
+      Steele and Vigna (2021).  LXM: better splittable pseudo-random number generators
+     (and almost as fast). Proceedings of the ACM on Programming Languages, Volume 5,
+      Article 148, pp 1-31.</a> <br>
+  [2] <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/random/package-summary.html">
+      Package: Java.Util.Random</a></p></td></tr>
+<!---->			   <tr class="active"><td><a href='../module/mclass_l128x128rng.html'>MClass_L128X128RNG</a></td><td><a href='../sourcefile/mclass_l128x128rng.f90.html'>MClass_L128X128RNG.f90</a></td><td><p><strong>PURPOSE OF THIS MODULE</strong>: <br>
+  This module contains the <em>L128X128RNG</em> type and its related routines.
+  The <em>L128X128RNG</em> type is a <em>Long</em> PRNG type that directly extends
+  the <em>LongRNG</em> type.  Therefore, it provides all remaining deferred
+  procedures required by a <em>Long</em> PRNG type. <br>
+  In particular, the <em>L128X128RNG</em> type provides an implementation of the
+  <em>NextLongImpl</em> deferred procedure based on the <em>L128X128</em> algorithm.  The
+  <em>L128X128</em> algorithm is a specific member of the LXM family of algorithms
+  for pseudo-random number generators where <br>
+  -  L stands for Linear congruential generator (LCG); <br>
+  -  X stands for Xor-based generator (XBG); and <br>
+  -  M stands for Mix. <br>
+  The <em>L128X128RNG</em> type employs a 128-bit LCG, a 128-bit XBG and a mixing function
+  where its memory footprint is 384 bits and its period is roughly 2<sup>256</sup>. <br>
+  In addition to common operations of a PRNG, the <em>L128X128RNG</em> type provides
+  the <em>Split</em> method to split a generator into two instances (the original and
+  a new instance) where the two generators can be used concurrently.  Presumably,
+  the new generator is statistically independent and uniform.  <br>
+  It is important to note that the <em>L128X128</em> PRNG requires an explicit
+  initialization by first calling the <em>Initialize</em> method before using
+  any other methods.  Otherwise, the generator may produce undesirable
+  random sequences. <br>
+  <br>
+<strong>REFERENCES</strong>: <br>
+  [1] <a href="https://dl.acm.org/doi/abs/10.1145/3485525">
+      Steele and Vigna (2021).  LXM: better splittable pseudo-random number generators
+     (and almost as fast). Proceedings of the ACM on Programming Languages, Volume 5,
+      Article 148, pp 1-31.</a> <br>
+  [2] <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/random/package-summary.html">
+      Package: Java.Util.Random</a></p></td></tr>
+<!--active-->			   <tr class=""><td><a href='../module/mclass_l128x256rng.html'>MClass_L128X256RNG</a></td><td><a href='../sourcefile/mclass_l128x256rng.f90.html'>MClass_L128X256RNG.f90</a></td><td><p><strong>PURPOSE OF THIS MODULE</strong>: <br>
+  This module contains the <em>L128X256RNG</em> type and its related routines.
+  The <em>L128X256RNG</em> type is a <em>Long</em> PRNG type that directly extends
+  the <em>LongRNG</em> type.  Therefore, it provides all remaining deferred
+  procedures required by a <em>Long</em> PRNG type. <br>
+  In particular, the <em>L128X256RNG</em> type provides an implementation of the
+  <em>NextLongImpl</em> deferred procedure based on the <em>L128X256</em> algorithm.  The
+  <em>L128X256</em> algorithm is a specific member of the LXM family of algorithms
+  for pseudo-random number generators where <br>
+  -  L stands for Linear congruential generator (LCG); <br>
+  -  X stands for Xor-based generator (XBG); and <br>
+  -  M stands for Mix. <br>
+  The <em>L128X256RNG</em> type employs a 128-bit LCG, a 256-bit XBG and a mixing function
+  where its memory footprint is 512 bits and its period is roughly 2<sup>384</sup>. <br>
+  In addition to common operations of a PRNG, the <em>L128X256RNG</em> type provides
+  the <em>Split</em> method to split a generator into two instances (the original and
+  a new instance) where the two generators can be used concurrently.  Presumably,
+  the new generator is statistically independent and uniform.  <br>
+  It is important to note that the <em>L128X256</em> PRNG requires an explicit
+  initialization by first calling the <em>Initialize</em> method before using
+  any other methods.  Otherwise, the generator may produce undesirable
+  random sequences. <br>
+  <br>
+<strong>REFERENCES</strong>: <br>
+  [1] <a href="https://dl.acm.org/doi/abs/10.1145/3485525">
+      Steele and Vigna (2021).  LXM: better splittable pseudo-random number generators
+     (and almost as fast). Proceedings of the ACM on Programming Languages, Volume 5,
+      Article 148, pp 1-31.</a> <br>
+  [2] <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/random/package-summary.html">
+      Package: Java.Util.Random</a></p></td></tr>
+<!---->			   <tr class="active"><td><a href='../module/mclass_l128xmrng.html'>MClass_L128XMRNG</a></td><td><a href='../sourcefile/mclass_l128xmrng.f90.html'>MClass_L128XMRNG.f90</a></td><td><p><strong>PURPOSE OF THIS MODULE</strong>: <br>
+  This module contains the <em>L128XMRNG</em> type and its related routines.
+  The <em>L128XMRNG</em> type is a <em>Long</em> PRNG type that directly extends
+  the <em>LongRNG</em> type.  Therefore, it provides all remaining deferred
+  procedures required by a <em>Long</em> PRNG type. <br>
+  In particular, the <em>L128XMRNG</em> type provides an implementation of the
+  <em>NextLongImpl</em> deferred procedure based on the <em>L128XM</em> algorithms.
+  The <em>L128XM</em> algorithms are specific members of the LXM family of algorithms
+  for pseudo-random number generators where <br>
+  -  L stands for Linear congruential generator (LCG); <br>
+  -  X stands for Xor-based generator (XBG); and <br>
+  -  M stands for Mix. <br>
+  The <em>L128XMRNG</em> type can represent three PRNG classes:  <br>
+  - the L128X128Mix RNG, <br>
+  - the L128X256Mix RNG, or <br>
+  - the L128X1024Mix RNG.  <br>
+  The <em>L128X128</em> RNG employs a 128-bit LCG, a 128-bit XBG and a mixing function
+  where its memory footprint is 384 bits and its period is roughly 2<sup>256</sup>. <br>
+  The <em>L128X256</em> RNG employ a 128-bit LCG, a 256-bit XBG and a mixing function
+  where its memory footprint is 512 bits and its period is roughly 2<sup>384</sup>. <br>
+  The <em>L128X1024</em> RNGs employ a 128-bit LCG, a 1024-bit XBG and a mixing function
+  where its memory footprint is 1312 bits and its period is roughly 2<sup>1152</sup>. <br>
+  By default, The <em>L128X128Mix</em> PRNG is employed.  However, other <em>L128XM</em> PRNG
+  variants can be utilized by specifying an algorithm flag (between 1 to 3)
+  when initializing the generator.  <br>
+  In addition to common operations of a PRNG, the <em>L128XMRNG</em> type provides
+  the <em>Split</em> method to split a generator into two instances (the original and
+  a new instance) where the two generators can be used concurrently.  Presumably,
+  the new generator is statistically independent and uniform. <br>
+  The <em>L128XMRNG</em> type also provides the <em>Jump</em> and <em>LongJump</em> methods where
+  a large (or very large) number of steps of the output sequence can be advanced
+  in a single operation.  Each method creates (and also returns) a copy of the
+  input PRNG and then advances the state of the specified PRNG.  The PRNG and its
+  copy produce non-overlapping output for the length of the jump intendedly for
+  use in parallel computations. <br>
+  It is important to note that the <em>L128XM</em> PRNG requires an explicit initialization
+  by first calling the <em>Initialize</em> method before using any other methods.  Otherwise,
+  the generator may produce undesirable random sequences.  Also, it should be noted
+  that the implementation of this PRNG type is based on references #3-5 whereas the
+  <em>L128X128RNG</em>, <em>L128X256RNG</em>, and <em>L128X1024RNG</em> types, which are based on the same
+  algorithms, are based their implementation on reference #2.  <br>
+  <br>
+<strong>REFERENCES</strong>: <br>
+  [1] <a href="https://dl.acm.org/doi/abs/10.1145/3485525">
+      Steele and Vigna (2021).  LXM: better splittable pseudo-random number generators
+     (and almost as fast). Proceedings of the ACM on Programming Languages, Volume 5,
+      Article 148, pp 1-31.</a> <br>
+  [2] <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/random/package-summary.html">
+      Package: Java.Util.Random</a> <br>
+  [3] <a href="https://commons.apache.org/proper/commons-rng/commons-rng-core/apidocs/org/apache/commons/rng/core/source64/L128X128Mix.html">
+      Apache Commons RNG: Class L128X128Mix</a> <br>
+  [4] <a href="https://commons.apache.org/proper/commons-rng/commons-rng-core/apidocs/org/apache/commons/rng/core/source64/L128X256Mix.html">
+      Apache Commons RNG: Class L128X256Mix</a> <br>
+  [5] <a href="https://commons.apache.org/proper/commons-rng/commons-rng-core/apidocs/org/apache/commons/rng/core/source64/L128X1024Mix.html">
+      Apache Commons RNG: L128X1024Mix</a></p></td></tr>
+<!--active-->			   <tr class=""><td><a href='../module/mclass_l32x64mrng.html'>MClass_L32X64MRNG</a></td><td><a href='../sourcefile/mclass_l32x64mrng.f90.html'>MClass_L32X64MRNG.f90</a></td><td><p><strong>PURPOSE OF THIS MODULE</strong>: <br>
+  This module contains the <em>L32X64MRNG</em> type and its related routines.
+  The <em>L32X64MRNG</em> type is an <em>Integer</em> PRNG type that directly extends
+  the <em>IntegerRNG</em> type.  Therefore, it provides all remaining deferred
+  procedures required by an <em>Integer</em> PRNG type. <br>
+  In particular, the <em>L32X64MRNG</em> type provides an implementation of the
+  <em>NextIntegerImpl</em> deferred procedure based on the <em>L32X64</em> algorithm.
+  The <em>L32X64</em> algorithm is a specific member of the LXM family of algorithms
+  for pseudo-random number generators where <br>
+  -  L stands for Linear congruential generator (LCG); <br>
+  -  X stands for Xor-based generator (XBG); and <br>
+  -  M stands for Mix. <br>
+  The <em>L32X64MRNG</em> type employs a 32-bit LCG, a 64-bit XBG and a mixing function
+  where its memory footprint is 128 bits and its period is roughly 2<sup>96</sup>. <br>
+  In addition to common operations of a PRNG, the <em>L32X64MRNG</em> type provides
+  the <em>Split</em> method to split a generator into two instances (the original and
+  a new instance) where the two generators can be used concurrently.  Presumably,
+  the new generator is statistically independent and uniform. <br>
+  The <em>L32X64MRNG</em> type also provides the <em>Jump</em> and <em>LongJump</em> methods where
+  a large (or very large) number of steps of the output sequence can be advanced
+  in a single operation.  Each method creates (and also returns) a copy of the
+  input PRNG and then advances the state of the specified PRNG.  The PRNG and its
+  copy produce non-overlapping output for the length of the jump intendedly for
+  use in parallel computations. <br>
+  It is important to note that the <em>L32X64</em> PRNG requires an explicit
+  initialization by first calling the <em>Initialize</em> method before using
+  any other methods.  Otherwise, the generator may produce undesirable
+  random sequences.  Also, it should be noted that the implementation of
+  this PRNG type is based on reference #3 where the <em>L32X64RNG</em> type,
+  which is based on the same algorithm, is based its implementation on
+  reference #2. <br>
+  <br>
+<strong>REFERENCES</strong>: <br>
+  [1] <a href="https://dl.acm.org/doi/abs/10.1145/3485525">
+      Steele and Vigna (2021).  LXM: better splittable pseudo-random number generators
+     (and almost as fast). Proceedings of the ACM on Programming Languages, Volume 5,
+      Article 148, pp 1-31.</a> <br>
+  [2] <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/random/package-summary.html">
+      Package: Java.Util.Random</a> <br>
+  [3] <a href="https://commons.apache.org/proper/commons-rng/commons-rng-core/apidocs/org/apache/commons/rng/core/source32/L32X64Mix.html">
+      Apache Commons RNG: Class L32X64Mix</a></p></td></tr>
+<!---->			   <tr class="active"><td><a href='../module/mclass_l32x64rng.html'>MClass_L32X64RNG</a></td><td><a href='../sourcefile/mclass_l32x64rng.f90.html'>MClass_L32X64RNG.f90</a></td><td><p><strong>PURPOSE OF THIS MODULE</strong>: <br>
+  This module contains the <em>L32X64RNG</em> type and its related routines.
+  The <em>L32X64RNG</em> type is an <em>Integer</em> PRNG type that directly extends
+  the <em>IntegerRNG</em> type.  Therefore, it provides all remaining deferred
+  procedures required by an <em>Integer</em> PRNG type. <br>
+  In particular, the <em>L32X64RNG</em> type provides an implementation of the
+  <em>NextIntegerImpl</em> deferred procedure based on the <em>L32X64</em> algorithm.
+  The <em>L32X64</em> algorithm is a specific member of the LXM family of algorithms
+  for pseudo-random number generators where <br>
+  -  L stands for Linear congruential generator (LCG); <br>
+  -  X stands for Xor-based generator (XBG); and <br>
+  -  M stands for Mix. <br>
+  The <em>L32X64RNG</em> type employs a 32-bit LCG, a 64-bit XBG and a mixing function
+  where its memory footprint is 128 bits and its period is roughly 2<sup>96</sup>. <br>
+  In addition to common operations of a PRNG, the <em>L32X64RNG</em> type provides
+  the <em>Split</em> method to split a generator into two instances (the original and
+  a new instance) where the two generators can be used concurrently.  Presumably,
+  the new generator is statistically independent and uniform.  <br>
+  It is important to note that the <em>L32X64</em> PRNG requires an explicit
+  initialization by first calling the <em>Initialize</em> method before using
+  any other methods.  Otherwise, the generator may produce undesirable
+  random sequences.  Also, it should be noted that the implementation of
+  this PRNG is based on reference #2 where the <em>LXM3264RNG</em> type, which is
+  based on the same algorithm, is based its implementation on reference #3. <br>
+  <br>
+<strong>REFERENCES</strong>: <br>
+  [1] <a href="https://dl.acm.org/doi/abs/10.1145/3485525">
+      Steele and Vigna (2021).  LXM: better splittable pseudo-random number generators
+     (and almost as fast). Proceedings of the ACM on Programming Languages, Volume 5,
+      Article 148, pp 1-31.</a> <br>
+  [2] <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/random/package-summary.html">
+      Package: Java.Util.Random</a> <br>
+  [3] <a href="https://commons.apache.org/proper/commons-rng/commons-rng-core/apidocs/org/apache/commons/rng/core/source32/L32X64Mix.html">
+      Apache Commons RNG: Class L32X64Mix</a></p></td></tr>
+<!--active-->			   <tr class=""><td><a href='../module/mclass_l64x1024rng.html'>MClass_L64X1024RNG</a></td><td><a href='../sourcefile/mclass_l64x1024rng.f90.html'>MClass_L64X1024RNG.f90</a></td><td><p><strong>PURPOSE OF THIS MODULE</strong>: <br>
+  This module contains the <em>L64X1024RNG</em> type and its related routines.
+  The <em>L64X1024RNG</em> type is a <em>Long</em> PRNG type that directly extends
+  the <em>LongRNG</em> type.  Therefore, it provides all remaining deferred
+  procedures required by a <em>Long</em> PRNG type. <br>
+  In particular, the <em>L64X1024RNG</em> type provides an implementation of the
+  <em>NextLongImpl</em> deferred procedure based on the <em>L64X1024</em> algorithm.  The
+  <em>L64X1024</em> algorithm is a specific member of the LXM family of algorithms
+  for pseudo-random number generators where <br>
+  -  L stands for Linear congruential generator (LCG); <br>
+  -  X stands for Xor-based generator (XBG); and <br>
+  -  M stands for Mix. <br>
+  The <em>L64X1024RNG</em> type employs a 64-bit LCG, a 1024-bit XBG and a mixing function
+  where its memory footprint is 1184 bits and its period is roughly 2<sup>1088</sup>. <br>
+  In addition to common operations of a PRNG, the <em>L64X1024RNG</em> type provides
+  the <em>Split</em> method to split a generator into two instances (the original and
+  a new instance) where the two generators can be used concurrently.  Presumably,
+  the new generator is statistically independent and uniform.  <br>
+  It is important to note that the <em>L64X1024</em> PRNG requires an explicit
+  initialization by first calling the <em>Initialize</em> method before using
+  any other methods.  Otherwise, the generator may produce undesirable
+  random sequences. <br>
+  <br>
+<strong>REFERENCES</strong>: <br>
+  [1] <a href="https://dl.acm.org/doi/abs/10.1145/3485525">
+      Steele and Vigna (2021).  LXM: better splittable pseudo-random number generators
+     (and almost as fast). Proceedings of the ACM on Programming Languages, Volume 5,
+      Article 148, pp 1-31.</a> <br>
+  [2] <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/random/package-summary.html">
+      Package: Java.Util.Random</a></p></td></tr>
+<!---->			   <tr class="active"><td><a href='../module/mclass_l64x128rng.html'>MClass_L64X128RNG</a></td><td><a href='../sourcefile/mclass_l64x128rng.f90.html'>MClass_L64X128RNG.f90</a></td><td><p><strong>PURPOSE OF THIS MODULE</strong>: <br>
+  This module contains the <em>L64X128RNG</em> type and its related routines.
+  The <em>L64X128RNG</em> type is a <em>Long</em> PRNG type that directly extends
+  the <em>LongRNG</em> type.  Therefore, it provides all remaining deferred
+  procedures required by a <em>Long</em> PRNG type. <br>
+  In particular, the <em>L64X128RNG</em> type provides an implementation of the
+  <em>NextLongImpl</em> deferred procedure based on the <em>L64X128</em> algorithms.
+  The <em>L64X128</em> algorithms are specific members of the LXM family of
+  algorithms for pseudo-random number generators where <br>
+  -  L stands for Linear congruential generator (LCG); <br>
+  -  X stands for Xor-based generator (XBG); and <br>
+  -  M stands for Mix. <br>
+  The <em>L64X128RNG</em> type can represent two PRNG classes: <br>
+  - the L64X128Mix RNG, or <br>
+  - the L64X128StarStar RNG. <br>
+  Both PRNG classes employ a 64-bit LCG, a 128-bit XBG and a mixing function
+  where its memory footprint is 256 bits and its period is roughly 2<sup>192</sup>. <br>
+  By default, the <em>L64X128Mix</em> RNG is employed.  However, the <em>L64X128StarStar</em>
+  PRNG can be utilized by specifying an algorithm flag to true when initializing
+  the generator. <br>
+  In addition to common operations of a PRNG, the <em>L64X128RNG</em> type provides
+  the <em>Split</em> method to split a generator into two instances (the original and
+  a new instance) where the two generators can be used concurrently.  Presumably,
+  the new generator is statistically independent and uniform.  <br>
+  It is important to note that the <em>L64X128</em> PRNG requires an explicit
+  initialization by first calling the <em>Initialize</em> method before using
+  any other methods.  Otherwise, the generator may produce undesirable
+  random sequences. <br>
+  <br>
+<strong>REFERENCES</strong>: <br>
+  [1] <a href="https://dl.acm.org/doi/abs/10.1145/3485525">
+      Steele and Vigna (2021).  LXM: better splittable pseudo-random number generators
+     (and almost as fast). Proceedings of the ACM on Programming Languages, Volume 5,
+      Article 148, pp 1-31.</a> <br>
+  [2] <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/random/package-summary.html">
+      Package: Java.Util.Random</a></p></td></tr>
+<!--active-->			   <tr class=""><td><a href='../module/mclass_l64x256rng.html'>MClass_L64X256RNG</a></td><td><a href='../sourcefile/mclass_l64x256rng.f90.html'>MClass_L64X256RNG.f90</a></td><td><p><strong>PURPOSE OF THIS MODULE</strong>: <br>
+  This module contains the <em>L64X256RNG</em> type and its related routines.
+  The <em>L64X256RNG</em> type is a <em>Long</em> PRNG type that directly extends
+  the <em>LongRNG</em> type.  Therefore, it provides all remaining deferred
+  procedures required by a <em>Long</em> PRNG type. <br>
+  In particular, the <em>L64X256RNG</em> type provides an implementation of the
+  <em>NextLongImpl</em> deferred procedure based on the <em>L64X256</em> algorithm.  The
+  <em>L64X256</em> algorithm is a specific member of the LXM family of algorithms
+  for pseudo-random number generators where <br>
+  -  L stands for Linear congruential generator (LCG); <br>
+  -  X stands for Xor-based generator (XBG); and <br>
+  -  M stands for Mix. <br>
+  The <em>L64X256RNG</em> type employs a 64-bit LCG, a 256-bit XBG and a mixing function
+  where its memory footprint is 384 bits and its period is roughly 2<sup>320</sup>. <br>
+  In addition to common operations of a PRNG, the <em>L64X256RNG</em> type provides
+  the <em>Split</em> method to split a generator into two instances (the original and
+  a new instance) where the two generators can be used concurrently.  Presumably,
+  the new generator is statistically independent and uniform.  <br>
+  It is important to note that the <em>L64X256</em> PRNG requires an explicit
+  initialization by first calling the <em>Initialize</em> method before using
+  any other methods.  Otherwise, the generator may produce undesirable
+  random sequences. <br>
+  <br>
+<strong>REFERENCES</strong>: <br>
+  [1] <a href="https://dl.acm.org/doi/abs/10.1145/3485525">
+      Steele and Vigna (2021).  LXM: better splittable pseudo-random number generators
+     (and almost as fast). Proceedings of the ACM on Programming Languages, Volume 5,
+      Article 148, pp 1-31.</a> <br>
+  [2] <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/random/package-summary.html">
+      Package: Java.Util.Random</a></p></td></tr>
+<!---->			   <tr class="active"><td><a href='../module/mclass_l64xmrng.html'>MClass_L64XMRNG</a></td><td><a href='../sourcefile/mclass_l64xmrng.f90.html'>MClass_L64XMRNG.f90</a></td><td><p><strong>PURPOSE OF THIS MODULE</strong>: <br>
+  This module contains the <em>L64XMRNG</em> type and its related routines.
+  The <em>L64XMRNG</em> type is a <em>Long</em> PRNG type that directly extends
+  the <em>LongRNG</em> type.  Therefore, it provides all remaining deferred
+  procedures required by a <em>Long</em> PRNG type. <br>
+  In particular, the <em>L64XMRNG</em> type provides an implementation of the
+  <em>NextLongImpl</em> deferred procedure based on the <em>L64XM</em> algorithms.
+  The <em>L64XM</em> algorithms are specific members of the LXM family of algorithms
+  for pseudo-random number generators where <br>
+  -  L stands for Linear congruential generator (LCG); <br>
+  -  X stands for Xor-based generator (XBG); and <br>
+  -  M stands for Mix. <br>
+  The <em>L64XMRNG</em> type can represent four PRNG classes:  <br>
+  - the L64X128Mix RNG, <br>
+  - the L64X128StarStar RNG, <br>
+  - the L64X256Mix RNG, or <br>
+  - the L64X1024Mix RNG.  <br>
+  The <em>L64X128</em> RNGs employ a 64-bit LCG, a 128-bit XBG and a mixing function
+  where its memory footprint is 256 bits and its period is roughly 2<sup>192</sup>. <br>
+  The <em>L64X256</em> RNG employ a 64-bit LCG, a 256-bit XBG and a mixing function
+  where its memory footprint is 384 bits and its period is roughly 2<sup>320</sup>. <br>
+  The <em>L64X1024</em> RNGs employ a 64-bit LCG, a 1024-bit XBG and a mixing function
+  where its memory footprint is 1184 bits and its period is roughly 2<sup>1088</sup>. <br>
+  By default, The <em>L64X128Mix</em> PRNG is employed.  However, other <em>L64XM</em> PRNG
+  variants can be utilized by specifying an algorithm flag (between 1 to 4)
+  when initializing the generator.  <br>
+  In addition to common operations of a PRNG, the <em>L64XMRNG</em> type provides
+  the <em>Split</em> method to split a generator into two instances (the original and
+  a new instance) where the two generators can be used concurrently.  Presumably,
+  the new generator is statistically independent and uniform. <br>
+  The <em>L64XMRNG</em> type also provides the <em>Jump</em> and <em>LongJump</em> methods where
+  a large (or very large) number of steps of the output sequence can be advanced
+  in a single operation.  Each method creates (and also returns) a copy of the
+  input PRNG and then advances the state of the specified PRNG.  The PRNG and its
+  copy produce non-overlapping output for the length of the jump intendedly for
+  use in parallel computations. <br>
+  It is important to note that the <em>L64XM</em> PRNG requires an explicit initialization
+  by first calling the <em>Initialize</em> method before using any other methods.  Otherwise,
+  the generator may produce undesirable random sequences.  Also, it should be noted
+  that the implementation of this PRNG type is based on references #3-6 whereas the
+  <em>L64X128RNG</em>, <em>L64X256RNG</em>, and <em>L64X1024RNG</em> types, which are based on the same
+  algorithms, are based their implementation on reference #2.  <br>
+  <br>
+<strong>REFERENCES</strong>: <br>
+  [1] <a href="https://dl.acm.org/doi/abs/10.1145/3485525">
+      Steele and Vigna (2021).  LXM: better splittable pseudo-random number generators
+     (and almost as fast). Proceedings of the ACM on Programming Languages, Volume 5,
+      Article 148, pp 1-31.</a> <br>
+  [2] <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/random/package-summary.html">
+      Package: Java.Util.Random</a> <br>
+  [3] <a href="https://commons.apache.org/proper/commons-rng/commons-rng-core/apidocs/org/apache/commons/rng/core/source64/L64X128Mix.html">
+      Apache Commons RNG: Class L64X128Mix</a> <br>
+  [4] <a href="https://commons.apache.org/proper/commons-rng/commons-rng-core/apidocs/org/apache/commons/rng/core/source64/L64X128StarStar.html">
+      Apache Commons RNG: Class L64X128StarStar</a> <br>
+  [5] <a href="https://commons.apache.org/proper/commons-rng/commons-rng-core/apidocs/org/apache/commons/rng/core/source64/L64X256Mix.html">
+      Apache Commons RNG: Class L64X256Mix</a> <br>
+  [6] <a href="https://commons.apache.org/proper/commons-rng/commons-rng-core/apidocs/org/apache/commons/rng/core/source64/L64X1024Mix.html">
+      Apache Commons RNG: L64X1024Mix</a></p></td></tr>
+<!--active-->			   <tr class=""><td><a href='../module/mclass_lfsr113rng.html'>MClass_Lfsr113RNG</a></td><td><a href='../sourcefile/mclass_lfsr113rng.f90.html'>MClass_Lfsr113RNG.f90</a></td><td><p><strong>PURPOSE OF THIS MODULE</strong>: <br>
+  This module contains the <em>Lfsr113RNG</em> type and its related routines.
+  The <em>Lfsr113RNG</em> type is an <em>Integer</em> PRNG type that directly extends
+  the <em>IntegerRNG</em> type.  Therefore, it provides all remaining deferred
+  procedures required by an <em>Integer</em> PRNG type.  <br>
+  In particular, the <em>Lfsr113RNG</em> type provides an implementation of the
+  <em>NextIntegerImpl</em> deferred procedure based on the 32-bit <em>LFSR113</em>
+  (composite linear feedback shift register) algorithm by Pierre L'Ecuyer. <br>
+  The <em>LFSR113</em> PRNG has four 32-bit states combined by a bitwise xor.
+  Its period length is approximatively 2<sup>113</sup>. <br>
+  It is important to note that the <em>LFSR113</em> PRNG requires an explicit
+  initialization by first calling the <em>Initialize</em> method before using
+  any other methods.  Otherwise, the generator may produce undesirable
+  random sequences.  Also, it should be noted that the implementation of
+  this PRNG is based on references #2-3. <br>
+  <br>
+<strong>REFERENCES</strong>: <br>
+  [1] <a href="https://www.ams.org/journals/mcom/1999-68-225/S0025-5718-99-01039-X/">
+      L'Ecuyer, P. 1999. Tables of maximally equidistributed combined LFSR
+      generators. Mathematics of Computation, 68(225): 261-269. </a> <br>
+  [2] <a href="https://wp.csiro.au/alanmiller/random/lfsr113.f90">
+      Lin_Feedback_Shift_Reg: a Fortran 90 module implementation of the LFSR113
+      generator by Alan Miller. </a> <br>
+  [3] <a href="http://umontreal-simul.github.io/ssj/docs/master/classumontreal_1_1ssj_1_1rng_1_1LFSR113.html">
+      Package umontreal.ssj.rng: LFSR113 Class Reference. </a></p></td></tr>
+<!---->			   <tr class="active"><td><a href='../module/mclass_lfsr258rng.html'>MClass_Lfsr258RNG</a></td><td><a href='../sourcefile/mclass_lfsr258rng.f90.html'>MClass_Lfsr258RNG.f90</a></td><td><p><strong>PURPOSE OF THIS MODULE</strong>: <br>
+  This module contains the <em>Lfsr258RNG</em> type and its related routines.
+  The <em>Lfsr258RNG</em> type is a <em>Long</em> PRNG type that directly extends
+  the <em>LongRNG</em> type.  Therefore, it provides all remaining deferred
+  procedures required by a <em>Long</em> PRNG type.  <br>
+  In particular, the <em>Lfsr258RNG</em> type provides an implementation of the
+  <em>NextLongImpl</em> deferred procedure based on the 64-bit <em>LFSR</em> ( composite
+  linear feedback shift register) algorithm by Pierre L'Ecuyer. <br>
+  The <em>LFSR258</em> PRNG has five 64-bit states combined by a bitwise xor.
+  Its period length is approximatively 2<sup>258</sup>. <br>
+  It is important to note that the <em>LFSR258</em> PRNG requires an explicit
+  initialization by first calling the <em>Initialize</em> method before using
+  any other methods.  Otherwise, the generator may produce undesirable
+  random sequences.  Also, it should be noted that the implementation of
+  this PRNG is based on reference #2-3. <br>
+  <br>
+<strong>REFERENCES</strong>: <br>
+  [1] <a href="https://www.ams.org/journals/mcom/1999-68-225/S0025-5718-99-01039-X/">
+      L'Ecuyer, P. 1999. Tables of maximally equidistributed combined LFSR
+      generators. Mathematics of Computation, 68(225): 261-269. </a> <br>
+  [2] <a href="https://wp.csiro.au/alanmiller/random/lfsr258.f90">
+      Lin_Feedback_Shift_Reg: a Fortran 90 module implementation of the LFSR258
+      generator by Alan Miller. </a> <br>
+  [3] <a href="http://umontreal-simul.github.io/ssj/docs/master/classumontreal_1_1ssj_1_1rng_1_1LFSR258.html">
+      Package umontreal.ssj.rng: LFSR258 Class Reference. </a></p></td></tr>
+<!--active-->			   <tr class=""><td><a href='../module/mclass_longrng.html'>MClass_LongRNG</a></td><td><a href='../sourcefile/mclass_longrng.f90.html'>MClass_LongRNG.f90</a></td><td><p><strong>PURPOSE OF THIS MODULE</strong>: <br>
+  This module contains the <em>LongRNG</em> type and its related routines.
+  The <em>LongRNG</em> type is an abstract PRNG type that directly extends
+  the <em>BaseRNG</em> type.   It defines additional methods for a so-called
+  <em>Long</em> PRNG.  It also provides default implementations of some deferred
+  procedures required by a PRNG where other deferred procedures must be
+  implemented by its subtypes.  <br>
+  By design, the <em>LongRNG</em> type is provided as a base type for a <em>Long</em>
+  PRNG whose main purpose is to produce a 64-bit integer random number.
+  Therefore, all so-called <em>Long</em> PRNGs are particularly required to
+  implement the <em>NextLongImpl</em> deferred procedure.</p></td></tr>
+<!---->			   <tr class="active"><td><a href='../module/mclass_mrg32k3arng.html'>MClass_Mrg32k3aRNG</a></td><td><a href='../sourcefile/mclass_mrg32k3arng.f90.html'>MClass_Mrg32k3aRNG.f90</a></td><td><p><strong>PURPOSE OF THIS MODULE</strong>: <br>
+  This module contains the <em>Mrg32k3aRNG</em> type and its related routines.
+  The <em>Mrg32k3aRNG</em> type is an <em>Integer</em> PRNG type that directly extends
+  the <em>IntegerRNG</em> type.  Therefore, it provides all remaining deferred
+  procedures required by an <em>Integer</em> PRNG type.  <br>
+  In particular, the <em>Mrg32k3aRNG</em> type provides an implementation of the
+  <em>NextIntegerImpl</em> deferred procedure based on the 32-bit <em>MRG</em> (combined
+  multiple recursive generator) algorithm by Pierre L'Ecuyer. <br>
+  The <em>Mrg32k3a</em> PRNG has six 32-bit states stored in 64-bit integers.
+  Its period length is approximatively 2<sup>191</sup>. <br>
+  It is important to note that the <em>Mrg32k3a</em> PRNG requires an explicit
+  initialization by first calling the <em>Initialize</em> method before using
+  any other methods.  Otherwise, the generator may produce undesirable
+  random sequences.  Also, it should be noted that the implementation of
+  this PRNG is based on references #2-3. <br>
+  <br>
+<strong>REFERENCES</strong>: <br>
+  [1] <a href="https://www.ams.org/journals/mcom/1999-68-225/S0025-5718-99-01039-X/">
+      L'Ecuyer, P. 1999. Good Parameters and Implementations for Combined Multiple
+      Recursive Random Number Generators. Operations Research 47(1):159-164. </a> <br>
+  [2] <a href="http://umontreal-simul.github.io/ssj/docs/master/classumontreal_1_1ssj_1_1rng_1_1MRG32k3aL.html">
+      Package umontreal.ssj.rng: MRG32k3aL Class Reference. </a> <br>
+  [3] <a href="http://simul.iro.umontreal.ca/rng/MRG32k3a.c">
+      32-bits Random number generator U(0,1): MRG32k3a - a C source code. </a></p></td></tr>
+<!--active-->			   <tr class=""><td><a href='../module/mclass_mrg63k3arng.html'>MClass_Mrg63k3aRNG</a></td><td><a href='../sourcefile/mclass_mrg63k3arng.f90.html'>MClass_Mrg63k3aRNG.f90</a></td><td><p><strong>PURPOSE OF THIS MODULE</strong>: <br>
+  This module contains the <em>Mrg63k3aRNG</em> type and its related routines.
+  The <em>Mrg63k3aRNG</em> type is a <em>Long</em> PRNG type that directly extends
+  the <em>LongRNG</em> type.  Therefore, it provides all remaining deferred
+  procedures required by n <em>Long</em> PRNG type.  <br>
+  In particular, the <em>Mrg63k3aRNG</em> type provides an implementation of the
+  <em>NextLongImpl</em> deferred procedure based on the 63-bit <em>MRG</em> (combined
+  multiple recursive generator) algorithm by Pierre L'Ecuyer. <br>
+  The <em>Mrg63k3a</em> PRNG has six 63-bit states stored in 64-bit integers.
+  Its period length is approximatively 2<sup>377</sup>. <br>
+  It is important to note that the <em>Mrg63k3a</em> PRNG requires an explicit
+  initialization by first calling the <em>Initialize</em> method before using
+  any other methods.  Otherwise, the generator may produce undesirable
+  random sequences.  Also, it should be noted that the implementation of
+  this PRNG is based on references #2. <br>
+  <br>
+<strong>REFERENCES</strong>: <br>
+  [1] <a href="https://www.ams.org/journals/mcom/1999-68-225/S0025-5718-99-01039-X/">
+      L'Ecuyer, P. 1999. Good Parameters and Implementations for Combined Multiple
+      Recursive Random Number Generators. Operations Research 47(1):159-164. </a> <br>
+  [2] <a href="http://simul.iro.umontreal.ca/rng/MRG63k3a.c">
+      63-bits Random number generator U(0,1): MRG63k3a - a C source code. </a></p></td></tr>
+<!---->			   <tr class="active"><td><a href='../module/mclass_mswsrng.html'>MClass_MswsRNG</a></td><td><a href='../sourcefile/mclass_mswsrng.f90.html'>MClass_MswsRNG.f90</a></td><td><p><strong>PURPOSE OF THIS MODULE</strong>: <br>
+  This module contains the <em>MswsRNG</em> type and its related routines.
+  The <em>MswsRNG</em> type is a <em>Long</em> PRNG type that directly extends
+  the <em>LongRNG</em> type.  Therefore, it provides all remaining deferred
+  procedures required by a <em>Long</em> PRNG type.  <br>
+  In particular, the <em>MswsRNG</em> type provides an implementation of the
+  <em>NextLongImpl</em> deferred procedure based on the middle-square method
+  by John von Neumann where a Weyl sequence is used to run the middle
+  square.  It has a state size of 192-bits and the period of at least
+  2<sup>64</sup>. <br>
+  It is important to note that the <em>Msws</em> PRNG requires an explicit
+  initialization by first calling the <em>Initialize</em> method before using
+  any other methods.  Otherwise, the generator may produce undesirable
+  random sequences.  <br>
+  <br>
+<strong>REFERENCES</strong>: <br>
+  [1] <a href="https://en.wikipedia.org/wiki/Middle-square_method">
+      Middle-square method</a> <br>
+  [2] <a href="https://arxiv.org/abs/1704.00358v3">B. Widynski. 2017.
+      Middle Square Weyl Sequence RNG</a> <br>
+  [3] <a href="https://commons.apache.org/proper/commons-rng/commons-rng-core/apidocs/org/apache/commons/rng/core/source32/MiddleSquareWeylSequence.html">
+      Apache Commons RNG: Class MiddleSquareWeylSequence</a></p></td></tr>
+<!--active-->			   <tr class=""><td><a href='../module/mclass_mt32rng.html'>MClass_Mt32RNG</a></td><td><a href='../sourcefile/mclass_mt32rng.f90.html'>MClass_Mt32RNG.f90</a></td><td><p><strong>PURPOSE OF THIS MODULE</strong>: <br>
+  This module contains the <em>Mt32RNG</em> type and its related routines.
+  The <em>Mt32RNG</em> type is an <em>Integer</em> PRNG type that directly extends
+  the <em>IntegerRNG</em> type.  Therefore, it provides all remaining deferred
+  procedures required by an <em>Integer</em> PRNG type.  <br>
+  In particular, the <em>Mt32RNG</em> type provides an implementation of the
+  <em>NextIntegerImpl</em> deferred procedure based on the 32-bit Mersenne Twister
+  algorithm by Makoto Matsumoto and Takuji Nishimura.  The <em>Mt32</em> PRNG
+  features an extremely long period (2<sup>19937</sup> - 1) and
+  623-dimensional equidistribution up to 32 bits accuracy. <br>
+  It is important to note that the <em>Mt32</em> PRNG requires an explicit
+  initialization by first calling the <em>Initialize</em> method before using
+  any other methods.  Otherwise, the generator may produce undesirable
+  random sequences.  <br>
+  <br>
+<strong>REFERENCES</strong>: <br>
+  [1] <a href="http://www.math.sci.hiroshima-u.ac.jp/~m-mat/MT/ARTICLES/mt.pdf">
+      M. Matsumoto and T. Nishimura.  1998.  Mersenne Twister: A 623-Dimensionally
+      Equidistributed Uniform Pseudo-Random Number Generator.  ACM Transactions on
+      Modeling and Computer Simulation, Vol. 8, No. 1, January 1998, pp 3-30.</a> <br>
+  [2] <a href="http://www.math.sci.hiroshima-u.ac.jp/m-mat/MT/MT2002/emt19937ar.html">
+      Mersenne Twister with improved initialization.</a> <br>
+  [3] <a href="https://commons.apache.org/proper/commons-rng/commons-rng-core/apidocs/org/apache/commons/rng/core/source32/MersenneTwister.html">
+      Apache Commons RNG: Class MersenneTwister</a></p></td></tr>
+<!---->			   <tr class="active"><td><a href='../module/mclass_mt64rng.html'>MClass_Mt64RNG</a></td><td><a href='../sourcefile/mclass_mt64rng.f90.html'>MClass_Mt64RNG.f90</a></td><td><p><strong>PURPOSE OF THIS MODULE</strong>: <br>
+  This module contains the <em>Mt64RNG</em> type and its related routines.
+  The <em>Mt64RNG</em> type is a <em>Long</em> PRNG type that directly extends
+  the <em>LongRNG</em> type.  Therefore, it provides all remaining deferred
+  procedures required by a <em>Long</em> PRNG type.  <br>
+  In particular, the <em>Mt64RNG</em> type provides an implementation of the
+  <em>NextLongImpl</em> deferred procedure based on the 64-bit Mersenne Twister
+  algorithm by Makoto Matsumoto and Takuji Nishimura.  The <em>Mt64</em> PRNG
+  features an extremely long period (2<sup>19937</sup> - 1) and
+  311-dimensional equidistribution up to 64 bits accuracy. <br>
+  It is important to note that the <em>Mt64</em> PRNG requires an explicit
+  initialization by first calling the <em>Initialize</em> method before using
+  any other methods.  Otherwise, the generator may produce undesirable
+  random sequences.  <br>
+  <br>
+<strong>REFERENCES</strong>: <br>
+  [1] <a href="https://dl.acm.org/doi/10.1145/369534.369540">
+      T. Nishimura.  2000.  Tables of 64-bit Mersenne twisters.  ACM Transactions on
+      Modeling and Computer Simulation, Vol. 10, No. 4, October 2000, pp 348-357.</a> <br>
+  [2] <a href="http://www.math.sci.hiroshima-u.ac.jp/~m-mat/MT/ARTICLES/mt.pdf">
+      M. Matsumoto and T. Nishimura.  1998.  Mersenne Twister: A 623-Dimensionally
+      Equidistributed Uniform Pseudo-Random Number Generator.  ACM Transactions on
+      Modeling and Computer Simulation, Vol. 8, No. 1, January 1998, pp 3-30.</a> <br>
+  [3] <a href="http://www.math.sci.hiroshima-u.ac.jp/m-mat/MT/emt64.html">
+      Mersenne Twister 64bit version.</a> <br>
+  [4] <a href="https://commons.apache.org/proper/commons-rng/commons-rng-core/apidocs/org/apache/commons/rng/core/source64/MersenneTwister64.html">
+      Apache Commons RNG: Class MersenneTwister64</a></p></td></tr>
+<!--active-->			   <tr class=""><td><a href='../module/mclass_mwc256rng.html'>MClass_Mwc256RNG</a></td><td><a href='../sourcefile/mclass_mwc256rng.f90.html'>MClass_Mwc256RNG.f90</a></td><td><p><strong>PURPOSE OF THIS MODULE</strong>: <br>
+  This module contains the <em>Mwc256RNG</em> type and its related routines.
+  The <em>Mwc256RNG</em> type is an <em>Integer</em> PRNG type that directly extends
+  the <em>IntegerRNG</em> type.  Therefore, it provides all remaining deferred
+  procedures required by an <em>Integer</em> PRNG type.  <br>
+  In particular, the <em>Mwc256RNG</em> type provides an implementation of the
+  <em>NextIntegerImpl</em> deferred procedure based on the <em>Multiply-With-Carry</em>
+  (MWC) algorithm by George Marsaglia.  Its memory footprint is 8224 bits
+  and its period is roughly 2<sup>8222</sup>.
+  It is important to note that the <em>MWC</em> PRNG requires an explicit
+  initialization by first calling the <em>Initialize</em> method before using
+  any other methods.  Otherwise, the generator may produce undesirable
+  random sequences.  <br>
+  <br>
+<strong>REFERENCES</strong>: <br>
+  [1] <a href="https://en.wikipedia.org/wiki/Multiply-with-carry_pseudorandom_number_generator">
+      Multiply-with-carry pseudorandom number generator</a> <br>
+  [2] <a href="https://crypto.stackexchange.com/questions/10359/what-stops-the-multiply-with-carry-rng-from-being-a-cryptographically-secure-prn">
+      What stops the Multiply-With-Carry RNG from being a Cryptographically Secure PRNG?</a> <br>
+  [3] <a href="https://commons.apache.org/proper/commons-rng/commons-rng-core/apidocs/org/apache/commons/rng/core/source32/MultiplyWithCarry256.html">
+      Apache Commons RNG: Class MultiplyWithCarry256</a></p></td></tr>
+<!---->			   <tr class="active"><td><a href='../module/mclass_pcglcg32rng.html'>MClass_PcgLcg32RNG</a></td><td><a href='../sourcefile/mclass_pcglcg32rng.f90.html'>MClass_PcgLcg32RNG.f90</a></td><td><p><strong>PURPOSE OF THIS MODULE</strong>: <br>
+  This module contains the <em>PcgLcg32RNG</em> type and its related routines.
+  The <em>PcgLcg32RNG</em> type is an <em>Integer</em> PRNG type that directly extends
+  the <em>IntegerRNG</em> type.  Therefore, it provides all remaining deferred
+  procedures required by an <em>Integer</em> PRNG type.  <br>
+  In particular, the <em>PcgLcg32RNG</em> type provides an implementation of the
+  <em>NextIntegerImpl</em> deferred procedure based on algorithms from the Permuted
+  Congruential Generator (PCG) family that use an internal 64-bit Linear
+  Congruential Generator (LCG) and output 32-bits per cycle. <br>
+  The <em>PcgLcg32RNG</em> type can represent two PRNG classes: <br>
+  - a PCG that is composed of a 64-bit LCG combined with the XSH-RR (xorshift;
+    random rotate) output transformation, or <br>
+  - a PCG that is composed of a 64-bit LCG combined with the XSH-RS (xorshift;
+    random shift) output transformation. <br>
+  By default, the random rotate (RR) transformation is employed.  However, the
+  random shift (RS) transformation can be utilized by specifying an algorithm
+  flag to true when initializing the generator.  The <em>PcgLcg32RNG</em> type has
+  state size of 128 bits and a period of 2<sup>64</sup>. <br>
+  It is important to note that the <em>PcgLcg32</em> PRNG requires an explicit
+  initialization by first calling the <em>Initialize</em> method before using
+  any other methods.  Otherwise, the generator may produce undesirable
+  random sequences.  <br>
+  <br>
+<strong>REFERENCES</strong>: <br>
+  [1] <a href="https://www.pcg-random.org/">
+      PCG, A Family of Better Random Number Generators.</a> <br>
+  [2] <a href="https://commons.apache.org/proper/commons-rng/commons-rng-core/apidocs/org/apache/commons/rng/core/source32/PcgXshRr32.html">
+      Apache Commons RNG: Class PcgXshRr32</a> <br>
+  [3] <a href="https://commons.apache.org/proper/commons-rng/commons-rng-core/apidocs/org/apache/commons/rng/core/source32/PcgXshRs32.html">
+      Apache Commons RNG: Class PcgXshRs32</a></p></td></tr>
+<!--active-->			   <tr class=""><td><a href='../module/mclass_pcgmcg32rng.html'>MClass_PcgMcg32RNG</a></td><td><a href='../sourcefile/mclass_pcgmcg32rng.f90.html'>MClass_PcgMcg32RNG.f90</a></td><td><p><strong>PURPOSE OF THIS MODULE</strong>: <br>
+  This module contains the <em>PcgMcg32RNG</em> type and its related routines.
+  The <em>PcgMcg32RNG</em> type is an <em>Integer</em> PRNG type that directly extends
+  the <em>IntegerRNG</em> type.  Therefore, it provides all remaining deferred
+  procedures required by an <em>Integer</em> PRNG type.  <br>
+  In particular, the <em>PcgMcg32RNG</em> type provides an implementation of the
+  <em>NextIntegerImpl</em> deferred procedure based on algorithms from the Permuted
+  Congruential Generator (PCG) family that use an internal 64-bit Multiplicative
+  Congruential Generator (MCG) and output 32-bits per cycle. <br>
+  The <em>PcgMcg32RNG</em> type can represent two PRNG classes: <br>
+  - a PCG that is composed of a 64-bit MCG combined with the XSH-RR (xorshift;
+    random rotate) output transformation, or <br>
+  - a PCG that is composed of a 64-bit MCG combined with the XSH-RS (xorshift;
+    random shift) output transformation. <br>
+  By default, the random rotate (RR) transformation is employed.  However, the
+  random shift (RS) transformation can be utilized by specifying an algorithm
+  flag to true when initializing the generator.  The <em>PcgMcg32RNG</em> type has
+  state size of 64 bits and a period of 2<sup>62</sup>. <br>
+  It is important to note that the <em>PcgMcg32</em> PRNG requires an explicit
+  initialization by first calling the <em>Initialize</em> method before using
+  any other methods.  Otherwise, the generator may produce undesirable
+  random sequences.  <br>
+  <br>
+<strong>REFERENCES</strong>: <br>
+  [1] <a href="https://www.pcg-random.org/">
+      PCG, A Family of Better Random Number Generators.</a> <br>
+  [2] <a href="https://commons.apache.org/proper/commons-rng/commons-rng-core/apidocs/org/apache/commons/rng/core/source32/PcgMcgXshRr32.html">
+      Apache Commons RNG: Class PcgMcgXshRr32</a> <br>
+  [3] <a href="https://commons.apache.org/proper/commons-rng/commons-rng-core/apidocs/org/apache/commons/rng/core/source32/PcgMcgXshRs32.html">
+      Apache Commons RNG: Class PcgMcgXshRs32</a></p></td></tr>
+<!---->			   <tr class="active"><td><a href='../module/mclass_pcgrxsmxs64rng.html'>MClass_PcgRxsMXs64RNG</a></td><td><a href='../sourcefile/mclass_pcgrxsmxs64rng.f90.html'>MClass_PcgRxsMXs64RNG.f90</a></td><td><p><strong>PURPOSE OF THIS MODULE</strong>: <br>
+  This module contains the <em>PcgRxsMXs64RNG</em> type and its related routines.
+  The <em>PcgRxsMXs64RNG</em> type is a <em>Long</em> PRNG type that directly extends
+  the <em>LongRNG</em> type.  Therefore, it provides all remaining deferred
+  procedures required by a <em>Long</em> PRNG type.  <br>
+  In particular, the <em>PcgRxsMXs64RNG</em> type provides an implementation of the
+  <em>NextIntegerImpl</em> deferred procedure based on an algorithm from the Permuted
+  Congruential Generator (PCG) family that that use an internal 64-bit Linear
+  Congruential Generator (LCG) combined with the RXS-M-XS (random xorshift;
+  multiply; xorshift) output transformation to create 64-bit output. <br>
+  The <em>PcgRxsMXs64RNG</em> type has state size of 128 bits and a period of
+  2<sup>64</sup>. <br>
+  It is important to note that the <em>PcgRxsMXs64</em> PRNG requires an explicit
+  initialization by first calling the <em>Initialize</em> method before using
+  any other methods.  Otherwise, the generator may produce undesirable
+  random sequences.  <br>
+  <br>
+<strong>REFERENCES</strong>: <br>
+  [1] <a href="https://www.pcg-random.org/">
+      PCG, A Family of Better Random Number Generators.</a> <br>
+  [2] <a href="https://commons.apache.org/proper/commons-rng/commons-rng-core/apidocs/org/apache/commons/rng/core/source64/PcgRxsMXs64.html">
+      Apache Commons RNG: Class PcgRxsMXs64</a></p></td></tr>
+<!--active-->			   <tr class=""><td><a href='../module/mclass_ranluxpprng.html'>MClass_RanLuxPpRNG</a></td><td><a href='../sourcefile/mclass_ranluxpprng.f90.html'>MClass_RanLuxPpRNG.f90</a></td><td><p><strong>PURPOSE OF THIS MODULE</strong>: <br>
+  This module contains the <em>RanLuxPpRNG</em> type and its related routines.
+  The <em>RanLuxPpRNG</em> type is a <em>Long</em> PRNG type that directly extends
+  the <em>LongRNG</em> type.  Therefore, it provides all remaining deferred
+  procedures required by a <em>Long</em> PRNG type.  <br>
+  In particular, the <em>RanLuxPpRNG</em> type provides an implementation of the
+  <em>NextLongImpl</em> deferred procedure based on the <em>RANLUX++</em> algorithm by
+  Alexei Sibidanov. <br>
+  The <em>RANLUX++</em> algorithm is equivalent to the <em>RANLUX</em> algorithm but
+  employs an equivalent Linear Congruential generator (LCG) in place of
+  the Subtract-With-Borrow (SWB) generator.  Unlike the <em>RANLUX</em> algorithm,
+  the <em>RANLUX++</em> algorithm destroys correlations of generated numbers by fast
+  skipping of numbers instead of throwing away some of generated number.
+  Therefore, it is faster and can perform the decimation at a higher level
+  than the highest standard level of the <em>RANLUX</em> algorithm.  <br>
+  It is important to note that the <em>RanLux++</em> PRNG requires an explicit
+  initialization by first calling the <em>Initialize</em> method before using
+  any other methods.  Otherwise, the generator may produce undesirable
+  random sequences.  <br>
+  <br>
+<strong>REFERENCES</strong>: <br>
+  [1] <a href="https://arxiv.org/abs/1705.03123">
+      A. Sibidanov.  2017.  A revision of the subtract-with-borrow random
+      number generators.  arXiv:1705.03123 [physics.comp-ph]. </a> <br>
+  [2] <a href="https://arxiv.org/abs/1903.01247">
+      F. James and L. Moneta.  2019.  Review of High-Quality Random Number
+      Generators.  arXiv:1903.01247 [physics.comp-ph]. </a> <br>
+  [3] <a href="https://github.com/sibidanov/ranluxpp">
+      RANLUX++: The original implementation of Ranlux++ RNG. </a> <br>
+  [4] <a href="https://github.com/jirka-h/ranluxpp-portable">
+      RANLUX++: The portable version of Ranlux++ RNG. </a></p></td></tr>
+<!---->			   <tr class="active"><td><a href='../module/mclass_ranluxrng.html'>MClass_RanLuxRNG</a></td><td><a href='../sourcefile/mclass_ranluxrng.f90.html'>MClass_RanLuxRNG.f90</a></td><td><p><strong>PURPOSE OF THIS MODULE</strong>: <br>
+  This module contains the <em>RanLuxRNG</em> type and its related routines.
+  The <em>RanLuxRNG</em> type is an <em>Integer</em> PRNG type that directly extends
+  the <em>IntegerRNG</em> type.  Therefore, it provides all remaining deferred
+  procedures required by an <em>Integer</em> PRNG type.  <br>
+  In particular, the <em>RanLuxRNG</em> type provides an implementation of the
+  <em>NextIntegerImpl</em> deferred procedure based on the <em>RANLUX</em> algorithm
+  by Martin Luscher. <br>
+  Similar to the <em>RCARRY</em> algorithm, the <em>RANLUX</em> algorithm employs a
+  subtract-with-borrow (SWB) algorithm with a period on the order of
+  10<sup>171</sup>.  However, it throws away some of the numbers generated
+  in order to eliminate correlations.  Therefore, the <em>RANLUX</em> algorithm
+  trades execution speed for quality; by choosing a larger luxury setting
+  one gets better random numbers slower. <br>
+  The standard luxury levels provided are: <br>
+  - Level 0  (p=24): equivalent to the original RCARRY of Marsaglia
+    and Zaman, very long period, but fails many tests. <br>
+  - Level 1  (p=48): considerable improvement in quality over level 0,
+    now passes the gap test, but still fails spectral test. <br>
+  - Level 2  (p=97): passes all known tests, but theoretically still
+    defective. <br>
+  - Level 3  (p=223): DEFAULT VALUE.  Any theoretically possible
+    correlations have very small chance of being observed. <br>
+  - Level 4  (p=389): highest possible luxury, all 24 bits chaotic. <br>
+  The luxury level can be specified when initializing the generator. <br>
+  It is important to note that the <em>RanLux</em> PRNG requires an explicit
+  initialization by first calling the <em>Initialize</em> method before using
+  any other methods.  Otherwise, the generator may produce undesirable
+  random sequences.  <br>
+  <br>
+<strong>REFERENCES</strong>: <br>
+  [1] <a href="https://www.sciencedirect.com/science/article/abs/pii/001046559490233X">
+      F. James. 1994.  RANLUX: A Fortran implementation of the high-quality
+      pseudorandom number generator of Luscher.  Computer Physics Communications,
+      79(1), pp. 111-114. </a> <br>
+  [2] <a href="https://www.sciencedirect.com/science/article/abs/pii/0010465594902321">
+      M. Luscher. 1994.  A portable high-quality random number generator for
+      lattice field theory simulations.  Computer Physics Communications, 79(1),
+      pp. 100-110. </a> <br>
+  [3] <a href="https://projecteuclid.org/journals/annals-of-applied-probability/volume-1/issue-3/A-New-Class-of-Random-Number-Generators/10.1214/aoap/1177005878.full">
+       G. Marsaglia and A. Zaman. 1991. A New Class of Random Number Generators.
+       The Annals of Applied Probability, 1(3), pp. 462-480. </a> <br>
+  [4] <a href="https://wp.csiro.au/alanmiller/random/luxury.f90">
+       Luxury: a Fortran 90 module implementation of the RANLUX generator by Alan Miller. </a></p></td></tr>
+<!--active-->			   <tr class=""><td><a href='../module/mclass_sfc32rng.html'>MClass_Sfc32RNG</a></td><td><a href='../sourcefile/mclass_sfc32rng.f90.html'>MClass_Sfc32RNG.f90</a></td><td><p><strong>PURPOSE OF THIS MODULE</strong>: <br>
+  This module contains the <em>Sfc32RNG</em> type and its related routines.
+  The <em>Sfc32RNG</em> type is an <em>Integer</em> PRNG type that directly extends
+  the <em>IntegerRNG</em> type.  Therefore, it provides all remaining deferred
+  procedures required by an <em>Integer</em> PRNG type.  <br>
+  In particular, the <em>Sfc32RNG</em> type provides an implementation of the
+  <em>NextIntegerImpl</em> deferred procedure based on the Small, Fast, Counting
+  (SFC) 32-bit generator by Chris Doty-Humphrey.  It has a state size of
+  128-bits. The period is a minimum of 2<sup>32</sup> and an average of
+  approximately 2<sup>127</sup>. <br>
+  It is important to note that the <em>Sfc32</em> PRNG requires an explicit
+  initialization by first calling the <em>Initialize</em> method before using
+  any other methods.  Otherwise, the generator may produce undesirable
+  random sequences.  <br>
+  <br>
+<strong>REFERENCES</strong>: <br>
+  [1] <a href="https://pracrand.sourceforge.net/">PractRand Test Suite</a> <br>
+  [2] <a href="https://commons.apache.org/proper/commons-rng/commons-rng-core/apidocs/org/apache/commons/rng/core/source32/DotyHumphreySmallFastCounting32.html">
+      Apache Commons RNG: Class DotyHumphreySmallFastCounting32</a></p></td></tr>
+<!---->			   <tr class="active"><td><a href='../module/mclass_sfc64rng.html'>MClass_Sfc64RNG</a></td><td><a href='../sourcefile/mclass_sfc64rng.f90.html'>MClass_Sfc64RNG.f90</a></td><td><p><strong>PURPOSE OF THIS MODULE</strong>: <br>
+  This module contains the <em>Sfc64RNG</em> type and its related routines.
+  The <em>Sfc64RNG</em> type is a <em>Long</em> PRNG type that directly extends
+  the <em>LongRNG</em> type.  Therefore, it provides all remaining deferred
+  procedures required by a <em>Long</em> PRNG type.  <br>
+  In particular, the <em>Sfc64RNG</em> type provides an implementation of the
+  <em>NextLongImpl</em> deferred procedure based on the Small, Fast, Counting
+  (SFC) 64-bit generator by Chris Doty-Humphrey.  It has a state size of
+  256-bits. The period is a minimum of 2<sup>64</sup> and an average of
+  approximately 2<sup>255</sup>. <br>
+  It is important to note that the <em>Sfc64</em> PRNG requires an explicit
+  initialization by first calling the <em>Initialize</em> method before using
+  any other methods.  Otherwise, the generator may produce undesirable
+  random sequences.  <br>
+  <br>
+<strong>REFERENCES</strong>: <br>
+  [1] <a href="https://pracrand.sourceforge.net/">PractRand Test Suite</a> <br>
+  [2] <a href="https://commons.apache.org/proper/commons-rng/commons-rng-core/apidocs/org/apache/commons/rng/core/source64/DotyHumphreySmallFastCounting64.html">
+      Apache Commons RNG: Class DotyHumphreySmallFastCounting64</a></p></td></tr>
+<!--active-->			   <tr class=""><td><a href='../module/mclass_sip24rng.html'>MClass_Sip24RNG</a></td><td><a href='../sourcefile/mclass_sip24rng.f90.html'>MClass_Sip24RNG.f90</a></td><td><p><strong>PURPOSE OF THIS MODULE</strong>: <br>
+  This module contains the <em>Sip24RNG</em> type and its related routines.
+  The <em>Sip24RNG</em> type is a <em>Long</em> PRNG type that directly extends
+  the <em>LongRNG</em> type.  Therefore, it provides all remaining deferred
+  procedures required by a <em>Long</em> PRNG type.  <br>
+  In particular, the <em>Sip24RNG</em> type provides an implementation of the
+  <em>NextLongImpl</em> deferred procedure based on the <em>SipHash24</em> algorithm.
+  The <em>SipHash24</em> algorithm is a member of the <em>SipHash</em> family, which
+  is an add-rotate-xor (ARX) based family of pseudorandom functions by
+  by J.P. Aumasson and D.J. Bernstein. <br>
+  It is important to note that the <em>Sip24</em> PRNG requires an explicit
+  initialization by first calling the <em>Initialize</em> method before using
+  any other methods.  Otherwise, the generator may produce undesirable
+  random sequences.  <br>
+  <br>
+<strong>REFERENCES</strong>: <br>
+  [1] <a href="https://en.wikipedia.org/wiki/SipHash">SipHash</a> <br>
+  [2] <a href="https://github.com/veorq/SipHash">SipHash: High-speed
+      secure pseudorandom function for short messages.</a> <br>
+  [3] <a href="https://github.com/vnmakarov/mum-hash/blob/master/src/sip24-prng.h">
+      Pseudo Random Number Generator (PRNG) based on SipHash24.</a></p></td></tr>
+<!---->			   <tr class="active"><td><a href='../module/mclass_splitmixrng.html'>MClass_SplitMixRNG</a></td><td><a href='../sourcefile/mclass_splitmixrng.f90.html'>MClass_SplitMixRNG.f90</a></td><td><p><strong>PURPOSE OF THIS MODULE</strong>: <br>
+  This module contains the <em>SplitMixRNG</em> type and its related routines.
+  The <em>SplitMixRNG</em> type is a <em>Long</em> PRNG type that directly extends
+  the <em>LongRNG</em> type.  Therefore, it provides all remaining deferred
+  procedures required by a <em>Long</em> PRNG type.  <br>
+  In particular, the <em>SplitMixRNG</em> type provides an implementation of the
+  <em>NextLongImpl</em> deferred procedure based on the <em>SplitMix</em> algorithm for
+  which is an algorithm for a splittable PRNG.  It is a fast RNG, with
+  64 bits of state, that can be used to initialize the state of other PRNGs. <br>
+  It is important to note that the <em>SplitMix</em> PRNG requires an explicit
+  initialization by first calling the <em>Initialize</em> method before using
+  any other methods.  Otherwise, the generator may produce undesirable
+  random sequences.  <br>
+  <br>
+<strong>REFERENCES</strong>: <br>
+  [1] <a href="https://dl.acm.org/doi/10.1145/2714064.2660195">
+      Guy L. Steele, Jr., Doug Lea, and Christine H. Flood. 2014. Fast splittable
+      pseudorandom number generators. ACM SIGPLAN Notices, Vol. 49, No. 10, pp 453-472.</a> <br>
+  [2] <a href="https://commons.apache.org/proper/commons-rng/commons-rng-core/apidocs/org/apache/commons/rng/core/source64/SplitMix64.html">
+      Apache Commons RNG: Class SplitMix64</a></p></td></tr>
+<!--active-->			   <tr class=""><td><a href='../module/mclass_superkiss32rng.html'>MClass_SuperKiss32RNG</a></td><td><a href='../sourcefile/mclass_superkiss32rng.f90.html'>MClass_SuperKiss32RNG.f90</a></td><td><p><strong>PURPOSE OF THIS MODULE</strong>: <br>
+  This module contains the <em>SuperKiss32RNG</em> type and its related routines.
+  The <em>SuperKiss32RNG</em> type is an <em>Integer</em> PRNG type that directly extends
+  the <em>IntegerRNG</em> type.  Therefore, it provides all remaining deferred
+  procedures required by an <em>Integer</em> PRNG type.  <br>
+  In particular, the <em>SuperKiss32RNG</em> type provides an implementation of the
+  <em>NextIntegerImpl</em> deferred procedure based on the 32-bit <em>SuperKISS</em> algorithm
+  by George Marsaglia. <br>
+  The 32-bit <em>SuperKiss</em> algorithm consists of a combination of three sub-generators: <br>
+  - complementary-multiply-with-carry (CMWC) generator <br>
+  - linear congruential generator, and <br>
+  - xorshift generator. <br>
+  The three generators are updated independently, and their states are combined
+  to form a sequence of 32-bit output words. <br>
+  The <em>SuperKiss32RNG</em> type has a memory footprint of 1320608 bits and a period of
+  (5)(2<sup>1320481</sup>)(2<sup>32</sup>-1). <br>
+  It is important to note that the <em>SuperKiss32</em> PRNG requires an explicit
+  initialization by first calling the <em>BaseInit</em> method before using
+  any other methods.  Otherwise, the generator may produce undesirable
+  random sequences.  <br>
+  <br>
+<strong>REFERENCES</strong>: <br>
+  [1] <a href="https://en.wikipedia.org/wiki/KISS_(algorithm)">
+      KISS (algorithm)</a> <br>
+  [2] <a href="https://groups.google.com/g/sci.math/c/QiTrbq0XeyM/m/_qSRAdMaeK8J">
+      SuperKISS for 32- and 64-bit RNGs in both C and Fortran</a> <br>
+  [3] <a href="http://forums.silverfrost.com/viewtopic.php?p=20716&sid=ef071ed8302541d789d1e08c0fbda580">
+      Help for a 64-bit RNG</a></p></td></tr>
+<!---->			   <tr class="active"><td><a href='../module/mclass_superkiss64rng.html'>MClass_SuperKiss64RNG</a></td><td><a href='../sourcefile/mclass_superkiss64rng.f90.html'>MClass_SuperKiss64RNG.f90</a></td><td><p><strong>PURPOSE OF THIS MODULE</strong>: <br>
+  This module contains the <em>SuperKiss64RNG</em> type and its related routines.
+  The <em>SuperKiss64RNG</em> type is a <em>Long</em> PRNG type that directly extends
+  the <em>LongRNG</em> type.  Therefore, it provides all remaining deferred
+  procedures required by a <em>Long</em> PRNG type.  <br>
+  In particular, the <em>SuperKiss64RNG</em> type provides an implementation of the
+  <em>NextLongImpl</em> deferred procedure based on the 64-bit <em>SuperKISS</em> algorithm
+  by George Marsaglia. <br>
+  The 64-bit <em>SuperKiss</em> algorithm consists of a combination of three sub-generators: <br>
+  - complementary-multiply-with-carry (CMWC) generator <br>
+  - linear congruential generator, and <br>
+  - xorshift generator. <br>
+  The three generators are updated independently, and their states are combined
+  to form a sequence of 64-bit output words. <br>
+  The <em>SuperKiss64RNG</em> type has a memory footprint of 1320672 bits and a period of
+  (5)(2<sup>1320480</sup>)(2<sup>64</sup>-1). <br>
+  It is important to note that the <em>SuperKiss64</em> PRNG requires an explicit
+  initialization by first calling the <em>BaseInit</em> method before using
+  any other methods.  Otherwise, the generator may produce undesirable
+  random sequences.  <br>
+  <br>
+<strong>REFERENCES</strong>: <br>
+  [1] <a href="https://en.wikipedia.org/wiki/KISS_(algorithm)">
+      KISS (algorithm)</a> <br>
+  [2] <a href="https://groups.google.com/g/sci.math/c/QiTrbq0XeyM/m/_qSRAdMaeK8J">
+      SuperKISS for 32- and 64-bit RNGs in both C and Fortran</a> <br>
+  [3] <a href="http://forums.silverfrost.com/viewtopic.php?p=20716&sid=ef071ed8302541d789d1e08c0fbda580">
+      Help for a 64-bit RNG</a></p></td></tr>
+<!--active-->			   <tr class=""><td><a href='../module/mclass_taus88rng.html'>MClass_Taus88RNG</a></td><td><a href='../sourcefile/mclass_taus88rng.f90.html'>MClass_Taus88RNG.f90</a></td><td><p><strong>PURPOSE OF THIS MODULE</strong>: <br>
+  This module contains the <em>Taus88RNG</em> type and its related routines.
+  The <em>Taus88RNG</em> type is an <em>Integer</em> PRNG type that directly extends
+  the <em>IntegerRNG</em> type.  Therefore, it provides all remaining deferred
+  procedures required by an <em>Integer</em> PRNG type.  <br>
+  In particular, the <em>Taus88RNG</em> type provides an implementation of the
+  <em>NextIntegerImpl</em> deferred procedure based on Tausworthe random number
+  generators by Pierre L'Ecuyer. <br>
+  The <em>TAUS88</em> PRNG has three 32-bit states combined by a bitwise xor.
+  Its period length is approximatively 2<sup>88</sup>. <br>
+  It is important to note that the <em>TAUS88</em> PRNG requires an explicit
+  initialization by first calling the <em>Initialize</em> method before using
+  any other methods.  Otherwise, the generator may produce undesirable
+  random sequences.  Also, it should be noted that the implementation of
+  this PRNG is based on reference #2.  <br>
+  <br>
+<strong>REFERENCES</strong>: <br>
+  [1] <a href="https://www.ams.org/journals/mcom/1996-65-213/S0025-5718-96-00696-5/">
+      L'Ecuyer, P. 1996. Maximally equidistributed combined Tausworthe
+      generators. Mathematics of Computation, 65(213): 203-213. </a> <br>
+  [2] <a href="https://wp.csiro.au/alanmiller/random/taus88.f90">
+      Ecuyer_random: a Fortran 90 module implementation of the TAUS88
+      generator by Alan Miller. </a></p></td></tr>
+<!---->			   <tr class="active"><td><a href='../module/mclass_well32rng.html'>MClass_Well32RNG</a></td><td><a href='../sourcefile/mclass_well32rng.f90.html'>MClass_Well32RNG.f90</a></td><td><p><strong>PURPOSE OF THIS MODULE</strong>: <br>
+  This module contains the <em>Well32RNG</em> type and its related routines.
+  The <em>Well32RNG</em> type is an <em>Integer</em> PRNG type that directly extends
+  the <em>IntegerRNG</em> type.  Therefore, it provides all remaining deferred
+  procedures required by an <em>Integer</em> PRNG type.  <br>
+  In particular, the <em>Well32RNG</em> type provides an implementation of the
+  <em>NextIntegerImpl</em> deferred procedure based on the Well Equidistributed
+  Long-period Linear (WELL) algorithms by Francois Panneton, Pierre L'Ecuyer,
+  and Makoto Matsumoto. <br>
+  The <em>Well32RNG</em> type can represent six PRNG classes: <br>
+  - a WELL512a PRNG, <br>
+  - a WELL1024a PRNG, <br>
+  - a WELL19937a PRNG, <br>
+  - a WELL19937c PRNG, <br>
+  - a WELL49937a PRNG, or <br>
+  - a WELL49937b PRNG <br>
+  where the numbers in the PRNG names give their state size in bits and the
+  letter suffixes denote variants of the same size. <br>
+  By default, The <em>WELL49937b</em> PRNG is employed.  However, other Well32 PRNG
+  variants can be utilized by specifying an algorithm flag (between 1 to 6)
+  when initializing the generator.  <br>
+  It is important to note that the <em>Well32</em> PRNGs require an explicit
+  initialization by first calling the <em>Initialize</em> method before using
+  any other methods.  Otherwise, the generator may produce undesirable
+  random sequences.  However, as exceptions, one of the <em>GetSeedSize</em>
+  methods can be called  before the <em>Initialize</em> method to inquire the
+  size of seeds required by a specific PRNG.  <br>
+  <br>
+<strong>REFERENCES</strong>: <br>
+  [1] <a href="https://dl.acm.org/doi/10.1145/1132973.1132974">
+      F. Panneton, P. L'Ecuyer, and M. Matsumoto.  2006.  Improved Long-Period
+      Generators Based on Linear Recurrences Modulo 2.  ACM Transactions on
+      Mathematical Software, 32(1): 1-16.</a> <br>
+  [2] <a href="https://en.wikipedia.org/wiki/Well_equidistributed_long-period_linear">
+      Well equidistributed long-period linear PRNG</a> <br>
+  [3] <a href="https://commons.apache.org/proper/commons-rng/commons-rng-core/apidocs/org/apache/commons/rng/core/source32/AbstractWell.html">
+      Apache Commons RNG: Class AbstractWell</a> <br>
+  [4] <a href="https://commons.apache.org/proper/commons-rng/commons-rng-core/apidocs/org/apache/commons/rng/core/source32/Well512a.html">
+      Apache Commons RNG: Class Well512a</a> <br>
+  [5] <a href="https://commons.apache.org/proper/commons-rng/commons-rng-core/apidocs/org/apache/commons/rng/core/source32/Well1024a.html">
+      Apache Commons RNG: Class Well1024a</a> <br>
+  [6] <a href="https://commons.apache.org/proper/commons-rng/commons-rng-core/apidocs/org/apache/commons/rng/core/source32/Well19937a.html">
+      Apache Commons RNG: Class Well19937a</a> <br>
+  [7] <a href="https://commons.apache.org/proper/commons-rng/commons-rng-core/apidocs/org/apache/commons/rng/core/source32/Well19937c.html">
+      Apache Commons RNG: Class Well19937c</a> <br>
+  [8] <a href="https://commons.apache.org/proper/commons-rng/commons-rng-core/apidocs/org/apache/commons/rng/core/source32/Well44497a.html">
+      Apache Commons RNG: Class Well44497a</a> <br>
+  [9] <a href="https://commons.apache.org/proper/commons-rng/commons-rng-core/apidocs/org/apache/commons/rng/core/source32/Well44497b.html">
+      Apache Commons RNG: Class Well44497b</a></p></td></tr>
+<!--active-->			   <tr class=""><td><a href='../module/mclass_wyrng.html'>MClass_WyRNG</a></td><td><a href='../sourcefile/mclass_wyrng.f90.html'>MClass_WyRNG.f90</a></td><td><p><strong>PURPOSE OF THIS MODULE</strong>: <br>
+  This module contains the <em>WyRNG</em> type and its related routines.
+  The <em>WyRNG</em> type is a <em>Long</em> PRNG type that directly extends
+  the <em>LongRNG</em> type.  Therefore, it provides all remaining deferred
+  procedures required by a <em>Long</em> PRNG type.  <br>
+  In particular, the <em>WyRNG</em> type provides an implementation of the
+  <em>NextLongImpl</em> deferred procedure based on a combination of WyRand
+  and WyHash64 algorithms by Wang Yi.  It has a state size of 128-bits. <br>
+  It is important to note that the <em>Wy</em> PRNG requires an explicit
+  initialization by first calling the <em>Initialize</em> method before using
+  any other methods.  Otherwise, the generator may produce undesirable
+  random sequences.  <br>
+  <br>
+<strong>REFERENCES</strong>: <br>
+  [1] <a href="https://github.com/wangyi-fudan/wyhash">WYHASH and WYRAND - The FASTEST
+      QUALITY hash function, random number generators (PRNG) and hash map.</a> <br></p></td></tr>
+<!---->			   <tr class="active"><td><a href='../module/mclass_xoroshiro1024rng.html'>MClass_XoRoShiRo1024RNG</a></td><td><a href='../sourcefile/mclass_xoroshiro1024rng.f90.html'>MClass_XoRoShiRo1024RNG.f90</a></td><td><p><strong>PURPOSE OF THIS MODULE</strong>: <br>
+  This module contains the <em>XoRoShiRo1024RNG</em> type and its related routines.
+  The <em>XoRoShiRo1024RNG</em> type is a <em>Long</em> PRNG type that directly extends
+  the <em>LongRNG</em> type.  Therefore, it provides all remaining deferred
+  procedures required by a <em>Long</em> PRNG type.  <br>
+  In particular, the <em>XoRoShiRo1024RNG</em> type provides an implementation of the
+  <em>NextLongImpl</em> deferred procedure based on algorithms from the Xor-Shift-Rotate
+  family of generators by Sebastiano Vigna. <br>
+  The <em>XoRoShiRo1024RNG</em> type can represent three PRNG classes: <br>
+  - the XoRoShiRo1024StarStar RNG, which is a large-state all-purpose 64-bit generator, <br>
+  - the XoRoShiRo1024Star  RNG, which is a large-state 64-bit generator suitable for
+    real number generation, or <br>
+  - the XoRoShiRo1024PlusPlus RNG, which is a large-state all-purpose 64-bit generator. <br>
+  By default, the XoRoShiRo1024StarStar RNG is employed.  However, other XoRoShiRo1024
+  PRNG variants can be utilized by specifying an algorithm flag (between 1 to 3)
+  when initializing the generator.  The <em>XoRoShiRo1024RNG</em> type has state size of
+  1024 bits and period of 2<sup>1024</sup>-1. <br>
+  In addition to common operations of a PRNG, the <em>XoRoShiRo1024RNG</em> type provides
+  the <em>Jump</em> and <em>LongJump</em> methods where a large (or very large) number of steps
+  of the output sequence can be advanced in a single operation.  Each method creates
+  (and also returns) a copy of the input PRNG and then advances the state of the
+  specified PRNG.  The PRNG and its copy produce non-overlapping output for the
+  length of the jump intendedly for use in parallel computations. <br>
+  It is important to note that the <em>XoRoShiRo1024</em> PRNG requires an explicit
+  initialization by first calling the <em>Initialize</em> method before using
+  any other methods.  Otherwise, the generator may produce undesirable
+  random sequences.  <br>
+  <br>
+<strong>REFERENCES</strong>: <br>
+  [1] <a href="https://prng.di.unimi.it/">
+      Xoshiro/Xoroshiro Generators and the PRNG shootout.</a> <br>
+  [2] <a href="https://commons.apache.org/proper/commons-rng/commons-rng-core/apidocs/org/apache/commons/rng/core/source64/XoRoShiRo1024StarStar.html">
+      Apache Commons RNG: Class XoRoShiRo1024StarStar</a> <br>
+  [3] <a href="https://commons.apache.org/proper/commons-rng/commons-rng-core/apidocs/org/apache/commons/rng/core/source64/XoRoShiRo1024Star.html">
+      Apache Commons RNG: Class XoRoShiRo1024Star</a> <br>
+  [4] <a href="https://commons.apache.org/proper/commons-rng/commons-rng-core/apidocs/org/apache/commons/rng/core/source64/XoRoShiRo1024PlusPlus.html">
+      Apache Commons RNG: Class XoRoShiRo1024PlusPlus</a></p></td></tr>
+<!--active-->			   <tr class=""><td><a href='../module/mclass_xoroshiro128rng.html'>MClass_XoRoShiRo128RNG</a></td><td><a href='../sourcefile/mclass_xoroshiro128rng.f90.html'>MClass_XoRoShiRo128RNG.f90</a></td><td><p><strong>PURPOSE OF THIS MODULE</strong>: <br>
+  This module contains the <em>XoRoShiRo128RNG</em> type and its related routines.
+  The <em>XoRoShiRo128RNG</em> type is a <em>Long</em> PRNG type that directly extends
+  the <em>LongRNG</em> type.  Therefore, it provides all remaining deferred
+  procedures required by a <em>Long</em> PRNG type.  <br>
+  In particular, the <em>XoRoShiRo128RNG</em> type provides an implementation of the
+  <em>NextLongImpl</em> deferred procedure based on algorithms from the Xor-Shift-Rotate
+  family of generators by Sebastiano Vigna. <br>
+  The <em>XoRoShiRo128RNG</em> type can represent three PRNG classes: <br>
+  - the XoRoShiRo128StarStar RNG, which is a fast all-purpose 64-bit generator, <br>
+  - the XoRoShiRo128Plus  RNG, which is a fast 64-bit generator suitable for
+    real number generation, or <br>
+  - the XoRoShiRo128PlusPlus RNG, which is a fast all-purpose 64-bit generator. <br>
+  By default, the XoRoShiRo128StarStar RNG is employed.  However, other XoRoShiRo128
+  PRNG variants can be utilized by specifying an algorithm flag (between 1 to 3)
+  when initializing the generator.  The <em>XoRoShiRo128RNG</em> type has state size of
+  128 bits and period of 2<sup>128</sup>-1. <br>
+  In addition to common operations of a PRNG, the <em>XoRoShiRo128RNG</em> type provides
+  the <em>Jump</em> and <em>LongJump</em> methods where a large (or very large) number of steps
+  of the output sequence can be advanced in a single operation.  Each method creates
+  (and also returns) a copy of the input PRNG and then advances the state of the
+  specified PRNG.  The PRNG and its copy produce non-overlapping output for the
+  length of the jump intendedly for use in parallel computations. <br>
+  It is important to note that the <em>XoRoShiRo128</em> PRNG requires an explicit
+  initialization by first calling the <em>Initialize</em> method before using
+  any other methods.  Otherwise, the generator may produce undesirable
+  random sequences.  <br>
+  <br>
+<strong>REFERENCES</strong>: <br>
+  [1] <a href="https://prng.di.unimi.it/">
+      Xoshiro/Xoroshiro Generators and the PRNG shootout.</a> <br>
+  [2] <a href="https://commons.apache.org/proper/commons-rng/commons-rng-core/apidocs/org/apache/commons/rng/core/source64/XoRoShiRo128StarStar.html">
+      Apache Commons RNG: Class XoRoShiRo128StarStar</a> <br>
+  [3] <a href="https://commons.apache.org/proper/commons-rng/commons-rng-core/apidocs/org/apache/commons/rng/core/source64/XoRoShiRo128Plus.html">
+      Apache Commons RNG: Class XoRoShiRo128Plus</a> <br>
+  [4] <a href="https://commons.apache.org/proper/commons-rng/commons-rng-core/apidocs/org/apache/commons/rng/core/source64/XoRoShiRo128PlusPlus.html">
+      Apache Commons RNG: Class XoRoShiRo128PlusPlus</a></p></td></tr>
+<!---->			   <tr class="active"><td><a href='../module/mclass_xoroshiro64rng.html'>MClass_XoRoShiRo64RNG</a></td><td><a href='../sourcefile/mclass_xoroshiro64rng.f90.html'>MClass_XoRoShiRo64RNG.f90</a></td><td><p><strong>PURPOSE OF THIS MODULE</strong>: <br>
+  This module contains the <em>XoRoShiRo64RNG</em> type and its related routines.
+  The <em>XoRoShiRo64RNG</em> type is an <em>Integer</em> PRNG type that directly extends
+  the <em>IntegerRNG</em> type.  Therefore, it provides all remaining deferred
+  procedures required by an <em>Integer</em> PRNG type.  <br>
+  In particular, the <em>XoRoShiRo64RNG</em> type provides an implementation of the
+  <em>NextIntegerImpl</em> deferred procedure based on algorithms from the Xor-Shift-Rotate
+  family of generators by Sebastiano Vigna. <br>
+  The <em>XoRoShiRo64RNG</em> type can represent two PRNG classes: <br>
+  - the XoRoShiRo64StarStar RNG, which is a fast all-purpose 32-bit generator, or <br>
+  - the XoRoShiRo64Star RNG, which is a fast 32-bit generator suitable for
+    real number generation. <br>
+  By default, the <em>XoRoShiRo64StarStar</em> RNG is employed.  However, the <em>XoRoShiRo64Star</em>
+  RNG can be utilized by specifying an algorithm flag to true when initializing the
+  generator.  The <em>XoRoShiRo64RNG</em> type has state size of 64 bits. <br>
+  It is important to note that the <em>XoRoShiRo64</em> PRNG requires an explicit
+  initialization by first calling the <em>Initialize</em> method before using
+  any other methods.  Otherwise, the generator may produce undesirable
+  random sequences.  <br>
+  <br>
+<strong>REFERENCES</strong>: <br>
+  [1] <a href="https://prng.di.unimi.it/">
+      Xoshiro/Xoroshiro Generators and the PRNG shootout.</a> <br>
+  [2] <a href="https://commons.apache.org/proper/commons-rng/commons-rng-core/apidocs/org/apache/commons/rng/core/source32/XoRoShiRo64StarStar.html">
+      Apache Commons RNG: Class XoRoShiRo64StarStar</a> <br>
+  [3] <a href="https://commons.apache.org/proper/commons-rng/commons-rng-core/apidocs/org/apache/commons/rng/core/source32/XoRoShiRo64Star.html">
+      Apache Commons RNG: Class XoRoShiRo64Star</a></p></td></tr>
+<!--active-->			   <tr class=""><td><a href='../module/mclass_xoshiro128rng.html'>MClass_XoShiRo128RNG</a></td><td><a href='../sourcefile/mclass_xoshiro128rng.f90.html'>MClass_XoShiRo128RNG.f90</a></td><td><p><strong>PURPOSE OF THIS MODULE</strong>: <br>
+  This module contains the <em>XoShiRo128RNG</em> type and its related routines.
+  The <em>XoShiRo128RNG</em> type is an <em>Integer</em> PRNG type that directly extends
+  the <em>IntegerRNG</em> type.  Therefore, it provides all remaining deferred
+  procedures required by an <em>Integer</em> PRNG type.  <br>
+  In particular, the <em>XoShiRo128RNG</em> type provides an implementation of the
+  <em>NextIntegerImpl</em> deferred procedure based on algorithms from the Xor-Shift-Rotate
+  family of generators by Sebastiano Vigna. <br>
+  The <em>XoShiRo128RNG</em> type can represent three PRNG classes: <br>
+  - the XoShiRo128StarStar RNG, which is a fast all-purpose 32-bit generator, <br>
+  - the XoShiRo128Plus  RNG, which is a fast 32-bit generator suitable for
+    real number generation, or <br>
+  - the XoShiRo128PlusPlus RNG, which is a fast all-purpose 32-bit generator. <br>
+  By default, the XoShiRo128StarStar RNG is employed.  However, other XoShiRo128
+  PRNG variants can be utilized by specifying an algorithm flag (between 1 to 3)
+  when initializing the generator.  The <em>XoShiRo128RNG</em> type has state size of
+  128 bits. <br>
+  In addition to common operations of a PRNG, the <em>XoShiRo128RNG</em> type provides
+  the <em>Jump</em> and <em>LongJump</em> methods where a large (or very large) number of steps
+  of the output sequence can be advanced in a single operation.  Each method creates
+  (and also returns) a copy of the input PRNG and then advances the state of the
+  specified PRNG.  The PRNG and its copy produce non-overlapping output for the
+  length of the jump intendedly for use in parallel computations. <br>
+  It is important to note that the <em>XoShiRo128</em> PRNG requires an explicit
+  initialization by first calling the <em>Initialize</em> method before using
+  any other methods.  Otherwise, the generator may produce undesirable
+  random sequences.  <br>
+  <br>
+<strong>REFERENCES</strong>: <br>
+  [1] <a href="https://prng.di.unimi.it/">
+      Xoshiro/Xoroshiro Generators and the PRNG shootout.</a> <br>
+  [2] <a href="https://commons.apache.org/proper/commons-rng/commons-rng-core/apidocs/org/apache/commons/rng/core/source32/XoShiRo128StarStar.html">
+      Apache Commons RNG: Class XoShiRo128StarStar</a> <br>
+  [3] <a href="https://commons.apache.org/proper/commons-rng/commons-rng-core/apidocs/org/apache/commons/rng/core/source32/XoShiRo128Plus.html">
+      Apache Commons RNG: Class XoShiRo128Plus</a> <br>
+  [4] <a href="https://commons.apache.org/proper/commons-rng/commons-rng-core/apidocs/org/apache/commons/rng/core/source32/XoShiRo128PlusPlus.html">
+      Apache Commons RNG: Class XoShiRo128PlusPlus</a></p></td></tr>
+<!---->			   <tr class="active"><td><a href='../module/mclass_xoshiro256rng.html'>MClass_XoShiRo256RNG</a></td><td><a href='../sourcefile/mclass_xoshiro256rng.f90.html'>MClass_XoShiRo256RNG.f90</a></td><td><p><strong>PURPOSE OF THIS MODULE</strong>: <br>
+  This module contains the <em>XoShiRo256RNG</em> type and its related routines.
+  The <em>XoShiRo256RNG</em> type is a <em>Long</em> PRNG type that directly extends
+  the <em>LongRNG</em> type.  Therefore, it provides all remaining deferred
+  procedures required by a <em>Long</em> PRNG type.  <br>
+  In particular, the <em>XoShiRo256RNG</em> type provides an implementation of the
+  <em>NextLongImpl</em> deferred procedure based on algorithms from the Xor-Shift-Rotate
+  family of generators by Sebastiano Vigna. <br>
+  The <em>XoShiRo256RNG</em> type can represent three PRNG classes: <br>
+  - the XoShiRo256StarStar RNG, which is a fast all-purpose 64-bit generator, <br>
+  - the XoShiRo256Plus  RNG, which is a fast 64-bit generator suitable for
+    real number generation, or <br>
+  - the XoShiRo256PlusPlus RNG, which is a fast all-purpose 64-bit generator. <br>
+  By default, the XoShiRo256StarStar RNG is employed.  However, other XoShiRo256
+  PRNG variants can be utilized by specifying an algorithm flag (between 1 to 3)
+  when initializing the generator.  The <em>XoShiRo256RNG</em> type has state size of
+  256 bits and period of 2<sup>256</sup>-1. <br>
+  In addition to common operations of a PRNG, the <em>XoShiRo256RNG</em> type provides
+  the <em>Jump</em> and <em>LongJump</em> methods where a large (or very large) number of steps
+  of the output sequence can be advanced in a single operation.  Each method creates
+  (and also returns) a copy of the input PRNG and then advances the state of the
+  specified PRNG.  The PRNG and its copy produce non-overlapping output for the
+  length of the jump intendedly for use in parallel computations. <br>
+  It is important to note that the <em>XoShiRo256</em> PRNG requires an explicit
+  initialization by first calling the <em>Initialize</em> method before using
+  any other methods.  Otherwise, the generator may produce undesirable
+  random sequences.  <br>
+  <br>
+<strong>REFERENCES</strong>: <br>
+  [1] <a href="https://prng.di.unimi.it/">
+      Xoshiro/Xoroshiro Generators and the PRNG shootout.</a> <br>
+  [2] <a href="https://commons.apache.org/proper/commons-rng/commons-rng-core/apidocs/org/apache/commons/rng/core/source64/XoShiRo256StarStar.html">
+      Apache Commons RNG: Class XoShiRo256StarStar</a> <br>
+  [3] <a href="https://commons.apache.org/proper/commons-rng/commons-rng-core/apidocs/org/apache/commons/rng/core/source64/XoShiRo256Plus.html">
+      Apache Commons RNG: Class XoShiRo256Plus</a> <br>
+  [4] <a href="https://commons.apache.org/proper/commons-rng/commons-rng-core/apidocs/org/apache/commons/rng/core/source64/XoShiRo256PlusPlus.html">
+      Apache Commons RNG: Class XoShiRo256PlusPlus</a></p></td></tr>
+<!--active-->			   <tr class=""><td><a href='../module/mclass_xoshiro512rng.html'>MClass_XoShiRo512RNG</a></td><td><a href='../sourcefile/mclass_xoshiro512rng.f90.html'>MClass_XoShiRo512RNG.f90</a></td><td><p><strong>PURPOSE OF THIS MODULE</strong>: <br>
+  This module contains the <em>XoShiRo512RNG</em> type and its related routines.
+  The <em>XoShiRo512RNG</em> type is a <em>Long</em> PRNG type that directly extends
+  the <em>LongRNG</em> type.  Therefore, it provides all remaining deferred
+  procedures required by a <em>Long</em> PRNG type.  <br>
+  In particular, the <em>XoShiRo512RNG</em> type provides an implementation of the
+  <em>NextLongImpl</em> deferred procedure based on algorithms from the Xor-Shift-Rotate
+  family of generators by Sebastiano Vigna. <br>
+  The <em>XoShiRo512RNG</em> type can represent three PRNG classes: <br>
+  - the XoShiRo512StarStar RNG, which is a fast all-purpose 64-bit generator, <br>
+  - the XoShiRo512Plus  RNG, which is a fast 64-bit generator suitable for
+    real number generation, or <br>
+  - the XoShiRo512PlusPlus RNG, which is a fast all-purpose 64-bit generator. <br>
+  By default, the XoShiRo512StarStar RNG is employed.  However, other XoShiRo512
+  PRNG variants can be utilized by specifying an algorithm flag (between 1 to 3)
+  when initializing the generator.  The <em>XoShiRo512RNG</em> type has state size of
+  512 bits and period of 2<sup>512</sup>-1. <br>
+  In addition to common operations of a PRNG, the <em>XoShiRo512RNG</em> type provides
+  the <em>Jump</em> and <em>LongJump</em> methods where a large (or very large) number of steps
+  of the output sequence can be advanced in a single operation.  Each method creates
+  (and also returns) a copy of the input PRNG and then advances the state of the
+  specified PRNG.  The PRNG and its copy produce non-overlapping output for the
+  length of the jump intendedly for use in parallel computations. <br>
+  It is important to note that the <em>XoShiRo512</em> PRNG requires an explicit
+  initialization by first calling the <em>Initialize</em> method before using
+  any other methods.  Otherwise, the generator may produce undesirable
+  random sequences.  <br>
+  <br>
+<strong>REFERENCES</strong>: <br>
+  [1] <a href="https://prng.di.unimi.it/">
+      Xoshiro/Xoroshiro Generators and the PRNG shootout.</a> <br>
+  [2] <a href="https://commons.apache.org/proper/commons-rng/commons-rng-core/apidocs/org/apache/commons/rng/core/source64/XoShiRo512StarStar.html">
+      Apache Commons RNG: Class XoShiRo512StarStar</a> <br>
+  [3] <a href="https://commons.apache.org/proper/commons-rng/commons-rng-core/apidocs/org/apache/commons/rng/core/source64/XoShiRo512Plus.html">
+      Apache Commons RNG: Class XoShiRo512Plus</a> <br>
+  [4] <a href="https://commons.apache.org/proper/commons-rng/commons-rng-core/apidocs/org/apache/commons/rng/core/source64/XoShiRo512PlusPlus.html">
+      Apache Commons RNG: Class XoShiRo512PlusPlus</a></p></td></tr>
+<!---->			 </tbody></table>
+             
+        </div>
+      </div>
+      <hr>
+    </div> <!-- /container -->
+    <footer>
+      <div class="container">
+        <div class="row justify-content-between">
+          <div class="col"><p>eXPerimental Fortran Library (XpfLib) Documentation was developed by Niranama<br>&copy; 2024 
+</p>
+          </div>
+          <div class="col">
+            <p class="text-end">
+              Documentation generated by
+              <a href="https://github.com/Fortran-FOSS-Programmers/ford">FORD</a>
+            </p>
+          </div>
+        </div>
+        <br>
+      </div> <!-- /container -->
+    </footer>
+
+    <!-- Bootstrap core JavaScript -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>    
+
+    <!-- MathJax JavaScript
+             ================================================== -->
+             <!-- Placed at the end of the document so the pages load faster -->
+        <script type="text/x-mathjax-config">
+          MathJax.Hub.Config({
+          TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } },
+          jax: ['input/TeX','input/MathML','output/HTML-CSS'],
+          extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']
+          });
+        </script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+          <script src="../tipuesearch/tipuesearch_content.js"></script>
+          <script src="../tipuesearch/tipuesearch_set.js"></script>
+          <script src="../tipuesearch/tipuesearch.js"></script>
+
+  </body>
+</html>

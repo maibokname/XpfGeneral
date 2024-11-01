@@ -1,0 +1,3135 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta name="description" content="Experimental Fortran Package - String">
+    <meta name="author" content="Niranama" >
+    <link rel="icon" href="../favicon.png">
+
+    <title>AlphabetTrie &ndash; eXPerimental Fortran Library (XpfLib) Documentation </title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link href="../css/pygments.css" rel="stylesheet">
+    <link href="../css/font-awesome.min.css" rel="stylesheet">
+    <link href="../css/local.css" rel="stylesheet">
+      <link  href="../tipuesearch/tipuesearch.css" rel="stylesheet">
+
+    <script src="https://code.jquery.com/jquery-3.7.0.slim.min.js" integrity="sha256-tG5mcZUtJsZvyKAxYLVXrmjKBVLd6VpVccqz/r4ypFE=" crossorigin="anonymous"></script>
+  </head>
+
+  <body>
+
+    <!-- Fixed navbar -->
+    <div class="container-fluid mb-sm-4 mb-xl-2">
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container">
+          <a class="navbar-brand" href="../index.html">eXPerimental Fortran Library (XpfLib) Documentation </a>
+          <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar"
+                  aria-expanded="false" aria-controls="navbar" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon">
+          </button>
+
+          <div id="navbar" class="navbar-collapse collapse">
+            <ul class="navbar-nav">
+                  <li class="nav-item">
+                    <a class="nav-link" href="../lists/files.html">Source Files</a>
+                  </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../lists/modules.html">Modules</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../lists/procedures.html">Procedures</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../lists/types.html">Derived Types</a>
+                </li>
+            </ul>
+              <div class="d-flex align-items-end flex-grow-1">
+                <form action="../search.html" role="search" class="ms-auto">
+                  <input type="text" class="form-control" aria-label="Search" placeholder="Search" name="q" id="tipue_search_input" autocomplete="off" required>
+                </form>
+              </div>
+          </div><!--/.nav-collapse -->
+        </div>
+      </nav>
+    </div>
+
+    <div class="container">
+  <div class="row">
+    <h1>AlphabetTrie
+      <small>Derived Type</small>
+      
+    </h1>
+      <div class="container p-2 mb-4 bg-light border rounded-3">
+    <div class="row align-items-center justify-content-between" id="info-bar">
+      <div class="col">
+        <ul class="list-inline" style="margin-bottom:0px;display:inline">
+
+            <li class="list-inline-item" id="statements"><i class="fa fa-list-ol"></i>
+              <a data-bs-toggle="tooltip"
+                 data-bs-placement="bottom" data-html="true"
+                 title="<p> 9.3% of total for derived types.</p>Including implementation: 791 statements, 11.8% of total for derived types.">62 statements</a>
+            </li>
+
+            <li class="list-inline-item" id="source-file">
+              <i class="fa fa-code"></i>
+              <a href="../src/MClass_AlphabetTrie.f90"> Source File</a>
+            </li>
+        </ul>
+      </div>
+      <div class="col">
+        <nav aria-label="breadcrumb">
+          <ol class="breadcrumb justify-content-end mb-0">
+                <li class="breadcrumb-item"><a href='../sourcefile/mclass_alphabettrie.f90.html'>MClass_AlphabetTrie.f90</a></li>
+                <li class="breadcrumb-item"><a href='../module/mclass_alphabettrie.html'>MClass_AlphabetTrie</a></li>
+            <li class="breadcrumb-item active" aria-current="page">AlphabetTrie</li>
+          </ol>
+        </nav>
+      </div>
+    </div>
+  </div>
+  <script>
+    $(function () {
+    $('[data-bs-toggle="tooltip"]').tooltip()
+    })
+  </script>
+
+  </div>
+  
+  <div class="row">
+    <div class="col-md-3 hidden-xs hidden-sm visible-md visible-lg">
+      <div id="sidebar">
+      <h3>Contents</h3>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+      <div class="card mb-4">
+      <a data-bs-toggle="collapse" href="#fins-0"
+         aria-expanded="false" aria-controls="fins-0">
+         <h4 class="card-header bg-primary text-white">Finalization Procedures</h4>
+      </a>
+      <div id="fins-0" class="collapse">
+        <div class="list-group list-group-flush">
+            <a class="list-group-item" href="../type/alphabettrie.html#finalproc-alphabettrie_finalizer">AlphabetTrie_Finalizer</a>
+        </div>
+      </div>
+    </div>
+
+      <div class="card mb-4">
+      <a data-bs-toggle="collapse" href="#boundprocs-0"
+         aria-expanded="false" aria-controls="boundprocs-0">
+         <h4 class="card-header bg-primary text-white">Type-Bound Procedures</h4>
+      </a>
+      <div id="boundprocs-0" class="collapse">
+        <div class="list-group list-group-flush">
+            <a class="list-group-item" href="../type/alphabettrie.html#boundprocedure-createempty">CreateEmpty</a>
+            <a class="list-group-item" href="../type/alphabettrie.html#boundprocedure-construct">Construct</a>
+            <a class="list-group-item" href="../type/alphabettrie.html#boundprocedure-clear~2">Clear</a>
+            <a class="list-group-item" href="../type/alphabettrie.html#boundprocedure-destruct">Destruct</a>
+            <a class="list-group-item" href="../type/alphabettrie.html#boundprocedure-insert">Insert</a>
+            <a class="list-group-item" href="../type/alphabettrie.html#boundprocedure-remove">Remove</a>
+            <a class="list-group-item" href="../type/alphabettrie.html#boundprocedure-contain">Contain</a>
+            <a class="list-group-item" href="../type/alphabettrie.html#boundprocedure-getsize">GetSize</a>
+            <a class="list-group-item" href="../type/alphabettrie.html#boundprocedure-isempty">IsEmpty</a>
+            <a class="list-group-item" href="../type/alphabettrie.html#boundprocedure-startwith~2">StartWith</a>
+            <a class="list-group-item" href="../type/alphabettrie.html#boundprocedure-getvalue">GetValue</a>
+            <a class="list-group-item" href="../type/alphabettrie.html#boundprocedure-getallkeys">GetAllKeys</a>
+            <a class="list-group-item" href="../type/alphabettrie.html#boundprocedure-getkeyswithprefix">GetKeysWithPrefix</a>
+            <a class="list-group-item" href="../type/alphabettrie.html#boundprocedure-getkeysthatmatch">GetKeysThatMatch</a>
+            <a class="list-group-item" href="../type/alphabettrie.html#boundprocedure-getwildcardkeys">GetWildcardKeys</a>
+            <a class="list-group-item" href="../type/alphabettrie.html#boundprocedure-getlongestprefixof">GetLongestPrefixOf</a>
+        </div>
+      </div>
+    </div>
+
+  
+  
+    <div class="card card-primary">
+      <div class="card-header text-left"><h3 class="card-title">Source Code</h3></div>
+      <div class="list-group">
+        <a class="list-group-item" href="../type/alphabettrie.html#src">AlphabetTrie</a>
+      </div>
+    </div>
+
+
+  </div>
+
+    </div>
+    
+    <div class="col-md-9" id='text'>
+      <h2>type, public :: AlphabetTrie</h2>
+    <p>The <em>AlphabetTrie</em> type is a container type that utilizes a multi-way trie
+ implementation to provide common operations for a symbol table where its
+ keys are character strings and its values can be of any type.</p>
+    <br>
+
+    
+
+      <section>
+        <h2>Finalization Procedures</h2>
+            <div class="card">
+    <div class="card-header codesum">
+      <span class="anchor" id="finalproc-alphabettrie_finalizer"></span>
+      <h3>final :: <strong>AlphabetTrie_Finalizer</strong> </h3>
+    </div>
+    <div class="card-body">
+      
+      <p>To perform finalization of the symbol table.</p>
+    </div>
+    <ul class="list-group">
+      <li class="list-group-item">
+            <h3>
+    private  subroutine AlphabetTrie_Finalizer(Table)  
+
+    </h3>
+  <p>To perform finalization of the object.</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-table~7"></span>
+              type(<a href='../type/alphabettrie.html'>AlphabetTrie</a>),
+            </td>
+<td>intent(inout)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Table</strong></td>
+            <td>
+                <p>symbol table</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+      </li>
+    </ul>
+  </div>
+
+      </section>
+      <br>
+
+      <section>
+        <h2>Type-Bound Procedures</h2>
+          <div class="row">
+              <div class="card mt-3">
+    <div class="card-header codesum">
+      <span class="anchor" id="boundprocedure-createempty"></span>
+      <h3>
+          procedure, public ::
+  <strong>CreateEmpty</strong> => AlphabetTrie_CreateEmpty
+        
+      </h3>
+    </div>
+      <div class="card-body">
+        
+        <p><strong>Type-Bound Subroutine</strong>: CreateEmpty <br>
+<strong>Purpose</strong>:  To construct an empty symbol table.  <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    CALL Table%CreateEmpty(Alphabet)</p>
+      </div>
+    <ul class="list-group">
+        <li class="list-group-item">
+                  <h3>
+    private  subroutine AlphabetTrie_CreateEmpty(Table, Alpha)  
+</h3>
+
+  <p>To construct an empty symbol table.</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(<a href='../type/alphabettrie.html'>AlphabetTrie</a>),
+            </td>
+<td>intent(inout)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Table</strong></td>
+            <td>
+                <p>symbol table</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(<a href='../type/basealphabet.html'>BaseAlphabet</a>),
+            </td>
+<td>intent(in),</td>
+              <td></td>            <td>
+              TARGET
+            </td>
+            <td>::</td>
+            <td><strong>Alpha</strong></td>
+            <td>
+                <p>Alphabet object</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+        </li>
+    </ul>
+  </div>
+
+          </div>
+          <div class="row">
+              <div class="card mt-3">
+    <div class="card-header codesum">
+      <span class="anchor" id="boundprocedure-construct"></span>
+      <h3>
+          generic, public ::
+  <strong>Construct</strong> => AlphabetTrie_ConstructByArray_ChrStr, AlphabetTrie_ConstructByArray_FvlStr
+        
+      </h3>
+    </div>
+      <div class="card-body">
+        
+        <p><strong>Type-Bound Subroutine</strong>: Construct <br>
+<strong>Purpose</strong>:  To construct a symbol table from arrays of keys and values.  <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    CALL Table%Construct(Alphabet, 10, KeyArr, ValArr)</p>
+      </div>
+    <ul class="list-group">
+        <li class="list-group-item">
+                  <h3>
+    private  subroutine AlphabetTrie_ConstructByArray_ChrStr(Table, Alpha, N, Keys, Values)  
+</h3>
+
+  <p>To construct a symbol table based on specified arrays.</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(<a href='../type/alphabettrie.html'>AlphabetTrie</a>),
+            </td>
+<td>intent(inout)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Table</strong></td>
+            <td>
+                <p>symbol table</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(<a href='../type/basealphabet.html'>BaseAlphabet</a>),
+            </td>
+<td>intent(in),</td>
+              <td></td>            <td>
+              TARGET
+            </td>
+            <td>::</td>
+            <td><strong>Alpha</strong></td>
+            <td>
+                <p>Alphabet object</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              integer(kind=kInt32),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>N</strong></td>
+            <td>
+                <p>number of keys</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              character(kind=kChar, len=*),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Keys</strong>(N)</td>
+            <td>
+                <p>an array of keys</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(*),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Values</strong>(N)</td>
+            <td>
+                <p>an array of associated values</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+        </li>
+        <li class="list-group-item">
+                  <h3>
+    private  subroutine AlphabetTrie_ConstructByArray_FvlStr(Table, Alpha, N, Keys, Values)  
+</h3>
+
+  <p>To construct a symbol table based on specified arrays.</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(<a href='../type/alphabettrie.html'>AlphabetTrie</a>),
+            </td>
+<td>intent(inout)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Table</strong></td>
+            <td>
+                <p>symbol table</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(<a href='../type/basealphabet.html'>BaseAlphabet</a>),
+            </td>
+<td>intent(in),</td>
+              <td></td>            <td>
+              TARGET
+            </td>
+            <td>::</td>
+            <td><strong>Alpha</strong></td>
+            <td>
+                <p>Alphabet object</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              integer(kind=kInt32),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>N</strong></td>
+            <td>
+                <p>number of keys</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              type(<a href='../type/fvlstr.html'>FvlStr</a>),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Keys</strong>(N)</td>
+            <td>
+                <p>an array of keys</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(*),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Values</strong>(N)</td>
+            <td>
+                <p>an array of associated values</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+        </li>
+    </ul>
+  </div>
+
+          </div>
+          <div class="row">
+              <div class="card mt-3">
+    <div class="card-header codesum">
+      <span class="anchor" id="boundprocedure-clear~2"></span>
+      <h3>
+          procedure, public ::
+  <strong>Clear</strong> => AlphabetTrie_Clear
+        
+      </h3>
+    </div>
+      <div class="card-body">
+        
+        <p><strong>Type-Bound Subroutine</strong>: Clear <br>
+ <strong>Purpose</strong>:  To remove all key-value pairs from the symbol table. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    CALL Table%Clear() <br></p>
+      </div>
+    <ul class="list-group">
+        <li class="list-group-item">
+                  <h3>
+    private  subroutine AlphabetTrie_Clear(Table)  
+</h3>
+
+  <p>To destruct a symbol table.</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(<a href='../type/alphabettrie.html'>AlphabetTrie</a>),
+            </td>
+<td>intent(inout)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Table</strong></td>
+            <td>
+                <p>symbol table</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+        </li>
+    </ul>
+  </div>
+
+          </div>
+          <div class="row">
+              <div class="card mt-3">
+    <div class="card-header codesum">
+      <span class="anchor" id="boundprocedure-destruct"></span>
+      <h3>
+          generic, public ::
+  <strong>Destruct</strong> => AlphabetTrie_Destructor_ChrStr, AlphabetTrie_Destructor_FvlStr
+        
+      </h3>
+    </div>
+      <div class="card-body">
+        
+        <p><strong>Type-Bound Subroutine</strong>: Destruct <br>
+ <strong>Purpose</strong>:  To first retrieve stored keys (and optionally their associated values)
+               and then remove all key-value pairs from the symbol table. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    CALL Table%Destruct(KeyQ) <br>
+  ---&gt;    CALL Table%Destruct(KeyArr) <br>
+  ---&gt;    CALL Table%Destruct(KeyQ, ValQ) <br>
+  ---&gt;    CALL Table%Destruct(KeyArr, ValQ) <br>
+ <strong>Important Note</strong>: A user must choose which type of keys to be returned.  The method
+      returns a queue of keys where their type is the Fortran intrinsic <em>CHARACTER</em> type
+      or it returns an array of keys where their type is the <em>FvlStr</em> type.</p>
+      </div>
+    <ul class="list-group">
+        <li class="list-group-item">
+                  <h3>
+    private  subroutine AlphabetTrie_Destructor_ChrStr(Table, KeyQ, ValueQ)  
+</h3>
+
+  <p>To destruct a symbol table and get its pair data.</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(<a href='../type/alphabettrie.html'>AlphabetTrie</a>),
+            </td>
+<td>intent(inout)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Table</strong></td>
+            <td>
+                <p>symbol table</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              type(QueueString),
+            </td>
+<td>intent(out)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>KeyQ</strong></td>
+            <td>
+                <p>a queue of stored keys</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              type(QueueAny),
+            </td>
+<td>intent(out),</td>
+              <td>optional</td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>ValueQ</strong></td>
+            <td>
+                <p>a queue of stored values</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+        </li>
+        <li class="list-group-item">
+                  <h3>
+    private  subroutine AlphabetTrie_Destructor_FvlStr(Table, KeyArr, ValueQ)  
+</h3>
+
+  <p>To destruct a symbol table and get its pair data.</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(<a href='../type/alphabettrie.html'>AlphabetTrie</a>),
+            </td>
+<td>intent(inout)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Table</strong></td>
+            <td>
+                <p>symbol table</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              type(<a href='../type/fvlstr.html'>FvlStr</a>),
+            </td>
+<td>intent(out),</td>
+              <td></td>            <td>
+              ALLOCATABLE
+            </td>
+            <td>::</td>
+            <td><strong>KeyArr</strong>(:)</td>
+            <td>
+                <p>an array of stored keys</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              type(QueueAny),
+            </td>
+<td>intent(out),</td>
+              <td>optional</td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>ValueQ</strong></td>
+            <td>
+                <p>a queue of stored values</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+        </li>
+    </ul>
+  </div>
+
+          </div>
+          <div class="row">
+              <div class="card mt-3">
+    <div class="card-header codesum">
+      <span class="anchor" id="boundprocedure-insert"></span>
+      <h3>
+          generic, public ::
+  <strong>Insert</strong> => AlphabetTrie_Insert_ChrStr, AlphabetTrie_Insert_FvlStr
+        
+      </h3>
+    </div>
+      <div class="card-body">
+        
+        <p><strong>Type-Bound Subroutine</strong>: Insert <br>
+ <strong>Purpose</strong>:  To insert the specified key-value pair to the table. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    CALL Table%Insert(Key, Value) <br></p>
+      </div>
+    <ul class="list-group">
+        <li class="list-group-item">
+                  <h3>
+    private  subroutine AlphabetTrie_Insert_ChrStr(Table, Key, Value)  
+</h3>
+
+  <p>To insert a key-value pair into the symbol table, overwriting the old value
+ with the new value if the key is already in the symbol table.</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(<a href='../type/alphabettrie.html'>AlphabetTrie</a>),
+            </td>
+<td>intent(inout)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Table</strong></td>
+            <td>
+                <p>symbol table</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              character(kind=kChar, len=*),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Key</strong></td>
+            <td>
+                <p>key</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(*),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Value</strong></td>
+            <td>
+                <p>value</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+        </li>
+        <li class="list-group-item">
+                  <h3>
+    private  subroutine AlphabetTrie_Insert_FvlStr(Table, Key, Value)  
+</h3>
+
+  <p>To insert a key-value pair into the symbol table, overwriting the old value
+ with the new value if the key is already in the symbol table.</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(<a href='../type/alphabettrie.html'>AlphabetTrie</a>),
+            </td>
+<td>intent(inout)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Table</strong></td>
+            <td>
+                <p>symbol table</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              type(<a href='../type/fvlstr.html'>FvlStr</a>),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Key</strong></td>
+            <td>
+                <p>key</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(*),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Value</strong></td>
+            <td>
+                <p>value</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+        </li>
+    </ul>
+  </div>
+
+          </div>
+          <div class="row">
+              <div class="card mt-3">
+    <div class="card-header codesum">
+      <span class="anchor" id="boundprocedure-remove"></span>
+      <h3>
+          generic, public ::
+  <strong>Remove</strong> => AlphabetTrie_Remove_ChrStr, AlphabetTrie_Remove_FvlStr
+        
+      </h3>
+    </div>
+      <div class="card-body">
+        
+        <p><strong>Type-Bound Function</strong>: Remove <br>
+ <strong>Purpose</strong>:  To remove the specified key (and its associated value) from
+               the table (if the key found).  Optionally, the associated
+               value can be retrieved. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    CALL Table%Remove(Key) <br>
+  ---&gt;    CALL Table%Remove(Key, Value) <br></p>
+      </div>
+    <ul class="list-group">
+        <li class="list-group-item">
+                  <h3>
+    private  subroutine AlphabetTrie_Remove_ChrStr(Table, Key, Value)  
+</h3>
+
+  <p>To remove a key-value pair from the symbol table if the specified key is found.</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(<a href='../type/alphabettrie.html'>AlphabetTrie</a>),
+            </td>
+<td>intent(inout)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Table</strong></td>
+            <td>
+                <p>symbol table</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              character(kind=kChar, len=*),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Key</strong></td>
+            <td>
+                <p>key</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(*),
+            </td>
+<td>intent(out),</td>
+              <td>optional,</td>            <td>
+              ALLOCATABLE
+            </td>
+            <td>::</td>
+            <td><strong>Value</strong></td>
+            <td>
+                <p>associated value</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+        </li>
+        <li class="list-group-item">
+                  <h3>
+    private  subroutine AlphabetTrie_Remove_FvlStr(Table, Key, Value)  
+</h3>
+
+  <p>To remove a key-value pair from the symbol table if the specified key is found.</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(<a href='../type/alphabettrie.html'>AlphabetTrie</a>),
+            </td>
+<td>intent(inout)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Table</strong></td>
+            <td>
+                <p>symbol table</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              type(<a href='../type/fvlstr.html'>FvlStr</a>),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Key</strong></td>
+            <td>
+                <p>key</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(*),
+            </td>
+<td>intent(out),</td>
+              <td>optional,</td>            <td>
+              ALLOCATABLE
+            </td>
+            <td>::</td>
+            <td><strong>Value</strong></td>
+            <td>
+                <p>associated value</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+        </li>
+    </ul>
+  </div>
+
+          </div>
+          <div class="row">
+              <div class="card mt-3">
+    <div class="card-header codesum">
+      <span class="anchor" id="boundprocedure-contain"></span>
+      <h3>
+          generic, public ::
+  <strong>Contain</strong> => AlphabetTrie_Contain_ChrStr, AlphabetTrie_Contain_FvlStr
+        
+      </h3>
+    </div>
+      <div class="card-body">
+        
+        <p><strong>Type-Bound Function</strong>: Contain <br>
+ <strong>Purpose</strong>:  To find the specified key in the table.  Return true if
+               the specified key is found.  Otherwise, return false. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    Flag = Table%Contain(Key) <br>
+  ---&gt;    IF (.NOT.Table%Contain(Key)) DoSomething</p>
+      </div>
+    <ul class="list-group">
+        <li class="list-group-item">
+                  <h3>
+    private  function AlphabetTrie_Contain_ChrStr(Table, Key) result(Found)  
+</h3>
+
+  <p>To check whether the symbol table contains the specified key or not.</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(<a href='../type/alphabettrie.html'>AlphabetTrie</a>),
+            </td>
+<td>intent(inout)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Table</strong></td>
+            <td>
+                <p>symbol table</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              character(kind=kChar, len=*),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Key</strong></td>
+            <td>
+                <p>key</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+    <h4>
+    Return Value
+    <small>logical</small>
+    </h4>
+    <p>true if key found</p>
+
+        </li>
+        <li class="list-group-item">
+                  <h3>
+    private  function AlphabetTrie_Contain_FvlStr(Table, Key) result(Found)  
+</h3>
+
+  <p>To check whether the symbol table contains the specified key or not.</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(<a href='../type/alphabettrie.html'>AlphabetTrie</a>),
+            </td>
+<td>intent(inout)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Table</strong></td>
+            <td>
+                <p>symbol table</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              type(<a href='../type/fvlstr.html'>FvlStr</a>),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Key</strong></td>
+            <td>
+                <p>key</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+    <h4>
+    Return Value
+    <small>logical</small>
+    </h4>
+    <p>true if key found</p>
+
+        </li>
+    </ul>
+  </div>
+
+          </div>
+          <div class="row">
+              <div class="card mt-3">
+    <div class="card-header codesum">
+      <span class="anchor" id="boundprocedure-getsize"></span>
+      <h3>
+          procedure, public ::
+  <strong>GetSize</strong> => AlphabetTrie_GetSize
+        
+      </h3>
+    </div>
+      <div class="card-body">
+        
+        <p><strong>Type-Bound Function</strong>: GetSize <br>
+ <strong>Purpose</strong>:  To get the current size (the number of key-value pairs stored)
+               of the table. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    Size = Table%GetSize()</p>
+      </div>
+    <ul class="list-group">
+        <li class="list-group-item">
+                  <h3>
+    private  function AlphabetTrie_GetSize(Table) result(Size)  
+</h3>
+
+  <p>To get size (number of keys stored) of the table.</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(<a href='../type/alphabettrie.html'>AlphabetTrie</a>),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Table</strong></td>
+            <td>
+                <p>symbol table</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+    <h4>
+    Return Value
+    <small>integer(kind=kInt32)</small>
+    </h4>
+    <p>size of the table</p>
+
+        </li>
+    </ul>
+  </div>
+
+          </div>
+          <div class="row">
+              <div class="card mt-3">
+    <div class="card-header codesum">
+      <span class="anchor" id="boundprocedure-isempty"></span>
+      <h3>
+          procedure, public ::
+  <strong>IsEmpty</strong> => AlphabetTrie_IsEmpty
+        
+      </h3>
+    </div>
+      <div class="card-body">
+        
+        <p><strong>Type-Bound Function</strong>: IsEmpty <br>
+ <strong>Purpose</strong>:  To check whether the table is empty or not. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    Flag = Table%IsEmpty() <br>
+  ---&gt;    IF (.NOT.Table%IsEmpty()) DoSomeThing</p>
+      </div>
+    <ul class="list-group">
+        <li class="list-group-item">
+                  <h3>
+    private  function AlphabetTrie_IsEmpty(Table) result(Flag)  
+</h3>
+
+  <p>To check whether the table is empty or not.</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(<a href='../type/alphabettrie.html'>AlphabetTrie</a>),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Table</strong></td>
+            <td>
+                <p>symbol table</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+    <h4>
+    Return Value
+    <small>logical</small>
+    </h4>
+    <p>true if the table is empty</p>
+
+        </li>
+    </ul>
+  </div>
+
+          </div>
+          <div class="row">
+              <div class="card mt-3">
+    <div class="card-header codesum">
+      <span class="anchor" id="boundprocedure-startwith~2"></span>
+      <h3>
+          generic, public ::
+  <strong>StartWith</strong> => AlphabetTrie_StartWith_ChrStr, AlphabetTrie_StartWith_FvlStr
+        
+      </h3>
+    </div>
+      <div class="card-body">
+        
+        <p><strong>Type-Bound Function</strong>: StartWith <br>
+ <strong>Purpose</strong>:  To return a flag indicating whether the symbol table contains
+               a key starting with the specified prefix. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    Flag = Table%StartWith(Prefix) <br>
+  ---&gt;    IF (.NOT.Table%StartWith(Prefix)) DoSomeThing</p>
+      </div>
+    <ul class="list-group">
+        <li class="list-group-item">
+                  <h3>
+    private  function AlphabetTrie_StartWith_ChrStr(Table, Prefix) result(Found)  
+</h3>
+
+  <p>To return a flag indicating whether the symbol table contains a key
+ starting with the specified prefix.</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(<a href='../type/alphabettrie.html'>AlphabetTrie</a>),
+            </td>
+<td>intent(inout)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Table</strong></td>
+            <td>
+                <p>symbol table</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              character(kind=kChar, len=*),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Prefix</strong></td>
+            <td>
+                <p>prefix string</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+    <h4>
+    Return Value
+    <small>logical</small>
+    </h4>
+    <p>true if a key starting with the prefix found</p>
+
+        </li>
+        <li class="list-group-item">
+                  <h3>
+    private  function AlphabetTrie_StartWith_FvlStr(Table, Prefix) result(Found)  
+</h3>
+
+  <p>To return a flag indicating whether the symbol table contains a key
+ starting with the specified prefix.</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(<a href='../type/alphabettrie.html'>AlphabetTrie</a>),
+            </td>
+<td>intent(inout)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Table</strong></td>
+            <td>
+                <p>symbol table</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              type(<a href='../type/fvlstr.html'>FvlStr</a>),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Prefix</strong></td>
+            <td>
+                <p>prefix string</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+    <h4>
+    Return Value
+    <small>logical</small>
+    </h4>
+    <p>true if a key starting with the prefix found</p>
+
+        </li>
+    </ul>
+  </div>
+
+          </div>
+          <div class="row">
+              <div class="card mt-3">
+    <div class="card-header codesum">
+      <span class="anchor" id="boundprocedure-getvalue"></span>
+      <h3>
+          generic, public ::
+  <strong>GetValue</strong> => AlphabetTrie_GetValue_ChrStr, AlphabetTrie_GetValue_FvlStr
+        
+      </h3>
+    </div>
+      <div class="card-body">
+        
+        <p><strong>Type-Bound Subroutine</strong>: GetValue <br>
+ <strong>Purpose</strong>:  To get a value associated with the specified key in the table.
+               If the key is not found, return an unallocated value. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    CALL Table%GetValue(Key, Value) <br></p>
+      </div>
+    <ul class="list-group">
+        <li class="list-group-item">
+                  <h3>
+    private  subroutine AlphabetTrie_GetValue_ChrStr(Table, Key, Value)  
+</h3>
+
+  <p>To retrieve the value associated with the specified key.  Return
+ an unallocated value if the key is not found in the symbol table.</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(<a href='../type/alphabettrie.html'>AlphabetTrie</a>),
+            </td>
+<td>intent(inout)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Table</strong></td>
+            <td>
+                <p>symbol table</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              character(kind=kChar, len=*),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Key</strong></td>
+            <td>
+                <p>key</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(*),
+            </td>
+<td>intent(out),</td>
+              <td></td>            <td>
+              ALLOCATABLE
+            </td>
+            <td>::</td>
+            <td><strong>Value</strong></td>
+            <td>
+                <p>value</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+        </li>
+        <li class="list-group-item">
+                  <h3>
+    private  subroutine AlphabetTrie_GetValue_FvlStr(Table, Key, Value)  
+</h3>
+
+  <p>To retrieve the value associated with the specified key.  Return
+ an unallocated value if the key is not found in the symbol table.</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(<a href='../type/alphabettrie.html'>AlphabetTrie</a>),
+            </td>
+<td>intent(inout)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Table</strong></td>
+            <td>
+                <p>symbol table</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              type(<a href='../type/fvlstr.html'>FvlStr</a>),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Key</strong></td>
+            <td>
+                <p>key</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(*),
+            </td>
+<td>intent(out),</td>
+              <td></td>            <td>
+              ALLOCATABLE
+            </td>
+            <td>::</td>
+            <td><strong>Value</strong></td>
+            <td>
+                <p>value</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+        </li>
+    </ul>
+  </div>
+
+          </div>
+          <div class="row">
+              <div class="card mt-3">
+    <div class="card-header codesum">
+      <span class="anchor" id="boundprocedure-getallkeys"></span>
+      <h3>
+          generic, public ::
+  <strong>GetAllKeys</strong> => AlphabetTrie_AllKeys_ChrStr, AlphabetTrie_AllKeys_FvlStr
+        
+      </h3>
+    </div>
+      <div class="card-body">
+        
+        <p><strong>Type-Bound Subroutine</strong>: GetAllKeys <br>
+ <strong>Purpose</strong>:  To return a queue (or an array) of all the keys in the symbol table. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    CALL Table%GetAllKeys(KeyQ) <br>
+  ---&gt;    CALL Table%GetAllKeys(KeyArr) <br>
+ <strong>Important Note</strong>: A user must choose which type of keys to be returned.  The method
+      returns a queue of keys where their type is the Fortran intrinsic <em>CHARACTER</em> type
+      or it returns an array of keys where their type is the <em>FvlStr</em> type.</p>
+      </div>
+    <ul class="list-group">
+        <li class="list-group-item">
+                  <h3>
+    private  subroutine AlphabetTrie_AllKeys_ChrStr(Table, KeyQ)  
+</h3>
+
+  <p>To return a queue of all the keys in the symbol table.</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(<a href='../type/alphabettrie.html'>AlphabetTrie</a>),
+            </td>
+<td>intent(inout)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Table</strong></td>
+            <td>
+                <p>symbol table</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              type(QueueString),
+            </td>
+<td>intent(out)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>KeyQ</strong></td>
+            <td>
+                <p>queue of all keys</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+        </li>
+        <li class="list-group-item">
+                  <h3>
+    private  subroutine AlphabetTrie_AllKeys_FvlStr(Table, Keys)  
+</h3>
+
+  <p>To return an array of all the keys in the symbol table.</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(<a href='../type/alphabettrie.html'>AlphabetTrie</a>),
+            </td>
+<td>intent(inout)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Table</strong></td>
+            <td>
+                <p>symbol table</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              type(<a href='../type/fvlstr.html'>FvlStr</a>),
+            </td>
+<td>intent(out),</td>
+              <td></td>            <td>
+              ALLOCATABLE
+            </td>
+            <td>::</td>
+            <td><strong>Keys</strong>(:)</td>
+            <td>
+                <p>array of all keys</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+        </li>
+    </ul>
+  </div>
+
+          </div>
+          <div class="row">
+              <div class="card mt-3">
+    <div class="card-header codesum">
+      <span class="anchor" id="boundprocedure-getkeyswithprefix"></span>
+      <h3>
+          generic, public ::
+  <strong>GetKeysWithPrefix</strong> => AlphabetTrie_KeysWithPrefix_CHCH, AlphabetTrie_KeysWithPrefix_CHVL, AlphabetTrie_KeysWithPrefix_VLCH, AlphabetTrie_KeysWithPrefix_VLVL
+        
+      </h3>
+    </div>
+      <div class="card-body">
+        
+        <p><strong>Type-Bound Subroutine</strong>: GetKeysWithPrefix <br>
+ <strong>Purpose</strong>:  To return a queue (or an array) of all the keys in the symbol table that
+               start with the specified prefix.  Return an empty queue (or an unallocated
+               array) if no such key(s) found. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    CALL Table%GetKeysWithPrefix(Prefix, KeyQ) <br>
+  ---&gt;    CALL Table%GetKeysWithPrefix(Prefix, KeyArr) <br>
+ <strong>Important Note</strong>: A user must choose which type of keys to be returned.  The method
+      returns a queue of keys where their type is the Fortran intrinsic <em>CHARACTER</em> type
+      or it returns an array of keys where their type is the <em>FvlStr</em> type.</p>
+      </div>
+    <ul class="list-group">
+        <li class="list-group-item">
+                  <h3>
+    private  subroutine AlphabetTrie_KeysWithPrefix_CHCH(Table, Prefix, KeyQ)  
+</h3>
+
+  <p>To return a queue of all the keys in the symbol table that start with the
+ specified prefix.  Return an empty queue if no such key(s) found.</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(<a href='../type/alphabettrie.html'>AlphabetTrie</a>),
+            </td>
+<td>intent(inout)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Table</strong></td>
+            <td>
+                <p>symbol table</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              character(kind=kChar, len=*),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Prefix</strong></td>
+            <td>
+                <p>prefix string</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              type(QueueString),
+            </td>
+<td>intent(out)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>KeyQ</strong></td>
+            <td>
+                <p>queue of keys starting with the specified prefix</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+        </li>
+        <li class="list-group-item">
+                  <h3>
+    private  subroutine AlphabetTrie_KeysWithPrefix_CHVL(Table, Prefix, Keys)  
+</h3>
+
+  <p>To return an array of all the keys in the symbol table that start with the
+ specified prefix.  Return an unallocated array if no such key(s) found.</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(<a href='../type/alphabettrie.html'>AlphabetTrie</a>),
+            </td>
+<td>intent(inout)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Table</strong></td>
+            <td>
+                <p>symbol table</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              character(kind=kChar, len=*),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Prefix</strong></td>
+            <td>
+                <p>prefix string</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              type(<a href='../type/fvlstr.html'>FvlStr</a>),
+            </td>
+<td>intent(out),</td>
+              <td></td>            <td>
+              ALLOCATABLE
+            </td>
+            <td>::</td>
+            <td><strong>Keys</strong>(:)</td>
+            <td>
+                <p>array of all keys</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+        </li>
+        <li class="list-group-item">
+                  <h3>
+    private  subroutine AlphabetTrie_KeysWithPrefix_VLCH(Table, Prefix, KeyQ)  
+</h3>
+
+  <p>To return a queue of all the keys in the symbol table that start with the
+ specified prefix.  Return an empty queue if no such key(s) found.</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(<a href='../type/alphabettrie.html'>AlphabetTrie</a>),
+            </td>
+<td>intent(inout)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Table</strong></td>
+            <td>
+                <p>symbol table</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              type(<a href='../type/fvlstr.html'>FvlStr</a>),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Prefix</strong></td>
+            <td>
+                <p>prefix string</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              type(QueueString),
+            </td>
+<td>intent(out)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>KeyQ</strong></td>
+            <td>
+                <p>queue of keys starting with the specified prefix</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+        </li>
+        <li class="list-group-item">
+                  <h3>
+    private  subroutine AlphabetTrie_KeysWithPrefix_VLVL(Table, Prefix, Keys)  
+</h3>
+
+  <p>To return an array of all the keys in the symbol table that start with the
+ specified prefix.  Return an unallocated array if no such key(s) found.</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(<a href='../type/alphabettrie.html'>AlphabetTrie</a>),
+            </td>
+<td>intent(inout)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Table</strong></td>
+            <td>
+                <p>symbol table</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              type(<a href='../type/fvlstr.html'>FvlStr</a>),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Prefix</strong></td>
+            <td>
+                <p>prefix string</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              type(<a href='../type/fvlstr.html'>FvlStr</a>),
+            </td>
+<td>intent(out),</td>
+              <td></td>            <td>
+              ALLOCATABLE
+            </td>
+            <td>::</td>
+            <td><strong>Keys</strong>(:)</td>
+            <td>
+                <p>array of all keys</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+        </li>
+    </ul>
+  </div>
+
+          </div>
+          <div class="row">
+              <div class="card mt-3">
+    <div class="card-header codesum">
+      <span class="anchor" id="boundprocedure-getkeysthatmatch"></span>
+      <h3>
+          generic, public ::
+  <strong>GetKeysThatMatch</strong> => AlphabetTrie_KeysThatMatch_CHCH, AlphabetTrie_KeysThatMatch_CHVL, AlphabetTrie_KeysThatMatch_VLCH, AlphabetTrie_KeysThatMatch_VLVL
+        
+      </h3>
+    </div>
+      <div class="card-body">
+        
+        <p><strong>Type-Bound Subroutine</strong>: GetKeysThatMatch <br>
+ <strong>Purpose</strong>:  To return a queue (or an array) of all the keys in the symbol table that
+               match the given pattern where the question-mark character is interpreted
+               as a wild-card character.  Return an empty queue (or an unallocated array)
+               if no such key(s) found. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    CALL Table%GetKeysThatMatch(Pattern, KeyQ) <br>
+  ---&gt;    CALL Table%GetKeysThatMatch(Pattern, KeyArr) <br>
+ <strong>Important Note</strong>: A user must choose which type of keys to be returned.  The method
+      returns a queue of keys where their type is the Fortran intrinsic <em>CHARACTER</em> type
+      or it returns an array of keys where their type is the <em>FvlStr</em> type.</p>
+      </div>
+    <ul class="list-group">
+        <li class="list-group-item">
+                  <h3>
+    private  subroutine AlphabetTrie_KeysThatMatch_CHCH(Table, Pattern, KeyQ)  
+</h3>
+
+  <p>To return a queue of all the keys in the symbol table that match the
+ specified pattern.  Return an empty queue if no such key(s) found.</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(<a href='../type/alphabettrie.html'>AlphabetTrie</a>),
+            </td>
+<td>intent(inout)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Table</strong></td>
+            <td>
+                <p>symbol table</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              character(kind=kChar, len=*),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Pattern</strong></td>
+            <td>
+                <p>a pattern</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              type(QueueString),
+            </td>
+<td>intent(out)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>KeyQ</strong></td>
+            <td>
+                <p>queue of keys that match the specified pattern</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+        </li>
+        <li class="list-group-item">
+                  <h3>
+    private  subroutine AlphabetTrie_KeysThatMatch_CHVL(Table, Pattern, Keys)  
+</h3>
+
+  <p>To return an array of all the keys in the symbol table that match the
+ specified pattern.  Return an unallocated array if no such key(s) found.</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(<a href='../type/alphabettrie.html'>AlphabetTrie</a>),
+            </td>
+<td>intent(inout)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Table</strong></td>
+            <td>
+                <p>symbol table</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              character(kind=kChar, len=*),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Pattern</strong></td>
+            <td>
+                <p>a pattern</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              type(<a href='../type/fvlstr.html'>FvlStr</a>),
+            </td>
+<td>intent(out),</td>
+              <td></td>            <td>
+              ALLOCATABLE
+            </td>
+            <td>::</td>
+            <td><strong>Keys</strong>(:)</td>
+            <td>
+                <p>array of all keys</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+        </li>
+        <li class="list-group-item">
+                  <h3>
+    private  subroutine AlphabetTrie_KeysThatMatch_VLCH(Table, Pattern, KeyQ)  
+</h3>
+
+  <p>To return a queue of all the keys in the symbol table that match the
+ specified pattern.  Return an empty queue if no such key(s) found.</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(<a href='../type/alphabettrie.html'>AlphabetTrie</a>),
+            </td>
+<td>intent(inout)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Table</strong></td>
+            <td>
+                <p>symbol table</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              type(<a href='../type/fvlstr.html'>FvlStr</a>),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Pattern</strong></td>
+            <td>
+                <p>a pattern</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              type(QueueString),
+            </td>
+<td>intent(out)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>KeyQ</strong></td>
+            <td>
+                <p>queue of keys that match the specified pattern</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+        </li>
+        <li class="list-group-item">
+                  <h3>
+    private  subroutine AlphabetTrie_KeysThatMatch_VLVL(Table, Pattern, Keys)  
+</h3>
+
+  <p>To return an array of all the keys in the symbol table that match the
+ specified pattern.  Return an unallocated array if no such key(s) found.</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(<a href='../type/alphabettrie.html'>AlphabetTrie</a>),
+            </td>
+<td>intent(inout)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Table</strong></td>
+            <td>
+                <p>symbol table</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              type(<a href='../type/fvlstr.html'>FvlStr</a>),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Pattern</strong></td>
+            <td>
+                <p>a pattern</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              type(<a href='../type/fvlstr.html'>FvlStr</a>),
+            </td>
+<td>intent(out),</td>
+              <td></td>            <td>
+              ALLOCATABLE
+            </td>
+            <td>::</td>
+            <td><strong>Keys</strong>(:)</td>
+            <td>
+                <p>array of all keys</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+        </li>
+    </ul>
+  </div>
+
+          </div>
+          <div class="row">
+              <div class="card mt-3">
+    <div class="card-header codesum">
+      <span class="anchor" id="boundprocedure-getwildcardkeys"></span>
+      <h3>
+          generic, public ::
+  <strong>GetWildcardKeys</strong> => AlphabetTrie_WildcardKeys_CHCH, AlphabetTrie_WildcardKeys_CHVL, AlphabetTrie_WildcardKeys_VLCH, AlphabetTrie_WildcardKeys_VLVL
+        
+      </h3>
+    </div>
+      <div class="card-body">
+        
+        <p><strong>Type-Bound Subroutine</strong>: GetWildcardKeys <br>
+ <strong>Purpose</strong>:  To return a queue (or an array) of all the keys in the symbol table that
+               match the given pattern with wild-card characters.  Return an empty queue
+               (or an unallocated array) if no such key(s) found. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    CALL Table%GetWildcardKeys(Pattern, KeyQ) <br>
+  ---&gt;    CALL Table%GetWildcardKeys(Pattern, KeyArr) <br>
+ <strong>Important Note</strong>: The <em>GetWildcardKeys</em> method is mostly the same as the <em>GetKeysThatMatch</em>
+      method, except that it recognizes two wild-card characters instead of one.  Similar to
+      the <em>GetKeysThatMatch</em> method, the question-mark character ('?') is interpreted as a
+      wild-card character for a single character.  Additionally, the <em>GetWildcardKeys</em> method
+      interprets the asterisk character ('*') as a wild-card character for a sequence of
+      characters.</p>
+      </div>
+    <ul class="list-group">
+        <li class="list-group-item">
+                  <h3>
+    private  subroutine AlphabetTrie_WildcardKeys_CHCH(Table, Pattern, KeyQ)  
+</h3>
+
+  <p>To return a queue of all the keys in the symbol table that match the
+ specified pattern.  Return an empty queue if no such key(s) found.</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(<a href='../type/alphabettrie.html'>AlphabetTrie</a>),
+            </td>
+<td>intent(inout)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Table</strong></td>
+            <td>
+                <p>symbol table</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              character(kind=kChar, len=*),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Pattern</strong></td>
+            <td>
+                <p>a pattern</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              type(QueueString),
+            </td>
+<td>intent(out)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>KeyQ</strong></td>
+            <td>
+                <p>queue of keys that match the specified pattern</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+        </li>
+        <li class="list-group-item">
+                  <h3>
+    private  subroutine AlphabetTrie_WildcardKeys_CHVL(Table, Pattern, Keys)  
+</h3>
+
+  <p>To return an array of all the keys in the symbol table that match the
+ specified pattern.  Return an unallocated array if no such key(s) found.</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(<a href='../type/alphabettrie.html'>AlphabetTrie</a>),
+            </td>
+<td>intent(inout)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Table</strong></td>
+            <td>
+                <p>symbol table</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              character(kind=kChar, len=*),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Pattern</strong></td>
+            <td>
+                <p>a pattern</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              type(<a href='../type/fvlstr.html'>FvlStr</a>),
+            </td>
+<td>intent(out),</td>
+              <td></td>            <td>
+              ALLOCATABLE
+            </td>
+            <td>::</td>
+            <td><strong>Keys</strong>(:)</td>
+            <td>
+                <p>array of all keys</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+        </li>
+        <li class="list-group-item">
+                  <h3>
+    private  subroutine AlphabetTrie_WildcardKeys_VLCH(Table, Pattern, KeyQ)  
+</h3>
+
+  <p>To return a queue of all the keys in the symbol table that match the
+ specified pattern.  Return an empty queue if no such key(s) found.</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(<a href='../type/alphabettrie.html'>AlphabetTrie</a>),
+            </td>
+<td>intent(inout)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Table</strong></td>
+            <td>
+                <p>symbol table</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              type(<a href='../type/fvlstr.html'>FvlStr</a>),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Pattern</strong></td>
+            <td>
+                <p>a pattern</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              type(QueueString),
+            </td>
+<td>intent(out)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>KeyQ</strong></td>
+            <td>
+                <p>queue of keys that match the specified pattern</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+        </li>
+        <li class="list-group-item">
+                  <h3>
+    private  subroutine AlphabetTrie_WildcardKeys_VLVL(Table, Pattern, Keys)  
+</h3>
+
+  <p>To return an array of all the keys in the symbol table that match the
+ specified pattern.  Return an unallocated array if no such key(s) found.</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(<a href='../type/alphabettrie.html'>AlphabetTrie</a>),
+            </td>
+<td>intent(inout)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Table</strong></td>
+            <td>
+                <p>symbol table</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              type(<a href='../type/fvlstr.html'>FvlStr</a>),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Pattern</strong></td>
+            <td>
+                <p>a pattern</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              type(<a href='../type/fvlstr.html'>FvlStr</a>),
+            </td>
+<td>intent(out),</td>
+              <td></td>            <td>
+              ALLOCATABLE
+            </td>
+            <td>::</td>
+            <td><strong>Keys</strong>(:)</td>
+            <td>
+                <p>array of all keys</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+        </li>
+    </ul>
+  </div>
+
+          </div>
+          <div class="row">
+              <div class="card mt-3">
+    <div class="card-header codesum">
+      <span class="anchor" id="boundprocedure-getlongestprefixof"></span>
+      <h3>
+          generic, public ::
+  <strong>GetLongestPrefixOf</strong> => AlphabetTrie_LongestPrefixOf_ChrStr, AlphabetTrie_LongestPrefixOf_FvlStr
+        
+      </h3>
+    </div>
+      <div class="card-body">
+        
+        <p><strong>Type-Bound Subroutine</strong>: GetLongestPrefixOf <br>
+ <strong>Purpose</strong>:  To return the string in the symbol table that is the longest prefix of the
+               specified query.  Return an unallocated string if no such string found. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    CALL Table%GetLongestPrefixOf(Query, Prefix) <br></p>
+      </div>
+    <ul class="list-group">
+        <li class="list-group-item">
+                  <h3>
+    private  subroutine AlphabetTrie_LongestPrefixOf_ChrStr(Table, Query, Prefix)  
+</h3>
+
+  <p>To return the string in the symbol table that is the longest prefix of the
+ specified query.  Return an unallocated string if no such string found.</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(<a href='../type/alphabettrie.html'>AlphabetTrie</a>),
+            </td>
+<td>intent(inout)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Table</strong></td>
+            <td>
+                <p>symbol table</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              character(kind=kChar, len=*),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Query</strong></td>
+            <td>
+                <p>a query</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              character(kind=kChar, len=:),
+            </td>
+<td>intent(out),</td>
+              <td></td>            <td>
+              ALLOCATABLE
+            </td>
+            <td>::</td>
+            <td><strong>Prefix</strong></td>
+            <td>
+                <p>the longest prefix of the query</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+        </li>
+        <li class="list-group-item">
+                  <h3>
+    private  subroutine AlphabetTrie_LongestPrefixOf_FvlStr(Table, Query, Prefix)  
+</h3>
+
+  <p>To return the string in the symbol table that is the longest prefix of the
+ specified query.  Return an unallocated string if no such string found.</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(<a href='../type/alphabettrie.html'>AlphabetTrie</a>),
+            </td>
+<td>intent(inout)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Table</strong></td>
+            <td>
+                <p>symbol table</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              type(<a href='../type/fvlstr.html'>FvlStr</a>),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Query</strong></td>
+            <td>
+                <p>a query</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              type(<a href='../type/fvlstr.html'>FvlStr</a>),
+            </td>
+<td>intent(out)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Prefix</strong></td>
+            <td>
+                <p>the longest prefix of the query</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+        </li>
+    </ul>
+  </div>
+
+          </div>
+      </section>
+
+    <section>
+    <h3><span class="anchor" id="src"></span>Source Code</h3>
+    <div class="hl codehilite"><pre><span></span><span class="w">    </span><span class="k">TYPE </span><span class="n">AlphabetTrie</span>
+<span class="w">        </span><span class="k">PRIVATE</span>
+<span class="k">        CLASS</span><span class="p">(</span><span class="n">Alphabet</span><span class="p">),</span><span class="w"> </span><span class="k">POINTER</span><span class="w">    </span><span class="kd">::</span><span class="w"> </span><span class="n">Alpha</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="nb">NULL</span><span class="p">()</span><span class="w">  </span><span class="c">!! alphabet object</span>
+<span class="w">        </span><span class="k">TYPE</span><span class="p">(</span><span class="n">TrieNode</span><span class="p">)</span><span class="w">              </span><span class="kd">::</span><span class="w"> </span><span class="n">Root</span><span class="w">             </span><span class="c">!! root of trie</span>
+<span class="w">        </span><span class="n">tIndex</span><span class="w">                      </span><span class="kd">::</span><span class="w"> </span><span class="n">N</span><span class="w">                </span><span class="c">!! number of keys</span>
+<span class="w">    </span><span class="k">CONTAINS</span>
+<span class="w">        </span><span class="c">! ---------------------------------------------------------------------</span>
+<span class="w">        </span><span class="c">! -----                     Private Procedures                    -----</span>
+<span class="w">        </span><span class="c">! ---------------------------------------------------------------------</span>
+<span class="w">        </span><span class="c">!% *Put* is a working method for insertion operation</span>
+<span class="w">        </span><span class="k">PROCEDURE</span><span class="p">,</span><span class="w"> </span><span class="k">PRIVATE</span><span class="w">  </span><span class="kd">::</span><span class="w"> </span><span class="n">Put</span><span class="w">              </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">AlphabetTrie_Put</span>
+<span class="w">        </span><span class="c">!% *Del* is a working method for removal operation</span>
+<span class="w">        </span><span class="k">PROCEDURE</span><span class="p">,</span><span class="w"> </span><span class="k">PRIVATE</span><span class="w">  </span><span class="kd">::</span><span class="w"> </span><span class="n">Del</span><span class="w">              </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">AlphabetTrie_Delete</span>
+<span class="w">        </span><span class="c">!% *Get* is a working method for key inquiring operation</span>
+<span class="w">        </span><span class="k">PROCEDURE</span><span class="p">,</span><span class="w"> </span><span class="k">PRIVATE</span><span class="w">  </span><span class="kd">::</span><span class="w"> </span><span class="n">Get</span><span class="w">              </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">AlphabetTrie_GetNode</span>
+<span class="w">        </span><span class="c">!% *LongestPrefixLen* is a working method for getting the longest prefix</span>
+<span class="w">        </span><span class="k">PROCEDURE</span><span class="p">,</span><span class="w"> </span><span class="k">PRIVATE</span><span class="w">  </span><span class="kd">::</span><span class="w"> </span><span class="n">LongestPrefixLen</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">AlphabetTrie_LengthOfLongestPrefix</span>
+<span class="w">        </span><span class="c">!% *Collect* is a working method for key collecting operation</span>
+<span class="w">        </span><span class="k">PROCEDURE</span><span class="p">,</span><span class="w"> </span><span class="k">PRIVATE</span><span class="w">  </span><span class="kd">::</span><span class="w"> </span><span class="n">AlphabetTrie_CollectKeys</span>
+<span class="w">        </span><span class="k">PROCEDURE</span><span class="p">,</span><span class="w"> </span><span class="k">PRIVATE</span><span class="w">  </span><span class="kd">::</span><span class="w"> </span><span class="n">AlphabetTrie_AssembleKeys</span>
+<span class="w">        </span><span class="k">PROCEDURE</span><span class="p">,</span><span class="w"> </span><span class="k">PRIVATE</span><span class="w">  </span><span class="kd">::</span><span class="w"> </span><span class="n">AlphabetTrie_GatherWildcardKeys</span>
+<span class="w">        </span><span class="k">GENERIC</span><span class="p">,</span><span class="w">   </span><span class="k">PRIVATE</span><span class="w">  </span><span class="kd">::</span><span class="w"> </span><span class="n">Collect</span><span class="w">          </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">AlphabetTrie_CollectKeys</span><span class="p">,</span><span class="w"> </span><span class="p">&amp;</span>
+<span class="w">                                                   </span><span class="n">AlphabetTrie_AssembleKeys</span><span class="p">,</span><span class="w"> </span><span class="p">&amp;</span>
+<span class="w">                                                   </span><span class="n">AlphabetTrie_GatherWildcardKeys</span>
+<span class="w">        </span><span class="c">!% procedures with generic interfaces</span>
+<span class="w">        </span><span class="k">PROCEDURE</span><span class="p">,</span><span class="w"> </span><span class="k">PRIVATE</span><span class="w">  </span><span class="kd">::</span><span class="w"> </span><span class="n">AlphabetTrie_Insert_ChrStr</span>
+<span class="w">        </span><span class="k">PROCEDURE</span><span class="p">,</span><span class="w"> </span><span class="k">PRIVATE</span><span class="w">  </span><span class="kd">::</span><span class="w"> </span><span class="n">AlphabetTrie_Insert_FvlStr</span>
+<span class="w">        </span><span class="k">PROCEDURE</span><span class="p">,</span><span class="w"> </span><span class="k">PRIVATE</span><span class="w">  </span><span class="kd">::</span><span class="w"> </span><span class="n">AlphabetTrie_Remove_ChrStr</span>
+<span class="w">        </span><span class="k">PROCEDURE</span><span class="p">,</span><span class="w"> </span><span class="k">PRIVATE</span><span class="w">  </span><span class="kd">::</span><span class="w"> </span><span class="n">AlphabetTrie_Remove_FvlStr</span>
+<span class="w">        </span><span class="k">PROCEDURE</span><span class="p">,</span><span class="w"> </span><span class="k">PRIVATE</span><span class="w">  </span><span class="kd">::</span><span class="w"> </span><span class="n">AlphabetTrie_Contain_ChrStr</span>
+<span class="w">        </span><span class="k">PROCEDURE</span><span class="p">,</span><span class="w"> </span><span class="k">PRIVATE</span><span class="w">  </span><span class="kd">::</span><span class="w"> </span><span class="n">AlphabetTrie_Contain_FvlStr</span>
+<span class="w">        </span><span class="k">PROCEDURE</span><span class="p">,</span><span class="w"> </span><span class="k">PRIVATE</span><span class="w">  </span><span class="kd">::</span><span class="w"> </span><span class="n">AlphabetTrie_StartWith_ChrStr</span>
+<span class="w">        </span><span class="k">PROCEDURE</span><span class="p">,</span><span class="w"> </span><span class="k">PRIVATE</span><span class="w">  </span><span class="kd">::</span><span class="w"> </span><span class="n">AlphabetTrie_StartWith_FvlStr</span>
+<span class="w">        </span><span class="k">PROCEDURE</span><span class="p">,</span><span class="w"> </span><span class="k">PRIVATE</span><span class="w">  </span><span class="kd">::</span><span class="w"> </span><span class="n">AlphabetTrie_GetValue_ChrStr</span>
+<span class="w">        </span><span class="k">PROCEDURE</span><span class="p">,</span><span class="w"> </span><span class="k">PRIVATE</span><span class="w">  </span><span class="kd">::</span><span class="w"> </span><span class="n">AlphabetTrie_GetValue_FvlStr</span>
+<span class="w">        </span><span class="k">PROCEDURE</span><span class="p">,</span><span class="w"> </span><span class="k">PRIVATE</span><span class="w">  </span><span class="kd">::</span><span class="w"> </span><span class="n">AlphabetTrie_AllKeys_ChrStr</span>
+<span class="w">        </span><span class="k">PROCEDURE</span><span class="p">,</span><span class="w"> </span><span class="k">PRIVATE</span><span class="w">  </span><span class="kd">::</span><span class="w"> </span><span class="n">AlphabetTrie_AllKeys_FvlStr</span>
+<span class="w">        </span><span class="k">PROCEDURE</span><span class="p">,</span><span class="w"> </span><span class="k">PRIVATE</span><span class="w">  </span><span class="kd">::</span><span class="w"> </span><span class="n">AlphabetTrie_KeysWithPrefix_CHCH</span>
+<span class="w">        </span><span class="k">PROCEDURE</span><span class="p">,</span><span class="w"> </span><span class="k">PRIVATE</span><span class="w">  </span><span class="kd">::</span><span class="w"> </span><span class="n">AlphabetTrie_KeysWithPrefix_CHVL</span>
+<span class="w">        </span><span class="k">PROCEDURE</span><span class="p">,</span><span class="w"> </span><span class="k">PRIVATE</span><span class="w">  </span><span class="kd">::</span><span class="w"> </span><span class="n">AlphabetTrie_KeysWithPrefix_VLCH</span>
+<span class="w">        </span><span class="k">PROCEDURE</span><span class="p">,</span><span class="w"> </span><span class="k">PRIVATE</span><span class="w">  </span><span class="kd">::</span><span class="w"> </span><span class="n">AlphabetTrie_KeysWithPrefix_VLVL</span>
+<span class="w">        </span><span class="k">PROCEDURE</span><span class="p">,</span><span class="w"> </span><span class="k">PRIVATE</span><span class="w">  </span><span class="kd">::</span><span class="w"> </span><span class="n">AlphabetTrie_KeysThatMatch_CHCH</span>
+<span class="w">        </span><span class="k">PROCEDURE</span><span class="p">,</span><span class="w"> </span><span class="k">PRIVATE</span><span class="w">  </span><span class="kd">::</span><span class="w"> </span><span class="n">AlphabetTrie_KeysThatMatch_CHVL</span>
+<span class="w">        </span><span class="k">PROCEDURE</span><span class="p">,</span><span class="w"> </span><span class="k">PRIVATE</span><span class="w">  </span><span class="kd">::</span><span class="w"> </span><span class="n">AlphabetTrie_KeysThatMatch_VLCH</span>
+<span class="w">        </span><span class="k">PROCEDURE</span><span class="p">,</span><span class="w"> </span><span class="k">PRIVATE</span><span class="w">  </span><span class="kd">::</span><span class="w"> </span><span class="n">AlphabetTrie_KeysThatMatch_VLVL</span>
+<span class="w">        </span><span class="k">PROCEDURE</span><span class="p">,</span><span class="w"> </span><span class="k">PRIVATE</span><span class="w">  </span><span class="kd">::</span><span class="w"> </span><span class="n">AlphabetTrie_WildcardKeys_CHCH</span>
+<span class="w">        </span><span class="k">PROCEDURE</span><span class="p">,</span><span class="w"> </span><span class="k">PRIVATE</span><span class="w">  </span><span class="kd">::</span><span class="w"> </span><span class="n">AlphabetTrie_WildcardKeys_CHVL</span>
+<span class="w">        </span><span class="k">PROCEDURE</span><span class="p">,</span><span class="w"> </span><span class="k">PRIVATE</span><span class="w">  </span><span class="kd">::</span><span class="w"> </span><span class="n">AlphabetTrie_WildcardKeys_VLCH</span>
+<span class="w">        </span><span class="k">PROCEDURE</span><span class="p">,</span><span class="w"> </span><span class="k">PRIVATE</span><span class="w">  </span><span class="kd">::</span><span class="w"> </span><span class="n">AlphabetTrie_WildcardKeys_VLVL</span>
+<span class="w">        </span><span class="k">PROCEDURE</span><span class="p">,</span><span class="w"> </span><span class="k">PRIVATE</span><span class="w">  </span><span class="kd">::</span><span class="w"> </span><span class="n">AlphabetTrie_LongestPrefixOf_ChrStr</span>
+<span class="w">        </span><span class="k">PROCEDURE</span><span class="p">,</span><span class="w"> </span><span class="k">PRIVATE</span><span class="w">  </span><span class="kd">::</span><span class="w"> </span><span class="n">AlphabetTrie_LongestPrefixOf_FvlStr</span>
+<span class="w">        </span><span class="k">PROCEDURE</span><span class="p">,</span><span class="w"> </span><span class="k">PRIVATE</span><span class="w">  </span><span class="kd">::</span><span class="w"> </span><span class="n">AlphabetTrie_ConstructByArray_ChrStr</span>
+<span class="w">        </span><span class="k">PROCEDURE</span><span class="p">,</span><span class="w"> </span><span class="k">PRIVATE</span><span class="w">  </span><span class="kd">::</span><span class="w"> </span><span class="n">AlphabetTrie_ConstructByArray_FvlStr</span>
+<span class="w">        </span><span class="k">PROCEDURE</span><span class="p">,</span><span class="w"> </span><span class="k">PRIVATE</span><span class="w">  </span><span class="kd">::</span><span class="w"> </span><span class="n">AlphabetTrie_Destructor_ChrStr</span>
+<span class="w">        </span><span class="k">PROCEDURE</span><span class="p">,</span><span class="w"> </span><span class="k">PRIVATE</span><span class="w">  </span><span class="kd">::</span><span class="w"> </span><span class="n">AlphabetTrie_Destructor_FvlStr</span>
+<span class="w">        </span><span class="c">! ---------------------------------------------------------------------</span>
+<span class="w">        </span><span class="c">! -----                     Public Procedures                     -----</span>
+<span class="w">        </span><span class="c">! ---------------------------------------------------------------------</span>
+<span class="w">        </span><span class="c">! -----     constructor and destructor procedures   -----</span>
+<span class="w">        </span><span class="c">! -------------------------------------------------------</span>
+<span class="w">        </span><span class="c">!&gt; **Type-Bound Subroutine**: CreateEmpty &lt;br&gt;</span>
+<span class="w">        </span><span class="c">! **Purpose**:  To construct an empty symbol table.  &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Usage**: &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!   ---&gt;    CALL Table%CreateEmpty(Alphabet)</span>
+<span class="w">        </span><span class="k">PROCEDURE</span><span class="w">   </span><span class="kd">::</span><span class="w"> </span><span class="n">CreateEmpty</span><span class="w">          </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">AlphabetTrie_CreateEmpty</span>
+<span class="w">        </span><span class="c">!&gt; **Type-Bound Subroutine**: Construct &lt;br&gt;</span>
+<span class="w">        </span><span class="c">! **Purpose**:  To construct a symbol table from arrays of keys and values.  &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Usage**: &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!   ---&gt;    CALL Table%Construct(Alphabet, 10, KeyArr, ValArr)</span>
+<span class="w">        </span><span class="k">GENERIC</span><span class="w">     </span><span class="kd">::</span><span class="w"> </span><span class="n">Construct</span><span class="w">            </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">AlphabetTrie_ConstructByArray_ChrStr</span><span class="p">,</span><span class="w"> </span><span class="p">&amp;</span>
+<span class="w">                                               </span><span class="n">AlphabetTrie_ConstructByArray_FvlStr</span>
+<span class="w">        </span><span class="c">!&gt; **Type-Bound Subroutine**: Clear &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Purpose**:  To remove all key-value pairs from the symbol table. &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Usage**: &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!   ---&gt;    CALL Table%Clear() &lt;br&gt;</span>
+<span class="w">        </span><span class="k">PROCEDURE</span><span class="w">   </span><span class="kd">::</span><span class="w"> </span><span class="n">Clear</span><span class="w">                </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">AlphabetTrie_Clear</span>
+<span class="w">        </span><span class="c">!&gt; **Type-Bound Subroutine**: Destruct &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Purpose**:  To first retrieve stored keys (and optionally their associated values)</span>
+<span class="w">        </span><span class="c">!                and then remove all key-value pairs from the symbol table. &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Usage**: &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!   ---&gt;    CALL Table%Destruct(KeyQ) &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!   ---&gt;    CALL Table%Destruct(KeyArr) &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!   ---&gt;    CALL Table%Destruct(KeyQ, ValQ) &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!   ---&gt;    CALL Table%Destruct(KeyArr, ValQ) &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Important Note**: A user must choose which type of keys to be returned.  The method</span>
+<span class="w">        </span><span class="c">!       returns a queue of keys where their type is the Fortran intrinsic *CHARACTER* type</span>
+<span class="w">        </span><span class="c">!       or it returns an array of keys where their type is the *FvlStr* type.</span>
+<span class="w">        </span><span class="k">GENERIC</span><span class="w">     </span><span class="kd">::</span><span class="w"> </span><span class="n">Destruct</span><span class="w">             </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">AlphabetTrie_Destructor_ChrStr</span><span class="p">,</span><span class="w"> </span><span class="p">&amp;</span>
+<span class="w">                                               </span><span class="n">AlphabetTrie_Destructor_FvlStr</span>
+<span class="w">        </span><span class="c">! -------------------------------------------------------</span>
+<span class="w">        </span><span class="c">! -----         adding and removing procedures      -----</span>
+<span class="w">        </span><span class="c">! -------------------------------------------------------</span>
+<span class="w">        </span><span class="c">!&gt; **Type-Bound Subroutine**: Insert &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Purpose**:  To insert the specified key-value pair to the table. &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Usage**: &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!   ---&gt;    CALL Table%Insert(Key, Value) &lt;br&gt;</span>
+<span class="w">        </span><span class="k">GENERIC</span><span class="w">     </span><span class="kd">::</span><span class="w"> </span><span class="n">Insert</span><span class="w">               </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">AlphabetTrie_Insert_ChrStr</span><span class="p">,</span><span class="w"> </span><span class="p">&amp;</span>
+<span class="w">                                               </span><span class="n">AlphabetTrie_Insert_FvlStr</span>
+<span class="w">        </span><span class="c">!&gt; **Type-Bound Function**: Remove &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Purpose**:  To remove the specified key (and its associated value) from</span>
+<span class="w">        </span><span class="c">!                the table (if the key found).  Optionally, the associated</span>
+<span class="w">        </span><span class="c">!                value can be retrieved. &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Usage**: &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!   ---&gt;    CALL Table%Remove(Key) &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!   ---&gt;    CALL Table%Remove(Key, Value) &lt;br&gt;</span>
+<span class="w">        </span><span class="k">GENERIC</span><span class="w">     </span><span class="kd">::</span><span class="w"> </span><span class="n">Remove</span><span class="w">               </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">AlphabetTrie_Remove_ChrStr</span><span class="p">,</span><span class="w"> </span><span class="p">&amp;</span>
+<span class="w">                                               </span><span class="n">AlphabetTrie_Remove_FvlStr</span>
+<span class="w">        </span><span class="c">! -------------------------------------------------------</span>
+<span class="w">        </span><span class="c">! -----               inquiry procedures            -----</span>
+<span class="w">        </span><span class="c">! -------------------------------------------------------</span>
+<span class="w">        </span><span class="c">!&gt; **Type-Bound Function**: Contain &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Purpose**:  To find the specified key in the table.  Return true if</span>
+<span class="w">        </span><span class="c">!                the specified key is found.  Otherwise, return false. &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Usage**: &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!   ---&gt;    Flag = Table%Contain(Key) &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!   ---&gt;    IF (.NOT.Table%Contain(Key)) DoSomething</span>
+<span class="w">        </span><span class="k">GENERIC</span><span class="w">     </span><span class="kd">::</span><span class="w"> </span><span class="n">Contain</span><span class="w">              </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">AlphabetTrie_Contain_ChrStr</span><span class="p">,</span><span class="w"> </span><span class="p">&amp;</span>
+<span class="w">                                               </span><span class="n">AlphabetTrie_Contain_FvlStr</span>
+<span class="w">        </span><span class="c">!&gt; **Type-Bound Function**: GetSize &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Purpose**:  To get the current size (the number of key-value pairs stored)</span>
+<span class="w">        </span><span class="c">!                of the table. &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Usage**: &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!   ---&gt;    Size = Table%GetSize()</span>
+<span class="w">        </span><span class="k">PROCEDURE</span><span class="w">   </span><span class="kd">::</span><span class="w"> </span><span class="n">GetSize</span><span class="w">              </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">AlphabetTrie_GetSize</span>
+<span class="w">        </span><span class="c">!&gt; **Type-Bound Function**: IsEmpty &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Purpose**:  To check whether the table is empty or not. &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Usage**: &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!   ---&gt;    Flag = Table%IsEmpty() &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!   ---&gt;    IF (.NOT.Table%IsEmpty()) DoSomeThing</span>
+<span class="w">        </span><span class="k">PROCEDURE</span><span class="w">   </span><span class="kd">::</span><span class="w"> </span><span class="n">IsEmpty</span><span class="w">              </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">AlphabetTrie_IsEmpty</span>
+<span class="w">        </span><span class="c">!&gt; **Type-Bound Function**: StartWith &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Purpose**:  To return a flag indicating whether the symbol table contains</span>
+<span class="w">        </span><span class="c">!                a key starting with the specified prefix. &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Usage**: &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!   ---&gt;    Flag = Table%StartWith(Prefix) &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!   ---&gt;    IF (.NOT.Table%StartWith(Prefix)) DoSomeThing</span>
+<span class="w">        </span><span class="k">GENERIC</span><span class="w">     </span><span class="kd">::</span><span class="w"> </span><span class="n">StartWith</span><span class="w">            </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">AlphabetTrie_StartWith_ChrStr</span><span class="p">,</span><span class="w"> </span><span class="p">&amp;</span>
+<span class="w">                                               </span><span class="n">AlphabetTrie_StartWith_FvlStr</span>
+<span class="w">        </span><span class="c">! -------------------------------------------------------</span>
+<span class="w">        </span><span class="c">! -----             retrieval procedures            -----</span>
+<span class="w">        </span><span class="c">! -------------------------------------------------------</span>
+<span class="w">        </span><span class="c">!&gt; **Type-Bound Subroutine**: GetValue &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Purpose**:  To get a value associated with the specified key in the table.</span>
+<span class="w">        </span><span class="c">!                If the key is not found, return an unallocated value. &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Usage**: &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!   ---&gt;    CALL Table%GetValue(Key, Value) &lt;br&gt;</span>
+<span class="w">        </span><span class="k">GENERIC</span><span class="w">     </span><span class="kd">::</span><span class="w"> </span><span class="n">GetValue</span><span class="w">             </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">AlphabetTrie_GetValue_ChrStr</span><span class="p">,</span><span class="w"> </span><span class="p">&amp;</span>
+<span class="w">                                               </span><span class="n">AlphabetTrie_GetValue_FvlStr</span>
+<span class="w">        </span><span class="c">!&gt; **Type-Bound Subroutine**: GetAllKeys &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Purpose**:  To return a queue (or an array) of all the keys in the symbol table. &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Usage**: &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!   ---&gt;    CALL Table%GetAllKeys(KeyQ) &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!   ---&gt;    CALL Table%GetAllKeys(KeyArr) &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Important Note**: A user must choose which type of keys to be returned.  The method</span>
+<span class="w">        </span><span class="c">!       returns a queue of keys where their type is the Fortran intrinsic *CHARACTER* type</span>
+<span class="w">        </span><span class="c">!       or it returns an array of keys where their type is the *FvlStr* type.</span>
+<span class="w">        </span><span class="k">GENERIC</span><span class="w">     </span><span class="kd">::</span><span class="w"> </span><span class="n">GetAllKeys</span><span class="w">           </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">AlphabetTrie_AllKeys_ChrStr</span><span class="p">,</span><span class="w"> </span><span class="p">&amp;</span>
+<span class="w">                                               </span><span class="n">AlphabetTrie_AllKeys_FvlStr</span>
+<span class="w">        </span><span class="c">!&gt; **Type-Bound Subroutine**: GetKeysWithPrefix &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Purpose**:  To return a queue (or an array) of all the keys in the symbol table that</span>
+<span class="w">        </span><span class="c">!                start with the specified prefix.  Return an empty queue (or an unallocated</span>
+<span class="w">        </span><span class="c">!                array) if no such key(s) found. &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Usage**: &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!   ---&gt;    CALL Table%GetKeysWithPrefix(Prefix, KeyQ) &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!   ---&gt;    CALL Table%GetKeysWithPrefix(Prefix, KeyArr) &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Important Note**: A user must choose which type of keys to be returned.  The method</span>
+<span class="w">        </span><span class="c">!       returns a queue of keys where their type is the Fortran intrinsic *CHARACTER* type</span>
+<span class="w">        </span><span class="c">!       or it returns an array of keys where their type is the *FvlStr* type.</span>
+<span class="w">        </span><span class="k">GENERIC</span><span class="w">     </span><span class="kd">::</span><span class="w"> </span><span class="n">GetKeysWithPrefix</span><span class="w">    </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">AlphabetTrie_KeysWithPrefix_CHCH</span><span class="p">,</span><span class="w"> </span><span class="p">&amp;</span>
+<span class="w">                                               </span><span class="n">AlphabetTrie_KeysWithPrefix_CHVL</span><span class="p">,</span><span class="w"> </span><span class="p">&amp;</span>
+<span class="w">                                               </span><span class="n">AlphabetTrie_KeysWithPrefix_VLCH</span><span class="p">,</span><span class="w"> </span><span class="p">&amp;</span>
+<span class="w">                                               </span><span class="n">AlphabetTrie_KeysWithPrefix_VLVL</span>
+<span class="w">        </span><span class="c">!&gt; **Type-Bound Subroutine**: GetKeysThatMatch &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Purpose**:  To return a queue (or an array) of all the keys in the symbol table that</span>
+<span class="w">        </span><span class="c">!                match the given pattern where the question-mark character is interpreted</span>
+<span class="w">        </span><span class="c">!                as a wild-card character.  Return an empty queue (or an unallocated array)</span>
+<span class="w">        </span><span class="c">!                if no such key(s) found. &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Usage**: &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!   ---&gt;    CALL Table%GetKeysThatMatch(Pattern, KeyQ) &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!   ---&gt;    CALL Table%GetKeysThatMatch(Pattern, KeyArr) &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Important Note**: A user must choose which type of keys to be returned.  The method</span>
+<span class="w">        </span><span class="c">!       returns a queue of keys where their type is the Fortran intrinsic *CHARACTER* type</span>
+<span class="w">        </span><span class="c">!       or it returns an array of keys where their type is the *FvlStr* type.</span>
+<span class="w">        </span><span class="k">GENERIC</span><span class="w">     </span><span class="kd">::</span><span class="w"> </span><span class="n">GetKeysThatMatch</span><span class="w">     </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">AlphabetTrie_KeysThatMatch_CHCH</span><span class="p">,</span><span class="w"> </span><span class="p">&amp;</span>
+<span class="w">                                               </span><span class="n">AlphabetTrie_KeysThatMatch_CHVL</span><span class="p">,</span><span class="w"> </span><span class="p">&amp;</span>
+<span class="w">                                               </span><span class="n">AlphabetTrie_KeysThatMatch_VLCH</span><span class="p">,</span><span class="w"> </span><span class="p">&amp;</span>
+<span class="w">                                               </span><span class="n">AlphabetTrie_KeysThatMatch_VLVL</span>
+<span class="w">        </span><span class="c">!&gt; **Type-Bound Subroutine**: GetWildcardKeys &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Purpose**:  To return a queue (or an array) of all the keys in the symbol table that</span>
+<span class="w">        </span><span class="c">!                match the given pattern with wild-card characters.  Return an empty queue</span>
+<span class="w">        </span><span class="c">!                (or an unallocated array) if no such key(s) found. &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Usage**: &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!   ---&gt;    CALL Table%GetWildcardKeys(Pattern, KeyQ) &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!   ---&gt;    CALL Table%GetWildcardKeys(Pattern, KeyArr) &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Important Note**: The *GetWildcardKeys* method is mostly the same as the *GetKeysThatMatch*</span>
+<span class="w">        </span><span class="c">!       method, except that it recognizes two wild-card characters instead of one.  Similar to</span>
+<span class="w">        </span><span class="c">!       the *GetKeysThatMatch* method, the question-mark character (&#39;?&#39;) is interpreted as a</span>
+<span class="w">        </span><span class="c">!       wild-card character for a single character.  Additionally, the *GetWildcardKeys* method</span>
+<span class="w">        </span><span class="c">!       interprets the asterisk character (&#39;*&#39;) as a wild-card character for a sequence of</span>
+<span class="w">        </span><span class="c">!       characters.</span>
+<span class="w">        </span><span class="k">GENERIC</span><span class="w">     </span><span class="kd">::</span><span class="w"> </span><span class="n">GetWildcardKeys</span><span class="w">      </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">AlphabetTrie_WildcardKeys_CHCH</span><span class="p">,</span><span class="w"> </span><span class="p">&amp;</span>
+<span class="w">                                               </span><span class="n">AlphabetTrie_WildcardKeys_CHVL</span><span class="p">,</span><span class="w"> </span><span class="p">&amp;</span>
+<span class="w">                                               </span><span class="n">AlphabetTrie_WildcardKeys_VLCH</span><span class="p">,</span><span class="w"> </span><span class="p">&amp;</span>
+<span class="w">                                               </span><span class="n">AlphabetTrie_WildcardKeys_VLVL</span>
+<span class="w">        </span><span class="c">!&gt; **Type-Bound Subroutine**: GetLongestPrefixOf &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Purpose**:  To return the string in the symbol table that is the longest prefix of the</span>
+<span class="w">        </span><span class="c">!                specified query.  Return an unallocated string if no such string found. &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Usage**: &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!   ---&gt;    CALL Table%GetLongestPrefixOf(Query, Prefix) &lt;br&gt;</span>
+<span class="w">        </span><span class="k">GENERIC</span><span class="w">     </span><span class="kd">::</span><span class="w"> </span><span class="n">GetLongestPrefixOf</span><span class="w">   </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">AlphabetTrie_LongestPrefixOf_ChrStr</span><span class="p">,</span><span class="w"> </span><span class="p">&amp;</span>
+<span class="w">                                               </span><span class="n">AlphabetTrie_LongestPrefixOf_FvlStr</span>
+<span class="w">        </span><span class="c">! ---------------------------------------------------------------------</span>
+<span class="w">        </span><span class="c">! -----                   Finalize Procedure                      -----</span>
+<span class="w">        </span><span class="c">! ---------------------------------------------------------------------</span>
+<span class="w">        </span><span class="c">!&gt; To perform finalization of the symbol table.</span>
+<span class="w">        </span><span class="k">FINAL</span><span class="w">       </span><span class="kd">::</span><span class="w"> </span><span class="n">AlphabetTrie_Finalizer</span>
+<span class="w">        </span><span class="c">! ---------------------------------------------------------------------</span>
+<span class="w">    </span><span class="k">END TYPE </span><span class="n">AlphabetTrie</span>
+</pre></div>
+
+    </section>
+    
+    </div>
+  </div>
+
+      <hr>
+    </div> <!-- /container -->
+    <footer>
+      <div class="container">
+        <div class="row justify-content-between">
+          <div class="col"><p>eXPerimental Fortran Library (XpfLib) Documentation was developed by Niranama<br>&copy; 2024 
+</p>
+          </div>
+          <div class="col">
+            <p class="text-end">
+              Documentation generated by
+              <a href="https://github.com/Fortran-FOSS-Programmers/ford">FORD</a>
+            </p>
+          </div>
+        </div>
+        <br>
+      </div> <!-- /container -->
+    </footer>
+
+    <!-- Bootstrap core JavaScript -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>    
+
+    <!-- MathJax JavaScript
+             ================================================== -->
+             <!-- Placed at the end of the document so the pages load faster -->
+        <script type="text/x-mathjax-config">
+          MathJax.Hub.Config({
+          TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } },
+          jax: ['input/TeX','input/MathML','output/HTML-CSS'],
+          extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']
+          });
+        </script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+          <script src="../tipuesearch/tipuesearch_content.js"></script>
+          <script src="../tipuesearch/tipuesearch_set.js"></script>
+          <script src="../tipuesearch/tipuesearch.js"></script>
+
+  </body>
+</html>

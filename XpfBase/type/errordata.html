@@ -1,0 +1,937 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta name="description" content="Experimental Fortran Package - Base Modules and Classes">
+    <meta name="author" content="Niranama" >
+    <link rel="icon" href="../favicon.png">
+
+    <title>ErrorData &ndash; eXPerimental Fortran Library (XpfLib) Documentation </title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link href="../css/pygments.css" rel="stylesheet">
+    <link href="../css/font-awesome.min.css" rel="stylesheet">
+    <link href="../css/local.css" rel="stylesheet">
+      <link  href="../tipuesearch/tipuesearch.css" rel="stylesheet">
+
+    <script src="https://code.jquery.com/jquery-3.7.0.slim.min.js" integrity="sha256-tG5mcZUtJsZvyKAxYLVXrmjKBVLd6VpVccqz/r4ypFE=" crossorigin="anonymous"></script>
+  </head>
+
+  <body>
+
+    <!-- Fixed navbar -->
+    <div class="container-fluid mb-sm-4 mb-xl-2">
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container">
+          <a class="navbar-brand" href="../index.html">eXPerimental Fortran Library (XpfLib) Documentation </a>
+          <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar"
+                  aria-expanded="false" aria-controls="navbar" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon">
+          </button>
+
+          <div id="navbar" class="navbar-collapse collapse">
+            <ul class="navbar-nav">
+                  <li class="nav-item">
+                    <a class="nav-link" href="../lists/files.html">Source Files</a>
+                  </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../lists/modules.html">Modules</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../lists/procedures.html">Procedures</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../lists/absint.html">Abstract Interfaces</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../lists/types.html">Derived Types</a>
+                </li>
+            </ul>
+              <div class="d-flex align-items-end flex-grow-1">
+                <form action="../search.html" role="search" class="ms-auto">
+                  <input type="text" class="form-control" aria-label="Search" placeholder="Search" name="q" id="tipue_search_input" autocomplete="off" required>
+                </form>
+              </div>
+          </div><!--/.nav-collapse -->
+        </div>
+      </nav>
+    </div>
+
+    <div class="container">
+  <div class="row">
+    <h1>ErrorData
+      <small>Derived Type</small>
+      
+    </h1>
+      <div class="container p-2 mb-4 bg-light border rounded-3">
+    <div class="row align-items-center justify-content-between" id="info-bar">
+      <div class="col">
+        <ul class="list-inline" style="margin-bottom:0px;display:inline">
+
+            <li class="list-inline-item" id="statements"><i class="fa fa-list-ol"></i>
+              <a data-bs-toggle="tooltip"
+                 data-bs-placement="bottom" data-html="true"
+                 title="<p> 2.1% of total for derived types.</p>Including implementation: 101 statements,  1.5% of total for derived types.">17 statements</a>
+            </li>
+
+            <li class="list-inline-item" id="source-file">
+              <i class="fa fa-code"></i>
+              <a href="../src/MClass_ErrorData.f90"> Source File</a>
+            </li>
+        </ul>
+      </div>
+      <div class="col">
+        <nav aria-label="breadcrumb">
+          <ol class="breadcrumb justify-content-end mb-0">
+                <li class="breadcrumb-item"><a href='../sourcefile/mclass_errordata.f90.html'>MClass_ErrorData.f90</a></li>
+                <li class="breadcrumb-item"><a href='../module/mclass_errordata.html'>MClass_ErrorData</a></li>
+            <li class="breadcrumb-item active" aria-current="page">ErrorData</li>
+          </ol>
+        </nav>
+      </div>
+    </div>
+  </div>
+  <script>
+    $(function () {
+    $('[data-bs-toggle="tooltip"]').tooltip()
+    })
+  </script>
+
+  </div>
+  
+  <div class="row">
+    <div class="col-md-3 hidden-xs hidden-sm visible-md visible-lg">
+      <div id="sidebar">
+      <h3>Contents</h3>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+      <div class="card mb-4">
+      <a data-bs-toggle="collapse" href="#boundprocs-0"
+         aria-expanded="false" aria-controls="boundprocs-0">
+         <h4 class="card-header bg-primary text-white">Type-Bound Procedures</h4>
+      </a>
+      <div id="boundprocs-0" class="collapse">
+        <div class="list-group list-group-flush">
+            <a class="list-group-item" href="../type/errordata.html#boundprocedure-setinfo">SetInfo</a>
+            <a class="list-group-item" href="../type/errordata.html#boundprocedure-getinfo">GetInfo</a>
+            <a class="list-group-item" href="../type/errordata.html#boundprocedure-getmessage">GetMessage</a>
+            <a class="list-group-item" href="../type/errordata.html#boundprocedure-getroutine">GetRoutine</a>
+            <a class="list-group-item" href="../type/errordata.html#boundprocedure-getlevel">GetLevel</a>
+            <a class="list-group-item" href="../type/errordata.html#boundprocedure-getcode">GetCode</a>
+            <a class="list-group-item" href="../type/errordata.html#boundprocedure-reset">Reset</a>
+            <a class="list-group-item" href="../type/errordata.html#boundprocedure-report">Report</a>
+        </div>
+      </div>
+    </div>
+
+  
+  
+    <div class="card card-primary">
+      <div class="card-header text-left"><h3 class="card-title">Source Code</h3></div>
+      <div class="list-group">
+        <a class="list-group-item" href="../type/errordata.html#src">ErrorData</a>
+      </div>
+    </div>
+
+
+  </div>
+
+    </div>
+    
+    <div class="col-md-9" id='text'>
+      <h2>type, public :: ErrorData</h2>
+    <p><em>ErrorData</em> is an error data type that can be used to handle and report errors.</p>
+    <br>
+
+    
+
+
+      <section>
+        <h2>Type-Bound Procedures</h2>
+          <div class="row">
+              <div class="card mt-3">
+    <div class="card-header codesum">
+      <span class="anchor" id="boundprocedure-setinfo"></span>
+      <h3>
+          procedure, public ::
+  <strong>SetInfo</strong> => SetError
+        
+      </h3>
+    </div>
+      <div class="card-body">
+        
+        <p><strong>Type-Bound Subroutine</strong>: SetInfo <br>
+<strong>Purpose</strong>:  To set/store the error information. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    CALL Error%SetInfo('Division by zero', 'DoDivide', ErrSevere) <br>
+  ---&gt;    CALL Error%SetInfo('Integer overflow', 'DoMultiply', ErrWarning, ErrModule='Integer_Arithmetic') <br>
+  ---&gt;    CALL Error%SetInfo('Invalid input', 'DoSomething', ErrWarning, ErrCode=11)</p>
+      </div>
+    <ul class="list-group">
+        <li class="list-group-item">
+                  <h3>
+    private  subroutine SetError(ErrFlag, ErrMsg, ErrRoutine, ErrLevel, ErrModule, ErrCode)  
+</h3>
+
+  <p>To set/store the error information.</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(<a href='../type/errordata.html'>ErrorData</a>),
+            </td>
+<td>intent(inout)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>ErrFlag</strong></td>
+            <td>
+                <p>the error data object</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              character(kind=kChar, len=*),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>ErrMsg</strong></td>
+            <td>
+                <p>error message</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              character(kind=kChar, len=*),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>ErrRoutine</strong></td>
+            <td>
+                <p>name of the routine reporting the error</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              integer(kind=kInt32),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>ErrLevel</strong></td>
+            <td>
+                <p>level of error <br>
+- ErrNone    (0)  ! no error level <br>
+- ErrWarning (1)  ! warning error level <br>
+- ErrSevere  (2)  ! severe error level <br>
+- ErrFatal   (3)  ! fatal error level</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              character(kind=kChar, len=*),
+            </td>
+<td>intent(in),</td>
+              <td>optional</td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>ErrModule</strong></td>
+            <td>
+                <p>module that contains the error routine</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              integer(kind=kInt32),
+            </td>
+<td>intent(in),</td>
+              <td>optional</td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>ErrCode</strong></td>
+            <td>
+                <p>numerical code of the error</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+        </li>
+    </ul>
+  </div>
+
+          </div>
+          <div class="row">
+              <div class="card mt-3">
+    <div class="card-header codesum">
+      <span class="anchor" id="boundprocedure-getinfo"></span>
+      <h3>
+          procedure, public ::
+  <strong>GetInfo</strong> => GetErrorAll
+        
+      </h3>
+    </div>
+      <div class="card-body">
+        
+        <p><strong>Type-Bound Subroutine</strong>: GetInfo <br>
+<strong>Purpose</strong>:  To get all error information <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    CALL Error%GetInfo(ErrMsg,ErrRoutine,ErrLevel) <br>
+  ---&gt;    CALL Error%GetInfo(Message,Routine,Level,ErrCode=Code)</p>
+      </div>
+    <ul class="list-group">
+        <li class="list-group-item">
+                  <h3>
+    private  subroutine GetErrorAll(ErrFlag, ErrMsg, ErrRoutine, ErrLevel, ErrCode)  
+</h3>
+
+  <p>To get all error information.</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(<a href='../type/errordata.html'>ErrorData</a>),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>ErrFlag</strong></td>
+            <td>
+                <p>the error data object</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              character(kind=kChar, len=:),
+            </td>
+<td>intent(out),</td>
+              <td></td>            <td>
+              ALLOCATABLE
+            </td>
+            <td>::</td>
+            <td><strong>ErrMsg</strong></td>
+            <td>
+                <p>error message</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              character(kind=kChar, len=:),
+            </td>
+<td>intent(out),</td>
+              <td></td>            <td>
+              ALLOCATABLE
+            </td>
+            <td>::</td>
+            <td><strong>ErrRoutine</strong></td>
+            <td>
+                <p>name of the routine reporting the error</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              integer(kind=kInt32),
+            </td>
+<td>intent(out)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>ErrLevel</strong></td>
+            <td>
+                <p>level of error</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              integer(kind=kInt32),
+            </td>
+<td>intent(out)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>ErrCode</strong></td>
+            <td>
+                <p>numerical code of the error</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+        </li>
+    </ul>
+  </div>
+
+          </div>
+          <div class="row">
+              <div class="card mt-3">
+    <div class="card-header codesum">
+      <span class="anchor" id="boundprocedure-getmessage"></span>
+      <h3>
+          procedure, public ::
+  <strong>GetMessage</strong> => GetErrorMessage
+        
+      </h3>
+    </div>
+      <div class="card-body">
+        
+        <p><strong>Type-Bound Function</strong>: GetMessage <br>
+<strong>Purpose</strong>:  To get error message <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    ErrMsg = Error%GetMessage()</p>
+      </div>
+    <ul class="list-group">
+        <li class="list-group-item">
+                  <h3>
+    private  function GetErrorMessage(ErrFlag) result(ErrMsg)  
+</h3>
+
+  <p>To get error message.</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(<a href='../type/errordata.html'>ErrorData</a>),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>ErrFlag</strong></td>
+            <td>
+                <p>the error data object</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+    <h4>
+    Return Value
+    <small>character(kind=kChar, len=:), ALLOCATABLE</small>
+    </h4>
+    <p>error message</p>
+
+        </li>
+    </ul>
+  </div>
+
+          </div>
+          <div class="row">
+              <div class="card mt-3">
+    <div class="card-header codesum">
+      <span class="anchor" id="boundprocedure-getroutine"></span>
+      <h3>
+          procedure, public ::
+  <strong>GetRoutine</strong> => GetErrorRoutine
+        
+      </h3>
+    </div>
+      <div class="card-body">
+        
+        <p><strong>Type-Bound Function</strong>: GetRoutine <br>
+<strong>Purpose</strong>:  To get name of the routine reporting the error <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    RoutineName = Error%GetRoutine()</p>
+      </div>
+    <ul class="list-group">
+        <li class="list-group-item">
+                  <h3>
+    private  function GetErrorRoutine(ErrFlag) result(ErrRoutine)  
+</h3>
+
+  <p>To get name of the routine reporting the error.</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(<a href='../type/errordata.html'>ErrorData</a>),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>ErrFlag</strong></td>
+            <td>
+                <p>the error data object</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+    <h4>
+    Return Value
+    <small>character(kind=kChar, len=:), ALLOCATABLE</small>
+    </h4>
+    <p>name of the routine reporting the error</p>
+
+        </li>
+    </ul>
+  </div>
+
+          </div>
+          <div class="row">
+              <div class="card mt-3">
+    <div class="card-header codesum">
+      <span class="anchor" id="boundprocedure-getlevel"></span>
+      <h3>
+          procedure, public ::
+  <strong>GetLevel</strong> => GetErrorLevel
+        
+      </h3>
+    </div>
+      <div class="card-body">
+        
+        <p><strong>Type-Bound Function</strong>: GetLevel <br>
+<strong>Purpose</strong>:  To get error level <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    ErrLevel = Error%GetLevel() <br>
+  ---&gt;    IF (Error%GetLevel() &gt; ErrNone) DoSomething</p>
+      </div>
+    <ul class="list-group">
+        <li class="list-group-item">
+                  <h3>
+    private  function GetErrorLevel(ErrFlag) result(ErrLevel)  
+</h3>
+
+  <p>To get error level.</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(<a href='../type/errordata.html'>ErrorData</a>),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>ErrFlag</strong></td>
+            <td>
+                <p>the error data object</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+    <h4>
+    Return Value
+    <small>integer(kind=kInt32)</small>
+    </h4>
+    <p>level of error</p>
+
+        </li>
+    </ul>
+  </div>
+
+          </div>
+          <div class="row">
+              <div class="card mt-3">
+    <div class="card-header codesum">
+      <span class="anchor" id="boundprocedure-getcode"></span>
+      <h3>
+          procedure, public ::
+  <strong>GetCode</strong> => GetErrorCode
+        
+      </h3>
+    </div>
+      <div class="card-body">
+        
+        <p><strong>Type-Bound Function</strong>: GetCode <br>
+<strong>Purpose</strong>:  To get numerical code of the error <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    ErrCode = Error%GetCode()</p>
+      </div>
+    <ul class="list-group">
+        <li class="list-group-item">
+                  <h3>
+    private  function GetErrorCode(ErrFlag) result(ErrCode)  
+</h3>
+
+  <p>To get numerical code of the error.</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(<a href='../type/errordata.html'>ErrorData</a>),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>ErrFlag</strong></td>
+            <td>
+                <p>the error data object</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+    <h4>
+    Return Value
+    <small>integer(kind=kInt32)</small>
+    </h4>
+    <p>numerical code of the error</p>
+
+        </li>
+    </ul>
+  </div>
+
+          </div>
+          <div class="row">
+              <div class="card mt-3">
+    <div class="card-header codesum">
+      <span class="anchor" id="boundprocedure-reset"></span>
+      <h3>
+          procedure, public ::
+  <strong>Reset</strong> => ResetError
+        
+      </h3>
+    </div>
+      <div class="card-body">
+        
+        <p><strong>Type-Bound Subroutine</strong>: Reset <br>
+<strong>Purpose</strong>:  To reset the error object to default state (no error) <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    CALL Error%Reset()</p>
+      </div>
+    <ul class="list-group">
+        <li class="list-group-item">
+                  <h3>
+    private  subroutine ResetError(ErrFlag)  
+</h3>
+
+  <p>To reset the error object to default state (no error).</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(<a href='../type/errordata.html'>ErrorData</a>),
+            </td>
+<td>intent(out)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>ErrFlag</strong></td>
+            <td>
+                <p>the error data object</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+        </li>
+    </ul>
+  </div>
+
+          </div>
+          <div class="row">
+              <div class="card mt-3">
+    <div class="card-header codesum">
+      <span class="anchor" id="boundprocedure-report"></span>
+      <h3>
+          procedure, public ::
+  <strong>Report</strong> => ReportError
+        
+      </h3>
+    </div>
+      <div class="card-body">
+        
+        <p><strong>Type-Bound Subroutine</strong>: Report <br>
+<strong>Purpose</strong>:  To report error information <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    CALL Error%Report()         ! report to default error log file. <br>
+  ---&gt;    CALL Error%Report(OutUnit)  ! report to a file associated with 'OutUnit'.</p>
+      </div>
+    <ul class="list-group">
+        <li class="list-group-item">
+                  <h3>
+    private  subroutine ReportError(ErrFlag, OutUnit)  
+</h3>
+
+  <p>To report error information to a default log file named 'XpfErrLog.txt'
+ or to a user log file if the optional 'OutUnit' argument is specified.</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(<a href='../type/errordata.html'>ErrorData</a>),
+            </td>
+<td>intent(inout)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>ErrFlag</strong></td>
+            <td>
+                <p>the error data object</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              integer(kind=kInt32),
+            </td>
+<td>intent(inout),</td>
+              <td>optional</td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>OutUnit</strong></td>
+            <td>
+                <p>the output unit number to report to</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+        </li>
+    </ul>
+  </div>
+
+          </div>
+      </section>
+
+    <section>
+    <h3><span class="anchor" id="src"></span>Source Code</h3>
+    <div class="hl codehilite"><pre><span></span><span class="w">    </span><span class="k">TYPE </span><span class="n">ErrorData</span>
+<span class="w">        </span><span class="k">PRIVATE</span>
+<span class="k">        </span><span class="n">tSInt32</span><span class="w">         </span><span class="kd">::</span><span class="w"> </span><span class="n">Level</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ErrNone</span><span class="w">      </span><span class="c">! error level</span>
+<span class="w">        </span><span class="n">tSInt32</span><span class="w">         </span><span class="kd">::</span><span class="w"> </span><span class="n">Code</span><span class="w">  </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="w">            </span><span class="c">! error code</span>
+<span class="w">        </span><span class="n">tCharAlloc</span><span class="w">      </span><span class="kd">::</span><span class="w"> </span><span class="n">Routine</span><span class="w">              </span><span class="c">! routine where the error occurs</span>
+<span class="w">        </span><span class="n">tCharAlloc</span><span class="w">      </span><span class="kd">::</span><span class="w"> </span><span class="n">Message</span><span class="w">              </span><span class="c">! error message</span>
+<span class="w">        </span><span class="n">tLogical</span><span class="w">        </span><span class="kd">::</span><span class="w"> </span><span class="n">Handled</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">FalseVal</span><span class="w">   </span><span class="c">! error handling flag</span>
+<span class="w">    </span><span class="k">CONTAINS</span>
+<span class="w">        </span><span class="c">!&gt; **Type-Bound Subroutine**: SetInfo &lt;br&gt;</span>
+<span class="w">        </span><span class="c">! **Purpose**:  To set/store the error information. &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Usage**: &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!   ---&gt;    CALL Error%SetInfo(&#39;Division by zero&#39;, &#39;DoDivide&#39;, ErrSevere) &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!   ---&gt;    CALL Error%SetInfo(&#39;Integer overflow&#39;, &#39;DoMultiply&#39;, ErrWarning, ErrModule=&#39;Integer_Arithmetic&#39;) &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!   ---&gt;    CALL Error%SetInfo(&#39;Invalid input&#39;, &#39;DoSomething&#39;, ErrWarning, ErrCode=11)</span>
+<span class="w">        </span><span class="k">PROCEDURE</span><span class="w">       </span><span class="kd">::</span><span class="w"> </span><span class="n">SetInfo</span><span class="w">      </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">SetError</span>
+<span class="w">        </span><span class="c">!&gt; **Type-Bound Subroutine**: GetInfo &lt;br&gt;</span>
+<span class="w">        </span><span class="c">! **Purpose**:  To get all error information &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Usage**: &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!   ---&gt;    CALL Error%GetInfo(ErrMsg,ErrRoutine,ErrLevel) &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!   ---&gt;    CALL Error%GetInfo(Message,Routine,Level,ErrCode=Code)</span>
+<span class="w">        </span><span class="k">PROCEDURE</span><span class="w">       </span><span class="kd">::</span><span class="w"> </span><span class="n">GetInfo</span><span class="w">      </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">GetErrorAll</span>
+<span class="w">        </span><span class="c">!&gt; **Type-Bound Function**: GetMessage &lt;br&gt;</span>
+<span class="w">        </span><span class="c">! **Purpose**:  To get error message &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Usage**: &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!   ---&gt;    ErrMsg = Error%GetMessage()</span>
+<span class="w">        </span><span class="k">PROCEDURE</span><span class="w">       </span><span class="kd">::</span><span class="w"> </span><span class="n">GetMessage</span><span class="w">   </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">GetErrorMessage</span>
+<span class="w">        </span><span class="c">!&gt; **Type-Bound Function**: GetRoutine &lt;br&gt;</span>
+<span class="w">        </span><span class="c">! **Purpose**:  To get name of the routine reporting the error &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Usage**: &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!   ---&gt;    RoutineName = Error%GetRoutine()</span>
+<span class="w">        </span><span class="k">PROCEDURE</span><span class="w">       </span><span class="kd">::</span><span class="w"> </span><span class="n">GetRoutine</span><span class="w">   </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">GetErrorRoutine</span>
+<span class="w">        </span><span class="c">!&gt; **Type-Bound Function**: GetLevel &lt;br&gt;</span>
+<span class="w">        </span><span class="c">! **Purpose**:  To get error level &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Usage**: &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!   ---&gt;    ErrLevel = Error%GetLevel() &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!   ---&gt;    IF (Error%GetLevel() &gt; ErrNone) DoSomething</span>
+<span class="w">        </span><span class="k">PROCEDURE</span><span class="w">       </span><span class="kd">::</span><span class="w"> </span><span class="n">GetLevel</span><span class="w">     </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">GetErrorLevel</span>
+<span class="w">        </span><span class="c">!&gt; **Type-Bound Function**: GetCode &lt;br&gt;</span>
+<span class="w">        </span><span class="c">! **Purpose**:  To get numerical code of the error &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Usage**: &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!   ---&gt;    ErrCode = Error%GetCode()</span>
+<span class="w">        </span><span class="k">PROCEDURE</span><span class="w">       </span><span class="kd">::</span><span class="w"> </span><span class="n">GetCode</span><span class="w">      </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">GetErrorCode</span>
+<span class="w">        </span><span class="c">!&gt; **Type-Bound Subroutine**: Reset &lt;br&gt;</span>
+<span class="w">        </span><span class="c">! **Purpose**:  To reset the error object to default state (no error) &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Usage**: &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!   ---&gt;    CALL Error%Reset()</span>
+<span class="w">        </span><span class="k">PROCEDURE</span><span class="w">       </span><span class="kd">::</span><span class="w"> </span><span class="n">Reset</span><span class="w">        </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">ResetError</span>
+<span class="w">        </span><span class="c">!&gt; **Type-Bound Subroutine**: Report &lt;br&gt;</span>
+<span class="w">        </span><span class="c">! **Purpose**:  To report error information &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Usage**: &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!   ---&gt;    CALL Error%Report()         ! report to default error log file. &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!   ---&gt;    CALL Error%Report(OutUnit)  ! report to a file associated with &#39;OutUnit&#39;.</span>
+<span class="w">        </span><span class="k">PROCEDURE</span><span class="w">       </span><span class="kd">::</span><span class="w"> </span><span class="n">Report</span><span class="w">       </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">ReportError</span>
+<span class="w">        </span><span class="c">! a final subroutine supposedly automatically called when the object is out of scope</span>
+<span class="w">        </span><span class="c">! FINAL           :: FinalizeErrorData</span>
+<span class="w">    </span><span class="k">END TYPE </span><span class="n">ErrorData</span>
+</pre></div>
+
+    </section>
+    
+    </div>
+  </div>
+
+      <hr>
+    </div> <!-- /container -->
+    <footer>
+      <div class="container">
+        <div class="row justify-content-between">
+          <div class="col"><p>eXPerimental Fortran Library (XpfLib) Documentation was developed by Niranama<br>&copy; 2024 
+</p>
+          </div>
+          <div class="col">
+            <p class="text-end">
+              Documentation generated by
+              <a href="https://github.com/Fortran-FOSS-Programmers/ford">FORD</a>
+            </p>
+          </div>
+        </div>
+        <br>
+      </div> <!-- /container -->
+    </footer>
+
+    <!-- Bootstrap core JavaScript -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>    
+
+    <!-- MathJax JavaScript
+             ================================================== -->
+             <!-- Placed at the end of the document so the pages load faster -->
+        <script type="text/x-mathjax-config">
+          MathJax.Hub.Config({
+          TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } },
+          jax: ['input/TeX','input/MathML','output/HTML-CSS'],
+          extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']
+          });
+        </script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+          <script src="../tipuesearch/tipuesearch_content.js"></script>
+          <script src="../tipuesearch/tipuesearch_set.js"></script>
+          <script src="../tipuesearch/tipuesearch.js"></script>
+
+  </body>
+</html>

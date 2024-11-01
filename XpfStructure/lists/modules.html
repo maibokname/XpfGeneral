@@ -1,0 +1,1815 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta name="description" content="Experimental Fortran Package - Data Structures">
+    <meta name="author" content="Niranama" >
+    <link rel="icon" href="../favicon.png">
+
+    <title>All Modules &ndash; eXPerimental Fortran Library (XpfLib) Documentation
+</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link href="../css/pygments.css" rel="stylesheet">
+    <link href="../css/font-awesome.min.css" rel="stylesheet">
+    <link href="../css/local.css" rel="stylesheet">
+      <link  href="../tipuesearch/tipuesearch.css" rel="stylesheet">
+
+    <script src="https://code.jquery.com/jquery-3.7.0.slim.min.js" integrity="sha256-tG5mcZUtJsZvyKAxYLVXrmjKBVLd6VpVccqz/r4ypFE=" crossorigin="anonymous"></script>
+  </head>
+
+  <body>
+
+    <!-- Fixed navbar -->
+    <div class="container-fluid mb-sm-4 mb-xl-2">
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container">
+          <a class="navbar-brand" href="../index.html">eXPerimental Fortran Library (XpfLib) Documentation </a>
+          <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar"
+                  aria-expanded="false" aria-controls="navbar" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon">
+          </button>
+
+          <div id="navbar" class="navbar-collapse collapse">
+            <ul class="navbar-nav">
+                  <li class="nav-item">
+                    <a class="nav-link" href="../lists/files.html">Source Files</a>
+                  </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../lists/modules.html">Modules</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../lists/types.html">Derived Types</a>
+                </li>
+            </ul>
+              <div class="d-flex align-items-end flex-grow-1">
+                <form action="../search.html" role="search" class="ms-auto">
+                  <input type="text" class="form-control" aria-label="Search" placeholder="Search" name="q" id="tipue_search_input" autocomplete="off" required>
+                </form>
+              </div>
+          </div><!--/.nav-collapse -->
+        </div>
+      </nav>
+    </div>
+
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12" id='text'>
+			 <h1>Modules</h1>
+			 <table class="table">
+			 <thead><tr><th>Module</th><th>Source File</th><th>Description</th></tr></thead>
+			 <tbody>
+			   <tr class="active"><td><a href='../module/mbase_balancedtrees.html'>MBase_BalancedTrees</a></td><td><a href='../sourcefile/mbase_balancedtrees.f90.html'>MBase_BalancedTrees.f90</a></td><td><p><strong>PURPOSE OF THIS MODULE</strong>: <br>
+ This module collectively contains <em>balanced-tree-based</em> types from other modules.
+ It is provided so that a user can refer to this module instead of referring to several
+ individual modules when various types are needed concurrently. <br>
+ <br>
+ <strong>Overview</strong>: <br>
+ These balanced-tree-based types are container types that employ a balanced binary-search-tree
+ (BST) implementation to provide common operations for an ordered symbol table.  Specifically,
+ all balanced-tree-based types provided here utilize a left-leaning red-black (RB) tree as the
+ balanced BST.  Each individual type can be used to store key-value pairs for a specific type
+ of keys where the type of stored keys is one of Fortran intrinsic <em>comparable</em> types (i.e.
+ CHARACTER, INTEGER and REAL) or a derived type in the <em>Comparable</em> class (i.e. the <em>Comparable</em>
+ type or its subtypes).  Most of the balanced-tree-based types (except the <em>TreeComparable</em> type)
+ use an unlimited polymorphic type to store values; therefore, inserted values can have any types.
+ Unlike other balanced-tree-based types, the <em>TreeComparable</em> type uses the <em>Comparable</em> type to
+ represent a key-value pair and requires only one argument (instead of two) when inserting or
+ retrieving the key and its associated value.  Therefore, its application programming interface
+ (API) is slightly different from the API of other balanced-tree-based types.  <br>
+ Available balanced-tree-based container types include: <br>
+ - the <a href="../module/mclass_treecharacter.html#type-treecharacter">TreeCharacter</a> type
+   for character string key type, <br>
+ - the <a href="../module/mclass_treeinteger1b.html#type-treeinteger1b">TreeInteger1B</a> type
+   for 1-byte (or 8-bit) integer key type, <br>
+ - the <a href="../module/mclass_treeinteger2b.html#type-treeinteger2b">TreeInteger2B</a> type
+   for 2-byte (or 16-bit) integer key type, <br>
+ - the <a href="../module/mclass_treeinteger4b.html#type-treeinteger4b">TreeInteger4B</a> type
+   for 4-byte (or 32-bit) integer key type, <br>
+ - the <a href="../module/mclass_treeinteger8b.html#type-treeinteger8b">TreeInteger8B</a> type
+   for 8-byte (or 64-bit) integer key type, <br>
+ - the <a href="../module/mclass_treerealsp.html#type-treerealsp">TreeRealSP</a> type
+   for single-precision real key type, <br>
+ - the <a href="../module/mclass_treerealdp.html#type-treerealdp">TreeRealDP</a> type
+   for double-precision real key type, <br>
+ - the <a href="../module/mclass_treerealqp.html#type-treerealqp">TreeRealQP</a> type
+   for quadruple-precision real key type, <br>
+ - the <a href="../module/mclass_treecomparable.html#type-treecomparable">TreeComparable</a>
+   type for type of key-value pair in <em>Comparable</em> class. <br>
+ Each balanced-tree-based container type represents an ordered symbol table where various common operations
+ are provided and can be categorized as follows. <br>
+ (1) Construction and Destruction.  Methods for these operations include: <br>
+ - <em>Construct</em> method - method to construct the container from arrays of keys and values, and <br>
+ - <em>Destruct</em> method - method to destruct the container by removing all key-value pairs from
+     the container. <br>
+ (2) Insertion and Removal.  Methods for these operations include: <br>
+ - <em>Insert</em> method - method to insert a key and its associated value into the container, <br>
+ - <em>Remove</em> method - method to remove a key (and its associated value) from the container, <br>
+ - <em>RemoveMin</em> method - method to remove (and optionally retrieve) the smallest key-value pair, and <br>
+ - <em>RemoveMax</em> method - method to remove (and optionally retrieve) the largest key-value pair. <br>
+ (3) Retrieval.  Methods for this operation include: <br>
+ - <em>GetMinKey</em> method - method to retrieve the smallest key-value pair of the container, <br>
+ - <em>GetMaxKey</em> method - method to retrieve the largest key-value of the container, <br>
+ - <em>GetKeys</em> method - method to retrieve all keys (in the tree or in the specified range) and
+     their associated values, <br>
+ - <em>Floor</em> method - method to retrieve the largest key (and a value associated with it) in the
+     tree less than or equal to the given key. <br>
+ - <em>Ceiling</em> method - method to retrieve the smallest key (and a value associated with it) in
+     the tree greater than or equal to the given key, and <br>
+ - <em>Select</em> method - method to retrieve the key-value pair of the specified rank. <br>
+ (4) Inquiry.  Methods for this operation include: <br>
+ - <em>IsEmpty</em> method - method to check whether the container is empty or not, <br>
+ - <em>Contain</em> method - method to check whether the specified key is in the container or not, <br>
+ - <em>GetSize</em> method - method to get the container size (number of key-value pairs stored), <br>
+ - <em>GetRangeSize</em> method - method to get the number of key-value pairs in the specified range, and <br>
+ - <em>GetRank</em> method - method to get the number of keys in the tree strictly less than the given key. <br>
+ (5) Iteration.  Methods for this operation include: <br>
+ - <em>StartFirst</em> method - method to start a forward iteration over key-value pairs, <br>
+ - <em>MoveForward</em> method - method to move forward to the next key-value pair, <br>
+ - <em>StartLast</em> method - method to start a backward iteration over key-value pairs, and <br>
+ - <em>MoveBackward</em> method - method to move backward to the next key-value pair. <br></p></td></tr>
+<!--active-->			   <tr class=""><td><a href='../module/mbase_doublylinkedlists.html'>MBase_DoublyLinkedLists</a></td><td><a href='../sourcefile/mbase_doublylinkedlists.f90.html'>MBase_DoublyLinkedLists.f90</a></td><td><p><strong>PURPOSE OF THIS MODULE</strong>: <br>
+ This module collectively contains <em>doubly-linked-list-based</em> types from other modules.
+ It is provided so that a user can refer to this module instead of referring to several
+ individual modules when various types are needed concurrently. <br>
+ <br>
+ <strong>Overview</strong>: <br>
+ These doubly-linked-list-based types are container types that employ doubly-linked-list
+ implementation.  Each individual type can be used to store items for a specific type
+ where the type of stored items is one of Fortran intrinsic types or a derived type in
+ the <em>Object</em> class (i.e. the <em>Object</em> type or its subtypes). <br>
+ Available container types are: <br>
+ - the <a href="../module/mclass_listcharacter.html#type-listcharacter">ListCharacter</a> type
+   for character string type, <br>
+ - the <a href="../module/mclass_listcmpxsp.html#type-listcmpxsp">ListCmpxSP</a> type
+   for single-precision complex type, <br>
+ - the <a href="../module/mclass_listcmpxdp.html#type-listcmpxdp">ListCmpxDP</a> type
+   for double-precision complex type, <br>
+ - the <a href="../module/mclass_listcmpxqp.html#type-listcmpxqp">ListCmpxQP</a> type
+   for quadruple-precision complex type, <br>
+ - the <a href="../module/mclass_listinteger1b.html#type-listinteger1b">ListInteger1B</a> type
+   for 1-byte (or 8-bit) integer type, <br>
+ - the <a href="../module/mclass_listinteger2b.html#type-listinteger2b">ListInteger2B</a> type
+   for 2-byte (or 16-bit) integer type, <br>
+ - the <a href="../module/mclass_listinteger4b.html#type-listinteger4b">ListInteger4B</a> type
+   for 4-byte (or 32-bit) integer type, <br>
+ - the <a href="../module/mclass_listinteger8b.html#type-listinteger8b">ListInteger8B</a> type
+   for 8-byte (or 64-bit) integer type, <br>
+ - the <a href="../module/mclass_listlogical.html#type-listlogical">ListLogical</a> type
+   for default logical type, <br>
+ - the <a href="../module/mclass_listrealsp.html#type-listrealsp">ListRealSP</a> type
+   for single-precision real type, <br>
+ - the <a href="../module/mclass_listrealdp.html#type-listrealdp">ListRealDP</a> type
+   for double-precision real type, <br>
+ - the <a href="../module/mclass_listrealqp.html#type-listrealqp">ListRealQP</a> type
+   for quadruple-precision real type, and <br>
+ - the <a href="../module/mclass_listobject.html#type-listobject">ListObject</a> type
+   for a derived type in the <em>Object</em> class, and <br>
+ - the <a href="../module/mclass_listanytype.html#type-listanytype">ListAnyType</a> type
+   for any data type. <br>
+ Each doubly-linked-list-based type can represent various forms of containers including: <br>
+ - the last-in-first-out (LIFO) stack container, <br>
+ - the first-in-first-out (FIFO) queue container, <br>
+ - the double-ended queue (deque) container, and <br>
+ - the list container where an item can be added, removed or retrieved
+   at the (valid) specified index. <br>
+ Each individual type provides various common operations that can be
+ categorized as follows. <br>
+ (1) Construction and Destruction.  Methods for these operations include: <br>
+ - <em>Construct</em> method - method to construct the container from
+   an array of items, and <br>
+ - <em>Destruct</em> method - method to destruct the container by removing
+   all items from the container. <br>
+ (2) Insertion and Removal.  Methods for these operations include: <br>
+ - <em>AddFirst</em> method - method to insert an item to the front of the container, <br>
+ - <em>AddLast</em> method - method to insert an item to the end of the container, <br>
+ - <em>AddAt</em> method - method to insert an item at the specified index, <br>
+ - <em>RemoveFirst</em> method - method to get and remove the first item of the container, <br>
+ - <em>RemoveLast</em> method - method to get and remove the last item of the container, <br>
+ - <em>RemoveAt</em> method - method to get and remove an item at the specified index, <br>
+ - <em>Remove</em> method - method to remove (and optionally get) either the last or
+   the first item, <br>
+ - <em>Delete</em> method - method to remove an item at the current iteration while
+   performing an iteration over the container, <br>
+ - <em>Clear</em> method - method to remove all items from the container. <br>
+ - <em>ToArray</em> method - method to retrieve and then remove all items from the container. <br>
+ - <em>RemoveDuplicates</em> method - method to remove duplicated items from the container, <br>
+ - <em>Enqueue</em> method - same as the <em>AddLast</em> method provided when used as a queue, <br>
+ - <em>Dequeue</em> method - same as the <em>RemoveFirst</em> method provided when used as a queue, <br>
+ - <em>Push</em> method - same as the <em>AddLast</em> method provided when used as a stack, and <br>
+ - <em>Pop</em> method - same as the <em>RemoveLast</em> method provided when used as a stack. <br>
+ (3) Retrieval.  Methods for this operation include: <br>
+ - <em>PeekFirst</em> method - method to retrieve the first item of the container, <br>
+ - <em>PeekLast</em> method - method to retrieve the last item of the container, <br>
+ - <em>PeekAt</em> method - method to retrieve the item at the specified index, <br>
+ - <em>PeekTop</em> method - same as the <em>PeekLast</em> method provided when used as a stack, and <br>
+ - <em>GetAll</em> method - method to retrieve all items from the container. <br>
+ (4) Inquiry.  Methods for this operation include: <br>
+ - <em>IsEmpty</em> method - method to check whether the container is empty or not, and <br>
+ - <em>GetSize</em> method - method to get the container size (number of items stored). <br>
+ (5) Iteration.  Methods for this operation include: <br>
+ - <em>StartFirst</em> method - method to start a forward iteration over items, <br>
+ - <em>MoveForward</em> method - method to move forward to the next item, <br>
+ - <em>StartLast</em> method - method to start a backward iteration over items, and <br>
+ - <em>MoveBackward</em> method - method to move backward to the next item. <br>
+ <br>
+ <strong>Usage Notes</strong>:  <br>
+ The <em>doubly-linked-list-based</em> types provided in this module can be considered
+ to be the same as those <em>dynamic-array-based</em> types provided in the
+ <a href="../module/mbase_dynamicarrays.html">MBase_DynamicArrays</a> module
+ although they employ different implementation.  However, the two groups of
+ containers have some subtle differences as discussed below. <br>
+ - Unlike the <em>dynamic-array-based</em> types, all <em>doubly-linked-list-based</em> types
+   commonly do not require an explicit construction.  Items can be added via the
+   <em>Construction</em> method (for an array of items) or they can be added by using
+   one of the insertion methods provided.  Therefore, the <em>CreateEmpty</em> method used
+   to construct an empty container is deemed unnecessary and thus NOT provided.  <br>
+ - For <em>doubly-linked-list-based</em> types, the <em>Clear</em> method (which is used to remove
+   all items from the container) is equivalent to the <em>Destruct</em> method (also used
+   to remove all items from the container.  On the other hand, the two methods for
+   the <em>dynamic-array-based</em> types are not equivalent because the <em>Destruct</em> method
+   not only removes all items from the container but also performs deallocation of
+   the <em>Items</em> component used to store items whereas the <em>Clear</em> method only removes
+   all items from the container. <br>
+ Besides methods just discussed above, all other operations provided by both groups
+ of containers can be considered to be the same.</p></td></tr>
+<!---->			   <tr class="active"><td><a href='../module/mbase_dynamicarrays.html'>MBase_DynamicArrays</a></td><td><a href='../sourcefile/mbase_dynamicarrays.f90.html'>MBase_DynamicArrays.f90</a></td><td><p><strong>PURPOSE OF THIS MODULE</strong>: <br>
+ This module collectively contains <em>dynamic-array-based</em> types from other modules.
+ It is provided so that a user can refer to this module instead of referring to several
+ individual modules when various types are needed concurrently. <br>
+ <br>
+ <strong>Overview</strong>: <br>
+ These dynamic-array-based types are container types that employ dynamic-array (or
+ resizable-array) implementation.  Each individual type can be used to stored items
+ for a specific type where the type of stored items is one of Fortran intrinsic types
+ or a derived type in the <em>Object</em> class (i.e. the <em>Object</em> type or its subtypes). <br>
+ Available container types are: <br>
+ - the <a href="../module/mclass_darrcharacter.html#type-darrcharacter">DArrCharacter</a> type
+   for character string type, <br>
+ - the <a href="../module/mclass_darrcmpxsp.html#type-darrcmpxsp">DArrCmpxSP</a> type
+   for single-precision complex type, <br>
+ - the <a href="../module/mclass_darrcmpxdp.html#type-darrcmpxdp">DArrCmpxDP</a> type
+   for double-precision complex type, <br>
+ - the <a href="../module/mclass_darrcmpxqp.html#type-darrcmpxqp">DArrCmpxQP</a> type
+   for quadruple-precision complex type, <br>
+ - the <a href="../module/mclass_darrinteger1b.html#type-darrinteger1b">DArrInteger1B</a> type
+   for 1-byte (or 8-bit) integer type, <br>
+ - the <a href="../module/mclass_darrinteger2b.html#type-darrinteger2b">DArrInteger2B</a> type
+   for 2-byte (or 16-bit) integer type, <br>
+ - the <a href="../module/mclass_darrinteger4b.html#type-darrinteger4b">DArrInteger4B</a> type
+   for 4-byte (or 32-bit) integer type, <br>
+ - the <a href="../module/mclass_darrinteger8b.html#type-darrinteger8b">DArrInteger8B</a> type
+   for 8-byte (or 64-bit) integer type, <br>
+ - the <a href="../module/mclass_darrlogical.html#type-darrlogical">DArrLogical</a> type
+   for default logical type, <br>
+ - the <a href="../module/mclass_darrrealsp.html#type-darrrealsp">DArrRealSP</a> type
+   for single-precision real type, <br>
+ - the <a href="../module/mclass_darrrealdp.html#type-darrrealdp">DArrRealDP</a> type
+   for double-precision real type, <br>
+ - the <a href="../module/mclass_darrrealqp.html#type-darrrealqp">DArrRealQP</a> type
+   for quadruple-precision real type, and <br>
+ - the <a href="../module/mclass_darrobject.html#type-darrobject">DArrObject</a> type
+   for a derived type in the <em>Object</em> class. <br>
+ Each dynamic-array-based type can represent various forms of containers including: <br>
+ - the last-in-first-out (LIFO) stack container, <br>
+ - the first-in-first-out (FIFO) queue container, <br>
+ - the double-ended queue (deque) container, and <br>
+ - the list container where an item can be added, removed or retrieved
+   at the (valid) specified index. <br>
+ Each individual type provides various common operations that can be
+ categorized as follows. <br>
+ (1) Construction and Destruction.  Methods for these operations include: <br>
+ - <em>CreateEmpty</em> method - method to construct an empty container, <br>
+ - <em>Construct</em> method - method to construct the container from
+   an array of items, and <br>
+ - <em>Destruct</em> method - method to destruct the container by removing all
+   items from the container as well as freeing memory of its component used
+   to store items. <br>
+ (2) Insertion and Removal.  Methods for these operations include: <br>
+ - <em>AddFirst</em> method - method to insert an item to the front of the container, <br>
+ - <em>AddLast</em> method - method to insert an item to the end of the container, <br>
+ - <em>AddAt</em> method - method to insert an item at the specified index, <br>
+ - <em>RemoveFirst</em> method - method to get and remove the first item of the container, <br>
+ - <em>RemoveLast</em> method - method to get and remove the last item of the container, <br>
+ - <em>RemoveAt</em> method - method to get and remove an item at the specified index, <br>
+ - <em>Delete</em> method - method to remove an item at the current iteration while
+   performing an iteration over the container, <br>
+ - <em>Clear</em> method - method to remove all items from the container. <br>
+ - <em>ToArray</em> method - method to retrieve and then remove all items from the container. <br>
+ - <em>Enqueue</em> method - same as the <em>AddLast</em> method provided when used as a queue, <br>
+ - <em>Dequeue</em> method - same as the <em>RemoveFirst</em> method provided when used as a queue, <br>
+ - <em>Push</em> method - same as the <em>AddLast</em> method provided when used as a stack, and <br>
+ - <em>Pop</em> method - same as the <em>RemoveLast</em> method provided when used as a stack. <br>
+ (3) Retrieval.  Methods for this operation include: <br>
+ - <em>PeekFirst</em> method - method to retrieve the first item of the container, <br>
+ - <em>PeekLast</em> method - method to retrieve the last item of the container, <br>
+ - <em>PeekAt</em> method - method to retrieve the item at the specified index, <br>
+ - <em>PeekTop</em> method - same as the <em>PeekLast</em> method provided when used as a stack, and <br>
+ - <em>GetAll</em> method - method to retrieve all items from the container. <br>
+ (4) Inquiry.  Methods for this operation include: <br>
+ - <em>IsEmpty</em> method - method to check whether the container is empty or not, and <br>
+ - <em>GetSize</em> method - method to get the container size (number of items stored). <br>
+ (5) Iteration.  Methods for this operation include: <br>
+ - <em>StartFirst</em> method - method to start a forward iteration over items, <br>
+ - <em>MoveForward</em> method - method to move forward to the next item, <br>
+ - <em>StartLast</em> method - method to start a backward iteration over items, and <br>
+ - <em>MoveBackward</em> method - method to move backward to the next item. <br>
+ <br>
+ <strong>Usage Notes</strong>:  <br>
+ The <em>dynamic-array-based</em> types provided in this module can be considered
+ to be the same as those <em>doubly-linked-list-based</em> types provided in the
+ <a href="../module/mbase_doublylinkedlists.html">MBase_DoublyLinkedLists</a> module
+ although they employ different implementation.  However, the two groups of
+ containers have some subtle differences as discussed below. <br>
+ - Unlike the <em>doubly-linked-list-based</em> types, all <em>dynamic-array-based</em> types
+   commonly require an explicit construction before using other provided operations.
+   As shown above, there are two methods provided to create a container.  First,
+   the <em>CreateEmpty</em> method constructs an empty container with the specified initial
+   capacity.  Second, the <em>Construction</em> method constructs a container from an array
+   of items.  <br>
+ - Also, unlike <em>doubly-linked-list-based</em> types where the <em>Clear</em> method and the
+   <em>Destruct</em> method are considered to be equivalent, the <em>Destruct</em> method of a
+   <em>dynamic-array-based</em> type frees memory of its component used to store items
+   in addition to removing all items from the container (which is the operation
+   of the <em>Clear</em> method).  Therefore, after calling the <em>Destruct</em> method, a user
+   must reconstruct the container (by calling either the <em>Construction</em> or the
+   <em>CreateEmpty</em> method again) before using other operations once more.  Otherwise,
+   the container's behavior may not be as expected (or the program may even crash). <br>
+ Besides methods just discussed above, all other operations provided by both groups
+ of containers can be considered to be the same. <br>
+ See the <a href="../module/mclass_dynamicarrays.html">MClass_DynamicArrays</a>
+ module for discussions about the <em>Dynamic-Array</em> concept and its strategy used
+ for growing and shrinking a resizable array, which is similar to the strategy
+ employed by all <em>dynamic-array-based</em> types provided in this module.  It should
+ be noted that all <em>dynamic-array-based</em> types provided in the <em>MClass_DynamicArrays</em>
+ module are functionally similar to those provided in this module.  However, each
+ individual type provided in this module can only be used for a specific type of
+ items to be stored whereas each individual type in the <em>MClass_DynamicArrays</em>
+ is a generic container that can be used for various types of items to be stored
+ providing that the size (in bytes) of the data item to be stored is known at
+ compile time.</p></td></tr>
+<!--active-->			   <tr class=""><td><a href='../module/mbase_hashtables.html'>MBase_HashTables</a></td><td><a href='../sourcefile/mbase_hashtables.f90.html'>MBase_HashTables.f90</a></td><td><p><strong>PURPOSE OF THIS MODULE</strong>: <br>
+ This module collectively contains <em>hash-table</em> container types from other modules. It is
+ provided so that a user can refer to this module instead of referring to several individual
+ modules when various types are needed concurrently. <br>
+ <br>
+ <strong>Overview</strong>: <br>
+ These hash-table container types are container types that employ a hash table implementation
+ to provide common operations for an unordered symbol table.  Technically, all of them employ
+ the open-addressing as a collision resolution technique where the hash resolution is performed
+ through probing.  They provide three probing algorithms: linear probing, quadratic probing and
+ double hashing.  By default, the linear probing algorithm is used.  However, a user can specify
+ other probing algorithm during a construction of a table. <br>
+ Each individual type can be used to store key-value pairs for a specific type of keys where the
+ allowed types of stored keys include the Fortran intrinsic CHARACTER, INTEGER and REAL types as
+ well as any derived type in the <em>Object</em> class.  Most of the hash-table container types (except
+ the <em>HTabObject</em> type) utilize an unlimited polymorphic type to store values; therefore, a type
+ of inserted values can be any data type.  Unlike other types, the <em>HTabObject</em> type uses the
+ <em>Object</em> type to represent both key and value, and it requires only one argument (instead of
+ two) when inserting or retrieving the key and its associated value.  Therefore, its application
+ programming interface (API) is slightly different from the API of other hash-table types.  <br>
+ Available hash-table-based container types include: <br>
+ - the <a href="../module/mclass_htabcharacter.html#type-htabcharacter">HTabCharacter</a> type
+   for character string key type, <br>
+ - the <a href="../module/mclass_htabinteger1b.html#type-htabinteger1b">HTabInteger1B</a> type
+   for 1-byte (or 8-bit) integer key type, <br>
+ - the <a href="../module/mclass_htabinteger2b.html#type-htabinteger2b">HTabInteger2B</a> type
+   for 2-byte (or 16-bit) integer key type, <br>
+ - the <a href="../module/mclass_htabinteger4b.html#type-htabinteger4b">HTabInteger4B</a> type
+   for 4-byte (or 32-bit) integer key type, <br>
+ - the <a href="../module/mclass_htabinteger8b.html#type-htabinteger8b">HTabInteger8B</a> type
+   for 8-byte (or 64-bit) integer key type, <br>
+ - the <a href="../module/mclass_htabrealsp.html#type-htabrealsp">HTabRealSP</a> type
+   for single-precision real key type, <br>
+ - the <a href="../module/mclass_htabrealdp.html#type-htabrealdp">HTabRealDP</a> type
+   for double-precision real key type, <br>
+ - the <a href="../module/mclass_htabrealqp.html#type-htabrealqp">HTabRealQP</a> type
+   for quadruple-precision real key type, <br>
+ - the <a href="../module/mclass_htabobject.html#type-htabobject">HTabObject</a>
+   type for a derived type of key-value pair in the <em>Object</em> class. <br>
+ Each hash-table-based container type represents an unordered symbol table where various common
+ operations are provided and can be categorized as follows. <br>
+ (1) Construction and Destruction.  Methods for these operations include: <br>
+ - <em>CreateEmpty</em> method - method to construct an empty container, <br>
+ - <em>Construct</em> method - method to construct a container from arrays of keys and values, and <br>
+ - <em>Destruct</em> method - method to destruct a container by removing all key-value pairs from
+     the container as well as free memory storage occupied by the container. <br>
+ (2) Insertion and Removal.  Methods for these operations include: <br>
+ - <em>Insert</em> method - method to insert a key and its associated value into a container, <br>
+ - <em>Remove</em> method - method to remove a key (and its associated value) from a container, and <br>
+ - <em>Clear</em> method - method to remove all key-value pairs from a container. <br>
+ (3) Retrieval.  A method for this operation is: <br>
+ - <em>GetKeys</em> method - method to retrieve all keys and optionally all their associated values. <br>
+ (4) Inquiry.  Methods for this operation include: <br>
+ - <em>IsEmpty</em> method - method to check whether the container is empty or not, <br>
+ - <em>Contain</em> method - method to check whether the specified key is in the container or not, and <br>
+ - <em>GetSize</em> method - method to get the container size (number of key-value pairs stored). <br>
+ (5) Iteration.  Methods for this operation include: <br>
+ - <em>StartFirst</em> method - method to start a forward iteration over key-value pairs, and <br>
+ - <em>MoveForward</em> method - method to move forward to the next key-value pair. <br></p></td></tr>
+<!---->			   <tr class="active"><td><a href='../module/mbase_priorityqueues.html'>MBase_PriorityQueues</a></td><td><a href='../sourcefile/mbase_priorityqueues.f90.html'>MBase_PriorityQueues.f90</a></td><td><p><strong>PURPOSE OF THIS MODULE</strong>: <br>
+ This module collectively contains <em>priority-queue</em> container types from other modules.
+ It is provided so that a user can refer to this module instead of referring to several
+ individual modules when various types are needed concurrently. <br>
+ <br>
+ <strong>Overview</strong>: <br>
+ These priority-queue container types are container types that employ a binary heap
+ implementation (with the exception of the <em>PQBasic</em> type, which employs an elementary
+ implementation) to provide common operations for a priority queue.  They can be used as
+ a max-priority queue or a min-priority queue.  By default, each type represents the
+ max-priority queue but a user can specify the optional <em>MinPQ</em> argument to true when
+ constructing the container so that it can be employed as the min-priority queue instead. <br>
+ Each individual type can be used to store keys for a specific type of keys.   The allowed
+ type of stored keys is one of Fortran intrinsic <em>comparable</em> types (i.e. CHARACTER, INTEGER
+ and REAL) or any derived type in the <em>Comparable</em> class. <br>
+ Specifically, available priority-queue container types include: <br>
+ - the <a href="../module/mclass_pqcharacter.html#type-pqcharacter">PQCharacter</a> type
+   for character string key type, <br>
+ - the <a href="../module/mclass_pqinteger1b.html#type-pqinteger1b">PQInteger1B</a> type
+   for 1-byte (or 8-bit) integer key type, <br>
+ - the <a href="../module/mclass_pqinteger2b.html#type-pqinteger2b">PQInteger2B</a> type
+   for 2-byte (or 16-bit) integer key type, <br>
+ - the <a href="../module/mclass_pqinteger4b.html#type-pqinteger4b">PQInteger4B</a> type
+   for 4-byte (or 32-bit) integer key type, <br>
+ - the <a href="../module/mclass_pqinteger8b.html#type-pqinteger8b">PQInteger8B</a> type
+   for 8-byte (or 64-bit) integer key type, <br>
+ - the <a href="../module/mclass_pqrealsp.html#type-pqrealsp">PQRealSP</a> type
+   for single-precision real key type, <br>
+ - the <a href="../module/mclass_pqrealdp.html#type-pqrealdp">PQRealDP</a> type
+   for double-precision real key type, <br>
+ - the <a href="../module/mclass_pqrealqp.html#type-pqrealqp">PQRealQP</a> type
+   for quadruple-precision real key type, <br>
+ - the <a href="../module/mclass_pqheap.html#type-pqheap">PQHeap</a> type for type
+   of key in <em>Comparable</em> class, and <br>
+ - the <a href="../module/mclass_pqbasic.html#type-pqbasic">PQBasic</a> type for type
+   of key in <em>Comparable</em> class. <br>
+ Each priority-queue container type represents a priority queue where various common
+ operations are provided and can be categorized as follows. <br>
+ (1) Construction and Destruction.  Methods for these operations include: <br>
+ - <em>CreateEmpty</em> method - method to construct an empty container, <br>
+ - <em>Construct</em> method - method to construct a container from an array of keys, and <br>
+ - <em>Destruct</em> method - method to destruct a container by removing all keys from
+     the container as well as free memory storage occupied by the container. <br>
+ (2) Insertion and Removal.  Methods for these operations include: <br>
+ - <em>Insert</em> method - method to insert a new key into a container, and <br>
+ - <em>Remove</em> method - method to remove a top-priority key from a container. <br>
+ (3) Retrieval.  A method for this operation is: <br>
+ - <em>Peek</em> method - method to retrieve a top-priority key from a container. <br>
+ (4) Inquiry.  Methods for this operation include: <br>
+ - <em>IsEmpty</em> method - method to check whether the container is empty or not, and <br>
+ - <em>GetSize</em> method - method to get the container size (number of key-value pairs stored). <br></p></td></tr>
+<!--active-->			   <tr class=""><td><a href='../module/mclass_basecollection.html'>MClass_BaseCollection</a></td><td><a href='../sourcefile/mclass_basecollection.f90.html'>MClass_BaseCollection.f90</a></td><td><p><strong>PURPOSE OF THIS MODULE</strong>: <br>
+  This module contains the <em>BaseCollection</em> type and its related routines.  The <em>BaseCollection</em>
+  type is an abstract data type (ADT) representing a collection, which is a group of objects,
+  known as its items or elements.  Some collections allow duplicate elements while others do not.
+  Some are ordered collections and others are unordered collections. <br>
+  The <em>BaseCollection</em> type defines an application programming interface (API) for various common
+  operations.  All other collection types should extend from this base type. <br>
+  It is important to note that the <em>BaseCollection</em> type is a subtype of the <em>Object</em> type.
+  Therefore, it inherits all deferred procedures required by a subtype of the <em>Object</em> type. <br></p></td></tr>
+<!---->			   <tr class="active"><td><a href='../module/mclass_baseiterable.html'>MClass_BaseIterable</a></td><td><a href='../sourcefile/mclass_baseiterable.f90.html'>MClass_BaseIterable.f90</a></td><td><p><strong>PURPOSE OF THIS MODULE</strong>: <br>
+  This module contains the <em>BaseIterable</em> type and its related routines.  The <em>BaseIterable</em>
+  type is an abstract data type extending the <em>BaseCollection</em> type.  It defines two additional
+  methods for an iteration over items stored in a collection.  The <em>StartFirst</em> method is used
+  to start an iteration and the <em>MoveForward</em> method is used to move to the next iteration. <br>
+  <br>
+  <strong>Usage</strong>:  <br>
+  The following code snippet illustrates how to iterate over the collection.
+<br>
+<Pre><Code style="color:MidnightBlue;">
+  ! start forward iteration (from the first item)
+  IsEmpty = Collection%StartFirst()
+  IF (.NOT.IsEmpty) DoSomeThing...
+  DO
+      ! move to the next iteration
+      IsTheEnd = Collection%MoveForward()
+      ! check whether we reach the end of the collection or not
+      IF (IsTheEnd) EXIT
+      ! if not, do the task we need
+      DoSomeThing...
+  END DO
+  </Code></Pre></p><a href="../module/mclass_baseiterable.html" class="pull-right"><emph>Read more&hellip;</emph></a></td></tr>
+<!--active-->			   <tr class=""><td><a href='../module/mclass_basesymtable.html'>MClass_BaseSymTable</a></td><td><a href='../sourcefile/mclass_basesymtable.f90.html'>MClass_BaseSymTable.f90</a></td><td><p><strong>PURPOSE OF THIS MODULE</strong>: <br>
+  This module contains the <em>BaseSymTable</em> type and its related routines.  The <em>BaseSymTable</em>
+  type is an abstract data type representing a symbol table, which is a collection that
+  associates a <em>value</em> with a <em>key</em>.  The user can insert key-value pairs into the symbol
+  table with the expectation of later being able to search for the value associated with
+  a given key. <br>
+  The <em>BaseSymTable</em> type extends the <em>BaseCollection</em> type to define additional methods for
+  various common operations of a symbol table.  All other symbol table types (unordered or
+  ordered ones) should extend from this base type. <br></p></td></tr>
+<!---->			   <tr class="active"><td><a href='../module/mclass_darrcharacter.html'>MClass_DArrCharacter</a></td><td><a href='../sourcefile/mclass_darrcharacter.f90.html'>MClass_DArrCharacter.f90</a></td><td><p><strong>PURPOSE OF THIS MODULE</strong>: <br>
+  This module contains the <em>DArrCharacter</em> type and related routines.
+  The <em>DArrCharacter</em> type is a container with <em>CHARACTER</em> as the type
+  of its stored items.  It employs a dynamic-array implementation where
+  items are stored as a resizable array. <br>
+  See the <a href="../module/mclass_dynamicarrays.html">MClass_DynamicArrays</a>
+  module for discussions about the <em>Dynamic-Array</em> concept and its strategy
+  used for growing and shrinking the array, which is similar to the strategy
+  employed by the <em>DArrCharacter</em> type. <br>
+  See the <a href="../module/mbase_dynamicarrays.html">MBase_DynamicArrays</a>
+  module for an overview and usage notes of a <em>dynamic-array-based</em> type.   A user
+  may use the <em>MBase_DynamicArrays</em> module instead of using this module directly.</p></td></tr>
+<!--active-->			   <tr class=""><td><a href='../module/mclass_darrcmpxdp.html'>MClass_DArrCmpxDP</a></td><td><a href='../sourcefile/mclass_darrcmpxdp.f90.html'>MClass_DArrCmpxDP.f90</a></td><td><p><strong>PURPOSE OF THIS MODULE</strong>: <br>
+  This module contains the <em>DArrCmpxDP</em> type and related routines.
+  The <em>DArrCmpxDP</em> type is a container with <em>COMPLEX(KIND=kDouble)</em> as the type
+  of its stored items.  It employs a dynamic-array implementation where
+  items are stored as a resizable array. <br>
+  See the <a href="../module/mclass_dynamicarrays.html">MClass_DynamicArrays</a>
+  module for discussions about the <em>Dynamic-Array</em> concept and its strategy
+  used for growing and shrinking the array, which is similar to the strategy
+  employed by the <em>DArrCmpxDP</em> type. <br>
+  See the <a href="../module/mbase_dynamicarrays.html">MBase_DynamicArrays</a>
+  module for an overview and usage notes of a <em>dynamic-array-based</em> type.   A user
+  may use the <em>MBase_DynamicArrays</em> module instead of using this module directly.</p></td></tr>
+<!---->			   <tr class="active"><td><a href='../module/mclass_darrcmpxqp.html'>MClass_DArrCmpxQP</a></td><td><a href='../sourcefile/mclass_darrcmpxqp.f90.html'>MClass_DArrCmpxQP.f90</a></td><td><p><strong>PURPOSE OF THIS MODULE</strong>: <br>
+  This module contains the <em>DArrCmpxQP</em> type and related routines.
+  The <em>DArrCmpxQP</em> type is a container with <em>COMPLEX(KIND=kQuad)</em> as the type
+  of its stored items.  It employs a dynamic-array implementation where
+  items are stored as a resizable array. <br>
+  See the <a href="../module/mclass_dynamicarrays.html">MClass_DynamicArrays</a>
+  module for discussions about the <em>Dynamic-Array</em> concept and its strategy
+  used for growing and shrinking the array, which is similar to the strategy
+  employed by the <em>DArrCmpxQP</em> type. <br>
+  See the <a href="../module/mbase_dynamicarrays.html">MBase_DynamicArrays</a>
+  module for an overview and usage notes of a <em>dynamic-array-based</em> type.   A user
+  may use the <em>MBase_DynamicArrays</em> module instead of using this module directly.</p></td></tr>
+<!--active-->			   <tr class=""><td><a href='../module/mclass_darrcmpxsp.html'>MClass_DArrCmpxSP</a></td><td><a href='../sourcefile/mclass_darrcmpxsp.f90.html'>MClass_DArrCmpxSP.f90</a></td><td><p><strong>PURPOSE OF THIS MODULE</strong>: <br>
+  This module contains the <em>DArrCmpxSP</em> type and related routines.
+  The <em>DArrCmpxSP</em> type is a container with <em>COMPLEX(KIND=kSingle)</em> as the type
+  of its stored items.  It employs a dynamic-array implementation where
+  items are stored as a resizable array. <br>
+  See the <a href="../module/mclass_dynamicarrays.html">MClass_DynamicArrays</a>
+  module for discussions about the <em>Dynamic-Array</em> concept and its strategy
+  used for growing and shrinking the array, which is similar to the strategy
+  employed by the <em>DArrCmpxSP</em> type. <br>
+  See the <a href="../module/mbase_dynamicarrays.html">MBase_DynamicArrays</a>
+  module for an overview and usage notes of a <em>dynamic-array-based</em> type.   A user
+  may use the <em>MBase_DynamicArrays</em> module instead of using this module directly.</p></td></tr>
+<!---->			   <tr class="active"><td><a href='../module/mclass_darrinteger1b.html'>MClass_DArrInteger1B</a></td><td><a href='../sourcefile/mclass_darrinteger1b.f90.html'>MClass_DArrInteger1B.f90</a></td><td><p><strong>PURPOSE OF THIS MODULE</strong>: <br>
+  This module contains the <em>DArrInteger1B</em> type and related routines.
+  The <em>DArrInteger1B</em> type is a container with <em>INTEGER(KIND=kInt8)</em> as the type
+  of its stored items.  It employs a dynamic-array implementation where
+  items are stored as a resizable array. <br>
+  See the <a href="../module/mclass_dynamicarrays.html">MClass_DynamicArrays</a>
+  module for discussions about the <em>Dynamic-Array</em> concept and its strategy
+  used for growing and shrinking the array, which is similar to the strategy
+  employed by the <em>DArrInteger1B</em> type. <br>
+  See the <a href="../module/mbase_dynamicarrays.html">MBase_DynamicArrays</a>
+  module for an overview and usage notes of a <em>dynamic-array-based</em> type.   A user
+  may use the <em>MBase_DynamicArrays</em> module instead of using this module directly.</p></td></tr>
+<!--active-->			   <tr class=""><td><a href='../module/mclass_darrinteger2b.html'>MClass_DArrInteger2B</a></td><td><a href='../sourcefile/mclass_darrinteger2b.f90.html'>MClass_DArrInteger2B.f90</a></td><td><p><strong>PURPOSE OF THIS MODULE</strong>: <br>
+  This module contains the <em>DArrInteger2B</em> type and related routines.
+  The <em>DArrInteger2B</em> type is a container with <em>INTEGER(KIND=kInt16)</em> as the type
+  of its stored items.  It employs a dynamic-array implementation where
+  items are stored as a resizable array. <br>
+  See the <a href="../module/mclass_dynamicarrays.html">MClass_DynamicArrays</a>
+  module for discussions about the <em>Dynamic-Array</em> concept and its strategy
+  used for growing and shrinking the array, which is similar to the strategy
+  employed by the <em>DArrInteger2B</em> type. <br>
+  See the <a href="../module/mbase_dynamicarrays.html">MBase_DynamicArrays</a>
+  module for an overview and usage notes of a <em>dynamic-array-based</em> type.   A user
+  may use the <em>MBase_DynamicArrays</em> module instead of using this module directly.</p></td></tr>
+<!---->			   <tr class="active"><td><a href='../module/mclass_darrinteger4b.html'>MClass_DArrInteger4B</a></td><td><a href='../sourcefile/mclass_darrinteger4b.f90.html'>MClass_DArrInteger4B.f90</a></td><td><p><strong>PURPOSE OF THIS MODULE</strong>: <br>
+  This module contains the <em>DArrInteger4B</em> type and related routines.
+  The <em>DArrInteger4B</em> type is a container with <em>INTEGER(KIND=kInt32)</em> as the type
+  of its stored items.  It employs a dynamic-array implementation where
+  items are stored as a resizable array. <br>
+  See the <a href="../module/mclass_dynamicarrays.html">MClass_DynamicArrays</a>
+  module for discussions about the <em>Dynamic-Array</em> concept and its strategy
+  used for growing and shrinking the array, which is similar to the strategy
+  employed by the <em>DArrInteger4B</em> type. <br>
+  See the <a href="../module/mbase_dynamicarrays.html">MBase_DynamicArrays</a>
+  module for an overview and usage notes of a <em>dynamic-array-based</em> type.   A user
+  may use the <em>MBase_DynamicArrays</em> module instead of using this module directly.</p></td></tr>
+<!--active-->			   <tr class=""><td><a href='../module/mclass_darrinteger8b.html'>MClass_DArrInteger8B</a></td><td><a href='../sourcefile/mclass_darrinteger8b.f90.html'>MClass_DArrInteger8B.f90</a></td><td><p><strong>PURPOSE OF THIS MODULE</strong>: <br>
+  This module contains the <em>DArrInteger8B</em> type and related routines.
+  The <em>DArrInteger8B</em> type is a container with <em>INTEGER(KIND=kInt64)</em> as the type
+  of its stored items.  It employs a dynamic-array implementation where
+  items are stored as a resizable array. <br>
+  See the <a href="../module/mclass_dynamicarrays.html">MClass_DynamicArrays</a>
+  module for discussions about the <em>Dynamic-Array</em> concept and its strategy
+  used for growing and shrinking the array, which is similar to the strategy
+  employed by the <em>DArrInteger8B</em> type. <br>
+  See the <a href="../module/mbase_dynamicarrays.html">MBase_DynamicArrays</a>
+  module for an overview and usage notes of a <em>dynamic-array-based</em> type.   A user
+  may use the <em>MBase_DynamicArrays</em> module instead of using this module directly.</p></td></tr>
+<!---->			   <tr class="active"><td><a href='../module/mclass_darrlogical.html'>MClass_DArrLogical</a></td><td><a href='../sourcefile/mclass_darrlogical.f90.html'>MClass_DArrLogical.f90</a></td><td><p><strong>PURPOSE OF THIS MODULE</strong>: <br>
+  This module contains the <em>DArrLogical</em> type and related routines.
+  The <em>DArrLogical</em> type is a container with <em>LOGICAL</em> as the type
+  of its stored items.  It employs a dynamic-array implementation where
+  items are stored as a resizable array. <br>
+  See the <a href="../module/mclass_dynamicarrays.html">MClass_DynamicArrays</a>
+  module for discussions about the <em>Dynamic-Array</em> concept and its strategy
+  used for growing and shrinking the array, which is similar to the strategy
+  employed by the <em>DArrLogical</em> type. <br>
+  See the <a href="../module/mbase_dynamicarrays.html">MBase_DynamicArrays</a>
+  module for an overview and usage notes of a <em>dynamic-array-based</em> type.   A user
+  may use the <em>MBase_DynamicArrays</em> module instead of using this module directly.</p></td></tr>
+<!--active-->			   <tr class=""><td><a href='../module/mclass_darrobject.html'>MClass_DArrObject</a></td><td><a href='../sourcefile/mclass_darrobject.f90.html'>MClass_DArrObject.f90</a></td><td><p><strong>PURPOSE OF THIS MODULE</strong>: <br>
+  This module contains the <em>DArrObject</em> type and related routines.
+  The <em>DArrObject</em> type is a container with <em>CLASS(Object)</em> as the type
+  of its stored items.  It employs a dynamic-array implementation where
+  items are stored as a resizable array.  All derived types extending from the
+  <em>Object</em> type can be used with this container. <br>
+  Unlike the <a href="../module/mclass_listassignable.html">ListObject</a> type,
+  the <em>DArrObject</em> type does not allow items with different types to be stored
+  in the same container.  The <em>DArrObject</em> type requires a user to specify the
+  type of items to be stored via the <em>Mold</em> argument when an empty container is
+  created.  Alternatively, the user may implicitly specify the type of items to be
+  stored via the <em>Items</em> argument when a container is constructed from an array
+  of items.  Also, it is important to note that the type of an item specified in
+  all other routines must be the same as the type of stored items of the container.
+  Otherwise, the container may not behave as expected. <br>
+  See the <a href="../module/mclass_dynamicarrays.html">MClass_DynamicArrays</a>
+  module for discussions about the <em>Dynamic-Array</em> concept and its strategy
+  used for growing and shrinking the array, which is similar to the strategy
+  employed by the <em>DArrObject</em> type. <br>
+  See the <a href="../module/mbase_dynamicarrays.html">MBase_DynamicArrays</a>
+  module for an overview and usage notes of a <em>dynamic-array-based</em> type.   A user
+  may use the <em>ModBase_DynamicArrays</em> module instead of using this module directly.</p></td></tr>
+<!---->			   <tr class="active"><td><a href='../module/mclass_darrrealdp.html'>MClass_DArrRealDP</a></td><td><a href='../sourcefile/mclass_darrrealdp.f90.html'>MClass_DArrRealDP.f90</a></td><td><p><strong>PURPOSE OF THIS MODULE</strong>: <br>
+  This module contains the <em>DArrRealDP</em> type and related routines.
+  The <em>DArrRealDP</em> type is a container with <em>REAL(KIND=kDouble)</em> as the type
+  of its stored items.  It employs a dynamic-array implementation where
+  items are stored as a resizable array. <br>
+  See the <a href="../module/mclass_dynamicarrays.html">MClass_DynamicArrays</a>
+  module for discussions about the <em>Dynamic-Array</em> concept and its strategy
+  used for growing and shrinking the array, which is similar to the strategy
+  employed by the <em>DArrRealDP</em> type. <br>
+  See the <a href="../module/mbase_dynamicarrays.html">MBase_DynamicArrays</a>
+  module for an overview and usage notes of a <em>dynamic-array-based</em> type.   A user
+  may use the <em>MBase_DynamicArrays</em> module instead of using this module directly.</p></td></tr>
+<!--active-->			   <tr class=""><td><a href='../module/mclass_darrrealqp.html'>MClass_DArrRealQP</a></td><td><a href='../sourcefile/mclass_darrrealqp.f90.html'>MClass_DArrRealQP.f90</a></td><td><p><strong>PURPOSE OF THIS MODULE</strong>: <br>
+  This module contains the <em>DArrRealQP</em> type and related routines.
+  The <em>DArrRealQP</em> type is a container with <em>REAL(KIND=kQuad)</em> as the type
+  of its stored items.  It employs a dynamic-array implementation where
+  items are stored as a resizable array. <br>
+  See the <a href="../module/mclass_dynamicarrays.html">MClass_DynamicArrays</a>
+  module for discussions about the <em>Dynamic-Array</em> concept and its strategy
+  used for growing and shrinking the array, which is similar to the strategy
+  employed by the <em>DArrRealQP</em> type. <br>
+  See the <a href="../module/mbase_dynamicarrays.html">MBase_DynamicArrays</a>
+  module for an overview and usage notes of a <em>dynamic-array-based</em> type.   A user
+  may use the <em>MBase_DynamicArrays</em> module instead of using this module directly.</p></td></tr>
+<!---->			   <tr class="active"><td><a href='../module/mclass_darrrealsp.html'>MClass_DArrRealSP</a></td><td><a href='../sourcefile/mclass_darrrealsp.f90.html'>MClass_DArrRealSP.f90</a></td><td><p><strong>PURPOSE OF THIS MODULE</strong>: <br>
+  This module contains the <em>DArrRealSP</em> type and related routines.
+  The <em>DArrRealSP</em> type is a container with <em>REAL(KIND=kSingle)</em> as the type
+  of its stored items.  It employs a dynamic-array implementation where
+  items are stored as a resizable array. <br>
+  See the <a href="../module/mclass_dynamicarrays.html">MClass_DynamicArrays</a>
+  module for discussions about the <em>Dynamic-Array</em> concept and its strategy
+  used for growing and shrinking the array, which is similar to the strategy
+  employed by the <em>DArrRealSP</em> type. <br>
+  See the <a href="../module/mbase_dynamicarrays.html">MBase_DynamicArrays</a>
+  module for an overview and usage notes of a <em>dynamic-array-based</em> type.   A user
+  may use the <em>MBase_DynamicArrays</em> module instead of using this module directly.</p></td></tr>
+<!--active-->			   <tr class=""><td><a href='../module/mclass_dynamicarrays.html'>MClass_DynamicArrays</a></td><td><a href='../sourcefile/mclass_dynamicarrays.f90.html'>MClass_DynamicArrays.f90</a></td><td><p><strong>PURPOSE OF THIS MODULE</strong>: <br>
+  This module contains <em>dynamic-array-based</em> collection types and their related routines.
+  A <em>dynamic-array-based</em> type is a collection type employing a resizable array (or the
+  so-called dynamic array) that can increase or decrease its size depending on the current
+  collection size (number of items contained in the collection) relative to the current
+  collection capacity.  <br>
+  Available collection types based on the dynamic-array concept include:  <br>
+  - the <em>StackArray</em> type that represents a last-in-first-out (LIFO) stack,  <br>
+  - the <em>QueueArray</em> type that represents a first-in-first-out (FIFO) queue,  <br>
+  - the <em>DequeArray</em> type that represents a double-ended queue (deque), and  <br>
+  - the <em>ListArray</em> type that represents a list where an item can be added, removed or
+    retrieved at the (valid) specified index.  <br>
+  <br>
+  <strong>Usage Notes</strong>:  <br>
+  - All <em>dynamic-array-based</em> collection types commonly require an explicit construction
+    before using other provided operations.  There are two methods provided to create a
+    collection.  First, the <em>CreateEmpty</em> method constructs an empty collection with the
+    specified initial capacity.  Second, the <em>Construction</em> method constructs a collection
+    based on the given input (either from an array of items or from another collection). <br>
+  - All available collection types are subtypes of the <em>BaseDynArr</em> abstract type, which is
+    a private type that is only available in this module.  The <em>BaseDynArr</em> type provides
+    the <em>Growing</em> (private) method to expand the collection's capacity and the <em>Shrinking</em>
+    (also private) method to reduce the capacity. <br>
+    When the collection is full (its current size is equal to its current capacity), its
+    capacity is doubled by default.  However, if the <em>IncSize</em> argument is specified during
+    a construction of the collection, the collection's capacity increases by the amount
+    specified (the specified value must be positive) instead of doubling.  <br>
+    When the collection's size is reducing due to removing items from the collection, its
+    capacity stays the same by default.  Nevertheless, if the <em>Shrink</em> flag is specified
+    and its value is true during a construction of the collection, the collection's capacity
+    is halved when its current size is one quarter of its capacity.  <br>
+  - Instead of using as a deque, the <em>DequeArray</em> type can also be used as a FIFO queue or
+    a LIFO stack.  <br>
+  - Instead of using as a list, the <em>ListArray</em> type can also be used as a deque, a FIFO
+    queue or a LIFO stack. <br>
+  <br>
+  <strong>Important Notes</strong>:  <br>
+  (1) By design, although all <em>dynamic-array-based</em> types are generic containers meaning
+      that they can be used to store items of any data types, they must be employed to store
+      items of only one specific data type.  To store items of another data type, they must
+      be cleared and/or destructed before inserting items of different data type. <br>
+  (2) To be able to successfully retrieve stored items, the specified output item must have
+      the same (concrete) type as that of stored items. <br>
+  (3) Additionally, if type of the stored items is a derived one that is NOT in the <em>Object</em>
+      class and this type has allocatable and/or pointer components, a user must specify the
+      optional <em>ItemCopy</em> argument when trying to retrieve the stored items.  The <em>ItemCopy</em>
+      argument is a user-defined procedure to copy an unlimited polymorphic entity.  It must
+      must provide a type-guard statement to check the compatibility of concrete types of its
+      arguments.  It must also handle the storage allocation (and/or the assignment) of those
+      allocatable (and/or pointer) components as appropriate. <br></p></td></tr>
+<!---->			   <tr class="active"><td><a href='../module/mclass_hashlist.html'>MClass_HashList</a></td><td><a href='../sourcefile/mclass_hashlist.f90.html'>MClass_HashList.f90</a></td><td><p><strong>PURPOSE OF THIS MODULE</strong>: <br>
+  This module contains the <em>HashList</em> type and its supporting routines and data type.
+  The <em>HashList</em> type is a collection type that employs a separate-chaining hash table
+  implementation to provide common operations for an unordered symbol table. <br>
+  The <em>HashList</em> type uses the <em>KeyUnordered</em> type to store its keys and the <em>GenData</em>
+  type to store its values.  Therefore, it can be used to store key-value pairs of any
+  data types (except the <em>LOGICAL</em> type for the keys).  Like other collection types,
+  however, it must be employed to store key-value pairs of only specific key type and
+  one specific value type.  To store key-value pairs of another key type (or another
+  value type), it must be destructed before inserting items of different key type (or
+  different value type). <br>
+  As a symbol table, the <em>HashList</em> type does not allow duplicated keys.  Therefore, if
+  an inserted key is equal to a key stored in the table, an associated value of the stored
+  key is replaced by an associated value of the inserted key.  As an <em>unordered</em> symbol
+  table, the <em>HashList</em> type makes no guarantees as to the iteration order of the table.
+  In particular, it does not guarantee that the order will remain the same over time. <br>
+  Technically, the <em>HashList</em> type utilizes the <em>IntrusiveHashList</em> type as its component
+  to store its hash-list nodes.  As an <em>intrusive</em> container, the <em>IntrusiveHashList</em> type,
+  which is based on a separate-chaining hash table implementation, provides common hash-table
+  operations without a memory management task.  The memory management task of the inserted
+  hash-list nodes is handled by the <em>HashList</em> type.  <br></p></td></tr>
+<!--active-->			   <tr class=""><td><a href='../module/mclass_hashmap.html'>MClass_HashMap</a></td><td><a href='../sourcefile/mclass_hashmap.f90.html'>MClass_HashMap.f90</a></td><td><p><strong>PURPOSE OF THIS MODULE</strong>: <br>
+  This module contains the <em>HashMap</em> type and its supporting routines and data type.  The
+  <em>HashMap</em> type is a collection type that employs an open-addressing hash table implementation
+  to provide common operations for an unordered symbol table. <br>
+  Unlike the <em>list-based</em> and <em>tree-based</em> symbol table types, which can be used instantly by
+  inserting objects into a collection, the <em>HashMap</em> type requires an explicit construction
+  before using other provided operations.  There are two methods provided to create the
+  collection.  The <em>CreateEmpty</em> method constructs an empty table with optional multiple
+  arguments (including an initial capacity, a load factor, a probing algorithm, and a hash
+  function used to compute a hash code of a key) whereas the <em>Construct</em> method constructs
+  a table from arrays of keys and values. <br>
+  The <em>HashMap</em> type uses the <em>KeyUnordered</em> type to store its keys and the <em>GenData</em> type
+  to store its values.  Therefore, it can be used to store key-value pairs of any data types
+  (except the <em>LOGICAL</em> type for the keys).  Like other collection types, however, it must
+  be employed to store key-value pairs of only specific key type and one specific value type.
+  To store key-value pairs of another key type (or another value type), it must be destructed
+  before inserting items of different key type (or different value type). <br>
+  As a symbol table, the <em>HashMap</em> type does not allow duplicated keys.  Therefore, if an
+  inserted key is equal to a key stored in the table, an associated value of the stored key
+  is replaced by an associated value of the inserted key.  As an <em>unordered</em> symbol table, the
+  <em>HashMap</em> type makes no guarantees as to the iteration order of the table.  In particular,
+  it does not guarantee that the order will remain the same over time. <br>
+  Technically, the <em>HashMap</em> type employs the open-addressing as a collision resolution
+  technique where the hash resolution is performed through probing.  It provides three probing
+  algorithms: linear probing, quadratic probing and double hashing.  By default, the linear
+  probing algorithm is used.  However, a user can specify other probing algorithm during the
+  construction of the table. <br></p></td></tr>
+<!---->			   <tr class="active"><td><a href='../module/mclass_hashset.html'>MClass_HashSet</a></td><td><a href='../sourcefile/mclass_hashset.f90.html'>MClass_HashSet.f90</a></td><td><p><strong>PURPOSE OF THIS MODULE</strong>: <br>
+  This module contains the <em>HashSet</em> type and its supporting routines and data type.
+  The <em>HashSet</em> type is a collection type that employs an open-addressing hash table
+  implementation to provide common operations for an unordered set.  Like any other
+  set collection types, the <em>HashSet</em> type does not allow duplicated items. <br>
+  The <em>HashSet</em> type requires an explicit construction before using other provided
+  operations.  There are two methods provided to create a collection.  The <em>CreateEmpty</em>
+  method constructs an empty set with optional multiple arguments (including an initial
+  capacity, a load factor, a probing algorithm, and a hash function used to compute
+  a hash code of an item) whereas the <em>Construct</em> method constructs a set from an array
+  items.  As an unordered set, the <em>HashSet</em> type makes no guarantees as to the iteration
+  order of the set.  In particular, it does not guarantee that the order will remain
+  the same over time. <br>
+  The <em>HashSet</em> type uses the <em>KeyUnordered</em> type to store its set items.  Therefore, it
+  can be used to store items of any data type, except the <em>LOGICAL</em> type.  Like other
+  collection types, however, it must be employed to store items of only one particular
+  data type.  To store items of another data type, it must be destructed before inserting
+  items of different data type. <br>
+  Technically, the <em>HashSet</em> type employs the open-addressing as a collision resolution
+  technique where the hash resolution is performed through probing.  It provides three
+  probing algorithms: linear probing, quadratic probing and double hashing.  By default,
+  the linear probing algorithm is used.  However, a user can specify other probing
+  algorithm during the construction of the hash set. <br></p></td></tr>
+<!--active-->			   <tr class=""><td><a href='../module/mclass_hashtree.html'>MClass_HashTree</a></td><td><a href='../sourcefile/mclass_hashtree.f90.html'>MClass_HashTree.f90</a></td><td><p><strong>PURPOSE OF THIS MODULE</strong>: <br>
+  This module contains the <em>HashTree</em> type and its supporting routines and data type.
+  The <em>HashTree</em> type is a collection type that employs a separate-chaining hash table
+  implementation to provide common operations for an unordered symbol table. <br>
+  The <em>HashTree</em> type uses the <em>KeyOrdered</em> type to store its keys and the <em>GenData</em>
+  type to store its values.  Therefore, it can be used to store comparable keys and
+  values of any data types.  Allowed types of comparable keys include the <em>CHARACTER</em>,
+  <em>INTEGER</em> and <em>REAL</em> intrinsic types as well as any derived type that is in the
+  <em>Comparable</em> class.  Like other collection types, however, it must be employed to store
+  key-value pairs of only specific key type and one specific value type.  To store pairs
+  of another key type (and/or another value type), it must be destructed before inserting
+  items of different key type (or different value type). <br>
+  As a symbol table, the <em>HashTree</em> type does not allow duplicated keys.  Therefore, if
+  an inserted key is equal to a key stored in the table, an associated value of the stored
+  key is replaced by an associated value of the inserted key.  As an <em>unordered</em> symbol
+  table, the <em>HashTree</em> type makes no guarantees as to the iteration order of the table.
+  In particular, it does not guarantee that the order will remain the same over time. <br>
+  Technically, the <em>HashTree</em> type utilizes the <em>IntrusiveHashTree</em> type as its component
+  to store its hash-tree nodes.  As an <em>intrusive</em> container, the <em>IntrusiveHashTree</em> type,
+  which is based on a separate-chaining hash table implementation, provides common hash-table
+  operations without a memory management task.  The memory management task of the inserted
+  hash-tree nodes is handled by the <em>HashTree</em> type.  <br></p></td></tr>
+<!---->			   <tr class="active"><td><a href='../module/mclass_htabcharacter.html'>MClass_HTabCharacter</a></td><td><a href='../sourcefile/mclass_htabcharacter.f90.html'>MClass_HTabCharacter.f90</a></td><td><p><strong>PURPOSE OF THIS MODULE</strong>: <br>
+  This module contains the <em>HTabCharacter</em> type, the <em>TabItem</em> type and their
+  related routines.  The <em>TabItem</em> type is a helper and private type used to
+  store a key-value pair.  The <em>HTabCharacter</em> type is a container type that
+  employs an open-addressing hash table implementation to provide common
+  operations for an unordered symbol table. <br>
+  Unlike the <em>list-based</em> and <em>tree-based</em> types, which can be used instantly
+  by inserting objects into a container, the <em>HTabCharacter</em> type requires an
+  explicit construction before using other provided operations.  There are two
+  methods provided to create the container.  The <em>CreateEmpty</em> method constructs
+  an empty table with optional multiple arguments (including an initial capacity,
+  a load factor, a probing algorithm, and a hash function used to compute
+  a hash code of a key) whereas the <em>Construct</em> method constructs a table from
+  arrays of keys and values. <br>
+  As an unordered symbol table, the <em>HTabCharacter</em> type uses the Fortran intrinsic
+  <em>CHARACTER</em> type as the type of its stored keys and an unlimited polymorphic type
+  as the type of its stored values.  As a symbol table, the <em>HTabCharacter</em> type
+  does not allow duplicated keys.  Therefore, if an inserted key is equal to a key
+  stored in the table, an associated value of the stored key is replaced by an
+  associated value of the inserted key. <br>
+  Technically, the <em>HTabCharacter</em> type employs the open-addressing as a collision
+  resolution technique where the hash resolution is performed through probing.  It
+  provides three probing algorithms: linear probing, quadratic probing and double
+  hashing.  By default, the linear probing algorithm is used.  However, a user can
+  specify other probing algorithm during the construction of the table. <br></p></td></tr>
+<!--active-->			   <tr class=""><td><a href='../module/mclass_htabinteger1b.html'>MClass_HTabInteger1B</a></td><td><a href='../sourcefile/mclass_htabinteger1b.f90.html'>MClass_HTabInteger1B.f90</a></td><td><p><strong>PURPOSE OF THIS MODULE</strong>: <br>
+  This module contains the <em>HTabInteger1B</em> type, the <em>TabItem</em> type and their
+  related routines.  The <em>TabItem</em> type is a helper and private type used to
+  store a key-value pair.  The <em>HTabInteger1B</em> type is a container type that
+  employs an open-addressing hash table implementation to provide common
+  operations for an unordered symbol table. <br>
+  Unlike the <em>list-based</em> and <em>tree-based</em> types, which can be used instantly
+  by inserting objects into a container, the <em>HTabInteger1B</em> type requires an
+  explicit construction before using other provided operations.  There are two
+  methods provided to create the container.  The <em>CreateEmpty</em> method constructs
+  an empty table with optional multiple arguments (including an initial capacity,
+  a load factor, a probing algorithm, and a hash function used to compute
+  a hash code of a key) whereas the <em>Construct</em> method constructs a table from
+  arrays of keys and values. <br>
+  As an unordered symbol table, the <em>HTabInteger1B</em> type uses the Fortran intrinsic
+  <em>INTEGER(KIND=kInt8)</em> type as the type of its stored keys and an unlimited polymorphic type
+  as the type of its stored values.  As a symbol table, the <em>HTabInteger1B</em> type
+  does not allow duplicated keys.  Therefore, if an inserted key is equal to a key
+  stored in the table, an associated value of the stored key is replaced by an
+  associated value of the inserted key. <br>
+  Technically, the <em>HTabInteger1B</em> type employs the open-addressing as a collision
+  resolution technique where the hash resolution is performed through probing.  It
+  provides three probing algorithms: linear probing, quadratic probing and double
+  hashing.  By default, the linear probing algorithm is used.  However, a user can
+  specify other probing algorithm during the construction of the table. <br></p></td></tr>
+<!---->			   <tr class="active"><td><a href='../module/mclass_htabinteger2b.html'>MClass_HTabInteger2B</a></td><td><a href='../sourcefile/mclass_htabinteger2b.f90.html'>MClass_HTabInteger2B.f90</a></td><td><p><strong>PURPOSE OF THIS MODULE</strong>: <br>
+  This module contains the <em>HTabInteger2B</em> type, the <em>TabItem</em> type and their
+  related routines.  The <em>TabItem</em> type is a helper and private type used to
+  store a key-value pair.  The <em>HTabInteger2B</em> type is a container type that
+  employs an open-addressing hash table implementation to provide common
+  operations for an unordered symbol table. <br>
+  Unlike the <em>list-based</em> and <em>tree-based</em> types, which can be used instantly
+  by inserting objects into a container, the <em>HTabInteger2B</em> type requires an
+  explicit construction before using other provided operations.  There are two
+  methods provided to create the container.  The <em>CreateEmpty</em> method constructs
+  an empty table with optional multiple arguments (including an initial capacity,
+  a load factor, a probing algorithm, and a hash function used to compute
+  a hash code of a key) whereas the <em>Construct</em> method constructs a table from
+  arrays of keys and values. <br>
+  As an unordered symbol table, the <em>HTabInteger2B</em> type uses the Fortran intrinsic
+  <em>INTEGER(KIND=kInt16)</em> type as the type of its stored keys and an unlimited polymorphic type
+  as the type of its stored values.  As a symbol table, the <em>HTabInteger2B</em> type
+  does not allow duplicated keys.  Therefore, if an inserted key is equal to a key
+  stored in the table, an associated value of the stored key is replaced by an
+  associated value of the inserted key. <br>
+  Technically, the <em>HTabInteger2B</em> type employs the open-addressing as a collision
+  resolution technique where the hash resolution is performed through probing.  It
+  provides three probing algorithms: linear probing, quadratic probing and double
+  hashing.  By default, the linear probing algorithm is used.  However, a user can
+  specify other probing algorithm during the construction of the table. <br></p></td></tr>
+<!--active-->			   <tr class=""><td><a href='../module/mclass_htabinteger4b.html'>MClass_HTabInteger4B</a></td><td><a href='../sourcefile/mclass_htabinteger4b.f90.html'>MClass_HTabInteger4B.f90</a></td><td><p><strong>PURPOSE OF THIS MODULE</strong>: <br>
+  This module contains the <em>HTabInteger4B</em> type, the <em>TabItem</em> type and their
+  related routines.  The <em>TabItem</em> type is a helper and private type used to
+  store a key-value pair.  The <em>HTabInteger4B</em> type is a container type that
+  employs an open-addressing hash table implementation to provide common
+  operations for an unordered symbol table. <br>
+  Unlike the <em>list-based</em> and <em>tree-based</em> types, which can be used instantly
+  by inserting objects into a container, the <em>HTabInteger4B</em> type requires an
+  explicit construction before using other provided operations.  There are two
+  methods provided to create the container.  The <em>CreateEmpty</em> method constructs
+  an empty table with optional multiple arguments (including an initial capacity,
+  a load factor, a probing algorithm, and a hash function used to compute
+  a hash code of a key) whereas the <em>Construct</em> method constructs a table from
+  arrays of keys and values. <br>
+  As an unordered symbol table, the <em>HTabInteger4B</em> type uses the Fortran intrinsic
+  <em>INTEGER(KIND=kInt32)</em> type as the type of its stored keys and an unlimited polymorphic type
+  as the type of its stored values.  As a symbol table, the <em>HTabInteger4B</em> type
+  does not allow duplicated keys.  Therefore, if an inserted key is equal to a key
+  stored in the table, an associated value of the stored key is replaced by an
+  associated value of the inserted key. <br>
+  Technically, the <em>HTabInteger4B</em> type employs the open-addressing as a collision
+  resolution technique where the hash resolution is performed through probing.  It
+  provides three probing algorithms: linear probing, quadratic probing and double
+  hashing.  By default, the linear probing algorithm is used.  However, a user can
+  specify other probing algorithm during the construction of the table. <br></p></td></tr>
+<!---->			   <tr class="active"><td><a href='../module/mclass_htabinteger8b.html'>MClass_HTabInteger8B</a></td><td><a href='../sourcefile/mclass_htabinteger8b.f90.html'>MClass_HTabInteger8B.f90</a></td><td><p><strong>PURPOSE OF THIS MODULE</strong>: <br>
+  This module contains the <em>HTabInteger8B</em> type, the <em>TabItem</em> type and their
+  related routines.  The <em>TabItem</em> type is a helper and private type used to
+  store a key-value pair.  The <em>HTabInteger8B</em> type is a container type that
+  employs an open-addressing hash table implementation to provide common
+  operations for an unordered symbol table. <br>
+  Unlike the <em>list-based</em> and <em>tree-based</em> types, which can be used instantly
+  by inserting objects into a container, the <em>HTabInteger8B</em> type requires an
+  explicit construction before using other provided operations.  There are two
+  methods provided to create the container.  The <em>CreateEmpty</em> method constructs
+  an empty table with optional multiple arguments (including an initial capacity,
+  a load factor, a probing algorithm, and a hash function used to compute
+  a hash code of a key) whereas the <em>Construct</em> method constructs a table from
+  arrays of keys and values. <br>
+  As an unordered symbol table, the <em>HTabInteger8B</em> type uses the Fortran intrinsic
+  <em>INTEGER(KIND=kInt64)</em> type as the type of its stored keys and an unlimited polymorphic type
+  as the type of its stored values.  As a symbol table, the <em>HTabInteger8B</em> type
+  does not allow duplicated keys.  Therefore, if an inserted key is equal to a key
+  stored in the table, an associated value of the stored key is replaced by an
+  associated value of the inserted key. <br>
+  Technically, the <em>HTabInteger8B</em> type employs the open-addressing as a collision
+  resolution technique where the hash resolution is performed through probing.  It
+  provides three probing algorithms: linear probing, quadratic probing and double
+  hashing.  By default, the linear probing algorithm is used.  However, a user can
+  specify other probing algorithm during the construction of the table. <br></p></td></tr>
+<!--active-->			   <tr class=""><td><a href='../module/mclass_htabobject.html'>MClass_HTabObject</a></td><td><a href='../sourcefile/mclass_htabobject.f90.html'>MClass_HTabObject.f90</a></td><td><p><strong>PURPOSE OF THIS MODULE</strong>: <br>
+  This module contains the <em>HTabObject</em> type, and its related routines.   The
+  <em>HTabObject</em> type is a container type that employs an open-addressing hash table
+  implementation to provide common operations for an unordered symbol table.  As a
+  symbol table, the <em>HTabObject</em> type uses the <em>Object</em> derived type to store the
+  keys and their associated values.  Unlike other hash-table containers, the
+ <em>HTabObject</em> type uses a user-defined type in the <em>Object</em> class to represent
+  a key-value pair and requires only one argument (instead of two) when inserting
+  or retrieving the key and its associated value. <br>
+  It should be noted that a user must be careful when implementing a <em>user-defined
+  concrete</em> subtype of the <em>Object</em> type.  The <em>HTabObject</em> type employs the
+  assignment statement copy data of the key-value object.  It also utilizes the
+  relational operators (e.g. ==) to compare keys of the key-value objects.  Moreover,
+  in order to compute indices of buckets used to store the specified key-value object,
+  it uses the <em>HashCode</em> method to compute the hash value of the specified key.  These
+  imply that the user should implement the deferred <em>CopyAssign</em> procedure where both
+  key and value components are copied from the source object to the destination object
+  whereas, when implemented, the deferred <em>CompareTo</em> and <em>ComputeHashValue</em> procedures
+  should be dependent on its key component only. <br>
+  It is also worth mentioning that the <em>HTabObject</em> type does not allow key-value objects
+  of different types to be stored in the same container.  The <em>HTabObject</em> type requires
+  a user to specify the type of user-defined key-value objects to be stored via arguments
+  specified during the creation of a container.  Also, the type of a user-define key-value
+  object specified in all other routines must be the same as the type of stored objects of
+  the container. Otherwise, the container may not behave as expected. <br>
+  Unlike the <em>list-based</em> and <em>tree-based</em> types, which can be used instantly by inserting
+  objects into a container, the <em>HTabObject</em> type requires an explicit construction before
+  using other provided operations.  There are two methods provided to create the container.
+  The <em>CreateEmpty</em> method constructs an empty table with optional multiple arguments
+  (including an initial capacity, a load factor, a probing algorithm, and a hash function
+  used to compute a hash code of a key) whereas the <em>Construct</em> method constructs a table
+  from an array of key-value pairs. <br>
+  As a symbol table, the <em>HTabObject</em> type does not allow duplicated keys.  Therefore, if
+  an inserted key is equal to a key stored in the table, an associated value of the stored
+  key is replaced by an associated value of the inserted key. <br>
+  Technically, the <em>HTabObject</em> type employs the open-addressing as a collision resolution
+  technique where the hash resolution is performed through probing.  It provides three probing
+  algorithms: linear probing, quadratic probing and double hashing.  By default, the linear
+  probing algorithm is used.  However, a user can specify other probing algorithm during the
+  construction of the container. <br></p></td></tr>
+<!---->			   <tr class="active"><td><a href='../module/mclass_htabrealdp.html'>MClass_HTabRealDP</a></td><td><a href='../sourcefile/mclass_htabrealdp.f90.html'>MClass_HTabRealDP.f90</a></td><td><p><strong>PURPOSE OF THIS MODULE</strong>: <br>
+  This module contains the <em>HTabRealDP</em> type, the <em>TabItem</em> type and their
+  related routines.  The <em>TabItem</em> type is a helper and private type used to
+  store a key-value pair.  The <em>HTabRealDP</em> type is a container type that
+  employs an open-addressing hash table implementation to provide common
+  operations for an unordered symbol table. <br>
+  Unlike the <em>list-based</em> and <em>tree-based</em> types, which can be used instantly
+  by inserting objects into a container, the <em>HTabRealDP</em> type requires an
+  explicit construction before using other provided operations.  There are two
+  methods provided to create the container.  The <em>CreateEmpty</em> method constructs
+  an empty table with optional multiple arguments (including an initial capacity,
+  a load factor, a probing algorithm, and a hash function used to compute
+  a hash code of a key) whereas the <em>Construct</em> method constructs a table from
+  arrays of keys and values. <br>
+  As an unordered symbol table, the <em>HTabRealDP</em> type uses the Fortran intrinsic
+  <em>REAL(KIND=kDouble)</em> type as the type of its stored keys and an unlimited polymorphic type
+  as the type of its stored values.  As a symbol table, the <em>HTabRealDP</em> type
+  does not allow duplicated keys.  Therefore, if an inserted key is equal to a key
+  stored in the table, an associated value of the stored key is replaced by an
+  associated value of the inserted key. <br>
+  Technically, the <em>HTabRealDP</em> type employs the open-addressing as a collision
+  resolution technique where the hash resolution is performed through probing.  It
+  provides three probing algorithms: linear probing, quadratic probing and double
+  hashing.  By default, the linear probing algorithm is used.  However, a user can
+  specify other probing algorithm during the construction of the table. <br></p></td></tr>
+<!--active-->			   <tr class=""><td><a href='../module/mclass_htabrealqp.html'>MClass_HTabRealQP</a></td><td><a href='../sourcefile/mclass_htabrealqp.f90.html'>MClass_HTabRealQP.f90</a></td><td><p><strong>PURPOSE OF THIS MODULE</strong>: <br>
+  This module contains the <em>HTabRealQP</em> type, the <em>TabItem</em> type and their
+  related routines.  The <em>TabItem</em> type is a helper and private type used to
+  store a key-value pair.  The <em>HTabRealQP</em> type is a container type that
+  employs an open-addressing hash table implementation to provide common
+  operations for an unordered symbol table. <br>
+  Unlike the <em>list-based</em> and <em>tree-based</em> types, which can be used instantly
+  by inserting objects into a container, the <em>HTabRealQP</em> type requires an
+  explicit construction before using other provided operations.  There are two
+  methods provided to create the container.  The <em>CreateEmpty</em> method constructs
+  an empty table with optional multiple arguments (including an initial capacity,
+  a load factor, a probing algorithm, and a hash function used to compute
+  a hash code of a key) whereas the <em>Construct</em> method constructs a table from
+  arrays of keys and values. <br>
+  As an unordered symbol table, the <em>HTabRealQP</em> type uses the Fortran intrinsic
+  <em>REAL(KIND=kQuad)</em> type as the type of its stored keys and an unlimited polymorphic type
+  as the type of its stored values.  As a symbol table, the <em>HTabRealQP</em> type
+  does not allow duplicated keys.  Therefore, if an inserted key is equal to a key
+  stored in the table, an associated value of the stored key is replaced by an
+  associated value of the inserted key. <br>
+  Technically, the <em>HTabRealQP</em> type employs the open-addressing as a collision
+  resolution technique where the hash resolution is performed through probing.  It
+  provides three probing algorithms: linear probing, quadratic probing and double
+  hashing.  By default, the linear probing algorithm is used.  However, a user can
+  specify other probing algorithm during the construction of the table. <br></p></td></tr>
+<!---->			   <tr class="active"><td><a href='../module/mclass_htabrealsp.html'>MClass_HTabRealSP</a></td><td><a href='../sourcefile/mclass_htabrealsp.f90.html'>MClass_HTabRealSP.f90</a></td><td><p><strong>PURPOSE OF THIS MODULE</strong>: <br>
+  This module contains the <em>HTabRealSP</em> type, the <em>TabItem</em> type and their
+  related routines.  The <em>TabItem</em> type is a helper and private type used to
+  store a key-value pair.  The <em>HTabRealSP</em> type is a container type that
+  employs an open-addressing hash table implementation to provide common
+  operations for an unordered symbol table. <br>
+  Unlike the <em>list-based</em> and <em>tree-based</em> types, which can be used instantly
+  by inserting objects into a container, the <em>HTabRealSP</em> type requires an
+  explicit construction before using other provided operations.  There are two
+  methods provided to create the container.  The <em>CreateEmpty</em> method constructs
+  an empty table with optional multiple arguments (including an initial capacity,
+  a load factor, a probing algorithm, and a hash function used to compute
+  a hash code of a key) whereas the <em>Construct</em> method constructs a table from
+  arrays of keys and values. <br>
+  As an unordered symbol table, the <em>HTabRealSP</em> type uses the Fortran intrinsic
+  <em>REAL(KIND=kSingle)</em> type as the type of its stored keys and an unlimited polymorphic type
+  as the type of its stored values.  As a symbol table, the <em>HTabRealSP</em> type
+  does not allow duplicated keys.  Therefore, if an inserted key is equal to a key
+  stored in the table, an associated value of the stored key is replaced by an
+  associated value of the inserted key. <br>
+  Technically, the <em>HTabRealSP</em> type employs the open-addressing as a collision
+  resolution technique where the hash resolution is performed through probing.  It
+  provides three probing algorithms: linear probing, quadratic probing and double
+  hashing.  By default, the linear probing algorithm is used.  However, a user can
+  specify other probing algorithm during the construction of the table. <br></p></td></tr>
+<!--active-->			   <tr class=""><td><a href='../module/mclass_linkedlists.html'>MClass_LinkedLists</a></td><td><a href='../sourcefile/mclass_linkedlists.f90.html'>MClass_LinkedLists.f90</a></td><td><p><strong>PURPOSE OF THIS MODULE</strong>: <br>
+  This module contains <em>linked-list-based</em> collection types and their related routines.
+  A <em>linked-list-based</em> type is a collection type that employs a linked list implementation. <br>
+  Available collection types based on the linked list concept include:  <br>
+  - the <em>StackLinked</em> type that represents a last-in-first-out (LIFO) stack,  <br>
+  - the <em>QueueLinked</em> type that represents a first-in-first-out (FIFO) queue,  <br>
+  - the <em>DequeLinked</em> type that represents a double-ended queue (deque).  <br>
+  - the <em>ListLinked</em> type that represents a list where an item can be added, removed or
+    retrieved at the (valid) specified index.  <br>
+  <br>
+  <strong>Usage Notes</strong>:  <br>
+  - Unlike the <em>dynamic-array-based</em> types, the <em>linked-list-based</em> types commonly do not
+    require an explicit construction.  Items can be added via the <em>Construction</em> method
+    or an insertion method.  Therefore, the <em>CreateEmpty</em> method used to construct an empty
+    collection is deemed unnecessary and thus NOT provided.  <br>
+  - Other than that, all operations provided are the same for both groups of collections.  <br>
+  <br>
+  <strong>Important Notes</strong>:  <br>
+  (1) By design, similar to the <em>dynamic-array-based</em> types, although all <em>linked-list-based</em>
+      types are generic containers that can be used to store items of any data types, they
+      must be employed to store items of only one particular data type.  To store items of
+      another data type, they must be cleared and/or destructed before inserting items of
+      different data type. <br>
+  (2) To be able to successfully retrieve stored items, the specified output item must have
+      the same (concrete) type as that of stored items. <br>
+  (3) Additionally, if type of the stored items is a derived one that is NOT in the <em>Object</em>
+      class and this type has allocatable and/or pointer components, a user must specify the
+      optional <em>ItemCopy</em> argument when trying to retrieve the stored items.  The <em>ItemCopy</em>
+      argument is a user-defined procedure to copy an unlimited polymorphic entity.  It must
+      must provide a type-guard statement to check the compatibility of concrete types of its
+      arguments.  It must also handle the storage allocation (and/or the assignment) of those
+      allocatable (and/or pointer) components as appropriate. <br>
+  <br>
+  <strong>Implementation Notes</strong>:  <br>
+  - Unlike conventional implementation, all <em>linked-list-based</em> types provided in this module
+    employ the <a href="../../xpfbase/module/mclass_intrusivelinkedlists.html#type-intrusivelinearlist">
+    IntrusiveLinearList</a> type, which is an intrusive doubly-linked list container type that
+    performs common linked-list operations without a memory management task.  <br>
+  - As a result, the <em>linked-list-based</em> types mostly handle the memory management task while
+    common operations of a linked list are relegated to the <em>IntrusiveLinearList</em> type, which
+    is declared as a private component of the <em>linked-list-based</em> collection types.  <br>
+  - The implementation here in this module (and its submodules) is intended to illustrate the
+    usage of an intrusive container type. <br></p></td></tr>
+<!---->			   <tr class="active"><td><a href='../module/mclass_listanytype.html'>MClass_ListAnyType</a></td><td><a href='../sourcefile/mclass_listanytype.f90.html'>MClass_ListAnyType.f90</a></td><td><p><strong>PURPOSE OF THIS MODULE</strong>: <br>
+  This module contains the <em>ListAnyType</em> type and related routines. The
+  <em>ListAnyType</em> type is a container with an unlimited polymorphic type
+  (i.e. <em>CLASS(</em>)<em>) as the type of its stored items.  It employs a
+  conventional doubly-linked list implementation.  Any data types can
+  be used with this container. <br>
+  Similar to other classes of the linked list container, the </em>ListAnyType<em>
+  type allows items with different types to be stored in different nodes
+  of the same container.  However, unlike other classes, to retrieve the
+  stored items, a user must specify an allocatable unlimited polymorphic
+  type as an output argument.  Therefore, when the user uses the output
+  item(s), the </em>SELECT TYPE<em> construct must be used to select a type
+  that is suitable for a particular item.  <br>
+  See the <a href="../module/mbase_doublylinkedlists.html">MBase_DoublyLinkedLists</a>
+  module for an overview and usage notes of a </em>doubly-linked-list-based<em> type.
+  A user may use the </em>MBase_DoublyLinkedLists<em> module instead of using this
+  module directly. <br>
+  See the <a href="../module/mclass_linkedlists.html">MClass_LinkedLists</a>
+  module for doubly-linked-list-based types of containers that are functionally
+  similar to the </em>ListAnyType<em> type but utilizes a different implementation.
+  Similar to the </em>ListAnyType* type, these container types are designed as
+  generic containers that can be used to store various data types providing
+  that the size (in bytes) of the data to be stored is known at compile time. <br></p></td></tr>
+<!--active-->			   <tr class=""><td><a href='../module/mclass_listcharacter.html'>MClass_ListCharacter</a></td><td><a href='../sourcefile/mclass_listcharacter.f90.html'>MClass_ListCharacter.f90</a></td><td><p><strong>PURPOSE OF THIS MODULE</strong>: <br>
+  This module contains the <em>ListCharacter</em> type and related routines.
+  The <em>ListCharacter</em> type is a container with <em>CHARACTER</em> as the type
+  of its stored items.  It employs a conventional doubly-linked list
+  implementation. <br>
+  See the <a href="../module/mbase_doublylinkedlists.html">MBase_DoublyLinkedLists</a>
+  module for an overview and usage notes of a <em>doubly-linked-list-based</em> type.
+  A user may use the <em>MBase_DoublyLinkedLists</em> module instead of using this
+  module directly. <br>
+  See the <a href="../module/mclass_linkedlists.html">MClass_LinkedLists</a>
+  module for doubly-linked-list-based types of containers that are functionally
+  similar to the <em>ListCharacter</em> type but utilizes a different implementation.
+  Also, unlike the <em>ListCharacter</em> type, these container types are designed as
+  generic containers that can be used to store various data types providing that
+  the size (in bytes) of the data to be stored is known at compile time.</p></td></tr>
+<!---->			   <tr class="active"><td><a href='../module/mclass_listcmpxdp.html'>MClass_ListCmpxDP</a></td><td><a href='../sourcefile/mclass_listcmpxdp.f90.html'>MClass_ListCmpxDP.f90</a></td><td><p><strong>PURPOSE OF THIS MODULE</strong>: <br>
+  This module contains the <em>ListCmpxDP</em> type and related routines.
+  The <em>ListCmpxDP</em> type is a container with <em>COMPLEX(KIND=kDouble)</em> as the type
+  of its stored items.  It employs a conventional doubly-linked list
+  implementation. <br>
+  See the <a href="../module/mbase_doublylinkedlists.html">MBase_DoublyLinkedLists</a>
+  module for an overview and usage notes of a <em>doubly-linked-list-based</em> type.
+  A user may use the <em>MBase_DoublyLinkedLists</em> module instead of using this
+  module directly. <br>
+  See the <a href="../module/mclass_linkedlists.html">MClass_LinkedLists</a>
+  module for doubly-linked-list-based types of containers that are functionally
+  similar to the <em>ListCmpxDP</em> type but utilizes a different implementation.
+  Also, unlike the <em>ListCmpxDP</em> type, these container types are designed as
+  generic containers that can be used to store various data types providing that
+  the size (in bytes) of the data to be stored is known at compile time.</p></td></tr>
+<!--active-->			   <tr class=""><td><a href='../module/mclass_listcmpxqp.html'>MClass_ListCmpxQP</a></td><td><a href='../sourcefile/mclass_listcmpxqp.f90.html'>MClass_ListCmpxQP.f90</a></td><td><p><strong>PURPOSE OF THIS MODULE</strong>: <br>
+  This module contains the <em>ListCmpxQP</em> type and related routines.
+  The <em>ListCmpxQP</em> type is a container with <em>COMPLEX(KIND=kQuad)</em> as the type
+  of its stored items.  It employs a conventional doubly-linked list
+  implementation. <br>
+  See the <a href="../module/mbase_doublylinkedlists.html">MBase_DoublyLinkedLists</a>
+  module for an overview and usage notes of a <em>doubly-linked-list-based</em> type.
+  A user may use the <em>MBase_DoublyLinkedLists</em> module instead of using this
+  module directly. <br>
+  See the <a href="../module/mclass_linkedlists.html">MClass_LinkedLists</a>
+  module for doubly-linked-list-based types of containers that are functionally
+  similar to the <em>ListCmpxQP</em> type but utilizes a different implementation.
+  Also, unlike the <em>ListCmpxQP</em> type, these container types are designed as
+  generic containers that can be used to store various data types providing that
+  the size (in bytes) of the data to be stored is known at compile time.</p></td></tr>
+<!---->			   <tr class="active"><td><a href='../module/mclass_listcmpxsp.html'>MClass_ListCmpxSP</a></td><td><a href='../sourcefile/mclass_listcmpxsp.f90.html'>MClass_ListCmpxSP.f90</a></td><td><p><strong>PURPOSE OF THIS MODULE</strong>: <br>
+  This module contains the <em>ListCmpxSP</em> type and related routines.
+  The <em>ListCmpxSP</em> type is a container with <em>COMPLEX(KIND=kSingle)</em> as the type
+  of its stored items.  It employs a conventional doubly-linked list
+  implementation. <br>
+  See the <a href="../module/mbase_doublylinkedlists.html">MBase_DoublyLinkedLists</a>
+  module for an overview and usage notes of a <em>doubly-linked-list-based</em> type.
+  A user may use the <em>MBase_DoublyLinkedLists</em> module instead of using this
+  module directly. <br>
+  See the <a href="../module/mclass_linkedlists.html">MClass_LinkedLists</a>
+  module for doubly-linked-list-based types of containers that are functionally
+  similar to the <em>ListCmpxSP</em> type but utilizes a different implementation.
+  Also, unlike the <em>ListCmpxSP</em> type, these container types are designed as
+  generic containers that can be used to store various data types providing that
+  the size (in bytes) of the data to be stored is known at compile time.</p></td></tr>
+<!--active-->			   <tr class=""><td><a href='../module/mclass_listinteger1b.html'>MClass_ListInteger1B</a></td><td><a href='../sourcefile/mclass_listinteger1b.f90.html'>MClass_ListInteger1B.f90</a></td><td><p><strong>PURPOSE OF THIS MODULE</strong>: <br>
+  This module contains the <em>ListInteger1B</em> type and related routines.
+  The <em>ListInteger1B</em> type is a container with <em>INTEGER(KIND=kI1B)</em> as the type
+  of its stored items.  It employs a conventional doubly-linked list
+  implementation. <br>
+  See the <a href="../module/mbase_doublylinkedlists.html">MBase_DoublyLinkedLists</a>
+  module for an overview and usage notes of a <em>doubly-linked-list-based</em> type.
+  A user may use the <em>MBase_DoublyLinkedLists</em> module instead of using this
+  module directly. <br>
+  See the <a href="../module/mclass_linkedlists.html">MClass_LinkedLists</a>
+  module for doubly-linked-list-based types of containers that are functionally
+  similar to the <em>ListInteger1B</em> type but utilizes a different implementation.
+  Also, unlike the <em>ListInteger1B</em> type, these container types are designed as
+  generic containers that can be used to store various data types providing that
+  the size (in bytes) of the data to be stored is known at compile time.</p></td></tr>
+<!---->			   <tr class="active"><td><a href='../module/mclass_listinteger2b.html'>MClass_ListInteger2B</a></td><td><a href='../sourcefile/mclass_listinteger2b.f90.html'>MClass_ListInteger2B.f90</a></td><td><p><strong>PURPOSE OF THIS MODULE</strong>: <br>
+  This module contains the <em>ListInteger2B</em> type and related routines.
+  The <em>ListInteger2B</em> type is a container with <em>INTEGER(KIND=kI2B)</em> as the type
+  of its stored items.  It employs a conventional doubly-linked list
+  implementation. <br>
+  See the <a href="../module/mbase_doublylinkedlists.html">MBase_DoublyLinkedLists</a>
+  module for an overview and usage notes of a <em>doubly-linked-list-based</em> type.
+  A user may use the <em>MBase_DoublyLinkedLists</em> module instead of using this
+  module directly. <br>
+  See the <a href="../module/mclass_linkedlists.html">MClass_LinkedLists</a>
+  module for doubly-linked-list-based types of containers that are functionally
+  similar to the <em>ListInteger2B</em> type but utilizes a different implementation.
+  Also, unlike the <em>ListInteger2B</em> type, these container types are designed as
+  generic containers that can be used to store various data types providing that
+  the size (in bytes) of the data to be stored is known at compile time.</p></td></tr>
+<!--active-->			   <tr class=""><td><a href='../module/mclass_listinteger4b.html'>MClass_ListInteger4B</a></td><td><a href='../sourcefile/mclass_listinteger4b.f90.html'>MClass_ListInteger4B.f90</a></td><td><p><strong>PURPOSE OF THIS MODULE</strong>: <br>
+  This module contains the <em>ListInteger4B</em> type and related routines.
+  The <em>ListInteger4B</em> type is a container with <em>INTEGER(KIND=kI4B)</em> as the type
+  of its stored items.  It employs a conventional doubly-linked list
+  implementation. <br>
+  See the <a href="../module/mbase_doublylinkedlists.html">MBase_DoublyLinkedLists</a>
+  module for an overview and usage notes of a <em>doubly-linked-list-based</em> type.
+  A user may use the <em>MBase_DoublyLinkedLists</em> module instead of using this
+  module directly. <br>
+  See the <a href="../module/mclass_linkedlists.html">MClass_LinkedLists</a>
+  module for doubly-linked-list-based types of containers that are functionally
+  similar to the <em>ListInteger4B</em> type but utilizes a different implementation.
+  Also, unlike the <em>ListInteger4B</em> type, these container types are designed as
+  generic containers that can be used to store various data types providing that
+  the size (in bytes) of the data to be stored is known at compile time.</p></td></tr>
+<!---->			   <tr class="active"><td><a href='../module/mclass_listinteger8b.html'>MClass_ListInteger8B</a></td><td><a href='../sourcefile/mclass_listinteger8b.f90.html'>MClass_ListInteger8B.f90</a></td><td><p><strong>PURPOSE OF THIS MODULE</strong>: <br>
+  This module contains the <em>ListInteger8B</em> type and related routines.
+  The <em>ListInteger8B</em> type is a container with <em>INTEGER(KIND=kI8B)</em> as the type
+  of its stored items.  It employs a conventional doubly-linked list
+  implementation. <br>
+  See the <a href="../module/mbase_doublylinkedlists.html">MBase_DoublyLinkedLists</a>
+  module for an overview and usage notes of a <em>doubly-linked-list-based</em> type.
+  A user may use the <em>MBase_DoublyLinkedLists</em> module instead of using this
+  module directly. <br>
+  See the <a href="../module/mclass_linkedlists.html">MClass_LinkedLists</a>
+  module for doubly-linked-list-based types of containers that are functionally
+  similar to the <em>ListInteger8B</em> type but utilizes a different implementation.
+  Also, unlike the <em>ListInteger8B</em> type, these container types are designed as
+  generic containers that can be used to store various data types providing that
+  the size (in bytes) of the data to be stored is known at compile time.</p></td></tr>
+<!--active-->			   <tr class=""><td><a href='../module/mclass_listlogical.html'>MClass_ListLogical</a></td><td><a href='../sourcefile/mclass_listlogical.f90.html'>MClass_ListLogical.f90</a></td><td><p><strong>PURPOSE OF THIS MODULE</strong>: <br>
+  This module contains the <em>ListLogical</em> type and related routines.
+  The <em>ListLogical</em> type is a container with <em>LOGICAL</em> as the type
+  of its stored items.  It employs a conventional doubly-linked list
+  implementation. <br>
+  See the <a href="../module/mbase_doublylinkedlists.html">MBase_DoublyLinkedLists</a>
+  module for an overview and usage notes of a <em>doubly-linked-list-based</em> type.
+  A user may use the <em>MBase_DoublyLinkedLists</em> module instead of using this
+  module directly. <br>
+  See the <a href="../module/mclass_linkedlists.html">MClass_LinkedLists</a>
+  module for doubly-linked-list-based types of containers that are functionally
+  similar to the <em>ListLogical</em> type but utilizes a different implementation.
+  Also, unlike the <em>ListLogical</em> type, these container types are designed as
+  generic containers that can be used to store various data types providing that
+  the size (in bytes) of the data to be stored is known at compile time.</p></td></tr>
+<!---->			   <tr class="active"><td><a href='../module/mclass_listobject.html'>MClass_ListObject</a></td><td><a href='../sourcefile/mclass_listobject.f90.html'>MClass_ListObject.f90</a></td><td><p><strong>PURPOSE OF THIS MODULE</strong>: <br>
+  This module contains the <em>ListObject</em> type and related routines.
+  The <em>ListObject</em> type is a container with <em>CLASS(Object)</em> as the type
+  of its stored items.  It employs a conventional doubly-linked list
+  implementation.  All derived types extending from the <em>Object</em> type can be
+  used with this container. <br>
+  It should be noted that although the <em>ListObject</em> type allows items with
+  different types (any derived types that are in the <em>Object</em> class) to be
+  stored in different nodes of the same container, a user must be extremely
+  careful when retrieving the items with different types from the container.
+  The type specified for an output argument must match the type of an item
+  stored in a particular node of the container.  Otherwise, the user would
+  not be able to retrieve the item for that specific routine. <br>
+  See the <a href="../module/mbase_doublylinkedlists.html">MBase_DoublyLinkedLists</a>
+  module for an overview and usage notes of a <em>doubly-linked-list-based</em> type.
+  A user may use the <em>MBase_DoublyLinkedLists</em> module instead of using this
+  module directly. <br>
+  See the <a href="../module/mclass_linkedlists.html">MClass_LinkedLists</a>
+  module for doubly-linked-list-based types of containers that are functionally
+  similar to the <em>ListObject</em> type but utilizes a different implementation.
+  Also, unlike the <em>ListObject</em> type, these container types are designed as
+  generic containers that can be used to store various data types providing that
+  the size (in bytes) of the data to be stored is known at compile time. <br></p></td></tr>
+<!--active-->			   <tr class=""><td><a href='../module/mclass_listrealdp.html'>MClass_ListRealDP</a></td><td><a href='../sourcefile/mclass_listrealdp.f90.html'>MClass_ListRealDP.f90</a></td><td><p><strong>PURPOSE OF THIS MODULE</strong>: <br>
+  This module contains the <em>ListRealDP</em> type and related routines.
+  The <em>ListRealDP</em> type is a container with <em>REAL(KIND=kDouble)</em> as the type
+  of its stored items.  It employs a conventional doubly-linked list
+  implementation. <br>
+  See the <a href="../module/mbase_doublylinkedlists.html">MBase_DoublyLinkedLists</a>
+  module for an overview and usage notes of a <em>doubly-linked-list-based</em> type.
+  A user may use the <em>MBase_DoublyLinkedLists</em> module instead of using this
+  module directly. <br>
+  See the <a href="../module/mclass_linkedlists.html">MClass_LinkedLists</a>
+  module for doubly-linked-list-based types of containers that are functionally
+  similar to the <em>ListRealDP</em> type but utilizes a different implementation.
+  Also, unlike the <em>ListRealDP</em> type, these container types are designed as
+  generic containers that can be used to store various data types providing that
+  the size (in bytes) of the data to be stored is known at compile time.</p></td></tr>
+<!---->			   <tr class="active"><td><a href='../module/mclass_listrealqp.html'>MClass_ListRealQP</a></td><td><a href='../sourcefile/mclass_listrealqp.f90.html'>MClass_ListRealQP.f90</a></td><td><p><strong>PURPOSE OF THIS MODULE</strong>: <br>
+  This module contains the <em>ListRealQP</em> type and related routines.
+  The <em>ListRealQP</em> type is a container with <em>REAL(KIND=kQuad)</em> as the type
+  of its stored items.  It employs a conventional doubly-linked list
+  implementation. <br>
+  See the <a href="../module/mbase_doublylinkedlists.html">MBase_DoublyLinkedLists</a>
+  module for an overview and usage notes of a <em>doubly-linked-list-based</em> type.
+  A user may use the <em>MBase_DoublyLinkedLists</em> module instead of using this
+  module directly. <br>
+  See the <a href="../module/mclass_linkedlists.html">MClass_LinkedLists</a>
+  module for doubly-linked-list-based types of containers that are functionally
+  similar to the <em>ListRealQP</em> type but utilizes a different implementation.
+  Also, unlike the <em>ListRealQP</em> type, these container types are designed as
+  generic containers that can be used to store various data types providing that
+  the size (in bytes) of the data to be stored is known at compile time.</p></td></tr>
+<!--active-->			   <tr class=""><td><a href='../module/mclass_listrealsp.html'>MClass_ListRealSP</a></td><td><a href='../sourcefile/mclass_listrealsp.f90.html'>MClass_ListRealSP.f90</a></td><td><p><strong>PURPOSE OF THIS MODULE</strong>: <br>
+  This module contains the <em>ListRealSP</em> type and related routines.
+  The <em>ListRealSP</em> type is a container with <em>REAL(KIND=kSingle)</em> as the type
+  of its stored items.  It employs a conventional doubly-linked list
+  implementation. <br>
+  See the <a href="../module/mbase_doublylinkedlists.html">MBase_DoublyLinkedLists</a>
+  module for an overview and usage notes of a <em>doubly-linked-list-based</em> type.
+  A user may use the <em>MBase_DoublyLinkedLists</em> module instead of using this
+  module directly. <br>
+  See the <a href="../module/mclass_linkedlists.html">MClass_LinkedLists</a>
+  module for doubly-linked-list-based types of containers that are functionally
+  similar to the <em>ListRealSP</em> type but utilizes a different implementation.
+  Also, unlike the <em>ListRealSP</em> type, these container types are designed as
+  generic containers that can be used to store various data types providing that
+  the size (in bytes) of the data to be stored is known at compile time.</p></td></tr>
+<!---->			   <tr class="active"><td><a href='../module/mclass_listtable.html'>MClass_ListTable</a></td><td><a href='../sourcefile/mclass_listtable.f90.html'>MClass_ListTable.f90</a></td><td><p><strong>PURPOSE OF THIS MODULE</strong>: <br>
+  This module contains the <em>ListTable</em> type and its supporting routines and data type.  The
+  <em>ListTable</em> type is a collection type that employs a linked-list implementation to provide
+  common operations for an unordered symbol table. <br>
+  The <em>ListTable</em> type uses the <em>KeyUnordered</em> type to store its keys and the <em>GenData</em> type
+  to store its values.  Therefore, it can be used to store key-value pairs of any data types
+  (except the <em>LOGICAL</em> type for the keys).  Like other collection types, however, it must
+  be employed to store key-value pairs of only specific key type and one specific value type.
+  To store key-value pairs of another key type (or another value type), it must be destructed
+  before inserting items of different key type (or different value type). <br>
+  As a symbol table, the <em>ListTable</em> type does not allow duplicated keys.  Therefore, if an
+  inserted key is equal to a key stored in the table, an associated value of the stored key
+  is replaced by an associated value of the inserted key.  Although the <em>ListTable</em> type is
+  an <em>unordered</em> symbol table, it provides an ordered iteration over its stored key-value items
+  where its iteration ordering is normally the order in which keys were inserted into the table
+  (i.e. insertion order). <br>
+  Technically, the <em>ListTable</em> type employs a doubly-linked list implementation to provide common
+  operations for an unordered symbol table.  The <em>ListTable</em> type uses the <em>IntrusiveLinearList</em>
+  type as its component to store its list nodes.  The <em>IntrusiveLinearList</em> type, as an intrusive
+  list container, provides common linked-list operations without a memory management task.  The
+  memory management task of the inserted list nodes is handled by the <em>ListTable</em> type.  <br></p></td></tr>
+<!--active-->			   <tr class=""><td><a href='../module/mclass_orderedsymtable.html'>MClass_OrderedSymTable</a></td><td><a href='../sourcefile/mclass_orderedsymtable.f90.html'>MClass_OrderedSymTable.f90</a></td><td><p><strong>PURPOSE OF THIS MODULE</strong>: <br>
+  This module contains the <em>OrderedSymTable</em> type and its related routines.  The <em>OrderedSymTable</em>
+  type is an abstract type representing an ordered symbol table, which is a collection containing
+  key-value pairs that keeps the keys in order. <br>
+  The <em>OrderedSymTable</em> type is a subtype of the <em>BaseSymTable</em> type and thus inherits all methods
+  of the <em>BaseSymTable</em> type and all its super classes.  The <em>OrderedSymTable</em> type provides an
+  expanded API that defines numerous natural and useful operations involving relative key order. <br>
+  It is important to note that checking the key equality is usually sufficient for an unordered
+  symbol table.  However, for an ordered symbol table, the comparison between keys should provide
+  a total ordering on all the keys.  This means that although all Fortran intrinsic types (with
+  the exception of the <em>LOGICAL</em> type) can be used as a type of the key in an unordered symbol
+  table, only <em>CHARACTER</em>, <em>INTEGER</em> and <em>REAL</em> types can be used as a type of the key in an
+  ordered symbol table.  To use a derived type as a type of the key, any derived types are allowed
+  for an unordered symbol table.  However, for an ordered symbol table, only derived types that
+  are in the <em>Comparable</em> class are allowed. <br></p></td></tr>
+<!---->			   <tr class="active"><td><a href='../module/mclass_pqbasic.html'>MClass_PQBasic</a></td><td><a href='../sourcefile/mclass_pqbasic.f90.html'>MClass_PQBasic.f90</a></td><td><p><strong>PURPOSE OF THIS MODULE</strong>: <br>
+  This module contains the <em>PQBasic</em> type and its related routines.  The <em>PQBasic</em>
+  type is a priority-queue container where the type of its stored keys is in the
+  <em>Comparable</em> class (i.e. a concrete subtype of the <em>Comparable</em> type).  It uses
+  an elementary implementation where its array representation can be unordered or
+  ordered.  By default, its array representation is ordered where a sorting
+  algorithm is employed to order its stored keys.  <br>
+  Functionally, the <em>PQBasic</em> type is exactly the same as the <em>PQHeap</em> type.  They
+  only differs in their internal implementations where the <em>PQBasic</em> type can use
+  any sorting algorithm from the <em>MBase_SortAscend</em> and <em>MBase_SortDescend</em>
+  modules while the <em>PQHeap</em> type uses a binary heap (i.e. essentially heap sort)
+  to order its stored keys.  The sorting algorithms for the <em>PQBasic</em> type are
+  optionally specified when the container is created. <br>
+  See the <a href="../module/mclass_pqheap.html">MClass_PQHeap</a> module for more
+  explanations about its functionalities and limitations, which are the same as
+  those of the <em>PQBasic</em> type. <br>
+  See the <a href="../module/mbase_priorityqueues.html">MBase_PriorityQueues</a>
+  module for an overview of a <em>priority-queue-based</em> type. A user may use the
+  <em>MBase_PriorityQueues</em> module instead of using this module directly. <br>
+  See the <a href="../../xpfranknsort/module/mbase_sortdescend.html">MBase_SortDescend</a>
+  module for routines that perform sorting of an array in a <em>descending</em> order, and see the
+  <a href="../../xpfranknsort/module/mbase_sortascend.html">MBase_SortAscend</a> module for
+  routines that perform sorting of an array in an <em>ascending</em> order.</p></td></tr>
+<!--active-->			   <tr class=""><td><a href='../module/mclass_pqbinheap.html'>MClass_PQBinHeap</a></td><td><a href='../sourcefile/mclass_pqbinheap.f90.html'>MClass_PQBinHeap.f90</a></td><td><p><strong>PURPOSE OF THIS MODULE</strong>: <br>
+  This module contains the <em>PQBinHeap</em> type and its related routines.  The <em>PQBinHeap</em> type
+  is a collection type that employs the binary heap implementation to provide common operations
+  for a priority queue.  The <em>PQBinHeap</em> type can be used as either a max-priority queue or a
+  min-priority queue.  By default, it represents the max-priority queue.  However, a user may
+  specify the optional <em>MinPQ</em> argument to true when constructing the collection so that the
+  <em>PQBinHeap</em> type represents the min-priority queue instead. <br>
+  The <em>PQBinHeap</em> type employs the <em>KeyOrdered</em> type to store comparable keys where allowed
+  key types include the <em>CHARACTER</em>, <em>INTEGER</em> and <em>REAL</em> intrinsic types as well as any
+  derived type that is in the <em>Comparable</em> class.  Like other collection types, it must be
+  employed to store keys of only one particular data type.  To store keys of another data
+  type, it must be destructed before inserting keys of different data type. <br>
+  The <em>PQBinHeap</em> type is NOT an <em>ordered</em> collection type because its stored keys are only
+  partially sorted in the so-called heap order, which also depends on the type of the
+  priority queue it represents (i.e. max-priority or min-priority queue).  Therefore, the
+  <em>PQBinHeap</em> type makes no guarantees as to the iteration order of its keys.  In particular,
+  it does not guarantee that the order will remain the same over time. <br></p></td></tr>
+<!---->			   <tr class="active"><td><a href='../module/mclass_pqcharacter.html'>MClass_PQCharacter</a></td><td><a href='../sourcefile/mclass_pqcharacter.f90.html'>MClass_PQCharacter.f90</a></td><td><p><strong>PURPOSE OF THIS MODULE</strong>: <br>
+  This module contains the <em>PQCharacter</em> type and its related routines.
+  The <em>PQCharacter</em> type is a priority-queue container with <em>CHARACTER</em>
+  as the type of its stored keys.  It employs a binary heap implementation
+  to order its stored keys. <br>
+  The <em>PQCharacter</em> type can represent either the max-priority queue or the
+  min-priority queue.  By default, it represents the max-priority queue but
+  a user can specify the <em>MinPQ</em> argument to true so that it represents
+  the min-priority queue instead. <br>
+  See the <a href="../module/mbase_priorityqueues.html">MBase_PriorityQueues</a>
+  module for an overview of a <em>priority-queue-based</em> type. A user may use the
+  <em>MBase_PriorityQueues</em> module instead of using this module directly. <br></p></td></tr>
+<!--active-->			   <tr class=""><td><a href='../module/mclass_pqheap.html'>MClass_PQHeap</a></td><td><a href='../sourcefile/mclass_pqheap.f90.html'>MClass_PQHeap.f90</a></td><td><p><strong>PURPOSE OF THIS MODULE</strong>: <br>
+  This module contains the <em>PQHeap</em> type and its related routines.  The <em>PQHeap</em>
+  type is a priority-queue container where the type of its stored keys is in the
+  <em>Comparable</em> class (i.e. a concrete subtype of the <em>Comparable</em> type).  It uses
+  a binary heap implementation to order its stored keys. <br>
+  The <em>PQHeap</em> type can represent either a max-priority queue or a min-priority
+  queue.  By default, it represents the max-priority queue but a user can specify
+  the <em>MinPQ</em> argument to true so that it represents the min-priority queue instead. <br>
+  It should be noted that the <em>PQHeap</em> type does not allow keys with different types
+  to be stored in the same container.  The <em>PQHeap</em> type requires a user to specify
+  the type of keys to be stored via the <em>Mold</em> argument when an empty container is
+  created.  Alternatively, the user may implicitly specify the type of keys to be
+  stored via the <em>Keys</em> argument when a container is constructed from an array of
+  keys.  Also, it is important to note that the type of a key specified in all other
+  routines must be the same as the type of stored keys of the container.  Otherwise,
+  the container may not behave as expected. <br>
+  See the <a href="../module/mbase_priorityqueues.html">MBase_PriorityQueues</a>
+  module for an overview of a <em>priority-queue-based</em> type. A user may use the
+  <em>MBase_PriorityQueues</em> module instead of using this module directly. <br></p></td></tr>
+<!---->			   <tr class="active"><td><a href='../module/mclass_pqinteger1b.html'>MClass_PQInteger1B</a></td><td><a href='../sourcefile/mclass_pqinteger1b.f90.html'>MClass_PQInteger1B.f90</a></td><td><p><strong>PURPOSE OF THIS MODULE</strong>: <br>
+  This module contains the <em>PQInteger1B</em> type and its related routines.
+  The <em>PQInteger1B</em> type is a priority-queue container with <em>INTEGER(KIND=kInt8)</em>
+  as the type of its stored keys.  It employs a binary heap implementation
+  to order its stored keys. <br>
+  The <em>PQInteger1B</em> type can represent either the max-priority queue or the
+  min-priority queue.  By default, it represents the max-priority queue but
+  a user can specify the <em>MinPQ</em> argument to true so that it represents
+  the min-priority queue instead. <br>
+  See the <a href="../module/mbase_priorityqueues.html">MBase_PriorityQueues</a>
+  module for an overview of a <em>priority-queue-based</em> type. A user may use the
+  <em>MBase_PriorityQueues</em> module instead of using this module directly. <br></p></td></tr>
+<!--active-->			   <tr class=""><td><a href='../module/mclass_pqinteger2b.html'>MClass_PQInteger2B</a></td><td><a href='../sourcefile/mclass_pqinteger2b.f90.html'>MClass_PQInteger2B.f90</a></td><td><p><strong>PURPOSE OF THIS MODULE</strong>: <br>
+  This module contains the <em>PQInteger2B</em> type and its related routines.
+  The <em>PQInteger2B</em> type is a priority-queue container with <em>INTEGER(KIND=kInt16)</em>
+  as the type of its stored keys.  It employs a binary heap implementation
+  to order its stored keys. <br>
+  The <em>PQInteger2B</em> type can represent either the max-priority queue or the
+  min-priority queue.  By default, it represents the max-priority queue but
+  a user can specify the <em>MinPQ</em> argument to true so that it represents
+  the min-priority queue instead. <br>
+  See the <a href="../module/mbase_priorityqueues.html">MBase_PriorityQueues</a>
+  module for an overview of a <em>priority-queue-based</em> type. A user may use the
+  <em>MBase_PriorityQueues</em> module instead of using this module directly. <br></p></td></tr>
+<!---->			   <tr class="active"><td><a href='../module/mclass_pqinteger4b.html'>MClass_PQInteger4B</a></td><td><a href='../sourcefile/mclass_pqinteger4b.f90.html'>MClass_PQInteger4B.f90</a></td><td><p><strong>PURPOSE OF THIS MODULE</strong>: <br>
+  This module contains the <em>PQInteger4B</em> type and its related routines.
+  The <em>PQInteger4B</em> type is a priority-queue container with <em>INTEGER(KIND=kInt32)</em>
+  as the type of its stored keys.  It employs a binary heap implementation
+  to order its stored keys. <br>
+  The <em>PQInteger4B</em> type can represent either the max-priority queue or the
+  min-priority queue.  By default, it represents the max-priority queue but
+  a user can specify the <em>MinPQ</em> argument to true so that it represents
+  the min-priority queue instead. <br>
+  See the <a href="../module/mbase_priorityqueues.html">MBase_PriorityQueues</a>
+  module for an overview of a <em>priority-queue-based</em> type. A user may use the
+  <em>MBase_PriorityQueues</em> module instead of using this module directly. <br></p></td></tr>
+<!--active-->			   <tr class=""><td><a href='../module/mclass_pqinteger8b.html'>MClass_PQInteger8B</a></td><td><a href='../sourcefile/mclass_pqinteger8b.f90.html'>MClass_PQInteger8B.f90</a></td><td><p><strong>PURPOSE OF THIS MODULE</strong>: <br>
+  This module contains the <em>PQInteger8B</em> type and its related routines.
+  The <em>PQInteger8B</em> type is a priority-queue container with <em>INTEGER(KIND=kInt64)</em>
+  as the type of its stored keys.  It employs a binary heap implementation
+  to order its stored keys. <br>
+  The <em>PQInteger8B</em> type can represent either the max-priority queue or the
+  min-priority queue.  By default, it represents the max-priority queue but
+  a user can specify the <em>MinPQ</em> argument to true so that it represents
+  the min-priority queue instead. <br>
+  See the <a href="../module/mbase_priorityqueues.html">MBase_PriorityQueues</a>
+  module for an overview of a <em>priority-queue-based</em> type. A user may use the
+  <em>MBase_PriorityQueues</em> module instead of using this module directly. <br></p></td></tr>
+<!---->			   <tr class="active"><td><a href='../module/mclass_pqminmax.html'>MClass_PQMinMax</a></td><td><a href='../sourcefile/mclass_pqminmax.f90.html'>MClass_PQMinMax.f90</a></td><td><p><strong>PURPOSE OF THIS MODULE</strong>: <br>
+  This module contains the <em>PQMinMax</em> type and its related routines.  The <em>PQMinMax</em> type is
+  a collection type that employs an elementary implementation (where its array representation
+  is ordered using a sorting algorithm) to provide common operations for a priority queue.
+  The <em>PQMinMax</em> type is a generalized priority queue that offers combined operations of a
+  max-priority queue and a min-priority queue. <br>
+  The <em>PQMinMax</em> type employs the <em>KeyOrdered</em> type to store comparable keys where allowed key
+  types include the <em>CHARACTER</em>, <em>INTEGER</em> and <em>REAL</em> intrinsic types as well as any derived
+  type that is in the <em>Comparable</em> class.  Like other collection types, it must be employed to
+  store keys of only one particular data type.  To store keys of another data type, it must be
+  destructed before inserting keys of different data type. <br>
+  As an <em>ordered</em> collection type, the <em>PQMinMax</em> type provides an ordered iteration over its
+  stored keys, which are sorted according to the natural ordering of its keys.  The <em>StartMin</em>
+  method (or the <em>StartMax</em> method) must first be called to start an iteration for an ascending
+  order (or for an descending order).  The <em>MoveUp</em> method (or the <em>MoveDown</em> method) can then
+  be called repeatedly to move to the next keys with lower priorities in the desired order. <br></p></td></tr>
+<!--active-->			   <tr class=""><td><a href='../module/mclass_pqrealdp.html'>MClass_PQRealDP</a></td><td><a href='../sourcefile/mclass_pqrealdp.f90.html'>MClass_PQRealDP.f90</a></td><td><p><strong>PURPOSE OF THIS MODULE</strong>: <br>
+  This module contains the <em>PQRealDP</em> type and its related routines.
+  The <em>PQRealDP</em> type is a priority-queue container with <em>REAL(KIND=kDouble)</em>
+  as the type of its stored keys.  It employs a binary heap implementation
+  to order its stored keys. <br>
+  The <em>PQRealDP</em> type can represent either the max-priority queue or the
+  min-priority queue.  By default, it represents the max-priority queue but
+  a user can specify the <em>MinPQ</em> argument to true so that it represents
+  the min-priority queue instead. <br>
+  See the <a href="../module/mbase_priorityqueues.html">MBase_PriorityQueues</a>
+  module for an overview of a <em>priority-queue-based</em> type. A user may use the
+  <em>MBase_PriorityQueues</em> module instead of using this module directly. <br></p></td></tr>
+<!---->			   <tr class="active"><td><a href='../module/mclass_pqrealqp.html'>MClass_PQRealQP</a></td><td><a href='../sourcefile/mclass_pqrealqp.f90.html'>MClass_PQRealQP.f90</a></td><td><p><strong>PURPOSE OF THIS MODULE</strong>: <br>
+  This module contains the <em>PQRealQP</em> type and its related routines.
+  The <em>PQRealQP</em> type is a priority-queue container with <em>REAL(KIND=kQuad)</em>
+  as the type of its stored keys.  It employs a binary heap implementation
+  to order its stored keys. <br>
+  The <em>PQRealQP</em> type can represent either the max-priority queue or the
+  min-priority queue.  By default, it represents the max-priority queue but
+  a user can specify the <em>MinPQ</em> argument to true so that it represents
+  the min-priority queue instead. <br>
+  See the <a href="../module/mbase_priorityqueues.html">MBase_PriorityQueues</a>
+  module for an overview of a <em>priority-queue-based</em> type. A user may use the
+  <em>MBase_PriorityQueues</em> module instead of using this module directly. <br></p></td></tr>
+<!--active-->			   <tr class=""><td><a href='../module/mclass_pqrealsp.html'>MClass_PQRealSP</a></td><td><a href='../sourcefile/mclass_pqrealsp.f90.html'>MClass_PQRealSP.f90</a></td><td><p><strong>PURPOSE OF THIS MODULE</strong>: <br>
+  This module contains the <em>PQRealSP</em> type and its related routines.
+  The <em>PQRealSP</em> type is a priority-queue container with <em>REAL(KIND=kSingle)</em>
+  as the type of its stored keys.  It employs a binary heap implementation
+  to order its stored keys. <br>
+  The <em>PQRealSP</em> type can represent either the max-priority queue or the
+  min-priority queue.  By default, it represents the max-priority queue but
+  a user can specify the <em>MinPQ</em> argument to true  o that it represents
+  the min-priority queue instead. <br>
+  See the <a href="../module/mbase_priorityqueues.html">MBase_PriorityQueues</a>
+  module for an overview of a <em>priority-queue-based</em> type. A user may use the
+  <em>MBase_PriorityQueues</em> module instead of using this module directly. <br></p></td></tr>
+<!---->			   <tr class="active"><td><a href='../module/mclass_treecharacter.html'>MClass_TreeCharacter</a></td><td><a href='../sourcefile/mclass_treecharacter.f90.html'>MClass_TreeCharacter.f90</a></td><td><p><strong>PURPOSE OF THIS MODULE</strong>: <br>
+  This module contains the <em>TreeCharacter</em> type and its related helper type and routines.
+  The <em>TreeCharacter</em> type is a container type representing an ordered symbol table, which
+  is a container that associates a <em>value</em> with a <em>key</em> where keys are stored in a sorted
+  order.  It employs a balanced binary-search-tree (BST) implementation to provide common
+  operations for an ordered symbol table.  As an ordered symbol table, the <em>TreeCharacter</em>
+  type uses the Fortran intrinsic <em>CHARACTER</em> type as the type of its stored keys and an
+  unlimited polymorphic type as the type of its stored values. <br>
+  As a symbol table, the <em>TreeCharacter</em> type does not allow duplicated keys.  Therefore,
+  if an inserted key is equal to a key stored in the table, an associated value of the
+  stored key is replaced by an associated value of the inserted key.  Technically, the
+  <em>TreeCharacter</em> type employs a left-leaning red-black (RB) tree as the balanced BST. <br>
+  See the <a href="../module/mbase_balancedtrees.html">MBase_BalancedTrees</a> module
+  for an overview of a <em>balanced-tree-based</em> type.  A user may use the <em>MBase_BalancedTrees</em>
+  module instead of using this module directly. <br>
+  See the <a href="../module/mclass_treetable.html">MClass_TreeTable</a> module for a balanced
+  tree container type that is functionally similar to the <em>TreeCharacter</em> type but utilizes
+  a different implementation.  Also, unlike the <em>TreeCharacter</em> type, the <em>TreeTable</em> type
+  is designed as a generic ordered symbol table that allows keys with various types to be
+  inserted into the table. <br></p></td></tr>
+<!--active-->			   <tr class=""><td><a href='../module/mclass_treecomparable.html'>MClass_TreeComparable</a></td><td><a href='../sourcefile/mclass_treecomparable.f90.html'>MClass_TreeComparable.f90</a></td><td><p><strong>PURPOSE OF THIS MODULE</strong>: <br>
+  This module contains the <em>TreeComparable</em> type and its related helper type and routines.
+  The <em>TreeComparable</em> type is a container type representing an ordered symbol table, which
+  is a container that associates a <em>value</em> with a <em>key</em> where keys are stored in a sorted
+  order.  It employs a balanced binary-search-tree (BST) implementation to provide common
+  operations for an ordered symbol table.  As an ordered symbol table, the <em>TreeComparable</em>
+  type uses the <em>Comparable</em> derived type to store both the keys and their associated values.
+  Unlike other tree-based containers, the <em>TreeComparable</em> type uses a user-defined type in
+  the <em>Comparable</em> class to represent a key-value pair and requires only one argument (instead
+  of two) when inserting or retrieving the key and its associated value.  <br>
+  It is important to note that a user must be careful when implementing a <em>user-defined concrete</em>
+  subtype of the <em>Comparable</em> type.  The <em>TreeComparable</em> type employs the assignment statement
+  copy data of the key-value object and it utilizes the relational operators (e.g. ==, &gt; and &lt;)
+  to compare keys of the key-value objects.  This implies that the user should implement the
+  deferred <em>CopyAssign</em> procedure where both key and value components are copied from the source
+  object to the destination object whereas, when implemented, the deferred <em>CompareTo</em> procedure
+  should be dependent on its key component only.  It is also worth mentioning that only one
+  user-defined type in the <em>Comparable</em> class should be used for one container instance.  If
+  more than one types are inserted into the container, they should all be able to compare to
+  other types.  In this case, additionally, the user must implement the <em>CopyAssign</em> procedure
+  in a way that allows one type to make a copy of another type.  This indicates that all these
+  inserted types must be subtypes of one parent type.  Otherwise, the <em>TreeComparable</em> type would
+  not operate properly and the user will not be able to correctly retrieve a key-value pair from
+  the container. <br>
+  As a symbol table, the <em>TreeComparable</em> type does not allow duplicated keys.  Therefore,
+  if an inserted key-value pair is equal to a key-value pair stored in the table, the stored
+  pair is replaced by the inserted one.  Technically, the <em>TreeComparable</em> type employs a
+  left-leaning red-black (RB) tree as the balanced BST. <br>
+  See the <a href="../module/mbase_balancedtrees.html">MBase_BalancedTrees</a> module
+  for an overview of a <em>balanced-tree-based</em> type.  A user may use the <em>MBase_BalancedTrees</em>
+  module instead of using this module directly. <br>
+  See the <a href="../module/mclass_treetable.html">MClass_TreeTable</a> module for a balanced
+  tree container type that is functionally similar to the <em>TreeComparable</em> type but utilizes
+  a different implementation.  Also, unlike the <em>TreeComparable</em> type, the <em>TreeTable</em> type
+  is designed as a generic ordered symbol table that allows keys with various types to be
+  inserted into the table. <br></p></td></tr>
+<!---->			   <tr class="active"><td><a href='../module/mclass_treeinteger1b.html'>MClass_TreeInteger1B</a></td><td><a href='../sourcefile/mclass_treeinteger1b.f90.html'>MClass_TreeInteger1B.f90</a></td><td><p><strong>PURPOSE OF THIS MODULE</strong>: <br>
+  This module contains the <em>TreeInteger1B</em> type and its related helper type and routines.
+  The <em>TreeInteger1B</em> type is a container type representing an ordered symbol table, which
+  is a container that associates a <em>value</em> with a <em>key</em> where keys are stored in a sorted
+  order.  It employs a balanced binary-search-tree (BST) implementation to provide common
+  operations for an ordered symbol table.  As an ordered symbol table, the <em>TreeInteger1B</em>
+  type uses the Fortran intrinsic <em>INTEGER(KIND=kInt8)</em> type as the type of its stored keys
+  and an unlimited polymorphic type as the type of its stored values. <br>
+  As a symbol table, the <em>TreeInteger1B</em> type does not allow duplicated keys.  Therefore,
+  if an inserted key is equal to a key stored in the table, an associated value of the
+  stored key is replaced by an associated value of the inserted key.  Technically, the
+  <em>TreeInteger1B</em> type employs a left-leaning red-black (RB) tree as the balanced BST. <br>
+  See the <a href="../module/mbase_balancedtrees.html">MBase_BalancedTrees</a> module
+  for an overview of a <em>balanced-tree-based</em> type.  A user may use the <em>MBase_BalancedTrees</em>
+  module instead of using this module directly. <br>
+  See the <a href="../module/mclass_treetable.html">MClass_TreeTable</a> module for a balanced
+  tree container type that is functionally similar to the <em>TreeInteger1B</em> type but utilizes
+  a different implementation.  Also, unlike the <em>TreeInteger1B</em> type, the <em>TreeTable</em> type
+  is designed as a generic ordered symbol table that allows keys with various types to be
+  inserted into the table. <br></p></td></tr>
+<!--active-->			   <tr class=""><td><a href='../module/mclass_treeinteger2b.html'>MClass_TreeInteger2B</a></td><td><a href='../sourcefile/mclass_treeinteger2b.f90.html'>MClass_TreeInteger2B.f90</a></td><td><p><strong>PURPOSE OF THIS MODULE</strong>: <br>
+  This module contains the <em>TreeInteger2B</em> type and its related helper type and routines.
+  The <em>TreeInteger2B</em> type is a container type representing an ordered symbol table, which
+  is a container that associates a <em>value</em> with a <em>key</em> where keys are stored in a sorted
+  order.  It employs a balanced binary-search-tree (BST) implementation to provide common
+  operations for an ordered symbol table.  As an ordered symbol table, the <em>TreeInteger2B</em>
+  type uses the Fortran intrinsic <em>INTEGER(KIND=kInt16)</em> type as the type of its stored keys
+  and an unlimited polymorphic type as the type of its stored values. <br>
+  As a symbol table, the <em>TreeInteger2B</em> type does not allow duplicated keys.  Therefore,
+  if an inserted key is equal to a key stored in the table, an associated value of the
+  stored key is replaced by an associated value of the inserted key.  Technically, the
+  <em>TreeInteger2B</em> type employs a left-leaning red-black (RB) tree as the balanced BST. <br>
+  See the <a href="../module/mbase_balancedtrees.html">MBase_BalancedTrees</a> module
+  for an overview of a <em>balanced-tree-based</em> type.  A user may use the <em>MBase_BalancedTrees</em>
+  module instead of using this module directly. <br>
+  See the <a href="../module/mclass_treetable.html">MClass_TreeTable</a> module for a balanced
+  tree container type that is functionally similar to the <em>TreeInteger2B</em> type but utilizes
+  a different implementation.  Also, unlike the <em>TreeInteger2B</em> type, the <em>TreeTable</em> type
+  is designed as a generic ordered symbol table that allows keys with various types to be
+  inserted into the table. <br></p></td></tr>
+<!---->			   <tr class="active"><td><a href='../module/mclass_treeinteger4b.html'>MClass_TreeInteger4B</a></td><td><a href='../sourcefile/mclass_treeinteger4b.f90.html'>MClass_TreeInteger4B.f90</a></td><td><p><strong>PURPOSE OF THIS MODULE</strong>: <br>
+  This module contains the <em>TreeInteger4B</em> type and its related helper type and routines.
+  The <em>TreeInteger4B</em> type is a container type representing an ordered symbol table, which
+  is a container that associates a <em>value</em> with a <em>key</em> where keys are stored in a sorted
+  order.  It employs a balanced binary-search-tree (BST) implementation to provide common
+  operations for an ordered symbol table.  As an ordered symbol table, the <em>TreeInteger4B</em>
+  type uses the Fortran intrinsic <em>INTEGER(KIND=kInt32)</em> type as the type of its stored keys
+  and an unlimited polymorphic type as the type of its stored values. <br>
+  As a symbol table, the <em>TreeInteger4B</em> type does not allow duplicated keys.  Therefore,
+  if an inserted key is equal to a key stored in the table, an associated value of the
+  stored key is replaced by an associated value of the inserted key.  Technically, the
+  <em>TreeInteger4B</em> type employs a left-leaning red-black (RB) tree as the balanced BST. <br>
+  See the <a href="../module/mbase_balancedtrees.html">MBase_BalancedTrees</a> module
+  for an overview of a <em>balanced-tree-based</em> type.  A user may use the <em>MBase_BalancedTrees</em>
+  module instead of using this module directly. <br>
+  See the <a href="../module/mclass_treetable.html">MClass_TreeTable</a> module for a balanced
+  tree container type that is functionally similar to the <em>TreeInteger4B</em> type but utilizes
+  a different implementation.  Also, unlike the <em>TreeInteger4B</em> type, the <em>TreeTable</em> type
+  is designed as a generic ordered symbol table that allows keys with various types to be
+  inserted into the table. <br></p></td></tr>
+<!--active-->			   <tr class=""><td><a href='../module/mclass_treeinteger8b.html'>MClass_TreeInteger8B</a></td><td><a href='../sourcefile/mclass_treeinteger8b.f90.html'>MClass_TreeInteger8B.f90</a></td><td><p><strong>PURPOSE OF THIS MODULE</strong>: <br>
+  This module contains the <em>TreeInteger8B</em> type and its related helper type and routines.
+  The <em>TreeInteger8B</em> type is a container type representing an ordered symbol table, which
+  is a container that associates a <em>value</em> with a <em>key</em> where keys are stored in a sorted
+  order.  It employs a balanced binary-search-tree (BST) implementation to provide common
+  operations for an ordered symbol table.  As an ordered symbol table, the <em>TreeInteger8B</em>
+  type uses the Fortran intrinsic <em>INTEGER(KIND=kInt64)</em> type as the type of its stored keys
+  and an unlimited polymorphic type as the type of its stored values. <br>
+  As a symbol table, the <em>TreeInteger8B</em> type does not allow duplicated keys.  Therefore,
+  if an inserted key is equal to a key stored in the table, an associated value of the
+  stored key is replaced by an associated value of the inserted key.  Technically, the
+  <em>TreeInteger8B</em> type employs a left-leaning red-black (RB) tree as the balanced BST. <br>
+  See the <a href="../module/mbase_balancedtrees.html">MBase_BalancedTrees</a> module
+  for an overview of a <em>balanced-tree-based</em> type.  A user may use the <em>MBase_BalancedTrees</em>
+  module instead of using this module directly. <br>
+  See the <a href="../module/mclass_treetable.html">MClass_TreeTable</a> module for a balanced
+  tree container type that is functionally similar to the <em>TreeInteger8B</em> type but utilizes
+  a different implementation.  Also, unlike the <em>TreeInteger8B</em> type, the <em>TreeTable</em> type
+  is designed as a generic ordered symbol table that allows keys with various types to be
+  inserted into the table. <br></p></td></tr>
+<!---->			   <tr class="active"><td><a href='../module/mclass_treerealdp.html'>MClass_TreeRealDP</a></td><td><a href='../sourcefile/mclass_treerealdp.f90.html'>MClass_TreeRealDP.f90</a></td><td><p><strong>PURPOSE OF THIS MODULE</strong>: <br>
+  This module contains the <em>TreeRealDP</em> type and its related helper type and routines.
+  The <em>TreeRealDP</em> type is a container type representing an ordered symbol table, which
+  is a container that associates a <em>value</em> with a <em>key</em> where keys are stored in a sorted
+  order.  It employs a balanced binary-search-tree (BST) implementation to provide common
+  operations for an ordered symbol table.  As an ordered symbol table, the <em>TreeRealDP</em>
+  type uses the Fortran intrinsic <em>REAL(KIND=kDouble)</em> type as the type of its stored keys
+  and an unlimited polymorphic type as the type of its stored values. <br>
+  As a symbol table, the <em>TreeRealDP</em> type does not allow duplicated keys.  Therefore,
+  if an inserted key is equal to a key stored in the table, an associated value of the
+  stored key is replaced by an associated value of the inserted key.  Technically, the
+  <em>TreeRealDP</em> type employs a left-leaning red-black (RB) tree as the balanced BST. <br>
+  See the <a href="../module/mbase_balancedtrees.html">MBase_BalancedTrees</a> module
+  for an overview of a <em>balanced-tree-based</em> type.  A user may use the <em>MBase_BalancedTrees</em>
+  module instead of using this module directly. <br>
+  See the <a href="../module/mclass_treetable.html">MClass_TreeTable</a> module for a balanced
+  tree container type that is functionally similar to the <em>TreeRealDP</em> type but utilizes
+  a different implementation.  Also, unlike the <em>TreeRealDP</em> type, the <em>TreeTable</em> type
+  is designed as a generic ordered symbol table that allows keys with various types to be
+  inserted into the table. <br></p></td></tr>
+<!--active-->			   <tr class=""><td><a href='../module/mclass_treerealqp.html'>MClass_TreeRealQP</a></td><td><a href='../sourcefile/mclass_treerealqp.f90.html'>MClass_TreeRealQP.f90</a></td><td><p><strong>PURPOSE OF THIS MODULE</strong>: <br>
+  This module contains the <em>TreeRealQP</em> type and its related helper type and routines.
+  The <em>TreeRealQP</em> type is a container type representing an ordered symbol table, which
+  is a container that associates a <em>value</em> with a <em>key</em> where keys are stored in a sorted
+  order.  It employs a balanced binary-search-tree (BST) implementation to provide common
+  operations for an ordered symbol table.  As an ordered symbol table, the <em>TreeRealQP</em>
+  type uses the Fortran intrinsic <em>REAL(KIND=kQuad)</em> type as the type of its stored keys
+  and an unlimited polymorphic type as the type of its stored values. <br>
+  As a symbol table, the <em>TreeRealQP</em> type does not allow duplicated keys.  Therefore,
+  if an inserted key is equal to a key stored in the table, an associated value of the
+  stored key is replaced by an associated value of the inserted key.  Technically, the
+  <em>TreeRealQP</em> type employs a left-leaning red-black (RB) tree as the balanced BST. <br>
+  See the <a href="../module/mbase_balancedtrees.html">MBase_BalancedTrees</a> module
+  for an overview of a <em>balanced-tree-based</em> type.  A user may use the <em>MBase_BalancedTrees</em>
+  module instead of using this module directly. <br>
+  See the <a href="../module/mclass_treetable.html">MClass_TreeTable</a> module for a balanced
+  tree container type that is functionally similar to the <em>TreeRealQP</em> type but utilizes
+  a different implementation.  Also, unlike the <em>TreeRealQP</em> type, the <em>TreeTable</em> type
+  is designed as a generic ordered symbol table that allows keys with various types to be
+  inserted into the table. <br></p></td></tr>
+<!---->			   <tr class="active"><td><a href='../module/mclass_treerealsp.html'>MClass_TreeRealSP</a></td><td><a href='../sourcefile/mclass_treerealsp.f90.html'>MClass_TreeRealSP.f90</a></td><td><p><strong>PURPOSE OF THIS MODULE</strong>: <br>
+  This module contains the <em>TreeRealSP</em> type and its related helper type and routines.
+  The <em>TreeRealSP</em> type is a container type representing an ordered symbol table, which
+  is a container that associates a <em>value</em> with a <em>key</em> where keys are stored in a sorted
+  order.  It employs a balanced binary-search-tree (BST) implementation to provide common
+  operations for an ordered symbol table.  As an ordered symbol table, the <em>TreeRealSP</em>
+  type uses the Fortran intrinsic <em>REAL(KIND=kSingle)</em> type as the type of its stored keys
+  and an unlimited polymorphic type as the type of its stored values. <br>
+  As a symbol table, the <em>TreeRealSP</em> type does not allow duplicated keys.  Therefore,
+  if an inserted key is equal to a key stored in the table, an associated value of the
+  stored key is replaced by an associated value of the inserted key.  Technically, the
+  <em>TreeRealSP</em> type employs a left-leaning red-black (RB) tree as the balanced BST. <br>
+  See the <a href="../module/mbase_balancedtrees.html">MBase_BalancedTrees</a> module
+  for an overview of a <em>balanced-tree-based</em> type.  A user may use the <em>MBase_BalancedTrees</em>
+  module instead of using this module directly. <br>
+  See the <a href="../module/mclass_treetable.html">MClass_TreeTable</a> module for a balanced
+  tree container type that is functionally similar to the <em>TreeRealSP</em> type but utilizes
+  a different implementation.  Also, unlike the <em>TreeRealSP</em> type, the <em>TreeTable</em> type
+  is designed as a generic ordered symbol table that allows keys with various types to be
+  inserted into the table. <br></p></td></tr>
+<!--active-->			   <tr class=""><td><a href='../module/mclass_treeset.html'>MClass_TreeSet</a></td><td><a href='../sourcefile/mclass_treeset.f90.html'>MClass_TreeSet.f90</a></td><td><p><strong>PURPOSE OF THIS MODULE</strong>: <br>
+  This module contains the <em>TreeSet</em> type and its supporting routines and data type.
+  The <em>TreeSet</em> type is a collection type that employs a balanced binary-search-tree
+  (BST) implementation to provide common operations for an ordered set.  Like any other
+  set collection types, the <em>TreeSet</em> type does not allow duplicated items. <br>
+  The <em>TreeSet</em> type uses the <em>KeyOrdered</em> type to store comparable items where allowed
+  item types include the <em>CHARACTER</em>, <em>INTEGER</em> and <em>REAL</em> intrinsic types as well as any
+  derived type that is in the <em>Comparable</em> class.  Like other collection types, it must
+  be employed to store items of only one particular data type.  To store items of another
+  data type, it must be destructed before inserting items of different data type. <br>
+  As an <em>ordered</em> set, the <em>TreeSet</em> type provides an ordered iteration over its stored
+  items, which are sorted according to the natural ordering of its items.  It can be
+  accessed and traversed in either ascending (using the <em>StartFirst</em> method) or descending
+  (using the <em>StartLast</em> method) order. <br>
+  Technically, the <em>TreeSet</em> type employs a balanced search tree implementation to provide
+  common operations for an ordered set.  The <em>TreeSet</em> type utilizes the <em>IntrusiveRBTree</em>
+  type as its component to store its tree nodes.  As an intrusive BST container, the
+  <em>IntrusiveRBTree</em> type provides common binary-search-tree operations without a memory
+  management task.  The memory management task of the inserted tree nodes is handled by
+  the <em>TreeSet</em> type.  <br></p></td></tr>
+<!---->			   <tr class="active"><td><a href='../module/mclass_treetable.html'>MClass_TreeTable</a></td><td><a href='../sourcefile/mclass_treetable.f90.html'>MClass_TreeTable.f90</a></td><td><p><strong>PURPOSE OF THIS MODULE</strong>: <br>
+  This module contains the <em>TreeTable</em> type and its supporting routines and data type.  The
+  The <em>TreeTable</em> type is a collection type that employs a balanced binary-search-tree (BST)
+  implementation to provide common operations for an ordered symbol table. <br>
+  The <em>TreeTable</em> type uses the <em>KeyOrdered</em> type to store its keys and the <em>GenData</em> type
+  to store its values.  Therefore, it can be used to store comparable keys and values of any
+  data types.  Allowed types of comparable keys include the <em>CHARACTER</em>, <em>INTEGER</em> and <em>REAL</em>
+  intrinsic types as well as any derived type that is in the <em>Comparable</em> class.  Like other
+  collection types, however, it must be employed to store key-value pairs of only specific
+  key type and one specific value type.  To store key-value pairs of another key type (or
+  another value type), it must be destructed before inserting items of different key type
+  (or different value type). <br>
+  As a symbol table, the <em>TreeTable</em> type does not allow duplicated keys.  Therefore, if an
+  inserted key is equal to a key stored in the table, an associated value of the stored key
+  is replaced by an associated value of the inserted key.  As an <em>ordered</em> symbol table, the
+  <em>TreeTable</em> type provides an ordered iteration over its stored key-value items, which are
+  sorted according to the natural ordering of its keys.  It can be accessed and traversed in
+  either ascending (using the <em>StartFirst</em> method) or descending (using the <em>StartLast</em> method)
+  key order. <br>
+  Technically, the <em>TreeTable</em> type employs a balanced binary search tree (BST) implementation
+  to provide common operations for an ordered symbol table.  The <em>TreeTable</em> type utilizes the
+  <em>IntrusiveRBTree</em> type as its component to store its tree nodes.  The <em>IntrusiveRBTree</em> type,
+  as an intrusive BST container, provides common binary-search-tree operations without a memory
+  management task.  The memory management task of the inserted tree nodes is handled by the
+  <em>TreeTable</em> type.  <br></p></td></tr>
+<!--active-->			 </tbody></table>
+             
+        </div>
+      </div>
+      <hr>
+    </div> <!-- /container -->
+    <footer>
+      <div class="container">
+        <div class="row justify-content-between">
+          <div class="col"><p>eXPerimental Fortran Library (XpfLib) Documentation was developed by Niranama<br>&copy; 2024 
+</p>
+          </div>
+          <div class="col">
+            <p class="text-end">
+              Documentation generated by
+              <a href="https://github.com/Fortran-FOSS-Programmers/ford">FORD</a>
+            </p>
+          </div>
+        </div>
+        <br>
+      </div> <!-- /container -->
+    </footer>
+
+    <!-- Bootstrap core JavaScript -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>    
+
+    <!-- MathJax JavaScript
+             ================================================== -->
+             <!-- Placed at the end of the document so the pages load faster -->
+        <script type="text/x-mathjax-config">
+          MathJax.Hub.Config({
+          TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } },
+          jax: ['input/TeX','input/MathML','output/HTML-CSS'],
+          extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']
+          });
+        </script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+          <script src="../tipuesearch/tipuesearch_content.js"></script>
+          <script src="../tipuesearch/tipuesearch_set.js"></script>
+          <script src="../tipuesearch/tipuesearch.js"></script>
+
+  </body>
+</html>

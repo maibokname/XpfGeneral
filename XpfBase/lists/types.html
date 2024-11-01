@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta name="description" content="Experimental Fortran Package - Base Modules and Classes">
+    <meta name="author" content="Niranama" >
+    <link rel="icon" href="../favicon.png">
+
+    <title>All Types &ndash; eXPerimental Fortran Library (XpfLib) Documentation
+</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link href="../css/pygments.css" rel="stylesheet">
+    <link href="../css/font-awesome.min.css" rel="stylesheet">
+    <link href="../css/local.css" rel="stylesheet">
+      <link  href="../tipuesearch/tipuesearch.css" rel="stylesheet">
+
+    <script src="https://code.jquery.com/jquery-3.7.0.slim.min.js" integrity="sha256-tG5mcZUtJsZvyKAxYLVXrmjKBVLd6VpVccqz/r4ypFE=" crossorigin="anonymous"></script>
+  </head>
+
+  <body>
+
+    <!-- Fixed navbar -->
+    <div class="container-fluid mb-sm-4 mb-xl-2">
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container">
+          <a class="navbar-brand" href="../index.html">eXPerimental Fortran Library (XpfLib) Documentation </a>
+          <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar"
+                  aria-expanded="false" aria-controls="navbar" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon">
+          </button>
+
+          <div id="navbar" class="navbar-collapse collapse">
+            <ul class="navbar-nav">
+                  <li class="nav-item">
+                    <a class="nav-link" href="../lists/files.html">Source Files</a>
+                  </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../lists/modules.html">Modules</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../lists/procedures.html">Procedures</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../lists/absint.html">Abstract Interfaces</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../lists/types.html">Derived Types</a>
+                </li>
+            </ul>
+              <div class="d-flex align-items-end flex-grow-1">
+                <form action="../search.html" role="search" class="ms-auto">
+                  <input type="text" class="form-control" aria-label="Search" placeholder="Search" name="q" id="tipue_search_input" autocomplete="off" required>
+                </form>
+              </div>
+          </div><!--/.nav-collapse -->
+        </div>
+      </nav>
+    </div>
+
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12" id='text'>
+			 <h1>Derived Types</h1>
+			 <table class="table table-striped nostretched">
+			 <thead>
+			 <tr><th>Type</th><th>Location</th><th>Extends</th><th>Description</th></tr>
+			 </thead><tbody>
+			   <tr><td><a href='../type/basenode.html'>BaseNode</a></td><td><a href='../module/mclass_basenodepool.html'>MClass_BaseNodePool</a></td><td><a href='../type/object.html'>Object</a></td><td><p>The <em>BaseNode</em> type is an abstract type provided as a base type for a common linked node.</p></td></tr>
+			   <tr><td><a href='../type/basenodepool.html'>BaseNodePool</a></td><td><a href='../module/mclass_basenodepool.html'>MClass_BaseNodePool</a></td><td><a href='../type/object.html'>Object</a></td><td><p><em>BaseNodePool</em> is a memory-pool type that can be used to manage memory allocation
+  of nodes stored in a linked-based container.</p></td></tr>
+			   <tr><td><a href='../type/binrep128.html'>BinRep128</a></td><td><a href='../module/mbase_floatutil.html'>MBase_FloatUtil</a></td><td>None</td><td><p><em>BinRep128</em> is a binary floating-point representation for 128-bit real number.</p></td></tr>
+			   <tr><td><a href='../type/binrep32.html'>BinRep32</a></td><td><a href='../module/mbase_floatutil.html'>MBase_FloatUtil</a></td><td>None</td><td><p><em>BinRep32</em> is a binary floating-point representation for 32-bit real number.</p></td></tr>
+			   <tr><td><a href='../type/binrep64.html'>BinRep64</a></td><td><a href='../module/mbase_floatutil.html'>MBase_FloatUtil</a></td><td>None</td><td><p><em>BinRep64</em> is a binary floating-point representation for 64-bit real number.</p></td></tr>
+			   <tr><td><a href='../type/bstnode.html'>BSTNode</a></td><td><a href='../module/mclass_intrusivebstrees.html'>MClass_IntrusiveBSTrees</a></td><td><a href='../type/compnode.html'>CompNode</a></td><td><p><em>BSTNode</em> is a binary-search tree node type provided to be used with both
+ the <em>IntrusiveAVLTree</em> and <em>IntrusiveRBTree</em> container types.   Like the
+ <em>DoublyLinkedNode</em> type, the <em>BSTNode</em>  contains no data content.  Therefore,
+ an intrusive container working with objects (or nodes) in the <em>BSTNode</em> class
+ can operate without having to manage the data content. <br>
+ However, to use the intrusive container properly, for example, a user would
+ typically define a new node type that extends the <em>BSTNode</em> type as follows:
+ 
+<Pre><Code style="color:MidnightBlue;">
+ ! a tree-node object with default integer as type of its key and
+   default real as type of its content
+ TYPE, EXTENDS(BSTNode) :: IntegerRealNode
+     INTEGER     :: key          ! stored key
+     REAL        :: content      ! stored content
+ END TYPE
+ </Code></Pre></p><a href="../type/bstnode.html" class="pull-right"><emph>Read more&hellip;</emph></a></td></tr>
+			   <tr><td><a href='../type/bytebuffer.html'>ByteBuffer</a></td><td><a href='../module/mclass_bytebuffer.html'>MClass_ByteBuffer</a></td><td><a href='../type/object.html'>Object</a></td><td><p>The <em>ByteBuffer</em> type is a buffer type that provides a convenient way
+ to build an array of 8-bit integers.</p></td></tr>
+			   <tr><td><a href='../type/charbuffer.html'>CharBuffer</a></td><td><a href='../module/mclass_charbuffer.html'>MClass_CharBuffer</a></td><td><a href='../type/object.html'>Object</a></td><td><p>The <em>CharBuffer</em> type is a buffer type that provides a convenient way
+ to build a string from multiple strings.</p></td></tr>
+			   <tr><td><a href='../type/comparable.html'>Comparable</a></td><td><a href='../module/mclass_comparable.html'>MClass_Comparable</a></td><td><a href='../type/object.html'>Object</a></td><td><p>A <em>Comparable</em> type is an abstract data type that can be compared to itself.  When two
+ <em>Comparable</em> objects are compared, we can specify whether they are less than, greater
+ than or equal to one another or not.  This data type can also be called a <em>Sortable</em>
+ type because it can be used with a sorting algorithm.</p></td></tr>
+			   <tr><td><a href='../type/compnode.html'>CompNode</a></td><td><a href='../module/mclass_compnodepool.html'>MClass_CompNodePool</a></td><td><a href='../type/comparable.html'>Comparable</a></td><td><p>The <em>CompNode</em> type is an abstract type provided as a base type for a comparable linked node.</p></td></tr>
+			   <tr><td><a href='../type/compnodepool.html'>CompNodePool</a></td><td><a href='../module/mclass_compnodepool.html'>MClass_CompNodePool</a></td><td><a href='../type/object.html'>Object</a></td><td><p><em>CompNodePool</em> is a memory-pool type that can be used to manage memory allocation
+  of nodes stored in a linked-based container.</p></td></tr>
+			   <tr><td><a href='../type/container.html'>Container</a></td><td><a href='../module/mbase_common.html'>MBase_Common</a></td><td>None</td><td><p>container type that utilize 'c' pointer (C_PTR) type</p></td></tr>
+			   <tr><td><a href='../type/doublylinkednode.html'>DoublyLinkedNode</a></td><td><a href='../module/mclass_intrusivelinkedlists.html'>MClass_IntrusiveLinkedLists</a></td><td><a href='../type/basenode.html'>BaseNode</a></td><td><p><em>DoublyLinkedNode</em> is a doubly-linked node type that contains two pointer
+  components that can point to its adjacent nodes (next node and previous
+  node) in two directions, which allow a doubly-linked list to be formed.
+  Unlike a traditional (non-intrusive) list node, the <em>DoublyLinkedNode</em> type
+  contains no data content.  Therefore, an intrusive container working with
+  nodes in the <em>DoublyLinkedNode</em> class can operate without having to manage
+  the data content. <br>
+  However, to use the intrusive container properly, for example, a user must
+  define a new node type that extends the <em>DoublyLinkedNode</em> type as follows:
+<br>
+<Pre><Code style="color:MidnightBlue;">
+  ! a list-node object with default integer as type of its data content
+  TYPE, EXTENDS(DoublyLinkedNode) :: IntegerListNode
+      INTEGER     :: content      ! stored content
+  END TYPE
+  </Code></Pre></p><a href="../type/doublylinkednode.html" class="pull-right"><emph>Read more&hellip;</emph></a></td></tr>
+			   <tr><td><a href='../type/equation.html'>Equation</a></td><td><a href='../module/mbase_legacyutil.html'>MBase_LegacyUtil</a></td><td>None</td><td><p>an equation type that can be used to parse strings/texts expressing
+ mathematical expressions to a 'Function Parser' so that a system of
+ equations can be evaluated at runtime.</p></td></tr>
+			   <tr><td><a href='../type/errordata.html'>ErrorData</a></td><td><a href='../module/mclass_errordata.html'>MClass_ErrorData</a></td><td>None</td><td><p><em>ErrorData</em> is an error data type that can be used to handle and report errors.</p></td></tr>
+			   <tr><td><a href='../type/errorinfo.html'>ErrorInfo</a></td><td><a href='../module/mclass_errorinfo.html'>MClass_ErrorInfo</a></td><td>None</td><td><p><em>ErrorInfo</em> is an error data type that can be used to handle and report errors.</p></td></tr>
+			   <tr><td><a href='../type/freeblocklist.html'>FreeBlockList</a></td><td><a href='../module/mclass_freeblocklist.html'>MClass_FreeBlockList</a></td><td>None</td><td><p>The <em>FreeBlockList</em> type is a linked-list type that can be used to keep track
+ of free memory blocks in a memory pool.</p></td></tr>
+			   <tr><td><a href='../type/freeblocknode.html'>FreeBlockNode</a></td><td><a href='../module/mclass_freeblocklist.html'>MClass_FreeBlockList</a></td><td><a href='../type/doublylinkednode.html'>DoublyLinkedNode</a></td><td><p>The <em>FreeBlockNode</em> type is a linked-node type to be used in conjunction with
+ the <em>FreeBlockList</em> type.</p></td></tr>
+			   <tr><td><a href='../type/gendata.html'>GenData</a></td><td><a href='../module/mclass_gendata.html'>MClass_GenData</a></td><td><a href='../type/object.html'>Object</a></td><td><p>The <em>GenData</em> type is a generic storage type that can hold any data types.</p></td></tr>
+			   <tr><td><a href='../type/hashlistnode.html'>HashListNode</a></td><td><a href='../module/mclass_intrusivehashlist.html'>MClass_IntrusiveHashList</a></td><td><a href='../type/doublylinkednode.html'>DoublyLinkedNode</a></td><td><p>The <em>HashListNode</em> type is a doubly-linked-list node type intended to be
+ used in conjunction with the <em>IntrusiveHashList</em> type.  Similar to other
+ intrusive containers, the <em>IntrusiveHashList</em> type requires a user to
+ define a new (concrete) node type that extends the <em>HashListNode</em> type
+ where the new node type contains a key and its associated value as its
+ components. <br>
+ The following code snippet illustrates how to define a new node type.
+<br>
+<Pre><Code style="color:MidnightBlue;">
+  TYPE, EXTENDS(HashListNode) :: AssociativeNode
+      CHARACTER(LEN=:), ALLOCATABLE   :: Key      ! stored string key
+      INTEGER                         :: Value1   ! stored integer value
+      REAL                            :: Value2   ! stored real value
+  END TYPE
+  </Code></Pre></p><a href="../type/hashlistnode.html" class="pull-right"><emph>Read more&hellip;</emph></a></td></tr>
+			   <tr><td><a href='../type/hashtreenode.html'>HashTreeNode</a></td><td><a href='../module/mclass_intrusivehashtree.html'>MClass_IntrusiveHashTree</a></td><td><a href='../type/bstnode.html'>BSTNode</a></td><td><p>The <em>HashTreeNode</em> type is a binary-search-tree node type intended to be
+ used in conjunction with the <em>IntrusiveHashTree</em> type.  Similar to other
+ intrusive containers, the <em>IntrusiveHashTree</em> type requires a user to
+ define a new (concrete) node type that extends the <em>HashTreeNode</em> type
+ where the new node type contains a key and its associated value as its
+ components. <br>
+ The following code snippet illustrates how to define a new node type.
+<br>
+<Pre><Code style="color:MidnightBlue;">
+  TYPE, EXTENDS(HashTreeNode) :: AssociativeNode
+      CHARACTER(LEN=:), ALLOCATABLE   :: Key      ! stored string key
+      INTEGER                         :: Value1   ! stored integer value
+      REAL                            :: Value2   ! stored real value
+  END TYPE
+  </Code></Pre></p><a href="../type/hashtreenode.html" class="pull-right"><emph>Read more&hellip;</emph></a></td></tr>
+			   <tr><td><a href='../type/intrusiveavltree.html'>IntrusiveAVLTree</a></td><td><a href='../module/mclass_intrusivebstrees.html'>MClass_IntrusiveBSTrees</a></td><td>None</td><td><p><em>IntrusiveAVLTree</em> is a binary-search tree container type that represents an
+ ordered symbol table of objects in the <em>BSTNode</em> class.  It supports various
+ common operations including the <em>Insert</em>, <em>Remove</em>, <em>Contain</em>, <em>GetSize</em>, and
+ <em>IsEmpty</em> methods.  It also provides ordered methods for finding the minimum,
+ maximum, floor, and ceiling objects.  In addition, it provides methods to
+ perform an iteration over all nodes (or objects) in two directions (from minimum
+ node to maximum node, and vice versa).  <br>
+ The <em>IntrusiveAVLTree</em> type internally employs the AVL tree (Georgy Adelson-
+ Velsky and Evgenii Landis' tree), which is a self-balancing tree.  In an AVL
+ tree, the heights of the two child subtrees of any node differ by at most one;
+ if at any time they differ by more than one, re-balancing is done to restore
+ this property.  <br>
+ As previously discussed, the <em>IntrusiveAVLTree</em> type provides methods that
+ allow an iteration over all objects in two directions.
+ The following code snippet illustrates how to perform an inorder traversal over
+ the tree from the minimum object to the maximum object.
+ 
+<Pre><Code style="color:MidnightBlue;">
+ ! start (forward) inorder traversal (from the minimum object)
+ IsEmpty = Tree%StartMin()
+ IF (.NOT.IsEmpty) DoSomeThing...
+ DO
+     ! move to the next (successor) object
+     IsTheEnd = Tree%MoveForward()
+     ! check whether we reach the end of the tree or not
+     IF (IsTheEnd) EXIT
+     ! if not, do the task we need
+     DoSomeThing...
+ END DO
+ </Code></Pre></p><a href="../type/intrusiveavltree.html" class="pull-right"><emph>Read more&hellip;</emph></a></td></tr>
+			   <tr><td><a href='../type/intrusivehashlist.html'>IntrusiveHashList</a></td><td><a href='../module/mclass_intrusivehashlist.html'>MClass_IntrusiveHashList</a></td><td>None</td><td><p>The <em>IntrusiveHashList</em> type is an intrusive container type that employs a
+ separate-chaining hash table implementation to provide common operations for
+ an unordered symbol table.  The separate-chaining technique combines a linked
+ list with a hash table to solve the collision problem.  <br>
+ The <em>IntrusiveHashList</em> type employs an array of the <em>IntrusiveLinearList</em> type
+ as its component (i.e. using an array of linked lists as its buckets) to store
+ <em>HashListNode</em> objects.  Although the <em>IntrusiveHashList</em> type handles a memory
+ management of its working lists, these working lists (as intrusive containers)
+ only provide a linking/unlinking task for common linked-list operations.  This
+ means that the memory management task of the inserted <em>HashListNode</em> objects
+ is essentially handled by a user who is an owner of those inserted objects. <br>
+ As a symbol table, the <em>IntrusiveHashList</em> type does not allow duplicated keys;
+ therefore, if an inserted key node has a key equal to that of a key node stored
+ in the table, the stored key node is replaced by the inserted key node.  <br>
+ In order to avoid long linked lists (due to many keys hashed to the same indices),
+ the <em>IntrusiveHashList</em> type employs the dynamic-array technique to resize the
+ linked-list array.  As a result, the <em>IntrusiveHashList</em> type requires an explicit
+ construction via the <em>Construct</em> method before using other provided operations.
+ When the <em>Destruct</em> method is called, the hash table also needs to be re-construct
+ because this method essentially deallocates the working array.  <br></p></td></tr>
+			   <tr><td><a href='../type/intrusivehashtree.html'>IntrusiveHashTree</a></td><td><a href='../module/mclass_intrusivehashtree.html'>MClass_IntrusiveHashTree</a></td><td>None</td><td><p>The <em>IntrusiveHashTree</em> type is an intrusive container type that employs a
+ separate-chaining hash table implementation to provide common operations for
+ an unordered symbol table.  The separate-chaining technique combines a balanced
+ binary-search tree with a hash table to solve the collision problem.  <br>
+ The <em>IntrusiveHashTree</em> type employs an array of the <em>IntrusiveRBTree</em> type
+ as its component (i.e. using an array of balanced trees as its buckets) to store
+ <em>HashTreeNode</em> objects.  Although the <em>IntrusiveHashTree</em> type handles a memory
+ management of its working trees, these working trees (as intrusive containers)
+ only provide a linking/unlinking task for common balanced-tree operations.  This
+ means that the memory management task of the inserted <em>HashTreeNode</em> objects
+ is essentially handled by a user who is an owner of those inserted objects. <br>
+ As a symbol table, the <em>IntrusiveHashTree</em> type does not allow duplicated keys;
+ therefore, if an inserted key node has a key equal to that of a key node stored
+ in the table, the stored key node is replaced by the inserted key node.  <br>
+ In order to avoid large balanced trees (due to many keys hashed to the same indices),
+ the <em>IntrusiveHashTree</em> type employs the dynamic-array technique to resize the
+ balanced-tree array.  As a result, the <em>IntrusiveHashTree</em> type requires an explicit
+ construction via the <em>Construct</em> method before using other provided operations.
+ When the <em>Destruct</em> method is called, the hash table also needs to be re-construct
+ because this method essentially deallocates the working array.  <br></p></td></tr>
+			   <tr><td><a href='../type/intrusivelinearlist.html'>IntrusiveLinearList</a></td><td><a href='../module/mclass_intrusivelinkedlists.html'>MClass_IntrusiveLinkedLists</a></td><td><a href='../type/intrusiveringlist.html'>IntrusiveRingList</a></td><td><p><em>IntrusiveLinearList</em> is an intrusive doubly-linked list container type
+  that provides common linked-list operations without a memory management
+  task.  The management of objects inserted in the list must be done by
+  a user, which is the owner of those objects. <br>
+  See the <a href="../module/MClass_IntrusiveLinkedLists.html#type-doublylinkednode">DoublyLinkedNode</a>
+  type for how to define an object to be inserted into the intrusive list. <br>
+  As a doubly-linked list type, the <em>IntrusiveLinearList</em> type provides
+  four methods that allow iterations over its objects in two directions.
+  The following code snippet illustrates how to typically traverse the list.
+<br>
+<Pre><Code style="color:MidnightBlue;">
+  ! start forward iteration (from the first or head node)
+  IsEmpty = List%StartFirst()
+  IF (.NOT.IsEmpty) DoSomeThing...
+  DO
+      ! move to the next iteration
+      IsTheEnd = List%MoveForward()
+      ! check whether we reach the end of the list or not
+      IF (IsTheEnd) EXIT
+      ! if not, do the task we need
+      DoSomeThing...
+  END DO
+  </Code></Pre></p><a href="../type/intrusivelinearlist.html" class="pull-right"><emph>Read more&hellip;</emph></a></td></tr>
+			   <tr><td><a href='../type/intrusiverbtree.html'>IntrusiveRBTree</a></td><td><a href='../module/mclass_intrusivebstrees.html'>MClass_IntrusiveBSTrees</a></td><td><a href='../type/intrusiveavltree.html'>IntrusiveAVLTree</a></td><td><p><em>IntrusiveRBTree</em> is a binary-search tree container type that represents an
+ ordered symbol table of objects in the <em>BSTNode</em> class.  It is a subtype of
+ the <em>IntrusiveAVLTree</em> type and thus inherits all methods from its super class.
+ Internally, the <em>IntrusiveRBTree</em> type utilizes a left-leaning red-black (RB)
+ tree, which is also a self-balancing tree.  It only overrides those methods
+ that require a different implementation.</p></td></tr>
+			   <tr><td><a href='../type/intrusiveringlist.html'>IntrusiveRingList</a></td><td><a href='../module/mclass_intrusivelinkedlists.html'>MClass_IntrusiveLinkedLists</a></td><td>None</td><td><p><em>IntrusiveRingList</em> is an intrusive circularly-linked list container type
+  that provides common linked-list operations without a memory management
+  task.  The management of objects inserted in the list must be done by
+  a user, which is the owner of those objects. <br>
+  See the <a href="../module/MClass_IntrusiveLinkedLists.html#type-doublylinkednode">DoublyLinkedNode</a>
+  type for how to define an object to be inserted into an intrusive container. <br>
+  Similar to the <em>IntrusiveLinearList</em> type, the <em>IntrusiveRingList</em> type provides
+  four methods that allow iterations over its objects in two directions.  See the
+  <a href="../module/MClass_IntrusiveLinkedLists.html#type-intrusivelinearlist">IntrusiveLinearList</a>
+  for various illustrations of an iteration over an intrusive list. <br>
+  Nonetheless, unlike the <em>IntrusiveLinearList</em> type, the meanings of the returned
+  <em>EndOfList</em> flag from the <em>MoveForward</em> and <em>MoveBackward</em> methods are NOT the same
+  for the two intrusive list types.  For the linear list, the end of list means that
+  the next pointer of the cursor node points to NULL (i.e. its association status is
+  disassociated).  However, for the circular list, the end of list means that the
+  next pointer of the cursor node points back to the starting node.  Therefore, for
+  the circular list, the user can ignore the <em>EndOfList</em> flag and loop over the list
+  once more if necessary without having to call the <em>StartFirst</em> or <em>StartLast</em>
+  method again. <br>
+  It is important to note that the intrusive circular list allows insertion of
+  duplicated objects (i.e. objects that are equal to one another).  It even allows
+  the same object to be inserted twice (i.e. it does not check  whether the same
+  object is actually inserted more than once).  Therefore, it is the user as the
+  owner of inserted objects who must be responsible for how to handle those inserted
+  objects properly.</p></td></tr>
+			   <tr><td><a href='../type/keyordered.html'>KeyOrdered</a></td><td><a href='../module/mclass_keyordered.html'>MClass_KeyOrdered</a></td><td><a href='../type/comparable.html'>Comparable</a></td><td><p>The <em>KeyOrdered</em> type is a generic storage type that can hold any data types.</p></td></tr>
+			   <tr><td><a href='../type/keyunordered.html'>KeyUnordered</a></td><td><a href='../module/mclass_keyunordered.html'>MClass_KeyUnordered</a></td><td><a href='../type/gendata.html'>GenData</a></td><td><p>The <em>KeyUnordered</em> type is a storage type that can hold any data types,
+ except the <em>LOGICAL</em> type.</p></td></tr>
+			   <tr><td><a href='../type/mathexpparser.html'>MathExpParser</a></td><td><a href='../module/mclass_mathexpparser.html'>MClass_MathExpParser</a></td><td>None</td><td><p><em>MathExpParser</em> is a parser type that can be used to parse and evaluate
+  mathematical expressions.</p></td></tr>
+			   <tr><td><a href='../type/memhandle.html'>MemHandle</a></td><td><a href='../module/mclass_memorypool.html'>MClass_MemoryPool</a></td><td>None</td><td><p>The <em>MemHandle</em> type is a memory-handle type that contains information relating
+ to the location and size of the data stored in the memory pool's storage.</p></td></tr>
+			   <tr><td><a href='../type/memorypool.html'>MemoryPool</a></td><td><a href='../module/mclass_memorypool.html'>MClass_MemoryPool</a></td><td>None</td><td><p>The <em>MemoryPool</em> type is a general data storage type that can be used to store data
+ of any types.  Internally, it stores the specified data as an array of bytes.</p></td></tr>
+			   <tr><td><a href='../type/object.html'>Object</a></td><td><a href='../module/mclass_object.html'>MClass_Object</a></td><td>None</td><td><p>The <em>Object</em> type is an abstract data type that must be able to make a copy of itself.
+ It defines an API for various common operations shared by most objects.  <br></p></td></tr>
+			   <tr><td><a href='../type/progressbar.html'>ProgressBar</a></td><td><a href='../module/mclass_progressbar.html'>MClass_ProgressBar</a></td><td>None</td><td><p>a derived type to display a progress bar on the console</p></td></tr>
+			   <tr><td><a href='../type/ptrhandle.html'>PtrHandle</a></td><td><a href='../module/mclass_safeptralloc.html'>MClass_SafePtrAlloc</a></td><td>None</td><td><p>The <em>PtrHandle</em> type is a pointer-handle type that contains information
+ relating to the location and size of the storage occupied by the pointer.</p></td></tr>
+			   <tr><td><a href='../type/safeptralloc.html'>SafePtrAlloc</a></td><td><a href='../module/mclass_safeptralloc.html'>MClass_SafePtrAlloc</a></td><td>None</td><td><p>The <em>SafePtrAlloc</em> type is a safe-pointer allocator that provides a safe way to
+ allocate memory for a one-dimensional pointer array.</p></td></tr>
+			   <tr><td><a href='../type/savevar.html'>SaveVar</a></td><td><a href='../module/mbase_legacyutil.html'>MBase_LegacyUtil</a></td><td><a href='../type/sharepar.html'>SharePar</a></td><td><p>a saved variable type used to modernize legacy code</p></td></tr>
+			   <tr><td><a href='../type/sharepar.html'>SharePar</a></td><td><a href='../module/mbase_legacyutil.html'>MBase_LegacyUtil</a></td><td>None</td><td><p>a share parameter type used to modernize common block of legacy code</p></td></tr>
+			   <tr><td><a href='../type/sint128.html'>SInt128</a></td><td><a href='../module/mbase_sint128.html'>MBase_SInt128</a></td><td>None</td><td><p><em>SInt128</em> is a 128-bit signed integer type where the base
+  of its components is 2<sup>64</sup>.</p></td></tr>
+			   <tr><td><a href='../type/stackchar.html'>StackChar</a></td><td><a href='../module/mclass_stackchar.html'>MClass_StackChar</a></td><td>None</td><td><p><em>StackChar</em> is a container type that employs a singly-linked list implementation to
+  provide common operations for a LIFO stack container.  The type of items stored in
+  this container is <em>CHARACTER</em>.</p></td></tr>
+			   <tr><td><a href='../type/stackint32.html'>StackInt32</a></td><td><a href='../module/mclass_stackint32.html'>MClass_StackInt32</a></td><td>None</td><td><p><em>StackInt32</em> is a container type that employs a singly-linked list implementation to
+  provide common operations for a LIFO stack container.  The type of items stored in
+  this container is <em>INTEGER(KIND=kInt32)</em>.</p></td></tr>
+			   <tr><td><a href='../type/stackint64.html'>StackInt64</a></td><td><a href='../module/mclass_stackint64.html'>MClass_StackInt64</a></td><td>None</td><td><p><em>StackInt64</em> is a container type that employs a singly-linked list implementation to
+  provide common operations for a LIFO stack container.  The type of items stored in
+  this container is <em>INTEGER(KIND=kInt64)</em>.</p></td></tr>
+			   <tr><td><a href='../type/stackrealdp.html'>StackRealDP</a></td><td><a href='../module/mclass_stackrealdp.html'>MClass_StackRealDP</a></td><td>None</td><td><p><em>StackRealDP</em> is a container type that employs a singly-linked list implementation to
+  provide common operations for a LIFO stack container.  The type of items stored in
+  this container is <em>REAL(KIND=kDouble)</em>.</p></td></tr>
+			   <tr><td><a href='../type/stackrealsp.html'>StackRealSP</a></td><td><a href='../module/mclass_stackrealsp.html'>MClass_StackRealSP</a></td><td>None</td><td><p><em>StackRealSP</em> is a container type that employs a singly-linked list implementation to
+  provide common operations for a LIFO stack container.  The type of items stored in
+  this container is <em>REAL(KIND=kSingle)</em>.</p></td></tr>
+			   <tr><td><a href='../type/stringaux.html'>StringAux</a></td><td><a href='../module/mbase_bindec64.html'>MBase_BinDec64</a></td><td>None</td><td><p>A derived type containing auxiliary string information.</p></td></tr>
+			   <tr><td><a href='../type/timer.html'>Timer</a></td><td><a href='../module/mclass_timer.html'>MClass_Timer</a></td><td>None</td><td><p>a timer type that can be used to measure an elapsed time</p></td></tr>
+			   <tr><td><a href='../type/uint128.html'>UInt128</a></td><td><a href='../module/mbase_uint128.html'>MBase_UInt128</a></td><td>None</td><td><p><em>UInt128</em> is a 128-bit unsigned integer type where the base
+  of its components is 2<sup>64</sup>.</p></td></tr>
+			   <tr><td><a href='../type/userparam.html'>UserParam</a></td><td><a href='../module/mbase_legacyutil.html'>MBase_LegacyUtil</a></td><td>None</td><td><p>a user parameter type used to modernize legacy code</p></td></tr>
+			   <tr><td><a href='../type/workspace.html'>WorkSpace</a></td><td><a href='../module/mbase_legacyutil.html'>MBase_LegacyUtil</a></td><td>None</td><td><p>a workspace type used to modernize legacy code</p></td></tr>
+			 </tbody></table>
+             
+        </div>
+      </div>
+      <hr>
+    </div> <!-- /container -->
+    <footer>
+      <div class="container">
+        <div class="row justify-content-between">
+          <div class="col"><p>eXPerimental Fortran Library (XpfLib) Documentation was developed by Niranama<br>&copy; 2024 
+</p>
+          </div>
+          <div class="col">
+            <p class="text-end">
+              Documentation generated by
+              <a href="https://github.com/Fortran-FOSS-Programmers/ford">FORD</a>
+            </p>
+          </div>
+        </div>
+        <br>
+      </div> <!-- /container -->
+    </footer>
+
+    <!-- Bootstrap core JavaScript -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>    
+
+    <!-- MathJax JavaScript
+             ================================================== -->
+             <!-- Placed at the end of the document so the pages load faster -->
+        <script type="text/x-mathjax-config">
+          MathJax.Hub.Config({
+          TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } },
+          jax: ['input/TeX','input/MathML','output/HTML-CSS'],
+          extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']
+          });
+        </script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+          <script src="../tipuesearch/tipuesearch_content.js"></script>
+          <script src="../tipuesearch/tipuesearch_set.js"></script>
+          <script src="../tipuesearch/tipuesearch.js"></script>
+
+  </body>
+</html>

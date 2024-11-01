@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta name="description" content="Experimental Fortran Package - Hash Functions">
+    <meta name="author" content="Niranama" >
+    <link rel="icon" href="../favicon.png">
+
+    <title>MClass_Blake3 &ndash; eXPerimental Fortran Library (XpfLib) Documentation</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link href="../css/pygments.css" rel="stylesheet">
+    <link href="../css/font-awesome.min.css" rel="stylesheet">
+    <link href="../css/local.css" rel="stylesheet">
+      <link  href="../tipuesearch/tipuesearch.css" rel="stylesheet">
+
+    <script src="https://code.jquery.com/jquery-3.7.0.slim.min.js" integrity="sha256-tG5mcZUtJsZvyKAxYLVXrmjKBVLd6VpVccqz/r4ypFE=" crossorigin="anonymous"></script>
+  </head>
+
+  <body>
+
+    <!-- Fixed navbar -->
+    <div class="container-fluid mb-sm-4 mb-xl-2">
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container">
+          <a class="navbar-brand" href="../index.html">eXPerimental Fortran Library (XpfLib) Documentation </a>
+          <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar"
+                  aria-expanded="false" aria-controls="navbar" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon">
+          </button>
+
+          <div id="navbar" class="navbar-collapse collapse">
+            <ul class="navbar-nav">
+                  <li class="nav-item">
+                    <a class="nav-link" href="../lists/files.html">Source Files</a>
+                  </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../lists/modules.html">Modules</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../lists/procedures.html">Procedures</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../lists/absint.html">Abstract Interfaces</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../lists/types.html">Derived Types</a>
+                </li>
+            </ul>
+              <div class="d-flex align-items-end flex-grow-1">
+                <form action="../search.html" role="search" class="ms-auto">
+                  <input type="text" class="form-control" aria-label="Search" placeholder="Search" name="q" id="tipue_search_input" autocomplete="off" required>
+                </form>
+              </div>
+          </div><!--/.nav-collapse -->
+        </div>
+      </nav>
+    </div>
+
+    <div class="container">
+  <div class="row">
+    <h1>MClass_Blake3
+      <small>Module</small>
+      
+    </h1>
+      <div class="container p-2 mb-4 bg-light border rounded-3">
+    <div class="row align-items-center justify-content-between" id="info-bar">
+      <div class="col">
+        <ul class="list-inline" style="margin-bottom:0px;display:inline">
+
+            <li class="list-inline-item" id="statements"><i class="fa fa-list-ol"></i>
+              <a data-bs-toggle="tooltip"
+                 data-bs-placement="bottom" data-html="true"
+                 title=" 0.9% of total for modules and submodules.">232 statements</a>
+            </li>
+
+            <li class="list-inline-item" id="source-file">
+              <i class="fa fa-code"></i>
+              <a href="../src/MClass_Blake3.f90"> Source File</a>
+            </li>
+        </ul>
+      </div>
+      <div class="col">
+        <nav aria-label="breadcrumb">
+          <ol class="breadcrumb justify-content-end mb-0">
+                <li class="breadcrumb-item"><a href='../sourcefile/mclass_blake3.f90.html'>MClass_Blake3.f90</a></li>
+            <li class="breadcrumb-item active" aria-current="page">MClass_Blake3</li>
+          </ol>
+        </nav>
+      </div>
+    </div>
+  </div>
+  <script>
+    $(function () {
+    $('[data-bs-toggle="tooltip"]').tooltip()
+    })
+  </script>
+
+  </div>
+
+  <div class="row">
+    <div class="col-md-3">
+        <div id="sidebar">
+      <h3>Contents</h3>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+      <div class="card mb-4">
+      <a data-bs-toggle="collapse" href="#types-0"
+         aria-expanded="false" aria-controls="types-0">
+         <h4 class="card-header bg-primary text-white">Derived Types</h4>
+      </a>
+      <div id="types-0" class="collapse">
+        <div class="list-group list-group-flush">
+            <a class="list-group-item" href="../module/mclass_blake3.html#type-blake3">Blake3</a>
+        </div>
+      </div>
+    </div>
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+
+
+  </div>
+
+    </div>
+
+    <div class="col-md-9" id='text'>
+      <p><strong>PURPOSE OF THIS MODULE</strong>: <br>
+  This module contains the <em>Blake3</em> type and its related routines.
+  The <em>Blake3</em> type is a <em>digest</em> type extending directly from the
+  <a href="../module/mclass_basedigest.html#type-basedigest">BaseDigest</a>
+  type.  It implements all deferred procedures required by a digest type. <br>
+  The <em>Blake3</em> type implements an incremental cryptographic hash function
+  by employing the <em>BLAKE3 message-digest</em> algorithm [1].  The implementation
+  here is based mainly on the official implementation in C [2]. <br>
+  Similar to the <em>Blake2-based</em> digest types, the <em>Blake3</em> type can perform
+  keyed hashing providing that a user specifies the key during an initialization
+  of the digest object by calling the <em>CreateHMAC</em> method in place of the <em>Create</em>
+  method.  In addition, the <em>Blake3</em> type can be used as a key derivative function
+  (KDF) by specifying the context string during an initialization of the digest
+  object with the <em>CreateKDF</em> method.  Furthermore, the <em>Blake3</em> type can be used
+  as an extendable-output function (XOF) by specifying the hash output length
+  during a finalization of the digest object where the <em>DigestWOutLen</em> method
+  is called. <br>
+   <br>
+<strong>REFERENCES</strong>: <br>
+  [1] <a href="https://github.com/BLAKE3-team/BLAKE3-specs">The BLAKE3 paper:
+      specifications, analysis, and design rationale. </a> <br>
+  [2] <a href="https://github.com/BLAKE3-team/BLAKE3">Blake3: The official Rust
+      and C implementations of BLAKE3 cryptographic hash function. </a> <br></p>
+<br>          <div class="card mb-4">
+      <h3 class="card-header card-title bg-light">Uses</h3>
+      <div class="card-body">
+        <ul class="list-group list-group-flush">
+            <li class="list-group-item">
+              <ul class="list-inline">
+                  <li class="list-inline-item"><a href='../../XpfBase/module/mbase_byteutil.html'>MBase_ByteUtil</a></li>
+                  <li class="list-inline-item"><a href='../../XpfBase/module/mbase_common.html'>MBase_Common</a></li>
+                  <li class="list-inline-item"><a href='../module/mclass_basedigest.html'>MClass_BaseDigest</a></li>
+                  <li class="list-inline-item"><a href='../../XpfBase/module/mbase_memhandlers.html'>MBase_MemHandlers</a></li>
+                  <li class="list-inline-item"><a href='../module/mbase_bytepack.html'>MBase_BytePack</a></li>
+                  <li class="list-inline-item"><a href='http://fortranwiki.org/fortran/show/iso_c_binding'>iso_c_binding</a></li>
+              </ul>
+            </li>
+        </ul>
+      </div>
+    </div>
+
+      
+      <br>
+
+
+
+
+
+
+        <section>
+          <h2>Derived Types</h2>
+              <div class="card">
+    <div class="card-header codesum">
+      <span class="anchor" id="type-blake3"></span>
+      <h3>
+        type, public, extends(<a href='../type/basedigest.html'>BaseDigest</a>)&nbsp;::&nbsp;
+        <a href='../type/blake3.html'>Blake3</a>
+        
+      </h3>
+    </div>
+    <div class="card-body">
+      <p><em>Blake3</em> is a concrete <em>digest</em> type that implements an incremental cryptographic
+ hash function by employing the <em>BLAKE3 message-digest</em> algorithm.  It can also be
+ utilized as a hash-based message authentication code (HMAC).  It can be used as
+ a key derivation function (KDF) as well.  In addition, it can be employed as an
+ extendable-output function (XOF) to output the hash value with a desired length.</p>
+
+
+
+
+        <h4>Type-Bound Procedures</h4>
+        <table class="table table-striped varlist">
+          <tbody>
+              <tr>
+                <td>  generic, public ::
+  <strong><a href='../type/blake3.html#boundprocedure-create~38'>Create</a></strong> => <a href='../type/sha1.html#boundprocedure-initialize~52'>Initialize</a></td>
+                <td><p><strong>Type-Bound Subroutine</strong>: Create <br>
+ <strong>Purpose</strong>:  To perform any essential initialization of the <em>digest</em> object. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    CALL MD%Create()</p></td>
+              </tr>
+              <tr>
+                <td>  generic, public ::
+  <strong><a href='../type/blake3.html#boundprocedure-update~32'>Update</a></strong> => <a href='../type/mdengine.html#boundprocedure-insertbytes~5'>InsertBytes</a>, <a href='../type/mdengine.html#boundprocedure-insertgen~5'>InsertGen</a></td>
+                <td><p><strong>Type-Bound Subroutine</strong>: Update <br>
+ <strong>Purpose</strong>:  To insert input data into the <em>digest</em> object (commonly stored in a
+               buffer array) and process block(s) of data if necessary. <br>
+ <strong>Usage</strong>: <br>
+  ! insert input data in a generic way <br>
+  ---&gt;    CALL MD%Update(Input, InpSize) <br>
+  ! insert input data as an array of bytes (8-bit integers) <br>
+  ---&gt;    CALL MD%Update(ByteArr, Offset, Length) <br></p></td>
+              </tr>
+              <tr>
+                <td>  generic, public ::
+  <strong><a href='../type/blake3.html#boundprocedure-digest~31'>Digest</a></strong> => <a href='../type/mdengine.html#boundprocedure-bytedigest~5'>ByteDigest</a>, <a href='../type/mdengine.html#boundprocedure-bytedigest_winput~5'>ByteDigest_wInput</a>, HexDigest, HexDigest_wInput</td>
+                <td><p><strong>Type-Bound Subroutine</strong>: Digest <br>
+ <strong>Purpose</strong>:  To finalize the current hash computation and return the hash output.
+               The object is reset.  Some final input data can be inserted. <br>
+ <strong>Usage</strong>: <br>
+  ! finalize hash computation and return hash output as a byte array <br>
+  ---&gt;    CALL MD%Digest(ByteArr) <br>
+  ! insert final input and return hash output as a byte array <br>
+  ---&gt;    CALL MD%Digest(Input, InpSize, ByteArr) <br>
+  ! finalize hash computation and return hash output as a hexadecimal string <br>
+  ---&gt;    CALL MD%Digest(HexStr) <br>
+  ! insert final input and return hash output as a hexadecimal string <br>
+  ---&gt;    CALL MD%Digest(Input, InpSize, HexStr) <br></p></td>
+              </tr>
+              <tr>
+                <td>  procedure, public ::
+  <strong><a href='../type/blake3.html#boundprocedure-initialize~43'>Initialize</a></strong> => Blake3_Initialize</td>
+                <td><p>Use the <em>Create</em> method in place of the <em>Initialize</em> method to perform
+ default initialization of the <em>digest</em> object.</p></td>
+              </tr>
+              <tr>
+                <td>  procedure, public ::
+  <strong><a href='../type/blake3.html#boundprocedure-getclone~27'>GetClone</a></strong> => Blake3_GetClone</td>
+                <td><p><strong>Type-Bound Subroutine</strong>: GetClone <br>
+ <strong>Purpose</strong>:  To clone the current state of the source object. The destination
+               object evolves independently of the source object. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    CALL SrcMD%GetClone(DstMD)</p></td>
+              </tr>
+              <tr>
+                <td>  procedure, public ::
+  <strong><a href='../type/blake3.html#boundprocedure-getname~44'>GetName</a></strong> => Blake3_GetName</td>
+                <td><p><strong>Type-Bound Function</strong>: GetName <br>
+ <strong>Purpose</strong>:  To get the name of the <em>digest</em> object. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    Name = MD%GetName()</p></td>
+              </tr>
+              <tr>
+                <td>  procedure, public ::
+  <strong><a href='../type/blake3.html#boundprocedure-reset~26'>Reset</a></strong> => Blake3_Reset</td>
+                <td><p><strong>Type-Bound Subroutine</strong>: Reset <br>
+ <strong>Purpose</strong>:  To reset the <em>digest</em> object to its initial state. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    CALL MD%Reset()</p></td>
+              </tr>
+              <tr>
+                <td>  procedure, public ::
+  <strong><a href='../type/blake3.html#boundprocedure-insertbytes~6'>InsertBytes</a></strong> => Blake3_InsertBytes</td>
+                <td><p>Use the <em>Update</em> method in place of the <em>InsertBytes</em> method to insert input
+ data as an array of bytes (8-bit integers) where the offset (zero-based) into
+ the array and the length of the input in bytes are specified.</p></td>
+              </tr>
+              <tr>
+                <td>  procedure, public ::
+  <strong><a href='../type/blake3.html#boundprocedure-insertgen~6'>InsertGen</a></strong> => Blake3_InsertGen</td>
+                <td><p>Use the <em>Update</em> method in place of the <em>InsertGen</em> method to insert
+ input data in a generic way where the <em>Input</em> argument can be any type and
+ any rank and the <em>InpSize</em> argument specifies the size of input data in bytes.</p></td>
+              </tr>
+              <tr>
+                <td>  procedure, public ::
+  <strong><a href='../type/blake3.html#boundprocedure-bytedigest~6'>ByteDigest</a></strong> => Blake3_ByteDigest</td>
+                <td><p>Use the <em>Digest</em> method in place of the <em>ByteDigest</em> method to finalize the
+ current hash computation and return the hash value as an array of bytes
+ in a newly-allocated array.</p></td>
+              </tr>
+              <tr>
+                <td>  procedure, public ::
+  <strong><a href='../type/blake3.html#boundprocedure-bytedigest_winput~6'>ByteDigest_wInput</a></strong> => Blake3_ByteDigest_wInput</td>
+                <td><p>Use the <em>Digest</em> method in place of the <em>ByteDigest_wInput</em> method to insert final
+ input in a generic way and then finalize the current hash computation and return
+ the hash value as an array of bytes in a newly-allocated array.</p></td>
+              </tr>
+              <tr>
+                <td>  procedure, public ::
+  <strong><a href='../type/blake3.html#boundprocedure-createhmac~3'>CreateHMAC</a></strong> => Blake3_InitHMAC</td>
+                <td><p><strong>Type-Bound Subroutine</strong>: CreateHMAC <br>
+ <strong>Purpose</strong>:  To perform any essential initialization of the <em>digest</em> object
+               as a <em>HMAC</em> object (for keyed hashing). <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    CALL MD%CreateHMAC(Key) <br></p></td>
+              </tr>
+              <tr>
+                <td>  procedure, public ::
+  <strong><a href='../type/blake3.html#boundprocedure-createkdf'>CreateKDF</a></strong> => Blake3_InitKDF</td>
+                <td><p><strong>Type-Bound Subroutine</strong>: CreateKDF <br>
+ <strong>Purpose</strong>:  To perform any essential initialization of the <em>digest</em> object
+               as a <em>KDF</em> object (for key derivation). <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    CALL MD%CreateKDF(ContextString) <br></p></td>
+              </tr>
+              <tr>
+                <td>  generic, public ::
+  <strong><a href='../type/blake3.html#boundprocedure-digestwoutlen~4'>DigestWOutLen</a></strong> => Blake3_ByteDigest_wOutLen, Blake3_ByteDigest_wInputNOutLen, Blake3_HexDigest_wOutLen, Blake3_HexDigest_wInputNOutLen</td>
+                <td><p><strong>Type-Bound Subroutine</strong>: DigestWOutLen <br>
+ <strong>Purpose</strong>:  To finalize the current hash computation and return the hash output
+               with specified length.  The object is reset.  Some final input data
+               can be inserted. <br>
+ <strong>Usage</strong>: <br>
+  ! finalize hash computation and return hash output as a byte array <br>
+  ---&gt;    CALL MD%DigestWOutLen(ByteArr, OutLen) <br>
+  ! insert final input and return hash output as a byte array <br>
+  ---&gt;    CALL MD%DigestWOutLen(Input, InpSize, ByteArr, OutLen) <br>
+  ! finalize hash computation and return hash output as a hexadecimal string <br>
+  ---&gt;    CALL MD%DigestWOutLen(HexStr, OutLen) <br>
+  ! insert final input and return hash output as a hexadecimal string <br>
+  ---&gt;    CALL MD%DigestWOutLen(Input, InpSize, HexStr, OutLen) <br></p></td>
+              </tr>
+          </tbody>
+        </table>
+    </div>
+  </div>
+
+        </section>
+        <br>
+
+
+
+
+
+    </div>
+  </div>
+
+      <hr>
+    </div> <!-- /container -->
+    <footer>
+      <div class="container">
+        <div class="row justify-content-between">
+          <div class="col"><p>eXPerimental Fortran Library (XpfLib) Documentation was developed by Niranama<br>&copy; 2024 
+</p>
+          </div>
+          <div class="col">
+            <p class="text-end">
+              Documentation generated by
+              <a href="https://github.com/Fortran-FOSS-Programmers/ford">FORD</a>
+            </p>
+          </div>
+        </div>
+        <br>
+      </div> <!-- /container -->
+    </footer>
+
+    <!-- Bootstrap core JavaScript -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>    
+
+    <!-- MathJax JavaScript
+             ================================================== -->
+             <!-- Placed at the end of the document so the pages load faster -->
+        <script type="text/x-mathjax-config">
+          MathJax.Hub.Config({
+          TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } },
+          jax: ['input/TeX','input/MathML','output/HTML-CSS'],
+          extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']
+          });
+        </script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+          <script src="../tipuesearch/tipuesearch_content.js"></script>
+          <script src="../tipuesearch/tipuesearch_set.js"></script>
+          <script src="../tipuesearch/tipuesearch.js"></script>
+
+  </body>
+</html>

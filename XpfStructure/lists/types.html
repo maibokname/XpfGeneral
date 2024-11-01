@@ -1,0 +1,556 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta name="description" content="Experimental Fortran Package - Data Structures">
+    <meta name="author" content="Niranama" >
+    <link rel="icon" href="../favicon.png">
+
+    <title>All Types &ndash; eXPerimental Fortran Library (XpfLib) Documentation
+</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link href="../css/pygments.css" rel="stylesheet">
+    <link href="../css/font-awesome.min.css" rel="stylesheet">
+    <link href="../css/local.css" rel="stylesheet">
+      <link  href="../tipuesearch/tipuesearch.css" rel="stylesheet">
+
+    <script src="https://code.jquery.com/jquery-3.7.0.slim.min.js" integrity="sha256-tG5mcZUtJsZvyKAxYLVXrmjKBVLd6VpVccqz/r4ypFE=" crossorigin="anonymous"></script>
+  </head>
+
+  <body>
+
+    <!-- Fixed navbar -->
+    <div class="container-fluid mb-sm-4 mb-xl-2">
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container">
+          <a class="navbar-brand" href="../index.html">eXPerimental Fortran Library (XpfLib) Documentation </a>
+          <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar"
+                  aria-expanded="false" aria-controls="navbar" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon">
+          </button>
+
+          <div id="navbar" class="navbar-collapse collapse">
+            <ul class="navbar-nav">
+                  <li class="nav-item">
+                    <a class="nav-link" href="../lists/files.html">Source Files</a>
+                  </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../lists/modules.html">Modules</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../lists/types.html">Derived Types</a>
+                </li>
+            </ul>
+              <div class="d-flex align-items-end flex-grow-1">
+                <form action="../search.html" role="search" class="ms-auto">
+                  <input type="text" class="form-control" aria-label="Search" placeholder="Search" name="q" id="tipue_search_input" autocomplete="off" required>
+                </form>
+              </div>
+          </div><!--/.nav-collapse -->
+        </div>
+      </nav>
+    </div>
+
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12" id='text'>
+			 <h1>Derived Types</h1>
+			 <table class="table table-striped nostretched">
+			 <thead>
+			 <tr><th>Type</th><th>Location</th><th>Extends</th><th>Description</th></tr>
+			 </thead><tbody>
+			   <tr><td><a href='../type/basecollection.html'>BaseCollection</a></td><td><a href='../module/mclass_basecollection.html'>MClass_BaseCollection</a></td><td>Object</td><td><p>The <em>BaseCollection</em> type is an abstract collection type that defines
+ an API for various common operations.  Some operations are deferred
+ while others (with default implementation) can be overridden.</p></td></tr>
+			   <tr><td><a href='../type/baseiterable.html'>BaseIterable</a></td><td><a href='../module/mclass_baseiterable.html'>MClass_BaseIterable</a></td><td><a href='../type/basecollection.html'>BaseCollection</a></td><td><p>The <em>BaseIterable</em> type is an abstract collection type that defines an API for
+ iterable collections, which are collections that can iterate over their items. <br>
+ It is important to note that, by design, a concrete collection type that extends
+ from the <em>BaseIterable</em> type only stores items of one specific type.  To store
+ items of another type, the collection must be cleared and/or destructed. <br></p></td></tr>
+			   <tr><td><a href='../type/basesymtable.html'>BaseSymTable</a></td><td><a href='../module/mclass_basesymtable.html'>MClass_BaseSymTable</a></td><td><a href='../type/basecollection.html'>BaseCollection</a></td><td><p>The <em>BaseSymTable</em> type is an abstract collection type that defines an API for
+ a symbol table, which is a collection that associates a <em>value</em> with a <em>key</em>. <br>
+ It is important to note that, by design, a concrete collection type that extends
+ from the <em>BaseSymTable</em> type only stores entries of one specific key type and one
+ specific value type.  To store entries of another key and/or value types, the
+ collection must be cleared and/or destructed. <br></p></td></tr>
+			   <tr><td><a href='../type/darrcharacter.html'>DArrCharacter</a></td><td><a href='../module/mclass_darrcharacter.html'>MClass_DArrCharacter</a></td><td>None</td><td><p><em>DArrCharacter</em> is a container type that employs a dynamic-array implementation to provide
+  common operations for a list container.  It can also represent other forms of
+  containers including a LIFO stack, a FIFO queue and a double-ended queue (deque).
+  The type of items stored in this container is <em>CHARACTER</em>.</p></td></tr>
+			   <tr><td><a href='../type/darrcmpxdp.html'>DArrCmpxDP</a></td><td><a href='../module/mclass_darrcmpxdp.html'>MClass_DArrCmpxDP</a></td><td>None</td><td><p><em>DArrCmpxDP</em> is a container type that employs a dynamic-array implementation to provide
+  common operations for a list container.  It can also represent other forms of
+  containers including a LIFO stack, a FIFO queue and a double-ended queue (deque).
+  The type of items stored in this container is <em>COMPLEX(KIND=kDouble)</em>.</p></td></tr>
+			   <tr><td><a href='../type/darrcmpxqp.html'>DArrCmpxQP</a></td><td><a href='../module/mclass_darrcmpxqp.html'>MClass_DArrCmpxQP</a></td><td>None</td><td><p><em>DArrCmpxQP</em> is a container type that employs a dynamic-array implementation to provide
+  common operations for a list container.  It can also represent other forms of
+  containers including a LIFO stack, a FIFO queue and a double-ended queue (deque).
+  The type of items stored in this container is <em>COMPLEX(KIND=kQuad)</em>.</p></td></tr>
+			   <tr><td><a href='../type/darrcmpxsp.html'>DArrCmpxSP</a></td><td><a href='../module/mclass_darrcmpxsp.html'>MClass_DArrCmpxSP</a></td><td>None</td><td><p><em>DArrCmpxSP</em> is a container type that employs a dynamic-array implementation to provide
+  common operations for a list container.  It can also represent other forms of
+  containers including a LIFO stack, a FIFO queue and a double-ended queue (deque).
+  The type of items stored in this container is <em>COMPLEX(KIND=kSingle)</em>.</p></td></tr>
+			   <tr><td><a href='../type/darrinteger1b.html'>DArrInteger1B</a></td><td><a href='../module/mclass_darrinteger1b.html'>MClass_DArrInteger1B</a></td><td>None</td><td><p><em>DArrInteger1B</em> is a container type that employs a dynamic-array implementation to provide
+  common operations for a list container.  It can also represent other forms of
+  containers including a LIFO stack, a FIFO queue and a double-ended queue (deque).
+  The type of items stored in this container is <em>INTEGER(KIND=kInt8)</em>.</p></td></tr>
+			   <tr><td><a href='../type/darrinteger2b.html'>DArrInteger2B</a></td><td><a href='../module/mclass_darrinteger2b.html'>MClass_DArrInteger2B</a></td><td>None</td><td><p><em>DArrInteger2B</em> is a container type that employs a dynamic-array implementation to provide
+  common operations for a list container.  It can also represent other forms of
+  containers including a LIFO stack, a FIFO queue and a double-ended queue (deque).
+  The type of items stored in this container is <em>INTEGER(KIND=kInt16)</em>.</p></td></tr>
+			   <tr><td><a href='../type/darrinteger4b.html'>DArrInteger4B</a></td><td><a href='../module/mclass_darrinteger4b.html'>MClass_DArrInteger4B</a></td><td>None</td><td><p><em>DArrInteger4B</em> is a container type that employs a dynamic-array implementation to provide
+  common operations for a list container.  It can also represent other forms of
+  containers including a LIFO stack, a FIFO queue and a double-ended queue (deque).
+  The type of items stored in this container is <em>INTEGER(KIND=kInt32)</em>.</p></td></tr>
+			   <tr><td><a href='../type/darrinteger8b.html'>DArrInteger8B</a></td><td><a href='../module/mclass_darrinteger8b.html'>MClass_DArrInteger8B</a></td><td>None</td><td><p><em>DArrInteger8B</em> is a container type that employs a dynamic-array implementation to provide
+  common operations for a list container.  It can also represent other forms of
+  containers including a LIFO stack, a FIFO queue and a double-ended queue (deque).
+  The type of items stored in this container is <em>INTEGER(KIND=kInt64)</em>.</p></td></tr>
+			   <tr><td><a href='../type/darrlogical.html'>DArrLogical</a></td><td><a href='../module/mclass_darrlogical.html'>MClass_DArrLogical</a></td><td>None</td><td><p><em>DArrLogical</em> is a container type that employs a dynamic-array implementation to provide
+  common operations for a list container.  It can also represent other forms of
+  containers including a LIFO stack, a FIFO queue and a double-ended queue (deque).
+  The type of items stored in this container is <em>LOGICAL</em>.</p></td></tr>
+			   <tr><td><a href='../type/darrobject.html'>DArrObject</a></td><td><a href='../module/mclass_darrobject.html'>MClass_DArrObject</a></td><td>None</td><td><p><em>DArrObject</em> is a container type that employs a dynamic-array implementation
+ to provide common operations for a list container.  It can also represent other
+ forms of containers including a LIFO stack, a FIFO queue and a double-ended queue
+ (deque).  The type of items stored in this container is a derived type in the
+ <em>Object</em> class (i.e. the <em>Object</em> type or its subtypes).</p></td></tr>
+			   <tr><td><a href='../type/darrrealdp.html'>DArrRealDP</a></td><td><a href='../module/mclass_darrrealdp.html'>MClass_DArrRealDP</a></td><td>None</td><td><p><em>DArrRealDP</em> is a container type that employs a dynamic-array implementation to provide
+  common operations for a list container.  It can also represent other forms of
+  containers including a LIFO stack, a FIFO queue and a double-ended queue (deque).
+  The type of items stored in this container is <em>REAL(KIND=kDouble)</em>.</p></td></tr>
+			   <tr><td><a href='../type/darrrealqp.html'>DArrRealQP</a></td><td><a href='../module/mclass_darrrealqp.html'>MClass_DArrRealQP</a></td><td>None</td><td><p><em>DArrRealQP</em> is a container type that employs a dynamic-array implementation to provide
+  common operations for a list container.  It can also represent other forms of
+  containers including a LIFO stack, a FIFO queue and a double-ended queue (deque).
+  The type of items stored in this container is <em>REAL(KIND=kQuad)</em>.</p></td></tr>
+			   <tr><td><a href='../type/darrrealsp.html'>DArrRealSP</a></td><td><a href='../module/mclass_darrrealsp.html'>MClass_DArrRealSP</a></td><td>None</td><td><p><em>DArrRealSP</em> is a container type that employs a dynamic-array implementation to provide
+  common operations for a list container.  It can also represent other forms of
+  containers including a LIFO stack, a FIFO queue and a double-ended queue (deque).
+  The type of items stored in this container is <em>REAL(KIND=kSingle)</em>.</p></td></tr>
+			   <tr><td><a href='../type/dequearray.html'>DequeArray</a></td><td><a href='../module/mclass_dynamicarrays.html'>MClass_DynamicArrays</a></td><td><a href='../type/queuearray.html'>QueueArray</a></td><td><p><strong>Description</strong>: <br>
+  The <em>DequeArray</em> type is a collection type that employs a resizable-array implementation
+  to provide common operations for a double-ended queue (deque).   It can be used as a
+  FIFO queue or a LIFO stack as well. <br>
+ <strong>Usage Overview</strong>: <br>
+  The <em>DequeArray</em> type is a <em>deque</em> collection type that provides common operations of a
+  double-ended queue (deque).  Their operations can be categorized as follows: <br>
+  (1) Construction and destruction.  Methods for these operations include <br>
+  (1.1) <em>Construct</em> method - method to construct the collection either from an array of items
+         or from another collection, <br>
+  (1.2) <em>CreateEmpty</em> method - method to construct an empty collection, <br>
+  (1.3) <em>Destruct</em> method - method to destruct the collection. <br>
+  (2) Insert and remove.  Methods for these operations include <br>
+  (2.1) <em>AddFirst</em> method - method to insert an item to the front of the collection, <br>
+  (2.2) <em>AddLast</em> method - method to insert an item to the end of the collection, <br>
+  (2.3) <em>RemoveFirst</em> method - method to get and remove the first item of the collection, <br>
+  (2.4) <em>RemoveLast</em> method - method to get and remove the last item of the collection, <br>
+  (2.5) <em>Clear</em> method - method to remove all items from the collection. <br>
+  (2.6) <em>ToArray</em> method - method to remove and retrieve all items from the collection. <br>
+  (3) Inquiry.  Methods for these operations include <br>
+  (3.1) <em>PeekFirst</em> method - method to retrieve the first item of the collection, <br>
+  (3.2) <em>PeekLast</em> method - method to retrieve the last item of the collection, <br>
+  (3.3) <em>GetSize</em> method - method to get the collection size (number of items stored), <br>
+  (3.4) <em>IsEmpty</em> method - method to check whether the collection is empty or not. <br>
+  (3.5) <em>GetAll</em> method - method to retrieve all items from the collection. <br>
+  (4) Iteration.  Methods for these operations include <br>
+  (4.1) <em>StartFirst</em> method - method to start a forward iteration over items, <br>
+  (4.2) <em>MoveForward</em> method - method to move forward to the next item, <br>
+  (4.3) <em>StartLast</em> method - method to start a backward iteration over items, <br>
+  (4.4) <em>MoveBackward</em> method - method to move backward to the previous item. <br>
+  The <em>DequeArray</em> type also supports the usual <em>Enqueue</em>, <em>Dequeue</em> and <em>PeekFirst</em>
+  operations of a FIFO queue as well as the usual <em>Push</em>, <em>Pop</em> and <em>PeekTop</em> operations
+  of a LIFO stack.  Therefore, when using as a queue or a stack, these operations can be
+  used in place of <em>insert</em>, <em>remove</em>, <em>peek</em> operations of a deque as desired.</p></td></tr>
+			   <tr><td><a href='../type/dequelinked.html'>DequeLinked</a></td><td><a href='../module/mclass_linkedlists.html'>MClass_LinkedLists</a></td><td><a href='../type/queuelinked.html'>QueueLinked</a></td><td><p><strong>Description</strong>: <br>
+  The <em>DequeLinked</em> type is a collection type that employs a linked-list implementation to
+  provide common operations for a double-ended queue (deque).  It can be used as a FIFO
+  queue or a LIFO stack as well. <br>
+ <strong>Usage Overview</strong>: <br>
+  The <em>DequeLinked</em> type is a <em>deque</em> collection type that provides common operations of
+  a double-ended queue (deque).  Their operations can be categorized as follows: <br>
+  (1) Construction and destruction.  Methods for these operations include <br>
+  (1.1) <em>Construct</em> method - method to construct the collection either from an array of
+         items or from another collection, <br>
+  (1.2) <em>Destruct</em> method - method to destruct the collection. <br>
+  (2) Insert and remove.  Methods for these operations include <br>
+  (2.1) <em>AddFirst</em> method - method to insert an item to the front of the collection, <br>
+  (2.2) <em>AddLast</em> method - method to insert an item to the end of the collection, <br>
+  (2.3) <em>RemoveFirst</em> method - method to get and remove the first item of the collection, <br>
+  (2.4) <em>RemoveLast</em> method - method to get and remove the last item of the collection, <br>
+  (2.5) <em>Clear</em> method - method to remove all items from the collection. <br>
+  (2.6) <em>ToArray</em> method - method to remove and retrieve all items from the collection. <br>
+  (3) Inquiry.  Methods for these operations include <br>
+  (3.1) <em>PeekFirst</em> method - method to retrieve the first item of the collection, <br>
+  (3.2) <em>PeekLast</em> method - method to retrieve the last item of the collection, <br>
+  (3.3) <em>GetSize</em> method - method to get the collection size (number of items stored), <br>
+  (3.4) <em>IsEmpty</em> method - method to check whether the collection is empty or not. <br>
+  (3.5) <em>GetAll</em> method - method to retrieve all items from the collection. <br>
+  (4) Iteration.  Methods for these operations include <br>
+  (4.1) <em>StartFirst</em> method - method to start a forward iteration over items, <br>
+  (4.2) <em>MoveForward</em> method - method to move forward to the next item, <br>
+  (4.3) <em>StartLast</em> method - method to start a backward iteration over items, <br>
+  (4.4) <em>MoveBackward</em> method - method to move backward to the previous item. <br>
+ <strong>Note</strong>: The <em>DequeArray</em> type also supports the usual <em>Enqueue</em>, <em>Dequeue</em> and <em>PeekFirst</em>
+      operations of a FIFO queue as well as the usual <em>Push</em>, <em>Pop</em> and <em>PeekTop</em> operations
+      of a LIFO stack.  Therefore, when using as a queue or a stack, these operations can be
+      used in place of <em>insert</em>, <em>remove</em>, <em>peek</em> operations of a deque as desired. <br></p></td></tr>
+			   <tr><td><a href='../type/hashlist.html'>HashList</a></td><td><a href='../module/mclass_hashlist.html'>MClass_HashList</a></td><td><a href='../type/basesymtable.html'>BaseSymTable</a></td><td><p>The <em>HashList</em> type is a collection type that employs a separate-chaining hash table
+ implementation to provide common operations for an unordered symbol table.  The <em>HashList</em>
+ type utilizes the <em>IntrusiveHashList</em> type as its component to store <em>TabNode</em> objects.
+ As an intrusive container, the <em>IntrusiveHashList</em> type provides common operations for
+ hash table without a memory management task.  The memory management task of the inserted
+ <em>TabNode</em> objects is handled by the <em>HashList</em> type. <br>
+ As an unordered symbol table, the <em>HashList</em> type directly extends the <em>BaseSymTable</em>
+ type and implements all deferred procedures required by the <em>BaseSymTable</em> type and all
+ its super classes.  As a symbol table, the <em>HashList</em> type does not allow duplicated keys;
+ therefore, if an inserted key is equal to a key stored in the table, an associated value
+ of the stored key is replaced by an associated value of the inserted key. <br></p></td></tr>
+			   <tr><td><a href='../type/hashmap.html'>HashMap</a></td><td><a href='../module/mclass_hashmap.html'>MClass_HashMap</a></td><td><a href='../type/basesymtable.html'>BaseSymTable</a></td><td><p>The <em>HashMap</em> type is a collection type that employs an open-addressing hash table
+ implementation to provide common operations for an unordered symbol table.  It makes
+ no guarantees as to the iteration order of the symbol table; in particular, it does
+ not guarantee that the order will remain constant over time.</p></td></tr>
+			   <tr><td><a href='../type/hashset.html'>HashSet</a></td><td><a href='../module/mclass_hashset.html'>MClass_HashSet</a></td><td><a href='../type/baseiterable.html'>BaseIterable</a></td><td><p>The <em>HashSet</em> type is a collection type that employs an open-addressing hash table
+ implementation to provide common operations for an unordered set.  It makes no
+ guarantees as to the iteration order of the set; in particular, it does not guarantee
+ that the order will remain constant over time.</p></td></tr>
+			   <tr><td><a href='../type/hashtree.html'>HashTree</a></td><td><a href='../module/mclass_hashtree.html'>MClass_HashTree</a></td><td><a href='../type/basesymtable.html'>BaseSymTable</a></td><td><p>The <em>HashTree</em> type is a collection type that employs a separate-chaining hash table
+ implementation to provide common operations for an unordered symbol table.  The <em>HashTree</em>
+ type utilizes the <em>IntrusiveHashTree</em> type as its component to store <em>TabNode</em> objects.
+ As an intrusive container, the <em>IntrusiveHashTree</em> type provides common operations for
+ hash table without a memory management task.  The memory management task of the inserted
+ <em>TabNode</em> objects is handled by the <em>HashTree</em> type. <br>
+ As an unordered symbol table, the <em>HashTree</em> type directly extends the <em>BaseSymTable</em>
+ type and implements all deferred procedures required by the <em>BaseSymTable</em> type and all
+ its super classes.  As a symbol table, the <em>HashTree</em> type does not allow duplicated keys;
+ therefore, if an inserted key is equal to a key stored in the table, an associated value
+ of the stored key is replaced by an associated value of the inserted key. <br></p></td></tr>
+			   <tr><td><a href='../type/htabcharacter.html'>HTabCharacter</a></td><td><a href='../module/mclass_htabcharacter.html'>MClass_HTabCharacter</a></td><td>None</td><td><p>The <em>HTabCharacter</em> type is a container type that employs an open-addressing hash
+ table implementation to provide common operations for an unordered symbol table.</p></td></tr>
+			   <tr><td><a href='../type/htabinteger1b.html'>HTabInteger1B</a></td><td><a href='../module/mclass_htabinteger1b.html'>MClass_HTabInteger1B</a></td><td>None</td><td><p>The <em>HTabInteger1B</em> type is a container type that employs an open-addressing hash
+ table implementation to provide common operations for an unordered symbol table.</p></td></tr>
+			   <tr><td><a href='../type/htabinteger2b.html'>HTabInteger2B</a></td><td><a href='../module/mclass_htabinteger2b.html'>MClass_HTabInteger2B</a></td><td>None</td><td><p>The <em>HTabInteger2B</em> type is a container type that employs an open-addressing hash
+ table implementation to provide common operations for an unordered symbol table.</p></td></tr>
+			   <tr><td><a href='../type/htabinteger4b.html'>HTabInteger4B</a></td><td><a href='../module/mclass_htabinteger4b.html'>MClass_HTabInteger4B</a></td><td>None</td><td><p>The <em>HTabInteger4B</em> type is a container type that employs an open-addressing hash
+ table implementation to provide common operations for an unordered symbol table.</p></td></tr>
+			   <tr><td><a href='../type/htabinteger8b.html'>HTabInteger8B</a></td><td><a href='../module/mclass_htabinteger8b.html'>MClass_HTabInteger8B</a></td><td>None</td><td><p>The <em>HTabInteger8B</em> type is a container type that employs an open-addressing hash
+ table implementation to provide common operations for an unordered symbol table.</p></td></tr>
+			   <tr><td><a href='../type/htabobject.html'>HTabObject</a></td><td><a href='../module/mclass_htabobject.html'>MClass_HTabObject</a></td><td>None</td><td><p>The <em>HTabObject</em> type is a table type that employs an open-addressing hash table
+ implementation to provide common operations for an unordered symbol table.</p></td></tr>
+			   <tr><td><a href='../type/htabrealdp.html'>HTabRealDP</a></td><td><a href='../module/mclass_htabrealdp.html'>MClass_HTabRealDP</a></td><td>None</td><td><p>The <em>HTabRealDP</em> type is a container type that employs an open-addressing hash
+ table implementation to provide common operations for an unordered symbol table.</p></td></tr>
+			   <tr><td><a href='../type/htabrealqp.html'>HTabRealQP</a></td><td><a href='../module/mclass_htabrealqp.html'>MClass_HTabRealQP</a></td><td>None</td><td><p>The <em>HTabRealQP</em> type is a container type that employs an open-addressing hash
+ table implementation to provide common operations for an unordered symbol table.</p></td></tr>
+			   <tr><td><a href='../type/htabrealsp.html'>HTabRealSP</a></td><td><a href='../module/mclass_htabrealsp.html'>MClass_HTabRealSP</a></td><td>None</td><td><p>The <em>HTabRealSP</em> type is a container type that employs an open-addressing hash
+ table implementation to provide common operations for an unordered symbol table.</p></td></tr>
+			   <tr><td><a href='../type/listanytype.html'>ListAnyType</a></td><td><a href='../module/mclass_listanytype.html'>MClass_ListAnyType</a></td><td>None</td><td><p><em>ListAnyType</em> is a container type that employs a doubly-linked list implementation to
+  provide common operations for a list container.  It can also represent other forms
+  of containers including a LIFO stack, a FIFO queue and a double-ended queue (deque).
+  The type of items stored in this container can be any data type.</p></td></tr>
+			   <tr><td><a href='../type/listarray.html'>ListArray</a></td><td><a href='../module/mclass_dynamicarrays.html'>MClass_DynamicArrays</a></td><td><a href='../type/dequearray.html'>DequeArray</a></td><td><p><strong>Description</strong>: <br>
+  The <em>ListArray</em> type is a collection type that employs a resizable-array implementation
+  to provide common operations for a list. <br>
+ <strong>Usage Overview</strong>: <br>
+  The <em>ListArray</em> type provides insert, remove and peek operations at a specified index
+  where the index must be between 1 and the collection size.  The <em>ListArray</em> type is
+  a subtype of the <em>DequeArray</em> type; therefore, all operations available for the
+  <em>DequeArray</em> type are also available for the <em>ListArray</em> type.  As a result, it can
+  thus be used as a deque, a FIFO queue or a LIFO stack.  <br></p></td></tr>
+			   <tr><td><a href='../type/listcharacter.html'>ListCharacter</a></td><td><a href='../module/mclass_listcharacter.html'>MClass_ListCharacter</a></td><td>None</td><td><p><em>ListCharacter</em> is a container type that employs a doubly-linked list implementation to
+  provide common operations for a list container.  It can also represent other forms
+  of containers including a LIFO stack, a FIFO queue and a double-ended queue (deque).
+  The type of items stored in this container is <em>CHARACTER</em>.</p></td></tr>
+			   <tr><td><a href='../type/listcmpxdp.html'>ListCmpxDP</a></td><td><a href='../module/mclass_listcmpxdp.html'>MClass_ListCmpxDP</a></td><td>None</td><td><p><em>ListCmpxDP</em> is a container type that employs a doubly-linked list implementation to
+  provide common operations for a list container.  It can also represent other forms
+  of containers including a LIFO stack, a FIFO queue and a double-ended queue (deque).
+  The type of items stored in this container is <em>COMPLEX(KIND=kDouble)</em>.</p></td></tr>
+			   <tr><td><a href='../type/listcmpxqp.html'>ListCmpxQP</a></td><td><a href='../module/mclass_listcmpxqp.html'>MClass_ListCmpxQP</a></td><td>None</td><td><p><em>ListCmpxQP</em> is a container type that employs a doubly-linked list implementation to
+  provide common operations for a list container.  It can also represent other forms
+  of containers including a LIFO stack, a FIFO queue and a double-ended queue (deque).
+  The type of items stored in this container is <em>COMPLEX(KIND=kQuad)</em>.</p></td></tr>
+			   <tr><td><a href='../type/listcmpxsp.html'>ListCmpxSP</a></td><td><a href='../module/mclass_listcmpxsp.html'>MClass_ListCmpxSP</a></td><td>None</td><td><p><em>ListCmpxSP</em> is a container type that employs a doubly-linked list implementation to
+  provide common operations for a list container.  It can also represent other forms
+  of containers including a LIFO stack, a FIFO queue and a double-ended queue (deque).
+  The type of items stored in this container is <em>COMPLEX(KIND=kSingle)</em>.</p></td></tr>
+			   <tr><td><a href='../type/listinteger1b.html'>ListInteger1B</a></td><td><a href='../module/mclass_listinteger1b.html'>MClass_ListInteger1B</a></td><td>None</td><td><p><em>ListInteger1B</em> is a container type that employs a doubly-linked list implementation to
+  provide common operations for a list container.  It can also represent other forms
+  of containers including a LIFO stack, a FIFO queue and a double-ended queue (deque).
+  The type of items stored in this container is <em>INTEGER(KIND=kInt8)</em>.</p></td></tr>
+			   <tr><td><a href='../type/listinteger2b.html'>ListInteger2B</a></td><td><a href='../module/mclass_listinteger2b.html'>MClass_ListInteger2B</a></td><td>None</td><td><p><em>ListInteger2B</em> is a container type that employs a doubly-linked list implementation to
+  provide common operations for a list container.  It can also represent other forms
+  of containers including a LIFO stack, a FIFO queue and a double-ended queue (deque).
+  The type of items stored in this container is <em>INTEGER(KIND=kInt16)</em>.</p></td></tr>
+			   <tr><td><a href='../type/listinteger4b.html'>ListInteger4B</a></td><td><a href='../module/mclass_listinteger4b.html'>MClass_ListInteger4B</a></td><td>None</td><td><p><em>ListInteger4B</em> is a container type that employs a doubly-linked list implementation to
+  provide common operations for a list container.  It can also represent other forms
+  of containers including a LIFO stack, a FIFO queue and a double-ended queue (deque).
+  The type of items stored in this container is <em>INTEGER(KIND=kInt32)</em>.</p></td></tr>
+			   <tr><td><a href='../type/listinteger8b.html'>ListInteger8B</a></td><td><a href='../module/mclass_listinteger8b.html'>MClass_ListInteger8B</a></td><td>None</td><td><p><em>ListInteger8B</em> is a container type that employs a doubly-linked list implementation to
+  provide common operations for a list container.  It can also represent other forms
+  of containers including a LIFO stack, a FIFO queue and a double-ended queue (deque).
+  The type of items stored in this container is <em>INTEGER(KIND=kInt64)</em>.</p></td></tr>
+			   <tr><td><a href='../type/listlinked.html'>ListLinked</a></td><td><a href='../module/mclass_linkedlists.html'>MClass_LinkedLists</a></td><td><a href='../type/dequelinked.html'>DequeLinked</a></td><td><p><strong>Description</strong>: <br>
+  The <em>ListLinked</em> type is a collection type that employs a linked-list implementation to
+  provide common operations for a list. <br>
+ <strong>Usage Overview</strong>: <br>
+  The <em>ListLinked</em> type provides insert, remove and peek operations at a specified index
+  where the index must be between 1 and the collection size.  The <em>ListLinked</em> type is a
+  subtype of the <em>DequeLinked</em> type; therefore, all operations available for the
+  <em>DequeLinked</em> type are also available for the <em>ListLinked</em> type.  Furthermore, it thus
+  can be used as a deque, a FIFO queue or a LIFO stack.  <br></p></td></tr>
+			   <tr><td><a href='../type/listlogical.html'>ListLogical</a></td><td><a href='../module/mclass_listlogical.html'>MClass_ListLogical</a></td><td>None</td><td><p><em>ListLogical</em> is a container type that employs a doubly-linked list implementation to
+  provide common operations for a list container.  It can also represent other forms
+  of containers including a LIFO stack, a FIFO queue and a double-ended queue (deque).
+  The type of items stored in this container is <em>LOGICAL</em>.</p></td></tr>
+			   <tr><td><a href='../type/listobject.html'>ListObject</a></td><td><a href='../module/mclass_listobject.html'>MClass_ListObject</a></td><td>None</td><td><p><em>ListObject</em> is a container type that employs a doubly-linked list implementation to
+  provide common operations for a list container.  It can also represent other forms
+  of containers including a LIFO stack, a FIFO queue and a double-ended queue (deque).
+  The type of items stored in this container is a derived type in the <em>Object</em>
+  class (i.e. the <em>Object</em> type or its subtypes).</p></td></tr>
+			   <tr><td><a href='../type/listrealdp.html'>ListRealDP</a></td><td><a href='../module/mclass_listrealdp.html'>MClass_ListRealDP</a></td><td>None</td><td><p><em>ListRealDP</em> is a container type that employs a doubly-linked list implementation to
+  provide common operations for a list container.  It can also represent other forms
+  of containers including a LIFO stack, a FIFO queue and a double-ended queue (deque).
+  The type of items stored in this container is <em>REAL(KIND=kDouble)</em>.</p></td></tr>
+			   <tr><td><a href='../type/listrealqp.html'>ListRealQP</a></td><td><a href='../module/mclass_listrealqp.html'>MClass_ListRealQP</a></td><td>None</td><td><p><em>ListRealQP</em> is a container type that employs a doubly-linked list implementation to
+  provide common operations for a list container.  It can also represent other forms
+  of containers including a LIFO stack, a FIFO queue and a double-ended queue (deque).
+  The type of items stored in this container is <em>REAL(KIND=kQuad)</em>.</p></td></tr>
+			   <tr><td><a href='../type/listrealsp.html'>ListRealSP</a></td><td><a href='../module/mclass_listrealsp.html'>MClass_ListRealSP</a></td><td>None</td><td><p><em>ListRealSP</em> is a container type that employs a doubly-linked list implementation to
+  provide common operations for a list container.  It can also represent other forms
+  of containers including a LIFO stack, a FIFO queue and a double-ended queue (deque).
+  The type of items stored in this container is <em>REAL(KIND=kSingle)</em>.</p></td></tr>
+			   <tr><td><a href='../type/listtable.html'>ListTable</a></td><td><a href='../module/mclass_listtable.html'>MClass_ListTable</a></td><td><a href='../type/basesymtable.html'>BaseSymTable</a></td><td><p>The <em>ListTable</em> type is a collection type that employs a linked-list implementation to
+ provide common operations for an unordered symbol table.  The <em>ListTable</em> type employs
+ the <em>IntrusiveLinearList</em> type as its component to store <em>TabNode</em> objects.  As an
+ intrusive container, the <em>IntrusiveLinearList</em> type provides common linked-list operations
+ without a memory management task.  The memory management task of the inserted <em>TabNode</em>
+ objects is handled by the <em>ListTable</em> type. <br>
+ As an unordered symbol table, the <em>ListTable</em> type directly extends the <em>BaseSymTable</em>
+ type and implements all deferred procedures required by the <em>BaseSymTable</em> type and all
+ its super classes.  As a symbol table, the <em>ListTable</em> type does not allow duplicated keys;
+ therefore, if an inserted key is equal to a key stored in the table, an associated value
+ of the stored key is replaced by an associated value of the inserted key. <br></p></td></tr>
+			   <tr><td><a href='../type/orderedsymtable.html'>OrderedSymTable</a></td><td><a href='../module/mclass_orderedsymtable.html'>MClass_OrderedSymTable</a></td><td><a href='../type/basesymtable.html'>BaseSymTable</a></td><td><p>The <em>OrderedSymTable</em> type is an abstract collection type that defines an API for an
+ ordered symbol table.</p></td></tr>
+			   <tr><td><a href='../type/pq_basic.html'>PQ_Basic</a></td><td><a href='../module/mclass_pqbasic.html'>MClass_PQBasic</a></td><td>None</td><td><p>The <em>PQ_Basic</em> type is a container type that employs a binary heap implementation
+ to provide common operations for a priority queue.</p></td></tr>
+			   <tr><td><a href='../type/pq_heap.html'>PQ_Heap</a></td><td><a href='../module/mclass_pqheap.html'>MClass_PQHeap</a></td><td>None</td><td><p>The <em>PQ_Heap</em> type is a container type that employs a binary heap implementation
+ to provide common operations for a priority queue.</p></td></tr>
+			   <tr><td><a href='../type/pqbinheap.html'>PQBinHeap</a></td><td><a href='../module/mclass_pqbinheap.html'>MClass_PQBinHeap</a></td><td><a href='../type/basecollection.html'>BaseCollection</a></td><td><p>The <em>PQBinHeap</em> type is a collection type that employs a binary heap implementation
+ to provide common operations for a priority queue.</p></td></tr>
+			   <tr><td><a href='../type/pqcharacter.html'>PQCharacter</a></td><td><a href='../module/mclass_pqcharacter.html'>MClass_PQCharacter</a></td><td>None</td><td><p>The <em>PQCharacter</em> type is a container type that employs a binary heap implementation
+ to provide common operations for a priority queue.</p></td></tr>
+			   <tr><td><a href='../type/pqinteger1b.html'>PQInteger1B</a></td><td><a href='../module/mclass_pqinteger1b.html'>MClass_PQInteger1B</a></td><td>None</td><td><p>The <em>PQInteger1B</em> type is a container type that employs a binary heap implementation
+ to provide common operations for a priority queue.</p></td></tr>
+			   <tr><td><a href='../type/pqinteger2b.html'>PQInteger2B</a></td><td><a href='../module/mclass_pqinteger2b.html'>MClass_PQInteger2B</a></td><td>None</td><td><p>The <em>PQInteger2B</em> type is a container type that employs a binary heap implementation
+ to provide common operations for a priority queue.</p></td></tr>
+			   <tr><td><a href='../type/pqinteger4b.html'>PQInteger4B</a></td><td><a href='../module/mclass_pqinteger4b.html'>MClass_PQInteger4B</a></td><td>None</td><td><p>The <em>PQInteger4B</em> type is a container type that employs a binary heap implementation
+ to provide common operations for a priority queue.</p></td></tr>
+			   <tr><td><a href='../type/pqinteger8b.html'>PQInteger8B</a></td><td><a href='../module/mclass_pqinteger8b.html'>MClass_PQInteger8B</a></td><td>None</td><td><p>The <em>PQInteger8B</em> type is a container type that employs a binary heap implementation
+ to provide common operations for a priority queue.</p></td></tr>
+			   <tr><td><a href='../type/pqminmax.html'>PQMinMax</a></td><td><a href='../module/mclass_pqminmax.html'>MClass_PQMinMax</a></td><td><a href='../type/basecollection.html'>BaseCollection</a></td><td><p>The <em>PQMinMax</em> type is a collection type that employs an ordered array implementation
+ to provide common operations for a generalized priority queue.</p></td></tr>
+			   <tr><td><a href='../type/pqrealdp.html'>PQRealDP</a></td><td><a href='../module/mclass_pqrealdp.html'>MClass_PQRealDP</a></td><td>None</td><td><p>The <em>PQRealDP</em> type is a container type that employs a binary heap implementation
+ to provide common operations for a priority queue.</p></td></tr>
+			   <tr><td><a href='../type/pqrealqp.html'>PQRealQP</a></td><td><a href='../module/mclass_pqrealqp.html'>MClass_PQRealQP</a></td><td>None</td><td><p>The <em>PQRealQP</em> type is a container type that employs a binary heap implementation
+ to provide common operations for a priority queue.</p></td></tr>
+			   <tr><td><a href='../type/pqrealsp.html'>PQRealSP</a></td><td><a href='../module/mclass_pqrealsp.html'>MClass_PQRealSP</a></td><td>None</td><td><p>The <em>PQRealSP</em> type is a container type that employs a binary heap implementation
+ to provide common operations for a priority queue.</p></td></tr>
+			   <tr><td><a href='../type/queuearray.html'>QueueArray</a></td><td><a href='../module/mclass_dynamicarrays.html'>MClass_DynamicArrays</a></td><td>BaseDynArr</td><td><p><strong>Description</strong>: <br>
+  The <em>QueueArray</em> type is a collection type that employs a resizable-array implementation
+  to provide common operations for a FIFO queue. <br>
+ <strong>Usage Overview</strong>: <br>
+  The <em>QueueArray</em> type is a <em>queue</em> collection type that provides common operations of a
+  FIFO queue.  Their operations can be categorized as follows: <br>
+  (1) Construction and destruction.  Methods for these operations include <br>
+  (1.1) <em>Construct</em> method - method to construct the collection either from an array of items
+         or from another collection, <br>
+  (1.2) <em>CreateEmpty</em> method - method to construct an empty collection, <br>
+  (1.3) <em>Destruct</em> method - method to destruct the collection. <br>
+  (2) Insert and remove.  Methods for these operations include <br>
+  (2.1) <em>Enqueue</em> method - method to insert an item to the end of the collection, <br>
+  (2.2) <em>Dequeue</em> method - method to get and remove the first item of the collection, <br>
+  (2.3) <em>Clear</em> method - method to remove all items from the collection. <br>
+  (2.4) <em>ToArray</em> method - method to remove and retrieve all items from the collection. <br>
+  (3) Inquiry.  Methods for these operations include <br>
+  (3.1) <em>PeekFirst</em> method - method to retrieve the first item of the collection, <br>
+  (3.2) <em>GetSize</em> method - method to get the collection size (number of items stored), <br>
+  (3.3) <em>IsEmpty</em> method - method to check whether the collection is empty or not. <br>
+  (3.4) <em>GetAll</em> method - method to retrieve all items from the collection. <br>
+  (4) Iteration.  Methods for these operations include <br>
+  (4.1) <em>StartFirst</em> method - method to start a forward iteration over items, <br>
+  (4.2) <em>MoveForward</em> method - method to move forward to the next item.</p></td></tr>
+			   <tr><td><a href='../type/queuelinked.html'>QueueLinked</a></td><td><a href='../module/mclass_linkedlists.html'>MClass_LinkedLists</a></td><td><a href='../type/baseiterable.html'>BaseIterable</a></td><td><p><strong>Description</strong>: <br>
+  The <em>QueueLinked</em> type is a collection type that employs a linked-list implementation
+  to provide common operations for a FIFO queue. <br>
+ <strong>Usage Overview</strong>: <br>
+  The <em>QueueLinked</em> type is a <em>queue</em> collection type that provides common operations of
+  a FIFO queue.  Their operations can be categorized as follows: <br>
+  (1) Construction and destruction.  Methods for these operations include <br>
+  (1.1) <em>Construct</em> method - method to construct the collection either from an array of
+         items or from another collection, <br>
+  (1.2) <em>Destruct</em> method - method to destruct the collection. <br>
+  (2) Insert and remove.  Methods for these operations include <br>
+  (2.1) <em>Enqueue</em> method - method to insert an item to the end of the collection, <br>
+  (2.2) <em>Dequeue</em> method - method to get and remove the first item of the collection, <br>
+  (2.3) <em>Clear</em> method - method to remove all items from the collection. <br>
+  (2.4) <em>ToArray</em> method - method to remove and retrieve all items from the collection. <br>
+  (3) Inquiry.  Methods for these operations include <br>
+  (3.1) <em>PeekFirst</em> method - method to retrieve the first item of the collection, <br>
+  (3.2) <em>GetSize</em> method - method to get the collection size (number of items stored), <br>
+  (3.3) <em>IsEmpty</em> method - method to check whether the collection is empty or not. <br>
+  (3.4) <em>GetAll</em> method - method to retrieve all items from the collection. <br>
+  (4) Iteration.  Methods for these operations include <br>
+  (4.1) <em>StartFirst</em> method - method to start a forward iteration over items, <br>
+  (4.2) <em>MoveForward</em> method - method to move forward to the next item. <br></p></td></tr>
+			   <tr><td><a href='../type/stackarray.html'>StackArray</a></td><td><a href='../module/mclass_dynamicarrays.html'>MClass_DynamicArrays</a></td><td>BaseDynArr</td><td><p><strong>Description</strong>: <br>
+  The <em>StackArray</em> type is a collection type that employs a resizable-array implementation
+  to provide common operations for a LIFO stack. <br>
+ <strong>Usage Overview</strong>: <br>
+  The <em>StackArray</em> type is a <em>stack</em> collection type that provides common operations of a
+  LIFO stack.  Their operations can be categorized as follows: <br>
+  (1) Construction and destruction.  Methods for these operations include <br>
+  (1.1) <em>Construct</em> method - method to construct the collection either from an array of items
+        or from another collection, <br>
+  (1.2) <em>CreateEmpty</em> method - method to construct an empty collection, <br>
+  (1.3) <em>Destruct</em> method - method to destruct the collection. <br>
+  (2) Insert and remove.  Methods for these operations include <br>
+  (2.1) <em>Push</em> method - method to insert an item at the top (end) of the collection, <br>
+  (2.2) <em>Pop</em> method - method to get and remove the top (last) item of the collection, <br>
+  (2.3) <em>Clear</em> method - method to remove all items from the collection. <br>
+  (2.4) <em>ToArray</em> method - method to remove and retrieve all items from the collection. <br>
+  (3) Inquiry.  Methods for these operations include <br>
+  (3.1) <em>PeekTop</em> method - method to retrieve the top (last) item of the collection, <br>
+  (3.2) <em>GetSize</em> method - method to get the collection size (number of items stored), <br>
+  (3.3) <em>IsEmpty</em> method - method to check whether the collection is empty or not. <br>
+  (3.4) <em>GetAll</em> method - method to retrieve all items from the collection. <br>
+  (4) Iteration.  Methods for these operations include <br>
+  (4.1) <em>StartFirst</em> method - method to start a forward iteration over items, <br>
+  (4.2) <em>MoveForward</em> method - method to move forward to the next item.</p></td></tr>
+			   <tr><td><a href='../type/stacklinked.html'>StackLinked</a></td><td><a href='../module/mclass_linkedlists.html'>MClass_LinkedLists</a></td><td><a href='../type/queuelinked.html'>QueueLinked</a></td><td><p><strong>Description</strong>: <br>
+  The <em>StackLinked</em> type is a collection type that employs a linked-list implementation to
+  provide common operations for a LIFO stack. <br>
+ <strong>Usage Overview</strong>: <br>
+  The <em>StackLinked</em> type is a <em>stack</em> collection type that provides common operations of
+  a LIFO stack.  Their operations can be categorized as follows: <br>
+  (1) Construction and destruction.  Methods for these operations include <br>
+  (1.1) <em>Construct</em> method - method to construct the collection either from an array of
+         items another or from collection, <br>
+  (1.2) <em>Destruct</em> method - method to destruct the collection. <br>
+  (2) Insert and remove.  Methods for these operations include <br>
+  (2.1) <em>Push</em> method - method to insert an item at the top of the collection, <br>
+  (2.2) <em>Pop</em> method - method to get and remove the top (last) item of the collection, <br>
+  (2.3) <em>Clear</em> method - method to remove all items from the collection. <br>
+  (2.4) <em>ToArray</em> method - method to remove and retrieve all items from the collection. <br>
+  (3) Inquiry.  Methods for these operations include <br>
+  (3.1) <em>PeekTop</em> method - method to retrieve the top (last) item of the collection, <br>
+  (3.2) <em>GetSize</em> method - method to get the collection size (number of items stored), <br>
+  (3.3) <em>IsEmpty</em> method - method to check whether the collection is empty or not. <br>
+  (3.4) <em>GetAll</em> method - method to retrieve all items from the collection. <br>
+  (4) Iteration.  Methods for these operations include <br>
+  (4.1) <em>StartFirst</em> method - method to start a forward iteration over items, <br>
+  (4.2) <em>MoveForward</em> method - method to move forward to the next item. <br>
+ <strong>Note</strong>: Since the <em>StackLinked</em> type is a subtype of the <em>QueueLinked</em> type, it can also
+           be used as a FIFO queue.</p></td></tr>
+			   <tr><td><a href='../type/treecharacter.html'>TreeCharacter</a></td><td><a href='../module/mclass_treecharacter.html'>MClass_TreeCharacter</a></td><td>None</td><td><p><em>TreeCharacter</em> is a container type that employs a left-leaning red-black (RB) tree
+  implementation to provide common operations for an ordered symbol table.</p></td></tr>
+			   <tr><td><a href='../type/treecomparable.html'>TreeComparable</a></td><td><a href='../module/mclass_treecomparable.html'>MClass_TreeComparable</a></td><td>None</td><td><p><em>TreeComparable</em> is a container type that employs a left-leaning red-black (RB) tree
+  implementation to provide common operations for an ordered symbol table.</p></td></tr>
+			   <tr><td><a href='../type/treeinteger1b.html'>TreeInteger1B</a></td><td><a href='../module/mclass_treeinteger1b.html'>MClass_TreeInteger1B</a></td><td>None</td><td><p><em>TreeInteger1B</em> is a container type that employs a left-leaning red-black (RB) tree
+  implementation to provide common operations for an ordered symbol table.</p></td></tr>
+			   <tr><td><a href='../type/treeinteger2b.html'>TreeInteger2B</a></td><td><a href='../module/mclass_treeinteger2b.html'>MClass_TreeInteger2B</a></td><td>None</td><td><p><em>TreeInteger2B</em> is a container type that employs a left-leaning red-black (RB) tree
+  implementation to provide common operations for an ordered symbol table.</p></td></tr>
+			   <tr><td><a href='../type/treeinteger4b.html'>TreeInteger4B</a></td><td><a href='../module/mclass_treeinteger4b.html'>MClass_TreeInteger4B</a></td><td>None</td><td><p><em>TreeInteger4B</em> is a container type that employs a left-leaning red-black (RB) tree
+  implementation to provide common operations for an ordered symbol table.</p></td></tr>
+			   <tr><td><a href='../type/treeinteger8b.html'>TreeInteger8B</a></td><td><a href='../module/mclass_treeinteger8b.html'>MClass_TreeInteger8B</a></td><td>None</td><td><p><em>TreeInteger8B</em> is a container type that employs a left-leaning red-black (RB) tree
+  implementation to provide common operations for an ordered symbol table.</p></td></tr>
+			   <tr><td><a href='../type/treerealdp.html'>TreeRealDP</a></td><td><a href='../module/mclass_treerealdp.html'>MClass_TreeRealDP</a></td><td>None</td><td><p><em>TreeRealDP</em> is a container type that employs a left-leaning red-black (RB) tree
+  implementation to provide common operations for an ordered symbol table.</p></td></tr>
+			   <tr><td><a href='../type/treerealqp.html'>TreeRealQP</a></td><td><a href='../module/mclass_treerealqp.html'>MClass_TreeRealQP</a></td><td>None</td><td><p><em>TreeRealQP</em> is a container type that employs a left-leaning red-black (RB) tree
+  implementation to provide common operations for an ordered symbol table.</p></td></tr>
+			   <tr><td><a href='../type/treerealsp.html'>TreeRealSP</a></td><td><a href='../module/mclass_treerealsp.html'>MClass_TreeRealSP</a></td><td>None</td><td><p><em>TreeRealSP</em> is a container type that employs a left-leaning red-black (RB) tree
+  implementation to provide common operations for an ordered symbol table.</p></td></tr>
+			   <tr><td><a href='../type/treeset.html'>TreeSet</a></td><td><a href='../module/mclass_treeset.html'>MClass_TreeSet</a></td><td><a href='../type/baseiterable.html'>BaseIterable</a></td><td><p>The <em>TreeSet</em> type is a collection type that utilizes a balanced BST implementation
+ to provide common operations for an ordered set.  The <em>TreeSet</em> type employs the
+ <em>IntrusiveRBTree</em> type as its component to store <em>SetNode</em> objects.  As an intrusive
+ BST container, the <em>IntrusiveRBTree</em> type provides common binary-search-tree operations
+ without a memory management task.  The memory management task of the inserted <em>SetNode</em>
+ objects is handled by the <em>TreeSet</em> type.  <br>
+ The <em>TreeSet</em> type is a subtype of the <em>BaseIterable</em> type.  Thus, it implements all
+ deferred procedures required by the <em>BaseIterable</em> type and all its super classes.  As
+ a set container, the <em>TreeSet</em> type does not allow duplicated items.  Also, the <em>TreeSet</em>
+ type, as an <em>ordered</em> set, provides an ordered iteration over its stored items, which are
+ sorted according to the natural ordering of its items.  It can be traversed in either
+ ascending or descending order. <br>
+ Because the <em>IntrusiveRBTree</em> type is a subtype of the <em>IntrusiveAVLTree</em> type, the
+ <em>WrkTree</em> component can be employed as a red-black tree or an AVL tree.  Therefore, the
+ <em>TreeSet</em> type allows a user to specify which type of binary-search tree implementation
+ to be used.  By default, the red-black tree implementation is used.  The user can call the
+ <em>UseAVLTree</em> method to change to AVL tree implementation.  The <em>UseAVLTree</em> method must
+ be called before inserting an object into the set (i.e when the set is empty).  Otherwise,
+ the red-black tree implementation is employed.  <br></p></td></tr>
+			   <tr><td><a href='../type/treetable.html'>TreeTable</a></td><td><a href='../module/mclass_treetable.html'>MClass_TreeTable</a></td><td><a href='../type/orderedsymtable.html'>OrderedSymTable</a></td><td><p>The <em>TreeTable</em> type is a collection type that utilizes a balanced BST implementation to
+  provide common operations for an ordered symbol table.  The <em>TreeTable</em> type uses the
+  <em>IntrusiveRBTree</em> type as its component to store <em>TabNode</em> objects.  As an intrusive
+  BST container, the <em>IntrusiveRBTree</em> type provides common binary-search-tree operations
+  without a memory management task.  The memory management task of the inserted <em>TabNode</em>
+  objects is handled by the <em>TreeTable</em> type.  <br>
+  As an ordered symbol table, the <em>TreeTable</em> type is a subtype of the <em>OrderedSymTable</em>
+  type.  Thus, it implements all deferred procedures required by the <em>OrderedSymTable</em>
+  type and all its super classes.  As a symbol table, the <em>TreeTable</em> type does not allow
+  duplicated keys; therefore, if an inserted key is equal to a key stored in the table, an
+  associated value of the stored key is replaced by an associated value of the inserted key. <br>
+  Because the <em>IntrusiveRBTree</em> type is a subtype of the <em>IntrusiveAVLTree</em> type, the
+  <em>WrkTree</em> component can be employed as a red-black tree or an AVL tree.  Therefore, the
+  <em>TreeTable</em> type allows a user to specify which type of binary-search tree implementation
+  to be used.  By default, the red-black tree implementation is used.  The user can call the
+  <em>UseAVLTree</em> method to change to AVL tree implementation.  The <em>UseAVLTree</em> method must
+  be called before inserting an object into the symbol table (i.e when the table is empty).
+  Otherwise, the red-black tree implementation is employed.  <br></p></td></tr>
+			 </tbody></table>
+             
+        </div>
+      </div>
+      <hr>
+    </div> <!-- /container -->
+    <footer>
+      <div class="container">
+        <div class="row justify-content-between">
+          <div class="col"><p>eXPerimental Fortran Library (XpfLib) Documentation was developed by Niranama<br>&copy; 2024 
+</p>
+          </div>
+          <div class="col">
+            <p class="text-end">
+              Documentation generated by
+              <a href="https://github.com/Fortran-FOSS-Programmers/ford">FORD</a>
+            </p>
+          </div>
+        </div>
+        <br>
+      </div> <!-- /container -->
+    </footer>
+
+    <!-- Bootstrap core JavaScript -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>    
+
+    <!-- MathJax JavaScript
+             ================================================== -->
+             <!-- Placed at the end of the document so the pages load faster -->
+        <script type="text/x-mathjax-config">
+          MathJax.Hub.Config({
+          TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } },
+          jax: ['input/TeX','input/MathML','output/HTML-CSS'],
+          extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']
+          });
+        </script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+          <script src="../tipuesearch/tipuesearch_content.js"></script>
+          <script src="../tipuesearch/tipuesearch_set.js"></script>
+          <script src="../tipuesearch/tipuesearch.js"></script>
+
+  </body>
+</html>

@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta name="description" content="Experimental Fortran Package - Data Structures">
+    <meta name="author" content="Niranama" >
+    <link rel="icon" href="../favicon.png">
+
+    <title>MBase_DynamicArrays &ndash; eXPerimental Fortran Library (XpfLib) Documentation</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link href="../css/pygments.css" rel="stylesheet">
+    <link href="../css/font-awesome.min.css" rel="stylesheet">
+    <link href="../css/local.css" rel="stylesheet">
+      <link  href="../tipuesearch/tipuesearch.css" rel="stylesheet">
+
+    <script src="https://code.jquery.com/jquery-3.7.0.slim.min.js" integrity="sha256-tG5mcZUtJsZvyKAxYLVXrmjKBVLd6VpVccqz/r4ypFE=" crossorigin="anonymous"></script>
+  </head>
+
+  <body>
+
+    <!-- Fixed navbar -->
+    <div class="container-fluid mb-sm-4 mb-xl-2">
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container">
+          <a class="navbar-brand" href="../index.html">eXPerimental Fortran Library (XpfLib) Documentation </a>
+          <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar"
+                  aria-expanded="false" aria-controls="navbar" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon">
+          </button>
+
+          <div id="navbar" class="navbar-collapse collapse">
+            <ul class="navbar-nav">
+                  <li class="nav-item">
+                    <a class="nav-link" href="../lists/files.html">Source Files</a>
+                  </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../lists/modules.html">Modules</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../lists/types.html">Derived Types</a>
+                </li>
+            </ul>
+              <div class="d-flex align-items-end flex-grow-1">
+                <form action="../search.html" role="search" class="ms-auto">
+                  <input type="text" class="form-control" aria-label="Search" placeholder="Search" name="q" id="tipue_search_input" autocomplete="off" required>
+                </form>
+              </div>
+          </div><!--/.nav-collapse -->
+        </div>
+      </nav>
+    </div>
+
+    <div class="container">
+  <div class="row">
+    <h1>MBase_DynamicArrays
+      <small>Module</small>
+      
+    </h1>
+      <div class="container p-2 mb-4 bg-light border rounded-3">
+    <div class="row align-items-center justify-content-between" id="info-bar">
+      <div class="col">
+        <ul class="list-inline" style="margin-bottom:0px;display:inline">
+
+            <li class="list-inline-item" id="statements"><i class="fa fa-list-ol"></i>
+              <a data-bs-toggle="tooltip"
+                 data-bs-placement="bottom" data-html="true"
+                 title=" 0.0% of total for modules and submodules.">15 statements</a>
+            </li>
+
+            <li class="list-inline-item" id="source-file">
+              <i class="fa fa-code"></i>
+              <a href="../src/MBase_DynamicArrays.f90"> Source File</a>
+            </li>
+        </ul>
+      </div>
+      <div class="col">
+        <nav aria-label="breadcrumb">
+          <ol class="breadcrumb justify-content-end mb-0">
+                <li class="breadcrumb-item"><a href='../sourcefile/mbase_dynamicarrays.f90.html'>MBase_DynamicArrays.f90</a></li>
+            <li class="breadcrumb-item active" aria-current="page">MBase_DynamicArrays</li>
+          </ol>
+        </nav>
+      </div>
+    </div>
+  </div>
+  <script>
+    $(function () {
+    $('[data-bs-toggle="tooltip"]').tooltip()
+    })
+  </script>
+
+  </div>
+
+  <div class="row">
+    <div class="col-md-3">
+        <div id="sidebar">
+      <h3>Contents</h3>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+
+    <em>None</em>
+
+  </div>
+
+    </div>
+
+    <div class="col-md-9" id='text'>
+      <p><strong>PURPOSE OF THIS MODULE</strong>: <br>
+ This module collectively contains <em>dynamic-array-based</em> types from other modules.
+ It is provided so that a user can refer to this module instead of referring to several
+ individual modules when various types are needed concurrently. <br>
+ <br>
+ <strong>Overview</strong>: <br>
+ These dynamic-array-based types are container types that employ dynamic-array (or
+ resizable-array) implementation.  Each individual type can be used to stored items
+ for a specific type where the type of stored items is one of Fortran intrinsic types
+ or a derived type in the <em>Object</em> class (i.e. the <em>Object</em> type or its subtypes). <br>
+ Available container types are: <br>
+ - the <a href="../module/mclass_darrcharacter.html#type-darrcharacter">DArrCharacter</a> type
+   for character string type, <br>
+ - the <a href="../module/mclass_darrcmpxsp.html#type-darrcmpxsp">DArrCmpxSP</a> type
+   for single-precision complex type, <br>
+ - the <a href="../module/mclass_darrcmpxdp.html#type-darrcmpxdp">DArrCmpxDP</a> type
+   for double-precision complex type, <br>
+ - the <a href="../module/mclass_darrcmpxqp.html#type-darrcmpxqp">DArrCmpxQP</a> type
+   for quadruple-precision complex type, <br>
+ - the <a href="../module/mclass_darrinteger1b.html#type-darrinteger1b">DArrInteger1B</a> type
+   for 1-byte (or 8-bit) integer type, <br>
+ - the <a href="../module/mclass_darrinteger2b.html#type-darrinteger2b">DArrInteger2B</a> type
+   for 2-byte (or 16-bit) integer type, <br>
+ - the <a href="../module/mclass_darrinteger4b.html#type-darrinteger4b">DArrInteger4B</a> type
+   for 4-byte (or 32-bit) integer type, <br>
+ - the <a href="../module/mclass_darrinteger8b.html#type-darrinteger8b">DArrInteger8B</a> type
+   for 8-byte (or 64-bit) integer type, <br>
+ - the <a href="../module/mclass_darrlogical.html#type-darrlogical">DArrLogical</a> type
+   for default logical type, <br>
+ - the <a href="../module/mclass_darrrealsp.html#type-darrrealsp">DArrRealSP</a> type
+   for single-precision real type, <br>
+ - the <a href="../module/mclass_darrrealdp.html#type-darrrealdp">DArrRealDP</a> type
+   for double-precision real type, <br>
+ - the <a href="../module/mclass_darrrealqp.html#type-darrrealqp">DArrRealQP</a> type
+   for quadruple-precision real type, and <br>
+ - the <a href="../module/mclass_darrobject.html#type-darrobject">DArrObject</a> type
+   for a derived type in the <em>Object</em> class. <br>
+ Each dynamic-array-based type can represent various forms of containers including: <br>
+ - the last-in-first-out (LIFO) stack container, <br>
+ - the first-in-first-out (FIFO) queue container, <br>
+ - the double-ended queue (deque) container, and <br>
+ - the list container where an item can be added, removed or retrieved
+   at the (valid) specified index. <br>
+ Each individual type provides various common operations that can be
+ categorized as follows. <br>
+ (1) Construction and Destruction.  Methods for these operations include: <br>
+ - <em>CreateEmpty</em> method - method to construct an empty container, <br>
+ - <em>Construct</em> method - method to construct the container from
+   an array of items, and <br>
+ - <em>Destruct</em> method - method to destruct the container by removing all
+   items from the container as well as freeing memory of its component used
+   to store items. <br>
+ (2) Insertion and Removal.  Methods for these operations include: <br>
+ - <em>AddFirst</em> method - method to insert an item to the front of the container, <br>
+ - <em>AddLast</em> method - method to insert an item to the end of the container, <br>
+ - <em>AddAt</em> method - method to insert an item at the specified index, <br>
+ - <em>RemoveFirst</em> method - method to get and remove the first item of the container, <br>
+ - <em>RemoveLast</em> method - method to get and remove the last item of the container, <br>
+ - <em>RemoveAt</em> method - method to get and remove an item at the specified index, <br>
+ - <em>Delete</em> method - method to remove an item at the current iteration while
+   performing an iteration over the container, <br>
+ - <em>Clear</em> method - method to remove all items from the container. <br>
+ - <em>ToArray</em> method - method to retrieve and then remove all items from the container. <br>
+ - <em>Enqueue</em> method - same as the <em>AddLast</em> method provided when used as a queue, <br>
+ - <em>Dequeue</em> method - same as the <em>RemoveFirst</em> method provided when used as a queue, <br>
+ - <em>Push</em> method - same as the <em>AddLast</em> method provided when used as a stack, and <br>
+ - <em>Pop</em> method - same as the <em>RemoveLast</em> method provided when used as a stack. <br>
+ (3) Retrieval.  Methods for this operation include: <br>
+ - <em>PeekFirst</em> method - method to retrieve the first item of the container, <br>
+ - <em>PeekLast</em> method - method to retrieve the last item of the container, <br>
+ - <em>PeekAt</em> method - method to retrieve the item at the specified index, <br>
+ - <em>PeekTop</em> method - same as the <em>PeekLast</em> method provided when used as a stack, and <br>
+ - <em>GetAll</em> method - method to retrieve all items from the container. <br>
+ (4) Inquiry.  Methods for this operation include: <br>
+ - <em>IsEmpty</em> method - method to check whether the container is empty or not, and <br>
+ - <em>GetSize</em> method - method to get the container size (number of items stored). <br>
+ (5) Iteration.  Methods for this operation include: <br>
+ - <em>StartFirst</em> method - method to start a forward iteration over items, <br>
+ - <em>MoveForward</em> method - method to move forward to the next item, <br>
+ - <em>StartLast</em> method - method to start a backward iteration over items, and <br>
+ - <em>MoveBackward</em> method - method to move backward to the next item. <br>
+ <br>
+ <strong>Usage Notes</strong>:  <br>
+ The <em>dynamic-array-based</em> types provided in this module can be considered
+ to be the same as those <em>doubly-linked-list-based</em> types provided in the
+ <a href="../module/mbase_doublylinkedlists.html">MBase_DoublyLinkedLists</a> module
+ although they employ different implementation.  However, the two groups of
+ containers have some subtle differences as discussed below. <br>
+ - Unlike the <em>doubly-linked-list-based</em> types, all <em>dynamic-array-based</em> types
+   commonly require an explicit construction before using other provided operations.
+   As shown above, there are two methods provided to create a container.  First,
+   the <em>CreateEmpty</em> method constructs an empty container with the specified initial
+   capacity.  Second, the <em>Construction</em> method constructs a container from an array
+   of items.  <br>
+ - Also, unlike <em>doubly-linked-list-based</em> types where the <em>Clear</em> method and the
+   <em>Destruct</em> method are considered to be equivalent, the <em>Destruct</em> method of a
+   <em>dynamic-array-based</em> type frees memory of its component used to store items
+   in addition to removing all items from the container (which is the operation
+   of the <em>Clear</em> method).  Therefore, after calling the <em>Destruct</em> method, a user
+   must reconstruct the container (by calling either the <em>Construction</em> or the
+   <em>CreateEmpty</em> method again) before using other operations once more.  Otherwise,
+   the container's behavior may not be as expected (or the program may even crash). <br>
+ Besides methods just discussed above, all other operations provided by both groups
+ of containers can be considered to be the same. <br>
+ See the <a href="../module/mclass_dynamicarrays.html">MClass_DynamicArrays</a>
+ module for discussions about the <em>Dynamic-Array</em> concept and its strategy used
+ for growing and shrinking a resizable array, which is similar to the strategy
+ employed by all <em>dynamic-array-based</em> types provided in this module.  It should
+ be noted that all <em>dynamic-array-based</em> types provided in the <em>MClass_DynamicArrays</em>
+ module are functionally similar to those provided in this module.  However, each
+ individual type provided in this module can only be used for a specific type of
+ items to be stored whereas each individual type in the <em>MClass_DynamicArrays</em>
+ is a generic container that can be used for various types of items to be stored
+ providing that the size (in bytes) of the data item to be stored is known at
+ compile time.</p>
+<br>          <div class="card mb-4">
+      <h3 class="card-header card-title bg-light">Uses</h3>
+      <div class="card-body">
+        <ul class="list-group list-group-flush">
+            <li class="list-group-item">
+              <ul class="list-inline">
+                  <li class="list-inline-item"><a href='../module/mclass_darrcmpxqp.html'>MClass_DArrCmpxQP</a></li>
+                  <li class="list-inline-item"><a href='../module/mclass_darrinteger1b.html'>MClass_DArrInteger1B</a></li>
+                  <li class="list-inline-item"><a href='../module/mclass_darrinteger8b.html'>MClass_DArrInteger8B</a></li>
+                  <li class="list-inline-item"><a href='../module/mclass_darrcmpxsp.html'>MClass_DArrCmpxSP</a></li>
+                  <li class="list-inline-item"><a href='../module/mclass_darrrealsp.html'>MClass_DArrRealSP</a></li>
+                  <li class="list-inline-item"><a href='../module/mclass_darrrealqp.html'>MClass_DArrRealQP</a></li>
+                  <li class="list-inline-item"><a href='../module/mclass_darrobject.html'>MClass_DArrObject</a></li>
+                  <li class="list-inline-item"><a href='../module/mclass_darrinteger4b.html'>MClass_DArrInteger4B</a></li>
+                  <li class="list-inline-item"><a href='../module/mclass_darrlogical.html'>MClass_DArrLogical</a></li>
+                  <li class="list-inline-item"><a href='../module/mclass_darrcharacter.html'>MClass_DArrCharacter</a></li>
+                  <li class="list-inline-item"><a href='../module/mclass_darrcmpxdp.html'>MClass_DArrCmpxDP</a></li>
+                  <li class="list-inline-item"><a href='../module/mclass_darrinteger2b.html'>MClass_DArrInteger2B</a></li>
+                  <li class="list-inline-item"><a href='../module/mclass_darrrealdp.html'>MClass_DArrRealDP</a></li>
+              </ul>
+            </li>
+        </ul>
+      </div>
+    </div>
+
+      
+      <br>
+
+
+
+
+
+
+
+
+
+
+
+    </div>
+  </div>
+
+      <hr>
+    </div> <!-- /container -->
+    <footer>
+      <div class="container">
+        <div class="row justify-content-between">
+          <div class="col"><p>eXPerimental Fortran Library (XpfLib) Documentation was developed by Niranama<br>&copy; 2024 
+</p>
+          </div>
+          <div class="col">
+            <p class="text-end">
+              Documentation generated by
+              <a href="https://github.com/Fortran-FOSS-Programmers/ford">FORD</a>
+            </p>
+          </div>
+        </div>
+        <br>
+      </div> <!-- /container -->
+    </footer>
+
+    <!-- Bootstrap core JavaScript -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>    
+
+    <!-- MathJax JavaScript
+             ================================================== -->
+             <!-- Placed at the end of the document so the pages load faster -->
+        <script type="text/x-mathjax-config">
+          MathJax.Hub.Config({
+          TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } },
+          jax: ['input/TeX','input/MathML','output/HTML-CSS'],
+          extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']
+          });
+        </script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+          <script src="../tipuesearch/tipuesearch_content.js"></script>
+          <script src="../tipuesearch/tipuesearch_set.js"></script>
+          <script src="../tipuesearch/tipuesearch.js"></script>
+
+  </body>
+</html>

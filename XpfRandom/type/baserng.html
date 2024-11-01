@@ -1,0 +1,4345 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta name="description" content="Experimental Fortran Package - Psuedo-Random Number Generators (PRNGs)">
+    <meta name="author" content="Niranama" >
+    <link rel="icon" href="../favicon.png">
+
+    <title>BaseRNG &ndash; eXPerimental Fortran Library (XpfLib) Documentation </title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link href="../css/pygments.css" rel="stylesheet">
+    <link href="../css/font-awesome.min.css" rel="stylesheet">
+    <link href="../css/local.css" rel="stylesheet">
+      <link  href="../tipuesearch/tipuesearch.css" rel="stylesheet">
+
+    <script src="https://code.jquery.com/jquery-3.7.0.slim.min.js" integrity="sha256-tG5mcZUtJsZvyKAxYLVXrmjKBVLd6VpVccqz/r4ypFE=" crossorigin="anonymous"></script>
+  </head>
+
+  <body>
+
+    <!-- Fixed navbar -->
+    <div class="container-fluid mb-sm-4 mb-xl-2">
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container">
+          <a class="navbar-brand" href="../index.html">eXPerimental Fortran Library (XpfLib) Documentation </a>
+          <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar"
+                  aria-expanded="false" aria-controls="navbar" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon">
+          </button>
+
+          <div id="navbar" class="navbar-collapse collapse">
+            <ul class="navbar-nav">
+                  <li class="nav-item">
+                    <a class="nav-link" href="../lists/files.html">Source Files</a>
+                  </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../lists/modules.html">Modules</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../lists/procedures.html">Procedures</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../lists/absint.html">Abstract Interfaces</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../lists/types.html">Derived Types</a>
+                </li>
+            </ul>
+              <div class="d-flex align-items-end flex-grow-1">
+                <form action="../search.html" role="search" class="ms-auto">
+                  <input type="text" class="form-control" aria-label="Search" placeholder="Search" name="q" id="tipue_search_input" autocomplete="off" required>
+                </form>
+              </div>
+          </div><!--/.nav-collapse -->
+        </div>
+      </nav>
+    </div>
+
+    <div class="container">
+  <div class="row">
+    <h1>BaseRNG
+      <small>Derived Type</small>
+      
+    </h1>
+      <div class="container p-2 mb-4 bg-light border rounded-3">
+    <div class="row align-items-center justify-content-between" id="info-bar">
+      <div class="col">
+        <ul class="list-inline" style="margin-bottom:0px;display:inline">
+
+            <li class="list-inline-item" id="statements"><i class="fa fa-list-ol"></i>
+              <a data-bs-toggle="tooltip"
+                 data-bs-placement="bottom" data-html="true"
+                 title="<p> 6.3% of total for derived types.</p>Including implementation: 497 statements,  1.6% of total for derived types.">45 statements</a>
+            </li>
+
+            <li class="list-inline-item" id="source-file">
+              <i class="fa fa-code"></i>
+              <a href="../src/MClass_BaseRNG.f90"> Source File</a>
+            </li>
+        </ul>
+      </div>
+      <div class="col">
+        <nav aria-label="breadcrumb">
+          <ol class="breadcrumb justify-content-end mb-0">
+                <li class="breadcrumb-item"><a href='../sourcefile/mclass_baserng.f90.html'>MClass_BaseRNG.f90</a></li>
+                <li class="breadcrumb-item"><a href='../module/mclass_baserng.html'>MClass_BaseRNG</a></li>
+            <li class="breadcrumb-item active" aria-current="page">BaseRNG</li>
+          </ol>
+        </nav>
+      </div>
+    </div>
+  </div>
+  <script>
+    $(function () {
+    $('[data-bs-toggle="tooltip"]').tooltip()
+    })
+  </script>
+
+  </div>
+  
+  <div class="row">
+    <div class="col-md-3 hidden-xs hidden-sm visible-md visible-lg">
+      <div id="sidebar">
+      <h3>Contents</h3>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+      <div class="card mb-4">
+      <a data-bs-toggle="collapse" href="#boundprocs-0"
+         aria-expanded="false" aria-controls="boundprocs-0">
+         <h4 class="card-header bg-primary text-white">Type-Bound Procedures</h4>
+      </a>
+      <div id="boundprocs-0" class="collapse">
+        <div class="list-group list-group-flush">
+            <a class="list-group-item" href="../type/baserng.html#boundprocedure-initwoseedimpl~3">InitWOSeedImpl</a>
+            <a class="list-group-item" href="../type/baserng.html#boundprocedure-nextintegerimpl~7">NextIntegerImpl</a>
+            <a class="list-group-item" href="../type/baserng.html#boundprocedure-nextlongimpl~12">NextLongImpl</a>
+            <a class="list-group-item" href="../type/baserng.html#boundprocedure-nexti128impl~2">NextI128Impl</a>
+            <a class="list-group-item" href="../type/baserng.html#boundprocedure-nextu128impl~2">NextU128Impl</a>
+            <a class="list-group-item" href="../type/baserng.html#boundprocedure-nextdoubleimpl~3">NextDoubleImpl</a>
+            <a class="list-group-item" href="../type/baserng.html#boundprocedure-nextquadimpl~2">NextQuadImpl</a>
+            <a class="list-group-item" href="../type/baserng.html#boundprocedure-reinit~2">ReInit</a>
+            <a class="list-group-item" href="../type/baserng.html#boundprocedure-getname~16">GetName</a>
+            <a class="list-group-item" href="../type/baserng.html#boundprocedure-getseedsize~16">GetSeedSize</a>
+            <a class="list-group-item" href="../type/baserng.html#boundprocedure-default_nextintegerlimits~2">Default_NextIntegerLimits</a>
+            <a class="list-group-item" href="../type/baserng.html#boundprocedure-default_nextlonglimits">Default_NextLongLimits</a>
+            <a class="list-group-item" href="../type/baserng.html#boundprocedure-default_nexti128limits">Default_NextI128Limits</a>
+            <a class="list-group-item" href="../type/baserng.html#boundprocedure-default_nextu128limits">Default_NextU128Limits</a>
+            <a class="list-group-item" href="../type/baserng.html#boundprocedure-default_nextsingle~2">Default_NextSingle</a>
+            <a class="list-group-item" href="../type/baserng.html#boundprocedure-default_nextsinglelimits">Default_NextSingleLimits</a>
+            <a class="list-group-item" href="../type/baserng.html#boundprocedure-default_nextdoublelimits">Default_NextDoubleLimits</a>
+            <a class="list-group-item" href="../type/baserng.html#boundprocedure-default_nextquadlimits">Default_NextQuadLimits</a>
+            <a class="list-group-item" href="../type/baserng.html#boundprocedure-initialize~6">Initialize</a>
+            <a class="list-group-item" href="../type/baserng.html#boundprocedure-nextinteger">NextInteger</a>
+            <a class="list-group-item" href="../type/baserng.html#boundprocedure-nextlong">NextLong</a>
+            <a class="list-group-item" href="../type/baserng.html#boundprocedure-nextindex">NextIndex</a>
+            <a class="list-group-item" href="../type/baserng.html#boundprocedure-nexti128">NextI128</a>
+            <a class="list-group-item" href="../type/baserng.html#boundprocedure-nextu128">NextU128</a>
+            <a class="list-group-item" href="../type/baserng.html#boundprocedure-nextsingle">NextSingle</a>
+            <a class="list-group-item" href="../type/baserng.html#boundprocedure-nextdouble">NextDouble</a>
+            <a class="list-group-item" href="../type/baserng.html#boundprocedure-nextquad">NextQuad</a>
+            <a class="list-group-item" href="../type/baserng.html#boundprocedure-nextstring">NextString</a>
+            <a class="list-group-item" href="../type/baserng.html#boundprocedure-nextlogical">NextLogical</a>
+            <a class="list-group-item" href="../type/baserng.html#boundprocedure-nextlogicalarray">NextLogicalArray</a>
+            <a class="list-group-item" href="../type/baserng.html#boundprocedure-nextbyte">NextByte</a>
+            <a class="list-group-item" href="../type/baserng.html#boundprocedure-nextbytearray">NextByteArray</a>
+            <a class="list-group-item" href="../type/baserng.html#boundprocedure-nextshort">NextShort</a>
+            <a class="list-group-item" href="../type/baserng.html#boundprocedure-nextshortarray">NextShortArray</a>
+            <a class="list-group-item" href="../type/baserng.html#boundprocedure-nextintegerarray">NextIntegerArray</a>
+            <a class="list-group-item" href="../type/baserng.html#boundprocedure-nextlongarray">NextLongArray</a>
+            <a class="list-group-item" href="../type/baserng.html#boundprocedure-nexti128array">NextI128Array</a>
+            <a class="list-group-item" href="../type/baserng.html#boundprocedure-nextsinglearray">NextSingleArray</a>
+            <a class="list-group-item" href="../type/baserng.html#boundprocedure-nextdoublearray">NextDoubleArray</a>
+            <a class="list-group-item" href="../type/baserng.html#boundprocedure-nextquadarray">NextQuadArray</a>
+            <a class="list-group-item" href="../type/baserng.html#boundprocedure-nextgaussian">NextGaussian</a>
+            <a class="list-group-item" href="../type/baserng.html#boundprocedure-nextexponential">NextExponential</a>
+        </div>
+      </div>
+    </div>
+
+  
+  
+    <div class="card card-primary">
+      <div class="card-header text-left"><h3 class="card-title">Source Code</h3></div>
+      <div class="list-group">
+        <a class="list-group-item" href="../type/baserng.html#src">BaseRNG</a>
+      </div>
+    </div>
+
+
+  </div>
+
+    </div>
+    
+    <div class="col-md-9" id='text'>
+      <h2>type, public, ABSTRACT :: BaseRNG</h2>
+    <p>The <em>BaseRNG</em> type is an abstract PRNG type that provides an API
+ for random number generations.  Some random number generations are
+ deferred while others (with default implementation) can be overridden.</p>
+    <br>
+
+    
+
+
+      <section>
+        <h2>Type-Bound Procedures</h2>
+          <div class="row">
+              <div class="card mt-3">
+    <div class="card-header codesum">
+      <span class="anchor" id="boundprocedure-initwoseedimpl~3"></span>
+      <h3>
+          procedure(InitRNG), public, deferred ::
+  <strong>InitWOSeedImpl</strong>
+        
+      </h3>
+    </div>
+      <div class="card-body">
+        
+        <p><em>InitWOSeedImpl</em> is a binding name of the <em>InitRNG</em> deferred procedure. <br>
+ Use the <em>Initialize</em> method in place of the <em>InitWOSeedImpl</em> method to
+ initialize the PRNG without specifying any seed(s).</p>
+      </div>
+    <ul class="list-group">
+        <li class="list-group-item">
+                  <h3>
+     subroutine InitRNG(RNG)  
+<small>Prototype</small></h3>
+
+  <p>InitRNG is a deferred procedure to initialize the generator without
+ any specified seed(s).  The PRNG initialized with this procedure
+ should  produce sequences of values that are statistically independent
+ of those of any other instances in the current program execution,
+ but may, and typically does, vary across program invocations. <br></p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(<a href='../type/baserng.html'>BaseRNG</a>),
+            </td>
+<td>intent(inout)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>RNG</strong></td>
+            <td>
+                <p>random number generator</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+        </li>
+    </ul>
+  </div>
+
+          </div>
+          <div class="row">
+              <div class="card mt-3">
+    <div class="card-header codesum">
+      <span class="anchor" id="boundprocedure-nextintegerimpl~7"></span>
+      <h3>
+          procedure(NextI32), public, deferred ::
+  <strong>NextIntegerImpl</strong>
+        
+      </h3>
+    </div>
+      <div class="card-body">
+        
+        <p><em>NextIntegerImpl</em> is a binding name of the <em>NextI32</em> deferred procedure. <br>
+ Use the <em>NextInteger</em> method in place of the <em>NextIntegerImpl</em> method
+ to generate a 32-bit integer number.</p>
+      </div>
+    <ul class="list-group">
+        <li class="list-group-item">
+                  <h3>
+     function NextI32(RNG) result(RandNum)  
+<small>Prototype</small></h3>
+
+  <p>NextI32 is a deferred procedure to return a random 32-bit-integer value. <br></p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(<a href='../type/baserng.html'>BaseRNG</a>),
+            </td>
+<td>intent(inout)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>RNG</strong></td>
+            <td>
+                <p>random number generator</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+    <h4>
+    Return Value
+    <small>integer(kind=kInt32)</small>
+    </h4>
+    <p>random number generated</p>
+
+        </li>
+    </ul>
+  </div>
+
+          </div>
+          <div class="row">
+              <div class="card mt-3">
+    <div class="card-header codesum">
+      <span class="anchor" id="boundprocedure-nextlongimpl~12"></span>
+      <h3>
+          procedure(NextI64), public, deferred ::
+  <strong>NextLongImpl</strong>
+        
+      </h3>
+    </div>
+      <div class="card-body">
+        
+        <p><em>NextLongImpl</em> is a binding name of the <em>NextI64</em> deferred procedure. <br>
+ Use the <em>NextLong</em> method in place of the <em>NextLongImpl</em> method
+ to generate a 64-bit integer number.</p>
+      </div>
+    <ul class="list-group">
+        <li class="list-group-item">
+                  <h3>
+     function NextI64(RNG) result(RandNum)  
+<small>Prototype</small></h3>
+
+  <p>NextI64 is a deferred procedure to return a random 64-bit-integer value. <br></p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(<a href='../type/baserng.html'>BaseRNG</a>),
+            </td>
+<td>intent(inout)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>RNG</strong></td>
+            <td>
+                <p>random number generator</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+    <h4>
+    Return Value
+    <small>integer(kind=kInt64)</small>
+    </h4>
+    <p>random number generated</p>
+
+        </li>
+    </ul>
+  </div>
+
+          </div>
+          <div class="row">
+              <div class="card mt-3">
+    <div class="card-header codesum">
+      <span class="anchor" id="boundprocedure-nexti128impl~2"></span>
+      <h3>
+          procedure(NextI128), public, deferred ::
+  <strong>NextI128Impl</strong>
+        
+      </h3>
+    </div>
+      <div class="card-body">
+        
+        <p><em>NextI128Impl</em> is a binding name of the <em>NextI128</em> deferred procedure. <br>
+ Use the <em>NextI128</em> method in place of the <em>NextI128Impl</em> method
+ to generate a signed 128-bit integer number.</p>
+      </div>
+    <ul class="list-group">
+        <li class="list-group-item">
+                  <h3>
+     function NextI128(RNG) result(RandNum)  
+<small>Prototype</small></h3>
+
+  <p>NextI128 is a deferred procedure to return a random signed 128-bit-integer value. <br></p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(<a href='../type/baserng.html'>BaseRNG</a>),
+            </td>
+<td>intent(inout)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>RNG</strong></td>
+            <td>
+                <p>random number generator</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+    <h4>
+    Return Value
+    <small>type(SInt128)</small>
+    </h4>
+    <p>random number generated</p>
+
+        </li>
+    </ul>
+  </div>
+
+          </div>
+          <div class="row">
+              <div class="card mt-3">
+    <div class="card-header codesum">
+      <span class="anchor" id="boundprocedure-nextu128impl~2"></span>
+      <h3>
+          procedure(NextU128), public, deferred ::
+  <strong>NextU128Impl</strong>
+        
+      </h3>
+    </div>
+      <div class="card-body">
+        
+        <p><em>NextU128Impl</em> is a binding name of the <em>NextU128</em> deferred procedure. <br>
+ Use the <em>NextU128</em> method in place of the <em>NextU128Impl</em> method
+ to generate an unsigned 128-bit integer number.</p>
+      </div>
+    <ul class="list-group">
+        <li class="list-group-item">
+                  <h3>
+     function NextU128(RNG) result(RandNum)  
+<small>Prototype</small></h3>
+
+  <p>NextU128 is a deferred procedure to return a random unsigned 128-bit-integer value. <br></p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(<a href='../type/baserng.html'>BaseRNG</a>),
+            </td>
+<td>intent(inout)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>RNG</strong></td>
+            <td>
+                <p>random number generator</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+    <h4>
+    Return Value
+    <small>type(UInt128)</small>
+    </h4>
+    <p>random number generated</p>
+
+        </li>
+    </ul>
+  </div>
+
+          </div>
+          <div class="row">
+              <div class="card mt-3">
+    <div class="card-header codesum">
+      <span class="anchor" id="boundprocedure-nextdoubleimpl~3"></span>
+      <h3>
+          procedure(<a href='../interface/nextr64.html'>NextR64</a>), public, deferred ::
+  <strong>NextDoubleImpl</strong>
+        
+      </h3>
+    </div>
+      <div class="card-body">
+        
+        <p><em>NextDoubleImpl</em> is a binding name of the <em>NextR64</em> deferred procedure. <br>
+ Use the <em>NextDouble</em> method in place of the <em>NextDoubleImpl</em> method
+ to generate a 64-bit real number.</p>
+      </div>
+    <ul class="list-group">
+        <li class="list-group-item">
+                  <h3>
+     function NextR64(RNG) result(RandNum)  
+<small>Prototype</small></h3>
+
+  <p>NextR64 is a deferred procedure to return a random 64-bit-real value. <br></p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(<a href='../type/baserng.html'>BaseRNG</a>),
+            </td>
+<td>intent(inout)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>RNG</strong></td>
+            <td>
+                <p>random number generator</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+    <h4>
+    Return Value
+    <small>real(kind=kDouble)</small>
+    </h4>
+    <p>random number generated</p>
+
+        </li>
+    </ul>
+  </div>
+
+          </div>
+          <div class="row">
+              <div class="card mt-3">
+    <div class="card-header codesum">
+      <span class="anchor" id="boundprocedure-nextquadimpl~2"></span>
+      <h3>
+          procedure(NextR128), public, deferred ::
+  <strong>NextQuadImpl</strong>
+        
+      </h3>
+    </div>
+      <div class="card-body">
+        
+        <p><em>NextQuadImpl</em> is a binding name of the <em>NextR128</em> deferred procedure. <br>
+ Use the <em>NextQuad</em> method in place of the <em>NextQuadImpl</em> method
+ to generate a 128-bit real number.</p>
+      </div>
+    <ul class="list-group">
+        <li class="list-group-item">
+                  <h3>
+     function NextR128(RNG) result(RandNum)  
+<small>Prototype</small></h3>
+
+  <p>NextR128 is a deferred procedure to return a random 128-bit-real value. <br></p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(<a href='../type/baserng.html'>BaseRNG</a>),
+            </td>
+<td>intent(inout)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>RNG</strong></td>
+            <td>
+                <p>random number generator</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+    <h4>
+    Return Value
+    <small>real(kind=kQuad)</small>
+    </h4>
+    <p>random number generated</p>
+
+        </li>
+    </ul>
+  </div>
+
+          </div>
+          <div class="row">
+              <div class="card mt-3">
+    <div class="card-header codesum">
+      <span class="anchor" id="boundprocedure-reinit~2"></span>
+      <h3>
+          procedure(Reset), public, deferred ::
+  <strong>ReInit</strong>
+        
+      </h3>
+    </div>
+      <div class="card-body">
+        
+        <p><em>ReInit</em> is a binding name of the <em>Reset</em> deferred procedure. <br>
+ <strong>Type-Bound Subroutine</strong>: ReInit <br>
+ <strong>Purpose</strong>:  To reset the PRNG to its initial state. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    CALL PRNG%ReInit()</p>
+      </div>
+    <ul class="list-group">
+        <li class="list-group-item">
+                  <h3>
+     subroutine Reset(RNG)  
+<small>Prototype</small></h3>
+
+  <p>Reset is a deferred procedure to reset the generator to its initial state. <br></p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(<a href='../type/baserng.html'>BaseRNG</a>),
+            </td>
+<td>intent(inout)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>RNG</strong></td>
+            <td>
+                <p>random number generator</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+        </li>
+    </ul>
+  </div>
+
+          </div>
+          <div class="row">
+              <div class="card mt-3">
+    <div class="card-header codesum">
+      <span class="anchor" id="boundprocedure-getname~16"></span>
+      <h3>
+          procedure(RNGName), public, deferred ::
+  <strong>GetName</strong>
+        
+      </h3>
+    </div>
+      <div class="card-body">
+        
+        <p><em>GetName</em> is a binding name of the <em>RNGName</em> deferred procedure. <br>
+ <strong>Type-Bound Function</strong>: GetName <br>
+ <strong>Purpose</strong>:  To get the name of the PRNG. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    Name = PRNG%GetName()</p>
+      </div>
+    <ul class="list-group">
+        <li class="list-group-item">
+                  <h3>
+     function RNGName(RNG) result(Name)  
+<small>Prototype</small></h3>
+
+  <p>RNGName is a deferred procedure to return the name of the generator. <br></p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(<a href='../type/baserng.html'>BaseRNG</a>),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>RNG</strong></td>
+            <td>
+                <p>random number generator</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+    <h4>
+    Return Value
+    <small>character(kind=kChar, len=:), ALLOCATABLE</small>
+    </h4>
+    <p>generator's name</p>
+
+        </li>
+    </ul>
+  </div>
+
+          </div>
+          <div class="row">
+              <div class="card mt-3">
+    <div class="card-header codesum">
+      <span class="anchor" id="boundprocedure-getseedsize~16"></span>
+      <h3>
+          procedure(SeedSize), public, deferred ::
+  <strong>GetSeedSize</strong>
+        
+      </h3>
+    </div>
+      <div class="card-body">
+        
+        <p><em>GetSeedSize</em> is a binding name of the <em>SeedSize</em> deferred procedure. <br>
+ <strong>Type-Bound Function</strong>: GetSeedSize <br>
+ <strong>Purpose</strong>:  To get size of specified seed(s) needed to initialize the PRNG. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    SeedSize = PRNG%GetSeedSize()</p>
+      </div>
+    <ul class="list-group">
+        <li class="list-group-item">
+                  <h3>
+     function SeedSize(RNG) result(Size)  
+<small>Prototype</small></h3>
+
+  <p>SeedSize is a deferred procedure to return size of specified
+ seed(s) needed to initialize the generator. <br></p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(<a href='../type/baserng.html'>BaseRNG</a>),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>RNG</strong></td>
+            <td>
+                <p>random number generator</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+    <h4>
+    Return Value
+    <small>integer(kind=kInt32)</small>
+    </h4>
+    <p>size of specified seed(s)</p>
+
+        </li>
+    </ul>
+  </div>
+
+          </div>
+          <div class="row">
+              <div class="card mt-3">
+    <div class="card-header codesum">
+      <span class="anchor" id="boundprocedure-default_nextintegerlimits~2"></span>
+      <h3>
+          procedure, public ::
+  <strong>Default_NextIntegerLimits</strong>
+        
+      </h3>
+    </div>
+      <div class="card-body">
+        
+        <p>Use the <em>NextInteger</em> Method instead of this method.</p>
+      </div>
+    <ul class="list-group">
+        <li class="list-group-item">
+                  <h3>
+    private  function Default_NextIntegerLimits(RNG, Bound1, Bound2) result(RandNum)  
+</h3>
+
+  <p>To generate a random 32-bit-integer value in the specified range.
+ If <em>Bound2</em> is not specified, the value is in the range between
+ 0 and <em>Bound1</em>.  Otherwise, the value is in the range between
+ <em>Bound1</em> and <em>Bound2</em>. <br>
+ It should be noted that both <em>Bound1</em> and <em>Bound2</em> arguments can
+ have either a positive or a negative value.  The returned value
+ is always in the range between the lower limit (inclusive) and
+ the upper limit (exclusive).</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(<a href='../type/baserng.html'>BaseRNG</a>),
+            </td>
+<td>intent(inout)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>RNG</strong></td>
+            <td>
+                <p>'BaseRNG' object</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              integer(kind=kInt32),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Bound1</strong></td>
+            <td>
+                <p>a required limit</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              integer(kind=kInt32),
+            </td>
+<td>intent(in),</td>
+              <td>optional</td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Bound2</strong></td>
+            <td>
+                <p>an optional limit</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+    <h4>
+    Return Value
+    <small>integer(kind=kInt32)</small>
+    </h4>
+    <p>random number</p>
+
+        </li>
+    </ul>
+  </div>
+
+          </div>
+          <div class="row">
+              <div class="card mt-3">
+    <div class="card-header codesum">
+      <span class="anchor" id="boundprocedure-default_nextlonglimits"></span>
+      <h3>
+          procedure, public ::
+  <strong>Default_NextLongLimits</strong>
+        
+      </h3>
+    </div>
+      <div class="card-body">
+        
+        <p>Use the <em>NextLong</em> Method instead of this method.</p>
+      </div>
+    <ul class="list-group">
+        <li class="list-group-item">
+                  <h3>
+    private  function Default_NextLongLimits(RNG, Bound1, Bound2) result(RandNum)  
+</h3>
+
+  <p>To generate a random 64-bit-integer value in the specified range.
+ If <em>Bound2</em> is not specified, the value is in the range between
+ 0 and <em>Bound1</em>.  Otherwise, the value is in the range between
+ <em>Bound1</em> and <em>Bound2</em>. <br>
+ It should be noted that both <em>Bound1</em> and <em>Bound2</em> arguments can
+ have either a positive or a negative value.  The returned value
+ is always in the range between the lower limit (inclusive) and
+ the upper limit (exclusive).</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(<a href='../type/baserng.html'>BaseRNG</a>),
+            </td>
+<td>intent(inout)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>RNG</strong></td>
+            <td>
+                <p>'BaseRNG' object</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              integer(kind=kInt64),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Bound1</strong></td>
+            <td>
+                <p>a required limit</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              integer(kind=kInt64),
+            </td>
+<td>intent(in),</td>
+              <td>optional</td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Bound2</strong></td>
+            <td>
+                <p>an optional limit</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+    <h4>
+    Return Value
+    <small>integer(kind=kInt64)</small>
+    </h4>
+    <p>random number</p>
+
+        </li>
+    </ul>
+  </div>
+
+          </div>
+          <div class="row">
+              <div class="card mt-3">
+    <div class="card-header codesum">
+      <span class="anchor" id="boundprocedure-default_nexti128limits"></span>
+      <h3>
+          procedure, public ::
+  <strong>Default_NextI128Limits</strong>
+        
+      </h3>
+    </div>
+      <div class="card-body">
+        
+        <p>Use the <em>NextI128</em> Method instead of this method.</p>
+      </div>
+    <ul class="list-group">
+        <li class="list-group-item">
+                  <h3>
+    private  function Default_NextI128Limits(RNG, Bound1, Bound2) result(RandNum)  
+</h3>
+
+  <p>To generate a random signed 128-bit-integer value in the specified range.  If <em>Bound2</em>
+ is not specified, the value is in the range between 0 and <em>Bound1</em>.  Otherwise, the
+ value is in the range between <em>Bound1</em> and <em>Bound2</em>. <br>
+ It should be noted that both <em>Bound1</em> and <em>Bound2</em> arguments can have either a positive
+ or a negative value.  The returned value is always in the range between the lower limit
+ (inclusive) and the upper limit (exclusive).</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(<a href='../type/baserng.html'>BaseRNG</a>),
+            </td>
+<td>intent(inout)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>RNG</strong></td>
+            <td>
+                <p>'BaseRNG' object</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              type(SInt128),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Bound1</strong></td>
+            <td>
+                <p>a required limit</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              type(SInt128),
+            </td>
+<td>intent(in),</td>
+              <td>optional</td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Bound2</strong></td>
+            <td>
+                <p>an optional limit</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+    <h4>
+    Return Value
+    <small>type(SInt128)</small>
+    </h4>
+    <p>random number</p>
+
+        </li>
+    </ul>
+  </div>
+
+          </div>
+          <div class="row">
+              <div class="card mt-3">
+    <div class="card-header codesum">
+      <span class="anchor" id="boundprocedure-default_nextu128limits"></span>
+      <h3>
+          procedure, public ::
+  <strong>Default_NextU128Limits</strong>
+        
+      </h3>
+    </div>
+      <div class="card-body">
+        
+        <p>Use the <em>NextU128</em> Method instead of this method.</p>
+      </div>
+    <ul class="list-group">
+        <li class="list-group-item">
+                  <h3>
+    private  function Default_NextU128Limits(RNG, Bound1, Bound2) result(RandNum)  
+</h3>
+
+  <p>To generate a random unsigned 128-bit-integer value in the specified range.  If <em>Bound2</em>
+ is not specified, the value is in the range between 0 and <em>Bound1</em>.  Otherwise, the
+ value is in the range between <em>Bound1</em> and <em>Bound2</em>, where either one can be a lower
+ or an upper limit.  The returned value is always in the range between the lower limit
+ (inclusive) and the upper limit (exclusive).</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(<a href='../type/baserng.html'>BaseRNG</a>),
+            </td>
+<td>intent(inout)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>RNG</strong></td>
+            <td>
+                <p>'BaseRNG' object</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              type(UInt128),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Bound1</strong></td>
+            <td>
+                <p>a required limit</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              type(UInt128),
+            </td>
+<td>intent(in),</td>
+              <td>optional</td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Bound2</strong></td>
+            <td>
+                <p>an optional limit</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+    <h4>
+    Return Value
+    <small>type(UInt128)</small>
+    </h4>
+    <p>random number</p>
+
+        </li>
+    </ul>
+  </div>
+
+          </div>
+          <div class="row">
+              <div class="card mt-3">
+    <div class="card-header codesum">
+      <span class="anchor" id="boundprocedure-default_nextsingle~2"></span>
+      <h3>
+          procedure, public ::
+  <strong>Default_NextSingle</strong>
+        
+      </h3>
+    </div>
+      <div class="card-body">
+        
+        <p>Use the <em>NextSingle</em> Method instead of this method.</p>
+      </div>
+    <ul class="list-group">
+        <li class="list-group-item">
+                  <h3>
+    private  function Default_NextSingle(RNG) result(RandNum)  
+</h3>
+
+  <p>To return a random 32-bit real value between zero (inclusive)
+ and one (exclusive).  This default implementation uses the 24 high-order
+ bits from a call to the 'NextInteger' procedure.</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(<a href='../type/baserng.html'>BaseRNG</a>),
+            </td>
+<td>intent(inout)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>RNG</strong></td>
+            <td>
+                <p>'BaseRNG' object</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+    <h4>
+    Return Value
+    <small>real(kind=kSingle)</small>
+    </h4>
+    <p>random number</p>
+
+        </li>
+    </ul>
+  </div>
+
+          </div>
+          <div class="row">
+              <div class="card mt-3">
+    <div class="card-header codesum">
+      <span class="anchor" id="boundprocedure-default_nextsinglelimits"></span>
+      <h3>
+          procedure, public ::
+  <strong>Default_NextSingleLimits</strong>
+        
+      </h3>
+    </div>
+      <div class="card-body">
+        
+        <p>Use the <em>NextSingle</em> Method instead of this method.</p>
+      </div>
+    <ul class="list-group">
+        <li class="list-group-item">
+                  <h3>
+    private  function Default_NextSingleLimits(RNG, Bound1, Bound2) result(RandNum)  
+</h3>
+
+  <p>To generate a random 32-bit real value in the specified range.
+ If <em>Bound2</em> is not specified, the value is in the range between
+ zero and <em>Bound1</em>.  Otherwise, the value is in the range between
+ <em>Bound1</em> and <em>Bound2</em>. <br>
+ It should be noted that both <em>Bound1</em> and <em>Bound2</em> arguments can
+ have either a positive or a negative value.  The returned value
+ is always in the range between the lower limit (inclusive) and
+ the upper limit (exclusive).</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(<a href='../type/baserng.html'>BaseRNG</a>),
+            </td>
+<td>intent(inout)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>RNG</strong></td>
+            <td>
+                <p>'BaseRNG' object</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              real(kind=kSingle),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Bound1</strong></td>
+            <td>
+                <p>a required limit</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              real(kind=kSingle),
+            </td>
+<td>intent(in),</td>
+              <td>optional</td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Bound2</strong></td>
+            <td>
+                <p>an optional limit</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+    <h4>
+    Return Value
+    <small>real(kind=kSingle)</small>
+    </h4>
+    <p>random number</p>
+
+        </li>
+    </ul>
+  </div>
+
+          </div>
+          <div class="row">
+              <div class="card mt-3">
+    <div class="card-header codesum">
+      <span class="anchor" id="boundprocedure-default_nextdoublelimits"></span>
+      <h3>
+          procedure, public ::
+  <strong>Default_NextDoubleLimits</strong>
+        
+      </h3>
+    </div>
+      <div class="card-body">
+        
+        <p>Use the <em>NextDouble</em> Method instead of this method.</p>
+      </div>
+    <ul class="list-group">
+        <li class="list-group-item">
+                  <h3>
+    private  function Default_NextDoubleLimits(RNG, Bound1, Bound2) result(RandNum)  
+</h3>
+
+  <p>To generate a random 64-bit real value in the specified range.
+ If <em>Bound2</em> is not specified, the value is in the range between
+ zero and <em>Bound1</em>.  Otherwise, the value is in the range between
+ <em>Bound1</em> and <em>Bound2</em>. <br>
+ It should be noted that both <em>Bound1</em> and <em>Bound2</em> arguments can
+ have either a positive or a negative value.  The returned value
+ is always in the range between the lower limit (inclusive) and
+ the upper limit (exclusive).</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(<a href='../type/baserng.html'>BaseRNG</a>),
+            </td>
+<td>intent(inout)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>RNG</strong></td>
+            <td>
+                <p>'BaseRNG' object</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              real(kind=kDouble),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Bound1</strong></td>
+            <td>
+                <p>a required limit</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              real(kind=kDouble),
+            </td>
+<td>intent(in),</td>
+              <td>optional</td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Bound2</strong></td>
+            <td>
+                <p>an optional limit</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+    <h4>
+    Return Value
+    <small>real(kind=kDouble)</small>
+    </h4>
+    <p>random number</p>
+
+        </li>
+    </ul>
+  </div>
+
+          </div>
+          <div class="row">
+              <div class="card mt-3">
+    <div class="card-header codesum">
+      <span class="anchor" id="boundprocedure-default_nextquadlimits"></span>
+      <h3>
+          procedure, public ::
+  <strong>Default_NextQuadLimits</strong>
+        
+      </h3>
+    </div>
+      <div class="card-body">
+        
+        <p>Use the <em>NextQuad</em> Method instead of this method.</p>
+      </div>
+    <ul class="list-group">
+        <li class="list-group-item">
+                  <h3>
+    private  function Default_NextQuadLimits(RNG, Bound1, Bound2) result(RandNum)  
+</h3>
+
+  <p>To generate a random 128-bit real value in the specified range.
+ If <em>Bound2</em> is not specified, the value is in the range between
+ zero and <em>Bound1</em>.  Otherwise, the value is in the range between
+ <em>Bound1</em> and <em>Bound2</em>. <br>
+ It should be noted that both <em>Bound1</em> and <em>Bound2</em> arguments can
+ have either a positive or a negative value.  The returned value
+ is always in the range between the lower limit (inclusive) and
+ the upper limit (exclusive).</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(<a href='../type/baserng.html'>BaseRNG</a>),
+            </td>
+<td>intent(inout)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>RNG</strong></td>
+            <td>
+                <p>'BaseRNG' object</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              real(kind=kQuad),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Bound1</strong></td>
+            <td>
+                <p>a required limit</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              real(kind=kQuad),
+            </td>
+<td>intent(in),</td>
+              <td>optional</td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Bound2</strong></td>
+            <td>
+                <p>an optional limit</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+    <h4>
+    Return Value
+    <small>real(kind=kQuad)</small>
+    </h4>
+    <p>random number</p>
+
+        </li>
+    </ul>
+  </div>
+
+          </div>
+          <div class="row">
+              <div class="card mt-3">
+    <div class="card-header codesum">
+      <span class="anchor" id="boundprocedure-initialize~6"></span>
+      <h3>
+          generic, public ::
+  <strong>Initialize</strong> => <a href='../type/baserng.html#boundprocedure-initwoseedimpl~3'>InitWOSeedImpl</a>
+        
+      </h3>
+    </div>
+      <div class="card-body">
+        
+        <p><strong>Type-Bound Function</strong>: Initialize <br>
+ <strong>Purpose</strong>:  To initialize the pseudo-random number generator. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    CALL RNG%Initialize()</p>
+      </div>
+    <ul class="list-group">
+        <li class="list-group-item">
+                    <h3>
+     subroutine InitRNG(RNG)  
+<small>Prototype</small></h3>
+
+  <p>InitRNG is a deferred procedure to initialize the generator without
+ any specified seed(s).  The PRNG initialized with this procedure
+ should  produce sequences of values that are statistically independent
+ of those of any other instances in the current program execution,
+ but may, and typically does, vary across program invocations. <br></p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(<a href='../type/baserng.html'>BaseRNG</a>),
+            </td>
+<td>intent(inout)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>RNG</strong></td>
+            <td>
+                <p>random number generator</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+        </li>
+    </ul>
+  </div>
+
+          </div>
+          <div class="row">
+              <div class="card mt-3">
+    <div class="card-header codesum">
+      <span class="anchor" id="boundprocedure-nextinteger"></span>
+      <h3>
+          generic, public ::
+  <strong>NextInteger</strong> => <a href='../type/longrng.html#boundprocedure-nextintegerimpl~20'>NextIntegerImpl</a>, <a href='../type/baserng.html#boundprocedure-default_nextintegerlimits~2'>Default_NextIntegerLimits</a>
+        
+      </h3>
+    </div>
+      <div class="card-body">
+        
+        <p><strong>Type-Bound Function</strong>: NextInteger  <br>
+ <strong>Purpose</strong>:  To return a 32-bit integer random number. <br>
+ <strong>Usage</strong>: <br>
+          ! any random value <br>
+  ---&gt;    I32Val = RNG%NextInteger() <br>
+          ! random value between 0 and Limit1 <br>
+  ---&gt;    I32Val = RNG%NextInteger(Limit1) <br>
+          ! random value between Limit1 and Limit2 <br>
+  ---&gt;    I32Val = RNG%NextInteger(Limit1, Limit2) <br>
+ <strong>Note</strong>: Values of specified limits can either be positive or negative.</p>
+      </div>
+    <ul class="list-group">
+        <li class="list-group-item">
+                  <h3>
+    private  function Default_NextInteger(RNG) result(RandNum)  
+</h3>
+
+  <p>To return a random 32-bit-integer value.  This default implementation
+ uses the 32 high-order bits from a call to the 'NextLong' procedure.</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(<a href='../type/longrng.html'>LongRNG</a>),
+            </td>
+<td>intent(inout)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>RNG</strong></td>
+            <td>
+                <p>'LongRNG' object</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+    <h4>
+    Return Value
+    <small>integer(kind=kInt32)</small>
+    </h4>
+    <p>random number</p>
+
+        </li>
+        <li class="list-group-item">
+                  <h3>
+    private  function Default_NextIntegerLimits(RNG, Bound1, Bound2) result(RandNum)  
+</h3>
+
+  <p>To generate a random 32-bit-integer value in the specified range.
+ If <em>Bound2</em> is not specified, the value is in the range between
+ 0 and <em>Bound1</em>.  Otherwise, the value is in the range between
+ <em>Bound1</em> and <em>Bound2</em>. <br>
+ It should be noted that both <em>Bound1</em> and <em>Bound2</em> arguments can
+ have either a positive or a negative value.  The returned value
+ is always in the range between the lower limit (inclusive) and
+ the upper limit (exclusive).</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(<a href='../type/baserng.html'>BaseRNG</a>),
+            </td>
+<td>intent(inout)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>RNG</strong></td>
+            <td>
+                <p>'BaseRNG' object</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              integer(kind=kInt32),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Bound1</strong></td>
+            <td>
+                <p>a required limit</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              integer(kind=kInt32),
+            </td>
+<td>intent(in),</td>
+              <td>optional</td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Bound2</strong></td>
+            <td>
+                <p>an optional limit</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+    <h4>
+    Return Value
+    <small>integer(kind=kInt32)</small>
+    </h4>
+    <p>random number</p>
+
+        </li>
+    </ul>
+  </div>
+
+          </div>
+          <div class="row">
+              <div class="card mt-3">
+    <div class="card-header codesum">
+      <span class="anchor" id="boundprocedure-nextlong"></span>
+      <h3>
+          generic, public ::
+  <strong>NextLong</strong> => <a href='../type/xoshiro512rng.html#boundprocedure-nextlongimpl~16'>NextLongImpl</a>, <a href='../type/baserng.html#boundprocedure-default_nextlonglimits'>Default_NextLongLimits</a>
+        
+      </h3>
+    </div>
+      <div class="card-body">
+        
+        <p><strong>Type-Bound Function</strong>: NextLong <br>
+ <strong>Purpose</strong>:  To return a 64-bit integer random number. <br>
+ <strong>Usage</strong>: <br>
+          ! any random value <br>
+  ---&gt;    I64Val = RNG%NextLong() <br>
+          ! random value between 0 and Limit1 <br>
+  ---&gt;    I64Val = RNG%NextLong(Limit1) <br>
+          ! random value between Limit1 and Limit2 <br>
+  ---&gt;    I64Val = RNG%NextLong(Limit1, Limit2) <br>
+ <strong>Note</strong>: Values of specified limits can either be positive or negative.</p>
+      </div>
+    <ul class="list-group">
+        <li class="list-group-item">
+                  <h3>
+    private  function XoShiRo512RNG_NextLong(RNG) result(RandNum)  
+</h3>
+
+  <p>To return the 64-bit random integer value.</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(<a href='../type/xoshiro512rng.html'>XoShiRo512RNG</a>),
+            </td>
+<td>intent(inout)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>RNG</strong></td>
+            <td>
+                <p>'XoShiRo512RNG' object</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+    <h4>
+    Return Value
+    <small>integer(kind=kInt64)</small>
+    </h4>
+    <p>random number</p>
+
+        </li>
+        <li class="list-group-item">
+                  <h3>
+    private  function Default_NextLongLimits(RNG, Bound1, Bound2) result(RandNum)  
+</h3>
+
+  <p>To generate a random 64-bit-integer value in the specified range.
+ If <em>Bound2</em> is not specified, the value is in the range between
+ 0 and <em>Bound1</em>.  Otherwise, the value is in the range between
+ <em>Bound1</em> and <em>Bound2</em>. <br>
+ It should be noted that both <em>Bound1</em> and <em>Bound2</em> arguments can
+ have either a positive or a negative value.  The returned value
+ is always in the range between the lower limit (inclusive) and
+ the upper limit (exclusive).</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(<a href='../type/baserng.html'>BaseRNG</a>),
+            </td>
+<td>intent(inout)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>RNG</strong></td>
+            <td>
+                <p>'BaseRNG' object</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              integer(kind=kInt64),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Bound1</strong></td>
+            <td>
+                <p>a required limit</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              integer(kind=kInt64),
+            </td>
+<td>intent(in),</td>
+              <td>optional</td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Bound2</strong></td>
+            <td>
+                <p>an optional limit</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+    <h4>
+    Return Value
+    <small>integer(kind=kInt64)</small>
+    </h4>
+    <p>random number</p>
+
+        </li>
+    </ul>
+  </div>
+
+          </div>
+          <div class="row">
+              <div class="card mt-3">
+    <div class="card-header codesum">
+      <span class="anchor" id="boundprocedure-nextindex"></span>
+      <h3>
+          generic, public ::
+  <strong>NextIndex</strong> => <a href='../type/longrng.html#boundprocedure-nextintegerimpl~20'>NextIntegerImpl</a>, <a href='../type/baserng.html#boundprocedure-default_nextintegerlimits~2'>Default_NextIntegerLimits</a>
+        
+      </h3>
+    </div>
+      <div class="card-body">
+        
+        <p><strong>Type-Bound Function</strong>: NextIndex  <br>
+ <strong>Purpose</strong>:  To return an integer random number representing an index. <br>
+ <strong>Usage</strong>: <br>
+          ! any random value <br>
+  ---&gt;    Index = RNG%NextIndex() <br>
+          ! random value between 0 and Limit1 <br>
+  ---&gt;    Index = RNG%NextIndex(Limit1) <br>
+          ! random value between Limit1 and Limit2 <br>
+  ---&gt;    Index = RNG%NextIndex(Limit1, Limit2) <br>
+ <strong>Note</strong>: The number can be either 32-bit or 64-bit integer depending on the configuration
+           set when the code is compiled.</p>
+      </div>
+    <ul class="list-group">
+        <li class="list-group-item">
+                  <h3>
+    private  function Default_NextInteger(RNG) result(RandNum)  
+</h3>
+
+  <p>To return a random 32-bit-integer value.  This default implementation
+ uses the 32 high-order bits from a call to the 'NextLong' procedure.</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(<a href='../type/longrng.html'>LongRNG</a>),
+            </td>
+<td>intent(inout)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>RNG</strong></td>
+            <td>
+                <p>'LongRNG' object</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+    <h4>
+    Return Value
+    <small>integer(kind=kInt32)</small>
+    </h4>
+    <p>random number</p>
+
+        </li>
+        <li class="list-group-item">
+                  <h3>
+    private  function Default_NextIntegerLimits(RNG, Bound1, Bound2) result(RandNum)  
+</h3>
+
+  <p>To generate a random 32-bit-integer value in the specified range.
+ If <em>Bound2</em> is not specified, the value is in the range between
+ 0 and <em>Bound1</em>.  Otherwise, the value is in the range between
+ <em>Bound1</em> and <em>Bound2</em>. <br>
+ It should be noted that both <em>Bound1</em> and <em>Bound2</em> arguments can
+ have either a positive or a negative value.  The returned value
+ is always in the range between the lower limit (inclusive) and
+ the upper limit (exclusive).</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(<a href='../type/baserng.html'>BaseRNG</a>),
+            </td>
+<td>intent(inout)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>RNG</strong></td>
+            <td>
+                <p>'BaseRNG' object</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              integer(kind=kInt32),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Bound1</strong></td>
+            <td>
+                <p>a required limit</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              integer(kind=kInt32),
+            </td>
+<td>intent(in),</td>
+              <td>optional</td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Bound2</strong></td>
+            <td>
+                <p>an optional limit</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+    <h4>
+    Return Value
+    <small>integer(kind=kInt32)</small>
+    </h4>
+    <p>random number</p>
+
+        </li>
+    </ul>
+  </div>
+
+          </div>
+          <div class="row">
+              <div class="card mt-3">
+    <div class="card-header codesum">
+      <span class="anchor" id="boundprocedure-nexti128"></span>
+      <h3>
+          generic, public ::
+  <strong>NextI128</strong> => <a href='../type/longrng.html#boundprocedure-nexti128impl~3'>NextI128Impl</a>, <a href='../type/baserng.html#boundprocedure-default_nexti128limits'>Default_NextI128Limits</a>
+        
+      </h3>
+    </div>
+      <div class="card-body">
+        
+        <p><strong>Type-Bound Function</strong>: NextI128 <br>
+ <strong>Purpose</strong>:  To return a signed 128-bit integer random number. <br>
+ <strong>Usage</strong>: <br>
+          ! any random value <br>
+  ---&gt;    I128Val = RNG%NextI128() <br>
+          ! random value between 0 and Limit1 <br>
+  ---&gt;    I128Val = RNG%NextI128(Limit1) <br>
+          ! random value between Limit1 and Limit2 <br>
+  ---&gt;    I128Val = RNG%NextI128(Limit1, Limit2) <br>
+ <strong>Note</strong>: Values of specified limits can either be positive or negative.</p>
+      </div>
+    <ul class="list-group">
+        <li class="list-group-item">
+                  <h3>
+    private  function Default_NextI128(RNG) result(RandNum)  
+</h3>
+
+  <p>To return the signed 128-bit random integer value.</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(<a href='../type/longrng.html'>LongRNG</a>),
+            </td>
+<td>intent(inout)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>RNG</strong></td>
+            <td>
+                <p>'LongRNG' object</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+    <h4>
+    Return Value
+    <small>type(SInt128)</small>
+    </h4>
+    <p>random number</p>
+
+        </li>
+        <li class="list-group-item">
+                  <h3>
+    private  function Default_NextI128Limits(RNG, Bound1, Bound2) result(RandNum)  
+</h3>
+
+  <p>To generate a random signed 128-bit-integer value in the specified range.  If <em>Bound2</em>
+ is not specified, the value is in the range between 0 and <em>Bound1</em>.  Otherwise, the
+ value is in the range between <em>Bound1</em> and <em>Bound2</em>. <br>
+ It should be noted that both <em>Bound1</em> and <em>Bound2</em> arguments can have either a positive
+ or a negative value.  The returned value is always in the range between the lower limit
+ (inclusive) and the upper limit (exclusive).</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(<a href='../type/baserng.html'>BaseRNG</a>),
+            </td>
+<td>intent(inout)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>RNG</strong></td>
+            <td>
+                <p>'BaseRNG' object</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              type(SInt128),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Bound1</strong></td>
+            <td>
+                <p>a required limit</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              type(SInt128),
+            </td>
+<td>intent(in),</td>
+              <td>optional</td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Bound2</strong></td>
+            <td>
+                <p>an optional limit</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+    <h4>
+    Return Value
+    <small>type(SInt128)</small>
+    </h4>
+    <p>random number</p>
+
+        </li>
+    </ul>
+  </div>
+
+          </div>
+          <div class="row">
+              <div class="card mt-3">
+    <div class="card-header codesum">
+      <span class="anchor" id="boundprocedure-nextu128"></span>
+      <h3>
+          generic, public ::
+  <strong>NextU128</strong> => <a href='../type/longrng.html#boundprocedure-nextu128impl~3'>NextU128Impl</a>, <a href='../type/baserng.html#boundprocedure-default_nextu128limits'>Default_NextU128Limits</a>
+        
+      </h3>
+    </div>
+      <div class="card-body">
+        
+        <p><strong>Type-Bound Function</strong>: NextU128 <br>
+ <strong>Purpose</strong>:  To return an unsigned 128-bit integer random number. <br>
+ <strong>Usage</strong>: <br>
+          ! any random value <br>
+  ---&gt;    U128Val = RNG%NextU128() <br>
+          ! random value between 0 and Limit1 <br>
+  ---&gt;    U128Val = RNG%NextU128(Limit1) <br>
+          ! random value between Limit1 and Limit2 <br>
+  ---&gt;    U128Val = RNG%NextU128(Limit1, Limit2) <br>
+ <strong>Note</strong>: Values of specified limits can either be positive or negative.</p>
+      </div>
+    <ul class="list-group">
+        <li class="list-group-item">
+                  <h3>
+    private  function Default_NextU128(RNG) result(RandNum)  
+</h3>
+
+  <p>To return the unsigned 128-bit random integer value.</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(<a href='../type/longrng.html'>LongRNG</a>),
+            </td>
+<td>intent(inout)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>RNG</strong></td>
+            <td>
+                <p>'LongRNG' object</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+    <h4>
+    Return Value
+    <small>type(UInt128)</small>
+    </h4>
+    <p>random number</p>
+
+        </li>
+        <li class="list-group-item">
+                  <h3>
+    private  function Default_NextU128Limits(RNG, Bound1, Bound2) result(RandNum)  
+</h3>
+
+  <p>To generate a random unsigned 128-bit-integer value in the specified range.  If <em>Bound2</em>
+ is not specified, the value is in the range between 0 and <em>Bound1</em>.  Otherwise, the
+ value is in the range between <em>Bound1</em> and <em>Bound2</em>, where either one can be a lower
+ or an upper limit.  The returned value is always in the range between the lower limit
+ (inclusive) and the upper limit (exclusive).</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(<a href='../type/baserng.html'>BaseRNG</a>),
+            </td>
+<td>intent(inout)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>RNG</strong></td>
+            <td>
+                <p>'BaseRNG' object</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              type(UInt128),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Bound1</strong></td>
+            <td>
+                <p>a required limit</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              type(UInt128),
+            </td>
+<td>intent(in),</td>
+              <td>optional</td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Bound2</strong></td>
+            <td>
+                <p>an optional limit</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+    <h4>
+    Return Value
+    <small>type(UInt128)</small>
+    </h4>
+    <p>random number</p>
+
+        </li>
+    </ul>
+  </div>
+
+          </div>
+          <div class="row">
+              <div class="card mt-3">
+    <div class="card-header codesum">
+      <span class="anchor" id="boundprocedure-nextsingle"></span>
+      <h3>
+          generic, public ::
+  <strong>NextSingle</strong> => <a href='../type/baserng.html#boundprocedure-default_nextsingle~2'>Default_NextSingle</a>, <a href='../type/baserng.html#boundprocedure-default_nextsinglelimits'>Default_NextSingleLimits</a>
+        
+      </h3>
+    </div>
+      <div class="card-body">
+        
+        <p><strong>Type-Bound Function</strong>: NextSingle <br>
+ <strong>Purpose</strong>:  To return a 32-bit real random number. <br>
+ <strong>Usage</strong>: <br>
+          ! random value between 0.0 (inclusive) and 1.0 (exclusive) <br>
+  ---&gt;    R32Val = RNG%NextSingle() <br>
+          ! random value between 0.0 and Limit1 <br>
+  ---&gt;    R32Val = RNG%NextSingle(Limit1) <br>
+          ! random value between Limit1 and Limit2 <br>
+  ---&gt;    R32Val = RNG%NextSingle(Limit1, Limit2) <br>
+ <strong>Note</strong>: Values of specified limits can either be positive or negative.</p>
+      </div>
+    <ul class="list-group">
+        <li class="list-group-item">
+                  <h3>
+    private  function Default_NextSingle(RNG) result(RandNum)  
+</h3>
+
+  <p>To return a random 32-bit real value between zero (inclusive)
+ and one (exclusive).  This default implementation uses the 24 high-order
+ bits from a call to the 'NextInteger' procedure.</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(<a href='../type/baserng.html'>BaseRNG</a>),
+            </td>
+<td>intent(inout)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>RNG</strong></td>
+            <td>
+                <p>'BaseRNG' object</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+    <h4>
+    Return Value
+    <small>real(kind=kSingle)</small>
+    </h4>
+    <p>random number</p>
+
+        </li>
+        <li class="list-group-item">
+                  <h3>
+    private  function Default_NextSingleLimits(RNG, Bound1, Bound2) result(RandNum)  
+</h3>
+
+  <p>To generate a random 32-bit real value in the specified range.
+ If <em>Bound2</em> is not specified, the value is in the range between
+ zero and <em>Bound1</em>.  Otherwise, the value is in the range between
+ <em>Bound1</em> and <em>Bound2</em>. <br>
+ It should be noted that both <em>Bound1</em> and <em>Bound2</em> arguments can
+ have either a positive or a negative value.  The returned value
+ is always in the range between the lower limit (inclusive) and
+ the upper limit (exclusive).</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(<a href='../type/baserng.html'>BaseRNG</a>),
+            </td>
+<td>intent(inout)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>RNG</strong></td>
+            <td>
+                <p>'BaseRNG' object</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              real(kind=kSingle),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Bound1</strong></td>
+            <td>
+                <p>a required limit</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              real(kind=kSingle),
+            </td>
+<td>intent(in),</td>
+              <td>optional</td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Bound2</strong></td>
+            <td>
+                <p>an optional limit</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+    <h4>
+    Return Value
+    <small>real(kind=kSingle)</small>
+    </h4>
+    <p>random number</p>
+
+        </li>
+    </ul>
+  </div>
+
+          </div>
+          <div class="row">
+              <div class="card mt-3">
+    <div class="card-header codesum">
+      <span class="anchor" id="boundprocedure-nextdouble"></span>
+      <h3>
+          generic, public ::
+  <strong>NextDouble</strong> => <a href='../type/longrng.html#boundprocedure-nextdoubleimpl~7'>NextDoubleImpl</a>, <a href='../type/baserng.html#boundprocedure-default_nextdoublelimits'>Default_NextDoubleLimits</a>
+        
+      </h3>
+    </div>
+      <div class="card-body">
+        
+        <p><strong>Type-Bound Function</strong>: NextDouble <br>
+ <strong>Purpose</strong>:  To return a 64-bit real random number. <br>
+ <strong>Usage</strong>: <br>
+          ! random value between 0.0 (inclusive) and 1.0 (exclusive) <br>
+  ---&gt;    R64Val = RNG%NextDouble() <br>
+          ! random value between 0.0 and Limit1 <br>
+  ---&gt;    R64Val = RNG%NextDouble(Limit1) <br>
+          ! random value between Limit1 and Limit2 <br>
+  ---&gt;    R64Val = RNG%NextDouble(Limit1, Limit2) <br>
+ <strong>Note</strong>: Values of specified limits can either be positive or negative.</p>
+      </div>
+    <ul class="list-group">
+        <li class="list-group-item">
+                  <h3>
+    private  function Default_NextDouble(RNG) result(RandNum)  
+</h3>
+
+  <p>To return a random 64-bit-floating-point value between zero (inclusive)
+ and one (exclusive).  This default implementation uses the 53 high-order
+ bits from a call to the 'NextLong' procedure.</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(<a href='../type/longrng.html'>LongRNG</a>),
+            </td>
+<td>intent(inout)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>RNG</strong></td>
+            <td>
+                <p>'LongRNG' object</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+    <h4>
+    Return Value
+    <small>real(kind=kDouble)</small>
+    </h4>
+    <p>random number</p>
+
+        </li>
+        <li class="list-group-item">
+                  <h3>
+    private  function Default_NextDoubleLimits(RNG, Bound1, Bound2) result(RandNum)  
+</h3>
+
+  <p>To generate a random 64-bit real value in the specified range.
+ If <em>Bound2</em> is not specified, the value is in the range between
+ zero and <em>Bound1</em>.  Otherwise, the value is in the range between
+ <em>Bound1</em> and <em>Bound2</em>. <br>
+ It should be noted that both <em>Bound1</em> and <em>Bound2</em> arguments can
+ have either a positive or a negative value.  The returned value
+ is always in the range between the lower limit (inclusive) and
+ the upper limit (exclusive).</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(<a href='../type/baserng.html'>BaseRNG</a>),
+            </td>
+<td>intent(inout)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>RNG</strong></td>
+            <td>
+                <p>'BaseRNG' object</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              real(kind=kDouble),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Bound1</strong></td>
+            <td>
+                <p>a required limit</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              real(kind=kDouble),
+            </td>
+<td>intent(in),</td>
+              <td>optional</td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Bound2</strong></td>
+            <td>
+                <p>an optional limit</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+    <h4>
+    Return Value
+    <small>real(kind=kDouble)</small>
+    </h4>
+    <p>random number</p>
+
+        </li>
+    </ul>
+  </div>
+
+          </div>
+          <div class="row">
+              <div class="card mt-3">
+    <div class="card-header codesum">
+      <span class="anchor" id="boundprocedure-nextquad"></span>
+      <h3>
+          generic, public ::
+  <strong>NextQuad</strong> => <a href='../type/longrng.html#boundprocedure-nextquadimpl~3'>NextQuadImpl</a>, <a href='../type/baserng.html#boundprocedure-default_nextquadlimits'>Default_NextQuadLimits</a>
+        
+      </h3>
+    </div>
+      <div class="card-body">
+        
+        <p><strong>Type-Bound Function</strong>: NextQuad <br>
+ <strong>Purpose</strong>:  To return a 128-bit real random number. <br>
+ <strong>Usage</strong>: <br>
+          ! random value between 0.0 (inclusive) and 1.0 (exclusive) <br>
+  ---&gt;    R128Val = RNG%NextQuad() <br>
+          ! random value between 0.0 and Limit1 <br>
+  ---&gt;    R128Val = RNG%NextQuad(Limit1) <br>
+          ! random value between Limit1 and Limit2 <br>
+  ---&gt;    R128Val = RNG%NextQuad(Limit1, Limit2) <br>
+ <strong>Note</strong>: Values of specified limits can either be positive or negative.</p>
+      </div>
+    <ul class="list-group">
+        <li class="list-group-item">
+                  <h3>
+    private  function Default_NextQuad(RNG) result(RandNum)  
+</h3>
+
+  <p>To return a random 128-bit-floating-point value between zero (inclusive)
+ and one (exclusive).</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(<a href='../type/longrng.html'>LongRNG</a>),
+            </td>
+<td>intent(inout)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>RNG</strong></td>
+            <td>
+                <p>'LongRNG' object</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+    <h4>
+    Return Value
+    <small>real(kind=kQuad)</small>
+    </h4>
+    <p>random number</p>
+
+        </li>
+        <li class="list-group-item">
+                  <h3>
+    private  function Default_NextQuadLimits(RNG, Bound1, Bound2) result(RandNum)  
+</h3>
+
+  <p>To generate a random 128-bit real value in the specified range.
+ If <em>Bound2</em> is not specified, the value is in the range between
+ zero and <em>Bound1</em>.  Otherwise, the value is in the range between
+ <em>Bound1</em> and <em>Bound2</em>. <br>
+ It should be noted that both <em>Bound1</em> and <em>Bound2</em> arguments can
+ have either a positive or a negative value.  The returned value
+ is always in the range between the lower limit (inclusive) and
+ the upper limit (exclusive).</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(<a href='../type/baserng.html'>BaseRNG</a>),
+            </td>
+<td>intent(inout)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>RNG</strong></td>
+            <td>
+                <p>'BaseRNG' object</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              real(kind=kQuad),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Bound1</strong></td>
+            <td>
+                <p>a required limit</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              real(kind=kQuad),
+            </td>
+<td>intent(in),</td>
+              <td>optional</td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Bound2</strong></td>
+            <td>
+                <p>an optional limit</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+    <h4>
+    Return Value
+    <small>real(kind=kQuad)</small>
+    </h4>
+    <p>random number</p>
+
+        </li>
+    </ul>
+  </div>
+
+          </div>
+          <div class="row">
+              <div class="card mt-3">
+    <div class="card-header codesum">
+      <span class="anchor" id="boundprocedure-nextstring"></span>
+      <h3>
+          procedure, public ::
+  <strong>NextString</strong> => Default_NextString
+        
+      </h3>
+    </div>
+      <div class="card-body">
+        
+        <p><strong>Type-Bound Function</strong>: NextString <br>
+ <strong>Purpose</strong>:  To return a random character string. <br>
+ <strong>Usage</strong>: <br>
+          ! random string with default settings <br>
+  ---&gt;    Str = RNG%NextString() <br>
+          ! random string with a specified character set <br>
+  ---&gt;    Str = RNG%NextString(AlphaOnlyCap) <br>
+          ! random string with a specified length <br>
+  ---&gt;    Str = RNG%NextString(StrLen=OutLen) <br>
+          ! random string with a specified maximum length <br>
+  ---&gt;    Str = RNG%NextString(MaxLen=MaxLen)</p>
+      </div>
+    <ul class="list-group">
+        <li class="list-group-item">
+                  <h3>
+    private  function Default_NextString(RNG, StrType, StrLen, MaxLen) result(RandStr)  
+</h3>
+
+  <p>To generate a random string (according to the specified optional
+ input if they are present; otherwise, according default settings).</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(<a href='../type/baserng.html'>BaseRNG</a>),
+            </td>
+<td>intent(inout)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>RNG</strong></td>
+            <td>
+                <p>'BaseRNG' object</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              integer(kind=kInt32),
+            </td>
+<td>intent(in),</td>
+              <td>optional</td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>StrType</strong></td>
+            <td>
+                <p>type of string (1-6)</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              integer(kind=kInt32),
+            </td>
+<td>intent(in),</td>
+              <td>optional</td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>StrLen</strong></td>
+            <td>
+                <p>length of output string</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              integer(kind=kInt32),
+            </td>
+<td>intent(in),</td>
+              <td>optional</td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>MaxLen</strong></td>
+            <td>
+                <p>maximum length of output string; if StrLen present, this parameter is ignored</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+    <h4>
+    Return Value
+    <small>character(kind=kChar, len=:), ALLOCATABLE</small>
+    </h4>
+    <p>random string</p>
+
+        </li>
+    </ul>
+  </div>
+
+          </div>
+          <div class="row">
+              <div class="card mt-3">
+    <div class="card-header codesum">
+      <span class="anchor" id="boundprocedure-nextlogical"></span>
+      <h3>
+          procedure, public ::
+  <strong>NextLogical</strong> => Default_NextLogical
+        
+      </h3>
+    </div>
+      <div class="card-body">
+        
+        <p><strong>Type-Bound Function</strong>: NextLogical <br>
+ <strong>Purpose</strong>:  To return a logical random value. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    LogVal = RNG%NextLogical()</p>
+      </div>
+    <ul class="list-group">
+        <li class="list-group-item">
+                  <h3>
+    private  function Default_NextLogical(RNG) result(RandVal)  
+</h3>
+
+  <p>To return a random logical value.  This default implementation
+ uses the sign bit from a call to the 'NextInteger' procedure.</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(<a href='../type/baserng.html'>BaseRNG</a>),
+            </td>
+<td>intent(inout)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>RNG</strong></td>
+            <td>
+                <p>'BaseRNG' object</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+    <h4>
+    Return Value
+    <small>logical</small>
+    </h4>
+    <p>random value</p>
+
+        </li>
+    </ul>
+  </div>
+
+          </div>
+          <div class="row">
+              <div class="card mt-3">
+    <div class="card-header codesum">
+      <span class="anchor" id="boundprocedure-nextlogicalarray"></span>
+      <h3>
+          procedure, public ::
+  <strong>NextLogicalArray</strong> => Default_NextLogicalArray
+        
+      </h3>
+    </div>
+      <div class="card-body">
+        
+        <p><strong>Type-Bound Subroutine</strong>: NextLogicalArray <br>
+ <strong>Purpose</strong>:  To fill the specified array with logical random values. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    CALL RNG%NextLogicalArray(RndArr)</p>
+      </div>
+    <ul class="list-group">
+        <li class="list-group-item">
+                  <h3>
+    private  subroutine Default_NextLogicalArray(RNG, BoolArray)  
+</h3>
+
+  <p>To fill a user-supplied logical array with generated logical values
+ based on calls to NextLogical().</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(<a href='../type/baserng.html'>BaseRNG</a>),
+            </td>
+<td>intent(inout)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>RNG</strong></td>
+            <td>
+                <p>'BaseRNG' object</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              logical,
+            </td>
+<td>intent(out)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>BoolArray</strong>(:)</td>
+            <td>
+                <p>random numbers</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+        </li>
+    </ul>
+  </div>
+
+          </div>
+          <div class="row">
+              <div class="card mt-3">
+    <div class="card-header codesum">
+      <span class="anchor" id="boundprocedure-nextbyte"></span>
+      <h3>
+          procedure, public ::
+  <strong>NextByte</strong> => Default_NextByte
+        
+      </h3>
+    </div>
+      <div class="card-body">
+        
+        <p><strong>Type-Bound Function</strong>: NextByte <br>
+ <strong>Purpose</strong>:  To return a 8-bit integer random number. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    I8Val = RNG%NextByte()</p>
+      </div>
+    <ul class="list-group">
+        <li class="list-group-item">
+                  <h3>
+    private  function Default_NextByte(RNG) result(RandNum)  
+</h3>
+
+  <p>To return a random 8-bit-integer value.  This default implementation
+ uses the 8 high-order bits from a call to the 'NextInteger' procedure.</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(<a href='../type/baserng.html'>BaseRNG</a>),
+            </td>
+<td>intent(inout)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>RNG</strong></td>
+            <td>
+                <p>'BaseRNG' object</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+    <h4>
+    Return Value
+    <small>integer(kind=kInt8)</small>
+    </h4>
+    <p>random number</p>
+
+        </li>
+    </ul>
+  </div>
+
+          </div>
+          <div class="row">
+              <div class="card mt-3">
+    <div class="card-header codesum">
+      <span class="anchor" id="boundprocedure-nextbytearray"></span>
+      <h3>
+          procedure, public ::
+  <strong>NextByteArray</strong> => Default_NextByteArray
+        
+      </h3>
+    </div>
+      <div class="card-body">
+        
+        <p><strong>Type-Bound Subroutine</strong>: NextByteArray <br>
+ <strong>Purpose</strong>:  To fill the specified array with 8-bit integer random numbers. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    CALL RNG%NextByteArray(RndArr)</p>
+      </div>
+    <ul class="list-group">
+        <li class="list-group-item">
+                  <h3>
+    private  subroutine Default_NextByteArray(RNG, ByteArray)  
+</h3>
+
+  <p>To fill a user-supplied 8-bit-integer array with generated byte values
+ pseudo-randomly chosen uniformly from the range of values between
+ -128 (inclusive) and 127 (inclusive). <br>
+ This default implementation generates random bytes from repeated
+ calls to the 'NextLong' procedure.</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(<a href='../type/baserng.html'>BaseRNG</a>),
+            </td>
+<td>intent(inout)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>RNG</strong></td>
+            <td>
+                <p>'BaseRNG' object</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              integer(kind=kInt8),
+            </td>
+<td>intent(out)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>ByteArray</strong>(0:)</td>
+            <td>
+                <p>random numbers</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+        </li>
+    </ul>
+  </div>
+
+          </div>
+          <div class="row">
+              <div class="card mt-3">
+    <div class="card-header codesum">
+      <span class="anchor" id="boundprocedure-nextshort"></span>
+      <h3>
+          procedure, public ::
+  <strong>NextShort</strong> => Default_NextShort
+        
+      </h3>
+    </div>
+      <div class="card-body">
+        
+        <p><strong>Type-Bound Function</strong>: NextShort <br>
+ <strong>Purpose</strong>:  To return a 16-bit integer random number. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    I16Val = RNG%NextShort()</p>
+      </div>
+    <ul class="list-group">
+        <li class="list-group-item">
+                  <h3>
+    private  function Default_NextShort(RNG) result(RandNum)  
+</h3>
+
+  <p>To return a random 16-bit-integer value.  This default implementation
+ uses the 16 high-order bits from a call to the 'NextInteger' procedure.</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(<a href='../type/baserng.html'>BaseRNG</a>),
+            </td>
+<td>intent(inout)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>RNG</strong></td>
+            <td>
+                <p>'BaseRNG' object</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+    <h4>
+    Return Value
+    <small>integer(kind=kInt16)</small>
+    </h4>
+    <p>random number</p>
+
+        </li>
+    </ul>
+  </div>
+
+          </div>
+          <div class="row">
+              <div class="card mt-3">
+    <div class="card-header codesum">
+      <span class="anchor" id="boundprocedure-nextshortarray"></span>
+      <h3>
+          procedure, public ::
+  <strong>NextShortArray</strong> => Default_NextShortArray
+        
+      </h3>
+    </div>
+      <div class="card-body">
+        
+        <p><strong>Type-Bound Subroutine</strong>: NextShortArray <br>
+ <strong>Purpose</strong>:  To fill the specified array with 16-bit integer random numbers. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    CALL RNG%NextShortArray(RndArr)</p>
+      </div>
+    <ul class="list-group">
+        <li class="list-group-item">
+                  <h3>
+    private  subroutine Default_NextShortArray(RNG, ShortArray)  
+</h3>
+
+  <p>To fill a user-supplied 16-bit-integer array with generated short values
+ pseudo-randomly chosen uniformly from the range of values between
+ -32768 (inclusive) and 32767 (inclusive). <br>
+ This default implementation generates random shorts from repeated
+ calls to the 'NextLong' procedure.</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(<a href='../type/baserng.html'>BaseRNG</a>),
+            </td>
+<td>intent(inout)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>RNG</strong></td>
+            <td>
+                <p>'BaseRNG' object</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              integer(kind=kInt16),
+            </td>
+<td>intent(out)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>ShortArray</strong>(0:)</td>
+            <td>
+                <p>random numbers</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+        </li>
+    </ul>
+  </div>
+
+          </div>
+          <div class="row">
+              <div class="card mt-3">
+    <div class="card-header codesum">
+      <span class="anchor" id="boundprocedure-nextintegerarray"></span>
+      <h3>
+          procedure, public ::
+  <strong>NextIntegerArray</strong> => Default_NextIntegerArray
+        
+      </h3>
+    </div>
+      <div class="card-body">
+        
+        <p><strong>Type-Bound Subroutine</strong>: NextIntegerArray <br>
+ <strong>Purpose</strong>:  To fill the specified array with 32-bit integer random numbers. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    CALL RNG%NextIntegerArray(RndArr)</p>
+      </div>
+    <ul class="list-group">
+        <li class="list-group-item">
+                  <h3>
+    private  subroutine Default_NextIntegerArray(RNG, IntegerArray)  
+</h3>
+
+  <p>To fill a user-supplied 32-bit-integer array with generated integer values
+ based on calls to NextInteger().</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(<a href='../type/baserng.html'>BaseRNG</a>),
+            </td>
+<td>intent(inout)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>RNG</strong></td>
+            <td>
+                <p>'BaseRNG' object</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              integer(kind=kInt32),
+            </td>
+<td>intent(out)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>IntegerArray</strong>(:)</td>
+            <td>
+                <p>random numbers</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+        </li>
+    </ul>
+  </div>
+
+          </div>
+          <div class="row">
+              <div class="card mt-3">
+    <div class="card-header codesum">
+      <span class="anchor" id="boundprocedure-nextlongarray"></span>
+      <h3>
+          procedure, public ::
+  <strong>NextLongArray</strong> => Default_NextLongArray
+        
+      </h3>
+    </div>
+      <div class="card-body">
+        
+        <p><strong>Type-Bound Subroutine</strong>: NextLongArray <br>
+ <strong>Purpose</strong>:  To fill the specified array with 64-bit integer random numbers. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    CALL RNG%NextLongArray(RndArr)</p>
+      </div>
+    <ul class="list-group">
+        <li class="list-group-item">
+                  <h3>
+    private  subroutine Default_NextLongArray(RNG, LongArray)  
+</h3>
+
+  <p>To fill a user-supplied 64-bit-integer array with generated long values
+ based on calls to NextLong().</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(<a href='../type/baserng.html'>BaseRNG</a>),
+            </td>
+<td>intent(inout)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>RNG</strong></td>
+            <td>
+                <p>'BaseRNG' object</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              integer(kind=kInt64),
+            </td>
+<td>intent(out)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>LongArray</strong>(:)</td>
+            <td>
+                <p>random numbers</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+        </li>
+    </ul>
+  </div>
+
+          </div>
+          <div class="row">
+              <div class="card mt-3">
+    <div class="card-header codesum">
+      <span class="anchor" id="boundprocedure-nexti128array"></span>
+      <h3>
+          procedure, public ::
+  <strong>NextI128Array</strong> => Default_NextI128Array
+        
+      </h3>
+    </div>
+      <div class="card-body">
+        
+        <p><strong>Type-Bound Subroutine</strong>: NextI128Array <br>
+ <strong>Purpose</strong>:  To fill the specified array with signed 128-bit integer random numbers. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    CALL RNG%NextI128Array(RndArr)</p>
+      </div>
+    <ul class="list-group">
+        <li class="list-group-item">
+                  <h3>
+    private  subroutine Default_NextI128Array(RNG, I128Array)  
+</h3>
+
+  <p>To fill a user-supplied signed 128-bit-integer array with generated signed
+ 128-bit-integer values based on calls to NextI128().</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(<a href='../type/baserng.html'>BaseRNG</a>),
+            </td>
+<td>intent(inout)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>RNG</strong></td>
+            <td>
+                <p>'BaseRNG' object</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              type(SInt128),
+            </td>
+<td>intent(out)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>I128Array</strong>(:)</td>
+            <td>
+                <p>random numbers</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+        </li>
+    </ul>
+  </div>
+
+          </div>
+          <div class="row">
+              <div class="card mt-3">
+    <div class="card-header codesum">
+      <span class="anchor" id="boundprocedure-nextsinglearray"></span>
+      <h3>
+          procedure, public ::
+  <strong>NextSingleArray</strong> => Default_NextSingleArray
+        
+      </h3>
+    </div>
+      <div class="card-body">
+        
+        <p><strong>Type-Bound Subroutine</strong>: NextU128Array <br>
+ <strong>Purpose</strong>:  To fill the specified array with unsigned 128-bit integer random numbers. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    CALL RNG%NextU128Array(RndArr)
+       PROCEDURE   :: NextU128Array    =&gt; Default_NextU128Array
+<strong>Type-Bound Subroutine</strong>: NextSingleArray <br>
+ <strong>Purpose</strong>:  To fill the specified array with 32-bit real random numbers. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    CALL RNG%NextSingleArray(RndArr)</p>
+      </div>
+    <ul class="list-group">
+        <li class="list-group-item">
+                  <h3>
+    private  subroutine Default_NextSingleArray(RNG, SingleArray)  
+</h3>
+
+  <p>To fill a user-supplied 32-bit-floating-point array with generated
+ single values based on calls to NextSingle().</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(<a href='../type/baserng.html'>BaseRNG</a>),
+            </td>
+<td>intent(inout)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>RNG</strong></td>
+            <td>
+                <p>'BaseRNG' object</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              real(kind=kSingle),
+            </td>
+<td>intent(out)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>SingleArray</strong>(:)</td>
+            <td>
+                <p>random numbers</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+        </li>
+    </ul>
+  </div>
+
+          </div>
+          <div class="row">
+              <div class="card mt-3">
+    <div class="card-header codesum">
+      <span class="anchor" id="boundprocedure-nextdoublearray"></span>
+      <h3>
+          procedure, public ::
+  <strong>NextDoubleArray</strong> => Default_NextDoubleArray
+        
+      </h3>
+    </div>
+      <div class="card-body">
+        
+        <p><strong>Type-Bound Subroutine</strong>: NextDoubleArray <br>
+ <strong>Purpose</strong>:  To fill the specified array with 64-bit real random numbers. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    CALL RNG%NextDoubleArray(RndArr)</p>
+      </div>
+    <ul class="list-group">
+        <li class="list-group-item">
+                  <h3>
+    private  subroutine Default_NextDoubleArray(RNG, DoubleArray)  
+</h3>
+
+  <p>To fill a user-supplied 64-bit-floating-point array with generated
+ single values based on calls to NextDouble().</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(<a href='../type/baserng.html'>BaseRNG</a>),
+            </td>
+<td>intent(inout)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>RNG</strong></td>
+            <td>
+                <p>'BaseRNG' object</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              real(kind=kDouble),
+            </td>
+<td>intent(out)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>DoubleArray</strong>(:)</td>
+            <td>
+                <p>random numbers</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+        </li>
+    </ul>
+  </div>
+
+          </div>
+          <div class="row">
+              <div class="card mt-3">
+    <div class="card-header codesum">
+      <span class="anchor" id="boundprocedure-nextquadarray"></span>
+      <h3>
+          procedure, public ::
+  <strong>NextQuadArray</strong> => Default_NextQuadArray
+        
+      </h3>
+    </div>
+      <div class="card-body">
+        
+        <p><strong>Type-Bound Subroutine</strong>: NextQuadArray <br>
+ <strong>Purpose</strong>:  To fill the specified array with 128-bit real random numbers. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    CALL RNG%NextQuadArray(RndArr)</p>
+      </div>
+    <ul class="list-group">
+        <li class="list-group-item">
+                  <h3>
+    private  subroutine Default_NextQuadArray(RNG, QuadArray)  
+</h3>
+
+  <p>To fill a user-supplied 128-bit-floating-point array with generated
+ single values based on calls to NextQuad().</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(<a href='../type/baserng.html'>BaseRNG</a>),
+            </td>
+<td>intent(inout)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>RNG</strong></td>
+            <td>
+                <p>'BaseRNG' object</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              real(kind=kQuad),
+            </td>
+<td>intent(out)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>QuadArray</strong>(:)</td>
+            <td>
+                <p>random numbers</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+        </li>
+    </ul>
+  </div>
+
+          </div>
+          <div class="row">
+              <div class="card mt-3">
+    <div class="card-header codesum">
+      <span class="anchor" id="boundprocedure-nextgaussian"></span>
+      <h3>
+          procedure, public ::
+  <strong>NextGaussian</strong> => Default_NextGaussian
+        
+      </h3>
+    </div>
+      <div class="card-body">
+        
+        <p><strong>Type-Bound Function</strong>: NextGaussian <br>
+ <strong>Purpose</strong>:  To return a 64-bit real value pseudo-randomly chosen from
+               a Gaussian (normal) distribution whose mean is 0.0 and whose
+               standard deviation is 1.0. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    R64Val = RNG%NextGaussian()</p>
+      </div>
+    <ul class="list-group">
+        <li class="list-group-item">
+              <h3>interface </h3>
+                  <h3>
+    private module function Default_NextGaussian(RNG) result(RandNum)  
+</h3>
+
+  <p>To return a 64-bit floating point value pseudo-randomly chosen from a Gaussian
+ (normal) distribution whose mean is 0.0 and whose standard deviation is 1.0.</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(<a href='../type/baserng.html'>BaseRNG</a>),
+            </td>
+<td>intent(inout)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>RNG</strong></td>
+            <td>
+                <p>random number generator</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+    <h4>
+    Return Value
+    <small>real(kind=kDouble)</small>
+    </h4>
+    <p>random number generated</p>
+
+        </li>
+    </ul>
+  </div>
+
+          </div>
+          <div class="row">
+              <div class="card mt-3">
+    <div class="card-header codesum">
+      <span class="anchor" id="boundprocedure-nextexponential"></span>
+      <h3>
+          procedure, public ::
+  <strong>NextExponential</strong> => Default_NextExponential
+        
+      </h3>
+    </div>
+      <div class="card-body">
+        
+        <p><strong>Type-Bound Function</strong>: NextExponential <br>
+ <strong>Purpose</strong>:  To return a nonnegative 64-bit real value pseudo-randomly chosen
+               from a exponential distribution whose mean is 1.0. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    R64Val = RNG%NextExponential()</p>
+      </div>
+    <ul class="list-group">
+        <li class="list-group-item">
+              <h3>interface </h3>
+                  <h3>
+    private module function Default_NextExponential(RNG) result(RandNum)  
+</h3>
+
+  <p>To return a nonnegative 64-bit floating point value pseudo-randomly chosen
+ from a exponential distribution whose mean is 1.0. <br></p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(<a href='../type/baserng.html'>BaseRNG</a>),
+            </td>
+<td>intent(inout)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>RNG</strong></td>
+            <td>
+                <p>random number generator</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+    <h4>
+    Return Value
+    <small>real(kind=kDouble)</small>
+    </h4>
+    <p>random number generated</p>
+
+        </li>
+    </ul>
+  </div>
+
+          </div>
+      </section>
+
+    <section>
+    <h3><span class="anchor" id="src"></span>Source Code</h3>
+    <div class="hl codehilite"><pre><span></span><span class="w">    </span><span class="k">TYPE</span><span class="p">,</span><span class="w"> </span><span class="k">ABSTRACT</span><span class="w">  </span><span class="kd">::</span><span class="w"> </span><span class="n">BaseRNG</span>
+<span class="w">    </span><span class="k">CONTAINS</span>
+<span class="w">        </span><span class="c">! ---------------------------------------------------------------------</span>
+<span class="w">        </span><span class="c">! -----                     Deferred Procedures                   -----</span>
+<span class="w">        </span><span class="c">! ---------------------------------------------------------------------</span>
+<span class="w">        </span><span class="c">!&gt; *InitWOSeedImpl* is a binding name of the *InitRNG* deferred procedure. &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  Use the *Initialize* method in place of the *InitWOSeedImpl* method to</span>
+<span class="w">        </span><span class="c">!  initialize the PRNG without specifying any seed(s).</span>
+<span class="w">        </span><span class="k">PROCEDURE</span><span class="p">(</span><span class="n">InitRNG</span><span class="p">),</span><span class="w">  </span><span class="k">DEFERRED</span><span class="w">   </span><span class="kd">::</span><span class="w"> </span><span class="n">InitWOSeedImpl</span>
+<span class="w">        </span><span class="c">!&gt; *NextIntegerImpl* is a binding name of the *NextI32* deferred procedure. &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  Use the *NextInteger* method in place of the *NextIntegerImpl* method</span>
+<span class="w">        </span><span class="c">!  to generate a 32-bit integer number.</span>
+<span class="w">        </span><span class="k">PROCEDURE</span><span class="p">(</span><span class="n">NextI32</span><span class="p">),</span><span class="w">  </span><span class="k">DEFERRED</span><span class="w">   </span><span class="kd">::</span><span class="w"> </span><span class="n">NextIntegerImpl</span>
+<span class="w">        </span><span class="c">!&gt; *NextLongImpl* is a binding name of the *NextI64* deferred procedure. &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  Use the *NextLong* method in place of the *NextLongImpl* method</span>
+<span class="w">        </span><span class="c">!  to generate a 64-bit integer number.</span>
+<span class="w">        </span><span class="k">PROCEDURE</span><span class="p">(</span><span class="n">NextI64</span><span class="p">),</span><span class="w">  </span><span class="k">DEFERRED</span><span class="w">   </span><span class="kd">::</span><span class="w"> </span><span class="n">NextLongImpl</span>
+<span class="w">        </span><span class="c">!&gt; *NextI128Impl* is a binding name of the *NextI128* deferred procedure. &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  Use the *NextI128* method in place of the *NextI128Impl* method</span>
+<span class="w">        </span><span class="c">!  to generate a signed 128-bit integer number.</span>
+<span class="w">        </span><span class="k">PROCEDURE</span><span class="p">(</span><span class="n">NextI128</span><span class="p">),</span><span class="w"> </span><span class="k">DEFERRED</span><span class="w">   </span><span class="kd">::</span><span class="w"> </span><span class="n">NextI128Impl</span>
+<span class="w">        </span><span class="c">!&gt; *NextU128Impl* is a binding name of the *NextU128* deferred procedure. &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  Use the *NextU128* method in place of the *NextU128Impl* method</span>
+<span class="w">        </span><span class="c">!  to generate an unsigned 128-bit integer number.</span>
+<span class="w">        </span><span class="k">PROCEDURE</span><span class="p">(</span><span class="n">NextU128</span><span class="p">),</span><span class="w"> </span><span class="k">DEFERRED</span><span class="w">   </span><span class="kd">::</span><span class="w"> </span><span class="n">NextU128Impl</span>
+<span class="w">        </span><span class="c">!&gt; *NextDoubleImpl* is a binding name of the *NextR64* deferred procedure. &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  Use the *NextDouble* method in place of the *NextDoubleImpl* method</span>
+<span class="w">        </span><span class="c">!  to generate a 64-bit real number.</span>
+<span class="w">        </span><span class="k">PROCEDURE</span><span class="p">(</span><span class="n">NextR64</span><span class="p">),</span><span class="w">  </span><span class="k">DEFERRED</span><span class="w">   </span><span class="kd">::</span><span class="w"> </span><span class="n">NextDoubleImpl</span>
+<span class="w">        </span><span class="c">!&gt; *NextQuadImpl* is a binding name of the *NextR128* deferred procedure. &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  Use the *NextQuad* method in place of the *NextQuadImpl* method</span>
+<span class="w">        </span><span class="c">!  to generate a 128-bit real number.</span>
+<span class="w">        </span><span class="k">PROCEDURE</span><span class="p">(</span><span class="n">NextR128</span><span class="p">),</span><span class="w"> </span><span class="k">DEFERRED</span><span class="w">   </span><span class="kd">::</span><span class="w"> </span><span class="n">NextQuadImpl</span>
+<span class="w">        </span><span class="c">!&gt; *ReInit* is a binding name of the *Reset* deferred procedure. &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Type-Bound Subroutine**: ReInit &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Purpose**:  To reset the PRNG to its initial state. &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Usage**: &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!   ---&gt;    CALL PRNG%ReInit()</span>
+<span class="w">        </span><span class="k">PROCEDURE</span><span class="p">(</span><span class="n">Reset</span><span class="p">),</span><span class="w">    </span><span class="k">DEFERRED</span><span class="w">   </span><span class="kd">::</span><span class="w"> </span><span class="n">ReInit</span>
+<span class="w">        </span><span class="c">!&gt; *GetName* is a binding name of the *RNGName* deferred procedure. &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Type-Bound Function**: GetName &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Purpose**:  To get the name of the PRNG. &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Usage**: &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!   ---&gt;    Name = PRNG%GetName()</span>
+<span class="w">        </span><span class="k">PROCEDURE</span><span class="p">(</span><span class="n">RNGName</span><span class="p">),</span><span class="w">  </span><span class="k">DEFERRED</span><span class="w">   </span><span class="kd">::</span><span class="w"> </span><span class="n">GetName</span>
+<span class="w">        </span><span class="c">!&gt; *GetSeedSize* is a binding name of the *SeedSize* deferred procedure. &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Type-Bound Function**: GetSeedSize &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Purpose**:  To get size of specified seed(s) needed to initialize the PRNG. &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Usage**: &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!   ---&gt;    SeedSize = PRNG%GetSeedSize()</span>
+<span class="w">        </span><span class="k">PROCEDURE</span><span class="p">(</span><span class="n">SeedSize</span><span class="p">),</span><span class="w"> </span><span class="k">DEFERRED</span><span class="w">   </span><span class="kd">::</span><span class="w"> </span><span class="n">GetSeedSize</span>
+<span class="w">        </span><span class="c">! ---------------------------------------------------------------------</span>
+<span class="w">        </span><span class="c">! ----- Default-Implementation Procedures with Generic Interfaces -----</span>
+<span class="w">        </span><span class="c">! ---------------------------------------------------------------------</span>
+<span class="w">        </span><span class="c">!&gt; Use the *NextInteger* Method instead of this method.</span>
+<span class="w">        </span><span class="k">PROCEDURE</span><span class="w">   </span><span class="kd">::</span><span class="w"> </span><span class="n">Default_NextIntegerLimits</span>
+<span class="w">        </span><span class="c">!&gt; Use the *NextLong* Method instead of this method.</span>
+<span class="w">        </span><span class="k">PROCEDURE</span><span class="w">   </span><span class="kd">::</span><span class="w"> </span><span class="n">Default_NextLongLimits</span>
+<span class="w">        </span><span class="c">!&gt; Use the *NextI128* Method instead of this method.</span>
+<span class="w">        </span><span class="k">PROCEDURE</span><span class="w">   </span><span class="kd">::</span><span class="w"> </span><span class="n">Default_NextI128Limits</span>
+<span class="w">        </span><span class="c">!&gt; Use the *NextU128* Method instead of this method.</span>
+<span class="w">        </span><span class="k">PROCEDURE</span><span class="w">   </span><span class="kd">::</span><span class="w"> </span><span class="n">Default_NextU128Limits</span>
+<span class="w">        </span><span class="c">!&gt; Use the *NextSingle* Method instead of this method.</span>
+<span class="w">        </span><span class="k">PROCEDURE</span><span class="w">   </span><span class="kd">::</span><span class="w"> </span><span class="n">Default_NextSingle</span>
+<span class="w">        </span><span class="c">!&gt; Use the *NextSingle* Method instead of this method.</span>
+<span class="w">        </span><span class="k">PROCEDURE</span><span class="w">   </span><span class="kd">::</span><span class="w"> </span><span class="n">Default_NextSingleLimits</span>
+<span class="w">        </span><span class="c">!&gt; Use the *NextDouble* Method instead of this method.</span>
+<span class="w">        </span><span class="k">PROCEDURE</span><span class="w">   </span><span class="kd">::</span><span class="w"> </span><span class="n">Default_NextDoubleLimits</span>
+<span class="w">        </span><span class="c">!&gt; Use the *NextQuad* Method instead of this method.</span>
+<span class="w">        </span><span class="k">PROCEDURE</span><span class="w">   </span><span class="kd">::</span><span class="w"> </span><span class="n">Default_NextQuadLimits</span>
+<span class="w">        </span><span class="c">! ---------------------------------------------------------------------</span>
+<span class="w">        </span><span class="c">! -----                     Public Procedures                     -----</span>
+<span class="w">        </span><span class="c">! ---------------------------------------------------------------------</span>
+<span class="w">        </span><span class="c">!&gt; **Type-Bound Function**: Initialize &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Purpose**:  To initialize the pseudo-random number generator. &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Usage**: &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!   ---&gt;    CALL RNG%Initialize()</span>
+<span class="w">        </span><span class="k">GENERIC</span><span class="w">     </span><span class="kd">::</span><span class="w"> </span><span class="n">Initialize</span><span class="w">       </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">InitWOSeedImpl</span>
+<span class="w">        </span><span class="c">!&gt; **Type-Bound Function**: NextInteger  &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Purpose**:  To return a 32-bit integer random number. &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Usage**: &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!           ! any random value &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!   ---&gt;    I32Val = RNG%NextInteger() &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!           ! random value between 0 and Limit1 &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!   ---&gt;    I32Val = RNG%NextInteger(Limit1) &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!           ! random value between Limit1 and Limit2 &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!   ---&gt;    I32Val = RNG%NextInteger(Limit1, Limit2) &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Note**: Values of specified limits can either be positive or negative.</span>
+<span class="w">        </span><span class="k">GENERIC</span><span class="w">     </span><span class="kd">::</span><span class="w"> </span><span class="n">NextInteger</span><span class="w">      </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">NextIntegerImpl</span><span class="p">,</span><span class="w">          </span><span class="p">&amp;</span>
+<span class="w">                                           </span><span class="n">Default_NextIntegerLimits</span>
+<span class="w">        </span><span class="c">!&gt; **Type-Bound Function**: NextLong &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Purpose**:  To return a 64-bit integer random number. &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Usage**: &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!           ! any random value &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!   ---&gt;    I64Val = RNG%NextLong() &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!           ! random value between 0 and Limit1 &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!   ---&gt;    I64Val = RNG%NextLong(Limit1) &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!           ! random value between Limit1 and Limit2 &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!   ---&gt;    I64Val = RNG%NextLong(Limit1, Limit2) &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Note**: Values of specified limits can either be positive or negative.</span>
+<span class="w">        </span><span class="k">GENERIC</span><span class="w">     </span><span class="kd">::</span><span class="w"> </span><span class="n">NextLong</span><span class="w">         </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">NextLongImpl</span><span class="p">,</span><span class="w"> </span><span class="p">&amp;</span>
+<span class="w">                                           </span><span class="n">Default_NextLongLimits</span>
+<span class="w">        </span><span class="c">!&gt; **Type-Bound Function**: NextIndex  &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Purpose**:  To return an integer random number representing an index. &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Usage**: &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!           ! any random value &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!   ---&gt;    Index = RNG%NextIndex() &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!           ! random value between 0 and Limit1 &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!   ---&gt;    Index = RNG%NextIndex(Limit1) &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!           ! random value between Limit1 and Limit2 &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!   ---&gt;    Index = RNG%NextIndex(Limit1, Limit2) &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Note**: The number can be either 32-bit or 64-bit integer depending on the configuration</span>
+<span class="w">        </span><span class="c">!            set when the code is compiled.</span>
+<span class="cp">#ifdef Indx32Bits</span>
+<span class="w">        </span><span class="k">GENERIC</span><span class="w">     </span><span class="kd">::</span><span class="w"> </span><span class="n">NextIndex</span><span class="w">        </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">NextIntegerImpl</span><span class="p">,</span><span class="w">          </span><span class="p">&amp;</span>
+<span class="w">                                           </span><span class="n">Default_NextIntegerLimits</span>
+<span class="cp">#else</span>
+<span class="w">        </span><span class="k">GENERIC</span><span class="w">     </span><span class="kd">::</span><span class="w"> </span><span class="n">NextIndex</span><span class="w">        </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">NextLongImpl</span><span class="p">,</span><span class="w"> </span><span class="p">&amp;</span>
+<span class="w">                                           </span><span class="n">Default_NextLongLimits</span>
+<span class="cp">#endif</span>
+<span class="w">        </span><span class="c">!&gt; **Type-Bound Function**: NextI128 &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Purpose**:  To return a signed 128-bit integer random number. &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Usage**: &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!           ! any random value &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!   ---&gt;    I128Val = RNG%NextI128() &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!           ! random value between 0 and Limit1 &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!   ---&gt;    I128Val = RNG%NextI128(Limit1) &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!           ! random value between Limit1 and Limit2 &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!   ---&gt;    I128Val = RNG%NextI128(Limit1, Limit2) &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Note**: Values of specified limits can either be positive or negative.</span>
+<span class="w">        </span><span class="k">GENERIC</span><span class="w">     </span><span class="kd">::</span><span class="w"> </span><span class="n">NextI128</span><span class="w">         </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">NextI128Impl</span><span class="p">,</span><span class="w"> </span><span class="p">&amp;</span>
+<span class="w">                                           </span><span class="n">Default_NextI128Limits</span>
+<span class="w">        </span><span class="c">!&gt; **Type-Bound Function**: NextU128 &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Purpose**:  To return an unsigned 128-bit integer random number. &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Usage**: &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!           ! any random value &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!   ---&gt;    U128Val = RNG%NextU128() &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!           ! random value between 0 and Limit1 &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!   ---&gt;    U128Val = RNG%NextU128(Limit1) &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!           ! random value between Limit1 and Limit2 &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!   ---&gt;    U128Val = RNG%NextU128(Limit1, Limit2) &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Note**: Values of specified limits can either be positive or negative.</span>
+<span class="w">        </span><span class="k">GENERIC</span><span class="w">     </span><span class="kd">::</span><span class="w"> </span><span class="n">NextU128</span><span class="w">         </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">NextU128Impl</span><span class="p">,</span><span class="w"> </span><span class="p">&amp;</span>
+<span class="w">                                           </span><span class="n">Default_NextU128Limits</span>
+<span class="w">        </span><span class="c">!&gt; **Type-Bound Function**: NextSingle &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Purpose**:  To return a 32-bit real random number. &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Usage**: &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!           ! random value between 0.0 (inclusive) and 1.0 (exclusive) &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!   ---&gt;    R32Val = RNG%NextSingle() &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!           ! random value between 0.0 and Limit1 &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!   ---&gt;    R32Val = RNG%NextSingle(Limit1) &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!           ! random value between Limit1 and Limit2 &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!   ---&gt;    R32Val = RNG%NextSingle(Limit1, Limit2) &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Note**: Values of specified limits can either be positive or negative.</span>
+<span class="w">        </span><span class="k">GENERIC</span><span class="w">     </span><span class="kd">::</span><span class="w"> </span><span class="n">NextSingle</span><span class="w">       </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">Default_NextSingle</span><span class="p">,</span><span class="w">       </span><span class="p">&amp;</span>
+<span class="w">                                           </span><span class="n">Default_NextSingleLimits</span>
+<span class="w">        </span><span class="c">!&gt; **Type-Bound Function**: NextDouble &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Purpose**:  To return a 64-bit real random number. &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Usage**: &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!           ! random value between 0.0 (inclusive) and 1.0 (exclusive) &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!   ---&gt;    R64Val = RNG%NextDouble() &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!           ! random value between 0.0 and Limit1 &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!   ---&gt;    R64Val = RNG%NextDouble(Limit1) &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!           ! random value between Limit1 and Limit2 &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!   ---&gt;    R64Val = RNG%NextDouble(Limit1, Limit2) &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Note**: Values of specified limits can either be positive or negative.</span>
+<span class="w">        </span><span class="k">GENERIC</span><span class="w">     </span><span class="kd">::</span><span class="w"> </span><span class="n">NextDouble</span><span class="w">       </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">NextDoubleImpl</span><span class="p">,</span><span class="w">           </span><span class="p">&amp;</span>
+<span class="w">                                           </span><span class="n">Default_NextDoubleLimits</span>
+<span class="w">        </span><span class="c">!&gt; **Type-Bound Function**: NextQuad &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Purpose**:  To return a 128-bit real random number. &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Usage**: &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!           ! random value between 0.0 (inclusive) and 1.0 (exclusive) &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!   ---&gt;    R128Val = RNG%NextQuad() &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!           ! random value between 0.0 and Limit1 &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!   ---&gt;    R128Val = RNG%NextQuad(Limit1) &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!           ! random value between Limit1 and Limit2 &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!   ---&gt;    R128Val = RNG%NextQuad(Limit1, Limit2) &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Note**: Values of specified limits can either be positive or negative.</span>
+<span class="w">        </span><span class="k">GENERIC</span><span class="w">     </span><span class="kd">::</span><span class="w"> </span><span class="n">NextQuad</span><span class="w">         </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">NextQuadImpl</span><span class="p">,</span><span class="w">             </span><span class="p">&amp;</span>
+<span class="w">                                           </span><span class="n">Default_NextQuadLimits</span>
+<span class="w">        </span><span class="c">!&gt; **Type-Bound Function**: NextString &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Purpose**:  To return a random character string. &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Usage**: &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!           ! random string with default settings &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!   ---&gt;    Str = RNG%NextString() &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!           ! random string with a specified character set &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!   ---&gt;    Str = RNG%NextString(AlphaOnlyCap) &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!           ! random string with a specified length &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!   ---&gt;    Str = RNG%NextString(StrLen=OutLen) &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!           ! random string with a specified maximum length &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!   ---&gt;    Str = RNG%NextString(MaxLen=MaxLen)</span>
+<span class="w">        </span><span class="k">PROCEDURE</span><span class="w">   </span><span class="kd">::</span><span class="w"> </span><span class="n">NextString</span><span class="w">       </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">Default_NextString</span>
+<span class="w">        </span><span class="c">!&gt; **Type-Bound Function**: NextLogical &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Purpose**:  To return a logical random value. &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Usage**: &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!   ---&gt;    LogVal = RNG%NextLogical()</span>
+<span class="w">        </span><span class="k">PROCEDURE</span><span class="w">   </span><span class="kd">::</span><span class="w"> </span><span class="n">NextLogical</span><span class="w">      </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">Default_NextLogical</span>
+<span class="w">        </span><span class="c">!&gt; **Type-Bound Subroutine**: NextLogicalArray &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Purpose**:  To fill the specified array with logical random values. &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Usage**: &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!   ---&gt;    CALL RNG%NextLogicalArray(RndArr)</span>
+<span class="w">        </span><span class="k">PROCEDURE</span><span class="w">   </span><span class="kd">::</span><span class="w"> </span><span class="n">NextLogicalArray</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">Default_NextLogicalArray</span>
+<span class="w">        </span><span class="c">!&gt; **Type-Bound Function**: NextByte &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Purpose**:  To return a 8-bit integer random number. &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Usage**: &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!   ---&gt;    I8Val = RNG%NextByte()</span>
+<span class="w">        </span><span class="k">PROCEDURE</span><span class="w">   </span><span class="kd">::</span><span class="w"> </span><span class="n">NextByte</span><span class="w">         </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">Default_NextByte</span>
+<span class="w">        </span><span class="c">!&gt; **Type-Bound Subroutine**: NextByteArray &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Purpose**:  To fill the specified array with 8-bit integer random numbers. &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Usage**: &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!   ---&gt;    CALL RNG%NextByteArray(RndArr)</span>
+<span class="w">        </span><span class="k">PROCEDURE</span><span class="w">   </span><span class="kd">::</span><span class="w"> </span><span class="n">NextByteArray</span><span class="w">    </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">Default_NextByteArray</span>
+<span class="w">        </span><span class="c">!&gt; **Type-Bound Function**: NextShort &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Purpose**:  To return a 16-bit integer random number. &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Usage**: &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!   ---&gt;    I16Val = RNG%NextShort()</span>
+<span class="w">        </span><span class="k">PROCEDURE</span><span class="w">   </span><span class="kd">::</span><span class="w"> </span><span class="n">NextShort</span><span class="w">        </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">Default_NextShort</span>
+<span class="w">        </span><span class="c">!&gt; **Type-Bound Subroutine**: NextShortArray &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Purpose**:  To fill the specified array with 16-bit integer random numbers. &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Usage**: &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!   ---&gt;    CALL RNG%NextShortArray(RndArr)</span>
+<span class="w">        </span><span class="k">PROCEDURE</span><span class="w">   </span><span class="kd">::</span><span class="w"> </span><span class="n">NextShortArray</span><span class="w">   </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">Default_NextShortArray</span>
+<span class="w">        </span><span class="c">!&gt; **Type-Bound Subroutine**: NextIntegerArray &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Purpose**:  To fill the specified array with 32-bit integer random numbers. &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Usage**: &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!   ---&gt;    CALL RNG%NextIntegerArray(RndArr)</span>
+<span class="w">        </span><span class="k">PROCEDURE</span><span class="w">   </span><span class="kd">::</span><span class="w"> </span><span class="n">NextIntegerArray</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">Default_NextIntegerArray</span>
+<span class="w">        </span><span class="c">!&gt; **Type-Bound Subroutine**: NextLongArray &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Purpose**:  To fill the specified array with 64-bit integer random numbers. &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Usage**: &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!   ---&gt;    CALL RNG%NextLongArray(RndArr)</span>
+<span class="w">        </span><span class="k">PROCEDURE</span><span class="w">   </span><span class="kd">::</span><span class="w"> </span><span class="n">NextLongArray</span><span class="w">    </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">Default_NextLongArray</span>
+<span class="w">        </span><span class="c">!&gt; **Type-Bound Subroutine**: NextI128Array &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Purpose**:  To fill the specified array with signed 128-bit integer random numbers. &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Usage**: &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!   ---&gt;    CALL RNG%NextI128Array(RndArr)</span>
+<span class="w">        </span><span class="k">PROCEDURE</span><span class="w">   </span><span class="kd">::</span><span class="w"> </span><span class="n">NextI128Array</span><span class="w">    </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">Default_NextI128Array</span>
+<span class="w">        </span><span class="c">!&gt; **Type-Bound Subroutine**: NextU128Array &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Purpose**:  To fill the specified array with unsigned 128-bit integer random numbers. &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Usage**: &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!   ---&gt;    CALL RNG%NextU128Array(RndArr)</span>
+<span class="c">!        PROCEDURE   :: NextU128Array    =&gt; Default_NextU128Array</span>
+<span class="w">        </span><span class="c">!&gt; **Type-Bound Subroutine**: NextSingleArray &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Purpose**:  To fill the specified array with 32-bit real random numbers. &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Usage**: &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!   ---&gt;    CALL RNG%NextSingleArray(RndArr)</span>
+<span class="w">        </span><span class="k">PROCEDURE</span><span class="w">   </span><span class="kd">::</span><span class="w"> </span><span class="n">NextSingleArray</span><span class="w">  </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">Default_NextSingleArray</span>
+<span class="w">        </span><span class="c">!&gt; **Type-Bound Subroutine**: NextDoubleArray &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Purpose**:  To fill the specified array with 64-bit real random numbers. &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Usage**: &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!   ---&gt;    CALL RNG%NextDoubleArray(RndArr)</span>
+<span class="w">        </span><span class="k">PROCEDURE</span><span class="w">   </span><span class="kd">::</span><span class="w"> </span><span class="n">NextDoubleArray</span><span class="w">  </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">Default_NextDoubleArray</span>
+<span class="w">        </span><span class="c">!&gt; **Type-Bound Subroutine**: NextQuadArray &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Purpose**:  To fill the specified array with 128-bit real random numbers. &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Usage**: &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!   ---&gt;    CALL RNG%NextQuadArray(RndArr)</span>
+<span class="w">        </span><span class="k">PROCEDURE</span><span class="w">   </span><span class="kd">::</span><span class="w"> </span><span class="n">NextQuadArray</span><span class="w">    </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">Default_NextQuadArray</span>
+<span class="w">        </span><span class="c">!&gt; **Type-Bound Function**: NextGaussian &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Purpose**:  To return a 64-bit real value pseudo-randomly chosen from</span>
+<span class="w">        </span><span class="c">!                a Gaussian (normal) distribution whose mean is 0.0 and whose</span>
+<span class="w">        </span><span class="c">!                standard deviation is 1.0. &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Usage**: &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!   ---&gt;    R64Val = RNG%NextGaussian()</span>
+<span class="w">        </span><span class="k">PROCEDURE</span><span class="w">   </span><span class="kd">::</span><span class="w"> </span><span class="n">NextGaussian</span><span class="w">     </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">Default_NextGaussian</span>
+<span class="w">        </span><span class="c">!&gt; **Type-Bound Function**: NextExponential &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Purpose**:  To return a nonnegative 64-bit real value pseudo-randomly chosen</span>
+<span class="w">        </span><span class="c">!                from a exponential distribution whose mean is 1.0. &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Usage**: &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!   ---&gt;    R64Val = RNG%NextExponential()</span>
+<span class="w">        </span><span class="k">PROCEDURE</span><span class="w">   </span><span class="kd">::</span><span class="w"> </span><span class="n">NextExponential</span><span class="w">  </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">Default_NextExponential</span>
+<span class="w">        </span><span class="c">! ---------------------------------------------------------------------</span>
+<span class="w">    </span><span class="k">END TYPE </span><span class="n">BaseRNG</span>
+</pre></div>
+
+    </section>
+    
+    </div>
+  </div>
+
+      <hr>
+    </div> <!-- /container -->
+    <footer>
+      <div class="container">
+        <div class="row justify-content-between">
+          <div class="col"><p>eXPerimental Fortran Library (XpfLib) Documentation was developed by Niranama<br>&copy; 2024 
+</p>
+          </div>
+          <div class="col">
+            <p class="text-end">
+              Documentation generated by
+              <a href="https://github.com/Fortran-FOSS-Programmers/ford">FORD</a>
+            </p>
+          </div>
+        </div>
+        <br>
+      </div> <!-- /container -->
+    </footer>
+
+    <!-- Bootstrap core JavaScript -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>    
+
+    <!-- MathJax JavaScript
+             ================================================== -->
+             <!-- Placed at the end of the document so the pages load faster -->
+        <script type="text/x-mathjax-config">
+          MathJax.Hub.Config({
+          TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } },
+          jax: ['input/TeX','input/MathML','output/HTML-CSS'],
+          extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']
+          });
+        </script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+          <script src="../tipuesearch/tipuesearch_content.js"></script>
+          <script src="../tipuesearch/tipuesearch_set.js"></script>
+          <script src="../tipuesearch/tipuesearch.js"></script>
+
+  </body>
+</html>

@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta name="description" content="Experimental Fortran Package - String">
+    <meta name="author" content="Niranama" >
+    <link rel="icon" href="../favicon.png">
+
+    <title>MClass_RegexFinder &ndash; eXPerimental Fortran Library (XpfLib) Documentation</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link href="../css/pygments.css" rel="stylesheet">
+    <link href="../css/font-awesome.min.css" rel="stylesheet">
+    <link href="../css/local.css" rel="stylesheet">
+      <link  href="../tipuesearch/tipuesearch.css" rel="stylesheet">
+
+    <script src="https://code.jquery.com/jquery-3.7.0.slim.min.js" integrity="sha256-tG5mcZUtJsZvyKAxYLVXrmjKBVLd6VpVccqz/r4ypFE=" crossorigin="anonymous"></script>
+  </head>
+
+  <body>
+
+    <!-- Fixed navbar -->
+    <div class="container-fluid mb-sm-4 mb-xl-2">
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container">
+          <a class="navbar-brand" href="../index.html">eXPerimental Fortran Library (XpfLib) Documentation </a>
+          <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar"
+                  aria-expanded="false" aria-controls="navbar" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon">
+          </button>
+
+          <div id="navbar" class="navbar-collapse collapse">
+            <ul class="navbar-nav">
+                  <li class="nav-item">
+                    <a class="nav-link" href="../lists/files.html">Source Files</a>
+                  </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../lists/modules.html">Modules</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../lists/procedures.html">Procedures</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../lists/types.html">Derived Types</a>
+                </li>
+            </ul>
+              <div class="d-flex align-items-end flex-grow-1">
+                <form action="../search.html" role="search" class="ms-auto">
+                  <input type="text" class="form-control" aria-label="Search" placeholder="Search" name="q" id="tipue_search_input" autocomplete="off" required>
+                </form>
+              </div>
+          </div><!--/.nav-collapse -->
+        </div>
+      </nav>
+    </div>
+
+    <div class="container">
+  <div class="row">
+    <h1>MClass_RegexFinder
+      <small>Module</small>
+      
+    </h1>
+      <div class="container p-2 mb-4 bg-light border rounded-3">
+    <div class="row align-items-center justify-content-between" id="info-bar">
+      <div class="col">
+        <ul class="list-inline" style="margin-bottom:0px;display:inline">
+
+            <li class="list-inline-item" id="statements"><i class="fa fa-list-ol"></i>
+              <a data-bs-toggle="tooltip"
+                 data-bs-placement="bottom" data-html="true"
+                 title=" 1.0% of total for modules and submodules.">118 statements</a>
+            </li>
+
+            <li class="list-inline-item" id="source-file">
+              <i class="fa fa-code"></i>
+              <a href="../src/MClass_RegexFinder.f90"> Source File</a>
+            </li>
+        </ul>
+      </div>
+      <div class="col">
+        <nav aria-label="breadcrumb">
+          <ol class="breadcrumb justify-content-end mb-0">
+                <li class="breadcrumb-item"><a href='../sourcefile/mclass_regexfinder.f90.html'>MClass_RegexFinder.f90</a></li>
+            <li class="breadcrumb-item active" aria-current="page">MClass_RegexFinder</li>
+          </ol>
+        </nav>
+      </div>
+    </div>
+  </div>
+  <script>
+    $(function () {
+    $('[data-bs-toggle="tooltip"]').tooltip()
+    })
+  </script>
+
+  </div>
+
+  <div class="row">
+    <div class="col-md-3">
+        <div id="sidebar">
+      <h3>Contents</h3>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+      <div class="card mb-4">
+      <a data-bs-toggle="collapse" href="#types-0"
+         aria-expanded="false" aria-controls="types-0">
+         <h4 class="card-header bg-primary text-white">Derived Types</h4>
+      </a>
+      <div id="types-0" class="collapse">
+        <div class="list-group list-group-flush">
+            <a class="list-group-item" href="../module/mclass_regexfinder.html#type-regexfinder">RegexFinder</a>
+        </div>
+      </div>
+    </div>
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+
+
+  </div>
+
+    </div>
+
+    <div class="col-md-9" id='text'>
+      <p><strong>PURPOSE OF THIS MODULE</strong>: <br>
+  This module contains the <em>RegexFinder</em> type and its related helper types and routines.
+  The <em>RegexFinder</em> type is a string type that provides various efficient algorithms for
+  a <em>substring searching</em> operation.  The <em>substring searching</em> is a fundamental string
+  operation where given a <em>text</em> string of length N and a <em>pattern</em> string of length M,
+  find an occurrence of the <em>pattern</em> within the <em>text</em>.  <br>
+ <strong>REFERENCES</strong>: <br>
+  [1] <a href="https://github.com/zhztheplayer/DFA-Regex">DFA-Regex: A DFA regex engine in java. <br></p>
+<br>          <div class="card mb-4">
+      <h3 class="card-header card-title bg-light">Uses</h3>
+      <div class="card-body">
+        <ul class="list-group list-group-flush">
+            <li class="list-group-item">
+              <ul class="list-inline">
+                  <li class="list-inline-item"><a href='../module/mclass_dfautomaton.html'>MClass_DFAutomaton</a></li>
+                  <li class="list-inline-item"><a href='../../XpfBase/module/mbase_common.html'>MBase_Common</a></li>
+                  <li class="list-inline-item"><a href='../module/mclass_nfautomaton.html'>MClass_NFAutomaton</a></li>
+                  <li class="list-inline-item"><a href='../module/mclass_syntaxtree.html'>MClass_SyntaxTree</a></li>
+                  <li class="list-inline-item"><a href='../module/mclass_bitmapstate.html'>MClass_BitmapState</a></li>
+                  <li class="list-inline-item"><a href='../module/mclass_syntaxnode.html'>MClass_SyntaxNode</a></li>
+              </ul>
+            </li>
+        </ul>
+      </div>
+    </div>
+
+      
+      <br>
+
+
+
+
+
+
+        <section>
+          <h2>Derived Types</h2>
+              <div class="card">
+    <div class="card-header codesum">
+      <span class="anchor" id="type-regexfinder"></span>
+      <h3>
+        type, public&nbsp;::&nbsp;
+        <a href='../type/regexfinder.html'>RegexFinder</a>
+        
+      </h3>
+    </div>
+    <div class="card-body">
+      <p>The <em>RegexFinder</em> type is a string type that provides various efficient
+ algorithms for a <em>substring searching</em> operation.</p>
+
+
+
+
+        <h4>Type-Bound Procedures</h4>
+        <table class="table table-striped varlist">
+          <tbody>
+              <tr>
+                <td>  procedure, public ::
+  <strong><a href='../type/regexfinder.html#boundprocedure-setpattern~2'>SetPattern</a></strong> => RegexFinder_SetPattern</td>
+                <td><p><strong>Type-Bound Subroutine</strong>: SetPattern <br>
+ <strong>Purpose</strong>:  To set and compile the specified pattern. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    CALL Finder%SetPattern(Pattern) <br></p></td>
+              </tr>
+              <tr>
+                <td>  procedure, public ::
+  <strong><a href='../type/regexfinder.html#boundprocedure-ismatch'>IsMatch</a></strong> => RegexFinder_IsMatch</td>
+                <td><p><strong>Type-Bound Function</strong>: IsMatch <br>
+ <strong>Purpose</strong>:  To check whether the specified text matches the previously compiled pattern
+               (or the optionally specified pattern). <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    Flag = Finder%IsMatch(Text) <br>
+  ---&gt;    IF (.NOT.Finder%IsMatch(Text, Pattern)) DoSomething <br></p></td>
+              </tr>
+              <tr>
+                <td>  procedure, public ::
+  <strong><a href='../type/regexfinder.html#boundprocedure-findsubstring~3'>FindSubstring</a></strong> => RegexFinder_FindSubstring</td>
+                <td><p><strong>Type-Bound Function</strong>: FindSubstring <br>
+ <strong>Purpose</strong>:  To find a substring within the specified text that matches the previously
+               compiled pattern (or the optionally specified pattern).  If the 'StartPos'
+               argument is present and greater than 0 and less than the text length, the
+               search starts at the 'StartPos' position.  Otherwise, the search start at
+               the first position of the text.  The routine returns indices indicating
+               the starting and ending positions of the substring if found.  If the
+               substring is not found, both indices are set to zeros. <br>
+ <strong>Usage</strong>: <br>
+  ! find a substring within the text starting at 1 where the pattern has already been set. <br>
+  ---&gt;    Indices = Finder%FindSubstring(Text) <br>
+  ! find a substring within the text starting at StartPos. <br>
+  ---&gt;    Indices = Finder%FindSubstring(Text, StartPos=StartPos) <br>
+  ! find a substring within the text where the pattern has not yet been set. <br>
+  ---&gt;    Indices = Finder%FindSubstring(Text, Pattern=Pattern) <br>
+  ! find a substring within the text starting at StartPos where the pattern has not yet been set. <br>
+  ---&gt;    Indices = Finder%FindSubstring(Text, StartPos, Pattern) <br></p></td>
+              </tr>
+          </tbody>
+        </table>
+    </div>
+  </div>
+
+        </section>
+        <br>
+
+
+
+
+
+    </div>
+  </div>
+
+      <hr>
+    </div> <!-- /container -->
+    <footer>
+      <div class="container">
+        <div class="row justify-content-between">
+          <div class="col"><p>eXPerimental Fortran Library (XpfLib) Documentation was developed by Niranama<br>&copy; 2024 
+</p>
+          </div>
+          <div class="col">
+            <p class="text-end">
+              Documentation generated by
+              <a href="https://github.com/Fortran-FOSS-Programmers/ford">FORD</a>
+            </p>
+          </div>
+        </div>
+        <br>
+      </div> <!-- /container -->
+    </footer>
+
+    <!-- Bootstrap core JavaScript -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>    
+
+    <!-- MathJax JavaScript
+             ================================================== -->
+             <!-- Placed at the end of the document so the pages load faster -->
+        <script type="text/x-mathjax-config">
+          MathJax.Hub.Config({
+          TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } },
+          jax: ['input/TeX','input/MathML','output/HTML-CSS'],
+          extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']
+          });
+        </script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+          <script src="../tipuesearch/tipuesearch_content.js"></script>
+          <script src="../tipuesearch/tipuesearch_set.js"></script>
+          <script src="../tipuesearch/tipuesearch.js"></script>
+
+  </body>
+</html>

@@ -1,0 +1,1509 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta name="description" content="Experimental Fortran Package - Base Modules and Classes">
+    <meta name="author" content="Niranama" >
+    <link rel="icon" href="../favicon.png">
+
+    <title>MBase_IOHandlers &ndash; eXPerimental Fortran Library (XpfLib) Documentation</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link href="../css/pygments.css" rel="stylesheet">
+    <link href="../css/font-awesome.min.css" rel="stylesheet">
+    <link href="../css/local.css" rel="stylesheet">
+      <link  href="../tipuesearch/tipuesearch.css" rel="stylesheet">
+
+    <script src="https://code.jquery.com/jquery-3.7.0.slim.min.js" integrity="sha256-tG5mcZUtJsZvyKAxYLVXrmjKBVLd6VpVccqz/r4ypFE=" crossorigin="anonymous"></script>
+  </head>
+
+  <body>
+
+    <!-- Fixed navbar -->
+    <div class="container-fluid mb-sm-4 mb-xl-2">
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container">
+          <a class="navbar-brand" href="../index.html">eXPerimental Fortran Library (XpfLib) Documentation </a>
+          <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar"
+                  aria-expanded="false" aria-controls="navbar" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon">
+          </button>
+
+          <div id="navbar" class="navbar-collapse collapse">
+            <ul class="navbar-nav">
+                  <li class="nav-item">
+                    <a class="nav-link" href="../lists/files.html">Source Files</a>
+                  </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../lists/modules.html">Modules</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../lists/procedures.html">Procedures</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../lists/absint.html">Abstract Interfaces</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../lists/types.html">Derived Types</a>
+                </li>
+            </ul>
+              <div class="d-flex align-items-end flex-grow-1">
+                <form action="../search.html" role="search" class="ms-auto">
+                  <input type="text" class="form-control" aria-label="Search" placeholder="Search" name="q" id="tipue_search_input" autocomplete="off" required>
+                </form>
+              </div>
+          </div><!--/.nav-collapse -->
+        </div>
+      </nav>
+    </div>
+
+    <div class="container">
+  <div class="row">
+    <h1>MBase_IOHandlers
+      <small>Module</small>
+      
+    </h1>
+      <div class="container p-2 mb-4 bg-light border rounded-3">
+    <div class="row align-items-center justify-content-between" id="info-bar">
+      <div class="col">
+        <ul class="list-inline" style="margin-bottom:0px;display:inline">
+
+            <li class="list-inline-item" id="statements"><i class="fa fa-list-ol"></i>
+              <a data-bs-toggle="tooltip"
+                 data-bs-placement="bottom" data-html="true"
+                 title=" 1.5% of total for modules and submodules.">682 statements</a>
+            </li>
+
+            <li class="list-inline-item" id="source-file">
+              <i class="fa fa-code"></i>
+              <a href="../src/MBase_IOHandlers.f90"> Source File</a>
+            </li>
+        </ul>
+      </div>
+      <div class="col">
+        <nav aria-label="breadcrumb">
+          <ol class="breadcrumb justify-content-end mb-0">
+                <li class="breadcrumb-item"><a href='../sourcefile/mbase_iohandlers.f90.html'>MBase_IOHandlers.f90</a></li>
+            <li class="breadcrumb-item active" aria-current="page">MBase_IOHandlers</li>
+          </ol>
+        </nav>
+      </div>
+    </div>
+  </div>
+  <script>
+    $(function () {
+    $('[data-bs-toggle="tooltip"]').tooltip()
+    })
+  </script>
+
+  </div>
+
+  <div class="row">
+    <div class="col-md-3">
+        <div id="sidebar">
+      <h3>Contents</h3>
+  
+  
+  
+  
+  
+  
+  
+  
+      <div class="card mb-4">
+      <a data-bs-toggle="collapse" href="#inters-0"
+         aria-expanded="false" aria-controls="inters-0">
+         <h4 class="card-header bg-primary text-white">Interfaces</h4>
+      </a>
+      <div id="inters-0" class="collapse">
+        <div class="list-group list-group-flush">
+            <a class="list-group-item" href="../module/mbase_iohandlers.html#interface-isfileopen">IsFileOpen</a>
+            <a class="list-group-item" href="../module/mbase_iohandlers.html#interface-closefile">CloseFile</a>
+        </div>
+      </div>
+    </div>
+
+  
+  
+      <div class="card mb-4">
+      <a data-bs-toggle="collapse" href="#funcs-0"
+         aria-expanded="false" aria-controls="funcs-0">
+         <h4 class="card-header bg-primary text-white">Functions</h4>
+      </a>
+      <div id="funcs-0" class="collapse">
+        <div class="list-group list-group-flush">
+            <a class="list-group-item" href="../module/mbase_iohandlers.html#proc-openinputfile">OpenInputFile</a>
+            <a class="list-group-item" href="../module/mbase_iohandlers.html#proc-opennewoutputfile">OpenNewOutputFile</a>
+            <a class="list-group-item" href="../module/mbase_iohandlers.html#proc-openoutputfile">OpenOutputFile</a>
+            <a class="list-group-item" href="../module/mbase_iohandlers.html#proc-opennewfile">OpenNewFile</a>
+            <a class="list-group-item" href="../module/mbase_iohandlers.html#proc-openfile">OpenFile</a>
+            <a class="list-group-item" href="../module/mbase_iohandlers.html#proc-getfileiounit">GetFileIOUnit</a>
+            <a class="list-group-item" href="../module/mbase_iohandlers.html#proc-getnewiounit">GetNewIOUnit</a>
+            <a class="list-group-item" href="../module/mbase_iohandlers.html#proc-getiounits_allopenfile">GetIOUnits_AllOpenFile</a>
+            <a class="list-group-item" href="../module/mbase_iohandlers.html#proc-doesfileexist">DoesFileExist</a>
+            <a class="list-group-item" href="../module/mbase_iohandlers.html#proc-countsqfrm_lines">CountSqfrm_Lines</a>
+            <a class="list-group-item" href="../module/mbase_iohandlers.html#proc-getfilename">GetFileName</a>
+        </div>
+      </div>
+    </div>
+
+      <div class="card mb-4">
+      <a data-bs-toggle="collapse" href="#subs-0"
+         aria-expanded="false" aria-controls="subs-0">
+         <h4 class="card-header bg-primary text-white">Subroutines</h4>
+      </a>
+      <div id="subs-0" class="collapse">
+        <div class="list-group list-group-flush">
+            <a class="list-group-item" href="../module/mbase_iohandlers.html#proc-closeopenfiles">CloseOpenFiles</a>
+            <a class="list-group-item" href="../module/mbase_iohandlers.html#proc-output_message">Output_Message</a>
+            <a class="list-group-item" href="../module/mbase_iohandlers.html#proc-readsqfrm_linecharalloc">ReadSqfrm_LineCharAlloc</a>
+            <a class="list-group-item" href="../module/mbase_iohandlers.html#proc-readsqfrm_linecharstar">ReadSqfrm_LineCharStar</a>
+        </div>
+      </div>
+    </div>
+
+  
+  
+  
+  
+  
+  
+  
+
+
+  </div>
+
+    </div>
+
+    <div class="col-md-9" id='text'>
+      <p><strong>PURPOSE OF THIS MODULE</strong>: <br>
+  This module contains various routines for handling basic input/output (IO) operations.</p>
+<br>          <div class="card mb-4">
+      <h3 class="card-header card-title bg-light">Uses</h3>
+      <div class="card-body">
+        <ul class="list-group list-group-flush">
+            <li class="list-group-item">
+              <ul class="list-inline">
+                  <li class="list-inline-item"><a href='../module/mbase_sintutil.html'>MBase_SIntUtil</a></li>
+                  <li class="list-inline-item"><a href='../module/mbase_common.html'>MBase_Common</a></li>
+              </ul>
+            </li>
+        </ul>
+      </div>
+    </div>
+
+      
+      <br>
+
+
+
+
+        <section>
+          <h2>Interfaces</h2>
+              <div class="card">
+    <div class="card-header bg-light codesum">
+      <span class="anchor" id="interface-isfileopen"></span>
+      <h3>public        interface <a href='../interface/isfileopen.html'>IsFileOpen</a> 
+      </h3>
+    </div>
+      <div class="card-body">
+        <p><strong>Function Interface</strong>: IsFileOpen <br>
+ <strong>Purpose</strong>:  To check whether the specified file is open or not. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    Flag = IsFileOpen(FileIOUnit) <br>
+  ---&gt;    IF (IsFileOpen(FileName)) DoSomething</p>
+      </div>
+    <ul class="list-group">
+          <li class="list-group-item">
+                <h3>
+    private  function IsFileOpen_UnitNumber(IOUnit) result(Status)  
+
+    </h3>
+  <p>To check whether the file associated with the specified unit number is open or not</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-iounit~9"></span>
+              integer(kind=kInt32),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>IOUnit</strong></td>
+            <td>
+                <p>I/O unit number</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+    <h4>
+    Return Value
+    <small>logical</small>
+    </h4>
+    <p>status flag; true if the file is open</p>
+
+          </li>
+          <li class="list-group-item">
+                <h3>
+    private  function IsFileOpen_FileName(Name) result(Status)  
+
+    </h3>
+  <p>To check whether the file associated with the specified name is open or not</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-name~8"></span>
+              character(kind=kChar, len=*),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Name</strong></td>
+            <td>
+                <p>file name</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+    <h4>
+    Return Value
+    <small>logical</small>
+    </h4>
+    <p>status flag; true if the file is open</p>
+
+          </li>
+    </ul>
+  </div>
+
+              <div class="card">
+    <div class="card-header bg-light codesum">
+      <span class="anchor" id="interface-closefile"></span>
+      <h3>public        interface <a href='../interface/closefile.html'>CloseFile</a> 
+      </h3>
+    </div>
+      <div class="card-body">
+        <p><strong>Subroutine Interface</strong>: CloseFile <br>
+ <strong>Purpose</strong>:  To close the specified file. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    CALL CloseFile(FileIOUnit) <br>
+  ---&gt;    CALL CloseFile(FileName))</p>
+      </div>
+    <ul class="list-group">
+          <li class="list-group-item">
+                <h3>
+    private  subroutine CloseFile_Unit(IOUnit)  
+
+    </h3>
+  <p>To close a file associated with the specified unit number.</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-iounit~6"></span>
+              integer(kind=kInt32),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>IOUnit</strong></td>
+            <td>
+                <p>I/O unit number</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+          </li>
+          <li class="list-group-item">
+                <h3>
+    private  subroutine CloseFile_Name(Name)  
+
+    </h3>
+  <p>To close a file associated with the specified unit number.</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-name~6"></span>
+              character(kind=kChar, len=*),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Name</strong></td>
+            <td>
+                <p>file name</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+          </li>
+    </ul>
+  </div>
+
+        </section>
+        <br>
+
+
+
+        <section>
+          <h2>Functions</h2>
+              <div class="card">
+    <div class="card-header codesum"><span class="anchor" id="proc-openinputfile"></span><h3>public  function <a href='../proc/openinputfile.html'>OpenInputFile</a>(Name) result(IOUnit)  
+</h3></div>
+    <div class="card-body">
+          
+  <p>To open a file associated with the specified name for reading.
+ A valid (positive) unit number is return if the specified file
+ is opened successfully.  Otherwise, it is set to -1.</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-name"></span>
+              character(kind=kChar, len=*),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Name</strong></td>
+            <td>
+<p>file name</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+    <h4>
+    Return Value
+    <small>integer(kind=kInt32)</small>
+    </h4>
+    <p>unit number</p>
+
+    </div>
+  </div>
+
+              <div class="card">
+    <div class="card-header codesum"><span class="anchor" id="proc-opennewoutputfile"></span><h3>public  function <a href='../proc/opennewoutputfile.html'>OpenNewOutputFile</a>(Name, DirAcc, RecLen) result(IOUnit)  
+</h3></div>
+    <div class="card-body">
+          
+  <p>To open a new file associated with the specified name for writing.
+ A valid (positive) unit number is return if the specified file
+ is opened successfully.  Otherwise, it is set to -1.</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-name~2"></span>
+              character(kind=kChar, len=*),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Name</strong></td>
+            <td>
+<p>file name</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-diracc"></span>
+              logical,
+            </td>
+<td>intent(in),</td>
+              <td>optional</td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>DirAcc</strong></td>
+            <td>
+<p>flag indicating access mode <br>
+- true if requesting direct access mode <br>
+- false if requesting sequential access mode <br>
+- default = FalseVal <br>
+For direct access mode, the file is opened for an unformatted file. <br>
+For sequential access mode, the file is opened for a formatted file.</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-reclen"></span>
+              integer(kind=kInt32),
+            </td>
+<td>intent(in),</td>
+              <td>optional</td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>RecLen</strong></td>
+            <td>
+<p>(fixed) length of records for direct access mode. <br>
+ If DirAcc is present and true, RecLen must be specified.</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+    <h4>
+    Return Value
+    <small>integer(kind=kInt32)</small>
+    </h4>
+    <p>unit number</p>
+
+    </div>
+  </div>
+
+              <div class="card">
+    <div class="card-header codesum"><span class="anchor" id="proc-openoutputfile"></span><h3>public  function <a href='../proc/openoutputfile.html'>OpenOutputFile</a>(Name, Append, DirAcc, RecLen) result(IOUnit)  
+</h3></div>
+    <div class="card-body">
+          
+  <p>To open a file associated with the specified name for writing.
+  A valid (positive) unit number is return if the specified file
+  is opened successfully.  Otherwise, it is set to -1. <br>
+------------------------------------------------------------------------------ <br>
+<strong>Important note</strong>: <br>
+  Using this routine requires a careful consideration
+  according to the technical notes below. <br>
+------------------------------------------------------------------------------ <br>
+<strong>Technical Notes</strong>: <br>
+(1) If the specified file does not exists, a new output file will be opened and
+  the argument Append is ignored. <br>
+(2) If the specified file exists and currently is open, all optional arguments
+  are ignored and the unit number associated with it will be returned. <br>
+(3) If the specified file exists (but is not open) and Append is not present or false,
+  the existing file will be deleted and a file with the same name will be open as a
+  new output file. That is the existing one is replaced by the new one. <br>
+(3.1) However, If DirAcc is present and true but RecLen is NOT specified, the existing
+  file will be left as it is, and the unit number is set to -1. <br>
+(4) If the specified file exists (but is not open) and Append is present and true,
+  the existing file will be opened for writing where the new data are written after
+  existing data. Both DirAcc and RecLen arguments are ignored since, for an existing
+  file, existing access mode and format will be retained.</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-name~3"></span>
+              character(kind=kChar, len=*),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Name</strong></td>
+            <td>
+<p>file name</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-append"></span>
+              logical,
+            </td>
+<td>intent(in),</td>
+              <td>optional</td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Append</strong></td>
+            <td>
+<p>flag indicating the file position <br>
+- true if the file is positioned at its terminal point <br>
+- false if the file is positioned at its initial point <br>
+- default = FalseVal</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-diracc~2"></span>
+              logical,
+            </td>
+<td>intent(in),</td>
+              <td>optional</td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>DirAcc</strong></td>
+            <td>
+<p>flag indicating access mode <br>
+- true if requesting direct access mode <br>
+- false if requesting sequential access mode <br>
+- default = FalseVal <br>
+For direct access mode, the file is opened for an unformatted file. <br>
+For sequential access mode, the file is opened for a formatted file.</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-reclen~2"></span>
+              integer(kind=kInt32),
+            </td>
+<td>intent(in),</td>
+              <td>optional</td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>RecLen</strong></td>
+            <td>
+<p>(fixed) length of records for direct access mode. <br>
+ If DirAcc is present and true, RecLen must be specified.</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+    <h4>
+    Return Value
+    <small>integer(kind=kInt32)</small>
+    </h4>
+    <p>unit number</p>
+
+    </div>
+  </div>
+
+              <div class="card">
+    <div class="card-header codesum"><span class="anchor" id="proc-opennewfile"></span><h3>public  function <a href='../proc/opennewfile.html'>OpenNewFile</a>(Name, DirAcc, RecLen) result(IOUnit)  
+</h3></div>
+    <div class="card-body">
+          
+  <p>To open a new file associated with the specified name for both reading and writing.
+ A valid (positive) unit number is return if the specified file is opened successfully.
+ Otherwise, it is set to -1.</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-name~4"></span>
+              character(kind=kChar, len=*),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Name</strong></td>
+            <td>
+<p>file name</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-diracc~3"></span>
+              logical,
+            </td>
+<td>intent(in),</td>
+              <td>optional</td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>DirAcc</strong></td>
+            <td>
+<p>flag indicating access mode <br>
+- true if requesting direct access mode <br>
+- false if requesting sequential access mode <br>
+- default = FalseVal <br>
+For direct access mode, the file is opened for an unformatted file. <br>
+For sequential access mode, the file is opened for a formatted file.</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-reclen~3"></span>
+              integer(kind=kInt32),
+            </td>
+<td>intent(in),</td>
+              <td>optional</td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>RecLen</strong></td>
+            <td>
+<p>(fixed) length of records for direct access mode. <br>
+ If DirAcc is present and true, RecLen must be specified.</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+    <h4>
+    Return Value
+    <small>integer(kind=kInt32)</small>
+    </h4>
+    <p>unit number</p>
+
+    </div>
+  </div>
+
+              <div class="card">
+    <div class="card-header codesum"><span class="anchor" id="proc-openfile"></span><h3>public  function <a href='../proc/openfile.html'>OpenFile</a>(Name, Append, DirAcc, RecLen) result(IOUnit)  
+</h3></div>
+    <div class="card-body">
+          
+  <p>To open a file associated with the specified name for both reading and writing.
+  A valid (positive) unit number is return if the specified file is opened successfully.
+  Otherwise, it is set to -1. <br>
+------------------------------------------------------------------------------ <br>
+<strong>Important note</strong>: <br>
+  Using this routine requires a careful consideration
+  according to the technical notes below. <br>
+------------------------------------------------------------------------------ <br>
+<strong>Technical Notes</strong>: <br>
+(1) If the specified file does not exists, a new file will be opened and
+  the argument Append is ignored. <br>
+(2) If the specified file exists and currently is open, all optional arguments
+  are ignored and the unit number associated with it will be returned. <br>
+(3) If the specified file exists (but is not open) and Append is not present,
+  the existing file will be open with "AsIs" position.  Both DirAcc and RecLen arguments
+  are ignored since, for an existing file, existing access mode and format will be retained. <br>
+(4) If the specified file exists (but is not open) and Append is present and true,
+  the existing file will be opened with "Append" position. Both DirAcc and RecLen arguments
+  are ignored since, for an existing file, existing access mode and format will be retained. <br>
+(5) If the specified file exists (but is not open) and Append is present and false,
+  the existing file will be deleted and a file with the same name will be open as a
+  new file. That is the existing one is replaced by the new one. <br>
+(5.1) However, If DirAcc is present and true but RecLen is NOT specified, the existing
+  file will be left as it is, and the unit number is set to -1.</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-name~5"></span>
+              character(kind=kChar, len=*),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Name</strong></td>
+            <td>
+<p>file name</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-append~2"></span>
+              logical,
+            </td>
+<td>intent(in),</td>
+              <td>optional</td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Append</strong></td>
+            <td>
+<p>flag indicating the file position <br>
+- true if the file is positioned at its terminal point <br>
+- false if the file is positioned at its initial point <br>
+- default = FalseVal</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-diracc~4"></span>
+              logical,
+            </td>
+<td>intent(in),</td>
+              <td>optional</td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>DirAcc</strong></td>
+            <td>
+<p>flag indicating access mode <br>
+- true if requesting direct access mode <br>
+- false if requesting sequential access mode <br>
+- default = FalseVal <br>
+For direct access mode, the file is opened for an unformatted file. <br>
+For sequential access mode, the file is opened for a formatted file.</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-reclen~4"></span>
+              integer(kind=kInt32),
+            </td>
+<td>intent(in),</td>
+              <td>optional</td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>RecLen</strong></td>
+            <td>
+<p>(fixed) length of records for direct access mode. <br>
+ If DirAcc is present and true, RecLen must be specified.</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+    <h4>
+    Return Value
+    <small>integer(kind=kInt32)</small>
+    </h4>
+    <p>unit number</p>
+
+    </div>
+  </div>
+
+              <div class="card">
+    <div class="card-header codesum"><span class="anchor" id="proc-getfileiounit"></span><h3>public  function <a href='../proc/getfileiounit.html'>GetFileIOUnit</a>(Name) result(IOUnit)  
+</h3></div>
+    <div class="card-body">
+          
+  <p>To return a unit number of the file associated with the specified name.</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-name~7"></span>
+              character(kind=kChar, len=*),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Name</strong></td>
+            <td>
+<p>file name</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+    <h4>
+    Return Value
+    <small>integer(kind=kInt32)</small>
+    </h4>
+    <p>unit number</p>
+
+    </div>
+  </div>
+
+              <div class="card">
+    <div class="card-header codesum"><span class="anchor" id="proc-getnewiounit"></span><h3>public  function <a href='../proc/getnewiounit.html'>GetNewIOUnit</a>() result(IOUnit)  
+</h3></div>
+    <div class="card-body">
+          
+  <p>To return a input/output unit number that can exist and is not connected.</p>
+
+  <h4>Arguments</h4>
+    <em>None</em>
+    <h4>
+    Return Value
+    <small>integer(kind=kInt32)</small>
+    </h4>
+    <p>I/O unit number</p>
+
+    </div>
+  </div>
+
+              <div class="card">
+    <div class="card-header codesum"><span class="anchor" id="proc-getiounits_allopenfile"></span><h3>public  function <a href='../proc/getiounits_allopenfile.html'>GetIOUnits_AllOpenFile</a>(IOUnits) result(nUnits)  
+</h3></div>
+    <div class="card-body">
+          
+  <p>To return a number of currently opened files and their associated unit numbers.</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-iounits"></span>
+              integer(kind=kInt32),
+            </td>
+<td>intent(out),</td>
+              <td></td>            <td>
+              ALLOCATABLE
+            </td>
+            <td>::</td>
+            <td><strong>IOUnits</strong>(:)</td>
+            <td>
+<p>unit numbers of opened files</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+    <h4>
+    Return Value
+    <small>integer(kind=kInt32)</small>
+    </h4>
+    <p>number of opened files</p>
+
+    </div>
+  </div>
+
+              <div class="card">
+    <div class="card-header codesum"><span class="anchor" id="proc-doesfileexist"></span><h3>public  function <a href='../proc/doesfileexist.html'>DoesFileExist</a>(Name) result(Status)  
+</h3></div>
+    <div class="card-body">
+          
+  <p>To check whether the file associated with the specified name exists or not</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-name~9"></span>
+              character(kind=kChar, len=*),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Name</strong></td>
+            <td>
+<p>file name</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+    <h4>
+    Return Value
+    <small>logical</small>
+    </h4>
+    <p>status flag; true if the file exists</p>
+
+    </div>
+  </div>
+
+              <div class="card">
+    <div class="card-header codesum"><span class="anchor" id="proc-countsqfrm_lines"></span><h3>public  function <a href='../proc/countsqfrm_lines.html'>CountSqfrm_Lines</a>(FileName, SkipBlank, Comment, ErrMsg) result(LineTot)  
+</h3></div>
+    <div class="card-body">
+          
+  <p>To count the total number of lines in the specified file name where the file
+ can be opened as a sequential-formatted file.</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-filename~2"></span>
+              character(kind=kChar, len=*),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>FileName</strong></td>
+            <td>
+<p>file name</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-skipblank"></span>
+              logical,
+            </td>
+<td>intent(in),</td>
+              <td>optional</td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>SkipBlank</strong></td>
+            <td>
+<p>If present and true, do not count an empty line; otherwise, also count an empty line.</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-comment"></span>
+              character(kind=kChar, len=1),
+            </td>
+<td>intent(in),</td>
+              <td>optional</td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Comment</strong></td>
+            <td>
+<p>comment character; if present, the line started with the specified character is not
+ counted.</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-errmsg~5"></span>
+              character(kind=kChar, len=:),
+            </td>
+<td>intent(inout),</td>
+              <td>optional,</td>            <td>
+              ALLOCATABLE
+            </td>
+            <td>::</td>
+            <td><strong>ErrMsg</strong></td>
+            <td>
+<p>error message if error occurred</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+    <h4>
+    Return Value
+    <small>integer(kind=kInt32)</small>
+    </h4>
+    <p>total number of lines</p>
+
+    </div>
+  </div>
+
+              <div class="card">
+    <div class="card-header codesum"><span class="anchor" id="proc-getfilename"></span><h3>public  function <a href='../proc/getfilename.html'>GetFileName</a>(FullPath, PathName, ExtName, IncludeSep) result(FileName)  
+</h3></div>
+    <div class="card-body">
+          
+  <p>To extract and return the file name (which includes the extension name) from
+ the specified full path name.  Optionally, also return the path name and/or
+ the extension name if present and exists.</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-fullpath"></span>
+              character(kind=kChar, len=*),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>FullPath</strong></td>
+            <td>
+<p>full path name (i.e. path + file)</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-pathname"></span>
+              character(kind=kChar, len=:),
+            </td>
+<td>intent(out),</td>
+              <td>optional,</td>            <td>
+              ALLOCATABLE
+            </td>
+            <td>::</td>
+            <td><strong>PathName</strong></td>
+            <td>
+<p>path name only if present and exists</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-extname"></span>
+              character(kind=kChar, len=:),
+            </td>
+<td>intent(out),</td>
+              <td>optional,</td>            <td>
+              ALLOCATABLE
+            </td>
+            <td>::</td>
+            <td><strong>ExtName</strong></td>
+            <td>
+<p>extension name only if present and exists</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-includesep"></span>
+              logical,
+            </td>
+<td>intent(in),</td>
+              <td>optional</td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>IncludeSep</strong></td>
+            <td>
+<p>if present and true, include the separator in the path name; otherwise, exclude it</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+    <h4>
+    Return Value
+    <small>character(kind=kChar, len=:), ALLOCATABLE</small>
+    </h4>
+    <p>file (+ extension) name</p>
+
+    </div>
+  </div>
+
+        </section>
+        <br>
+
+        <section>
+          <h2>Subroutines</h2>
+              <div class="card">
+    <div class="card-header codesum"><span class="anchor" id="proc-closeopenfiles"></span><h3>public  subroutine <a href='../proc/closeopenfiles.html'>CloseOpenFiles</a>()  
+</h3></div>
+    <div class="card-body">
+          
+  <p>To scan potential unit numbers and closes any that are still open.</p>
+
+  <h4>Arguments</h4>
+    <em>None</em>
+
+    </div>
+  </div>
+
+              <div class="card">
+    <div class="card-header codesum"><span class="anchor" id="proc-output_message"></span><h3>public  subroutine <a href='../proc/output_message.html'>Output_Message</a>(Message, IOUnit)  
+</h3></div>
+    <div class="card-body">
+          
+  <p>To display the specified message on default output (an audit file) or the
+  indicated file unit number if specified.</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-message~6"></span>
+              character(kind=kChar, len=*),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Message</strong></td>
+            <td>
+
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-iounit~12"></span>
+              integer(kind=kInt32),
+            </td>
+<td>intent(inout),</td>
+              <td>optional</td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>IOUnit</strong></td>
+            <td>
+
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+    </div>
+  </div>
+
+              <div class="card">
+    <div class="card-header codesum"><span class="anchor" id="proc-readsqfrm_linecharalloc"></span><h3>public  subroutine <a href='../proc/readsqfrm_linecharalloc.html'>ReadSqfrm_LineCharAlloc</a>(IOUnit, Str, IOStat, IOMsg)  
+</h3></div>
+    <div class="card-body">
+          
+  <p>To read a character sequence from a connected sequential-formatted unit into the character string.</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-iounit~10"></span>
+              integer(kind=kInt32),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>IOUnit</strong></td>
+            <td>
+<p>connected I/O unit number</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-str~6"></span>
+              character(kind=kChar, len=:),
+            </td>
+<td>intent(out),</td>
+              <td></td>            <td>
+              ALLOCATABLE
+            </td>
+            <td>::</td>
+            <td><strong>Str</strong></td>
+            <td>
+<p>character string</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-iostat~2"></span>
+              integer(kind=kInt32),
+            </td>
+<td>intent(out),</td>
+              <td>optional</td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>IOStat</strong></td>
+            <td>
+<p>status of I/O operation</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-iomsg~2"></span>
+              character(kind=kChar, len=:),
+            </td>
+<td>intent(out),</td>
+              <td>optional,</td>            <td>
+              ALLOCATABLE
+            </td>
+            <td>::</td>
+            <td><strong>IOMsg</strong></td>
+            <td>
+<p>an I/O message</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+    </div>
+  </div>
+
+              <div class="card">
+    <div class="card-header codesum"><span class="anchor" id="proc-readsqfrm_linecharstar"></span><h3>public  subroutine <a href='../proc/readsqfrm_linecharstar.html'>ReadSqfrm_LineCharStar</a>(IOUnit, Str, IOStat, IOMsg, EndPos)  
+</h3></div>
+    <div class="card-body">
+          
+  <p>To read a character sequence from a connected sequential-formatted unit into the character string.</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-iounit~11"></span>
+              integer(kind=kInt32),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>IOUnit</strong></td>
+            <td>
+<p>connected I/O unit number</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-str~7"></span>
+              character(kind=kChar, len=*),
+            </td>
+<td>intent(out)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Str</strong></td>
+            <td>
+<p>character string</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-iostat~3"></span>
+              integer(kind=kInt32),
+            </td>
+<td>intent(out),</td>
+              <td>optional</td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>IOStat</strong></td>
+            <td>
+<p>status of I/O operation</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-iomsg~3"></span>
+              character(kind=kChar, len=:),
+            </td>
+<td>intent(out),</td>
+              <td>optional,</td>            <td>
+              ALLOCATABLE
+            </td>
+            <td>::</td>
+            <td><strong>IOMsg</strong></td>
+            <td>
+<p>an I/O message</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-endpos"></span>
+              integer(kind=kInt32),
+            </td>
+<td>intent(out),</td>
+              <td>optional</td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>EndPos</strong></td>
+            <td>
+<p>ending position</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+    </div>
+  </div>
+
+        </section>
+        <br>
+
+
+
+    </div>
+  </div>
+
+      <hr>
+    </div> <!-- /container -->
+    <footer>
+      <div class="container">
+        <div class="row justify-content-between">
+          <div class="col"><p>eXPerimental Fortran Library (XpfLib) Documentation was developed by Niranama<br>&copy; 2024 
+</p>
+          </div>
+          <div class="col">
+            <p class="text-end">
+              Documentation generated by
+              <a href="https://github.com/Fortran-FOSS-Programmers/ford">FORD</a>
+            </p>
+          </div>
+        </div>
+        <br>
+      </div> <!-- /container -->
+    </footer>
+
+    <!-- Bootstrap core JavaScript -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>    
+
+    <!-- MathJax JavaScript
+             ================================================== -->
+             <!-- Placed at the end of the document so the pages load faster -->
+        <script type="text/x-mathjax-config">
+          MathJax.Hub.Config({
+          TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } },
+          jax: ['input/TeX','input/MathML','output/HTML-CSS'],
+          extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']
+          });
+        </script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+          <script src="../tipuesearch/tipuesearch_content.js"></script>
+          <script src="../tipuesearch/tipuesearch_set.js"></script>
+          <script src="../tipuesearch/tipuesearch.js"></script>
+
+  </body>
+</html>

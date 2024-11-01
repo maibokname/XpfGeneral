@@ -1,0 +1,1502 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta name="description" content="Experimental Fortran Package - Data Structures">
+    <meta name="author" content="Niranama" >
+    <link rel="icon" href="../favicon.png">
+
+    <title>HTabCharacter &ndash; eXPerimental Fortran Library (XpfLib) Documentation </title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link href="../css/pygments.css" rel="stylesheet">
+    <link href="../css/font-awesome.min.css" rel="stylesheet">
+    <link href="../css/local.css" rel="stylesheet">
+      <link  href="../tipuesearch/tipuesearch.css" rel="stylesheet">
+
+    <script src="https://code.jquery.com/jquery-3.7.0.slim.min.js" integrity="sha256-tG5mcZUtJsZvyKAxYLVXrmjKBVLd6VpVccqz/r4ypFE=" crossorigin="anonymous"></script>
+  </head>
+
+  <body>
+
+    <!-- Fixed navbar -->
+    <div class="container-fluid mb-sm-4 mb-xl-2">
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container">
+          <a class="navbar-brand" href="../index.html">eXPerimental Fortran Library (XpfLib) Documentation </a>
+          <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar"
+                  aria-expanded="false" aria-controls="navbar" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon">
+          </button>
+
+          <div id="navbar" class="navbar-collapse collapse">
+            <ul class="navbar-nav">
+                  <li class="nav-item">
+                    <a class="nav-link" href="../lists/files.html">Source Files</a>
+                  </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../lists/modules.html">Modules</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../lists/types.html">Derived Types</a>
+                </li>
+            </ul>
+              <div class="d-flex align-items-end flex-grow-1">
+                <form action="../search.html" role="search" class="ms-auto">
+                  <input type="text" class="form-control" aria-label="Search" placeholder="Search" name="q" id="tipue_search_input" autocomplete="off" required>
+                </form>
+              </div>
+          </div><!--/.nav-collapse -->
+        </div>
+      </nav>
+    </div>
+
+    <div class="container">
+  <div class="row">
+    <h1>HTabCharacter
+      <small>Derived Type</small>
+      
+    </h1>
+      <div class="container p-2 mb-4 bg-light border rounded-3">
+    <div class="row align-items-center justify-content-between" id="info-bar">
+      <div class="col">
+        <ul class="list-inline" style="margin-bottom:0px;display:inline">
+
+            <li class="list-inline-item" id="statements"><i class="fa fa-list-ol"></i>
+              <a data-bs-toggle="tooltip"
+                 data-bs-placement="bottom" data-html="true"
+                 title="<p> 1.3% of total for derived types.</p>Including implementation: 394 statements,  1.1% of total for derived types.">33 statements</a>
+            </li>
+
+            <li class="list-inline-item" id="source-file">
+              <i class="fa fa-code"></i>
+              <a href="../src/MClass_HTabCharacter.f90"> Source File</a>
+            </li>
+        </ul>
+      </div>
+      <div class="col">
+        <nav aria-label="breadcrumb">
+          <ol class="breadcrumb justify-content-end mb-0">
+                <li class="breadcrumb-item"><a href='../sourcefile/mclass_htabcharacter.f90.html'>MClass_HTabCharacter.f90</a></li>
+                <li class="breadcrumb-item"><a href='../module/mclass_htabcharacter.html'>MClass_HTabCharacter</a></li>
+            <li class="breadcrumb-item active" aria-current="page">HTabCharacter</li>
+          </ol>
+        </nav>
+      </div>
+    </div>
+  </div>
+  <script>
+    $(function () {
+    $('[data-bs-toggle="tooltip"]').tooltip()
+    })
+  </script>
+
+  </div>
+  
+  <div class="row">
+    <div class="col-md-3 hidden-xs hidden-sm visible-md visible-lg">
+      <div id="sidebar">
+      <h3>Contents</h3>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+      <div class="card mb-4">
+      <a data-bs-toggle="collapse" href="#fins-0"
+         aria-expanded="false" aria-controls="fins-0">
+         <h4 class="card-header bg-primary text-white">Finalization Procedures</h4>
+      </a>
+      <div id="fins-0" class="collapse">
+        <div class="list-group list-group-flush">
+            <a class="list-group-item" href="../type/htabcharacter.html#finalproc-hashtable_finalize~3">HashTable_Finalize</a>
+        </div>
+      </div>
+    </div>
+
+      <div class="card mb-4">
+      <a data-bs-toggle="collapse" href="#boundprocs-0"
+         aria-expanded="false" aria-controls="boundprocs-0">
+         <h4 class="card-header bg-primary text-white">Type-Bound Procedures</h4>
+      </a>
+      <div id="boundprocs-0" class="collapse">
+        <div class="list-group list-group-flush">
+            <a class="list-group-item" href="../type/htabcharacter.html#boundprocedure-createempty~10">CreateEmpty</a>
+            <a class="list-group-item" href="../type/htabcharacter.html#boundprocedure-construct~13">Construct</a>
+            <a class="list-group-item" href="../type/htabcharacter.html#boundprocedure-clear~10">Clear</a>
+            <a class="list-group-item" href="../type/htabcharacter.html#boundprocedure-destruct~13">Destruct</a>
+            <a class="list-group-item" href="../type/htabcharacter.html#boundprocedure-insert~6">Insert</a>
+            <a class="list-group-item" href="../type/htabcharacter.html#boundprocedure-remove~8">Remove</a>
+            <a class="list-group-item" href="../type/htabcharacter.html#boundprocedure-startfirst~11">StartFirst</a>
+            <a class="list-group-item" href="../type/htabcharacter.html#boundprocedure-moveforward~11">MoveForward</a>
+            <a class="list-group-item" href="../type/htabcharacter.html#boundprocedure-isempty~29">IsEmpty</a>
+            <a class="list-group-item" href="../type/htabcharacter.html#boundprocedure-getsize~13">GetSize</a>
+            <a class="list-group-item" href="../type/htabcharacter.html#boundprocedure-contain~4">Contain</a>
+            <a class="list-group-item" href="../type/htabcharacter.html#boundprocedure-getvalue~4">GetValue</a>
+            <a class="list-group-item" href="../type/htabcharacter.html#boundprocedure-getkeys~3">GetKeys</a>
+        </div>
+      </div>
+    </div>
+
+  
+  
+
+
+  </div>
+
+    </div>
+    
+    <div class="col-md-9" id='text'>
+      <h2>type, public :: HTabCharacter</h2>
+    <p>The <em>HTabCharacter</em> type is a container type that employs an open-addressing hash
+ table implementation to provide common operations for an unordered symbol table.</p>
+    <br>
+
+    
+
+      <section>
+        <h2>Finalization Procedures</h2>
+            <div class="card">
+    <div class="card-header codesum">
+      <span class="anchor" id="finalproc-hashtable_finalize~3"></span>
+      <h3>final :: <strong>HashTable_Finalize</strong> </h3>
+    </div>
+    <div class="card-body">
+      
+      <p>To perform finalization of the hash table.</p>
+    </div>
+    <ul class="list-group">
+      <li class="list-group-item">
+            <h3>
+    private  subroutine HashTable_Finalize(Table)  
+
+    </h3>
+  <p>To perform finalization of the HTabCharacter object.</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-table~45"></span>
+              type(<a href='../type/htabcharacter.html'>HTabCharacter</a>),
+            </td>
+<td>intent(inout)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Table</strong></td>
+            <td>
+                <p>HTabCharacter object</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+      </li>
+    </ul>
+  </div>
+
+      </section>
+      <br>
+
+      <section>
+        <h2>Type-Bound Procedures</h2>
+          <div class="row">
+              <div class="card mt-3">
+    <div class="card-header codesum">
+      <span class="anchor" id="boundprocedure-createempty~10"></span>
+      <h3>
+          procedure, public ::
+  <strong>CreateEmpty</strong> => HashTable_CreateEmpty
+        
+      </h3>
+    </div>
+      <div class="card-body">
+        
+        <p><strong>Type-Bound Subroutine</strong>: CreateEmpty <br>
+ <strong>Purpose</strong>:  To construct an empty table. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    CALL Table%CreateEmpty()                           ! use default options  <br>
+  ---&gt;    CALL Table%CreateEmpty(InitCap=25)                 ! specify initial capacity <br>
+  ---&gt;    CALL Table%CreateEmpty(LoadFactor=0.5)             ! specify load factor <br>
+  ---&gt;    CALL Table%CreateEmpty(ProbAlgo=2)                 ! specify probing algorithm <br>
+  ---&gt;    CALL Table%CreateEmpty(HashCal=Murmur3_Hash32_Opt) ! specify hash function <br>
+  ---&gt;    CALL Table%CreateEmpty(30, 0.75, 3, XX_Hash64_Opt) ! specify all options <br>
+ <strong>Note</strong>: Any suitable hash function routine from the <em>ModBase_SimpleHash32</em>,
+      <em>ModBase_SimpleHash64</em>, <em>ModBase_ReferenceHash32</em>, <em>ModBase_ReferenceHash64</em>
+      <em>ModBase_OptimalHash32</em>, and <em>ModBase_OptimalHash64</em> modules can be used to
+      specify the <em>HashCal</em> argument.  The term <em>suitable</em> means that any routine
+      that has exactly the same interface as the <em>HashFunc</em> abstract function
+      is the suitable one.  <br>
+ <strong>Note2</strong>: Depending on a type of indices defined in the '<em>Macro - Basic Definitions.f90</em>'
+      file, a 32-bit hash-function routine is a suitable one for 32-bit integer indices
+      while a 64-bit hash-function routine is a suitable one for 64-bit integer indices.
+      This is a compile-time choice.  <br></p>
+      </div>
+    <ul class="list-group">
+        <li class="list-group-item">
+                  <h3>
+    private  subroutine HashTable_CreateEmpty(Table, InitCap, LoadFactor, ProbAlgo, HashCalc)  
+</h3>
+
+  <p>To create an empty hash table.</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(<a href='../type/htabcharacter.html'>HTabCharacter</a>),
+            </td>
+<td>intent(inout)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Table</strong></td>
+            <td>
+                <p>HTabCharacter object</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              integer(kind=kInt32),
+            </td>
+<td>intent(in),</td>
+              <td>optional</td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>InitCap</strong></td>
+            <td>
+                <p>initial capacity of the hash table</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              real(kind=kDouble),
+            </td>
+<td>intent(in),</td>
+              <td>optional</td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>LoadFactor</strong></td>
+            <td>
+                <p>load factor</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              integer(kind=kInt32),
+            </td>
+<td>intent(in),</td>
+              <td>optional</td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>ProbAlgo</strong></td>
+            <td>
+                <p>probing algorithm (1 = Linear, 2 = Quadratic, 3 = Double Hashing)</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              procedure(HashFunc),
+            </td>
+<td></td>
+              <td>optional</td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>HashCalc</strong></td>
+            <td>
+                <p>hash function to compute the hash value of the key;
+ if not present, use default hash function.</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+        </li>
+    </ul>
+  </div>
+
+          </div>
+          <div class="row">
+              <div class="card mt-3">
+    <div class="card-header codesum">
+      <span class="anchor" id="boundprocedure-construct~13"></span>
+      <h3>
+          procedure, public ::
+  <strong>Construct</strong> => HashTable_CreateByArray
+        
+      </h3>
+    </div>
+      <div class="card-body">
+        
+        <p><strong>Type-Bound Subroutine</strong>: Construct <br>
+ <strong>Purpose</strong>:  To construct a hash table from the specified key and value arrays. <br>
+ <strong>Usage</strong>: <br>
+  ! use default options  <br>
+  ---&gt;    CALL Table%Construct(40, KeyArr, ValArr) <br>
+  ! specify all options (initial capacity is twice of the size of the given arrays) <br>
+  ---&gt;    CALL Table%Construct(20, KeyArr, ValArr, LoadFactor, ProbAlgo, HashFunc) <br></p>
+      </div>
+    <ul class="list-group">
+        <li class="list-group-item">
+                  <h3>
+    private  subroutine HashTable_CreateByArray(Table, N, Keys, Values, LoadFactor, ProbAlgo, HashCalc)  
+</h3>
+
+  <p>To create a table from an array of key-value pairs.</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(<a href='../type/htabcharacter.html'>HTabCharacter</a>),
+            </td>
+<td>intent(inout)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Table</strong></td>
+            <td>
+                <p>HTabCharacter object</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              integer(kind=kInt32),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>N</strong></td>
+            <td>
+                <p>number of key-value pairs</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              character(len=*),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Keys</strong>(N)</td>
+            <td>
+                <p>the keys to be added to the table</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(*),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Values</strong>(N)</td>
+            <td>
+                <p>the associated values to be added to the table</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              real(kind=kDouble),
+            </td>
+<td>intent(in),</td>
+              <td>optional</td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>LoadFactor</strong></td>
+            <td>
+                <p>load factor</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              integer(kind=kInt32),
+            </td>
+<td>intent(in),</td>
+              <td>optional</td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>ProbAlgo</strong></td>
+            <td>
+                <p>probing algorithm (1 = Linear, 2 = Quadratic, 3 = Double Hashing)</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              procedure(HashFunc),
+            </td>
+<td></td>
+              <td>optional</td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>HashCalc</strong></td>
+            <td>
+                <p>hash function to compute the hash value of the key;
+ if not present, use default hash function.</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+        </li>
+    </ul>
+  </div>
+
+          </div>
+          <div class="row">
+              <div class="card mt-3">
+    <div class="card-header codesum">
+      <span class="anchor" id="boundprocedure-clear~10"></span>
+      <h3>
+          procedure, public ::
+  <strong>Clear</strong> => HashTable_ClearItems
+        
+      </h3>
+    </div>
+      <div class="card-body">
+        
+        <p><strong>Type-Bound Subroutine</strong>: Clear <br>
+ <strong>Purpose</strong>:  To free components of the items from the table. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    CALL Table%Clear()</p>
+      </div>
+    <ul class="list-group">
+        <li class="list-group-item">
+                  <h3>
+    private  subroutine HashTable_ClearItems(Table)  
+</h3>
+
+  <p>To free components of the items from the table.</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(<a href='../type/htabcharacter.html'>HTabCharacter</a>),
+            </td>
+<td>intent(inout)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Table</strong></td>
+            <td>
+                <p>HTabCharacter object</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+        </li>
+    </ul>
+  </div>
+
+          </div>
+          <div class="row">
+              <div class="card mt-3">
+    <div class="card-header codesum">
+      <span class="anchor" id="boundprocedure-destruct~13"></span>
+      <h3>
+          procedure, public ::
+  <strong>Destruct</strong> => HashTable_Destroy
+        
+      </h3>
+    </div>
+      <div class="card-body">
+        
+        <p><strong>Type-Bound Subroutine</strong>: Destruct <br>
+ <strong>Purpose</strong>:  To free all memory currently used by the table.<br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    CALL Table%Destruct() <br>
+ <strong>Note</strong>:  This method is NOT equivalent to the <em>Clear</em> method.  After the <em>Clear</em> method
+      is called, other methods (the <em>Insert</em> method in particular) can be immediately used.
+      However, after the <em>Destruct</em> method is called, the <em>Construct</em> method must be called
+      again before other methods can be used. <br></p>
+      </div>
+    <ul class="list-group">
+        <li class="list-group-item">
+                  <h3>
+    private  subroutine HashTable_Destroy(Table)  
+</h3>
+
+  <p>To destruct the table.</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(<a href='../type/htabcharacter.html'>HTabCharacter</a>),
+            </td>
+<td>intent(inout)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Table</strong></td>
+            <td>
+                <p>HTabCharacter object</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+        </li>
+    </ul>
+  </div>
+
+          </div>
+          <div class="row">
+              <div class="card mt-3">
+    <div class="card-header codesum">
+      <span class="anchor" id="boundprocedure-insert~6"></span>
+      <h3>
+          procedure, public ::
+  <strong>Insert</strong> => HashTable_Insert
+        
+      </h3>
+    </div>
+      <div class="card-body">
+        
+        <p><strong>Type-Bound Subroutine</strong>: Insert <br>
+ <strong>Purpose</strong>:  To insert the specified key-value pair to the table. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    CALL Table%Insert(Key, Value) <br></p>
+      </div>
+    <ul class="list-group">
+        <li class="list-group-item">
+                  <h3>
+    private  subroutine HashTable_Insert(Table, Key, Value)  
+</h3>
+
+  <p>To add a key-value pair into the hash table.  If the specified key
+ is already stored in the table, replace the old value with the
+ new one.  <br></p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(<a href='../type/htabcharacter.html'>HTabCharacter</a>),
+            </td>
+<td>intent(inout)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Table</strong></td>
+            <td>
+                <p>HTabCharacter object</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              character(len=*),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Key</strong></td>
+            <td>
+                <p>key to be inserted</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(*),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Value</strong></td>
+            <td>
+                <p>associated value</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+        </li>
+    </ul>
+  </div>
+
+          </div>
+          <div class="row">
+              <div class="card mt-3">
+    <div class="card-header codesum">
+      <span class="anchor" id="boundprocedure-remove~8"></span>
+      <h3>
+          procedure, public ::
+  <strong>Remove</strong> => HashTable_Remove
+        
+      </h3>
+    </div>
+      <div class="card-body">
+        
+        <p><strong>Type-Bound Function</strong>: Remove <br>
+ <strong>Purpose</strong>:  To remove the specified key (and its associated value) from the table.
+               Also, return a flag indicating whether the key-value pair is successfully
+               removed or not.  Optionally, retrieve the associated value if the key
+               exists in the table.  <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    Flag = Table%Remove(Key, Value) <br>
+  ---&gt;    IF (.NOT.Table%Remove(Key)) DoSomething</p>
+      </div>
+    <ul class="list-group">
+        <li class="list-group-item">
+                  <h3>
+    private  function HashTable_Remove(Table, Key, Value) result(Flag)  
+</h3>
+
+  <p>To remove the specified key (and its associated value) from a symbol
+ table.  Also, return a flag indicating whether the key-value pair is
+ successfully removed or not.  Optionally, retrieve the associated
+ value if the key exists in the table.  <br></p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(<a href='../type/htabcharacter.html'>HTabCharacter</a>),
+            </td>
+<td>intent(inout)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Table</strong></td>
+            <td>
+                <p>HTabCharacter object</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              character(len=*),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Key</strong></td>
+            <td>
+                <p>key to be removed</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(*),
+            </td>
+<td>intent(out),</td>
+              <td>optional,</td>            <td>
+              ALLOCATABLE
+            </td>
+            <td>::</td>
+            <td><strong>Value</strong></td>
+            <td>
+                <p>associated value</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+    <h4>
+    Return Value
+    <small>logical</small>
+    </h4>
+    <p>flag indicating whether the specified key and its associated
+ value are successfully removed or not.</p>
+
+        </li>
+    </ul>
+  </div>
+
+          </div>
+          <div class="row">
+              <div class="card mt-3">
+    <div class="card-header codesum">
+      <span class="anchor" id="boundprocedure-startfirst~11"></span>
+      <h3>
+          procedure, public ::
+  <strong>StartFirst</strong> => HashTable_Move2FirstPair
+        
+      </h3>
+    </div>
+      <div class="card-body">
+        
+        <p><strong>Type-Bound Function</strong>: StartFirst <br>
+ <strong>Purpose</strong>:  To start an iteration and return a flag indicating whether
+               the table is empty or not. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    IsEmpty = Table%StartFirst() <br>
+  ---&gt;    IsEmpty = Table%StartFirst(FirstKey) <br>
+  ---&gt;    IsEmpty = Table%StartFirst(Value=FirstVal) <br>
+  ---&gt;    IsEmpty = Table%StartFirst(FirstKey, FirstVal)</p>
+      </div>
+    <ul class="list-group">
+        <li class="list-group-item">
+                  <h3>
+    private  function HashTable_Move2FirstPair(Table, Key, Value) result(IsEmpty)  
+</h3>
+
+  <p>To move to the first (starting) pair data in a hash table.   For the hash table,
+ which is an unordered symbol table, the starting pair is the first pair found
+ in the non-empty bucket.  <br></p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(<a href='../type/htabcharacter.html'>HTabCharacter</a>),
+            </td>
+<td>intent(inout)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Table</strong></td>
+            <td>
+                <p>HTabCharacter object</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              character(len=:),
+            </td>
+<td>intent(out),</td>
+              <td>optional,</td>            <td>
+              ALLOCATABLE
+            </td>
+            <td>::</td>
+            <td><strong>Key</strong></td>
+            <td>
+                <p>the first key as output if requested (and available)</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(*),
+            </td>
+<td>intent(inout),</td>
+              <td>optional,</td>            <td>
+              ALLOCATABLE
+            </td>
+            <td>::</td>
+            <td><strong>Value</strong></td>
+            <td>
+                <p>the first value as output if requested (and available)</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+    <h4>
+    Return Value
+    <small>logical</small>
+    </h4>
+    <p>a flag indicating whether the table contains no pair data or not <br>
+- true if the table is empty. <br>
+- otherwise the first pair data is available.</p>
+
+        </li>
+    </ul>
+  </div>
+
+          </div>
+          <div class="row">
+              <div class="card mt-3">
+    <div class="card-header codesum">
+      <span class="anchor" id="boundprocedure-moveforward~11"></span>
+      <h3>
+          procedure, public ::
+  <strong>MoveForward</strong> => HashTable_Move2NextPair
+        
+      </h3>
+    </div>
+      <div class="card-body">
+        
+        <p><strong>Type-Bound Function</strong>: MoveForward <br>
+ <strong>Purpose</strong>:  To move to the next key-value pair and return a flag
+               indicating whether the cursor pointer has reached the end of
+               the table or not. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    IsTheEnd = Table%MoveForward() <br>
+  ---&gt;    IsTheEnd = Table%MoveForward(NextKey) <br>
+  ---&gt;    IsTheEnd = Table%MoveForward(Value=NextVal) <br>
+  ---&gt;    IsTheEnd = Table%MoveForward(NextKey, NextVal) <br>
+ <strong>Important Note</strong>: <br>
+  After the start of the current iteration (i.e. a call to the <em>StartFirst</em> method),
+  a user should not insert or remove any key-value pair.  Otherwise, the <em>MoveForward</em>
+  method is not valid for the current iteration and the user must re-start the iteration
+  in order to use the <em>MoveForward</em> method.</p>
+      </div>
+    <ul class="list-group">
+        <li class="list-group-item">
+                  <h3>
+    private  function HashTable_Move2NextPair(Table, Key, Value) result(IsTheEnd)  
+</h3>
+
+  <p>To move to the next pair data in a symbol table.  For the <em>HTabCharacter</em>, which
+ is an unordered symbol table,  the next pair is a pair inserted in the first
+ non-empty bucket after the previous one.  <br>
+ The routine will report an error if an alteration to stored item(s) (either
+ by an insertion or a removal) has been occurred during current iteration.  <br></p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(<a href='../type/htabcharacter.html'>HTabCharacter</a>),
+            </td>
+<td>intent(inout)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Table</strong></td>
+            <td>
+                <p>HTabCharacter object</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              character(len=:),
+            </td>
+<td>intent(out),</td>
+              <td>optional,</td>            <td>
+              ALLOCATABLE
+            </td>
+            <td>::</td>
+            <td><strong>Key</strong></td>
+            <td>
+                <p>the next key as output if requested (and available)</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(*),
+            </td>
+<td>intent(inout),</td>
+              <td>optional,</td>            <td>
+              ALLOCATABLE
+            </td>
+            <td>::</td>
+            <td><strong>Value</strong></td>
+            <td>
+                <p>the next value as output if requested (and available)</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+    <h4>
+    Return Value
+    <small>logical</small>
+    </h4>
+    <p>a flag indicating whether the move to the end of the table occurs or not <br>
+- true if next pair data is NOT available. <br>
+- otherwise next pair data is available.</p>
+
+        </li>
+    </ul>
+  </div>
+
+          </div>
+          <div class="row">
+              <div class="card mt-3">
+    <div class="card-header codesum">
+      <span class="anchor" id="boundprocedure-isempty~29"></span>
+      <h3>
+          procedure, public ::
+  <strong>IsEmpty</strong> => HashTable_IsEmpty
+        
+      </h3>
+    </div>
+      <div class="card-body">
+        
+        <p><strong>Type-Bound Function</strong>: IsEmpty <br>
+ <strong>Purpose</strong>:  To check whether the table is empty or not. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    Flag = Table%IsEmpty() <br>
+  ---&gt;    IF (.NOT.Table%IsEmpty()) DoSomeThing</p>
+      </div>
+    <ul class="list-group">
+        <li class="list-group-item">
+                  <h3>
+    private  function HashTable_IsEmpty(Table) result(Flag)  
+</h3>
+
+  <p>To check whether the hash table is empty or not.</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(<a href='../type/htabcharacter.html'>HTabCharacter</a>),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Table</strong></td>
+            <td>
+                <p>HTabCharacter object</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+    <h4>
+    Return Value
+    <small>logical</small>
+    </h4>
+    <p>true if the table is empty</p>
+
+        </li>
+    </ul>
+  </div>
+
+          </div>
+          <div class="row">
+              <div class="card mt-3">
+    <div class="card-header codesum">
+      <span class="anchor" id="boundprocedure-getsize~13"></span>
+      <h3>
+          procedure, public ::
+  <strong>GetSize</strong> => HashTable_GetSize
+        
+      </h3>
+    </div>
+      <div class="card-body">
+        
+        <p><strong>Type-Bound Function</strong>: GetSize <br>
+ <strong>Purpose</strong>:  To get the current size (number of keys and their associated values) of the table. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    Size = Table%GetSize()</p>
+      </div>
+    <ul class="list-group">
+        <li class="list-group-item">
+                  <h3>
+    private  function HashTable_GetSize(Table) result(Size)  
+</h3>
+
+  <p>To return the number of keys currently in the hash table.</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(<a href='../type/htabcharacter.html'>HTabCharacter</a>),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Table</strong></td>
+            <td>
+                <p>HTabCharacter object</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+    <h4>
+    Return Value
+    <small>integer(kind=kInt32)</small>
+    </h4>
+    <p>the number of keys</p>
+
+        </li>
+    </ul>
+  </div>
+
+          </div>
+          <div class="row">
+              <div class="card mt-3">
+    <div class="card-header codesum">
+      <span class="anchor" id="boundprocedure-contain~4"></span>
+      <h3>
+          procedure, public ::
+  <strong>Contain</strong> => HashTable_Contain
+        
+      </h3>
+    </div>
+      <div class="card-body">
+        
+        <p><strong>Type-Bound Function</strong>: Contain <br>
+ <strong>Purpose</strong>:  To find the specified key in the table.  Return true if
+               the specified key is found.  Otherwise, return false. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    Flag = Table%Contain(Key) <br>
+  ---&gt;    IF (.NOT.Table%Contain(Key)) DoSomething</p>
+      </div>
+    <ul class="list-group">
+        <li class="list-group-item">
+                  <h3>
+    private  function HashTable_Contain(Table, Key) result(Found)  
+</h3>
+
+  <p>To check whether the specified key is currently stored in a symbol table.  <br></p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(<a href='../type/htabcharacter.html'>HTabCharacter</a>),
+            </td>
+<td>intent(inout)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Table</strong></td>
+            <td>
+                <p>HTabCharacter object</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              character(len=*),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Key</strong></td>
+            <td>
+                <p>key to be looked for</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+    <h4>
+    Return Value
+    <small>logical</small>
+    </h4>
+    <p>flag indicating whether the specified key is found or not.</p>
+
+        </li>
+    </ul>
+  </div>
+
+          </div>
+          <div class="row">
+              <div class="card mt-3">
+    <div class="card-header codesum">
+      <span class="anchor" id="boundprocedure-getvalue~4"></span>
+      <h3>
+          procedure, public ::
+  <strong>GetValue</strong> => HashTable_GetValue
+        
+      </h3>
+    </div>
+      <div class="card-body">
+        
+        <p><strong>Type-Bound Function</strong>: GetValue <br>
+ <strong>Purpose</strong>:  To get a value associated with the specified key in the table.
+               Also, return a flag indicating whether the key-value pair is
+               successfully found or not. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    Flag = Table%GetValue(Key, Value) <br>
+  ---&gt;    IF (.NOT.Table%GetValue(Key, Value)) DoSomething</p>
+      </div>
+    <ul class="list-group">
+        <li class="list-group-item">
+                  <h3>
+    private  function HashTable_GetValue(Table, Key, Value) result(Flag)  
+</h3>
+
+  <p>To retrieve the associated value of the specified key.  Also, return
+ a flag indicating whether the value is successfully retrieved or not. <br></p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(<a href='../type/htabcharacter.html'>HTabCharacter</a>),
+            </td>
+<td>intent(inout)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Table</strong></td>
+            <td>
+                <p>HTabCharacter object</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              character(len=*),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Key</strong></td>
+            <td>
+                <p>key to be looked for</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(*),
+            </td>
+<td>intent(out),</td>
+              <td></td>            <td>
+              ALLOCATABLE
+            </td>
+            <td>::</td>
+            <td><strong>Value</strong></td>
+            <td>
+                <p>associated value</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+    <h4>
+    Return Value
+    <small>logical</small>
+    </h4>
+    <p>flag indicating whether the value is successfully retrieved or not.</p>
+
+        </li>
+    </ul>
+  </div>
+
+          </div>
+          <div class="row">
+              <div class="card mt-3">
+    <div class="card-header codesum">
+      <span class="anchor" id="boundprocedure-getkeys~3"></span>
+      <h3>
+          procedure, public ::
+  <strong>GetKeys</strong> => HashTable_GetAllKeys
+        
+      </h3>
+    </div>
+      <div class="card-body">
+        
+        <p><strong>Type-Bound Subroutine</strong>: GetKeys <br>
+ <strong>Purpose</strong>:  To return a queue of all keys and optionally a queue of all associated values. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    CALL Tree%GetKeys(KeyQueue) <br>
+  ---&gt;    CALL Tree%GetKeys(KeyQueue, ValueQueue) <br></p>
+      </div>
+    <ul class="list-group">
+        <li class="list-group-item">
+                  <h3>
+    private  subroutine HashTable_GetAllKeys(Table, KeyQ, ValueQ)  
+</h3>
+
+  <p>To return all keys in the table and optionally all associated values.</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(<a href='../type/htabcharacter.html'>HTabCharacter</a>),
+            </td>
+<td>intent(inout)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Table</strong></td>
+            <td>
+                <p>HTabCharacter object</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              type(<a href='../type/listcharacter.html'>ListCharacter</a>),
+            </td>
+<td>intent(out)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>KeyQ</strong></td>
+            <td>
+                <p>key queue</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              type(<a href='../type/listanytype.html'>ListAnyType</a>),
+            </td>
+<td>intent(out),</td>
+              <td>optional</td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>ValueQ</strong></td>
+            <td>
+                <p>value queue</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+        </li>
+    </ul>
+  </div>
+
+          </div>
+      </section>
+
+    
+    </div>
+  </div>
+
+      <hr>
+    </div> <!-- /container -->
+    <footer>
+      <div class="container">
+        <div class="row justify-content-between">
+          <div class="col"><p>eXPerimental Fortran Library (XpfLib) Documentation was developed by Niranama<br>&copy; 2024 
+</p>
+          </div>
+          <div class="col">
+            <p class="text-end">
+              Documentation generated by
+              <a href="https://github.com/Fortran-FOSS-Programmers/ford">FORD</a>
+            </p>
+          </div>
+        </div>
+        <br>
+      </div> <!-- /container -->
+    </footer>
+
+    <!-- Bootstrap core JavaScript -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>    
+
+    <!-- MathJax JavaScript
+             ================================================== -->
+             <!-- Placed at the end of the document so the pages load faster -->
+        <script type="text/x-mathjax-config">
+          MathJax.Hub.Config({
+          TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } },
+          jax: ['input/TeX','input/MathML','output/HTML-CSS'],
+          extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']
+          });
+        </script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+          <script src="../tipuesearch/tipuesearch_content.js"></script>
+          <script src="../tipuesearch/tipuesearch_set.js"></script>
+          <script src="../tipuesearch/tipuesearch.js"></script>
+
+  </body>
+</html>

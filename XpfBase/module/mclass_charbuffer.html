@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta name="description" content="Experimental Fortran Package - Base Modules and Classes">
+    <meta name="author" content="Niranama" >
+    <link rel="icon" href="../favicon.png">
+
+    <title>MClass_CharBuffer &ndash; eXPerimental Fortran Library (XpfLib) Documentation</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link href="../css/pygments.css" rel="stylesheet">
+    <link href="../css/font-awesome.min.css" rel="stylesheet">
+    <link href="../css/local.css" rel="stylesheet">
+      <link  href="../tipuesearch/tipuesearch.css" rel="stylesheet">
+
+    <script src="https://code.jquery.com/jquery-3.7.0.slim.min.js" integrity="sha256-tG5mcZUtJsZvyKAxYLVXrmjKBVLd6VpVccqz/r4ypFE=" crossorigin="anonymous"></script>
+  </head>
+
+  <body>
+
+    <!-- Fixed navbar -->
+    <div class="container-fluid mb-sm-4 mb-xl-2">
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container">
+          <a class="navbar-brand" href="../index.html">eXPerimental Fortran Library (XpfLib) Documentation </a>
+          <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar"
+                  aria-expanded="false" aria-controls="navbar" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon">
+          </button>
+
+          <div id="navbar" class="navbar-collapse collapse">
+            <ul class="navbar-nav">
+                  <li class="nav-item">
+                    <a class="nav-link" href="../lists/files.html">Source Files</a>
+                  </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../lists/modules.html">Modules</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../lists/procedures.html">Procedures</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../lists/absint.html">Abstract Interfaces</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../lists/types.html">Derived Types</a>
+                </li>
+            </ul>
+              <div class="d-flex align-items-end flex-grow-1">
+                <form action="../search.html" role="search" class="ms-auto">
+                  <input type="text" class="form-control" aria-label="Search" placeholder="Search" name="q" id="tipue_search_input" autocomplete="off" required>
+                </form>
+              </div>
+          </div><!--/.nav-collapse -->
+        </div>
+      </nav>
+    </div>
+
+    <div class="container">
+  <div class="row">
+    <h1>MClass_CharBuffer
+      <small>Module</small>
+      
+    </h1>
+      <div class="container p-2 mb-4 bg-light border rounded-3">
+    <div class="row align-items-center justify-content-between" id="info-bar">
+      <div class="col">
+        <ul class="list-inline" style="margin-bottom:0px;display:inline">
+
+            <li class="list-inline-item" id="statements"><i class="fa fa-list-ol"></i>
+              <a data-bs-toggle="tooltip"
+                 data-bs-placement="bottom" data-html="true"
+                 title=" 0.4% of total for modules and submodules.">190 statements</a>
+            </li>
+
+            <li class="list-inline-item" id="source-file">
+              <i class="fa fa-code"></i>
+              <a href="../src/MClass_CharBuffer.f90"> Source File</a>
+            </li>
+        </ul>
+      </div>
+      <div class="col">
+        <nav aria-label="breadcrumb">
+          <ol class="breadcrumb justify-content-end mb-0">
+                <li class="breadcrumb-item"><a href='../sourcefile/mclass_charbuffer.f90.html'>MClass_CharBuffer.f90</a></li>
+            <li class="breadcrumb-item active" aria-current="page">MClass_CharBuffer</li>
+          </ol>
+        </nav>
+      </div>
+    </div>
+  </div>
+  <script>
+    $(function () {
+    $('[data-bs-toggle="tooltip"]').tooltip()
+    })
+  </script>
+
+  </div>
+
+  <div class="row">
+    <div class="col-md-3">
+        <div id="sidebar">
+      <h3>Contents</h3>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+      <div class="card mb-4">
+      <a data-bs-toggle="collapse" href="#types-0"
+         aria-expanded="false" aria-controls="types-0">
+         <h4 class="card-header bg-primary text-white">Derived Types</h4>
+      </a>
+      <div id="types-0" class="collapse">
+        <div class="list-group list-group-flush">
+            <a class="list-group-item" href="../module/mclass_charbuffer.html#type-charbuffer">CharBuffer</a>
+        </div>
+      </div>
+    </div>
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+
+
+  </div>
+
+    </div>
+
+    <div class="col-md-9" id='text'>
+      <p><strong>PURPOSE OF THIS MODULE</strong>: <br>
+  This module contains the <em>CharBuffer</em> type and its related routines.  The <em>CharBuffer</em> type
+  is a buffer type that provides a conveniently simple and efficient mechanism for concatenating
+  multiple character strings (i.e. building a string from several strings).  <br>
+  The <em>CharBuffer</em> type provides several methods that can be grouped into the following
+  categories. <br>
+  (1) Construction and Destruction.  Methods for these operations include: <br>
+  - <em>CreateEmpty</em> method - method to construct an empty buffer, <br>
+  - <em>Construct</em> method - method to construct the buffer from its first specified string, and <br>
+  - <em>Clear</em> method - method to remove all inserted characters from the buffer. <br>
+  (2) Insertion.  A method for this operation is: <br>
+  - <em>Append</em> method - method to insert a string into the end of the buffer's string, <br>
+  (3) Conversion-To-String.  Methods for these operations include: <br>
+  - <em>AsString</em> method - method to return the buffer's string as an allocatable character string, and <br>
+  - <em>ViewString</em> method - method to return a pointer to the buffer's string. <br>
+  (4) Inquiry.  A method for this operation is: <br>
+  - <em>Length</em> method - method to inquire the current length of the buffer's string. <br>
+  <strong><em>Note</em></strong>: The <em>CharBuffer</em> type is a subtype in the <em>Object</em> class so it also provides those deferred
+  methods required by the <em>Object</em> class. <br>
+  <strong><em>Important Note</em></strong>: The <em>CharBuffer</em> type provides two methods to return character strings stored in
+  the object.  The <em>AsString</em> method exactly returns the stored character string whereas the <em>ToString</em>
+  method (inherited from the <em>Object</em> type) returns a string representation of the object, which includes
+  the stored character string and a prefix specifying the type name of the object (i.e. "CharBuffer").
+  Therefore, the user should choose the method properly. <br></p>
+<br>          <div class="card mb-4">
+      <h3 class="card-header card-title bg-light">Uses</h3>
+      <div class="card-body">
+        <ul class="list-group list-group-flush">
+            <li class="list-group-item">
+              <ul class="list-inline">
+                  <li class="list-inline-item"><a href='../module/mbase_common.html'>MBase_Common</a></li>
+                  <li class="list-inline-item"><a href='../module/mclass_object.html'>MClass_Object</a></li>
+                  <li class="list-inline-item"><a href='../module/mbase_simplehash32.html'>MBase_SimpleHash32</a></li>
+                  <li class="list-inline-item"><a href='../module/mbase_errhandlers.html'>MBase_ErrHandlers</a></li>
+                  <li class="list-inline-item"><a href='../module/mbase_byteutil.html'>MBase_ByteUtil</a></li>
+              </ul>
+            </li>
+        </ul>
+      </div>
+    </div>
+
+      
+      <br>
+
+
+
+
+
+
+        <section>
+          <h2>Derived Types</h2>
+              <div class="card">
+    <div class="card-header codesum">
+      <span class="anchor" id="type-charbuffer"></span>
+      <h3>
+        type, public, extends(<a href='../type/object.html'>Object</a>)&nbsp;::&nbsp;
+        <a href='../type/charbuffer.html'>CharBuffer</a>
+        
+      </h3>
+    </div>
+    <div class="card-body">
+      <p>The <em>CharBuffer</em> type is a buffer type that provides a convenient way
+ to build a string from multiple strings.</p>
+
+
+
+        <h4>Finalizations Procedures</h4>
+        <table class="table table-striped varlist">
+          <tbody>
+              <tr>
+                <td>final :: <strong>CharBuffer_Finalize</strong></td>
+                <td><p>To perform finalization of the <em>CharBuffer</em> object.</p></td>
+              </tr>
+          </tbody>
+        </table>
+
+        <h4>Type-Bound Procedures</h4>
+        <table class="table table-striped varlist">
+          <tbody>
+              <tr>
+                <td>  procedure, public ::
+  <strong><a href='../type/charbuffer.html#boundprocedure-createempty~3'>CreateEmpty</a></strong> => CharBuffer_CreateEmpty</td>
+                <td><p><strong>Type-Bound Subroutine</strong>: CreateEmpty <br>
+ <strong>Purpose</strong>:  To construct an empty <em>CharBuffer</em> object. <br>
+ <strong>Usage</strong>: <br>
+  ! use default initial capacity  <br>
+  ---&gt;    CALL ChrBuf%CreateEmpty() <br>
+  ! specify initial capacity <br>
+  ---&gt;    CALL ChrBuf%CreateEmpty(InitCap=256) <br></p></td>
+              </tr>
+              <tr>
+                <td>  procedure, public ::
+  <strong><a href='../type/charbuffer.html#boundprocedure-construct~9'>Construct</a></strong> => CharBuffer_Construct</td>
+                <td><p><strong>Type-Bound Subroutine</strong>: Construct <br>
+ <strong>Purpose</strong>:  To construct a <em>CharBuffer</em> object with the specified string.  This method
+      provides a convenient way to create an empty <em>CharBuffer</em> object and then add the
+      first string into the object. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    CALL ChrBuf%Construct(String) <br></p></td>
+              </tr>
+              <tr>
+                <td>  procedure, public ::
+  <strong><a href='../type/charbuffer.html#boundprocedure-clear~5'>Clear</a></strong> => CharBuffer_Clear</td>
+                <td><p><strong>Type-Bound Subroutine</strong>: Clear <br>
+ <strong>Purpose</strong>:  To clear the buffer string of the <em>CharBuffer</em> object. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    CALL ChrBuf%Clear() <br></p></td>
+              </tr>
+              <tr>
+                <td>  procedure, public ::
+  <strong><a href='../type/charbuffer.html#boundprocedure-append~4'>Append</a></strong> => CharBuffer_Append</td>
+                <td><p><strong>Type-Bound Subroutine</strong>: Append <br>
+ <strong>Purpose</strong>:  To append the specified string at the end of the buffer string. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    CALL ChrBuf%Append(String) <br></p></td>
+              </tr>
+              <tr>
+                <td>  procedure, public ::
+  <strong><a href='../type/charbuffer.html#boundprocedure-asstring'>AsString</a></strong> => CharBuffer_AsString</td>
+                <td><p><strong>Type-Bound Function</strong>: AsString <br>
+ <strong>Purpose</strong>:  To return characters currently stored in the CharBuffer as an
+      allocatable character string.  Optionally, a user can request to clear the
+      buffer' buffer string. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    cStr = ChrBuf%AsString() <br>
+  ---&gt;    cStr = ChrBuf%AsString(ClearBuffer=.TRUE.) <br></p></td>
+              </tr>
+              <tr>
+                <td>  procedure, public ::
+  <strong><a href='../type/charbuffer.html#boundprocedure-viewstring'>ViewString</a></strong> => CharBuffer_ViewString</td>
+                <td><p><strong>Type-Bound Function</strong>: ViewString <br>
+ <strong>Purpose</strong>:  To return a pointer to a string representing characters currently stored
+               in the <em>CharBuffer</em> object. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    StrPtr =&gt; ChrBuf%ViewString() <br></p></td>
+              </tr>
+              <tr>
+                <td>  procedure, public ::
+  <strong><a href='../type/charbuffer.html#boundprocedure-length'>Length</a></strong> => CharBuffer_GetLength</td>
+                <td><p><strong>Type-Bound Function</strong>: Length <br>
+ <strong>Purpose</strong>:  To return the current length of the string being built. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    Length = ChrBuf%Length() <br></p></td>
+              </tr>
+              <tr>
+                <td>  procedure, public ::
+  <strong><a href='../type/charbuffer.html#boundprocedure-copy~7'>Copy</a></strong> => CharBuffer_Copy</td>
+                <td><p><strong>Type-Bound Subroutine</strong>: Copy <br>
+ <strong>Purpose</strong>: To make a copy of the source object. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    CALL SrcObj%Copy(DstObj) <br></p></td>
+              </tr>
+              <tr>
+                <td>  procedure, public ::
+  <strong><a href='../type/charbuffer.html#boundprocedure-isequalto~9'>IsEqualTo</a></strong> => CharBuffer_IsEqualTo</td>
+                <td><p><strong>Type-Bound Function</strong>: IsEqualTo <br>
+ <strong>Purpose</strong>: To check whether two objects are equal to one another or not. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    Flag = ObjA%IsEqualTo(ObjB) <br>
+  ---&gt;    IF (ObjA%IsEqualTo(ObjB)) DoSomething</p></td>
+              </tr>
+              <tr>
+                <td>  procedure, public ::
+  <strong><a href='../type/charbuffer.html#boundprocedure-memfree~8'>MemFree</a></strong> => CharBuffer_MemFree</td>
+                <td><p><strong>Type-Bound Subroutine</strong>: MemFree <br>
+ <strong>Purpose</strong>: To free memory/storage occupied by the object. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    CALL Obj%MemFree() <br></p></td>
+              </tr>
+              <tr>
+                <td>  procedure, public ::
+  <strong><a href='../type/charbuffer.html#boundprocedure-tostring~8'>ToString</a></strong> => CharBuffer_ToString</td>
+                <td><p><strong>Type-Bound Function</strong>: ToString <br>
+ <strong>Purpose</strong>:  To return the string representation of this object. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    Str = Obj%ToString() <br></p></td>
+              </tr>
+              <tr>
+                <td>  procedure, public ::
+  <strong><a href='../type/charbuffer.html#boundprocedure-hashcode~35'>HashCode</a></strong> => CharBuffer_HashCode</td>
+                <td><p><strong>Type-Bound Function</strong>: HashCode <br>
+ <strong>Purpose</strong>:  To compute the hash code of this object. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    Code = Obj%HashCode() <br></p></td>
+              </tr>
+          </tbody>
+        </table>
+    </div>
+  </div>
+
+        </section>
+        <br>
+
+
+
+
+
+    </div>
+  </div>
+
+      <hr>
+    </div> <!-- /container -->
+    <footer>
+      <div class="container">
+        <div class="row justify-content-between">
+          <div class="col"><p>eXPerimental Fortran Library (XpfLib) Documentation was developed by Niranama<br>&copy; 2024 
+</p>
+          </div>
+          <div class="col">
+            <p class="text-end">
+              Documentation generated by
+              <a href="https://github.com/Fortran-FOSS-Programmers/ford">FORD</a>
+            </p>
+          </div>
+        </div>
+        <br>
+      </div> <!-- /container -->
+    </footer>
+
+    <!-- Bootstrap core JavaScript -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>    
+
+    <!-- MathJax JavaScript
+             ================================================== -->
+             <!-- Placed at the end of the document so the pages load faster -->
+        <script type="text/x-mathjax-config">
+          MathJax.Hub.Config({
+          TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } },
+          jax: ['input/TeX','input/MathML','output/HTML-CSS'],
+          extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']
+          });
+        </script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+          <script src="../tipuesearch/tipuesearch_content.js"></script>
+          <script src="../tipuesearch/tipuesearch_set.js"></script>
+          <script src="../tipuesearch/tipuesearch.js"></script>
+
+  </body>
+</html>

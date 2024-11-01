@@ -1,0 +1,1724 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta name="description" content="Experimental Fortran Package - Base Modules and Classes">
+    <meta name="author" content="Niranama" >
+    <link rel="icon" href="../favicon.png">
+
+    <title>MathExpParser &ndash; eXPerimental Fortran Library (XpfLib) Documentation </title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link href="../css/pygments.css" rel="stylesheet">
+    <link href="../css/font-awesome.min.css" rel="stylesheet">
+    <link href="../css/local.css" rel="stylesheet">
+      <link  href="../tipuesearch/tipuesearch.css" rel="stylesheet">
+
+    <script src="https://code.jquery.com/jquery-3.7.0.slim.min.js" integrity="sha256-tG5mcZUtJsZvyKAxYLVXrmjKBVLd6VpVccqz/r4ypFE=" crossorigin="anonymous"></script>
+  </head>
+
+  <body>
+
+    <!-- Fixed navbar -->
+    <div class="container-fluid mb-sm-4 mb-xl-2">
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container">
+          <a class="navbar-brand" href="../index.html">eXPerimental Fortran Library (XpfLib) Documentation </a>
+          <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar"
+                  aria-expanded="false" aria-controls="navbar" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon">
+          </button>
+
+          <div id="navbar" class="navbar-collapse collapse">
+            <ul class="navbar-nav">
+                  <li class="nav-item">
+                    <a class="nav-link" href="../lists/files.html">Source Files</a>
+                  </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../lists/modules.html">Modules</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../lists/procedures.html">Procedures</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../lists/absint.html">Abstract Interfaces</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../lists/types.html">Derived Types</a>
+                </li>
+            </ul>
+              <div class="d-flex align-items-end flex-grow-1">
+                <form action="../search.html" role="search" class="ms-auto">
+                  <input type="text" class="form-control" aria-label="Search" placeholder="Search" name="q" id="tipue_search_input" autocomplete="off" required>
+                </form>
+              </div>
+          </div><!--/.nav-collapse -->
+        </div>
+      </nav>
+    </div>
+
+    <div class="container">
+  <div class="row">
+    <h1>MathExpParser
+      <small>Derived Type</small>
+      
+    </h1>
+      <div class="container p-2 mb-4 bg-light border rounded-3">
+    <div class="row align-items-center justify-content-between" id="info-bar">
+      <div class="col">
+        <ul class="list-inline" style="margin-bottom:0px;display:inline">
+
+            <li class="list-inline-item" id="statements"><i class="fa fa-list-ol"></i>
+              <a data-bs-toggle="tooltip"
+                 data-bs-placement="bottom" data-html="true"
+                 title="<p> 4.4% of total for derived types.</p>Including implementation: 385 statements,  5.6% of total for derived types.">35 statements</a>
+            </li>
+
+            <li class="list-inline-item" id="source-file">
+              <i class="fa fa-code"></i>
+              <a href="../src/MClass_MathExpParser.f90"> Source File</a>
+            </li>
+        </ul>
+      </div>
+      <div class="col">
+        <nav aria-label="breadcrumb">
+          <ol class="breadcrumb justify-content-end mb-0">
+                <li class="breadcrumb-item"><a href='../sourcefile/mclass_mathexpparser.f90.html'>MClass_MathExpParser.f90</a></li>
+                <li class="breadcrumb-item"><a href='../module/mclass_mathexpparser.html'>MClass_MathExpParser</a></li>
+            <li class="breadcrumb-item active" aria-current="page">MathExpParser</li>
+          </ol>
+        </nav>
+      </div>
+    </div>
+  </div>
+  <script>
+    $(function () {
+    $('[data-bs-toggle="tooltip"]').tooltip()
+    })
+  </script>
+
+  </div>
+  
+  <div class="row">
+    <div class="col-md-3 hidden-xs hidden-sm visible-md visible-lg">
+      <div id="sidebar">
+      <h3>Contents</h3>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+      <div class="card mb-4">
+      <a data-bs-toggle="collapse" href="#fins-0"
+         aria-expanded="false" aria-controls="fins-0">
+         <h4 class="card-header bg-primary text-white">Finalization Procedures</h4>
+      </a>
+      <div id="fins-0" class="collapse">
+        <div class="list-group list-group-flush">
+            <a class="list-group-item" href="../type/mathexpparser.html#finalproc-parser_finalize">Parser_Finalize</a>
+        </div>
+      </div>
+    </div>
+
+      <div class="card mb-4">
+      <a data-bs-toggle="collapse" href="#boundprocs-0"
+         aria-expanded="false" aria-controls="boundprocs-0">
+         <h4 class="card-header bg-primary text-white">Type-Bound Procedures</h4>
+      </a>
+      <div id="boundprocs-0" class="collapse">
+        <div class="list-group list-group-flush">
+            <a class="list-group-item" href="../type/mathexpparser.html#boundprocedure-create">Create</a>
+            <a class="list-group-item" href="../type/mathexpparser.html#boundprocedure-destroy~4">Destroy</a>
+            <a class="list-group-item" href="../type/mathexpparser.html#boundprocedure-defineconstant">DefineConstant</a>
+            <a class="list-group-item" href="../type/mathexpparser.html#boundprocedure-defineexpression">DefineExpression</a>
+            <a class="list-group-item" href="../type/mathexpparser.html#boundprocedure-parsefunction">ParseFunction</a>
+            <a class="list-group-item" href="../type/mathexpparser.html#boundprocedure-evalfunction">EvalFunction</a>
+            <a class="list-group-item" href="../type/mathexpparser.html#boundprocedure-printbytecode">PrintByteCode</a>
+            <a class="list-group-item" href="../type/mathexpparser.html#boundprocedure-getfunctionnumber">GetFunctionNumber</a>
+        </div>
+      </div>
+    </div>
+
+  
+  
+    <div class="card card-primary">
+      <div class="card-header text-left"><h3 class="card-title">Source Code</h3></div>
+      <div class="list-group">
+        <a class="list-group-item" href="../type/mathexpparser.html#src">MathExpParser</a>
+      </div>
+    </div>
+
+
+  </div>
+
+    </div>
+    
+    <div class="col-md-9" id='text'>
+      <h2>type, public :: MathExpParser</h2>
+    <p><em>MathExpParser</em> is a parser type that can be used to parse and evaluate
+  mathematical expressions.</p>
+    <br>
+
+    
+
+      <section>
+        <h2>Finalization Procedures</h2>
+            <div class="card">
+    <div class="card-header codesum">
+      <span class="anchor" id="finalproc-parser_finalize"></span>
+      <h3>final :: <strong>Parser_Finalize</strong> </h3>
+    </div>
+    <div class="card-body">
+      
+      <p>a final subroutine supposedly automatically called when the object is out of scope</p>
+    </div>
+    <ul class="list-group">
+      <li class="list-group-item">
+            <h3>
+    private  subroutine Parser_Finalize(rfParser)  
+
+    </h3>
+  <p>To finalize the 'MathExpParser' object.</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-rfparser~8"></span>
+              type(<a href='../type/mathexpparser.html'>MathExpParser</a>),
+            </td>
+<td>intent(inout)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>rfParser</strong></td>
+            <td>
+                <p>Function parser</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+      </li>
+    </ul>
+  </div>
+
+      </section>
+      <br>
+
+      <section>
+        <h2>Type-Bound Procedures</h2>
+          <div class="row">
+              <div class="card mt-3">
+    <div class="card-header codesum">
+      <span class="anchor" id="boundprocedure-create"></span>
+      <h3>
+          procedure, public ::
+  <strong>Create</strong> => Parser_Create
+        
+      </h3>
+    </div>
+      <div class="card-body">
+        
+        <p><strong>Type-Bound Subroutine</strong>: Create <br>
+<strong>Purpose</strong>:  To initialize the function parser with the specified number of functions. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    CALL Parser%Create(nFunc) <br></p>
+      </div>
+    <ul class="list-group">
+        <li class="list-group-item">
+                  <h3>
+    private  subroutine Parser_Create(rfParser, MaxNComp)  
+</h3>
+
+  <p>To initialize the function parser for <em>MaxNComp</em> functions.</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(<a href='../type/mathexpparser.html'>MathExpParser</a>),
+            </td>
+<td>intent(out)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>rfParser</strong></td>
+            <td>
+                <p>Function parser object</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              integer(kind=kInt32),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>MaxNComp</strong></td>
+            <td>
+                <p>Number of functions</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+        </li>
+    </ul>
+  </div>
+
+          </div>
+          <div class="row">
+              <div class="card mt-3">
+    <div class="card-header codesum">
+      <span class="anchor" id="boundprocedure-destroy~4"></span>
+      <h3>
+          procedure, public ::
+  <strong>Destroy</strong> => Parser_Destroy
+        
+      </h3>
+    </div>
+      <div class="card-body">
+        
+        <p><strong>Type-Bound Subroutine</strong>: Destroy <br>
+<strong>Purpose</strong>:  To release memory occupied by the function parser and its components. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    CALL Parser%Destroy() <br></p>
+      </div>
+    <ul class="list-group">
+        <li class="list-group-item">
+                  <h3>
+    private  subroutine Parser_Destroy(rfParser)  
+</h3>
+
+  <p>To release the function parser and all of its components.</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(<a href='../type/mathexpparser.html'>MathExpParser</a>),
+            </td>
+<td>intent(inout)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>rfParser</strong></td>
+            <td>
+                <p>Function parser</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+        </li>
+    </ul>
+  </div>
+
+          </div>
+          <div class="row">
+              <div class="card mt-3">
+    <div class="card-header codesum">
+      <span class="anchor" id="boundprocedure-defineconstant"></span>
+      <h3>
+          generic, public ::
+  <strong>DefineConstant</strong> => Parser_DefineConstantDble, Parser_DefineConstantCmpl
+        
+      </h3>
+    </div>
+      <div class="card-body">
+        
+        <p><strong>Type-Bound Subroutine</strong>: DefineConstant <br>
+<strong>Purpose</strong>:  To define a new user-defined constant by specifying the name and value of
+      the new constant. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    CALL Parser%DefineConstant(ConstName, ConstVal) <br></p>
+      </div>
+    <ul class="list-group">
+        <li class="list-group-item">
+                  <h3>
+    private  subroutine Parser_DefineConstantDble(rfParser, sName, dValue)  
+</h3>
+
+  <p>To define a new real-valued constant.  The routine checks if the given constant
+ is already defined.</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(<a href='../type/mathexpparser.html'>MathExpParser</a>),
+            </td>
+<td>intent(inout)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>rfParser</strong></td>
+            <td>
+                <p>Function parser object</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              character(kind=kChar, len=FPAR_CONST_LEN),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>sName</strong></td>
+            <td>
+                <p>Name of the constant</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              real(kind=kDouble),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>dValue</strong></td>
+            <td>
+                <p>Value of the constant</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+        </li>
+        <li class="list-group-item">
+                  <h3>
+    private  subroutine Parser_DefineConstantCmpl(rfParser, sName, zValue)  
+</h3>
+
+  <p>To define a new complex-valued constant.  The routine checks if the given constant
+ is already defined.</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(<a href='../type/mathexpparser.html'>MathExpParser</a>),
+            </td>
+<td>intent(inout)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>rfParser</strong></td>
+            <td>
+                <p>Function parser object</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              character(kind=kChar, len=FPAR_CONST_LEN),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>sName</strong></td>
+            <td>
+                <p>Name of the constant</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              complex(kind=kDouble),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>zValue</strong></td>
+            <td>
+                <p>Value of the constant</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+        </li>
+    </ul>
+  </div>
+
+          </div>
+          <div class="row">
+              <div class="card mt-3">
+    <div class="card-header codesum">
+      <span class="anchor" id="boundprocedure-defineexpression"></span>
+      <h3>
+          generic, public ::
+  <strong>DefineExpression</strong> => Parser_DefineExpression
+        
+      </h3>
+    </div>
+      <div class="card-body">
+        
+        <p><strong>Type-Bound Subroutine</strong>: DefineExpression <br>
+<strong>Purpose</strong>:  To define a new user-defined expression by specifying the name and value
+      (expression string) of the new expression. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    CALL Parser%DefineExpression(ExpName, ExpString) <br></p>
+      </div>
+    <ul class="list-group">
+        <li class="list-group-item">
+                  <h3>
+    private  subroutine Parser_DefineExpression(rfParser, sName, sValue)  
+</h3>
+
+  <p>To define a new expression.  The routine checks if the given expression
+ is already defined.</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(<a href='../type/mathexpparser.html'>MathExpParser</a>),
+            </td>
+<td>intent(inout)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>rfParser</strong></td>
+            <td>
+                <p>Function parser object</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              character(kind=kChar, len=FPAR_EXPR_LEN),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>sName</strong></td>
+            <td>
+                <p>Name of the Expression</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              character(kind=kChar, len=*),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>sValue</strong></td>
+            <td>
+                <p>String of the Expression</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+        </li>
+    </ul>
+  </div>
+
+          </div>
+          <div class="row">
+              <div class="card mt-3">
+    <div class="card-header codesum">
+      <span class="anchor" id="boundprocedure-parsefunction"></span>
+      <h3>
+          generic, public ::
+  <strong>ParseFunction</strong> => Parser_ParseFunctionByName, Parser_ParseFunctionByNumber
+        
+      </h3>
+    </div>
+      <div class="card-body">
+        
+        <p><strong>Type-Bound Subroutine</strong>: ParseFunction <br>
+<strong>Purpose</strong>:  To parse a string expressing mathematical expression and compile
+      it into bytecode. <br>
+ <strong>Usage</strong>: <br>
+  ! parse function by a name as a function identifier <br>
+  ---&gt;    CALL Parser%ParseFunction(FuncName, FuncString, VarArr) <br>
+  ---&gt;    CALL Parser%ParseFunction(FuncName, FuncString, VarArr, bUseDegrees=.TRUE., iComp=FuncNum) <br>
+  ! parse function by a number as a function identifier <br>
+  ---&gt;    CALL Parser%ParseFunction(FuncNum, FuncString, VarArr) <br>
+  ---&gt;    CALL Parser%ParseFunction(FuncNum, FuncString, VarArr, bUseDegrees=.TRUE.) <br>
+ <strong>Note</strong>: The <em>VarArr</em> is an array of strings containing the variable names. <br></p>
+      </div>
+    <ul class="list-group">
+        <li class="list-group-item">
+                  <h3>
+    private  subroutine Parser_ParseFunctionByName(rfParser, SCompName, sFunctionString, sVariables, bUseDegrees, iComp)  
+</h3>
+
+  <p>To parse function string <em>sFunctionString</em> and compile it into bytecode.</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(<a href='../type/mathexpparser.html'>MathExpParser</a>),
+            </td>
+<td>intent(inout)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>rfParser</strong></td>
+            <td>
+                <p>Function parser</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              character(kind=kChar, len=*),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>SCompName</strong></td>
+            <td>
+                <p>Function identifier</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              character(kind=kChar, len=*),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>sFunctionString</strong></td>
+            <td>
+                <p>Function string</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              character(kind=kChar, len=*),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>sVariables</strong>(:)</td>
+            <td>
+                <p>Array with variable names</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              logical,
+            </td>
+<td>intent(in),</td>
+              <td>optional</td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>bUseDegrees</strong></td>
+            <td>
+                <p>Flag indicating whether to use degree unit. <br>
+ - If true, use degree unit. <br>
+ - If false, use radian unit. <br>
+ Default is false. <br></p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              integer(kind=kInt32),
+            </td>
+<td>intent(out),</td>
+              <td>optional</td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>iComp</strong></td>
+            <td>
+                <p>Function identifier</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+        </li>
+        <li class="list-group-item">
+                  <h3>
+    private  subroutine Parser_ParseFunctionByNumber(rfParser, iComp, sFunctionString, sVariables, bUseDegrees)  
+</h3>
+
+  <p>To parse the function string <em>sFunctionString</em> and compile it into bytecode.</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(<a href='../type/mathexpparser.html'>MathExpParser</a>),
+            </td>
+<td>intent(inout)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>rfParser</strong></td>
+            <td>
+                <p>Function parser</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              integer(kind=kInt32),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>iComp</strong></td>
+            <td>
+                <p>Function identifier</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              character(kind=kChar, len=*),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>sFunctionString</strong></td>
+            <td>
+                <p>Function string</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              character(kind=kChar, len=*),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>sVariables</strong>(:)</td>
+            <td>
+                <p>Array with variable names</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              logical,
+            </td>
+<td>intent(in),</td>
+              <td>optional</td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>bUseDegrees</strong></td>
+            <td>
+                <p>Flag indicating whether to use degree unit. <br>
+ - If true, use degree unit. <br>
+ - If false, use radian unit. <br>
+ Default is false. <br></p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+        </li>
+    </ul>
+  </div>
+
+          </div>
+          <div class="row">
+              <div class="card mt-3">
+    <div class="card-header codesum">
+      <span class="anchor" id="boundprocedure-evalfunction"></span>
+      <h3>
+          generic, public ::
+  <strong>EvalFunction</strong> => Parser_EvalFuncScDbleByName, Parser_EvalFuncScDbleByNumber, Parser_EvalFuncScCmplByName, Parser_EvalFuncScCmplByNumber
+        
+      </h3>
+    </div>
+      <div class="card-body">
+        
+        <p><strong>Type-Bound Subroutine</strong>: EvalFunction <br>
+<strong>Purpose</strong>:  To evaluate the parsed function by specifying its identifier. <br>
+ <strong>Usage</strong>: <br>
+  ! evaluate function by a name as a function identifier <br>
+  ---&gt;    CALL Parser%EvalFunction(FuncName, VarArr, ErrCode, ResVal) <br>
+  ! evaluate function by a number as a function identifier <br>
+  ---&gt;    CALL Parser%EvalFunction(FuncNum, FVarArr, ErrCode, ResVal) <br>
+ <strong>Note</strong>: The <em>VarArr</em> is an array of real (or complex) numbers containing the variable
+      values, which correspond to the variable names specified when parsing the function. <br></p>
+      </div>
+    <ul class="list-group">
+        <li class="list-group-item">
+                  <h3>
+    private  subroutine Parser_EvalFuncScDbleByName(rfParser, SCompName, dValue, EvalErrType, dResult)  
+</h3>
+
+  <p>To evaluate bytecode of the function named <em>SCompName</em> for the
+ real-valued values passed in the array <em>dValue</em>.</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(<a href='../type/mathexpparser.html'>MathExpParser</a>),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>rfParser</strong></td>
+            <td>
+                <p>Function parser</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              character(kind=kChar, len=*),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>SCompName</strong></td>
+            <td>
+                <p>Function name</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              real(kind=kDouble),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>dValue</strong>(:)</td>
+            <td>
+                <p>Variable values</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              integer(kind=kInt32),
+            </td>
+<td>intent(out)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>EvalErrType</strong></td>
+            <td>
+                <p>Error flag</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              real(kind=kDouble),
+            </td>
+<td>intent(out)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>dResult</strong></td>
+            <td>
+                <p>Evaluated function</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+        </li>
+        <li class="list-group-item">
+                  <h3>
+    private  subroutine Parser_EvalFuncScDbleByNumber(rfParser, iComp, dValue, EvalErrType, dResult)  
+</h3>
+
+  <p>To evaluate bytecode of component <em>iComp</em> for the real-valued values
+ passed in the array <em>dValue</em>. Note that this function is a wrapper
+ for the working routine <em>EvalFunctionScDble</em>. It is used to adjust
+ the dimensions of the global stack memory if required.</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(<a href='../type/mathexpparser.html'>MathExpParser</a>),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>rfParser</strong></td>
+            <td>
+                <p>Function parser</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              integer(kind=kInt32),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>iComp</strong></td>
+            <td>
+                <p>Function identifier</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              real(kind=kDouble),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>dValue</strong>(:)</td>
+            <td>
+                <p>Variable values</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              integer(kind=kInt32),
+            </td>
+<td>intent(out)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>EvalErrType</strong></td>
+            <td>
+                <p>Error flag</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              real(kind=kDouble),
+            </td>
+<td>intent(out)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>dResult</strong></td>
+            <td>
+                <p>Evaluated function</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+        </li>
+        <li class="list-group-item">
+                  <h3>
+    private  subroutine Parser_EvalFuncScCmplByName(rfParser, SCompName, zValue, EvalErrType, zResult)  
+</h3>
+
+  <p>To evaluate bytecode of the function named <em>SCompName</em> for the
+ complex-valued values passed in the array <em>zValues</em>.</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(<a href='../type/mathexpparser.html'>MathExpParser</a>),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>rfParser</strong></td>
+            <td>
+                <p>Function parser</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              character(kind=kChar, len=*),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>SCompName</strong></td>
+            <td>
+                <p>Function name</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              complex(kind=kDouble),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>zValue</strong>(:)</td>
+            <td>
+                <p>Variable values</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              integer(kind=kInt32),
+            </td>
+<td>intent(out)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>EvalErrType</strong></td>
+            <td>
+                <p>Error flag</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              complex(kind=kDouble),
+            </td>
+<td>intent(out)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>zResult</strong></td>
+            <td>
+                <p>Evaluated function</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+        </li>
+        <li class="list-group-item">
+                  <h3>
+    private  subroutine Parser_EvalFuncScCmplByNumber(rfParser, iComp, zValue, EvalErrType, zResult)  
+</h3>
+
+  <p>To evaluate bytecode of component <em>iComp</em> for the complex-valued values
+ passed in the array <em>zValue</em>. Note that this function is a wrapper
+ for the working routine <em>EvalFunctionScCmpl</em>. It is used to adjust
+ the dimensions of the global stack memory if required.</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(<a href='../type/mathexpparser.html'>MathExpParser</a>),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>rfParser</strong></td>
+            <td>
+                <p>Function parser</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              integer(kind=kInt32),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>iComp</strong></td>
+            <td>
+                <p>Function identifier</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              complex(kind=kDouble),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>zValue</strong>(:)</td>
+            <td>
+                <p>Variable values</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              integer(kind=kInt32),
+            </td>
+<td>intent(out)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>EvalErrType</strong></td>
+            <td>
+                <p>Error flag</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              complex(kind=kDouble),
+            </td>
+<td>intent(out)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>zResult</strong></td>
+            <td>
+                <p>Evaluated function</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+        </li>
+    </ul>
+  </div>
+
+          </div>
+          <div class="row">
+              <div class="card mt-3">
+    <div class="card-header codesum">
+      <span class="anchor" id="boundprocedure-printbytecode"></span>
+      <h3>
+          generic, public ::
+  <strong>PrintByteCode</strong> => Parser_PrintByteCodeByName, Parser_PrintByteCodeByNumber
+        
+      </h3>
+    </div>
+      <div class="card-body">
+        
+        <p><strong>Type-Bound Subroutine</strong>: PrintByteCode <br>
+<strong>Purpose</strong>:  To print the compiled bytecode stack of the parsed function by
+      specifying its identifier and the output unit number. <br>
+ <strong>Usage</strong>: <br>
+  ! print the bytecode stack by a name as a function identifier <br>
+  ---&gt;    CALL Parser%PrintByteCode(FuncName, OutUnit) <br>
+  ! print the bytecode stack by a number as a function identifier <br>
+  ---&gt;    CALL Parser%PrintByteCode(FuncNum, OutUnit) <br>
+ <strong>Note</strong>: This method provides very technical information and is intended to be
+      used for debugging purpose only.  <br></p>
+      </div>
+    <ul class="list-group">
+        <li class="list-group-item">
+                  <h3>
+    private  subroutine Parser_PrintByteCodeByName(rfParser, SCompName, iOutUnit)  
+</h3>
+
+  <p>To print the compiled bytecode stack.</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(<a href='../type/mathexpparser.html'>MathExpParser</a>),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>rfParser</strong></td>
+            <td>
+                <p>Function parser</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              character(kind=kChar, len=*),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>SCompName</strong></td>
+            <td>
+                <p>Function name</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              integer(kind=kInt32),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>iOutUnit</strong></td>
+            <td>
+                <p>Output unit</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+        </li>
+        <li class="list-group-item">
+                  <h3>
+    private  subroutine Parser_PrintByteCodeByNumber(rfParser, iComp, iOutUnit)  
+</h3>
+
+  <p>To print the compiled bytecode stack</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(<a href='../type/mathexpparser.html'>MathExpParser</a>),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>rfParser</strong></td>
+            <td>
+                <p>Function parser</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              integer(kind=kInt32),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>iComp</strong></td>
+            <td>
+                <p>Function identifier</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              integer(kind=kInt32),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>iOutUnit</strong></td>
+            <td>
+                <p>Output unit</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+        </li>
+    </ul>
+  </div>
+
+          </div>
+          <div class="row">
+              <div class="card mt-3">
+    <div class="card-header codesum">
+      <span class="anchor" id="boundprocedure-getfunctionnumber"></span>
+      <h3>
+          procedure, public ::
+  <strong>GetFunctionNumber</strong> => Parser_GetFunctionNumber
+        
+      </h3>
+    </div>
+      <div class="card-body">
+        
+        <p><strong>Type-Bound Function</strong>: GetFunctionNumber <br>
+<strong>Purpose</strong>:  To return a number used as a function identifier by
+      specifying a name as a function identifier. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    FuncNum = Parser%GetFunctionNumber(FuncName) <br></p>
+      </div>
+    <ul class="list-group">
+        <li class="list-group-item">
+                  <h3>
+    private  function Parser_GetFunctionNumber(rfParser, SCompName, bQuiet) result(iComp)  
+</h3>
+
+  <p>To return the internal number of the component which
+ corresponds to the function with name <em>SCompName</em>.</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(<a href='../type/mathexpparser.html'>MathExpParser</a>),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>rfParser</strong></td>
+            <td>
+                <p>Function parser</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              character(kind=kChar, len=*),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>SCompName</strong></td>
+            <td>
+                <p>Function name</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              logical,
+            </td>
+<td>intent(in),</td>
+              <td>optional</td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>bQuiet</strong></td>
+            <td>
+                <p>empty vector (bQuiet = FalseVal) or whether to remain silent in this case.
+If not specified, bQuiet = FalseVal is used.</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+    <h4>
+    Return Value
+    <small>integer(kind=kInt32)</small>
+    </h4>
+    <p>Function identifier</p>
+
+        </li>
+    </ul>
+  </div>
+
+          </div>
+      </section>
+
+    <section>
+    <h3><span class="anchor" id="src"></span>Source Code</h3>
+    <div class="hl codehilite"><pre><span></span><span class="w">    </span><span class="k">TYPE </span><span class="n">MathExpParser</span>
+<span class="w">        </span><span class="k">PRIVATE</span>
+<span class="w">        </span><span class="c">!&gt; Array of function parser components.</span>
+<span class="w">        </span><span class="c">!  Each component is used to handle one function string at a time.</span>
+<span class="w">        </span><span class="k">TYPE</span><span class="p">(</span><span class="n">ParserComponent</span><span class="p">),</span><span class="w"> </span><span class="k">POINTER</span><span class="w">  </span><span class="kd">::</span><span class="w"> </span><span class="n">rComp</span><span class="p">(:)</span><span class="w">     </span><span class="o">=&gt;</span><span class="w"> </span><span class="nb">NULL</span><span class="p">()</span>
+<span class="w">        </span><span class="c">!% Array of function names corresponding to the individual components.</span>
+<span class="w">        </span><span class="n">tCharLen</span><span class="p">(:),</span><span class="w">           </span><span class="k">POINTER</span><span class="w">  </span><span class="kd">::</span><span class="w"> </span><span class="n">SCompName</span><span class="p">(:)</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="nb">NULL</span><span class="p">()</span>
+<span class="w">        </span><span class="c">!% Number of parser components</span>
+<span class="w">        </span><span class="n">tSInt32</span><span class="w">                         </span><span class="kd">::</span><span class="w"> </span><span class="n">NComp</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span>
+<span class="w">        </span><span class="c">!% Maximum number of components</span>
+<span class="w">        </span><span class="n">tSInt32</span><span class="w">                         </span><span class="kd">::</span><span class="w"> </span><span class="n">MaxNComp</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span>
+<span class="w">        </span><span class="c">! Global number of predefined/user-defined constants</span>
+<span class="w">        </span><span class="n">tSInt32</span><span class="w">                         </span><span class="kd">::</span><span class="w"> </span><span class="n">nConstants</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span>
+<span class="w">        </span><span class="c">! Global number of predefined/user-defined Expressions</span>
+<span class="w">        </span><span class="n">tSInt32</span><span class="w">                         </span><span class="kd">::</span><span class="w"> </span><span class="n">nExpressions</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span>
+<span class="w">        </span><span class="c">! Global constant names for parser</span>
+<span class="w">        </span><span class="n">tCharLen</span><span class="p">(</span><span class="n">FPAR_CONST_LEN</span><span class="p">)</span><span class="w">        </span><span class="kd">::</span><span class="w"> </span><span class="n">cConstantName</span><span class="p">(</span><span class="n">FPAR_MAX_CONSTS</span><span class="p">)</span><span class="w">  </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;&#39;</span>
+<span class="w">        </span><span class="c">! Global constant values for parser (real-valued)</span>
+<span class="w">        </span><span class="n">tFloat</span><span class="w">                           </span><span class="kd">::</span><span class="w"> </span><span class="n">dConstantValue</span><span class="p">(</span><span class="n">FPAR_MAX_CONSTS</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Zero</span>
+<span class="w">        </span><span class="c">! Global constant values for parser (complex-valued)</span>
+<span class="w">        </span><span class="n">tCmplx</span><span class="w">                           </span><span class="kd">::</span><span class="w"> </span><span class="n">zConstantValue</span><span class="p">(</span><span class="n">FPAR_MAX_CONSTS</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">Zero</span><span class="p">,</span><span class="w"> </span><span class="n">Zero</span><span class="p">)</span>
+<span class="w">        </span><span class="c">! Global expression name for parser</span>
+<span class="w">        </span><span class="n">tCharLen</span><span class="p">(</span><span class="n">FPAR_EXPR_LEN</span><span class="p">)</span><span class="w">         </span><span class="kd">::</span><span class="w"> </span><span class="n">cExpressionName</span><span class="p">(</span><span class="n">FPAR_MAX_CONSTS</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;&#39;</span>
+<span class="w">        </span><span class="c">! Global expression string for parser</span>
+<span class="w">        </span><span class="n">tCharLen</span><span class="p">(</span><span class="n">FPAR_STR_LEN</span><span class="p">)</span><span class="w">          </span><span class="kd">::</span><span class="w"> </span><span class="n">cExpressionString</span><span class="p">(</span><span class="n">FPAR_MAX_EXPRS</span><span class="p">)</span>
+<span class="w">    </span><span class="k">CONTAINS</span>
+<span class="w">        </span><span class="c">!----------------------------------------------------------------------</span>
+<span class="w">        </span><span class="c">!-----                  Private Procedures                        -----</span>
+<span class="w">        </span><span class="c">!----------------------------------------------------------------------</span>
+<span class="w">        </span><span class="k">PROCEDURE</span><span class="p">,</span><span class="w"> </span><span class="k">PRIVATE</span><span class="w">  </span><span class="kd">::</span><span class="w"> </span><span class="n">Parser_DefineConstantDble</span>
+<span class="w">        </span><span class="k">PROCEDURE</span><span class="p">,</span><span class="w"> </span><span class="k">PRIVATE</span><span class="w">  </span><span class="kd">::</span><span class="w"> </span><span class="n">Parser_DefineConstantCmpl</span>
+<span class="w">        </span><span class="k">PROCEDURE</span><span class="p">,</span><span class="w"> </span><span class="k">PRIVATE</span><span class="w">  </span><span class="kd">::</span><span class="w"> </span><span class="n">Parser_DefineExpression</span>
+<span class="w">        </span><span class="k">PROCEDURE</span><span class="p">,</span><span class="w"> </span><span class="k">PRIVATE</span><span class="w">  </span><span class="kd">::</span><span class="w"> </span><span class="n">Parser_ParseFunctionByName</span>
+<span class="w">        </span><span class="k">PROCEDURE</span><span class="p">,</span><span class="w"> </span><span class="k">PRIVATE</span><span class="w">  </span><span class="kd">::</span><span class="w"> </span><span class="n">Parser_ParseFunctionByNumber</span>
+<span class="w">        </span><span class="k">PROCEDURE</span><span class="p">,</span><span class="w"> </span><span class="k">PRIVATE</span><span class="w">  </span><span class="kd">::</span><span class="w"> </span><span class="n">Parser_EvalFuncScDbleByName</span>
+<span class="w">        </span><span class="k">PROCEDURE</span><span class="p">,</span><span class="w"> </span><span class="k">PRIVATE</span><span class="w">  </span><span class="kd">::</span><span class="w"> </span><span class="n">Parser_EvalFuncScDbleByNumber</span>
+<span class="w">        </span><span class="k">PROCEDURE</span><span class="p">,</span><span class="w"> </span><span class="k">PRIVATE</span><span class="w">  </span><span class="kd">::</span><span class="w"> </span><span class="n">Parser_EvalFuncScCmplByName</span>
+<span class="w">        </span><span class="k">PROCEDURE</span><span class="p">,</span><span class="w"> </span><span class="k">PRIVATE</span><span class="w">  </span><span class="kd">::</span><span class="w"> </span><span class="n">Parser_EvalFuncScCmplByNumber</span>
+<span class="w">        </span><span class="k">PROCEDURE</span><span class="p">,</span><span class="w"> </span><span class="k">PRIVATE</span><span class="w">  </span><span class="kd">::</span><span class="w"> </span><span class="n">Parser_PrintByteCodeByName</span>
+<span class="w">        </span><span class="k">PROCEDURE</span><span class="p">,</span><span class="w"> </span><span class="k">PRIVATE</span><span class="w">  </span><span class="kd">::</span><span class="w"> </span><span class="n">Parser_PrintByteCodeByNumber</span>
+<span class="w">        </span><span class="c">!----------------------------------------------------------------------</span>
+<span class="w">        </span><span class="c">!-----                   Public Procedures                        -----</span>
+<span class="w">        </span><span class="c">!----------------------------------------------------------------------</span>
+<span class="w">        </span><span class="c">!&gt; **Type-Bound Subroutine**: Create &lt;br&gt;</span>
+<span class="w">        </span><span class="c">! **Purpose**:  To initialize the function parser with the specified number of functions. &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Usage**: &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!   ---&gt;    CALL Parser%Create(nFunc) &lt;br&gt;</span>
+<span class="w">        </span><span class="k">PROCEDURE</span><span class="w">   </span><span class="kd">::</span><span class="w"> </span><span class="n">Create</span><span class="w">               </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">Parser_Create</span>
+<span class="w">        </span><span class="c">!&gt; **Type-Bound Subroutine**: Destroy &lt;br&gt;</span>
+<span class="w">        </span><span class="c">! **Purpose**:  To release memory occupied by the function parser and its components. &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Usage**: &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!   ---&gt;    CALL Parser%Destroy() &lt;br&gt;</span>
+<span class="w">        </span><span class="k">PROCEDURE</span><span class="w">   </span><span class="kd">::</span><span class="w"> </span><span class="n">Destroy</span><span class="w">              </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">Parser_Destroy</span>
+<span class="w">        </span><span class="c">!&gt; **Type-Bound Subroutine**: DefineConstant &lt;br&gt;</span>
+<span class="w">        </span><span class="c">! **Purpose**:  To define a new user-defined constant by specifying the name and value of</span>
+<span class="w">        </span><span class="c">!       the new constant. &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Usage**: &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!   ---&gt;    CALL Parser%DefineConstant(ConstName, ConstVal) &lt;br&gt;</span>
+<span class="w">        </span><span class="k">GENERIC</span><span class="w">     </span><span class="kd">::</span><span class="w"> </span><span class="n">DefineConstant</span><span class="w">       </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">Parser_DefineConstantDble</span><span class="p">,</span><span class="w">      </span><span class="p">&amp;</span>
+<span class="w">                                               </span><span class="n">Parser_DefineConstantCmpl</span>
+<span class="w">        </span><span class="c">!&gt; **Type-Bound Subroutine**: DefineExpression &lt;br&gt;</span>
+<span class="w">        </span><span class="c">! **Purpose**:  To define a new user-defined expression by specifying the name and value</span>
+<span class="w">        </span><span class="c">!       (expression string) of the new expression. &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Usage**: &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!   ---&gt;    CALL Parser%DefineExpression(ExpName, ExpString) &lt;br&gt;</span>
+<span class="w">        </span><span class="k">GENERIC</span><span class="w">     </span><span class="kd">::</span><span class="w"> </span><span class="n">DefineExpression</span><span class="w">     </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">Parser_DefineExpression</span>
+<span class="w">        </span><span class="c">!&gt; **Type-Bound Subroutine**: ParseFunction &lt;br&gt;</span>
+<span class="w">        </span><span class="c">! **Purpose**:  To parse a string expressing mathematical expression and compile</span>
+<span class="w">        </span><span class="c">!       it into bytecode. &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Usage**: &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!   ! parse function by a name as a function identifier &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!   ---&gt;    CALL Parser%ParseFunction(FuncName, FuncString, VarArr) &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!   ---&gt;    CALL Parser%ParseFunction(FuncName, FuncString, VarArr, bUseDegrees=.TRUE., iComp=FuncNum) &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!   ! parse function by a number as a function identifier &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!   ---&gt;    CALL Parser%ParseFunction(FuncNum, FuncString, VarArr) &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!   ---&gt;    CALL Parser%ParseFunction(FuncNum, FuncString, VarArr, bUseDegrees=.TRUE.) &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Note**: The *VarArr* is an array of strings containing the variable names. &lt;br&gt;</span>
+<span class="w">        </span><span class="k">GENERIC</span><span class="w">     </span><span class="kd">::</span><span class="w"> </span><span class="n">ParseFunction</span><span class="w">        </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">Parser_ParseFunctionByName</span><span class="p">,</span><span class="w">     </span><span class="p">&amp;</span>
+<span class="w">                                               </span><span class="n">Parser_ParseFunctionByNumber</span>
+<span class="w">        </span><span class="c">!&gt; **Type-Bound Subroutine**: EvalFunction &lt;br&gt;</span>
+<span class="w">        </span><span class="c">! **Purpose**:  To evaluate the parsed function by specifying its identifier. &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Usage**: &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!   ! evaluate function by a name as a function identifier &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!   ---&gt;    CALL Parser%EvalFunction(FuncName, VarArr, ErrCode, ResVal) &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!   ! evaluate function by a number as a function identifier &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!   ---&gt;    CALL Parser%EvalFunction(FuncNum, FVarArr, ErrCode, ResVal) &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Note**: The *VarArr* is an array of real (or complex) numbers containing the variable</span>
+<span class="w">        </span><span class="c">!       values, which correspond to the variable names specified when parsing the function. &lt;br&gt;</span>
+<span class="w">        </span><span class="k">GENERIC</span><span class="w">     </span><span class="kd">::</span><span class="w"> </span><span class="n">EvalFunction</span><span class="w">         </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">Parser_EvalFuncScDbleByName</span><span class="p">,</span><span class="w">    </span><span class="p">&amp;</span>
+<span class="w">                                               </span><span class="n">Parser_EvalFuncScDbleByNumber</span><span class="p">,</span><span class="w">  </span><span class="p">&amp;</span>
+<span class="w">                                               </span><span class="n">Parser_EvalFuncScCmplByName</span><span class="p">,</span><span class="w">    </span><span class="p">&amp;</span>
+<span class="w">                                               </span><span class="n">Parser_EvalFuncScCmplByNumber</span>
+<span class="w">        </span><span class="c">!&gt; **Type-Bound Subroutine**: PrintByteCode &lt;br&gt;</span>
+<span class="w">        </span><span class="c">! **Purpose**:  To print the compiled bytecode stack of the parsed function by</span>
+<span class="w">        </span><span class="c">!       specifying its identifier and the output unit number. &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Usage**: &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!   ! print the bytecode stack by a name as a function identifier &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!   ---&gt;    CALL Parser%PrintByteCode(FuncName, OutUnit) &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!   ! print the bytecode stack by a number as a function identifier &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!   ---&gt;    CALL Parser%PrintByteCode(FuncNum, OutUnit) &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Note**: This method provides very technical information and is intended to be</span>
+<span class="w">        </span><span class="c">!       used for debugging purpose only.  &lt;br&gt;</span>
+<span class="w">        </span><span class="k">GENERIC</span><span class="w">     </span><span class="kd">::</span><span class="w"> </span><span class="n">PrintByteCode</span><span class="w">        </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">Parser_PrintByteCodeByName</span><span class="p">,</span><span class="w">     </span><span class="p">&amp;</span>
+<span class="w">                                               </span><span class="n">Parser_PrintByteCodeByNumber</span>
+<span class="w">        </span><span class="c">!&gt; **Type-Bound Function**: GetFunctionNumber &lt;br&gt;</span>
+<span class="w">        </span><span class="c">! **Purpose**:  To return a number used as a function identifier by</span>
+<span class="w">        </span><span class="c">!       specifying a name as a function identifier. &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Usage**: &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!   ---&gt;    FuncNum = Parser%GetFunctionNumber(FuncName) &lt;br&gt;</span>
+<span class="w">        </span><span class="k">PROCEDURE</span><span class="w">   </span><span class="kd">::</span><span class="w"> </span><span class="n">GetFunctionNumber</span><span class="w">    </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">Parser_GetFunctionNumber</span>
+<span class="w">        </span><span class="c">!% a final subroutine supposedly automatically called when the object is out of scope</span>
+<span class="w">        </span><span class="k">FINAL</span><span class="w">       </span><span class="kd">::</span><span class="w"> </span><span class="n">Parser_Finalize</span>
+<span class="w">    </span><span class="k">END TYPE </span><span class="n">MathExpParser</span>
+</pre></div>
+
+    </section>
+    
+    </div>
+  </div>
+
+      <hr>
+    </div> <!-- /container -->
+    <footer>
+      <div class="container">
+        <div class="row justify-content-between">
+          <div class="col"><p>eXPerimental Fortran Library (XpfLib) Documentation was developed by Niranama<br>&copy; 2024 
+</p>
+          </div>
+          <div class="col">
+            <p class="text-end">
+              Documentation generated by
+              <a href="https://github.com/Fortran-FOSS-Programmers/ford">FORD</a>
+            </p>
+          </div>
+        </div>
+        <br>
+      </div> <!-- /container -->
+    </footer>
+
+    <!-- Bootstrap core JavaScript -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>    
+
+    <!-- MathJax JavaScript
+             ================================================== -->
+             <!-- Placed at the end of the document so the pages load faster -->
+        <script type="text/x-mathjax-config">
+          MathJax.Hub.Config({
+          TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } },
+          jax: ['input/TeX','input/MathML','output/HTML-CSS'],
+          extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']
+          });
+        </script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+          <script src="../tipuesearch/tipuesearch_content.js"></script>
+          <script src="../tipuesearch/tipuesearch_set.js"></script>
+          <script src="../tipuesearch/tipuesearch.js"></script>
+
+  </body>
+</html>

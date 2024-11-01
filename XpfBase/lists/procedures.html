@@ -1,0 +1,1873 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta name="description" content="Experimental Fortran Package - Base Modules and Classes">
+    <meta name="author" content="Niranama" >
+    <link rel="icon" href="../favicon.png">
+
+    <title>All Procedures &ndash; eXPerimental Fortran Library (XpfLib) Documentation
+</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link href="../css/pygments.css" rel="stylesheet">
+    <link href="../css/font-awesome.min.css" rel="stylesheet">
+    <link href="../css/local.css" rel="stylesheet">
+      <link  href="../tipuesearch/tipuesearch.css" rel="stylesheet">
+
+    <script src="https://code.jquery.com/jquery-3.7.0.slim.min.js" integrity="sha256-tG5mcZUtJsZvyKAxYLVXrmjKBVLd6VpVccqz/r4ypFE=" crossorigin="anonymous"></script>
+  </head>
+
+  <body>
+
+    <!-- Fixed navbar -->
+    <div class="container-fluid mb-sm-4 mb-xl-2">
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container">
+          <a class="navbar-brand" href="../index.html">eXPerimental Fortran Library (XpfLib) Documentation </a>
+          <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar"
+                  aria-expanded="false" aria-controls="navbar" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon">
+          </button>
+
+          <div id="navbar" class="navbar-collapse collapse">
+            <ul class="navbar-nav">
+                  <li class="nav-item">
+                    <a class="nav-link" href="../lists/files.html">Source Files</a>
+                  </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../lists/modules.html">Modules</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../lists/procedures.html">Procedures</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../lists/absint.html">Abstract Interfaces</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../lists/types.html">Derived Types</a>
+                </li>
+            </ul>
+              <div class="d-flex align-items-end flex-grow-1">
+                <form action="../search.html" role="search" class="ms-auto">
+                  <input type="text" class="form-control" aria-label="Search" placeholder="Search" name="q" id="tipue_search_input" autocomplete="off" required>
+                </form>
+              </div>
+          </div><!--/.nav-collapse -->
+        </div>
+      </nav>
+    </div>
+
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12" id='text'>
+			 <h1>Procedures</h1>
+			 <table class="table table-striped">
+			 <thead><tr><th>Procedure</th><th>Location</th><th>Procedure Type</th><th>Description</th></tr></thead>
+			 <tbody>
+			   <tr><td><a href='../proc/abortprogram.html'>AbortProgram</a></td><td><a href='../module/mbase_errhandlers.html'>MBase_ErrHandlers</a></td><td>Subroutine</td><td><p>This subroutine causes the program to halt due to a fatal error.</p></td></tr>
+			   <tr><td><a href='../interface/abs.html'>ABS</a></td><td><a href='../module/mbase_sint128.html'>MBase_SInt128</a></td><td>Interface</td><td><p><strong>Function Interface</strong>: ABS <br>
+ <strong>Purpose</strong>:  To return the absolute value of the input. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    OUTPUT = ABS(INPUT)</p></td></tr>
+			   <tr><td><a href='../interface/add.html'>Add</a></td><td><a href='../module/mbase_sint128.html'>MBase_SInt128</a></td><td>Interface</td><td><p><strong>Subroutine Interface</strong>: Add <br>
+ <strong>Purpose</strong>:  To perform addition: This = This + Other. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    CALL Add(This, Other)</p></td></tr>
+			   <tr><td><a href='../interface/add~2.html'>Add</a></td><td><a href='../module/mbase_uint128.html'>MBase_UInt128</a></td><td>Interface</td><td><p><strong>Subroutine Interface</strong>: Add <br>
+ <strong>Purpose</strong>:  To perform addition: This = This + Other. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    CALL Add(This, Other)</p></td></tr>
+			   <tr><td><a href='../proc/addu64.html'>AddU64</a></td><td><a href='../module/mbase_uintutil.html'>MBase_UIntUtil</a></td><td>Subroutine</td><td><p>To return the sum with carry of X, Y and CarryIn: Sum = X + Y + CarryIn.
+ The carry input must be 0 or 1; otherwise the behavior is undefined.
+ The carry output is guaranteed to be 0 or 1.</p></td></tr>
+			   <tr><td><a href='../interface/addxp.html'>AddXp</a></td><td><a href='../module/mbase_sint128.html'>MBase_SInt128</a></td><td>Interface</td><td></td></tr>
+			   <tr><td><a href='../proc/anytype_2_bytearray.html'>AnyType_2_ByteArray</a></td><td><a href='../module/mbase_byteutil.html'>MBase_ByteUtil</a></td><td>Subroutine</td><td><p>To convert the given input to an array of 8-bit integers where the input
+ can be any type and its size (in bytes) must be known.</p></td></tr>
+			   <tr><td><a href='../proc/anytype_2_bytearrptr.html'>AnyType_2_ByteArrPtr</a></td><td><a href='../module/mbase_byteutil.html'>MBase_ByteUtil</a></td><td>Subroutine</td><td><p>To convert the given input to a pointer array of 8-bit integers where the input
+ can be any type and its size (in bytes) must be known.</p></td></tr>
+			   <tr><td><a href='../proc/anytype_copydata.html'>AnyType_CopyData</a></td><td><a href='../module/mbase_anyrankntype.html'>MBase_AnyRankNType</a></td><td>Function</td><td><p>To make a copy of the input data.  The <em>OutData</em> and <em>InData</em> arguments must have the
+ same types, sizes, and ranks.</p></td></tr>
+			   <tr><td><a href='../proc/anytype_getbytesize.html'>AnyType_GetByteSize</a></td><td><a href='../module/mbase_byteutil.html'>MBase_ByteUtil</a></td><td>Function</td><td><p>To return the size in bytes of the specified input.</p></td></tr>
+			   <tr><td><a href='../proc/anytype_swapdata.html'>AnyType_SwapData</a></td><td><a href='../module/mbase_anyrankntype.html'>MBase_AnyRankNType</a></td><td>Function</td><td><p>To swap the specified data.  Both arguments must have the same types, sizes, and ranks.</p></td></tr>
+			   <tr><td><a href='../interface/assignment(=).html'>ASSIGNMENT(=)</a></td><td><a href='../module/mbase_sint128.html'>MBase_SInt128</a></td><td>Interface</td><td><p><strong>Operator Overload</strong>: ASSIGNMENT(=) <br>
+ <strong>Purpose</strong>:  To convert between a 128-bit signed integer and
+  other signed integers (32- and 64-bit integers). <br>
+ <strong>Usage</strong>: <br>
+  ! convert 32-bit signed integer to 128-bit signed integer <br>
+  ---&gt;    I128 = I32 <br>
+  ! convert 128-bit signed integer to 64-bit signed integer <br>
+  ---&gt;    I64 = I128</p></td></tr>
+			   <tr><td><a href='../interface/assignment(=)~2.html'>ASSIGNMENT(=)</a></td><td><a href='../module/mbase_uint128.html'>MBase_UInt128</a></td><td>Interface</td><td><p><strong>Operator Overload</strong>: ASSIGNMENT(=) <br>
+ <strong>Purpose</strong>:  To convert between a 128-bit unsigned integer and
+  other unsigned integers (32- and 64-bit integers). <br>
+ <strong>Usage</strong>: <br>
+  ! convert 32-bit unsigned integer to 128-bit unsigned integer <br>
+  ---&gt;    U128 = U32 <br>
+  ! convert 128-bit unsigned integer to 64-bit unsigned integer <br>
+  ---&gt;    U64 = U128</p></td></tr>
+			   <tr><td><a href='../interface/assignment(=)~3.html'>ASSIGNMENT(=)</a></td><td><a href='../module/mclass_object.html'>MClass_Object</a></td><td>Interface</td><td><p><strong>Operator Overload</strong>: ASSIGNMENT(=) <br>
+ <strong>Purpose</strong>:  To make a copy of an object using an assignment statement. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    Out = Inp</p></td></tr>
+			   <tr><td><a href='../proc/bin2dec_dragonbox128.html'>Bin2Dec_DragonBox128</a></td><td><a href='../module/mbase_bindec128.html'>MBase_BinDec128</a></td><td>Subroutine</td><td><p>To convert a binary floating point number into the shortest and correctly
+ rounded decimal representation using the <em>DragonBox</em> algorithm.</p></td></tr>
+			   <tr><td><a href='../proc/bin2dec_dragonbox32.html'>Bin2Dec_DragonBox32</a></td><td><a href='../module/mbase_bindec32.html'>MBase_BinDec32</a></td><td>Subroutine</td><td><p>To convert a binary floating point number into the shortest and correctly
+ rounded decimal representation using the <em>DragonBox</em> algorithm.</p></td></tr>
+			   <tr><td><a href='../proc/bin2dec_dragonbox64.html'>Bin2Dec_DragonBox64</a></td><td><a href='../module/mbase_bindec64.html'>MBase_BinDec64</a></td><td>Subroutine</td><td><p>To convert a binary floating point number into the shortest and correctly
+ rounded decimal representation using the <em>DragonBox</em> algorithm.</p></td></tr>
+			   <tr><td><a href='../proc/bin2dec_ryu128.html'>Bin2Dec_Ryu128</a></td><td><a href='../module/mbase_bindec128.html'>MBase_BinDec128</a></td><td>Subroutine</td><td><p>To convert a binary floating point number into the shortest and correctly
+ rounded decimal representation using the <em>Ryu</em> algorithm.</p></td></tr>
+			   <tr><td><a href='../proc/bin2dec_ryu32.html'>Bin2Dec_Ryu32</a></td><td><a href='../module/mbase_bindec32.html'>MBase_BinDec32</a></td><td>Subroutine</td><td><p>To convert a binary floating point number into the shortest and correctly
+ rounded decimal representation using the <em>Ryu</em> algorithm.</p></td></tr>
+			   <tr><td><a href='../proc/bin2dec_ryu64.html'>Bin2Dec_Ryu64</a></td><td><a href='../module/mbase_bindec64.html'>MBase_BinDec64</a></td><td>Subroutine</td><td><p>To convert a binary floating point number into the shortest and correctly
+ rounded decimal representation using the <em>Ryu</em> algorithm.</p></td></tr>
+			   <tr><td><a href='../proc/bin2dec_schubfach128.html'>Bin2Dec_Schubfach128</a></td><td><a href='../module/mbase_bindec128.html'>MBase_BinDec128</a></td><td>Subroutine</td><td><p>To convert a binary floating point number into the shortest and correctly
+ rounded decimal representation using the <em>Schubfach</em> algorithm.</p></td></tr>
+			   <tr><td><a href='../proc/bin2dec_schubfach32.html'>Bin2Dec_Schubfach32</a></td><td><a href='../module/mbase_bindec32.html'>MBase_BinDec32</a></td><td>Subroutine</td><td><p>To convert a binary floating point number into the shortest and correctly
+ rounded decimal representation using the <em>Schubfach</em> algorithm.</p></td></tr>
+			   <tr><td><a href='../proc/bin2dec_schubfach64.html'>Bin2Dec_Schubfach64</a></td><td><a href='../module/mbase_bindec64.html'>MBase_BinDec64</a></td><td>Subroutine</td><td><p>To convert a binary floating point number into the shortest and correctly
+ rounded decimal representation using the <em>Schubfach</em> algorithm.</p></td></tr>
+			   <tr><td><a href='../interface/btest.html'>BTEST</a></td><td><a href='../module/mbase_sint128.html'>MBase_SInt128</a></td><td>Interface</td><td><p><strong>Function Interface</strong>: BTEST <br>
+ <strong>Purpose</strong>:  To check whether the bit at the specified position is 0 (False) or 1 (True).
+  (For more information, see detailed explanation of the intrinsic function.) <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    Flag = BTEST(IN, Pos)</p></td></tr>
+			   <tr><td><a href='../interface/btest~2.html'>BTEST</a></td><td><a href='../module/mbase_uint128.html'>MBase_UInt128</a></td><td>Interface</td><td><p><strong>Function Interface</strong>: BTEST <br>
+ <strong>Purpose</strong>:  To check whether the bit at the specified position is 0 (False) or 1 (True).
+  (For more information, see detailed explanation of the intrinsic function.) <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    Flag = BTEST(IN, Pos)</p></td></tr>
+			   <tr><td><a href='../proc/bytearray_2_anytype.html'>ByteArray_2_AnyType</a></td><td><a href='../module/mbase_byteutil.html'>MBase_ByteUtil</a></td><td>Subroutine</td><td><p>To convert an array of 8-bit integers to the specified output.</p></td></tr>
+			   <tr><td><a href='../proc/closeerrorfile.html'>CloseErrorFile</a></td><td><a href='../module/mbase_errhandlers.html'>MBase_ErrHandlers</a></td><td>Subroutine</td><td><p>This subroutine closes the general error file.</p></td></tr>
+			   <tr><td><a href='../interface/closefile.html'>CloseFile</a></td><td><a href='../module/mbase_iohandlers.html'>MBase_IOHandlers</a></td><td>Interface</td><td><p><strong>Subroutine Interface</strong>: CloseFile <br>
+ <strong>Purpose</strong>:  To close the specified file. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    CALL CloseFile(FileIOUnit) <br>
+  ---&gt;    CALL CloseFile(FileName))</p></td></tr>
+			   <tr><td><a href='../proc/closemiscopenfiles.html'>CloseMiscOpenFiles</a></td><td><a href='../module/mbase_errhandlers.html'>MBase_ErrHandlers</a></td><td>Subroutine</td><td><p>This subroutine scans potential unit numbers and closes any that are still open.</p></td></tr>
+			   <tr><td><a href='../proc/closeopenfiles.html'>CloseOpenFiles</a></td><td><a href='../module/mbase_iohandlers.html'>MBase_IOHandlers</a></td><td>Subroutine</td><td><p>To scan potential unit numbers and closes any that are still open.</p></td></tr>
+			   <tr><td><a href='../interface/compare.html'>Compare</a></td><td><a href='../module/mbase_sintutil.html'>MBase_SIntUtil</a></td><td>Interface</td><td><p><strong>Function Interface</strong>: Compare <br>
+ <strong>Purpose</strong>:  To compare two signed integers of the same kind and return <br>
+  -1 if LHS &lt; RHS <br>
+   0 if LHS == RHS <br>
+   1 if LHS &gt; RHS <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    Flag = Compare(LHS, RHS) <br>
+  ---&gt;    IF (Compare(LHS, RHS) /= 0) DoSomething</p></td></tr>
+			   <tr><td><a href='../interface/compare~2.html'>Compare</a></td><td><a href='../module/mbase_sint128.html'>MBase_SInt128</a></td><td>Interface</td><td><p><strong>Function Interface</strong>: Compare <br>
+ <strong>Purpose</strong>:  To compare two 128-bit signed integers and return <br>
+  -1 if LHS &lt; RHS, <br>
+   0 if LHS == RHS, or <br>
+   1 if LHS &gt; RHS. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    Flag = Compare(LHS, RHS) <br>
+  ---&gt;    IF (Compare(LHS, RHS) /= 0) DoSomething</p></td></tr>
+			   <tr><td><a href='../interface/compareunsigned.html'>CompareUnsigned</a></td><td><a href='../module/mbase_uint128.html'>MBase_UInt128</a></td><td>Interface</td><td><p><strong>Function Interface</strong>: CompareUnsigned <br>
+ <strong>Purpose</strong>:  To compare two 128-bit unsigned integers and return <br>
+  -1 if LHS &lt; RHS, <br>
+   0 if LHS == RHS, or <br>
+   1 if LHS &gt; RHS. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    Flag = CompareUnsigned(LHS, RHS) <br>
+  ---&gt;    IF (CompareUnsigned(LHS, RHS) /= 0) DoSomething</p></td></tr>
+			   <tr><td><a href='../interface/compareunsigned~2.html'>CompareUnsigned</a></td><td><a href='../module/mbase_uintutil.html'>MBase_UIntUtil</a></td><td>Interface</td><td><p><strong>Function Interface</strong>: CompareUnsigned <br>
+ <strong>Purpose</strong>:  To compare two unsigned integers (of the same kind) and return <br>
+  -1 if LHS &lt; RHS <br>
+   0 if LHS == RHS <br>
+   1 if LHS &gt; RHS <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    Flag = CompareUnsigned(LHS, RHS) <br>
+  ---&gt;    IF (CompareUnsigned(LHS, RHS) /= 0) DoSomething</p></td></tr>
+			   <tr><td><a href='../proc/converttouppercase.html'>ConvertToUpperCase</a></td><td><a href='../module/mbase_miscutil.html'>MBase_MiscUtil</a></td><td>Function</td><td><p>This function returns the Upper Case representation of the InputString.</p></td></tr>
+			   <tr><td><a href='../proc/countsqfrm_lines.html'>CountSqfrm_Lines</a></td><td><a href='../module/mbase_iohandlers.html'>MBase_IOHandlers</a></td><td>Function</td><td><p>To count the total number of lines in the specified file name where the file
+ can be opened as a sequential-formatted file.</p></td></tr>
+			   <tr><td><a href='../interface/cstd_argsort.html'>CStd_ArgSort</a></td><td><a href='../module/mbase_cppstdutil.html'>MBase_CppStdUtil</a></td><td>Interface</td><td></td></tr>
+			   <tr><td><a href='../interface/cstd_binarysearch.html'>CStd_BinarySearch</a></td><td><a href='../module/mbase_cppstdutil.html'>MBase_CppStdUtil</a></td><td>Interface</td><td></td></tr>
+			   <tr><td><a href='../interface/cstd_issorted.html'>CStd_IsSorted</a></td><td><a href='../module/mbase_cppstdutil.html'>MBase_CppStdUtil</a></td><td>Interface</td><td></td></tr>
+			   <tr><td><a href='../interface/cstd_shuffle.html'>CStd_Shuffle</a></td><td><a href='../module/mbase_cppstdutil.html'>MBase_CppStdUtil</a></td><td>Interface</td><td></td></tr>
+			   <tr><td><a href='../interface/cstd_sort.html'>CStd_Sort</a></td><td><a href='../module/mbase_cppstdutil.html'>MBase_CppStdUtil</a></td><td>Interface</td><td></td></tr>
+			   <tr><td><a href='../proc/d1mach.html'>D1MACH</a></td><td><a href='../module/mbase_legacyutil.html'>MBase_LegacyUtil</a></td><td>Function</td><td><p>To return floating-point machine dependent parameters.</p><a href="../proc/d1mach.html" class="pull-right"><emph>Read more&hellip;</emph></a></td></tr>
+			   <tr><td><a href='../proc/dec2bin_clinger128.html'>Dec2Bin_Clinger128</a></td><td><a href='../module/mbase_bindec128.html'>MBase_BinDec128</a></td><td>Function</td><td><p>To convert a decimal floating point representation into its exact
+ binary floating point representation using the <em>Clinger</em> algorithm.</p></td></tr>
+			   <tr><td><a href='../proc/dec2bin_clinger32.html'>Dec2Bin_Clinger32</a></td><td><a href='../module/mbase_bindec32.html'>MBase_BinDec32</a></td><td>Function</td><td><p>To convert a decimal floating point representation into its exact
+ binary floating point representation using the <em>Clinger</em> algorithm.</p></td></tr>
+			   <tr><td><a href='../proc/dec2bin_clinger64.html'>Dec2Bin_Clinger64</a></td><td><a href='../module/mbase_bindec64.html'>MBase_BinDec64</a></td><td>Function</td><td><p>To convert a decimal floating point representation into its exact
+ binary floating point representation using the <em>Clinger</em> algorithm.</p></td></tr>
+			   <tr><td><a href='../proc/dec2bin_fastfloat128.html'>Dec2Bin_FastFloat128</a></td><td><a href='../module/mbase_bindec128.html'>MBase_BinDec128</a></td><td>Subroutine</td><td><p>To convert a decimal floating point representation (along with a string
+ and its related information) into its closest binary floating point
+ representation using the <em>FastFloat</em> algorithm.</p></td></tr>
+			   <tr><td><a href='../proc/dec2bin_fastfloat32.html'>Dec2Bin_FastFloat32</a></td><td><a href='../module/mbase_bindec32.html'>MBase_BinDec32</a></td><td>Subroutine</td><td><p>To convert a decimal floating point representation (along with a string
+ and its related information) into its closest binary floating point
+ representation using the <em>FastFloat</em> algorithm.</p></td></tr>
+			   <tr><td><a href='../proc/dec2bin_fastfloat64.html'>Dec2Bin_FastFloat64</a></td><td><a href='../module/mbase_bindec64.html'>MBase_BinDec64</a></td><td>Subroutine</td><td><p>To convert a decimal floating point representation (along with a string
+ and its related information) into its closest binary floating point
+ representation using the <em>FastFloat</em> algorithm.</p></td></tr>
+			   <tr><td><a href='../proc/dec2bin_lemire128.html'>Dec2Bin_Lemire128</a></td><td><a href='../module/mbase_bindec128.html'>MBase_BinDec128</a></td><td>Function</td><td><p>To convert a decimal floating point representation (along with a string
+ and its related information) into its closest binary floating point
+ representation using the <em>Lemire</em> algorithm.</p></td></tr>
+			   <tr><td><a href='../proc/dec2bin_lemire32.html'>Dec2Bin_Lemire32</a></td><td><a href='../module/mbase_bindec32.html'>MBase_BinDec32</a></td><td>Function</td><td><p>To convert a decimal floating point representation (along with a string
+ and its related information) into its closest binary floating point
+ representation using the <em>Lemire</em> algorithm.</p></td></tr>
+			   <tr><td><a href='../proc/dec2bin_lemire64.html'>Dec2Bin_Lemire64</a></td><td><a href='../module/mbase_bindec64.html'>MBase_BinDec64</a></td><td>Function</td><td><p>To convert a decimal floating point representation (along with a string
+ and its related information) into its closest binary floating point
+ representation using the <em>Lemire</em> algorithm.</p></td></tr>
+			   <tr><td><a href='../proc/dec2bin_libc128.html'>Dec2Bin_LibC128</a></td><td><a href='../module/mbase_bindec128.html'>MBase_BinDec128</a></td><td>Subroutine</td><td><p>To convert a decimal floating point representation (along with a string
+ and its related information) into its closest binary floating point
+ representation using the <em>LibC</em> algorithm.</p></td></tr>
+			   <tr><td><a href='../proc/dec2bin_libc32.html'>Dec2Bin_LibC32</a></td><td><a href='../module/mbase_bindec32.html'>MBase_BinDec32</a></td><td>Subroutine</td><td><p>To convert a decimal floating point representation (along with a string
+ and its related information) into its closest binary floating point
+ representation using the <em>LibC</em> algorithm.</p></td></tr>
+			   <tr><td><a href='../proc/dec2bin_libc64.html'>Dec2Bin_LibC64</a></td><td><a href='../module/mbase_bindec64.html'>MBase_BinDec64</a></td><td>Subroutine</td><td><p>To convert a decimal floating point representation (along with a string
+ and its related information) into its closest binary floating point
+ representation using the <em>LibC</em> algorithm.</p></td></tr>
+			   <tr><td><a href='../proc/dec2bin_yy128.html'>Dec2Bin_YY128</a></td><td><a href='../module/mbase_bindec128.html'>MBase_BinDec128</a></td><td>Function</td><td><p>To convert a decimal floating point representation (along with a string
+ and its related information) into its closest binary floating point
+ representation using the <em>YY</em> algorithm.</p></td></tr>
+			   <tr><td><a href='../proc/dec2bin_yy32.html'>Dec2Bin_YY32</a></td><td><a href='../module/mbase_bindec32.html'>MBase_BinDec32</a></td><td>Function</td><td><p>To convert a decimal floating point representation (along with a string
+ and its related information) into its closest binary floating point
+ representation using the <em>YY</em> algorithm.</p></td></tr>
+			   <tr><td><a href='../proc/dec2bin_yy64.html'>Dec2Bin_YY64</a></td><td><a href='../module/mbase_bindec64.html'>MBase_BinDec64</a></td><td>Function</td><td><p>To convert a decimal floating point representation (along with a string
+ and its related information) into its closest binary floating point
+ representation using the <em>YY</em> algorithm.</p></td></tr>
+			   <tr><td><a href='../interface/decrement.html'>Decrement</a></td><td><a href='../module/mbase_sint128.html'>MBase_SInt128</a></td><td>Interface</td><td><p><strong>Subroutine Interface</strong>: Decrement <br>
+ <strong>Purpose</strong>:  To decrease value of a 128-bit signed integer by one. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    CALL Decrement(I128)</p></td></tr>
+			   <tr><td><a href='../interface/decrement~2.html'>Decrement</a></td><td><a href='../module/mbase_uint128.html'>MBase_UInt128</a></td><td>Interface</td><td><p><strong>Subroutine Interface</strong>: Decrement <br>
+ <strong>Purpose</strong>:  To decrease value of a 128-bit unsigned integer by one. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    CALL Decrement(U128)</p></td></tr>
+			   <tr><td><a href='../interface/display.html'>Display</a></td><td><a href='../module/mbase_sint128.html'>MBase_SInt128</a></td><td>Interface</td><td><p><strong>Subroutine Interface</strong>: Display <br>
+ <strong>Purpose</strong>:  To write/display the 'SInt128' object to the screen (or the specified unit). <br>
+ <strong>Usage</strong>: <br>
+  ! To display (signed) value of I128 as a decimal string to the screen <br>
+  ---&gt;    CALL Display(I128) <br>
+  ! To display (signed) value of I128 as a decimal string to the output logical unit <br>
+  ---&gt;    CALL Display(I128, 11) <br>
+  ! To display (signed) value of I128 as a decimal string to the output logical unit <br>
+  with input/output status and message <br>
+  ---&gt;    CALL Display(I128, 11, IOStat, IOMsg) <br>
+  ! To display (signed) values of components of I128 as a decimal string to the screen <br>
+  ---&gt;    CALL Display(I128, ShowComponent=.TRUE.) <br>
+  ! To display (signed) value of I128 as a decimal string to the screen with a prefix string <br>
+  ---&gt;    CALL Display(I128, Prefix='Signed value of I128')</p></td></tr>
+			   <tr><td><a href='../interface/display~2.html'>Display</a></td><td><a href='../module/mbase_uint128.html'>MBase_UInt128</a></td><td>Interface</td><td><p><strong>Subroutine Interface</strong>: Display <br>
+ <strong>Purpose</strong>:  To write/display the 'UInt128' object to the screen (or the specified unit). <br>
+ <strong>Usage</strong>: <br>
+  ! To display (unsigned) value of U128 as a decimal string to the screen <br>
+  ---&gt;    CALL Display(U128) <br>
+  ! To display (unsigned) value of U128 as a decimal string to the output logical unit <br>
+  ---&gt;    CALL Display(U128, 11) <br>
+  ! To display (unsigned) value of U128 as a decimal string to the output logical unit <br>
+  ! with input/output status and message <br>
+  ---&gt;    CALL Display(U128, 11, IOStat, IOMsg) <br>
+  ! To display (signed) values of components of U128 as a decimal string to the screen <br>
+  ---&gt;    CALL Display(U128, ShowComponent=.TRUE.) <br>
+  ! To display (unsigned) value of U128 as a decimal string to the screen with a prefix string <br>
+  ---&gt;    CALL Display(U128, Prefix='Unsigned value of U128')</p></td></tr>
+			   <tr><td><a href='../proc/displaycontinueerror.html'>DisplayContinueError</a></td><td><a href='../module/mbase_errhandlers.html'>MBase_ErrHandlers</a></td><td>Subroutine</td><td><p>To display a 'Continued Error' message.</p></td></tr>
+			   <tr><td><a href='../proc/displayfatalerror.html'>DisplayFatalError</a></td><td><a href='../module/mbase_errhandlers.html'>MBase_ErrHandlers</a></td><td>Subroutine</td><td><p>To display a 'Fatal Error' message.</p></td></tr>
+			   <tr><td><a href='../proc/displaymessage.html'>DisplayMessage</a></td><td><a href='../module/mbase_errhandlers.html'>MBase_ErrHandlers</a></td><td>Subroutine</td><td><p>To display a (informative) message on designated output Files.</p></td></tr>
+			   <tr><td><a href='../proc/displaynumberandstring.html'>DisplayNumberAndString</a></td><td><a href='../module/mbase_miscutil.html'>MBase_MiscUtil</a></td><td>Subroutine</td><td><p>To display (at set point on screen for screen positioning models) card images
+ during program parsing.</p></td></tr>
+			   <tr><td><a href='../proc/displaysevereerror.html'>DisplaySevereError</a></td><td><a href='../module/mbase_errhandlers.html'>MBase_ErrHandlers</a></td><td>Subroutine</td><td><p>To display a 'Severe Error' message.</p></td></tr>
+			   <tr><td><a href='../proc/displaystring.html'>DisplayString</a></td><td><a href='../module/mbase_miscutil.html'>MBase_MiscUtil</a></td><td>Subroutine</td><td><p>To display string on screen during program execution.</p></td></tr>
+			   <tr><td><a href='../proc/displaywarningerror.html'>DisplayWarningError</a></td><td><a href='../module/mbase_errhandlers.html'>MBase_ErrHandlers</a></td><td>Subroutine</td><td><p>To display a 'Warning Error' message.</p></td></tr>
+			   <tr><td><a href='../interface/divide.html'>Divide</a></td><td><a href='../module/mbase_sint128.html'>MBase_SInt128</a></td><td>Interface</td><td><p><strong>Subroutine Interface</strong>: Divide <br>
+ <strong>Purpose</strong>:  To perform a division: This = This / Other. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    CALL Divide(This, Other)</p></td></tr>
+			   <tr><td><a href='../interface/divide~2.html'>Divide</a></td><td><a href='../module/mbase_uint128.html'>MBase_UInt128</a></td><td>Interface</td><td><p><strong>Subroutine Interface</strong>: Divide <br>
+ <strong>Purpose</strong>:  To perform a division: This = This / Other. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    CALL Divide(This, Other)</p></td></tr>
+			   <tr><td><a href='../interface/divmod.html'>DivMod</a></td><td><a href='../module/mbase_sint128.html'>MBase_SInt128</a></td><td>Interface</td><td><p><strong>Subroutine Interface</strong>: DivMod <br>
+ <strong>Purpose</strong>:  To perform a division of two signed integers (where the
+  dividend (numerator) is a 128-bit signed integer and the divisor
+  (denominator) can be 32-, 64- or 128-bit signed integer) and
+  to return both the quotient and the remainder. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    CALL DivMod(NUMER, DENOM, QUOT, REM)</p></td></tr>
+			   <tr><td><a href='../interface/divmodxp.html'>DivModXp</a></td><td><a href='../module/mbase_sint128.html'>MBase_SInt128</a></td><td>Interface</td><td></td></tr>
+			   <tr><td><a href='../proc/doesdirectoryexist.html'>DoesDirectoryExist</a></td><td><a href='../module/mbase_systemutil.html'>MBase_SystemUtil</a></td><td>Function</td><td><p>To check directory if the given directory exists.</p></td></tr>
+			   <tr><td><a href='../proc/doesfileexist.html'>DoesFileExist</a></td><td><a href='../module/mbase_iohandlers.html'>MBase_IOHandlers</a></td><td>Function</td><td><p>To check whether the file associated with the specified name exists or not</p></td></tr>
+			   <tr><td><a href='../proc/dumach.html'>DUMACH</a></td><td><a href='../module/mbase_legacyutil.html'>MBase_LegacyUtil</a></td><td>Function</td><td><p>To compute the unit roundoff of the machine.</p><a href="../proc/dumach.html" class="pull-right"><emph>Read more&hellip;</emph></a></td></tr>
+			   <tr><td><a href='../proc/find_inorder_predecessor.html'>Find_Inorder_Predecessor</a></td><td><a href='../module/mclass_intrusivebstrees.html'>MClass_IntrusiveBSTrees</a></td><td>Subroutine</td><td></td></tr>
+			   <tr><td><a href='../proc/find_inorder_successor.html'>Find_Inorder_Successor</a></td><td><a href='../module/mclass_intrusivebstrees.html'>MClass_IntrusiveBSTrees</a></td><td>Subroutine</td><td></td></tr>
+			   <tr><td><a href='../interface/findlowerindex.html'>FindLowerIndex</a></td><td><a href='../module/mbase_miscutil.html'>MBase_MiscUtil</a></td><td>Interface</td><td><p><strong>Function Interface</strong>: FindLowerIndex <br>
+<strong>Purpose</strong>:  To find index of the lower limit. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    Indx = FindLowerIndex(Limits, Val) <br>
+ <strong>Note</strong>:  The index is I where Val &gt; Limits(I) and Val &lt;= Limits(I+1). <br></p></td></tr>
+			   <tr><td><a href='../proc/fmlib_init.html'>FMLib_Init</a></td><td><a href='../module/mbase_miscutil.html'>MBase_MiscUtil</a></td><td>Subroutine</td><td><p>To initialize the FMLIB library.</p></td></tr>
+			   <tr><td><a href='../proc/format_real128.html'>Format_Real128</a></td><td><a href='../module/mbase_bindec128.html'>MBase_BinDec128</a></td><td>Function</td><td><p>To format the decimal representation Fp*(10^Ep).</p></td></tr>
+			   <tr><td><a href='../proc/format_real32.html'>Format_Real32</a></td><td><a href='../module/mbase_bindec32.html'>MBase_BinDec32</a></td><td>Function</td><td><p>To format the decimal representation Fp*(10^Ep).</p></td></tr>
+			   <tr><td><a href='../proc/format_real64.html'>Format_Real64</a></td><td><a href='../module/mbase_bindec64.html'>MBase_BinDec64</a></td><td>Function</td><td><p>To format the decimal representation Fp*(10^Ep).</p></td></tr>
+			   <tr><td><a href='../interface/gcd.html'>GCD</a></td><td><a href='../module/mbase_mathutil.html'>MBase_MathUtil</a></td><td>Interface</td><td><p><strong>Function Interface</strong>: GCD <br>
+<strong>Purpose</strong>:  To return the greatest common divisor of A and B.  To return 0
+              if A &lt; 0 or B &lt; 0.  Also, return 0 if A == 0 and B == 0. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    GCDNum = GCD(A, B) <br></p></td></tr>
+			   <tr><td><a href='../proc/getcompilername.html'>GetCompilerName</a></td><td><a href='../module/mbase_systemutil.html'>MBase_SystemUtil</a></td><td>Function</td><td><p>To return the name of the current compiler in use.</p></td></tr>
+			   <tr><td><a href='../proc/getdatatype.html'>GetDataType</a></td><td><a href='../module/mclass_gendata.html'>MClass_GenData</a></td><td>Function</td><td><p>To return the type of the specified input.</p></td></tr>
+			   <tr><td><a href='../interface/geterrormessage.html'>GetErrorMessage</a></td><td><a href='../module/mclass_mathexpparser.html'>MClass_MathExpParser</a></td><td>Interface</td><td><p><strong>Function Interface</strong>: GetErrorMessage <br>
+<strong>Purpose</strong>:  To return an error message corresponding to the specified error code. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    ErrMsg = Parser_ErrorMsg(ErrCode) <br></p></td></tr>
+			   <tr><td><a href='../proc/getfileiounit.html'>GetFileIOUnit</a></td><td><a href='../module/mbase_iohandlers.html'>MBase_IOHandlers</a></td><td>Function</td><td><p>To return a unit number of the file associated with the specified name.</p></td></tr>
+			   <tr><td><a href='../proc/getfilename.html'>GetFileName</a></td><td><a href='../module/mbase_iohandlers.html'>MBase_IOHandlers</a></td><td>Function</td><td><p>To extract and return the file name (which includes the extension name) from
+ the specified full path name.  Optionally, also return the path name and/or
+ the extension name if present and exists.</p></td></tr>
+			   <tr><td><a href='../proc/getiounits_allopenfile.html'>GetIOUnits_AllOpenFile</a></td><td><a href='../module/mbase_iohandlers.html'>MBase_IOHandlers</a></td><td>Function</td><td><p>To return a number of currently opened files and their associated unit numbers.</p></td></tr>
+			   <tr><td><a href='../proc/getkeyorderedtype.html'>GetKeyOrderedType</a></td><td><a href='../module/mclass_keyordered.html'>MClass_KeyOrdered</a></td><td>Function</td><td><p>To return the key type of the specified input.</p></td></tr>
+			   <tr><td><a href='../proc/getnewiounit.html'>GetNewIOUnit</a></td><td><a href='../module/mbase_iohandlers.html'>MBase_IOHandlers</a></td><td>Function</td><td><p>To return a input/output unit number that can exist and is not connected.</p></td></tr>
+			   <tr><td><a href='../proc/getosname.html'>GetOSName</a></td><td><a href='../module/mbase_systemutil.html'>MBase_SystemUtil</a></td><td>Function</td><td><p>To return the name of the current operating system in use.</p></td></tr>
+			   <tr><td><a href='../proc/handle_erralloc.html'>Handle_ErrAlloc</a></td><td><a href='../module/mbase_errhandlers.html'>MBase_ErrHandlers</a></td><td>Subroutine</td><td><p>To handle allocation error if necessary (i.e. Stat /= 0).</p></td></tr>
+			   <tr><td><a href='../proc/handle_errdealloc.html'>Handle_ErrDealloc</a></td><td><a href='../module/mbase_errhandlers.html'>MBase_ErrHandlers</a></td><td>Subroutine</td><td><p>To handle deallocation error if necessary (i.e. Stat /= 0).</p></td></tr>
+			   <tr><td><a href='../proc/handle_errlevel.html'>Handle_ErrLevel</a></td><td><a href='../module/mbase_errhandlers.html'>MBase_ErrHandlers</a></td><td>Subroutine</td><td><p>To handle the error occurred according to the specified error level (and the
+ configuration mode defined in the "Macro - Basic Definitions.f90" file).</p></td></tr>
+			   <tr><td><a href='../proc/handle_erropen.html'>Handle_ErrOpen</a></td><td><a href='../module/mbase_errhandlers.html'>MBase_ErrHandlers</a></td><td>Subroutine</td><td><p>To handle error due to open file operation according to the specified error level (and
+ the configuration mode defined in the "Macro - Basic Definitions.f90" file).</p></td></tr>
+			   <tr><td><a href='../proc/handle_invalid_string128.html'>Handle_Invalid_String128</a></td><td><a href='../module/mbase_bindec128.html'>MBase_BinDec128</a></td><td>Function</td><td><p>To handle invalid input string.</p></td></tr>
+			   <tr><td><a href='../proc/handle_invalid_string32.html'>Handle_Invalid_String32</a></td><td><a href='../module/mbase_bindec32.html'>MBase_BinDec32</a></td><td>Function</td><td><p>To handle invalid input string.</p></td></tr>
+			   <tr><td><a href='../proc/handle_invalid_string64.html'>Handle_Invalid_String64</a></td><td><a href='../module/mbase_bindec64.html'>MBase_BinDec64</a></td><td>Function</td><td><p>To handle invalid input string.</p></td></tr>
+			   <tr><td><a href='../proc/hash32_ap.html'>Hash32_AP</a></td><td><a href='../module/mbase_simplehash32.html'>MBase_SimpleHash32</a></td><td>Function</td><td><p>To compute the hash value using the AP hash algorithm by Arash Partow [1].</p></td></tr>
+			   <tr><td><a href='../proc/hash32_dek.html'>Hash32_DEK</a></td><td><a href='../module/mbase_simplehash32.html'>MBase_SimpleHash32</a></td><td>Function</td><td><p>To compute the hash value using the DEK hash algorithm by Donald E. Knuth [1].</p></td></tr>
+			   <tr><td><a href='../proc/hash32_djb.html'>Hash32_DJB</a></td><td><a href='../module/mbase_simplehash32.html'>MBase_SimpleHash32</a></td><td>Function</td><td><p>To compute the hash value using the DJB2 hash algorithm by
+ Daniel J. Bernstein [1, 5].</p></td></tr>
+			   <tr><td><a href='../proc/hash32_elf.html'>Hash32_ELF</a></td><td><a href='../module/mbase_simplehash32.html'>MBase_SimpleHash32</a></td><td>Function</td><td><p>To compute the hash value using the PJW hash algorithm (tweaked for
+ 32-bit processors) as implemented on UNIX-based systems.</p></td></tr>
+			   <tr><td><a href='../proc/hash32_fnv1.html'>Hash32_FNV1</a></td><td><a href='../module/mbase_simplehash32.html'>MBase_SimpleHash32</a></td><td>Function</td><td><p>To compute the hash value using the FNV-1 hash algorithm by Glenn Fowler,
+ Landon Curt Noll, and Phong Vo [7].</p></td></tr>
+			   <tr><td><a href='../proc/hash32_fnv1a.html'>Hash32_FNV1a</a></td><td><a href='../module/mbase_simplehash32.html'>MBase_SimpleHash32</a></td><td>Function</td><td><p>To compute the hash value using the FNV-1a hash algorithm by Glenn Fowler,
+ Landon Curt Noll, and Phong Vo [7].</p></td></tr>
+			   <tr><td><a href='../proc/hash32_js.html'>Hash32_JS</a></td><td><a href='../module/mbase_simplehash32.html'>MBase_SimpleHash32</a></td><td>Function</td><td><p>To compute the hash value using the JS hash algorithm by Justin Sobel [1].</p></td></tr>
+			   <tr><td><a href='../proc/hash32_oat.html'>Hash32_OAT</a></td><td><a href='../module/mbase_simplehash32.html'>MBase_SimpleHash32</a></td><td>Function</td><td><p>To compute the hash value using the OAT (One-At-a-Time) hash algorithm by
+ Bob Jenkins [8].</p></td></tr>
+			   <tr><td><a href='../proc/hash32_pjw.html'>Hash32_PJW</a></td><td><a href='../module/mbase_simplehash32.html'>MBase_SimpleHash32</a></td><td>Function</td><td><p>To compute the hash value using the PJW hash algorithm by Peter J. Weinberger [1, 4].</p></td></tr>
+			   <tr><td><a href='../proc/hash32_rs.html'>Hash32_RS</a></td><td><a href='../module/mbase_simplehash32.html'>MBase_SimpleHash32</a></td><td>Function</td><td><p>To compute the hash value using the RS hash algorithm by Robert Sedgewick [1],
+ which is based on the universal hash function in [3].</p></td></tr>
+			   <tr><td><a href='../proc/hash32_sdbm.html'>Hash32_SDBM</a></td><td><a href='../module/mbase_simplehash32.html'>MBase_SimpleHash32</a></td><td>Function</td><td><p>To compute the hash value using the SDBM hash algorithm [1, 5].</p></td></tr>
+			   <tr><td><a href='../proc/hash32_tm.html'>Hash32_TM</a></td><td><a href='../module/mbase_simplehash32.html'>MBase_SimpleHash32</a></td><td>Function</td><td><p>To compute the hash value using the TM hash algorithm by Thomas Mueller [6].</p></td></tr>
+			   <tr><td><a href='../proc/hash64_ap.html'>Hash64_AP</a></td><td><a href='../module/mbase_simplehash64.html'>MBase_SimpleHash64</a></td><td>Function</td><td><p>To compute the hash value using the AP hash algorithm by Arash Partow [1].</p></td></tr>
+			   <tr><td><a href='../proc/hash64_dek.html'>Hash64_DEK</a></td><td><a href='../module/mbase_simplehash64.html'>MBase_SimpleHash64</a></td><td>Function</td><td><p>To compute the hash value using the DEK hash algorithm by Donald E. Knuth [1].</p></td></tr>
+			   <tr><td><a href='../proc/hash64_djb.html'>Hash64_DJB</a></td><td><a href='../module/mbase_simplehash64.html'>MBase_SimpleHash64</a></td><td>Function</td><td><p>To compute the hash value using the DJB2 hash algorithm by
+ Daniel J. Bernstein [1, 5].</p></td></tr>
+			   <tr><td><a href='../proc/hash64_fnv1.html'>Hash64_FNV1</a></td><td><a href='../module/mbase_simplehash64.html'>MBase_SimpleHash64</a></td><td>Function</td><td><p>To compute the hash value using the FNV-1 hash algorithm by Glenn Fowler,
+ Landon Curt Noll, and Phong Vo [7].</p></td></tr>
+			   <tr><td><a href='../proc/hash64_fnv1a.html'>Hash64_FNV1a</a></td><td><a href='../module/mbase_simplehash64.html'>MBase_SimpleHash64</a></td><td>Function</td><td><p>To compute the hash value using the FNV-1a hash algorithm by Glenn Fowler,
+ Landon Curt Noll, and Phong Vo [7].</p></td></tr>
+			   <tr><td><a href='../proc/hash64_js.html'>Hash64_JS</a></td><td><a href='../module/mbase_simplehash64.html'>MBase_SimpleHash64</a></td><td>Function</td><td><p>To compute the hash value using the JS hash algorithm by Justin Sobel [1].</p></td></tr>
+			   <tr><td><a href='../proc/hash64_oat.html'>Hash64_OAT</a></td><td><a href='../module/mbase_simplehash64.html'>MBase_SimpleHash64</a></td><td>Function</td><td><p>To compute the hash value using the OAT (One-At-a-Time) hash algorithm by
+ Bob Jenkins [8].</p></td></tr>
+			   <tr><td><a href='../proc/hash64_pjw.html'>Hash64_PJW</a></td><td><a href='../module/mbase_simplehash64.html'>MBase_SimpleHash64</a></td><td>Function</td><td><p>To compute the hash value using the PJW hash algorithm by Peter J. Weinberger [1, 4].</p></td></tr>
+			   <tr><td><a href='../proc/hash64_rs.html'>Hash64_RS</a></td><td><a href='../module/mbase_simplehash64.html'>MBase_SimpleHash64</a></td><td>Function</td><td><p>To compute the hash value using the RS hash algorithm by Robert Sedgewick [1],
+ which is based on the universal hash function in [3].</p></td></tr>
+			   <tr><td><a href='../proc/hash64_sdbm.html'>Hash64_SDBM</a></td><td><a href='../module/mbase_simplehash64.html'>MBase_SimpleHash64</a></td><td>Function</td><td><p>To compute the hash value using the SDBM hash algorithm [1, 5].</p></td></tr>
+			   <tr><td><a href='../proc/hash64_tm.html'>Hash64_TM</a></td><td><a href='../module/mbase_simplehash64.html'>MBase_SimpleHash64</a></td><td>Function</td><td><p>To compute the hash value using the TM hash algorithm by Thomas Mueller [6].</p></td></tr>
+			   <tr><td><a href='../interface/hextobytes_be.html'>HexToBytes_BE</a></td><td><a href='../module/mbase_byteutil.html'>MBase_ByteUtil</a></td><td>Interface</td><td><p><strong>Subroutine Interface</strong>: HexToBytes_BE <br>
+ <strong>Purpose</strong>:  To convert a hexadecimal string to an array of 8-bit
+               integer numbers (stored in big-endian order). <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    CALL HexToBytes_BE(HexStr, ByteArr)</p></td></tr>
+			   <tr><td><a href='../interface/hextobytes_le.html'>HexToBytes_LE</a></td><td><a href='../module/mbase_byteutil.html'>MBase_ByteUtil</a></td><td>Interface</td><td><p><strong>Subroutine Interface</strong>: HexToBytes_LE <br>
+ <strong>Purpose</strong>:  To convert a hexadecimal string to an array of 8-bit
+               integer numbers (stored in little-endian order). <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    CALL HexToBytes_LE(HexStr, ByteArr)</p></td></tr>
+			   <tr><td><a href='../interface/highestonebit.html'>HighestOneBit</a></td><td><a href='../module/mbase_sintutil.html'>MBase_SIntUtil</a></td><td>Interface</td><td><p><strong>Function Interface</strong>: HighestOneBit <br>
+ <strong>Purpose</strong>:  To return an integer value (same kind as the specified integer value) with at most
+  a single one-bit, in the position of the highest-order (leftmost) one-bit in the input. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    OUTPUT = HighestOneBit(INPUT)</p></td></tr>
+			   <tr><td><a href='../proc/i1mach.html'>I1MACH</a></td><td><a href='../module/mbase_legacyutil.html'>MBase_LegacyUtil</a></td><td>Function</td><td><p>To return integer machine dependent parameters.</p><a href="../proc/i1mach.html" class="pull-right"><emph>Read more&hellip;</emph></a></td></tr>
+			   <tr><td><a href='../proc/i32_fromchar.html'>I32_FromChar</a></td><td><a href='../module/mbase_sintutil.html'>MBase_SIntUtil</a></td><td>Function</td><td><p>To convert a decimal string to an integer value</p></td></tr>
+			   <tr><td><a href='../proc/i64_fromchar.html'>I64_FromChar</a></td><td><a href='../module/mbase_sintutil.html'>MBase_SIntUtil</a></td><td>Function</td><td><p>To convert a decimal string to an integer value</p></td></tr>
+			   <tr><td><a href='../interface/iand.html'>IAND</a></td><td><a href='../module/mbase_sint128.html'>MBase_SInt128</a></td><td>Interface</td><td><p><strong>Function Interface</strong>: IAND <br>
+ <strong>Purpose</strong>:  To perform a logical AND on corresponding bits of the input.
+  (For more information, see detailed explanation of the intrinsic function.) <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    OUT = IAND(LHSIN, RHSIN)</p></td></tr>
+			   <tr><td><a href='../interface/iand~2.html'>IAND</a></td><td><a href='../module/mbase_uint128.html'>MBase_UInt128</a></td><td>Interface</td><td><p><strong>Function Interface</strong>: IAND <br>
+ <strong>Purpose</strong>:  To perform a logical AND on corresponding bits of the input.
+  (For more information, see detailed explanation of the intrinsic function.) <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    OUT = IAND(LHSIN, RHSIN)</p></td></tr>
+			   <tr><td><a href='../interface/ibchng.html'>IBCHNG</a></td><td><a href='../module/mbase_sint128.html'>MBase_SInt128</a></td><td>Interface</td><td><p><strong>Function Interface</strong>: IBCHNG <br>
+ <strong>Purpose</strong>:  To reverse the bit at the specified position.
+  (For more information, see detailed explanation of the intrinsic function.) <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    OUT = IBCHNG(IN, Pos)</p></td></tr>
+			   <tr><td><a href='../interface/ibchng~2.html'>IBCHNG</a></td><td><a href='../module/mbase_uint128.html'>MBase_UInt128</a></td><td>Interface</td><td><p><strong>Function Interface</strong>: IBCHNG <br>
+ <strong>Purpose</strong>:  To reverse the bit at the specified position.
+  (For more information, see detailed explanation of the intrinsic function.) <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    OUT = IBCHNG(IN, Pos)</p></td></tr>
+			   <tr><td><a href='../interface/ibclr.html'>IBCLR</a></td><td><a href='../module/mbase_sint128.html'>MBase_SInt128</a></td><td>Interface</td><td><p><strong>Function Interface</strong>: IBCLR <br>
+ <strong>Purpose</strong>:  To set the bit at the specified position to 0.
+  (For more information, see detailed explanation of the intrinsic function.) <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    OUT = IBCLR(IN, Pos)</p></td></tr>
+			   <tr><td><a href='../interface/ibclr~2.html'>IBCLR</a></td><td><a href='../module/mbase_uint128.html'>MBase_UInt128</a></td><td>Interface</td><td><p><strong>Function Interface</strong>: IBCLR <br>
+ <strong>Purpose</strong>:  To set the bit at the specified position to 0.
+  (For more information, see detailed explanation of the intrinsic function.) <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    OUT = IBCLR(IN, Pos)</p></td></tr>
+			   <tr><td><a href='../interface/ibits.html'>IBITS</a></td><td><a href='../module/mbase_sint128.html'>MBase_SInt128</a></td><td>Interface</td><td><p><strong>Function Interface</strong>: IBITS <br>
+ <strong>Purpose</strong>:  To extract a sequence of bits according to the specified input.
+  (For more information, see detailed explanation of the intrinsic function.) <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    OUT = IBITS(IN, Pos, Len)</p></td></tr>
+			   <tr><td><a href='../interface/ibits~2.html'>IBITS</a></td><td><a href='../module/mbase_uint128.html'>MBase_UInt128</a></td><td>Interface</td><td><p><strong>Function Interface</strong>: IBITS <br>
+ <strong>Purpose</strong>:  To extract a sequence of bits according to the specified input.
+  (For more information, see detailed explanation of the intrinsic function.) <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    OUT = IBITS(IN, Pos, Len)</p></td></tr>
+			   <tr><td><a href='../interface/ibset.html'>IBSET</a></td><td><a href='../module/mbase_sint128.html'>MBase_SInt128</a></td><td>Interface</td><td><p><strong>Function Interface</strong>: IBSET <br>
+ <strong>Purpose</strong>:  To set the bit at the specified position to 1.
+  (For more information, see detailed explanation of the intrinsic function.) <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    OUT = IBSET(IN, Pos)</p></td></tr>
+			   <tr><td><a href='../interface/ibset~2.html'>IBSET</a></td><td><a href='../module/mbase_uint128.html'>MBase_UInt128</a></td><td>Interface</td><td><p><strong>Function Interface</strong>: IBSET <br>
+ <strong>Purpose</strong>:  To set the bit at the specified position to 1.
+  (For more information, see detailed explanation of the intrinsic function.) <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    OUT = IBSET(IN, Pos)</p></td></tr>
+			   <tr><td><a href='../proc/identitymatrix.html'>IdentityMatrix</a></td><td><a href='../module/mbase_mathutil.html'>MBase_MathUtil</a></td><td>Function</td><td><p>To create identity matrix.</p></td></tr>
+			   <tr><td><a href='../interface/ieor.html'>IEOR</a></td><td><a href='../module/mbase_sint128.html'>MBase_SInt128</a></td><td>Interface</td><td><p><strong>Function Interface</strong>: IEOR <br>
+ <strong>Purpose</strong>:  To perform an exclusive OR on corresponding bits of the input.
+  (For more information, see detailed explanation of the intrinsic function.) <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    OUT = IEOR(LHSIN, RHSIN)</p></td></tr>
+			   <tr><td><a href='../interface/ieor~2.html'>IEOR</a></td><td><a href='../module/mbase_uint128.html'>MBase_UInt128</a></td><td>Interface</td><td><p><strong>Function Interface</strong>: IEOR <br>
+ <strong>Purpose</strong>:  To perform an exclusive OR on corresponding bits of the input.
+  (For more information, see detailed explanation of the intrinsic function.) <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    OUT = IEOR(LHSIN, RHSIN)</p></td></tr>
+			   <tr><td><a href='../interface/increment.html'>Increment</a></td><td><a href='../module/mbase_sint128.html'>MBase_SInt128</a></td><td>Interface</td><td><p><strong>Subroutine Interface</strong>: Increment <br>
+ <strong>Purpose</strong>:  To increase value of a 128-bit signed integer by one. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    CALL Increment(I128)</p></td></tr>
+			   <tr><td><a href='../interface/increment~2.html'>Increment</a></td><td><a href='../module/mbase_uint128.html'>MBase_UInt128</a></td><td>Interface</td><td><p><strong>Subroutine Interface</strong>: Increment <br>
+ <strong>Purpose</strong>:  To increase value of a 128-bit unsigned integer by one. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    CALL Increment(U128)</p></td></tr>
+			   <tr><td><a href='../proc/index_init.html'>Index_Init</a></td><td><a href='../module/mbase_miscutil.html'>MBase_MiscUtil</a></td><td>Subroutine</td><td><p>To initialize indices.</p></td></tr>
+			   <tr><td><a href='../interface/inrange.html'>InRange</a></td><td><a href='../module/mbase_miscutil.html'>MBase_MiscUtil</a></td><td>Interface</td><td><p><strong>Function Interface</strong>: InRange <br>
+<strong>Purpose</strong>:  To check if the value is in the specified range or not.
+      Return true if it is.  Otherwise, return false. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    Flag = InRange(Val, UppLimit, LowLimit) <br>
+  ---&gt;    IF (.NOT.InRange(Val, UppLimit, LowLimit)) DoSomething <br></p></td></tr>
+			   <tr><td><a href='../interface/ior.html'>IOR</a></td><td><a href='../module/mbase_sint128.html'>MBase_SInt128</a></td><td>Interface</td><td><p><strong>Function Interface</strong>: IOR <br>
+ <strong>Purpose</strong>:  To perform an inclusive OR on corresponding bits of the input.
+  (For more information, see detailed explanation of the intrinsic function.) <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    OUT = IOR(LHSIN, RHSIN)</p></td></tr>
+			   <tr><td><a href='../interface/ior~2.html'>IOR</a></td><td><a href='../module/mbase_uint128.html'>MBase_UInt128</a></td><td>Interface</td><td><p><strong>Function Interface</strong>: IOR <br>
+ <strong>Purpose</strong>:  To perform an inclusive OR on corresponding bits of the input.
+  (For more information, see detailed explanation of the intrinsic function.) <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    OUT = IOR(LHSIN, RHSIN)</p></td></tr>
+			   <tr><td><a href='../proc/is_character_alphanum.html'>Is_Character_AlphaNum</a></td><td><a href='../module/mbase_charutil.html'>MBase_CharUtil</a></td><td>Function</td><td><p>To check whether the given character is in the 'ALPHABET' set or 'DIGIT' set.</p></td></tr>
+			   <tr><td><a href='../proc/is_character_ascii.html'>Is_Character_ASCII</a></td><td><a href='../module/mbase_charutil.html'>MBase_CharUtil</a></td><td>Function</td><td><p>To check whether the given character is a valid ASCII character.</p></td></tr>
+			   <tr><td><a href='../proc/is_character_blank.html'>Is_Character_Blank</a></td><td><a href='../module/mbase_charutil.html'>MBase_CharUtil</a></td><td>Function</td><td><p>To check whether the given character is in the 'BLANK' set.</p></td></tr>
+			   <tr><td><a href='../proc/is_character_control.html'>Is_Character_Control</a></td><td><a href='../module/mbase_charutil.html'>MBase_CharUtil</a></td><td>Function</td><td><p>To check whether the given character is a control character.</p></td></tr>
+			   <tr><td><a href='../proc/is_character_digit.html'>Is_Character_Digit</a></td><td><a href='../module/mbase_charutil.html'>MBase_CharUtil</a></td><td>Function</td><td><p>To check whether the given character is in the 'DIGIT' set.</p></td></tr>
+			   <tr><td><a href='../proc/is_character_exponent.html'>Is_Character_Exponent</a></td><td><a href='../module/mbase_charutil.html'>MBase_CharUtil</a></td><td>Function</td><td><p>To check whether the given character is an 'exponent' character.</p></td></tr>
+			   <tr><td><a href='../proc/is_character_graphical.html'>Is_Character_Graphical</a></td><td><a href='../module/mbase_charutil.html'>MBase_CharUtil</a></td><td>Function</td><td><p>To check whether the given character is a graphical character.</p></td></tr>
+			   <tr><td><a href='../proc/is_character_hexdigit.html'>Is_Character_HexDigit</a></td><td><a href='../module/mbase_charutil.html'>MBase_CharUtil</a></td><td>Function</td><td><p>To check whether the given character is in the 'HEXDIGIT' set.</p></td></tr>
+			   <tr><td><a href='../proc/is_character_in_range.html'>Is_Character_In_Range</a></td><td><a href='../module/mbase_charutil.html'>MBase_CharUtil</a></td><td>Function</td><td><p>To check whether the given character is in the given ASCII range
+ from ASCII_Min to ASCII_Max.</p></td></tr>
+			   <tr><td><a href='../proc/is_character_integer.html'>Is_Character_Integer</a></td><td><a href='../module/mbase_charutil.html'>MBase_CharUtil</a></td><td>Function</td><td><p>To check whether the given character is in the 'INTEGER' set.</p></td></tr>
+			   <tr><td><a href='../proc/is_character_letter.html'>Is_Character_Letter</a></td><td><a href='../module/mbase_charutil.html'>MBase_CharUtil</a></td><td>Function</td><td><p>To check whether the given character is in the 'ALPHABET' set.</p></td></tr>
+			   <tr><td><a href='../proc/is_character_logical.html'>Is_Character_Logical</a></td><td><a href='../module/mbase_charutil.html'>MBase_CharUtil</a></td><td>Function</td><td><p>To check whether the given character is a logical character.</p></td></tr>
+			   <tr><td><a href='../proc/is_character_lowercase_letter.html'>Is_Character_Lowercase_Letter</a></td><td><a href='../module/mbase_charutil.html'>MBase_CharUtil</a></td><td>Function</td><td><p>To check whether the given character is a 'lower-case' letter.</p></td></tr>
+			   <tr><td><a href='../proc/is_character_numeric.html'>Is_Character_Numeric</a></td><td><a href='../module/mbase_charutil.html'>MBase_CharUtil</a></td><td>Function</td><td><p>To check whether the given character is in the 'NUMERIC' set.</p></td></tr>
+			   <tr><td><a href='../proc/is_character_octdigit.html'>Is_Character_OctDigit</a></td><td><a href='../module/mbase_charutil.html'>MBase_CharUtil</a></td><td>Function</td><td><p>To check whether the given character is in the 'OCTDIGIT' set.</p></td></tr>
+			   <tr><td><a href='../proc/is_character_period.html'>Is_Character_Period</a></td><td><a href='../module/mbase_charutil.html'>MBase_CharUtil</a></td><td>Function</td><td><p>To check whether the given character is a 'period/dot' character.</p></td></tr>
+			   <tr><td><a href='../proc/is_character_printable.html'>Is_Character_Printable</a></td><td><a href='../module/mbase_charutil.html'>MBase_CharUtil</a></td><td>Function</td><td><p>To check whether the given character is a printable character.</p></td></tr>
+			   <tr><td><a href='../proc/is_character_punctuation.html'>Is_Character_Punctuation</a></td><td><a href='../module/mbase_charutil.html'>MBase_CharUtil</a></td><td>Function</td><td><p>To check whether the given character is in the 'PUNCTUATION' set.</p></td></tr>
+			   <tr><td><a href='../proc/is_character_sign.html'>Is_Character_Sign</a></td><td><a href='../module/mbase_charutil.html'>MBase_CharUtil</a></td><td>Function</td><td><p>To check whether the given character is a 'sign' character.</p></td></tr>
+			   <tr><td><a href='../proc/is_character_uppercase_letter.html'>Is_Character_Uppercase_Letter</a></td><td><a href='../module/mbase_charutil.html'>MBase_CharUtil</a></td><td>Function</td><td><p>To check whether the given character is a 'upper-case' letter.</p></td></tr>
+			   <tr><td><a href='../proc/is_character_whitespace.html'>Is_Character_WhiteSpace</a></td><td><a href='../module/mbase_charutil.html'>MBase_CharUtil</a></td><td>Function</td><td><p>To check whether the given character is in the 'WHITESPACE' set.</p></td></tr>
+			   <tr><td><a href='../proc/is_little_endian.html'>Is_Little_Endian</a></td><td><a href='../module/mbase_miscutil.html'>MBase_MiscUtil</a></td><td>Function</td><td><p>To check if the current machine is little-endian or big-endian.</p></td></tr>
+			   <tr><td><a href='../proc/isevennumber.html'>IsEvenNumber</a></td><td><a href='../module/mbase_miscutil.html'>MBase_MiscUtil</a></td><td>Function</td><td><p>To check if the number is an even number.
+ If it is, return true.  Otherwise, return false.</p></td></tr>
+			   <tr><td><a href='../interface/isfileopen.html'>IsFileOpen</a></td><td><a href='../module/mbase_iohandlers.html'>MBase_IOHandlers</a></td><td>Interface</td><td><p><strong>Function Interface</strong>: IsFileOpen <br>
+ <strong>Purpose</strong>:  To check whether the specified file is open or not. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    Flag = IsFileOpen(FileIOUnit) <br>
+  ---&gt;    IF (IsFileOpen(FileName)) DoSomething</p></td></tr>
+			   <tr><td><a href='../interface/ishft.html'>ISHFT</a></td><td><a href='../module/mbase_sint128.html'>MBase_SInt128</a></td><td>Interface</td><td><p><strong>Function Interface</strong>: ISHFT <br>
+ <strong>Purpose</strong>:  To perform logical shift with -128 &lt;= ShiftPos &lt;= 128.
+  (For more information, see detailed explanation of the intrinsic function.) <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    OUT = ISHFT(IN, 53)    ! a logical left shift by 53 <br>
+  ---&gt;    OUT = ISHFT(IN, -24)   ! a logical right shift by 24</p></td></tr>
+			   <tr><td><a href='../interface/ishft~2.html'>ISHFT</a></td><td><a href='../module/mbase_uint128.html'>MBase_UInt128</a></td><td>Interface</td><td><p><strong>Function Interface</strong>: ISHFT <br>
+ <strong>Purpose</strong>:  To perform logical shift with -128 &lt;= ShiftPos &lt;= 128.
+  (For more information, see detailed explanation of the intrinsic function.) <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    OUT = ISHFT(IN, 53)    ! a logical left shift by 53 <br>
+  ---&gt;    OUT = ISHFT(IN, -24)   ! a logical right shift by 24</p></td></tr>
+			   <tr><td><a href='../interface/ishftc.html'>ISHFTC</a></td><td><a href='../module/mbase_sint128.html'>MBase_SInt128</a></td><td>Interface</td><td><p><strong>Function Interface</strong>: ISHFTC <br>
+ <strong>Purpose</strong>:  To perform circular shift with -128 &lt;= ShiftPos &lt;= 128.
+  (For more information, see detailed explanation of the intrinsic function.) <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    OUT = ISHFTC(IN, 53)    ! a circular left shift by 53 <br>
+  ---&gt;    OUT = ISHFTC(IN, -24)   ! a circular right shift by 24</p></td></tr>
+			   <tr><td><a href='../interface/ishftc~2.html'>ISHFTC</a></td><td><a href='../module/mbase_uint128.html'>MBase_UInt128</a></td><td>Interface</td><td><p><strong>Function Interface</strong>: ISHFTC <br>
+ <strong>Purpose</strong>:  To perform circular shift with -128 &lt;= ShiftPos &lt;= 128.
+  (For more information, see detailed explanation of the intrinsic function.) <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    OUT = ISHFTC(IN, 53)    ! a circular left shift by 53 <br>
+  ---&gt;    OUT = ISHFTC(IN, -24)   ! a circular right shift by 24</p></td></tr>
+			   <tr><td><a href='../proc/iskeyordered.html'>IsKeyOrdered</a></td><td><a href='../module/mclass_keyordered.html'>MClass_KeyOrdered</a></td><td>Function</td><td><p>To check whether type of the specified input is a valid <em>KeyOrdered</em> type.</p></td></tr>
+			   <tr><td><a href='../proc/iskeyunordered.html'>IsKeyUnordered</a></td><td><a href='../module/mclass_keyunordered.html'>MClass_KeyUnordered</a></td><td>Function</td><td><p>To check whether type of the specified input is a valid <em>KeyUnordered</em> type.</p></td></tr>
+			   <tr><td><a href='../interface/isnegative.html'>IsNegative</a></td><td><a href='../module/mbase_sint128.html'>MBase_SInt128</a></td><td>Interface</td><td><p><strong>Function Interface</strong>: IsNegative <br>
+ <strong>Purpose</strong>:  To check whether the input value is negative or not. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    Flag = IsNegative(INPUT) <br>
+  ---&gt;    IF (.NOT.IsNegative(INPUT)) DoSomeThing</p></td></tr>
+			   <tr><td><a href='../proc/isoddnumber.html'>IsOddNumber</a></td><td><a href='../module/mbase_miscutil.html'>MBase_MiscUtil</a></td><td>Function</td><td><p>To check if the number is an odd number.
+ If it is, return true.  Otherwise, return false.</p></td></tr>
+			   <tr><td><a href='../interface/ispolytypevalid.html'>IsPolyTypeValid</a></td><td><a href='../module/mbase_polyfloatnum.html'>MBase_PolyFloatNum</a></td><td>Interface</td><td><p><strong>Subroutine Interface</strong>: IsPolyTypeValid <br>
+ <strong>Purpose</strong>:  To check whether the specified input has the same type and their type is valid. <br></p></td></tr>
+			   <tr><td><a href='../interface/ispositive.html'>IsPositive</a></td><td><a href='../module/mbase_sint128.html'>MBase_SInt128</a></td><td>Interface</td><td><p><strong>Function Interface</strong>: IsPositive <br>
+ <strong>Purpose</strong>:  To check whether the input value is positive or not. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    Flag = IsPositive(INPUT) <br>
+  ---&gt;    IF (.NOT.IsPositive(INPUT)) DoSomeThing</p></td></tr>
+			   <tr><td><a href='../interface/isprime.html'>IsPrime</a></td><td><a href='../module/mbase_mathutil.html'>MBase_MathUtil</a></td><td>Interface</td><td><p><strong>Function Interface</strong>: IsPrime <br>
+<strong>Purpose</strong>:  To check whether the specified number is a prime number or not. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    Flag = IsPrime(Number) <br>
+  ---&gt;    IF (.NOT.IsPrime(Number)) DoSomething <br></p></td></tr>
+			   <tr><td><a href='../proc/issamedatatype.html'>IsSameDataType</a></td><td><a href='../module/mclass_gendata.html'>MClass_GenData</a></td><td>Function</td><td><p>To check whether A and B have the same (dynamic) type or not.</p></td></tr>
+			   <tr><td><a href='../proc/issamekeyordered.html'>IsSameKeyOrdered</a></td><td><a href='../module/mclass_keyordered.html'>MClass_KeyOrdered</a></td><td>Function</td><td><p>To check whether A and B have the same (dynamic) type or not.</p></td></tr>
+			   <tr><td><a href='../interface/iszero.html'>IsZero</a></td><td><a href='../module/mbase_sint128.html'>MBase_SInt128</a></td><td>Interface</td><td><p><strong>Function Interface</strong>: IsZero <br>
+ <strong>Purpose</strong>:  To check whether the input value is zero or not. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    Flag = IsZero(INPUT) <br>
+  ---&gt;    IF (.NOT.IsZero(INPUT)) DoSomeThing</p></td></tr>
+			   <tr><td><a href='../interface/juliandate.html'>JulianDate</a></td><td><a href='../module/mbase_miscutil.html'>MBase_MiscUtil</a></td><td>Interface</td><td><p><strong>Function Interface</strong>: JulianDate <br>
+<strong>Purpose</strong>:  To find the appropriate Julian Day value for the given month and day. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    Date = JulianDate(DayOfMonth, Month) <br>
+  ---&gt;    Date = JulianDate(DayOfMonth, Month, 1) ! leap year set to 1 <br></p></td></tr>
+			   <tr><td><a href='../proc/l_shift.html'>L_Shift</a></td><td><a href='../module/mbase_miscutil.html'>MBase_MiscUtil</a></td><td>Function</td><td><p>To perform arithmetic/logical left shift. <br>
+ Note: this is equivalent to the syntax "&lt;&lt;" in C or Java</p></td></tr>
+			   <tr><td><a href='../interface/leadz.html'>LEADZ</a></td><td><a href='../module/mbase_sint128.html'>MBase_SInt128</a></td><td>Interface</td><td><p><strong>Function Interface</strong>: LEADZ <br>
+ <strong>Purpose</strong>:  To count the number of leading zero bits of the input.
+  (For more information, see detailed explanation of the intrinsic function.) <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    NumLZ = LEADZ(INPUT)</p></td></tr>
+			   <tr><td><a href='../interface/leadz~2.html'>LEADZ</a></td><td><a href='../module/mbase_uint128.html'>MBase_UInt128</a></td><td>Interface</td><td><p><strong>Function Interface</strong>: LEADZ <br>
+ <strong>Purpose</strong>:  To count the number of leading zero bits of the input.
+  (For more information, see detailed explanation of the intrinsic function.) <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    NumLZ = LEADZ(INPUT)</p></td></tr>
+			   <tr><td><a href='../proc/limitvalue.html'>LimitValue</a></td><td><a href='../module/mbase_miscutil.html'>MBase_MiscUtil</a></td><td>Function</td><td><p>To check if the value is in the specified range.  If not,
+ limit its value to the specified upper or lower bound limit.</p></td></tr>
+			   <tr><td><a href='../interface/log.html'>LOG</a></td><td><a href='../module/mbase_mathutil.html'>MBase_MathUtil</a></td><td>Interface</td><td><p><strong>Function Interface</strong>: LOG <br>
+<strong>Purpose</strong>:  To compute the logarithm of the input for a specified base. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    LogVal = LOG(InVal, Base) <br></p></td></tr>
+			   <tr><td><a href='../interface/lowestonebit.html'>LowestOneBit</a></td><td><a href='../module/mbase_sintutil.html'>MBase_SIntUtil</a></td><td>Interface</td><td><p><strong>Function Interface</strong>: LowestOneBit <br>
+ <strong>Purpose</strong>:  To return an integer value (same kind as the specified integer value) with at most
+  a single one-bit, in the position of the lowest-order (rightmost) one-bit in the input. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    OUTPUT = LowestOneBit(INPUT)</p></td></tr>
+			   <tr><td><a href='../proc/machine_integer_parameter.html'>Machine_Integer_Parameter</a></td><td><a href='../module/mbase_miscutil.html'>MBase_MiscUtil</a></td><td>Function</td><td><p>To return a integer machine dependent parameter
+ depending on the specified index.</p></td></tr>
+			   <tr><td><a href='../proc/machine_real_parameter.html'>Machine_Real_Parameter</a></td><td><a href='../module/mbase_miscutil.html'>MBase_MiscUtil</a></td><td>Function</td><td><p>To return a floating point machine dependent parameter
+ depending on the specified index.</p></td></tr>
+			   <tr><td><a href='../interface/max.html'>MAX</a></td><td><a href='../module/mbase_sint128.html'>MBase_SInt128</a></td><td>Interface</td><td><p><strong>Function Interface</strong>: MAX <br>
+ <strong>Purpose</strong>:  To return the maximum value of the specified input. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    OUTPUT = MAX(INP1, INP2) <br>
+  ---&gt;    OUTPUT = MAX(INPARR) <br></p></td></tr>
+			   <tr><td><a href='../interface/max~2.html'>MAX</a></td><td><a href='../module/mbase_uint128.html'>MBase_UInt128</a></td><td>Interface</td><td><p><strong>Function Interface</strong>: MAX <br>
+ <strong>Purpose</strong>:  To return the maximum value of the specified input. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    OUTPUT = MAX(INP1, INP2) <br>
+  ---&gt;    OUTPUT = MAX(INPARR) <br></p></td></tr>
+			   <tr><td><a href='../proc/maxvallocation.html'>MaxValLocation</a></td><td><a href='../module/mbase_miscutil.html'>MBase_MiscUtil</a></td><td>Function</td><td><p>To find location of maximum value in an array.</p></td></tr>
+			   <tr><td><a href='../interface/memalloc.html'>MemAlloc</a></td><td><a href='../module/mclass_gendata.html'>MClass_GenData</a></td><td>Interface</td><td><p><strong>Subroutine Interface</strong>: MemAlloc <br>
+ <strong>Purpose</strong>:  To allocate memory of the specified argument. <br>
+ <strong>Usage</strong>: <br>
+  ! allocate a 1-D array <br>
+  ---&gt;    CALL MemAlloc(Arr1D, 25) <br>
+  ---&gt;    CALL MemAlloc(Arr1D, 50, StartID=-20) <br>
+  ---&gt;    CALL MemAlloc(Arr1D, [25]) <br>
+  ---&gt;    CALL MemAlloc(Arr1D, [50], StartID=[-20]) <br>
+  ! allocate an array of any rank <br>
+  ---&gt;    CALL MemAlloc(Arr2D, [30, 30]) <br>
+  ---&gt;    CALL MemAlloc(Arr2D, [30, 30], StartID=[-10, 10]) <br>
+  ---&gt;    CALL MemAlloc(Arr3D, [30, 40, 50]) <br>
+  ---&gt;    CALL MemAlloc(Arr3D, [30, 40, 50], StartID=[0, 0, 0]) <br>
+  ---&gt;    CALL MemAlloc(Arr7D, ASize) <br>
+  ---&gt;    CALL MemAlloc(Arr7D, ASize, StartID) <br>
+ <strong>Note</strong>: For an array of rank greater than 1, the "ASize" and "StartID" arguments must be
+      arrays where their size are equal to the rank of the specified array argument. <br></p></td></tr>
+			   <tr><td><a href='../interface/memalloc~2.html'>MemAlloc</a></td><td><a href='../module/mbase_memhandlers.html'>MBase_MemHandlers</a></td><td>Interface</td><td><p><strong>Subroutine Interface</strong>: MemAlloc <br>
+ <strong>Purpose</strong>:  To allocate memory of the specified argument. <br>
+ <strong>Usage</strong>: <br>
+  ! allocate a character array of any rank <br>
+  ---&gt;    CALL MemAlloc(Arr1D, 64, [25])                      ! character length of 64 <br>
+  ---&gt;    CALL MemAlloc(Arr1D, 128, [50], StartID=[-20])      ! character length of 128 <br>
+  ---&gt;    CALL MemAlloc(Arr2D, 64, [30, 30])                  ! character length of 64 <br>
+  ---&gt;    CALL MemAlloc(Arr2D, 32, [30, 30], StartID=[-5, 5]) ! character length of 32 <br>
+  ---&gt;    CALL MemAlloc(Arr7D, CharLen, ArrSizes) <br>
+  ---&gt;    CALL MemAlloc(Arr7D, CharLen, ArrSizes, StartIDs) <br>
+  ! allocate a 1-D array of intrinsic types (except CHARACTER) <br>
+  ---&gt;    CALL MemAlloc(Arr1D, 25) <br>
+  ---&gt;    CALL MemAlloc(Arr1D, 50, StartID=-20) <br>
+  ---&gt;    CALL MemAlloc(Arr1D, [25]) <br>
+  ---&gt;    CALL MemAlloc(Arr1D, [50], StartID=[-20]) <br>
+  ! allocate an array of any rank of intrinsic types (except CHARACTER) <br>
+  ---&gt;    CALL MemAlloc(Arr2D, [30, 30]) <br>
+  ---&gt;    CALL MemAlloc(Arr2D, [30, 30], StartID=[-10, 10]) <br>
+  ---&gt;    CALL MemAlloc(Arr3D, [30, 40, 50]) <br>
+  ---&gt;    CALL MemAlloc(Arr3D, [30, 40, 50], StartID=[0, 0, 0]) <br>
+  ---&gt;    CALL MemAlloc(Arr7D, ASize) <br>
+  ---&gt;    CALL MemAlloc(Arr7D, ASize, StartID) <br>
+ <strong>Note</strong>: For an array of rank greater than 1, the "ASize" and "StartID" arguments must be
+      arrays where their size are equal to the rank of the specified array argument. <br></p></td></tr>
+			   <tr><td><a href='../interface/memalloc~3.html'>MemAlloc</a></td><td><a href='../module/mclass_keyunordered.html'>MClass_KeyUnordered</a></td><td>Interface</td><td><p><strong>Subroutine Interface</strong>: MemAlloc <br>
+ <strong>Purpose</strong>:  To allocate memory of the specified argument. <br>
+ <strong>Usage</strong>: <br>
+  ! allocate a 1-D array <br>
+  ---&gt;    CALL MemAlloc(Arr1D, 25) <br>
+  ---&gt;    CALL MemAlloc(Arr1D, 50, StartID=-20) <br>
+  ---&gt;    CALL MemAlloc(Arr1D, [25]) <br>
+  ---&gt;    CALL MemAlloc(Arr1D, [50], StartID=[-20]) <br>
+  ! allocate an array of any rank <br>
+  ---&gt;    CALL MemAlloc(Arr2D, [30, 30]) <br>
+  ---&gt;    CALL MemAlloc(Arr2D, [30, 30], StartID=[-10, 10]) <br>
+  ---&gt;    CALL MemAlloc(Arr3D, [30, 40, 50]) <br>
+  ---&gt;    CALL MemAlloc(Arr3D, [30, 40, 50], StartID=[0, 0, 0]) <br>
+  ---&gt;    CALL MemAlloc(Arr7D, ASize) <br>
+  ---&gt;    CALL MemAlloc(Arr7D, ASize, StartID) <br>
+ <strong>Note</strong>: For an array of rank greater than 1, the "ASize" and "StartID" arguments must be
+      arrays where their size are equal to the rank of the specified array argument. <br></p></td></tr>
+			   <tr><td><a href='../interface/memalloc~4.html'>MemAlloc</a></td><td><a href='../module/mclass_comparable.html'>MClass_Comparable</a></td><td>Interface</td><td><p><strong>Subroutine Interface</strong>: MemAlloc <br>
+ <strong>Purpose</strong>:  To allocate memory of an array. <br>
+ <strong>Note</strong>:  For optional starting ID(s), the default value is 1. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    CALL MemAlloc(Arr1D, 10, ArrMold) <br>
+  ---&gt;    CALL MemAlloc(Arr1D, 100, ArrMold, StartID=11) <br>
+  ---&gt;    CALL MemAlloc(Arr2D, 20, 10, ArrMold) <br>
+  ---&gt;    CALL MemAlloc(Arr2D, 100, 50, ArrMold, StartID1=21, StartID2=-10) <br>
+  ---&gt;    CALL MemAlloc(Arr3D, 50, 50, 50, ArrMold) <br>
+  ---&gt;    CALL MemAlloc(Arr3D, 20, 30, 40, ArrMold, StartID2=-10) <br>
+  ---&gt;    CALL MemAlloc(Arr3D, 10, 10, 10, ArrMold, 0, 0, 0)</p></td></tr>
+			   <tr><td><a href='../interface/memalloc~5.html'>MemAlloc</a></td><td><a href='../module/mclass_keyordered.html'>MClass_KeyOrdered</a></td><td>Interface</td><td><p><strong>Subroutine Interface</strong>: MemAlloc <br>
+ <strong>Purpose</strong>:  To allocate memory of the specified argument. <br>
+ <strong>Usage</strong>: <br>
+  ! allocate a 1-D array <br>
+  ---&gt;    CALL MemAlloc(Arr1D, 25) <br>
+  ---&gt;    CALL MemAlloc(Arr1D, 50, StartID=-20) <br>
+  ---&gt;    CALL MemAlloc(Arr1D, [25]) <br>
+  ---&gt;    CALL MemAlloc(Arr1D, [50], StartID=[-20]) <br>
+  ! allocate an array of any rank <br>
+  ---&gt;    CALL MemAlloc(Arr2D, [30, 30]) <br>
+  ---&gt;    CALL MemAlloc(Arr2D, [30, 30], StartID=[-10, 10]) <br>
+  ---&gt;    CALL MemAlloc(Arr3D, [30, 40, 50]) <br>
+  ---&gt;    CALL MemAlloc(Arr3D, [30, 40, 50], StartID=[0, 0, 0]) <br>
+  ---&gt;    CALL MemAlloc(Arr7D, ASize) <br>
+  ---&gt;    CALL MemAlloc(Arr7D, ASize, StartID) <br>
+ <strong>Note</strong>: For an array of rank greater than 1, the "ASize" and "StartID" arguments must be
+      arrays where their size are equal to the rank of the specified array argument. <br></p></td></tr>
+			   <tr><td><a href='../interface/memalloc~6.html'>MemAlloc</a></td><td><a href='../module/mbase_anyrankntype.html'>MBase_AnyRankNType</a></td><td>Interface</td><td><p><strong>Subroutine Interface</strong>: MemAlloc <br>
+ <strong>Purpose</strong>:  To allocate memory of the specified argument, which is declared as an
+      unlimited polymorphic entity with <em>ALLOCATABLE</em>  attribute.  The specified
+      argument can be a scalar argument or an array argument with the rank between
+      1 and 7.  The procedure requires the <em>Prototype</em> argument to be used as a mold. <br>
+ <strong>Usage</strong>: <br>
+  ! allocate A with starting indices of 1 <br>
+  ---&gt;    CALL MemAlloc(A, Prototype, ASize) <br>
+  ! allocate A with specified starting indices <br>
+  ---&gt;    CALL MemAlloc(A, Prototype, ASize, StartID) <br>
+ <strong>Note</strong>: The "ASize" and "StartID" arguments must be arrays where their size are equal
+           to the rank of the specified array argument. <br></p></td></tr>
+			   <tr><td><a href='../interface/memalloc~7.html'>MemAlloc</a></td><td><a href='../module/mbase_legacyutil.html'>MBase_LegacyUtil</a></td><td>Interface</td><td><p><strong>Subroutine Interface</strong>: MemAlloc <br>
+ <strong>Purpose</strong>:  To allocate memory for allocatable components of legacy derived types. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    CALL MemAlloc(UPar, 5, 2) <br>
+  ---&gt;    CALL MemAlloc(EqText, 4, 5) <br>
+  ---&gt;    CALL MemAlloc(WkSpace, 10, 10)</p></td></tr>
+			   <tr><td><a href='../interface/memalloc~8.html'>MemAlloc</a></td><td><a href='../module/mclass_object.html'>MClass_Object</a></td><td>Interface</td><td><p><strong>Subroutine Interface</strong>: MemAlloc <br>
+ <strong>Purpose</strong>:  To allocate memory of an array. <br>
+ <strong>Note</strong>:  For optional starting ID(s), the default value is 1. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    CALL MemAlloc(Arr1D, 10, ArrMold) <br>
+  ---&gt;    CALL MemAlloc(Arr1D, 100, ArrMold, StartID=11) <br>
+  ---&gt;    CALL MemAlloc(Arr2D, 20, 10, ArrMold) <br>
+  ---&gt;    CALL MemAlloc(Arr2D, 100, 50, ArrMold, StartID1=21, StartID2=-10) <br>
+  ---&gt;    CALL MemAlloc(Arr3D, 50, 50, 50, ArrMold) <br>
+  ---&gt;    CALL MemAlloc(Arr3D, 20, 30, 40, ArrMold, StartID2=-10) <br>
+  ---&gt;    CALL MemAlloc(Arr3D, 10, 10, 10, ArrMold, 0, 0, 0)</p></td></tr>
+			   <tr><td><a href='../interface/memallocptr.html'>MemAllocPtr</a></td><td><a href='../module/mbase_anyrankntype.html'>MBase_AnyRankNType</a></td><td>Interface</td><td><p><strong>Subroutine Interface</strong>: MemAllocPtr <br>
+ <strong>Purpose</strong>:  To allocate memory of the specified argument, which is declared as an
+      unlimited polymorphic entity with <em>POINTER</em>  attribute.  The specified argument
+      can be a scalar argument or an array argument with the rank between 1 and 7.
+      The procedure requires the <em>Prototype</em> argument to be used as a mold. <br>
+ <strong>Usage</strong>: <br>
+  ! allocate A with starting indices of 1 <br>
+  ---&gt;    CALL MemAllocPtr(A, Prototype, ASize) <br>
+  ! allocate A with specified starting indices <br>
+  ---&gt;    CALL MemAllocPtr(A, Prototype, ASize, StartID) <br>
+ <strong>Note</strong>: The "ASize" and "StartID" arguments must be arrays where their size are equal
+           to the rank of the specified array argument. <br></p></td></tr>
+			   <tr><td><a href='../interface/memfree.html'>MemFree</a></td><td><a href='../module/mclass_gendata.html'>MClass_GenData</a></td><td>Interface</td><td><p><strong>Subroutine Interface</strong>: MemFree <br>
+ <strong>Purpose</strong>:  To free memory of the specified argument. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    CALL MemFree(A) <br></p></td></tr>
+			   <tr><td><a href='../interface/memfree~2.html'>MemFree</a></td><td><a href='../module/mbase_memhandlers.html'>MBase_MemHandlers</a></td><td>Interface</td><td><p><strong>Subroutine Interface</strong>: MemFree <br>
+ <strong>Purpose</strong>:  To free memory of the specified argument. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    CALL MemFree(A) <br></p></td></tr>
+			   <tr><td><a href='../interface/memfree~3.html'>MemFree</a></td><td><a href='../module/mclass_keyunordered.html'>MClass_KeyUnordered</a></td><td>Interface</td><td><p><strong>Subroutine Interface</strong>: MemFree <br>
+ <strong>Purpose</strong>:  To free memory of the specified argument. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    CALL MemFree(A) <br></p></td></tr>
+			   <tr><td><a href='../interface/memfree~4.html'>MemFree</a></td><td><a href='../module/mclass_comparable.html'>MClass_Comparable</a></td><td>Interface</td><td><p><strong>Subroutine Interface</strong>: MemFree <br>
+ <strong>Purpose</strong>:  To free memory of an array. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    CALL MemFree(Arr1D) <br>
+  ---&gt;    CALL MemFree(Arr2D) <br>
+  ---&gt;    CALL MemFree(Arr3D)</p></td></tr>
+			   <tr><td><a href='../interface/memfree~5.html'>MemFree</a></td><td><a href='../module/mclass_keyordered.html'>MClass_KeyOrdered</a></td><td>Interface</td><td><p><strong>Subroutine Interface</strong>: MemFree <br>
+ <strong>Purpose</strong>:  To free memory of the specified argument. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    CALL MemFree(A) <br></p></td></tr>
+			   <tr><td><a href='../interface/memfree~6.html'>MemFree</a></td><td><a href='../module/mbase_anyrankntype.html'>MBase_AnyRankNType</a></td><td>Interface</td><td><p><strong>Subroutine Interface</strong>: MemFree <br>
+ <strong>Purpose</strong>:  To free memory of the specified argument, which is declared as an
+      unlimited polymorphic entity with <em>ALLOCATABLE</em> attribute. The specified
+      argument can be a scalar argument or an array argument with any rank. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    CALL MemFree(A) <br></p></td></tr>
+			   <tr><td><a href='../interface/memfree~7.html'>MemFree</a></td><td><a href='../module/mbase_legacyutil.html'>MBase_LegacyUtil</a></td><td>Interface</td><td><p><strong>Subroutine Interface</strong>: MemFree <br>
+ <strong>Purpose</strong>:  To free memory of allocatable components of legacy derived types. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    CALL MemFree(UPar) <br>
+  ---&gt;    CALL MemFree(EqText) <br>
+  ---&gt;    CALL MemFree(WkSpace)</p></td></tr>
+			   <tr><td><a href='../interface/memfree~8.html'>MemFree</a></td><td><a href='../module/mclass_object.html'>MClass_Object</a></td><td>Interface</td><td><p><strong>Subroutine Interface</strong>: MemFree <br>
+ <strong>Purpose</strong>:  To free memory of an array. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    CALL MemFree(Arr1D) <br>
+  ---&gt;    CALL MemFree(Arr2D) <br>
+  ---&gt;    CALL MemFree(Arr3D)</p></td></tr>
+			   <tr><td><a href='../interface/memfreeptr.html'>MemFreePtr</a></td><td><a href='../module/mbase_anyrankntype.html'>MBase_AnyRankNType</a></td><td>Interface</td><td><p><strong>Subroutine Interface</strong>: MemFreePtr <br>
+ <strong>Purpose</strong>:  To free memory of the specified argument, which is declared as an
+      unlimited polymorphic entity with <em>POINTER</em> attribute. The specified argument
+      can be a scalar argument or an array argument with any rank. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    CALL MemFreePtr(A) <br></p></td></tr>
+			   <tr><td><a href='../interface/memresize.html'>MemResize</a></td><td><a href='../module/mclass_gendata.html'>MClass_GenData</a></td><td>Interface</td><td><p><strong>Subroutine Interface</strong>: MemResize <br>
+ <strong>Purpose</strong>:  To re-allocate memory of the specified argument (and preserve its data). <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    CALL MemResize(Arr1D, [25]) <br>
+  ---&gt;    CALL MemResize(Arr2D, [30, 30]) <br>
+  ---&gt;    CALL MemResize(Arr3D, [30, 40, 50]) <br>
+  ---&gt;    CALL MemResize(Arr7D, NewSize) <br>
+ <strong>Note</strong>: The "NewSize" argument must be an array where its size is equal to the rank of
+      the specified array argument.  <br></p></td></tr>
+			   <tr><td><a href='../interface/memresize~2.html'>MemResize</a></td><td><a href='../module/mbase_memhandlers.html'>MBase_MemHandlers</a></td><td>Interface</td><td><p><strong>Subroutine Interface</strong>: MemResize <br>
+ <strong>Purpose</strong>:  To re-allocate memory of the specified argument (and preserve its data). <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    CALL MemResize(Arr1D, [25]) <br>
+  ---&gt;    CALL MemResize(Arr2D, [30, 30]) <br>
+  ---&gt;    CALL MemResize(Arr3D, [30, 40, 50]) <br>
+  ---&gt;    CALL MemResize(Arr7D, NewSize) <br>
+ <strong>Note</strong>: The "NewSize" argument must be an array where its size is equal to the rank of
+      the specified array argument.  <br></p></td></tr>
+			   <tr><td><a href='../interface/memresize~3.html'>MemResize</a></td><td><a href='../module/mclass_keyunordered.html'>MClass_KeyUnordered</a></td><td>Interface</td><td><p><strong>Subroutine Interface</strong>: MemResize <br>
+ <strong>Purpose</strong>:  To re-allocate memory of the specified argument (and preserve its data). <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    CALL MemResize(Arr1D, [25]) <br>
+  ---&gt;    CALL MemResize(Arr2D, [30, 30]) <br>
+  ---&gt;    CALL MemResize(Arr3D, [30, 40, 50]) <br>
+  ---&gt;    CALL MemResize(Arr7D, NewSize) <br>
+ <strong>Note</strong>: The "NewSize" argument must be an array where its size is equal to the rank of
+      the specified array argument.  <br></p></td></tr>
+			   <tr><td><a href='../interface/memresize~4.html'>MemResize</a></td><td><a href='../module/mclass_comparable.html'>MClass_Comparable</a></td><td>Interface</td><td><p><strong>Subroutine Interface</strong>: MemResize <br>
+ <strong>Purpose</strong>:  To reallocate memory for an array and preserve its data. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    CALL MemResize(Arr1D, 100) <br>
+  ---&gt;    CALL MemResize(Arr2D, 20, 30) <br>
+  ---&gt;    CALL MemResize(Arr3D, 50, 20, 100)</p></td></tr>
+			   <tr><td><a href='../interface/memresize~5.html'>MemResize</a></td><td><a href='../module/mclass_keyordered.html'>MClass_KeyOrdered</a></td><td>Interface</td><td><p><strong>Subroutine Interface</strong>: MemResize <br>
+ <strong>Purpose</strong>:  To re-allocate memory of the specified argument (and preserve its data). <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    CALL MemResize(Arr1D, [25]) <br>
+  ---&gt;    CALL MemResize(Arr2D, [30, 30]) <br>
+  ---&gt;    CALL MemResize(Arr3D, [30, 40, 50]) <br>
+  ---&gt;    CALL MemResize(Arr7D, NewSize) <br>
+ <strong>Note</strong>: The "NewSize" argument must be an array where its size is equal to the rank of
+      the specified array argument.  <br></p></td></tr>
+			   <tr><td><a href='../interface/memresize~6.html'>MemResize</a></td><td><a href='../module/mbase_anyrankntype.html'>MBase_AnyRankNType</a></td><td>Interface</td><td><p><strong>Subroutine Interface</strong>: MemResize <br>
+ <strong>Purpose</strong>:  To re-allocate memory of the specified argument (and preserve its data),
+      which is declared as an unlimited polymorphic entity with <em>ALLOCATABLE</em> attribute.
+      The specified argument must have already been allocated and it must be an array
+      argument with the rank between 1 and 7.  The procedure requires the <em>NewSize</em>
+      argument to specify sizes in each dimension of the entity. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    CALL MemResize(A, NewSize) <br>
+ <strong>Note</strong>: The "NewSize" argument must be an array where its size is equal to the rank
+           of the specified array argument. <br></p></td></tr>
+			   <tr><td><a href='../interface/memresize~7.html'>MemResize</a></td><td><a href='../module/mclass_object.html'>MClass_Object</a></td><td>Interface</td><td><p><strong>Subroutine Interface</strong>: MemResize <br>
+ <strong>Purpose</strong>:  To reallocate memory for an array and preserve its data. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    CALL MemResize(Arr1D, 100) <br>
+  ---&gt;    CALL MemResize(Arr2D, 20, 30) <br>
+  ---&gt;    CALL MemResize(Arr3D, 50, 20, 100)</p></td></tr>
+			   <tr><td><a href='../interface/memresizeptr.html'>MemResizePtr</a></td><td><a href='../module/mbase_anyrankntype.html'>MBase_AnyRankNType</a></td><td>Interface</td><td><p><strong>Subroutine Interface</strong>: MemResize <br>
+ <strong>Purpose</strong>:  To re-allocate memory of the specified argument (and preserve its data),
+      which is declared as an unlimited polymorphic entity with <em>POINTER</em> attribute.
+      The specified argument must have already been allocated and it must be an array
+      argument with the rank between 1 and 7.  The procedure requires the <em>NewSize</em>
+      argument to specify sizes in each dimension of the entity. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    CALL MemResizePtr(A, NewSize) <br>
+ <strong>Note</strong>: The "NewSize" argument must be an array where its size is equal to the rank
+           of the specified array argument. <br></p></td></tr>
+			   <tr><td><a href='../interface/min.html'>MIN</a></td><td><a href='../module/mbase_sint128.html'>MBase_SInt128</a></td><td>Interface</td><td><p><strong>Function Interface</strong>: MIN <br>
+ <strong>Purpose</strong>:  To return the minimum value of the specified input. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    OUTPUT = MIN(INP1, INP2) <br>
+  ---&gt;    OUTPUT = MIN(INPARR) <br></p></td></tr>
+			   <tr><td><a href='../interface/min~2.html'>MIN</a></td><td><a href='../module/mbase_uint128.html'>MBase_UInt128</a></td><td>Interface</td><td><p><strong>Function Interface</strong>: MIN <br>
+ <strong>Purpose</strong>:  To return the minimum value of the specified input. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    OUTPUT = MIN(INP1, INP2) <br>
+  ---&gt;    OUTPUT = MIN(INPARR) <br></p></td></tr>
+			   <tr><td><a href='../interface/minmax.html'>MinMax</a></td><td><a href='../module/mbase_miscutil.html'>MBase_MiscUtil</a></td><td>Interface</td><td><p><strong>Subroutine Interface</strong>: MinMax <br>
+<strong>Purpose</strong>:  To compare values and return the minimum and maximum values. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    CALL MinMax(AVal, BVal, MinVal, MaxVal) <br>
+  ---&gt;    CALL MinMax(Array, MinVal, MaxVal) <br></p></td></tr>
+			   <tr><td><a href='../interface/mod.html'>MOD</a></td><td><a href='../module/mbase_sint128.html'>MBase_SInt128</a></td><td>Interface</td><td><p><strong>Function Interface</strong>: MOD <br>
+ <strong>Purpose</strong>:  To return the remainder of a division of two signed integers,
+  where the dividend (numerator) is a 128-bit signed integer and the
+  divisor (denominator) can be 32-, 64- or 128-bit signed integer. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    REM = MOD(NUMER, DENOM)</p></td></tr>
+			   <tr><td><a href='../interface/movebits.html'>MoveBits</a></td><td><a href='../module/mbase_sint128.html'>MBase_SInt128</a></td><td>Interface</td><td><p><strong>Subroutine Interface</strong>: MoveBits <br>
+ <strong>Purpose</strong>:  To copy a sequence of bits (a bit field) from one location to another.
+  (For more information, see detailed explanation of the intrinsic subroutine 'MVBITS'.) <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    CALL MoveBits(InVal, InPos, Len, OutVal, OutPos)</p></td></tr>
+			   <tr><td><a href='../interface/movebits~2.html'>MoveBits</a></td><td><a href='../module/mbase_uint128.html'>MBase_UInt128</a></td><td>Interface</td><td><p><strong>Subroutine Interface</strong>: MoveBits <br>
+ <strong>Purpose</strong>:  To copy a sequence of bits (a bit field) from one location to another.
+  (For more information, see detailed explanation of the intrinsic subroutine 'MVBITS'.) <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    CALL MoveBits(InVal, InPos, Len, OutVal, OutPos)</p></td></tr>
+			   <tr><td><a href='../proc/mpfun_init.html'>MPFun_Init</a></td><td><a href='../module/mbase_miscutil.html'>MBase_MiscUtil</a></td><td>Subroutine</td><td><p>To initialize the MPFUN library.</p></td></tr>
+			   <tr><td><a href='../interface/multiply.html'>Multiply</a></td><td><a href='../module/mbase_sint128.html'>MBase_SInt128</a></td><td>Interface</td><td><p><strong>Subroutine Interface</strong>: Multiply <br>
+ <strong>Purpose</strong>:  To perform multiplication: This = This * Other. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    CALL Multiply(This, Other)</p></td></tr>
+			   <tr><td><a href='../interface/multiply~2.html'>Multiply</a></td><td><a href='../module/mbase_uint128.html'>MBase_UInt128</a></td><td>Interface</td><td><p><strong>Subroutine Interface</strong>: Multiply <br>
+ <strong>Purpose</strong>:  To perform multiplication: This = This * Other. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    CALL Multiply(This, Other)</p></td></tr>
+			   <tr><td><a href='../interface/mulxp.html'>MulXp</a></td><td><a href='../module/mbase_sint128.html'>MBase_SInt128</a></td><td>Interface</td><td></td></tr>
+			   <tr><td><a href='../interface/nextprime.html'>NextPrime</a></td><td><a href='../module/mbase_mathutil.html'>MBase_MathUtil</a></td><td>Interface</td><td><p><strong>Function Interface</strong>: NextPrime <br>
+<strong>Purpose</strong>:  To return the smallest prime greater than or equal to the specified number. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    PrimeNum = IsPrime(Number) <br></p></td></tr>
+			   <tr><td><a href='../interface/not.html'>NOT</a></td><td><a href='../module/mbase_sint128.html'>MBase_SInt128</a></td><td>Interface</td><td><p><strong>Function Interface</strong>: NOT <br>
+ <strong>Purpose</strong>:  To return the bitwise logical complement of the input.
+  (For more information, see detailed explanation of the intrinsic function.) <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    OUT = NOT(IN)</p></td></tr>
+			   <tr><td><a href='../interface/not~2.html'>NOT</a></td><td><a href='../module/mbase_uint128.html'>MBase_UInt128</a></td><td>Interface</td><td><p><strong>Function Interface</strong>: NOT <br>
+ <strong>Purpose</strong>:  To return the bitwise logical complement of the input.
+  (For more information, see detailed explanation of the intrinsic function.) <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    OUT = NOT(IN)</p></td></tr>
+			   <tr><td><a href='../interface/notinrange.html'>NotInRange</a></td><td><a href='../module/mbase_miscutil.html'>MBase_MiscUtil</a></td><td>Interface</td><td><p><strong>Function Interface</strong>: NotInRange <br>
+<strong>Purpose</strong>:  To check if the value is in the specified range or not.
+      Return true if it is NOT.  Otherwise, return false. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    Flag = NotInRange(Val, UppLimit, LowLimit) <br>
+  ---&gt;    IF (.NOT.NotInRange(Val, UppLimit, LowLimit)) DoSomething <br></p></td></tr>
+			   <tr><td><a href='../proc/openfile.html'>OpenFile</a></td><td><a href='../module/mbase_iohandlers.html'>MBase_IOHandlers</a></td><td>Function</td><td><p>To open a file associated with the specified name for both reading and writing.
+  A valid (positive) unit number is return if the specified file is opened successfully.
+  Otherwise, it is set to -1. <br>
+------------------------------------------------------------------------------ <br>
+<strong>Important note</strong>: <br>
+  Using this routine requires a careful consideration
+  according to the technical notes below. <br>
+------------------------------------------------------------------------------ <br>
+<strong>Technical Notes</strong>: <br>
+(1) If the specified file does not exists, a new file will be opened and
+  the argument Append is ignored. <br>
+(2) If the specified file exists and currently is open, all optional arguments
+  are ignored and the unit number associated with it will be returned. <br>
+(3) If the specified file exists (but is not open) and Append is not present,
+  the existing file will be open with "AsIs" position.  Both DirAcc and RecLen arguments
+  are ignored since, for an existing file, existing access mode and format will be retained. <br>
+(4) If the specified file exists (but is not open) and Append is present and true,
+  the existing file will be opened with "Append" position. Both DirAcc and RecLen arguments
+  are ignored since, for an existing file, existing access mode and format will be retained. <br>
+(5) If the specified file exists (but is not open) and Append is present and false,
+  the existing file will be deleted and a file with the same name will be open as a
+  new file. That is the existing one is replaced by the new one. <br>
+(5.1) However, If DirAcc is present and true but RecLen is NOT specified, the existing
+  file will be left as it is, and the unit number is set to -1.</p></td></tr>
+			   <tr><td><a href='../proc/openinputfile.html'>OpenInputFile</a></td><td><a href='../module/mbase_iohandlers.html'>MBase_IOHandlers</a></td><td>Function</td><td><p>To open a file associated with the specified name for reading.
+ A valid (positive) unit number is return if the specified file
+ is opened successfully.  Otherwise, it is set to -1.</p></td></tr>
+			   <tr><td><a href='../proc/opennewfile.html'>OpenNewFile</a></td><td><a href='../module/mbase_iohandlers.html'>MBase_IOHandlers</a></td><td>Function</td><td><p>To open a new file associated with the specified name for both reading and writing.
+ A valid (positive) unit number is return if the specified file is opened successfully.
+ Otherwise, it is set to -1.</p></td></tr>
+			   <tr><td><a href='../proc/opennewoutputfile.html'>OpenNewOutputFile</a></td><td><a href='../module/mbase_iohandlers.html'>MBase_IOHandlers</a></td><td>Function</td><td><p>To open a new file associated with the specified name for writing.
+ A valid (positive) unit number is return if the specified file
+ is opened successfully.  Otherwise, it is set to -1.</p></td></tr>
+			   <tr><td><a href='../proc/openoutputfile.html'>OpenOutputFile</a></td><td><a href='../module/mbase_iohandlers.html'>MBase_IOHandlers</a></td><td>Function</td><td><p>To open a file associated with the specified name for writing.
+  A valid (positive) unit number is return if the specified file
+  is opened successfully.  Otherwise, it is set to -1. <br>
+------------------------------------------------------------------------------ <br>
+<strong>Important note</strong>: <br>
+  Using this routine requires a careful consideration
+  according to the technical notes below. <br>
+------------------------------------------------------------------------------ <br>
+<strong>Technical Notes</strong>: <br>
+(1) If the specified file does not exists, a new output file will be opened and
+  the argument Append is ignored. <br>
+(2) If the specified file exists and currently is open, all optional arguments
+  are ignored and the unit number associated with it will be returned. <br>
+(3) If the specified file exists (but is not open) and Append is not present or false,
+  the existing file will be deleted and a file with the same name will be open as a
+  new output file. That is the existing one is replaced by the new one. <br>
+(3.1) However, If DirAcc is present and true but RecLen is NOT specified, the existing
+  file will be left as it is, and the unit number is set to -1. <br>
+(4) If the specified file exists (but is not open) and Append is present and true,
+  the existing file will be opened for writing where the new data are written after
+  existing data. Both DirAcc and RecLen arguments are ignored since, for an existing
+  file, existing access mode and format will be retained.</p></td></tr>
+			   <tr><td><a href='../interface/operator (.udiv.).html'>OPERATOR (.UDIV.)</a></td><td><a href='../module/mbase_uintutil.html'>MBase_UIntUtil</a></td><td>Interface</td><td><p><strong>Operator Overload</strong>: OPERATOR(.UDIV.) <br>
+ <strong>Purpose</strong>:  To return the quotient of a division of two unsigned integers,
+  where both input and an output have the same kind <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    QUOT = NUMER .UDIV. DENOM</p></td></tr>
+			   <tr><td><a href='../interface/operator (.uge.).html'>OPERATOR (.UGE.)</a></td><td><a href='../module/mbase_uintutil.html'>MBase_UIntUtil</a></td><td>Interface</td><td><p><strong>Operator Overload</strong>: OPERATOR(.UGE.) <br>
+ <strong>Purpose</strong>:  To check if the LHS value is greater than or equal to the RHS value <br>
+  return .TRUE. if LHS &gt;= RHS; otherwise return .FALSE. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    Flag = LHS .UGE. RHS <br>
+  ---&gt;    IF (LHS .UGE. RHS) DoSomething</p></td></tr>
+			   <tr><td><a href='../interface/operator (.ugt.).html'>OPERATOR (.UGT.)</a></td><td><a href='../module/mbase_uintutil.html'>MBase_UIntUtil</a></td><td>Interface</td><td><p><strong>Operator Overload</strong>: OPERATOR(.UGT.) <br>
+ <strong>Purpose</strong>:  To check if the LHS value is greater than the RHS value <br>
+  return .TRUE. if LHS &gt; RHS; otherwise return .FALSE. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    Flag = LHS .UGT. RHS <br>
+  ---&gt;    IF (LHS .UGT. RHS) DoSomething</p></td></tr>
+			   <tr><td><a href='../interface/operator (.ule.).html'>OPERATOR (.ULE.)</a></td><td><a href='../module/mbase_uintutil.html'>MBase_UIntUtil</a></td><td>Interface</td><td><p><strong>Operator Overload</strong>: OPERATOR(.ULE.) <br>
+ <strong>Purpose</strong>:  To check if the LHS value is less than or equal to the RHS value <br>
+  return .TRUE. if LHS &lt;= RHS; otherwise return .FALSE. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    Flag = LHS .ULE. RHS <br>
+  ---&gt;    IF (LHS .ULE. RHS) DoSomething</p></td></tr>
+			   <tr><td><a href='../interface/operator (.ult.).html'>OPERATOR (.ULT.)</a></td><td><a href='../module/mbase_uintutil.html'>MBase_UIntUtil</a></td><td>Interface</td><td><p><strong>Operator Overload</strong>: OPERATOR(.ULT.) <br>
+ <strong>Purpose</strong>:  To check if the LHS value is less than the RHS value <br>
+  return .TRUE. if LHS &lt; RHS; otherwise return .FALSE. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    Flag = LHS .ULT. RHS <br>
+  ---&gt;    IF (LHS .ULT. RHS) DoSomething</p></td></tr>
+			   <tr><td><a href='../interface/operator(ASTERISK).html'>OPERATOR(*)</a></td><td><a href='../module/mbase_sint128.html'>MBase_SInt128</a></td><td>Interface</td><td><p><strong>Operator Overload</strong>: OPERATOR( * ) <br>
+ <strong>Purpose</strong>:  To perform a multiplication of two signed integers
+  (at least one of which is a 128-bit signed integer). <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    OUTPUT = FIRST_IN * SECOND_IN</p></td></tr>
+			   <tr><td><a href='../interface/operator(ASTERISK)~2.html'>OPERATOR(*)</a></td><td><a href='../module/mbase_uint128.html'>MBase_UInt128</a></td><td>Interface</td><td><p><strong>Operator Overload</strong>: OPERATOR( * ) <br>
+ <strong>Purpose</strong>:  To perform a multiplication of two unsigned integers
+  (at least one of which is a 128-bit unsigned integer). <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    OUTPUT = FIRST_IN * SECOND_IN</p></td></tr>
+			   <tr><td><a href='../interface/operator(+).html'>OPERATOR(+)</a></td><td><a href='../module/mbase_sint128.html'>MBase_SInt128</a></td><td>Interface</td><td><p><strong>Operator Overload</strong>: OPERATOR(+) <br>
+ <strong>Purpose</strong>:  To perform a summation of two signed integers
+  (at least one of which is a 128-bit signed integer) or
+  to add a unary plus sign to a 128-bit signed integer
+  (which has no effect on the signed integer). <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    OUTPUT = +INPUT <br>
+  ---&gt;    OUTPUT = FIRST_IN + SECOND_IN</p></td></tr>
+			   <tr><td><a href='../interface/operator(+)~2.html'>OPERATOR(+)</a></td><td><a href='../module/mbase_uint128.html'>MBase_UInt128</a></td><td>Interface</td><td><p><strong>Operator Overload</strong>: OPERATOR(+) <br>
+ <strong>Purpose</strong>:  To perform a summation of two unsigned integers
+  (at least one of which is a 128-bit unsigned integer) or
+  to add a unary plus sign to a 128-bit unsigned integer
+  (which has no effect on the unsigned integer). <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    OUTPUT = +INPUT <br>
+  ---&gt;    OUTPUT = FIRST_IN + SECOND_IN</p></td></tr>
+			   <tr><td><a href='../interface/operator(-).html'>OPERATOR(-)</a></td><td><a href='../module/mbase_sint128.html'>MBase_SInt128</a></td><td>Interface</td><td><p><strong>Operator Overload</strong>: OPERATOR(-) <br>
+ <strong>Purpose</strong>:  To perform a subtraction of two signed integers
+  (at least one of which is a 128-bit signed integer) or
+  to perform a negation of a 128-bit signed integer. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    OUTPUT = -INPUT <br>
+  ---&gt;    OUTPUT = FIRST_IN - SECOND_IN <br>
+ <strong>Important Note</strong>:  For subtraction of signed integers (unlike unsigned one),
+  value of FIRST_IN can be less than SECOND_IN.</p></td></tr>
+			   <tr><td><a href='../interface/operator(-)~2.html'>OPERATOR(-)</a></td><td><a href='../module/mbase_uint128.html'>MBase_UInt128</a></td><td>Interface</td><td><p><strong>Operator Overload</strong>: OPERATOR(-) <br>
+ <strong>Purpose</strong>:  To perform a subtraction of two unsigned integers
+  (at least one of which is a 128-bit unsigned integer) or
+  to perform a negation of a 128-bit unsigned integer. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    OUTPUT = -INPUT <br>
+  ---&gt;    OUTPUT = FIRST_IN - SECOND_IN <br>
+ <strong>Important Note</strong>:  For subtraction of unsigned integers, value of
+  FIRST_IN must always be greater than SECOND_IN.  Otherwise, value of
+  OUTPUT is NOT valid.</p></td></tr>
+			   <tr><td><a href='../interface/operator(.udiv.).html'>OPERATOR(.UDIV.)</a></td><td><a href='../module/mbase_uint128.html'>MBase_UInt128</a></td><td>Interface</td><td><p><strong>Operator Overload</strong>: OPERATOR(.UDIV.) <br>
+ <strong>Purpose</strong>:  To return the quotient of a division of two unsigned integers,
+  where the dividend (numerator) is a 128-bit unsigned integer and the
+  divisor (denominator) can be 32-, 64- or 128-bit unsigned integer. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    QUOT = NUMER .UDIV. DENOM</p></td></tr>
+			   <tr><td><a href='../interface/operator(.uge.).html'>OPERATOR(.UGE.)</a></td><td><a href='../module/mbase_uint128.html'>MBase_UInt128</a></td><td>Interface</td><td><p><strong>Operator Overload</strong>: OPERATOR(.UGE.) <br>
+ <strong>Purpose</strong>:  To check if the LHS value is greater than or equal to the RHS value.
+  Return .TRUE. if LHS &gt;= RHS; otherwise return .FALSE.. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    Flag = LHS .UGE. RHS <br>
+  ---&gt;    IF (LHS .UGE. RHS) DoSomething</p></td></tr>
+			   <tr><td><a href='../interface/operator(.ugt.).html'>OPERATOR(.UGT.)</a></td><td><a href='../module/mbase_uint128.html'>MBase_UInt128</a></td><td>Interface</td><td><p><strong>Operator Overload</strong>: OPERATOR(.UGT.) <br>
+ <strong>Purpose</strong>:  To check if the LHS value is greater than the RHS value.
+  Return .TRUE. if LHS &gt; RHS; otherwise return .FALSE.. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    Flag = LHS .UGT. RHS <br>
+  ---&gt;    IF (LHS .UGT. RHS) DoSomething</p></td></tr>
+			   <tr><td><a href='../interface/operator(.ule.).html'>OPERATOR(.ULE.)</a></td><td><a href='../module/mbase_uint128.html'>MBase_UInt128</a></td><td>Interface</td><td><p><strong>Operator Overload</strong>: OPERATOR(.ULE.) <br>
+ <strong>Purpose</strong>:  To check if the LHS value is less than or equal to the RHS value.
+  Return .TRUE. if LHS &lt;= RHS; otherwise return .FALSE.. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    Flag = LHS .ULE. RHS <br>
+  ---&gt;    IF (LHS .ULE. RHS) DoSomething</p></td></tr>
+			   <tr><td><a href='../interface/operator(.ult.).html'>OPERATOR(.ULT.)</a></td><td><a href='../module/mbase_uint128.html'>MBase_UInt128</a></td><td>Interface</td><td><p><strong>Operator Overload</strong>: OPERATOR(.ULT.) <br>
+ <strong>Purpose</strong>:  To check if the LHS value is less than the RHS value.
+  Return .TRUE. if LHS &lt; RHS; otherwise return .FALSE.. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    Flag = LHS .ULT. RHS <br>
+  ---&gt;    IF (LHS .ULT. RHS) DoSomething</p></td></tr>
+			   <tr><td><a href='../interface/operator(SLASH).html'>OPERATOR(/)</a></td><td><a href='../module/mbase_sint128.html'>MBase_SInt128</a></td><td>Interface</td><td><p><strong>Operator Overload</strong>: OPERATOR(/) <br>
+ <strong>Purpose</strong>:  To return the quotient of a division of two signed integers,
+  where the dividend (numerator) is a 128-bit signed integer and the
+  divisor (denominator) can be 32-, 64- or 128-bit signed integer. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    QUOT = NUMER / DENOM</p></td></tr>
+			   <tr><td><a href='../interface/operator(SLASH=).html'>OPERATOR(/=)</a></td><td><a href='../module/mbase_sint128.html'>MBase_SInt128</a></td><td>Interface</td><td><p><strong>Operator Overload</strong>: OPERATOR(/=) <br>
+ <strong>Purpose</strong>:  To check if values of two 128-bit signed integers are not equal.
+  Return .TRUE. if both values are NOT equal; otherwise return .FALSE.. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    Flag = LHS /= RHS <br>
+  ---&gt;    IF (LHS .NE. RHS) DoSomething</p></td></tr>
+			   <tr><td><a href='../interface/operator(SLASH=)~2.html'>OPERATOR(/=)</a></td><td><a href='../module/mbase_uint128.html'>MBase_UInt128</a></td><td>Interface</td><td><p><strong>Operator Overload</strong>: OPERATOR(/=) <br>
+ <strong>Purpose</strong>:  To check if values of two 128-bit unsigned integers are not equal.
+  Return .TRUE. if both values are NOT equal; otherwise return .FALSE.. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    Flag = LHS /= RHS <br>
+  ---&gt;    IF (LHS .NE. RHS) DoSomething</p></td></tr>
+			   <tr><td><a href='../interface/operator(lt).html'>OPERATOR(<)</a></td><td><a href='../module/mbase_sint128.html'>MBase_SInt128</a></td><td>Interface</td><td><p><strong>Operator Overload</strong>: OPERATOR(&lt;) <br>
+ <strong>Purpose</strong>:  To check if the LHS value is less than the RHS value.
+  Return .TRUE. if LHS &lt; RHS; otherwise return .FALSE.. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    Flag = LHS &lt; RHS <br>
+  ---&gt;    IF (LHS .LT. RHS) DoSomething</p></td></tr>
+			   <tr><td><a href='../interface/operator(lt=).html'>OPERATOR(<=)</a></td><td><a href='../module/mbase_sint128.html'>MBase_SInt128</a></td><td>Interface</td><td><p><strong>Operator Overload</strong>: OPERATOR(&lt;=) <br>
+ <strong>Purpose</strong>:  To check if the LHS value is less than or equal to the RHS value.
+  Return .TRUE. if LHS &lt;= RHS; otherwise return .FALSE.. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    Flag = LHS &lt;= RHS <br>
+  ---&gt;    IF (LHS .LE. RHS) DoSomething</p></td></tr>
+			   <tr><td><a href='../interface/operator(==).html'>OPERATOR(==)</a></td><td><a href='../module/mbase_sint128.html'>MBase_SInt128</a></td><td>Interface</td><td><p><strong>Operator Overload</strong>: OPERATOR(==) <br>
+ <strong>Purpose</strong>:  To check if values of two 128-bit signed integers are equal.
+  Return .TRUE. if both values are equal; otherwise return .FALSE.. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    Flag = LHS == RHS <br>
+  ---&gt;    IF (LHS .EQ. RHS) DoSomething</p></td></tr>
+			   <tr><td><a href='../interface/operator(==)~2.html'>OPERATOR(==)</a></td><td><a href='../module/mbase_uint128.html'>MBase_UInt128</a></td><td>Interface</td><td><p><strong>Operator Overload</strong>: OPERATOR(==) <br>
+ <strong>Purpose</strong>:  To check if values of two 128-bit unsigned integers are equal.
+  Return .TRUE. if both values are equal; otherwise return .FALSE.. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    Flag = LHS == RHS <br>
+  ---&gt;    IF (LHS .EQ. RHS) DoSomething</p></td></tr>
+			   <tr><td><a href='../interface/operator(gt).html'>OPERATOR(>)</a></td><td><a href='../module/mbase_sint128.html'>MBase_SInt128</a></td><td>Interface</td><td><p><strong>Operator Overload</strong>: OPERATOR(&gt;) <br>
+ <strong>Purpose</strong>:  To check if the LHS value is greater than the RHS value.
+  Return .TRUE. if LHS &gt; RHS; otherwise return .FALSE.. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    Flag = LHS &gt; RHS <br>
+  ---&gt;    IF (LHS .GT. RHS) DoSomething</p></td></tr>
+			   <tr><td><a href='../interface/operator(gt=).html'>OPERATOR(>=)</a></td><td><a href='../module/mbase_sint128.html'>MBase_SInt128</a></td><td>Interface</td><td><p><strong>Operator Overload</strong>: OPERATOR(&gt;=) <br>
+ <strong>Purpose</strong>:  To check if the LHS value is greater than or equal to the RHS value.
+  Return .TRUE. if LHS &gt;= RHS; otherwise return .FALSE.. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    Flag = LHS &gt;= RHS <br>
+  ---&gt;    IF (LHS .GE. RHS) DoSomething</p></td></tr>
+			   <tr><td><a href='../proc/output_message.html'>Output_Message</a></td><td><a href='../module/mbase_iohandlers.html'>MBase_IOHandlers</a></td><td>Subroutine</td><td><p>To display the specified message on default output (an audit file) or the
+  indicated file unit number if specified.</p></td></tr>
+			   <tr><td><a href='../proc/parse_fortran_string128.html'>Parse_Fortran_String128</a></td><td><a href='../module/mbase_bindec128.html'>MBase_BinDec128</a></td><td>Function</td><td><p>To parse a valid string representing a Fortran real (floating point) number that
+ has one of the two following forms: <br>
+ 1. A number without exponent part (plain format)   -&gt; [S]N[N...] <br>
+ 2. A number with exponent part (scientific format) -&gt; [S]N[N...]E[S]N[N...] <br>
+   where <br>
+   - [ ] indicates an optional field. <br>
+   - S is a sign indicator (required if negative '-', optional if positive '+'). <br>
+   - N is a decimal digit (0 through 9). A decimal point may appear anywhere
+       after the sign (but before the exponent). <br>
+   - E is an exponent indicator (either 'e' or 'E'). <br>
+ The valid number is similar to "Real" Fortran constant (literal) with some small
+ differences. <br>
+ 1. A whole number without a decimal point (i.e. "Integer" constant) is considered
+    valid. <br>
+ 2. The optional kind parameter (_k) is not allowed here. <br>
+ Note: Leading and/or trailing space(s) are allowed.  For example, "  1.23" and
+       "1.23   " are considered valid.  However, no space is allowed inside the
+       supposedly valid number.  For instance, "1 .2 3" is considered NOT valid.
+       Therefore, this routine is not totally compatible with Fortran <strong>READ</strong>
+       statement where spaces inside the valid number are allowed.  However, this
+       can easily be done by adding an optional '<em>Inside Space</em>' flag that provides
+       an interpretation of the spaces as '<em>zero</em>' or '<em>ignored</em>'.  Then, the input
+       will be pre-processed according to the flag.  Nonetheless, this routine
+       neglects this optional input because it will make the routine much less
+       efficient due to the fact that we will need to scan the whole string twice
+       and we will also need to copy the input string into a buffer string and
+       working with the buffer instead of directly handling the input string. <br></p></td></tr>
+			   <tr><td><a href='../proc/parse_fortran_string32.html'>Parse_Fortran_String32</a></td><td><a href='../module/mbase_bindec32.html'>MBase_BinDec32</a></td><td>Function</td><td><p>To parse a valid string representing a Fortran real (floating point) number that
+ has one of the two following forms: <br>
+ 1. A number without exponent part (plain format)   -&gt; [S]N[N...] <br>
+ 2. A number with exponent part (scientific format) -&gt; [S]N[N...]E[S]N[N...] <br>
+   where <br>
+   - [ ] indicates an optional field. <br>
+   - S is a sign indicator (required if negative '-', optional if positive '+'). <br>
+   - N is a decimal digit (0 through 9). A decimal point may appear anywhere
+       after the sign (but before the exponent). <br>
+   - E is an exponent indicator (either 'e' or 'E'). <br>
+ The valid number is similar to "Real" Fortran constant (literal) with some small
+ differences. <br>
+ 1. A whole number without a decimal point (i.e. "Integer" constant) is considered
+    valid. <br>
+ 2. The optional kind parameter (_k) is not allowed here. <br>
+ Note: Leading and/or trailing space(s) are allowed.  For example, "  1.23" and
+       "1.23   " are considered valid.  However, no space is allowed inside the
+       supposedly valid number.  For instance, "1 .2 3" is considered NOT valid.
+       Therefore, this routine is not totally compatible with Fortran <strong>READ</strong>
+       statement where spaces inside the valid number are allowed.  However, this
+       can easily be done by adding an optional '<em>Inside Space</em>' flag that provides
+       an interpretation of the spaces as '<em>zero</em>' or '<em>ignored</em>'.  Then, the input
+       will be pre-processed according to the flag.  Nonetheless, this routine
+       neglects this optional input because it will make the routine much less
+       efficient due to the fact that we will need to scan the whole string twice
+       and we will also need to copy the input string into a buffer string and
+       working with the buffer instead of directly handling the input string. <br></p></td></tr>
+			   <tr><td><a href='../proc/parse_fortran_string64.html'>Parse_Fortran_String64</a></td><td><a href='../module/mbase_bindec64.html'>MBase_BinDec64</a></td><td>Function</td><td><p>To parse a valid string representing a Fortran real (floating point) number that
+ has one of the two following forms: <br>
+ 1. A number without exponent part (plain format)   -&gt; [S]N[N...] <br>
+ 2. A number with exponent part (scientific format) -&gt; [S]N[N...]E[S]N[N...] <br>
+   where <br>
+   - [ ] indicates an optional field. <br>
+   - S is a sign indicator (required if negative '-', optional if positive '+'). <br>
+   - N is a decimal digit (0 through 9). A decimal point may appear anywhere
+       after the sign (but before the exponent). <br>
+   - E is an exponent indicator (either 'e' or 'E'). <br>
+ The valid number is similar to "Real" Fortran constant (literal) with some small
+ differences. <br>
+ 1. A whole number without a decimal point (i.e. "Integer" constant) is considered
+    valid. <br>
+ 2. The optional kind parameter (_k) is not allowed here. <br>
+ Note: Leading and/or trailing space(s) are allowed.  For example, "  1.23" and
+       "1.23   " are considered valid.  However, no space is allowed inside the
+       supposedly valid number.  For instance, "1 .2 3" is considered NOT valid.
+       Therefore, this routine is not totally compatible with Fortran <strong>READ</strong>
+       statement where spaces inside the valid number are allowed.  However, this
+       can easily be done by adding an optional '<em>Inside Space</em>' flag that provides
+       an interpretation of the spaces as '<em>zero</em>' or '<em>ignored</em>'.  Then, the input
+       will be pre-processed according to the flag.  Nonetheless, this routine
+       neglects this optional input because it will make the routine much less
+       efficient due to the fact that we will need to scan the whole string twice
+       and we will also need to copy the input string into a buffer string and
+       working with the buffer instead of directly handling the input string. <br></p></td></tr>
+			   <tr><td><a href='../proc/parse_fplus_string128.html'>Parse_FPlus_String128</a></td><td><a href='../module/mbase_bindec128.html'>MBase_BinDec128</a></td><td>Function</td><td><p>To parse a valid string representing a Fortran real (floating point) number with more
+ relaxed rules than those used in "<em>Parse_Fortran_String</em>" routine.  The relaxed rules
+ consider the following numbers as valid: <br>
+ 1. A number expressed in the scientific format can use 'd', 'D', 'q' and 'Q'
+    in place of 'e' or 'E'. <br>
+ 2. A number with '+' or '-' after digits (e.g. 1.23-20 or 123+50) is considered to be
+    a valid string expressed in the number in the scientific format. <br>
+ 3. Digits before any invalid character encountered are treated as a valid number and
+    any characters after the first encounter (including the first invalid one) are
+    neglected.  Therefore, for example, a '12.56ax-300' is considered to be a valid
+    number with value of 12.56. <br></p></td></tr>
+			   <tr><td><a href='../proc/parse_fplus_string32.html'>Parse_FPlus_String32</a></td><td><a href='../module/mbase_bindec32.html'>MBase_BinDec32</a></td><td>Function</td><td><p>To parse a valid string representing a Fortran real (floating point) number with more
+ relaxed rules than those used in "<em>Parse_Fortran_String</em>" routine.  The relaxed rules
+ consider the following numbers as valid: <br>
+ 1. A number expressed in the scientific format can use 'd', 'D', 'q' and 'Q'
+    in place of 'e' or 'E'. <br>
+ 2. A number with '+' or '-' after digits (e.g. 1.23-20 or 123+50) is considered to be
+    a valid string expressed in the number in the scientific format. <br>
+ 3. Digits before any invalid character encountered are treated as a valid number and
+    any characters after the first encounter (including the first invalid one) are
+    neglected.  Therefore, for example, a '12.56ax-300' is considered to be a valid
+    number with value of 12.56. <br></p></td></tr>
+			   <tr><td><a href='../proc/parse_fplus_string64.html'>Parse_FPlus_String64</a></td><td><a href='../module/mbase_bindec64.html'>MBase_BinDec64</a></td><td>Function</td><td><p>To parse a valid string representing a Fortran real (floating point) number with more
+ relaxed rules than those used in "<em>Parse_Fortran_String</em>" routine.  The relaxed rules
+ consider the following numbers as valid: <br>
+ 1. A number expressed in the scientific format can use 'd', 'D', 'q' and 'Q'
+    in place of 'e' or 'E'. <br>
+ 2. A number with '+' or '-' after digits (e.g. 1.23-20 or 123+50) is considered to be
+    a valid string expressed in the number in the scientific format. <br>
+ 3. Digits before any invalid character encountered are treated as a valid number and
+    any characters after the first encounter (including the first invalid one) are
+    neglected.  Therefore, for example, a '12.56ax-300' is considered to be a valid
+    number with value of 12.56. <br></p></td></tr>
+			   <tr><td><a href='../proc/parse_json_string128.html'>Parse_JSON_String128</a></td><td><a href='../module/mbase_bindec128.html'>MBase_BinDec128</a></td><td>Function</td><td><p>To parse a valid string representing a JSON real (floating point) number where its
+ differences from a valid string representing a Fortran real number are as follows: <br>
+  1. Leading and trailing spaces are not allowed. <br>
+  2. A plus sign as the first character is not allowed. <br>
+  3. Leading zero(s) is not allowed (if 0 is the first character, the second one
+     must either be a period or an exponent indicator.) <br>
+  4. A period must be followed by at least one digit. <br></p></td></tr>
+			   <tr><td><a href='../proc/parse_json_string32.html'>Parse_JSON_String32</a></td><td><a href='../module/mbase_bindec32.html'>MBase_BinDec32</a></td><td>Function</td><td><p>To parse a valid string representing a JSON real (floating point) number where its
+ differences from a valid string representing a Fortran real number are as follows: <br>
+  1. Leading and trailing spaces are not allowed. <br>
+  2. A plus sign as the first character is not allowed. <br>
+  3. Leading zero(s) is not allowed (if 0 is the first character, the second one
+     must either be a period or an exponent indicator.) <br>
+  4. A period must be followed by at least one digit. <br></p></td></tr>
+			   <tr><td><a href='../proc/parse_json_string64.html'>Parse_JSON_String64</a></td><td><a href='../module/mbase_bindec64.html'>MBase_BinDec64</a></td><td>Function</td><td><p>To parse a valid string representing a JSON real (floating point) number where its
+ differences from a valid string representing a Fortran real number are as follows: <br>
+  1. Leading and trailing spaces are not allowed. <br>
+  2. A plus sign as the first character is not allowed. <br>
+  3. Leading zero(s) is not allowed (if 0 is the first character, the second one
+     must either be a period or an exponent indicator.) <br>
+  4. A period must be followed by at least one digit. <br></p></td></tr>
+			   <tr><td><a href='../interface/parsei128xp.html'>ParseI128Xp</a></td><td><a href='../module/mbase_sint128.html'>MBase_SInt128</a></td><td>Interface</td><td></td></tr>
+			   <tr><td><a href='../interface/parsenumber.html'>ParseNumber</a></td><td><a href='../module/mbase_readutil.html'>MBase_ReadUtil</a></td><td>Interface</td><td><p><strong>Function Interface</strong>: ParseNumber <br>
+ <strong>Purpose</strong>:  To parse a string and return a requested number. <br>
+ <strong>Usage</strong>: <br>
+  ! parse a string and return an integer (or real/complex) number (using defaults) <br>
+  ---&gt;    Valid = ParseNumber(Str, Number, EndPos) <br>
+  ! parse a string and return an integer number (specifying optional input) <br>
+  ---&gt;    Valid = ParseNumber(Str, Number, EndPos, AllowReal, Strict, ErrMsg) <br>
+  ! parse a string and return a real number (specifying optional input) <br>
+  ---&gt;    Valid = ParseNumber(Str, Number, EndPos, D2BAlgo, Strict, ErrMsg) <br>
+  ! parse a string and return a complex number (specifying optional input) <br>
+  ---&gt;    Valid = ParseNumber(Str, Number, EndPos, As2Real, D2BAlgo, Strict, ErrMsg) <br></p></td></tr>
+			   <tr><td><a href='../interface/parseu128xp.html'>ParseU128Xp</a></td><td><a href='../module/mbase_uint128.html'>MBase_UInt128</a></td><td>Interface</td><td></td></tr>
+			   <tr><td><a href='../proc/polyabsolute.html'>PolyAbsolute</a></td><td><a href='../module/mbase_polyfloatnum.html'>MBase_PolyFloatNum</a></td><td>Function</td><td><p>To determine the absolute value of A.</p></td></tr>
+			   <tr><td><a href='../interface/polyallocate.html'>PolyAllocate</a></td><td><a href='../module/mbase_polyfloatnum.html'>MBase_PolyFloatNum</a></td><td>Interface</td><td><p><strong>Subroutine Interface</strong>: PolyAllocate <br>
+ <strong>Purpose</strong>:  To allocate memory of the specified allocatable argument. <br></p></td></tr>
+			   <tr><td><a href='../interface/polyassign.html'>PolyAssign</a></td><td><a href='../module/mbase_polyfloatnum.html'>MBase_PolyFloatNum</a></td><td>Interface</td><td><p><strong>Subroutine Interface</strong>: PolyAssign <br>
+ <strong>Purpose</strong>:  To perform assignment of the specified argument. <br></p></td></tr>
+			   <tr><td><a href='../proc/polycompare.html'>PolyCompare</a></td><td><a href='../module/mbase_polyfloatnum.html'>MBase_PolyFloatNum</a></td><td>Function</td><td><p>To compare A and B.</p></td></tr>
+			   <tr><td><a href='../proc/polydivision.html'>PolyDivision</a></td><td><a href='../module/mbase_polyfloatnum.html'>MBase_PolyFloatNum</a></td><td>Subroutine</td><td><p>To perform division: CVal = (Sign)AVal/BVal.</p></td></tr>
+			   <tr><td><a href='../proc/polydot.html'>PolyDot</a></td><td><a href='../module/mbase_polyfloatnum.html'>MBase_PolyFloatNum</a></td><td>Subroutine</td><td><p>To perform dot-product multiplication of the specified arguments.</p></td></tr>
+			   <tr><td><a href='../interface/polyinvother.html'>PolyInvOther</a></td><td><a href='../module/mbase_polyfloatnum.html'>MBase_PolyFloatNum</a></td><td>Interface</td><td><p><strong>Subroutine Interface</strong>: PolyInvOther <br>
+ <strong>Purpose</strong>:  To perform an inversion of the specified argument. <br></p></td></tr>
+			   <tr><td><a href='../interface/polyinvself.html'>PolyInvSelf</a></td><td><a href='../module/mbase_polyfloatnum.html'>MBase_PolyFloatNum</a></td><td>Interface</td><td><p><strong>Subroutine Interface</strong>: PolyInvSelf <br>
+ <strong>Purpose</strong>:  To perform an inversion of the specified argument. <br></p></td></tr>
+			   <tr><td><a href='../proc/polylogarithm.html'>PolyLogarithm</a></td><td><a href='../module/mbase_polyfloatnum.html'>MBase_PolyFloatNum</a></td><td>Subroutine</td><td><p>To determine the natural logarithm of AVAl or any logarithm if the base
+ is specified.  Return the logarithmic value in BVal.</p></td></tr>
+			   <tr><td><a href='../interface/polynegate.html'>PolyNegate</a></td><td><a href='../module/mbase_polyfloatnum.html'>MBase_PolyFloatNum</a></td><td>Interface</td><td><p><strong>Subroutine Interface</strong>: PolyNegate <br>
+ <strong>Purpose</strong>:  To perform negation of the specified argument. <br></p></td></tr>
+			   <tr><td><a href='../proc/polynorm2.html'>PolyNorm2</a></td><td><a href='../module/mbase_polyfloatnum.html'>MBase_PolyFloatNum</a></td><td>Function</td><td><p>To determine the Euclidean norm of the specified argument.</p></td></tr>
+			   <tr><td><a href='../interface/polyproduct.html'>PolyProduct</a></td><td><a href='../module/mbase_polyfloatnum.html'>MBase_PolyFloatNum</a></td><td>Interface</td><td><p><strong>Subroutine Interface</strong>: PolyProduct <br>
+ <strong>Purpose</strong>:  To perform multiplication: CVal = (Sign)(AVal*BVal). <br></p></td></tr>
+			   <tr><td><a href='../interface/polyresize.html'>PolyResize</a></td><td><a href='../module/mbase_polyfloatnum.html'>MBase_PolyFloatNum</a></td><td>Interface</td><td><p><strong>Subroutine Interface</strong>: PolyResize <br>
+ <strong>Purpose</strong>:  To re-allocate memory of the specified allocatable argument and
+      preserve its data. <br></p></td></tr>
+			   <tr><td><a href='../interface/polyscaleadd.html'>PolyScaleAdd</a></td><td><a href='../module/mbase_polyfloatnum.html'>MBase_PolyFloatNum</a></td><td>Interface</td><td><p><strong>Subroutine Interface</strong>: PolyScaleAdd <br>
+ <strong>Purpose</strong>:  To perform scaling and addition of one of the followings: <br>
+      1. AVal = Alpha<em>(ASign)AVal + Beta</em>(BSign)BVal, or <br>
+      2. AVal =       (ASign)AVal + Beta<em>(BSign)BVal, or <br>
+      3. AVal = Alpha</em>(ASign)AVal +      (BSign)BVal, or <br>
+      4. AVal =       (ASign)AVal +      (BSign)BVal. <br></p></td></tr>
+			   <tr><td><a href='../interface/polyscalearray.html'>PolyScaleArray</a></td><td><a href='../module/mbase_polyfloatnum.html'>MBase_PolyFloatNum</a></td><td>Interface</td><td><p><strong>Subroutine Interface</strong>: PolyScaleArray <br>
+ <strong>Purpose</strong>:  To perform scaling of one of the followings: <br>
+      1. AVal = Alpha<em>(Sign)AVal, or <br>
+      2. BVal = Alpha</em>(Sign)AVal. <br></p></td></tr>
+			   <tr><td><a href='../proc/polyscaleother.html'>PolyScaleOther</a></td><td><a href='../module/mbase_polyfloatnum.html'>MBase_PolyFloatNum</a></td><td>Subroutine</td><td><p>To perform scaling: BVal = Alpha*(Sign)AVal.</p></td></tr>
+			   <tr><td><a href='../proc/polyscaleself.html'>PolyScaleSelf</a></td><td><a href='../module/mbase_polyfloatnum.html'>MBase_PolyFloatNum</a></td><td>Subroutine</td><td><p>To perform scaling: AVal = Alpha*(Sign)AVal.</p></td></tr>
+			   <tr><td><a href='../interface/polyscalesum.html'>PolyScaleSum</a></td><td><a href='../module/mbase_polyfloatnum.html'>MBase_PolyFloatNum</a></td><td>Interface</td><td><p><strong>Subroutine Interface</strong>: PolyScaleSum <br>
+ <strong>Purpose</strong>:  To perform scaling and addition of one of the followings: <br>
+      1. CVal = Alpha<em>(ASign)AVal + Beta</em>(BSign)BVal, or <br>
+      2. CVal =       (ASign)AVal + Beta<em>(BSign)BVal, or <br>
+      3. CVal = Alpha</em>(ASign)AVal +      (BSign)BVal, or <br>
+      4. CVal =       (ASign)AVal +      (BSign)BVal. <br></p></td></tr>
+			   <tr><td><a href='../interface/polysetone.html'>PolySetOne</a></td><td><a href='../module/mbase_polyfloatnum.html'>MBase_PolyFloatNum</a></td><td>Interface</td><td><p><strong>Subroutine Interface</strong>: PolySetOne <br>
+ <strong>Purpose</strong>:  To set value(s) of the specified argument to one. <br></p></td></tr>
+			   <tr><td><a href='../interface/polysetzero.html'>PolySetZero</a></td><td><a href='../module/mbase_polyfloatnum.html'>MBase_PolyFloatNum</a></td><td>Interface</td><td><p><strong>Subroutine Interface</strong>: PolySetZero <br>
+ <strong>Purpose</strong>:  To set value(s) of the specified argument to zero. <br></p></td></tr>
+			   <tr><td><a href='../proc/polysquareroot.html'>PolySquareRoot</a></td><td><a href='../module/mbase_polyfloatnum.html'>MBase_PolyFloatNum</a></td><td>Subroutine</td><td><p>To compute the square root of AVal and return the result in BVal.</p></td></tr>
+			   <tr><td><a href='../interface/polyswapfloat.html'>PolySwapFloat</a></td><td><a href='../module/mbase_polyfloatnum.html'>MBase_PolyFloatNum</a></td><td>Interface</td><td><p><strong>Subroutine Interface</strong>: PolySwap <br>
+ <strong>Purpose</strong>:  To perform swapping of the specified arguments. <br></p></td></tr>
+			   <tr><td><a href='../interface/popcnt.html'>POPCNT</a></td><td><a href='../module/mbase_sint128.html'>MBase_SInt128</a></td><td>Interface</td><td><p><strong>Function Interface</strong>: POPCNT <br>
+ <strong>Purpose</strong>:  To count the number of 1 bits in the input.
+  (For more information, see detailed explanation of the intrinsic function.) <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    NumBits = POPCNT(INPUT)</p></td></tr>
+			   <tr><td><a href='../interface/popcnt~2.html'>POPCNT</a></td><td><a href='../module/mbase_uint128.html'>MBase_UInt128</a></td><td>Interface</td><td><p><strong>Function Interface</strong>: POPCNT <br>
+ <strong>Purpose</strong>:  To count the number of 1 bits in the input.
+  (For more information, see detailed explanation of the intrinsic function.) <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    NumBits = POPCNT(INPUT)</p></td></tr>
+			   <tr><td><a href='../interface/poppar.html'>POPPAR</a></td><td><a href='../module/mbase_sint128.html'>MBase_SInt128</a></td><td>Interface</td><td><p><strong>Function Interface</strong>: POPPAR <br>
+ <strong>Purpose</strong>:  To determine the parity of the input.
+  (For more information, see detailed explanation of the intrinsic function.) <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    NumPar = POPPAR(INPUT)</p></td></tr>
+			   <tr><td><a href='../interface/poppar~2.html'>POPPAR</a></td><td><a href='../module/mbase_uint128.html'>MBase_UInt128</a></td><td>Interface</td><td><p><strong>Function Interface</strong>: POPPAR <br>
+ <strong>Purpose</strong>:  To determine the parity of the input.
+  (For more information, see detailed explanation of the intrinsic function.) <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    NumPar = POPPAR(INPUT)</p></td></tr>
+			   <tr><td><a href='../proc/ra_shift.html'>RA_Shift</a></td><td><a href='../module/mbase_miscutil.html'>MBase_MiscUtil</a></td><td>Function</td><td><p>To perform arithmetic right shift. <br>
+ Note: this is equivalent to the syntax "&gt;&gt;" in C or Java.</p></td></tr>
+			   <tr><td><a href='../proc/randomgen.html'>RandomGen</a></td><td><a href='../module/mbase_mathutil.html'>MBase_MathUtil</a></td><td>Function</td><td><p>To generate random number.</p></td></tr>
+			   <tr><td><a href='../interface/rawfp_biasedexponent.html'>RawFP_BiasedExponent</a></td><td><a href='../module/mbase_floatutil.html'>MBase_FloatUtil</a></td><td>Interface</td><td><p><strong>Function Interface</strong>: RawFP_BiasedExponent <br>
+ <strong>Purpose</strong>:  To determine the biased exponent of the specified floating-point number. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    BiasExp = RawFP_BiasedExponent(FPNum) <br></p></td></tr>
+			   <tr><td><a href='../interface/rawfp_construct.html'>RawFP_Construct</a></td><td><a href='../module/mbase_floatutil.html'>MBase_FloatUtil</a></td><td>Interface</td><td><p><strong>Function Interface</strong>: RawFP_Construct <br>
+ <strong>Purpose</strong>:  To construct a raw binary floating point number based on its three parts. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    RawFP = RawFP_Construct(FPBin) <br></p></td></tr>
+			   <tr><td><a href='../interface/rawfp_decompose.html'>RawFP_Decompose</a></td><td><a href='../module/mbase_floatutil.html'>MBase_FloatUtil</a></td><td>Interface</td><td><p><strong>Function Interface</strong>: RawFP_Decompose <br>
+ <strong>Purpose</strong>:  To decompose a raw binary floating point number into its three parts. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    FPBin = RawFP_Decompose(RawFP) <br></p></td></tr>
+			   <tr><td><a href='../interface/rawfp_fraction.html'>RawFP_Fraction</a></td><td><a href='../module/mbase_floatutil.html'>MBase_FloatUtil</a></td><td>Interface</td><td><p><strong>Function Interface</strong>: RawFP_Fraction <br>
+ <strong>Purpose</strong>:  To determine the fractional part of the specified floating-point number. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    Fraction = RawFP_Fraction(FPNum) <br></p></td></tr>
+			   <tr><td><a href='../interface/rawfp_fromfloat.html'>RawFP_FromFloat</a></td><td><a href='../module/mbase_floatutil.html'>MBase_FloatUtil</a></td><td>Interface</td><td><p><strong>Function Interface</strong>: RawFP_FromFloat <br>
+ <strong>Purpose</strong>:  To convert the specified real number to its equivalent unsigned integer number
+               that represents a floating-pointer number. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    RawFP = RawFP_FromFloat(RealNum) <br></p></td></tr>
+			   <tr><td><a href='../interface/rawfp_isinfinite.html'>RawFP_IsInfinite</a></td><td><a href='../module/mbase_floatutil.html'>MBase_FloatUtil</a></td><td>Interface</td><td><p><strong>Function Interface</strong>: RawFP_IsInfinite <br>
+ <strong>Purpose</strong>:  To check whether the specified floating-point (FP) number is infinite or not. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    Flag = RawFP_IsInfinite(FPNum) <br></p></td></tr>
+			   <tr><td><a href='../interface/rawfp_isinfornan.html'>RawFP_IsInfOrNaN</a></td><td><a href='../module/mbase_floatutil.html'>MBase_FloatUtil</a></td><td>Interface</td><td><p><strong>Function Interface</strong>: RawFP_IsInfOrNaN <br>
+ <strong>Purpose</strong>:  To check whether the specified floating-point (FP) number is either infinite or NAN
+               or not. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    Flag = RawFP_IsInfOrNaN(FPNum) <br></p></td></tr>
+			   <tr><td><a href='../interface/rawfp_ismaximalfinitemagnitude.html'>RawFP_IsMaximalFiniteMagnitude</a></td><td><a href='../module/mbase_floatutil.html'>MBase_FloatUtil</a></td><td>Interface</td><td><p><strong>Function Interface</strong>: RawFP_IsMaximalFiniteMagnitude <br>
+ <strong>Purpose</strong>:  To check whether the specified floating-point (FP) number is equal to its
+               maximal finite magnitude. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    Flag = RawFP_IsMaximalFiniteMagnitude(FPNum) <br></p></td></tr>
+			   <tr><td><a href='../interface/rawfp_isnan.html'>RawFP_IsNaN</a></td><td><a href='../module/mbase_floatutil.html'>MBase_FloatUtil</a></td><td>Interface</td><td><p><strong>Function Interface</strong>: RawFP_IsNaN <br>
+ <strong>Purpose</strong>:  To check whether the specified floating-point (FP) number is a NAN (not a
+               number) or not. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    Flag = RawFP_IsNaN(FPNum) <br></p></td></tr>
+			   <tr><td><a href='../interface/rawfp_isnegative.html'>RawFP_IsNegative</a></td><td><a href='../module/mbase_floatutil.html'>MBase_FloatUtil</a></td><td>Interface</td><td><p><strong>Function Interface</strong>: RawFP_IsNegative <br>
+ <strong>Purpose</strong>:  To check whether the specified floating-point (FP) number has a negative value
+               or not. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    Flag = RawFP_IsNegative(FPNum) <br></p></td></tr>
+			   <tr><td><a href='../interface/rawfp_isquietnan.html'>RawFP_IsQuietNaN</a></td><td><a href='../module/mbase_floatutil.html'>MBase_FloatUtil</a></td><td>Interface</td><td><p><strong>Function Interface</strong>: RawFP_IsQuietNaN <br>
+ <strong>Purpose</strong>:  To check whether the specified floating-point (FP) number is a quiet NAN
+               or not. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    Flag = RawFP_IsQuietNaN(FPNum) <br></p></td></tr>
+			   <tr><td><a href='../interface/rawfp_iszero.html'>RawFP_IsZero</a></td><td><a href='../module/mbase_floatutil.html'>MBase_FloatUtil</a></td><td>Interface</td><td><p><strong>Function Interface</strong>: RawFP_IsZero <br>
+ <strong>Purpose</strong>:  To check whether the specified floating-point (FP) number is zero or not. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    Flag = RawFP_IsZero(FPNum) <br></p></td></tr>
+			   <tr><td><a href='../interface/rawfp_negate.html'>RawFP_Negate</a></td><td><a href='../module/mbase_floatutil.html'>MBase_FloatUtil</a></td><td>Interface</td><td><p><strong>Function Interface</strong>: RawFP_Negate <br>
+ <strong>Purpose</strong>:  To negate the specified floating-point (FP) number. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    OutNum = RawFP_Negate(InNum) <br></p></td></tr>
+			   <tr><td><a href='../interface/rawfp_neighborhigh.html'>RawFP_NeighborHigh</a></td><td><a href='../module/mbase_floatutil.html'>MBase_FloatUtil</a></td><td>Interface</td><td><p><strong>Function Interface</strong>: RawFP_NeighborHigh <br>
+ <strong>Purpose</strong>:  To determine the nearest floating point value that is greater than the
+               input value. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    NearHi = RawFP_NeighborHigh(InNum) <br></p></td></tr>
+			   <tr><td><a href='../interface/rawfp_neighborlow.html'>RawFP_NeighborLow</a></td><td><a href='../module/mbase_floatutil.html'>MBase_FloatUtil</a></td><td>Interface</td><td><p><strong>Function Interface</strong>: RawFP_NeighborLow <br>
+ <strong>Purpose</strong>:  To determine the nearest floating point value that is smaller than the
+               input value. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    NearLo = RawFP_NeighborLow(InNum) <br></p></td></tr>
+			   <tr><td><a href='../interface/rawfp_setinfinity.html'>RawFP_SetInfinity</a></td><td><a href='../module/mbase_floatutil.html'>MBase_FloatUtil</a></td><td>Interface</td><td><p><strong>Function Interface</strong>: RawFP_SetInfinity <br>
+ <strong>Purpose</strong>:  To set value of the raw floating-point number to infinity. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    RawFP = RawFP_SetInfinity(IsNegative, RawFPMold) <br></p></td></tr>
+			   <tr><td><a href='../interface/rawfp_setnan.html'>RawFP_SetNaN</a></td><td><a href='../module/mbase_floatutil.html'>MBase_FloatUtil</a></td><td>Interface</td><td><p><strong>Function Interface</strong>: RawFP_SetNaN <br>
+ <strong>Purpose</strong>:  To set value of the raw floating-point number to not a number (NAN). <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    RawFP = RawFP_SetNaN(IsQuiet, RawFPMold) <br></p></td></tr>
+			   <tr><td><a href='../interface/rawfp_setzero.html'>RawFP_SetZero</a></td><td><a href='../module/mbase_floatutil.html'>MBase_FloatUtil</a></td><td>Interface</td><td><p><strong>Function Interface</strong>: RawFP_SetZero <br>
+ <strong>Purpose</strong>:  To set value of the raw floating-point number to zero. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    RawFP = RawFP_SetZero(IsNegative, RawFPMold) <br></p></td></tr>
+			   <tr><td><a href='../interface/rawfp_significand.html'>RawFP_Significand</a></td><td><a href='../module/mbase_floatutil.html'>MBase_FloatUtil</a></td><td>Interface</td><td><p><strong>Function Interface</strong>: RawFP_Significand <br>
+ <strong>Purpose</strong>:  To determine the significand of the specified floating-point number. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    Significand = RawFP_Significand(FPNum) <br></p></td></tr>
+			   <tr><td><a href='../interface/rawfp_tofloat.html'>RawFP_ToFloat</a></td><td><a href='../module/mbase_floatutil.html'>MBase_FloatUtil</a></td><td>Interface</td><td><p><strong>Function Interface</strong>: RawFP_ToFloat <br>
+ <strong>Purpose</strong>:  To convert an unsigned integer number that represents a floating-pointer number
+               to its equivalent real number. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    RealNum = RawFP_ToFloat(RawFP) <br></p></td></tr>
+			   <tr><td><a href='../interface/rawfp_unbiasedexponent.html'>RawFP_UnbiasedExponent</a></td><td><a href='../module/mbase_floatutil.html'>MBase_FloatUtil</a></td><td>Interface</td><td><p><strong>Function Interface</strong>: RawFP_UnbiasedExponent <br>
+ <strong>Purpose</strong>:  To determine the unbiased exponent of the specified floating-point number. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    UnbiasExp = RawFP_UnbiasedExponent(FPNum) <br></p></td></tr>
+			   <tr><td><a href='../proc/readsqfrm_linecharalloc.html'>ReadSqfrm_LineCharAlloc</a></td><td><a href='../module/mbase_iohandlers.html'>MBase_IOHandlers</a></td><td>Subroutine</td><td><p>To read a character sequence from a connected sequential-formatted unit into the character string.</p></td></tr>
+			   <tr><td><a href='../proc/readsqfrm_linecharstar.html'>ReadSqfrm_LineCharStar</a></td><td><a href='../module/mbase_iohandlers.html'>MBase_IOHandlers</a></td><td>Subroutine</td><td><p>To read a character sequence from a connected sequential-formatted unit into the character string.</p></td></tr>
+			   <tr><td><a href='../proc/reciprocal_2by1.html'>Reciprocal_2By1</a></td><td><a href='../module/mbase_uintutil.html'>MBase_UIntUtil</a></td><td>Function</td><td></td></tr>
+			   <tr><td><a href='../proc/reciprocal_3by2.html'>Reciprocal_3By2</a></td><td><a href='../module/mbase_uintutil.html'>MBase_UIntUtil</a></td><td>Function</td><td></td></tr>
+			   <tr><td><a href='../proc/reporterror~2.html'>ReportError</a></td><td><a href='../module/mclass_errorinfo.html'>MClass_ErrorInfo</a></td><td>Subroutine</td><td><p>To report and/or set the specified error information.</p></td></tr>
+			   <tr><td><a href='../interface/reversebits.html'>ReverseBits</a></td><td><a href='../module/mbase_sintutil.html'>MBase_SIntUtil</a></td><td>Interface</td><td><p><strong>Function Interface</strong>: ReverseBits <br>
+ <strong>Purpose</strong>:  To return an integer value (same kind as the specified integer value) obtained by
+   reversing the order of the bits in the two's complement binary representation of the input. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    OUTPUT = ReverseBits(INPUT)</p></td></tr>
+			   <tr><td><a href='../interface/reversebytes.html'>ReverseBytes</a></td><td><a href='../module/mbase_sintutil.html'>MBase_SIntUtil</a></td><td>Interface</td><td><p><strong>Function Interface</strong>: ReverseBits <br>
+ <strong>Purpose</strong>:  To return an integer value (same kind as the specified integer value) obtained by
+   reversing the order of the bytes in the two's complement binary representation of the input. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    OUTPUT = ReverseBytes(INPUT)</p></td></tr>
+			   <tr><td><a href='../proc/rl_shift.html'>RL_Shift</a></td><td><a href='../module/mbase_miscutil.html'>MBase_MiscUtil</a></td><td>Function</td><td><p>To perform logical right shift. <br>
+ Note: this is equivalent to the syntax "&gt;&gt;&gt;" in C for signed integer or Java
+       and it is equivalent to the syntax "&gt;&gt;" in C for unsigned integer.</p></td></tr>
+			   <tr><td><a href='../proc/samestring.html'>SameString</a></td><td><a href='../module/mbase_miscutil.html'>MBase_MiscUtil</a></td><td>Function</td><td><p>This function returns true if the two strings are equal (case insensitively).</p></td></tr>
+			   <tr><td><a href='../proc/setstoponerror.html'>SetStopOnError</a></td><td><a href='../module/mbase_errhandlers.html'>MBase_ErrHandlers</a></td><td>Subroutine</td><td><p>To set StopOnError flag (module variable).</p></td></tr>
+			   <tr><td><a href='../proc/settimelimit.html'>SetTimeLimit</a></td><td><a href='../module/mbase_miscutil.html'>MBase_MiscUtil</a></td><td>Function</td><td><p>To set the limit of the hour to be between 0 and 24.</p></td></tr>
+			   <tr><td><a href='../proc/setverbosity.html'>SetVerbosity</a></td><td><a href='../module/mbase_common.html'>MBase_Common</a></td><td>Subroutine</td><td><p>To set the Verbose global variable.</p></td></tr>
+			   <tr><td><a href='../interface/shifta.html'>SHIFTA</a></td><td><a href='../module/mbase_sint128.html'>MBase_SInt128</a></td><td>Interface</td><td><p><strong>Function Interface</strong>: SHIFTA <br>
+ <strong>Purpose</strong>:  To perform arithmetic right shift with 0 &lt;= ShiftPos &lt;= 128.
+  (For more information, see detailed explanation of the intrinsic function.) <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    OUT = SHIFTA(IN, 33)</p></td></tr>
+			   <tr><td><a href='../interface/shifta63down.html'>ShiftA63Down</a></td><td><a href='../module/mbase_sint128.html'>MBase_SInt128</a></td><td>Interface</td><td><p><strong>Function Interface</strong>: ShiftA63Down <br>
+ <strong>Purpose</strong>:  To perform arithmetic right shift by 63 or less. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    OUT = ShiftA63Down(IN, 53)</p></td></tr>
+			   <tr><td><a href='../interface/shifta64.html'>ShiftA64</a></td><td><a href='../module/mbase_sint128.html'>MBase_SInt128</a></td><td>Interface</td><td><p><strong>Function Interface</strong>: ShiftA64 <br>
+ <strong>Purpose</strong>:  To perform arithmetic right shift by 64. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    OUT = ShiftA64(IN)</p></td></tr>
+			   <tr><td><a href='../interface/shifta64up.html'>ShiftA64Up</a></td><td><a href='../module/mbase_sint128.html'>MBase_SInt128</a></td><td>Interface</td><td><p><strong>Function Interface</strong>: ShiftA64Up <br>
+ <strong>Purpose</strong>:  To perform arithmetic right shift by 64 or more (&lt;= 128) <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    OUT = ShiftA64Up(IN, 84)</p></td></tr>
+			   <tr><td><a href='../interface/shiftaonce.html'>ShiftAOnce</a></td><td><a href='../module/mbase_sint128.html'>MBase_SInt128</a></td><td>Interface</td><td><p><strong>Function Interface</strong>: ShiftAOnce <br>
+ <strong>Purpose</strong>:  To perform arithmetic right shift by 1. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    OUT = ShiftAOnce(IN)</p></td></tr>
+			   <tr><td><a href='../interface/shiftl.html'>SHIFTL</a></td><td><a href='../module/mbase_sint128.html'>MBase_SInt128</a></td><td>Interface</td><td><p><strong>Function Interface</strong>: SHIFTL <br>
+ <strong>Purpose</strong>:  To perform logical left shift with 0 &lt;= ShiftPos &lt;= 128.
+  (For more information, see detailed explanation of the intrinsic function.) <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    OUT = SHIFTL(IN, 127)</p></td></tr>
+			   <tr><td><a href='../interface/shiftl~2.html'>SHIFTL</a></td><td><a href='../module/mbase_uint128.html'>MBase_UInt128</a></td><td>Interface</td><td><p><strong>Function Interface</strong>: SHIFTL <br>
+ <strong>Purpose</strong>:  To perform logical left shift with 0 &lt;= ShiftPos &lt;= 128.
+  (For more information, see detailed explanation of the intrinsic function.) <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    OUT = SHIFTL(IN, 127)</p></td></tr>
+			   <tr><td><a href='../interface/shiftl63down.html'>ShiftL63Down</a></td><td><a href='../module/mbase_sint128.html'>MBase_SInt128</a></td><td>Interface</td><td><p><strong>Function Interface</strong>: ShiftL63Down <br>
+ <strong>Purpose</strong>:  To perform logical left shift by 63 or less. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    OUT = ShiftL63Down(IN, 11)</p></td></tr>
+			   <tr><td><a href='../interface/shiftl63down~2.html'>ShiftL63Down</a></td><td><a href='../module/mbase_uint128.html'>MBase_UInt128</a></td><td>Interface</td><td><p><strong>Function Interface</strong>: ShiftL63Down <br>
+ <strong>Purpose</strong>:  To perform logical left shift by 63 or less. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    OUT = ShiftL63Down(IN, 11)</p></td></tr>
+			   <tr><td><a href='../interface/shiftl64.html'>ShiftL64</a></td><td><a href='../module/mbase_sint128.html'>MBase_SInt128</a></td><td>Interface</td><td><p><strong>Function Interface</strong>: ShiftL64 <br>
+ <strong>Purpose</strong>:  To perform logical left shift by 64. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    OUT = ShiftL64(IN)</p></td></tr>
+			   <tr><td><a href='../interface/shiftl64~2.html'>ShiftL64</a></td><td><a href='../module/mbase_uint128.html'>MBase_UInt128</a></td><td>Interface</td><td><p><strong>Function Interface</strong>: ShiftL64 <br>
+ <strong>Purpose</strong>:  To perform logical left shift by 64. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    OUT = ShiftL64(IN)</p></td></tr>
+			   <tr><td><a href='../interface/shiftl64up.html'>ShiftL64Up</a></td><td><a href='../module/mbase_sint128.html'>MBase_SInt128</a></td><td>Interface</td><td><p><strong>Function Interface</strong>: ShiftL64Up <br>
+ <strong>Purpose</strong>:  To perform logical left shift by 64 or more (&lt;= 128). <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    OUT = ShiftL64Up(IN, 111)</p></td></tr>
+			   <tr><td><a href='../interface/shiftl64up~2.html'>ShiftL64Up</a></td><td><a href='../module/mbase_uint128.html'>MBase_UInt128</a></td><td>Interface</td><td><p><strong>Function Interface</strong>: ShiftL64Up <br>
+ <strong>Purpose</strong>:  To perform logical left shift by 64 or more (&lt;= 128). <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    OUT = ShiftL64Up(IN, 111)</p></td></tr>
+			   <tr><td><a href='../interface/shiftlonce.html'>ShiftLOnce</a></td><td><a href='../module/mbase_sint128.html'>MBase_SInt128</a></td><td>Interface</td><td><p><strong>Function Interface</strong>: ShiftLOnce <br>
+ <strong>Purpose</strong>:  To perform logical left shift by 1. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    OUT = ShiftLOnce(IN)</p></td></tr>
+			   <tr><td><a href='../interface/shiftlonce~2.html'>ShiftLOnce</a></td><td><a href='../module/mbase_uint128.html'>MBase_UInt128</a></td><td>Interface</td><td><p><strong>Function Interface</strong>: ShiftLOnce <br>
+ <strong>Purpose</strong>:  To perform logical left shift by 1. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    OUT = ShiftLOnce(IN)</p></td></tr>
+			   <tr><td><a href='../interface/shiftr.html'>SHIFTR</a></td><td><a href='../module/mbase_sint128.html'>MBase_SInt128</a></td><td>Interface</td><td><p><strong>Function Interface</strong>: SHIFTR <br>
+ <strong>Purpose</strong>:  To perform logical right shift with 0 &lt;= ShiftPos &lt;= 128.
+  (For more information, see detailed explanation of the intrinsic function.) <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    OUT = SHIFTR(IN, 33)</p></td></tr>
+			   <tr><td><a href='../interface/shiftr~2.html'>SHIFTR</a></td><td><a href='../module/mbase_uint128.html'>MBase_UInt128</a></td><td>Interface</td><td><p><strong>Function Interface</strong>: SHIFTR <br>
+ <strong>Purpose</strong>:  To perform logical right shift with 0 &lt;= ShiftPos &lt;= 128.
+  (For more information, see detailed explanation of the intrinsic function.) <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    OUT = SHIFTR(IN, 33)</p></td></tr>
+			   <tr><td><a href='../interface/shiftr63down.html'>ShiftR63Down</a></td><td><a href='../module/mbase_sint128.html'>MBase_SInt128</a></td><td>Interface</td><td><p><strong>Function Interface</strong>: ShiftR63Down <br>
+ <strong>Purpose</strong>:  To perform logical right shift by 63 or less. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    OUT = ShiftR63Down(IN, 53)</p></td></tr>
+			   <tr><td><a href='../interface/shiftr63down~2.html'>ShiftR63Down</a></td><td><a href='../module/mbase_uint128.html'>MBase_UInt128</a></td><td>Interface</td><td><p><strong>Function Interface</strong>: ShiftR63Down <br>
+ <strong>Purpose</strong>:  To perform logical right shift by 63 or less. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    OUT = ShiftR63Down(IN, 53)</p></td></tr>
+			   <tr><td><a href='../interface/shiftr64.html'>ShiftR64</a></td><td><a href='../module/mbase_sint128.html'>MBase_SInt128</a></td><td>Interface</td><td><p><strong>Function Interface</strong>: ShiftR64 <br>
+ <strong>Purpose</strong>:  To perform logical right shift by 64. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    OUT = ShiftR64(IN)</p></td></tr>
+			   <tr><td><a href='../interface/shiftr64~2.html'>ShiftR64</a></td><td><a href='../module/mbase_uint128.html'>MBase_UInt128</a></td><td>Interface</td><td><p><strong>Function Interface</strong>: ShiftR64 <br>
+ <strong>Purpose</strong>:  To perform logical right shift by 64. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    OUT = ShiftR64(IN)</p></td></tr>
+			   <tr><td><a href='../interface/shiftr64up.html'>ShiftR64Up</a></td><td><a href='../module/mbase_sint128.html'>MBase_SInt128</a></td><td>Interface</td><td><p><strong>Function Interface</strong>: ShiftR64Up <br>
+ <strong>Purpose</strong>:  To perform logical right shift by 64 or more (&lt;= 128). <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    OUT = ShiftR64Up(IN, 84)</p></td></tr>
+			   <tr><td><a href='../interface/shiftr64up~2.html'>ShiftR64Up</a></td><td><a href='../module/mbase_uint128.html'>MBase_UInt128</a></td><td>Interface</td><td><p><strong>Function Interface</strong>: ShiftR64Up <br>
+ <strong>Purpose</strong>:  To perform logical right shift by 64 or more (&lt;= 128). <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    OUT = ShiftR64Up(IN, 84)</p></td></tr>
+			   <tr><td><a href='../interface/shiftronce.html'>ShiftROnce</a></td><td><a href='../module/mbase_sint128.html'>MBase_SInt128</a></td><td>Interface</td><td><p><strong>Function Interface</strong>: ShiftROnce <br>
+ <strong>Purpose</strong>:  To perform logical right shift by 1. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    OUT = ShiftROnce(IN)</p></td></tr>
+			   <tr><td><a href='../interface/shiftronce~2.html'>ShiftROnce</a></td><td><a href='../module/mbase_uint128.html'>MBase_UInt128</a></td><td>Interface</td><td><p><strong>Function Interface</strong>: ShiftROnce <br>
+ <strong>Purpose</strong>:  To perform logical right shift by 1. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    OUT = ShiftROnce(IN)</p></td></tr>
+			   <tr><td><a href='../interface/signum.html'>SigNum</a></td><td><a href='../module/mbase_sintutil.html'>MBase_SIntUtil</a></td><td>Interface</td><td><p><strong>Function Interface</strong>: SigNum <br>
+ <strong>Purpose</strong>:  To return the sign of the specified input where the return value is <br>
+  -1 if the specified value is negative <br>
+   0 if the specified value is zero <br>
+   1 if the specified value is positive <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    SignFlag = SigNum(INPUT)</p></td></tr>
+			   <tr><td><a href='../interface/sint128.html'>SInt128</a></td><td><a href='../module/mbase_sint128.html'>MBase_SInt128</a></td><td>Interface</td><td><p><strong>Constructor Interface</strong>: SInt128 <br>
+ <strong>Purpose</strong>:  To construct a 128-bit signed integer. <br>
+ <strong>Usage</strong>: <br>
+  ! construct I128 (with negative value) from 32-bit intrinsic integer treated as unsigned <br>
+  ---&gt;    I128 = SInt128(U32, Negative=.TRUE.) <br>
+  ! construct I128 from 64-bit intrinsic integer treated as signed <br>
+  ---&gt;    I128 = SInt128(I64) <br>
+  ! construct I128 from 128-bit real number <br>
+  ---&gt;    I128 = SInt128(R128) <br>
+  ! construct I128 from a decimal string <br>
+  ---&gt;    I128 = SInt128('-1234567890987654321011223344')</p></td></tr>
+			   <tr><td><a href='../proc/skip2nextline.html'>Skip2NextLine</a></td><td><a href='../module/mbase_readutil.html'>MBase_ReadUtil</a></td><td>Subroutine</td><td><p>To skip over characters until the new-line character found.</p></td></tr>
+			   <tr><td><a href='../proc/skipallwhitespaces.html'>SkipAllWhiteSpaces</a></td><td><a href='../module/mbase_readutil.html'>MBase_ReadUtil</a></td><td>Subroutine</td><td><p>To skip over all white space(s) (including space, horizontal tab,
+ vertical tab, new line (line feed), form feed and carriage return).</p></td></tr>
+			   <tr><td><a href='../proc/skipchars.html'>SkipChars</a></td><td><a href='../module/mbase_readutil.html'>MBase_ReadUtil</a></td><td>Subroutine</td><td><p>To skip over the specified character.</p></td></tr>
+			   <tr><td><a href='../proc/skipdecimaldigits.html'>SkipDecimalDigits</a></td><td><a href='../module/mbase_readutil.html'>MBase_ReadUtil</a></td><td>Subroutine</td><td><p>To skip over decimal digits.</p></td></tr>
+			   <tr><td><a href='../proc/skipseparators.html'>SkipSeparators</a></td><td><a href='../module/mbase_readutil.html'>MBase_ReadUtil</a></td><td>Subroutine</td><td><p>To skip over separator characters.</p></td></tr>
+			   <tr><td><a href='../proc/skipspaces.html'>SkipSpaces</a></td><td><a href='../module/mbase_readutil.html'>MBase_ReadUtil</a></td><td>Subroutine</td><td><p>To skip over blank(s) (including space, (horizontal) tab and carriage return).</p></td></tr>
+			   <tr><td><a href='../interface/subtract.html'>Subtract</a></td><td><a href='../module/mbase_sint128.html'>MBase_SInt128</a></td><td>Interface</td><td><p><strong>Subroutine Interface</strong>: Subtract <br>
+ <strong>Purpose</strong>:  To perform subtraction: This = This - Other. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    CALL Subtract(This, Other) <br>
+ <strong>Important Note</strong>:  For subtraction of signed integers (unlike unsigned one),
+  value of This can be less than Other.</p></td></tr>
+			   <tr><td><a href='../interface/subtract~2.html'>Subtract</a></td><td><a href='../module/mbase_uint128.html'>MBase_UInt128</a></td><td>Interface</td><td><p><strong>Subroutine Interface</strong>: Subtract <br>
+ <strong>Purpose</strong>:  To perform subtraction: This = This - Other. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    CALL Subtract(This, Other) <br>
+ <strong>Important Note</strong>:  For subtraction of unsigned integers, value of This
+  must always be greater than Other.  Otherwise, value of the returned
+  This is NOT valid.</p></td></tr>
+			   <tr><td><a href='../proc/subu64.html'>SubU64</a></td><td><a href='../module/mbase_uintutil.html'>MBase_UIntUtil</a></td><td>Subroutine</td><td><p>To return the difference of X, Y and BorrowIn: Diff = X - Y - BorrowIn.
+ The borrow input must be 0 or 1; otherwise the behavior is undefined.
+ The borrow output is guaranteed to be 0 or 1.</p></td></tr>
+			   <tr><td><a href='../interface/subxp.html'>SubXp</a></td><td><a href='../module/mbase_sint128.html'>MBase_SInt128</a></td><td>Interface</td><td></td></tr>
+			   <tr><td><a href='../interface/swap.html'>Swap</a></td><td><a href='../module/mbase_miscutil.html'>MBase_MiscUtil</a></td><td>Interface</td><td><p><strong>Subroutine Interface</strong>: Swap <br>
+<strong>Purpose</strong>:  To swap values. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    CALL Swap(AVal, BVal) <br></p></td></tr>
+			   <tr><td><a href='../interface/swaparray.html'>SwapArray</a></td><td><a href='../module/mbase_miscutil.html'>MBase_MiscUtil</a></td><td>Interface</td><td><p><strong>Subroutine Interface</strong>: SwapArray <br>
+<strong>Purpose</strong>:  To swap values of two arrays with specified staring and ending indices. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    CALL SwapArray(IBegin, IEnd, XArr, YArr) <br></p></td></tr>
+			   <tr><td><a href='../proc/swapbytearray.html'>SwapByteArray</a></td><td><a href='../module/mbase_byteutil.html'>MBase_ByteUtil</a></td><td>Subroutine</td><td><p>To swap elements of the specified byte array.</p></td></tr>
+			   <tr><td><a href='../interface/swapbytes.html'>SwapBytes</a></td><td><a href='../module/mbase_byteutil.html'>MBase_ByteUtil</a></td><td>Interface</td><td><p><strong>Function Interface</strong>: SwapBytes <br>
+ <strong>Purpose</strong>:  To perform swapping of bytes of an integer. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    Output = SwapBytes(Input)</p></td></tr>
+			   <tr><td><a href='../proc/swaptwobytes.html'>SwapTwoBytes</a></td><td><a href='../module/mbase_byteutil.html'>MBase_ByteUtil</a></td><td>Subroutine</td><td><p>To swap element I and element J of the specified byte array.</p></td></tr>
+			   <tr><td><a href='../interface/todecstring.html'>ToDecString</a></td><td><a href='../module/mbase_sint128.html'>MBase_SInt128</a></td><td>Interface</td><td><p><strong>Function Interface</strong>: ToDecString <br>
+ <strong>Purpose</strong>:  To convert a 128-bit signed integer to
+  a decimal string. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    Str = ToDecString(I128)</p></td></tr>
+			   <tr><td><a href='../interface/todecstring~2.html'>ToDecString</a></td><td><a href='../module/mbase_uint128.html'>MBase_UInt128</a></td><td>Interface</td><td><p><strong>Function Interface</strong>: ToDecString <br>
+ <strong>Purpose</strong>:  To convert a 128-bit unsigned integer to
+  a decimal string. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    Str = ToDecString(U128)</p></td></tr>
+			   <tr><td><a href='../interface/todecstrsigned.html'>ToDecStrSigned</a></td><td><a href='../module/mbase_sintutil.html'>MBase_SIntUtil</a></td><td>Interface</td><td><p><strong>Function Interface</strong>: ToDecStrSigned <br>
+ <strong>Purpose</strong>:  To convert a signed integer to a decimal string <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    Str = ToDecStrSigned(I64)</p></td></tr>
+			   <tr><td><a href='../interface/todecstrunsigned.html'>ToDecStrUnsigned</a></td><td><a href='../module/mbase_uintutil.html'>MBase_UIntUtil</a></td><td>Interface</td><td><p><strong>Function Interface</strong>: ToDecStrUnsigned <br>
+ <strong>Purpose</strong>:  To convert an unsigned integer to a decimal string <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    Str = ToDecStrUnsigned(U32)</p></td></tr>
+			   <tr><td><a href='../interface/todecstrxp.html'>ToDecStrXp</a></td><td><a href='../module/mbase_sint128.html'>MBase_SInt128</a></td><td>Interface</td><td></td></tr>
+			   <tr><td><a href='../interface/todecstrxp~2.html'>ToDecStrXp</a></td><td><a href='../module/mbase_uint128.html'>MBase_UInt128</a></td><td>Interface</td><td></td></tr>
+			   <tr><td><a href='../interface/tohexstr_be.html'>ToHexStr_BE</a></td><td><a href='../module/mbase_byteutil.html'>MBase_ByteUtil</a></td><td>Interface</td><td><p><strong>Subroutine Interface</strong>: ToHexStr_BE <br>
+ <strong>Purpose</strong>:  To convert an array of 8-bit integer numbers (stored in
+               big-endian order) to a hexadecimal string. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    CALL ToHexStr_BE(ByteArr, HexStr)</p></td></tr>
+			   <tr><td><a href='../interface/tohexstr_le.html'>ToHexStr_LE</a></td><td><a href='../module/mbase_byteutil.html'>MBase_ByteUtil</a></td><td>Interface</td><td><p><strong>Subroutine Interface</strong>: ToHexStr_LE <br>
+ <strong>Purpose</strong>:  To convert an array of 8-bit integer numbers (stored in
+               little-endian order) to a hexadecimal string. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    CALL ToHexStr_LE(ByteArr, HexStr)</p></td></tr>
+			   <tr><td><a href='../interface/tohexstring.html'>ToHexString</a></td><td><a href='../module/mbase_sint128.html'>MBase_SInt128</a></td><td>Interface</td><td><p><strong>Function Interface</strong>: ToHexString <br>
+ <strong>Purpose</strong>:  To convert a 128-bit signed integer to
+  a hexadecimal string. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    Str = ToHexString(I128)</p></td></tr>
+			   <tr><td><a href='../interface/tohexstring~2.html'>ToHexString</a></td><td><a href='../module/mbase_uint128.html'>MBase_UInt128</a></td><td>Interface</td><td><p><strong>Function Interface</strong>: ToHexString <br>
+ <strong>Purpose</strong>:  To convert a 128-bit unsigned integer to
+  a hexadecimal string. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    Str = ToHexString(U128)</p></td></tr>
+			   <tr><td><a href='../interface/tohexstrsigned.html'>ToHexStrSigned</a></td><td><a href='../module/mbase_sintutil.html'>MBase_SIntUtil</a></td><td>Interface</td><td><p><strong>Function Interface</strong>: ToHexStrSigned <br>
+ <strong>Purpose</strong>:  To convert a signed integer to a hexadecimal string <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    Str = ToHexStrSigned(I32)</p></td></tr>
+			   <tr><td><a href='../interface/tohexstrunsigned.html'>ToHexStrUnsigned</a></td><td><a href='../module/mbase_uintutil.html'>MBase_UIntUtil</a></td><td>Interface</td><td><p><strong>Function Interface</strong>: ToHexStrUnsigned <br>
+ <strong>Purpose</strong>:  To convert an unsigned integer to a hexadecimal string <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    Str = ToHexStrUnsigned(U32)</p></td></tr>
+			   <tr><td><a href='../interface/toi128xp.html'>ToI128Xp</a></td><td><a href='../module/mbase_sint128.html'>MBase_SInt128</a></td><td>Interface</td><td></td></tr>
+			   <tr><td><a href='../interface/toi32.html'>ToI32</a></td><td><a href='../module/mbase_uint128.html'>MBase_UInt128</a></td><td>Interface</td><td><p><strong>Function Interface</strong>: ToI32 <br>
+ <strong>Purpose</strong>:  To convert a 128-bit unsigned integer to a
+  32-bit signed integer. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    I32 = ToI32(U128)</p></td></tr>
+			   <tr><td><a href='../interface/toi64.html'>ToI64</a></td><td><a href='../module/mbase_uint128.html'>MBase_UInt128</a></td><td>Interface</td><td><p><strong>Function Interface</strong>: ToI64 <br>
+ <strong>Purpose</strong>:  To convert a 128-bit unsigned integer to
+  a 64-bit signed integer. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    I64 = ToI64(U128)</p></td></tr>
+			   <tr><td><a href='../proc/tolowercase.html'>ToLowerCase</a></td><td><a href='../module/mbase_charutil.html'>MBase_CharUtil</a></td><td>Function</td><td><p>To change case of the input character to lower case if applicable.</p></td></tr>
+			   <tr><td><a href='../interface/tor128.html'>ToR128</a></td><td><a href='../module/mbase_sint128.html'>MBase_SInt128</a></td><td>Interface</td><td><p><strong>Function Interface</strong>: ToR128 <br>
+ <strong>Purpose</strong>:  To convert a 128-bit signed integer to
+  a 128-bit floating point (real) number. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    R128 = ToR128(I128)</p></td></tr>
+			   <tr><td><a href='../interface/tor128~2.html'>ToR128</a></td><td><a href='../module/mbase_uint128.html'>MBase_UInt128</a></td><td>Interface</td><td><p><strong>Function Interface</strong>: ToR128 <br>
+ <strong>Purpose</strong>:  To convert a 128-bit unsigned integer to
+  a 128-bit floating point (real) number. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    R128 = ToR128(U128)</p></td></tr>
+			   <tr><td><a href='../interface/tor128xp.html'>ToR128Xp</a></td><td><a href='../module/mbase_sint128.html'>MBase_SInt128</a></td><td>Interface</td><td></td></tr>
+			   <tr><td><a href='../interface/tor128xp~2.html'>ToR128Xp</a></td><td><a href='../module/mbase_uint128.html'>MBase_UInt128</a></td><td>Interface</td><td></td></tr>
+			   <tr><td><a href='../interface/tor32.html'>ToR32</a></td><td><a href='../module/mbase_sint128.html'>MBase_SInt128</a></td><td>Interface</td><td><p><strong>Function Interface</strong>: ToR32 <br>
+ <strong>Purpose</strong>:  To convert a 128-bit signed integer to
+  a 32-bit floating point (real) number. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    R32 = ToR32(I128)</p></td></tr>
+			   <tr><td><a href='../interface/tor32~2.html'>ToR32</a></td><td><a href='../module/mbase_uint128.html'>MBase_UInt128</a></td><td>Interface</td><td><p><strong>Function Interface</strong>: ToR32 <br>
+ <strong>Purpose</strong>:  To convert a 128-bit unsigned integer to
+  a 32-bit floating point (real) number. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    R32 = ToR32(U128)</p></td></tr>
+			   <tr><td><a href='../interface/tor32xp.html'>ToR32Xp</a></td><td><a href='../module/mbase_sint128.html'>MBase_SInt128</a></td><td>Interface</td><td></td></tr>
+			   <tr><td><a href='../interface/tor32xp~2.html'>ToR32Xp</a></td><td><a href='../module/mbase_uint128.html'>MBase_UInt128</a></td><td>Interface</td><td></td></tr>
+			   <tr><td><a href='../interface/tor64.html'>ToR64</a></td><td><a href='../module/mbase_sint128.html'>MBase_SInt128</a></td><td>Interface</td><td><p><strong>Function Interface</strong>: ToR64 <br>
+ <strong>Purpose</strong>:  To convert a 128-bit signed integer to
+  a 64-bit floating point (real) number. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    R64 = ToR64(I128)</p></td></tr>
+			   <tr><td><a href='../interface/tor64~2.html'>ToR64</a></td><td><a href='../module/mbase_uint128.html'>MBase_UInt128</a></td><td>Interface</td><td><p><strong>Function Interface</strong>: ToR64 <br>
+ <strong>Purpose</strong>:  To convert a 128-bit unsigned integer to
+  a 64-bit floating point (real) number. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    R64 = ToR64(U128)</p></td></tr>
+			   <tr><td><a href='../interface/tor64xp.html'>ToR64Xp</a></td><td><a href='../module/mbase_sint128.html'>MBase_SInt128</a></td><td>Interface</td><td></td></tr>
+			   <tr><td><a href='../interface/tor64xp~2.html'>ToR64Xp</a></td><td><a href='../module/mbase_uint128.html'>MBase_UInt128</a></td><td>Interface</td><td></td></tr>
+			   <tr><td><a href='../interface/tou128.html'>ToU128</a></td><td><a href='../module/mbase_sint128.html'>MBase_SInt128</a></td><td>Interface</td><td><p><strong>Function Interface</strong>: ToU128 <br>
+ <strong>Purpose</strong>:  To convert a 128-bit signed integer to a
+  128-bit unsigned integer. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    U128 = ToU128(I128)</p></td></tr>
+			   <tr><td><a href='../interface/tou128xp.html'>ToU128Xp</a></td><td><a href='../module/mbase_uint128.html'>MBase_UInt128</a></td><td>Interface</td><td></td></tr>
+			   <tr><td><a href='../interface/tou32.html'>ToU32</a></td><td><a href='../module/mbase_sint128.html'>MBase_SInt128</a></td><td>Interface</td><td><p><strong>Function Interface</strong>: ToU32 <br>
+ <strong>Purpose</strong>:  To convert a 128-bit signed integer to a
+  32-bit unsigned integer. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    U32 = ToU32(I128)</p></td></tr>
+			   <tr><td><a href='../interface/tou64.html'>ToU64</a></td><td><a href='../module/mbase_sint128.html'>MBase_SInt128</a></td><td>Interface</td><td><p><strong>Function Interface</strong>: ToU64 <br>
+ <strong>Purpose</strong>:  To convert a 128-bit signed integer to a
+  64-bit unsigned integer. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    U64 = ToU64(I128)</p></td></tr>
+			   <tr><td><a href='../interface/tounsignedinteger.html'>ToUnsignedInteger</a></td><td><a href='../module/mbase_uintutil.html'>MBase_UIntUtil</a></td><td>Interface</td><td><p><strong>Function Interface</strong>: ToUnsignedInteger <br>
+ <strong>Purpose</strong>:  To perform unsigned conversion from lower-precision unsigned integer
+  to 32-bit unsigned integer <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    U32 = ToUnsignedInteger(U8)</p></td></tr>
+			   <tr><td><a href='../interface/tounsignedlong.html'>ToUnsignedLong</a></td><td><a href='../module/mbase_uintutil.html'>MBase_UIntUtil</a></td><td>Interface</td><td><p><strong>Function Interface</strong>: ToUnsignedLong <br>
+ <strong>Purpose</strong>:  To perform unsigned conversion from lower-precision unsigned integer
+  to 64-bit unsigned integer <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    U64 = ToUnsignedLong(U32)</p></td></tr>
+			   <tr><td><a href='../proc/touppercase.html'>ToUpperCase</a></td><td><a href='../module/mbase_charutil.html'>MBase_CharUtil</a></td><td>Function</td><td><p>To change case of the input character to upper case if applicable.</p></td></tr>
+			   <tr><td><a href='../interface/trailz.html'>TRAILZ</a></td><td><a href='../module/mbase_sint128.html'>MBase_SInt128</a></td><td>Interface</td><td><p><strong>Function Interface</strong>: TRAILZ <br>
+ <strong>Purpose</strong>:  To count the number of trailing zero bits of the input.
+  (For more information, see detailed explanation of the intrinsic function.) <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    NumTZ = TRAILZ(INPUT)</p></td></tr>
+			   <tr><td><a href='../interface/trailz~2.html'>TRAILZ</a></td><td><a href='../module/mbase_uint128.html'>MBase_UInt128</a></td><td>Interface</td><td><p><strong>Function Interface</strong>: TRAILZ <br>
+ <strong>Purpose</strong>:  To count the number of trailing zero bits of the input.
+  (For more information, see detailed explanation of the intrinsic function.) <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    NumTZ = TRAILZ(INPUT)</p></td></tr>
+			   <tr><td><a href='../proc/transposematrix.html'>TransposeMatrix</a></td><td><a href='../module/mbase_mathutil.html'>MBase_MathUtil</a></td><td>Function</td><td><p>To transpose matrix.</p></td></tr>
+			   <tr><td><a href='../proc/trimsigdigits.html'>TrimSigDigits</a></td><td><a href='../module/mbase_miscutil.html'>MBase_MiscUtil</a></td><td>Function</td><td><p>This function accepts a number as a parameter as well as the number of
+ significant digits after the decimal point to report and returns a string
+ that is appropriate.</p></td></tr>
+			   <tr><td><a href='../interface/uaddxp.html'>UAddXp</a></td><td><a href='../module/mbase_uint128.html'>MBase_UInt128</a></td><td>Interface</td><td></td></tr>
+			   <tr><td><a href='../interface/udivmod.html'>UDivMod</a></td><td><a href='../module/mbase_uint128.html'>MBase_UInt128</a></td><td>Interface</td><td><p><strong>Subroutine Interface</strong>: UDivMod <br>
+ <strong>Purpose</strong>:  To perform a division of two unsigned integers (where the
+  dividend (numerator) is a 128-bit unsigned integer and the divisor
+  (denominator) can be 32-, 64- or 128-bit unsigned integer) and
+  to return both the quotient and the remainder. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    CALL UDivMod(NUMER, DENOM, QUOT, REM)</p></td></tr>
+			   <tr><td><a href='../interface/udivmod~2.html'>UDivMod</a></td><td><a href='../module/mbase_uintutil.html'>MBase_UIntUtil</a></td><td>Interface</td><td><p><strong>Subroutine Interface</strong>: UDivMod <br>
+ <strong>Purpose</strong>:  To perform a division of two unsigned integers and then return both
+  the quotient and the remainder where both input and output have the same kind <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    CALL UDivMod(NUMER, DENOM, QUOT, REM)</p></td></tr>
+			   <tr><td><a href='../interface/udivmodxp.html'>UDivModXp</a></td><td><a href='../module/mbase_uint128.html'>MBase_UInt128</a></td><td>Interface</td><td></td></tr>
+			   <tr><td><a href='../proc/udivrem_2by1.html'>UDivRem_2By1</a></td><td><a href='../module/mbase_uintutil.html'>MBase_UIntUtil</a></td><td>Subroutine</td><td></td></tr>
+			   <tr><td><a href='../proc/udivrem_3by2.html'>UDivRem_3By2</a></td><td><a href='../module/mbase_uintutil.html'>MBase_UIntUtil</a></td><td>Subroutine</td><td></td></tr>
+			   <tr><td><a href='../interface/uint128.html'>UInt128</a></td><td><a href='../module/mbase_uint128.html'>MBase_UInt128</a></td><td>Interface</td><td><p><strong>Constructor Interface</strong>: UInt128 <br>
+ <strong>Purpose</strong>:  To construct a 128-bit unsigned integer. <br>
+ <strong>Usage</strong>: <br>
+  ! construct U128 from 32-bit signed integer <br>
+  ---&gt;    U128 = UInt128(I32) <br>
+  ! construct U128 from 64-bit intrinsic integer treated as unsigned <br>
+  ---&gt;    U128 = UInt128(I64, AsUnsigned=.TRUE.) <br>
+  ! construct U128 from 128-bit real number <br>
+  ---&gt;    U128 = UInt128(R128) <br>
+  ! construct U128 from a decimal string <br>
+  ---&gt;    U128 = UInt128('1234567890987654321011223344')</p></td></tr>
+			   <tr><td><a href='../interface/umod.html'>UMOD</a></td><td><a href='../module/mbase_uint128.html'>MBase_UInt128</a></td><td>Interface</td><td><p><strong>Function Interface</strong>: UMOD <br>
+ <strong>Purpose</strong>:  To return the remainder of a division of two unsigned integers,
+  where the dividend (numerator) is a 128-bit unsigned integer and the
+  divisor (denominator) can be 32-, 64- or 128-bit unsigned integer. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    REM = UMOD(NUMER, DENOM)</p></td></tr>
+			   <tr><td><a href='../interface/umod~2.html'>UMOD</a></td><td><a href='../module/mbase_uintutil.html'>MBase_UIntUtil</a></td><td>Interface</td><td><p><strong>Function Interface</strong>: UMOD <br>
+ <strong>Purpose</strong>:  To return the remainder of a division of two unsigned integers,
+  where both input and an output have the same kind <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    REM = UMOD(NUMER, DENOM)</p></td></tr>
+			   <tr><td><a href='../proc/umul128.html'>UMul128</a></td><td><a href='../module/mbase_uintutil.html'>MBase_UIntUtil</a></td><td>Subroutine</td><td><p>To compute 128-bit result of multiplication of two 64-bit unsigned integers.</p></td></tr>
+			   <tr><td><a href='../proc/umul128_n_add.html'>UMul128_N_Add</a></td><td><a href='../module/mbase_uintutil.html'>MBase_UIntUtil</a></td><td>Subroutine</td><td><p>To multiply two 64-bit unsigned integers and add a value (A*B + C), and
+return the 128-bit result as U128Hi, U128Lo.</p></td></tr>
+			   <tr><td><a href='../proc/umul128_n_shift.html'>UMul128_N_Shift</a></td><td><a href='../module/mbase_uintutil.html'>MBase_UIntUtil</a></td><td>Function</td><td><p>To multiply two 64-bit unsigned integers, and then shift
+the 128-bit result by ShrPos =&gt; SHIFTR(A*B, ShrPos). <br>
+Note: ShrPos should be in the range [64, 128].</p></td></tr>
+			   <tr><td><a href='../proc/umul128_upper64.html'>UMul128_Upper64</a></td><td><a href='../module/mbase_uintutil.html'>MBase_UIntUtil</a></td><td>Function</td><td><p>To compute upper 64 bits of multiplication of two 64-bit unsigned integers</p></td></tr>
+			   <tr><td><a href='../proc/umul192_lower128.html'>UMul192_Lower128</a></td><td><a href='../module/mbase_uintutil.html'>MBase_UIntUtil</a></td><td>Subroutine</td><td><p>To compute lower 128 bits of multiplication of a 64-bit unsigned integer and
+a 128-bit unsigned integer.</p></td></tr>
+			   <tr><td><a href='../proc/umul192_upper128.html'>UMul192_Upper128</a></td><td><a href='../module/mbase_uintutil.html'>MBase_UIntUtil</a></td><td>Subroutine</td><td><p>To compute upper 128 bits of multiplication of a 64-bit unsigned integer and
+a 128-bit unsigned integer.</p></td></tr>
+			   <tr><td><a href='../proc/umul96_lower64.html'>UMul96_Lower64</a></td><td><a href='../module/mbase_uintutil.html'>MBase_UIntUtil</a></td><td>Function</td><td><p>To compute lower 64 bits of multiplication of a 32-bit unsigned integer and
+a 64-bit unsigned integer.</p></td></tr>
+			   <tr><td><a href='../proc/umul96_upper64.html'>UMul96_Upper64</a></td><td><a href='../module/mbase_uintutil.html'>MBase_UIntUtil</a></td><td>Function</td><td><p>To compute upper 64 bits of multiplication of a 32-bit unsigned integer and
+a 64-bit unsigned integer.</p></td></tr>
+			   <tr><td><a href='../proc/umulbasic.html'>UMulBasic</a></td><td><a href='../module/mbase_uintutil.html'>MBase_UIntUtil</a></td><td>Subroutine</td><td><p>To multiply 64-bit unsigned integer arrays and return
+ the result using grade-school algorithm.</p></td></tr>
+			   <tr><td><a href='../interface/umulxp.html'>UMulXp</a></td><td><a href='../module/mbase_uint128.html'>MBase_UInt128</a></td><td>Interface</td><td></td></tr>
+			   <tr><td><a href='../interface/usubxp.html'>USubXp</a></td><td><a href='../module/mbase_uint128.html'>MBase_UInt128</a></td><td>Interface</td><td></td></tr>
+			   <tr><td><a href='../interface/writeformat.html'>WriteFormat</a></td><td><a href='../module/mbase_writeutil.html'>MBase_WriteUtil</a></td><td>Interface</td><td><p><strong>Function Interface</strong>: WriteFormat <br>
+ <strong>Purpose</strong>:  To format a real or complex number. <br>
+ <strong>Usage</strong>: <br>
+  ! format a number and return the string buffer and its written length (using defaults) <br>
+  ---&gt;    NumLen = WriteFormat(Number, StrBuf, Fmt) <br>
+  ! format a number and specifying optional input <br>
+  ---&gt;    NumLen = WriteFormat(Number, StrBuf, Fmt, B2DAlgo, Width, Digits) <br></p></td></tr>
+			   <tr><td><a href='../interface/writenumber.html'>WriteNumber</a></td><td><a href='../module/mbase_writeutil.html'>MBase_WriteUtil</a></td><td>Interface</td><td><p><strong>Function Interface</strong>: WriteNumber <br>
+ <strong>Purpose</strong>:  To write a number as a decimal string. <br>
+ <strong>Usage</strong>: <br>
+  ! write any number and return the string buffer and its written length (using defaults) <br>
+  ---&gt;    NumLen = WriteNumber(Number, StrBuf) <br>
+  ! write a real or complex number and specifying optional input <br>
+  ---&gt;    NumLen = WriteNumber(Number, StrBuf, B2DAlgo, IsScientific, MaxD, Fmt) <br></p></td></tr>
+			   <tr><td><a href='../interface/writeunsigned.html'>WriteUnsigned</a></td><td><a href='../module/mbase_writeutil.html'>MBase_WriteUtil</a></td><td>Interface</td><td><p><strong>Function Interface</strong>: WriteUnsigned <br>
+ <strong>Purpose</strong>:  To write an integer number as a decimal string. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    NumLen = WriteUnsigned(Number, StrBuf) <br>
+ <strong>Important Note</strong>: Unlike the <em>WriteNumber</em> procedures, the <em>WriteUnsigned</em> procedures
+          interpret the specified integer as an unsigned number.  <br></p></td></tr>
+			   <tr><td><a href='../proc/xermsg.html'>XERMSG</a></td><td><a href='../module/mbase_legacyutil.html'>MBase_LegacyUtil</a></td><td>Subroutine</td><td><p>To process and display error information.</p><a href="../proc/xermsg.html" class="pull-right"><emph>Read more&hellip;</emph></a></td></tr>
+			   <tr><td><a href='../proc/xerrwd.html'>XERRWD</a></td><td><a href='../module/mbase_legacyutil.html'>MBase_LegacyUtil</a></td><td>Subroutine</td><td><p>To process and display error information.</p></td></tr>
+			 </tbody></table>
+             
+        </div>
+      </div>
+      <hr>
+    </div> <!-- /container -->
+    <footer>
+      <div class="container">
+        <div class="row justify-content-between">
+          <div class="col"><p>eXPerimental Fortran Library (XpfLib) Documentation was developed by Niranama<br>&copy; 2024 
+</p>
+          </div>
+          <div class="col">
+            <p class="text-end">
+              Documentation generated by
+              <a href="https://github.com/Fortran-FOSS-Programmers/ford">FORD</a>
+            </p>
+          </div>
+        </div>
+        <br>
+      </div> <!-- /container -->
+    </footer>
+
+    <!-- Bootstrap core JavaScript -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>    
+
+    <!-- MathJax JavaScript
+             ================================================== -->
+             <!-- Placed at the end of the document so the pages load faster -->
+        <script type="text/x-mathjax-config">
+          MathJax.Hub.Config({
+          TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } },
+          jax: ['input/TeX','input/MathML','output/HTML-CSS'],
+          extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']
+          });
+        </script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+          <script src="../tipuesearch/tipuesearch_content.js"></script>
+          <script src="../tipuesearch/tipuesearch_set.js"></script>
+          <script src="../tipuesearch/tipuesearch.js"></script>
+
+  </body>
+</html>

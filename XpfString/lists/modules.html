@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta name="description" content="Experimental Fortran Package - String">
+    <meta name="author" content="Niranama" >
+    <link rel="icon" href="../favicon.png">
+
+    <title>All Modules &ndash; eXPerimental Fortran Library (XpfLib) Documentation
+</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link href="../css/pygments.css" rel="stylesheet">
+    <link href="../css/font-awesome.min.css" rel="stylesheet">
+    <link href="../css/local.css" rel="stylesheet">
+      <link  href="../tipuesearch/tipuesearch.css" rel="stylesheet">
+
+    <script src="https://code.jquery.com/jquery-3.7.0.slim.min.js" integrity="sha256-tG5mcZUtJsZvyKAxYLVXrmjKBVLd6VpVccqz/r4ypFE=" crossorigin="anonymous"></script>
+  </head>
+
+  <body>
+
+    <!-- Fixed navbar -->
+    <div class="container-fluid mb-sm-4 mb-xl-2">
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container">
+          <a class="navbar-brand" href="../index.html">eXPerimental Fortran Library (XpfLib) Documentation </a>
+          <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar"
+                  aria-expanded="false" aria-controls="navbar" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon">
+          </button>
+
+          <div id="navbar" class="navbar-collapse collapse">
+            <ul class="navbar-nav">
+                  <li class="nav-item">
+                    <a class="nav-link" href="../lists/files.html">Source Files</a>
+                  </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../lists/modules.html">Modules</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../lists/procedures.html">Procedures</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../lists/types.html">Derived Types</a>
+                </li>
+            </ul>
+              <div class="d-flex align-items-end flex-grow-1">
+                <form action="../search.html" role="search" class="ms-auto">
+                  <input type="text" class="form-control" aria-label="Search" placeholder="Search" name="q" id="tipue_search_input" autocomplete="off" required>
+                </form>
+              </div>
+          </div><!--/.nav-collapse -->
+        </div>
+      </nav>
+    </div>
+
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12" id='text'>
+			 <h1>Modules</h1>
+			 <table class="table">
+			 <thead><tr><th>Module</th><th>Source File</th><th>Description</th></tr></thead>
+			 <tbody>
+			   <tr class="active"><td><a href='../module/mbase_charconv.html'>MBase_CharConv</a></td><td><a href='../sourcefile/mbase_charconv.f90.html'>MBase_CharConv.f90</a></td><td><p><strong>PURPOSE OF THIS MODULE</strong>: <br>
+  This module contains routines that perform a conversion between a number and a decimal
+  string.  The routines can be categorized into 4 groups: <br>
+  - real-to-string conversion routines, <br>
+  - real-from-string conversion routines, <br>
+  - integer-to-string conversion routines, and <br>
+  - integer-from-string conversion routines. <br>
+  For real-number conversions, routines for all three common (single, double and quadruple)
+  precisions are provided.  For integer-number conversions, only routines for 32-bit and
+  64-bit integers are provided. <br>
+  <br>
+<strong>Technical Notes for Integer-From-String Conversions</strong>: <br>
+  When parsing a decimal string as an integer number, the string can be interpreted as a
+  <em>Fortran</em> number, a <em>FPlus</em> number or a <em>JSON</em> number.  The following list provides a
+  description of these interpretations. <br>
+  1. A <em>Fortran</em> number (<em>FortNum</em>) is strictly interpreted as an integer number that has
+     the form as: [S]N[N...] where <br>
+      - S is a sign indicator (required if negative '-', optional if positive '+'). <br>
+      - N is a decimal digit (0 through 9). Any leading zeros, leading and trailing
+          spaces are ignored. <br>
+   Unlike Fortran constants, the optional kind parameter (_k) is not allowed here. <br>
+  2. A <em>FPlus</em> number (<em>FortPlus</em>) has a slightly more relaxed rule than that of a Fortran
+     number such that any invalid characters after characters that are valid are ignored.
+     For example, -3567e23 is treated as a valid number with a value of -3567. <br>
+  3. A <em>JSON</em> number (<em>JsonNum</em>) has a slightly stricter rule than that of a Fortran number
+     such that a plus sign and leading zeroes are not allowed. <br>
+  <br>
+  <br>
+<strong>Technical Notes for Real-From-String Conversions</strong>: <br>
+  Similarly, when parsing a decimal string as a real number, the string can also be interpreted
+  as a <em>Fortran</em> number, a <em>FPlus</em> number or a <em>JSON</em> number.  The following list provides a
+  description of these interpretations. <br>
+  1. A <em>Fortran</em> number (<em>FortNum</em>) is strictly interpreted as a real number that has one of the
+     two following forms: <br>
+     &lt;1&gt; A number without exponent part -&gt; [S]N[N...], and <br>
+     &lt;2&gt; A number with exponent part    -&gt; [S]N[N...]E[S]N[N...] <br>
+         where <br>
+         - [ ] indicates an optional field. <br>
+         - S is a sign indicator (required if negative '-', optional if positive '+'). <br>
+         - N is a decimal digit (0 through 9). A decimal point (a period) may appear anywhere
+              after the sign (but before the exponent). <br>
+         - E is an exponent indicator (either 'e' or 'E'). <br>
+     The valid number is similar to "Real" Fortran constant (literal) with some small differences. <br>
+      - A whole number without a decimal point (i.e. "Integer" constant) is considered valid. <br>
+      - The optional kind parameter (e.g. 1.23_DP) is not allowed here. <br>
+     Leading and/or trailing space(s) are allowed.  For example, "  1.23" and "1.23   " are considered
+     valid.  However, no space is allowed inside the supposedly valid number.  For instance, "1 .2 3"
+     is considered NOT valid. Therefore, this routine is not totally compatible with Fortran <em>READ</em>
+     statement where spaces inside the valid number are allowed. However, this can easily be done by
+     adding an optional 'Inside Space' flag that provide an interpretation of the spaces as 'zero' or
+     'ignored'.  Then, the input will be pre-processed according to the flag.  Nonetheless, this routine
+     neglects this optional input because it will make the routine much less efficient due to the fact
+     that we will need to scan the whole string twice and we will also need to copy the input string
+     into a buffer string and working with the buffer instead of directly handling the input string. <br>
+  2. A <em>FPlus</em> number (<em>FortPlus</em>) is interpreted as a real number with more relaxed rules than
+     a <em>Fortran</em> number.  The relaxed rules consider the following numbers as valid: <br>
+     - A number expressed in the scientific format can use 'd', 'D', 'q' and 'Q' in place of 'e' or
+       'E'. <br>
+     - A number with '+' or '-' after digits (e.g. 1.23-20 or 123+50) is considered to be a valid number
+       expressed in the scientific format where an exponent indicator is omitted. <br>
+     - Digits before any invalid character encountered are treated as a valid number and any characters
+       after the first encounter (including the first invalid one) are neglected.  Therefore, for example,
+       a '12.56ax-300' string is considered to be a valid number with a value of 12.56. <br>
+  3. A <em>JSON</em> number (<em>JsonNum</em>) has a slightly stricter rule than that of a Fortran number where its
+     differences from Fortran number are as follows: <br>
+     - Leading and trailing spaces are not allowed. <br>
+     - A plus sign as the first character is not allowed. <br>
+     - Leading zero(s) is not allowed (if 0 is the first character, the second one must either be a
+       period or an exponent indicator.) <br>
+     - A period must be followed by at least one digit. <br>
+  <br></p></td></tr>
+<!--active-->			   <tr class=""><td><a href='../module/mbase_chrstr.html'>MBase_ChrStr</a></td><td><a href='../sourcefile/mbase_chrstr.f90.html'>MBase_ChrStr.f90</a></td><td><p><strong>PURPOSE OF THIS MODULE</strong>: <br>
+  This module contains routines that handle and manipulate character strings.
+  These routines supplement the Fortran intrinsic procedures provided for
+  the Fortran's <em>CHARACTER</em> type.  The routines provided in this module
+  can be categorized into 5 groups as follows. <br>
+  (1) <em>Character</em> procedures are routines for a single character.  The following
+      list shows available (i.e. public) character procedures. <br>
+      - IsCharacterInClass, <br>
+      - ChangeCaseCharacter, and <br>
+      - CharacterDescription. <br>
+  (2) <em>Assignment</em> procedures are conversion routines between a character string
+      and an other (Fortran intrinsic) type.  These conversion routines are intended
+      to be used in an assignment expression.  <br>
+  (3) <em>Conversion</em> procedures are conversion routines between a character string
+      and an other (Fortran intrinsic) type.  These conversion routines are NOT
+      intended to be used in an assignment expression; therefore, they have
+      different interfaces from those intended for an assignment expression.
+      The following list shows available (i.e. public) conversion procedures. <br>
+      - CharString, <br>
+      - ToChrArrFixed, <br>
+      - ToChrArrAlloc, <br>
+      - ToCString, <br>
+      - ParseByte, <br>
+      - ParseShort, <br>
+      - ParseInteger, <br>
+      - ParseLong, <br>
+      - ParseRSingle, <br>
+      - ParseRDouble, <br>
+      - ParseRQuad, <br>
+      - ParseCSingle, <br>
+      - ParseCDouble, <br>
+      - ParseCQuad, and <br>
+      - ParseLogical. <br>
+  (4) <em>Inquiry</em> procedures are routines that inquire information relating to
+      a character string.  The following list shows available (i.e. public)
+      inquiry procedures. <br>
+      - IsStringNumber, <br>
+      - IsStringLogical, <br>
+      - IsStringInClass, <br>
+      - IsStringInCharacterSet, <br>
+      - CountSubString, <br>
+      - CountCharacters, <br>
+      - CountCharactersProtect, <br>
+      - CountWords, <br>
+      - FindProtectedRegions, <br>
+      - FindSubstring, <br>
+      - FindDelimiters, <br>
+      - FindSeparators, <br>
+      - FindSubstringProtect, <br>
+      - FindDelimitersProtect, <br>
+      - FindSeparatorsProtect, <br>
+      - StartWith, <br>
+      - EndWith, <br>
+      - GetSubstring, and <br>
+      - GetSlice. <br>
+  (5) <em>Manipulation</em> procedures are routines that perform a manipulation on
+      a character string.  The following list shows available (i.e. public)
+      manipulation procedures. <br>
+      - ChangeCase, <br>
+      - BlankCompressChangeCase, <br>
+      - CropBlanks, <br>
+      - CompactString, <br>
+      - CompressString, <br>
+      - InsertSubstring, <br>
+      - RemoveCharacters, <br>
+      - RemoveCharactersProtect, <br>
+      - RemoveSubstring, <br>
+      - RemoveSubstringProtect, <br>
+      - ReplaceSubstring, <br>
+      - ReplaceSubstringProtect, <br>
+      - ReplaceSubstringRecursive <br>
+      - Partition, <br>
+      - Split, and <br>
+      - SplitProtect. <br></p></td></tr>
+<!---->			   <tr class="active"><td><a href='../module/mbase_reparameters.html'>MBase_REParameters</a></td><td><a href='../sourcefile/mbase_reparameters.f90.html'>MBase_REParameters.f90</a></td><td><p><strong>PURPOSE OF THIS MODULE</strong>: <br>
+  This module contains the <em>REProgram</em> type and its related helper types and routines.
+  The <em>REProgram</em> type is a string type that provides various efficient algorithms for
+  a <em>substring searching</em> operation.  The <em>substring searching</em> is a fundamental string
+  operation where given a <em>text</em> string of length N and a <em>pattern</em> string of length M,
+  find an occurrence of the <em>pattern</em> within the <em>text</em>.  <br>
+ <strong>REFERENCES</strong>: <br>
+  [1] <a href="https:!jakarta.apache.org/regexp/">The Apache Jakarta Project. <br></p></td></tr>
+<!--active-->			   <tr class=""><td><a href='../module/mbase_stringsorts.html'>MBase_StringSorts</a></td><td><a href='../sourcefile/mbase_stringsorts.f90.html'>MBase_StringSorts.f90</a></td><td><p><strong>PURPOSE OF THIS MODULE</strong>: <br>
+  This module contains sorting and ranking routines specialized for strings.
+  The specified array can be of a <em>CHARACTER</em> or a <em>FvlStr</em> type. <br></p></td></tr>
+<!---->			   <tr class="active"><td><a href='../module/mclass_alphabets.html'>MClass_Alphabets</a></td><td><a href='../sourcefile/mclass_alphabets.f90.html'>MClass_Alphabets.f90</a></td><td><p><strong>PURPOSE OF THIS MODULE</strong>: <br>
+  This module contains various <em>alphabet</em> data types and its related routines.
+  An <em>alphabet</em> data type is a data type for a given alphabet, which is a set
+  of characters.  It is intended to be used with string-processing code that
+  must convert between an alphabet of size Radix and the integers (i.e. indices)
+  through 1 through Radix. <br>
+  The following <em>concrete alphabet</em> data types are provided. <br>
+  - The <em>GenericAlphabet</em> type for any alphabet (i.e. any set of characters). <br>
+  - The <em>BinaryAlphabet</em> type for binary alphabet {0, 1}. <br>
+  - The <em>OctalAlphabet</em> type for octal alphabet {0, 1, 2, 3, 4, 5, 6, 7}. <br>
+  - The <em>DecimalAlphabet</em> type for decimal alphabet {0, 1, 2, 3, 4, 5, 6, 7, 8, 9}. <br>
+  - The <em>HexadecimalAlphabet</em> type for hexadecimal alphabet
+    {0, 1, 2, 3, 4, 5, 6, 7, 8, 9, A, B, C, D, E, F}. <br>
+  - The <em>DnaAlphabet</em> type for DNA alphabet {A, C, T, G}. <br>
+  - The <em>ProteinAlphabet</em> type for protein alphabet
+    {A, C, D, E, F, G, H, I, K, L, M, N, P, Q, R, S, T, V, W, Y}. <br>
+  - The <em>LowercaseAlphabet</em> type for lowercase alphabet {a, b, c, ..., z}. <br>
+  - The <em>UppercaseAlphabet</em> type for uppercase alphabet {A, B, C, ..., Z}. <br>
+  - The <em>Base64Alphabet</em> type for base-64 alphabet {64 characters}. <br>
+  - The <em>Code39Alphabet</em> type for binary alphabet {43+1 characters}. <br>
+  - The <em>AsciiAlphabet</em> type for ASCII alphabet {128 characters}. <br>
+  - The <em>ExtendedAsciiAlphabet</em> type for extended ASCII alphabet {256 characters}. <br>
+  All <em>alphabet</em> data types provide common operations including: <br>
+  - the <em>Construct</em> method to create the instance of the alphabet data type, <br>
+  - the <em>Contain</em> method to check whether the specified character is in the alphabet's
+    set of characters, <br>
+  - the <em>Verify</em> method to check whether all characters of the specified word are in
+    the alphabet's set of characters, <br>
+  - the <em>GetRadix</em> method to get the number of characters in the alphabet's set, <br>
+  - the <em>GetIndex</em> method to get the index corresponding to the specified character, and <br>
+  - the <em>GetChar</em> method to get the character corresponding to the specified index. <br>
+  All <em>concrete alphabet</em> data types provided require an explicit construction before
+  other operations can be used.  The <em>GenericAlphabet</em> type can be constructed from
+  either a given set of characters or a specified radix (which represents a number of
+  characters in the set where the characters's code ranges from 0 to radix-1).  Other
+  types requires no argument (besides the object itself) for their construction method. <br></p></td></tr>
+<!--active-->			   <tr class=""><td><a href='../module/mclass_alphabettrie.html'>MClass_AlphabetTrie</a></td><td><a href='../sourcefile/mclass_alphabettrie.f90.html'>MClass_AlphabetTrie.f90</a></td><td><p><strong>PURPOSE OF THIS MODULE</strong>: <br>
+  This module contains the <em>AlphabetTrie</em> type and its related routines.
+  The <em>AlphabetTrie</em> type is a derived type representing a symbol table
+  of key-value pairs, with string keys and generic values. <br>
+  The <em>AlphabetTrie</em> type supports common operations of the symbol table
+  including the <em>Insert</em>, <em>Remove</em>, <em>Contain</em>, <em>GetSize</em>, <em>IsEmpty</em> and
+  <em>GetValue</em> methods.  It also provides character-based methods for finding
+  the string in the symbol table that is the longest prefix of a given prefix,
+  finding all strings in the symbol table that start with a given prefix, and
+  finding all strings in the symbol table that match a given pattern. <br>
+  For all operations provided, the <em>AlphabetTrie</em> type supports two types of
+  character strings: the Fortran intrinsic <em>CHARACTER</em> type and the <em>FvlStr</em>
+  derived type.  A user can choose to work with one of these two types.  Like
+  other symbol tables, the <em>AlphabetTrie</em> type does not allow duplicated keys.
+  Therefore, if an inserted key is equal to a key stored in the table, an
+  associated value of the stored key is replaced by an associated value of
+  the inserted key.  <br>
+  Similar to the <a href="../module/mclass_multiwaytrie.html#type-multiwaytrie">
+  MultiwayTrie</a> type, the <em>AlphabetTrie</em> type technically employs a multi-way
+  (R-way) trie implementation.  However, unlike the <em>MultiwayTrie</em> type with its
+  fixed R (= 256), the <em>AlphabetTrie</em> type can be used with any R, which is the
+  number of characters (i.e. the radix) in an alphabet set of characters.  Also,
+  unlike the <em>MultiwayTrie</em> type, an explicit construction is required via either
+  the <em>CreateEmpty</em> or the <em>Construct</em> method where a user must specify a specific
+  set of characters via an <em>alphabet</em> data type.  <br>
+  See the <a href="../module/mclass_alphabets.html">Class_Alphabets</a> module for
+  various <em>alphabet</em> data types available to be used with the <em>AlphabetTrie</em> type.
+  Most of these data types commonly have a much smaller radix than 256; therefore,
+  the <em>AlphabetTrie</em> type is likely more efficient than the <em>MultiwayTrie</em> type
+  when working with those alphabet data types with small radix.  <br>
+  It is important to note that all provided <em>concrete alphabet</em> data types also
+  require an explicit construction via their <em>Construct</em> method.  Therefore, a
+  user must construct an <em>alphabet</em> data type before supplying it to one of the
+  <em>AlphabetTrie</em> type's construction methods.  It is also worth mentioning that
+  the given alphabet data type must contain all characters (with the exception of
+  the wild-card characters) of all strings that the user will specify as input
+  arguments.  This means that the user must know in advance what kind of characters
+  to be used so that he/she can properly select a particular <em>alphabet</em> data type. <br>
+   <br>
+ <strong>REFERENCES</strong>: <br>
+  [1] R. Sedgewick and K. Wayne. 2011.  Algorithms, 4th Edition.  Addison-Wesley. <br></p></td></tr>
+<!---->			   <tr class="active"><td><a href='../module/mclass_bitmapstate.html'>MClass_BitmapState</a></td><td><a href='../sourcefile/mclass_bitmapstate.f90.html'>MClass_BitMapState.f90</a></td><td><p><strong>PURPOSE OF THIS MODULE</strong>: <br>
+  This module contains the <em>BitmapState</em> type and its related routines.
+  The <em>BitmapState</em> type is a derived type representing a ... <br></p></td></tr>
+<!--active-->			   <tr class=""><td><a href='../module/mclass_dfautomaton.html'>MClass_DFAutomaton</a></td><td><a href='../sourcefile/mclass_dfautomaton.f90.html'>MClass_DFAutomaton.f90</a></td><td><p><strong>PURPOSE OF THIS MODULE</strong>: <br>
+  This module contains the <em>DFAutomaton</em> type and its related routines.
+  The <em>DFAutomaton</em> type is a derived type representing a ... <br></p></td></tr>
+<!---->			   <tr class="active"><td><a href='../module/mclass_fvlstr.html'>MClass_FvlStr</a></td><td><a href='../sourcefile/mclass_fvlstr.f90.html'>MClass_FvlStr.f90</a></td><td><p><strong>PURPOSE OF THIS MODULE</strong>: <br>
+  This module contains the <em>FvlStr</em> type and its related routines.  The <em>FvlStr</em>
+  type represents a variable-length string class that provides routines to handle
+  and manipulate strings.  Functionally, it is similar to the Fortran's <em>CHARACTER</em>
+  type.  However, when declared as an array, elements of the array of the <em>FvlStr</em>
+  type do not have to have the same length whereas those of the Fortran intrinsic
+  type must. <br>
+  The procedures provided by the <em>FvlStr</em> type are similar to those provided in
+  the <a href="../module/mbase_chrstr.html">MBase_ChrStr</a> module.  However,
+  the <em>FvlStr</em> type employs an object-oriented interface instead of a procedural
+  interface; thus, these procedures are type-bound.  In addition, procedures
+  similar to the Fortran intrinsic procedures (for the <em>CHARACTER</em> type) are also
+  provided in a procedural interface (i.e. the same as the intrinsic ones). <br>
+  It should be noted that the <em>FvlStr</em> type is a subtype of the <em>Hashable</em> type.
+  Therefore, all operations provided for the <em>Object</em>, the <em>Comparable</em> or
+  the <em>Hashable</em> types, such as sorting and containers, are also applicable to
+  the <em>FvlStr</em> type. <br></p></td></tr>
+<!--active-->			   <tr class=""><td><a href='../module/mclass_multiwaytrie.html'>MClass_MultiwayTrie</a></td><td><a href='../sourcefile/mclass_multiwaytrie.f90.html'>MClass_MultiwayTrie.f90</a></td><td><p><strong>PURPOSE OF THIS MODULE</strong>: <br>
+  This module contains the <em>MultiwayTrie</em> type and its related routines.
+  The <em>MultiwayTrie</em> type is a derived type representing a symbol table
+  of key-value pairs, with string keys and generic values. <br>
+  The <em>MultiwayTrie</em> type supports common operations of the symbol table
+  including the <em>Insert</em>, <em>Remove</em>, <em>Contain</em>, <em>GetSize</em>, <em>IsEmpty</em> and
+  <em>GetValue</em> methods.  It also provides character-based methods for finding
+  the string in the symbol table that is the longest prefix of a given prefix,
+  finding all strings in the symbol table that start with a given prefix, and
+  finding all strings in the symbol table that match a given pattern. <br>
+  For all operations provided, the <em>MultiwayTrie</em> type supports two types of
+  character strings: the Fortran intrinsic <em>CHARACTER</em> type and the <em>FvlStr</em>
+  derived type.  A user can choose to work with one of these two types.  Like
+  other symbol tables, the <em>MultiwayTrie</em> type does not allow duplicated keys.
+  Therefore, if an inserted key is equal to a key stored in the table, an
+  associated value of the stored key is replaced by an associated value of
+  the inserted key.  Technically, the <em>MultiwayTrie</em> type employs a R-way
+  (multi-way) trie implementation where R is 256.  This implies that the
+  characters are encoded according to the 8-bit Extended ASCII codes. <br>
+   <br>
+ <strong>REFERENCES</strong>: <br>
+  [1] R. Sedgewick and K. Wayne. 2011.  Algorithms, 4th Edition.  Addison-Wesley. <br></p></td></tr>
+<!---->			   <tr class="active"><td><a href='../module/mclass_nfastate.html'>MClass_NFAState</a></td><td><a href='../sourcefile/mclass_nfastate.f90.html'>MClass_NFAState.f90</a></td><td><p><strong>PURPOSE OF THIS MODULE</strong>: <br>
+  This module contains the <em>NFAState</em> type and its related routines.
+  The <em>NFAState</em> type is a derived type representing a ... <br></p></td></tr>
+<!--active-->			   <tr class=""><td><a href='../module/mclass_nfautomaton.html'>MClass_NFAutomaton</a></td><td><a href='../sourcefile/mclass_nfautomaton.f90.html'>MClass_NFAutomaton.f90</a></td><td><p><strong>PURPOSE OF THIS MODULE</strong>: <br>
+  This module contains the <em>NFAutomaton</em> type and its related routines.
+  The <em>NFAutomaton</em> type is a derived type representing a ... <br></p></td></tr>
+<!---->			   <tr class="active"><td><a href='../module/mclass_patternfinder.html'>MClass_PatternFinder</a></td><td><a href='../sourcefile/mclass_patternfinder.f90.html'>MClass_PatternFinder.f90</a></td><td><p><strong>PURPOSE OF THIS MODULE</strong>: <br>
+  This module contains the <em>PatternFinder</em> type and its related helper types and routines.
+  The <em>PatternFinder</em> type is a string type that provides various efficient algorithms for
+  a <em>substring searching</em> operation.  The <em>substring searching</em> is a fundamental string
+  operation where given a <em>text</em> string of length N and a <em>pattern</em> string of length M,
+  find an occurrence of the <em>pattern</em> within the <em>text</em>.  <br>
+  Available searching algorithms include:  <br>
+  - <em>BruteForce</em>: a simple basic searching algorithm [1, 6], <br>
+  - <em>BoyerMoore</em>: a searching algorithm by Boyer and Mooore [1, 6], <br>
+  - <em>KMP</em>: a searching algorithm by Knuth, Morris and Pratt [1, 6], <br>
+  - <em>KMPlus</em>: an optimized version of <em>KMP</em> algorithm [1, 6], <br>
+  - <em>RabinKarp</em>: a searching algorithm by Rabin and Karp [1, 6], <br>
+  - <em>Horspool</em>: an improved version of <em>BoyerMoore</em> algorithm by Horspool [2, 7], <br>
+  - <em>Raita</em>: an improved version of <em>Horspool</em> algorithm by Raita [3, 7], <br>
+  - <em>Sunday</em>: an improved version of <em>BoyerMoore</em> algorithm by Sunday [4], and <br>
+  - <em>BNDM</em>: a Backwards Non-deterministic DAWG (Directed acyclic word graph)
+     Matching algorithm by Gonzalo Navarro and Mathieu Raffinot [5, 7]. <br>
+   <br>
+ <strong>REFERENCES</strong>: <br>
+  [1] R. Sedgewick and K. Wayne. 2011.  Algorithms, 4th Edition.  Addison-Wesley. <br>
+  [2] <a href="https://webhome.cs.uvic.ca/~nigelh/Publications/stringsearch.pdf">
+      R.N. Horspool. 1980. Practical Fast Searching in Strings. Software-Practice and
+      Experience, vol. 10, pp. 501-506. </a> <br>
+  [3] <a href="https://www.inf.unioeste.br/~adair/ED/Artigos/Tunning%20Boyer-Moore-Horspool%20String%20Search%20Algorithm%20-%20Raita.pdf">
+      T. Raita. 1992. Tuning the Boyer-Moore-Horspool string searching algorithm.
+      Software-Practice and Experience, vol. 22(10), pp. 879-884.</a> <br>
+  [4] <a href="https://dl.acm.org/doi/10.1145/79173.79184">D.M. Sunday. 1990.  A very fast
+      substring search algorithm.  Communications of the ACM, vol. 33(8), pp. 132-142. </a> <br>
+  [5] <a href="https://www.semanticscholar.org/paper/A-Bit-Parallel-Approach-to-Suffix-Automata%3A-Fast-Navarro-Raffinot/75cb2a611f737c296a576d396334bc6298982e7a">
+      G. Navarro and M. Raffinot. 1998. A Bit-Parallel Approach to Suffix Automata:
+      Fast Extended String Matching. Combinatorial Pattern Matching, pp. 14-33. </a> <br>
+  [6] <a href="https://algs4.cs.princeton.edu/home/">R. Sedgewick and K. Wayne.
+      Algorithms, 4th Edition, Online version. </a> <br>
+  [7] <a href="https://github.com/johannburkard/StringSearch">StringSearch:
+      High-performance pattern matching algorithms in Java. </a> <br></p></td></tr>
+<!--active-->			   <tr class=""><td><a href='../module/mclass_recompiler.html'>MClass_RECompiler</a></td><td><a href='../sourcefile/mclass_recompiler.f90.html'>MClass_RECompiler.f90</a></td><td><p><strong>PURPOSE OF THIS MODULE</strong>: <br>
+  This module contains the <em>RECompiler</em> type and its related routines.  <br>
+  <br>
+ <strong>REFERENCES</strong>: <br>
+  [1] <a href="https:!jakarta.apache.org/regexp/">The Apache Jakarta Project. <br></p></td></tr>
+<!---->			   <tr class="active"><td><a href='../module/mclass_regexfinder.html'>MClass_RegexFinder</a></td><td><a href='../sourcefile/mclass_regexfinder.f90.html'>MClass_RegexFinder.f90</a></td><td><p><strong>PURPOSE OF THIS MODULE</strong>: <br>
+  This module contains the <em>RegexFinder</em> type and its related helper types and routines.
+  The <em>RegexFinder</em> type is a string type that provides various efficient algorithms for
+  a <em>substring searching</em> operation.  The <em>substring searching</em> is a fundamental string
+  operation where given a <em>text</em> string of length N and a <em>pattern</em> string of length M,
+  find an occurrence of the <em>pattern</em> within the <em>text</em>.  <br>
+ <strong>REFERENCES</strong>: <br>
+  [1] <a href="https://github.com/zhztheplayer/DFA-Regex">DFA-Regex: A DFA regex engine in java. <br></p></td></tr>
+<!--active-->			   <tr class=""><td><a href='../module/mclass_reprogram.html'>MClass_REProgram</a></td><td><a href='../sourcefile/mclass_reprogram.f90.html'>MClass_REProgram.f90</a></td><td><p><strong>PURPOSE OF THIS MODULE</strong>: <br>
+  This module contains the <em>REProgram</em> type and its related routines.  <br>
+  <br>
+ <strong>REFERENCES</strong>: <br>
+  [1) <a href="https:!jakarta.apache.org/regexp/">The Apache Jakarta Project. <br></p></td></tr>
+<!---->			   <tr class="active"><td><a href='../module/mclass_stringbuilder.html'>MClass_StringBuilder</a></td><td><a href='../sourcefile/mclass_stringbuilder.f90.html'>MClass_StringBuilder.f90</a></td><td><p><strong>PURPOSE OF THIS MODULE</strong>: <br>
+  This module contains the <em>StringBuilder</em> type and its related routines.  The <em>StringBuilder</em> type
+  is a string type that provides a convenient and efficient mechanism for concatenating multiple
+  strings (i.e. building a string from several strings).  <br>
+  The <em>StringBuilder</em> type provides several methods that can be grouped
+  into the following categories. <br>
+  (1) Construction and Destruction.  Methods for these operations include: <br>
+  - <em>CreateEmpty</em> method - method to construct an empty builder, <br>
+  - <em>Construct</em> method - method to construct the builder from its first specified value, and <br>
+  - <em>Clear</em> method - method to remove all inserted values from the builder. <br>
+  (2) Insertion and Removal.  Methods for these operations include: <br>
+  - <em>Append</em> method - method to insert a value into the end of the builder's string, <br>
+  - <em>Insert</em> method - method to insert a value at a specified position of the builder's string, and <br>
+  - <em>DelLastChar</em> method - method to remove the last character of the builder's string. <br>
+  (3) Conversion-To-String.  Methods for these operations include: <br>
+  - <em>ToCharAlloc</em> method - method to return the builder's string as an allocatable character string, <br>
+  - <em>ToFvlStr</em> method - method to return the builder's string as a string of the <em>FvlStr</em> type, and <br>
+  - <em>ToCharStar</em> method - method to return the builder's string as a character string of assumed length. <br>
+  (4) Inquiry.  A method for this operation is: <br>
+  - <em>Length</em> method - method to inquire the current length of the builder's string. <br>
+  (5) Miscellaneous.  There are several other methods that the <em>StringBuilder</em> type are inherited from
+    its parent types (<em>Object</em> and <em>Comparable</em>). <br>
+  It is worth noting that values inserted into the string builder do not need to be strings.  If the type
+  of values is one of Fortran intrinsic types or the <em>FvlStr</em> type, the values are automatically converted
+  into strings.  However, if the type of values is a user-defined one, the user can supply a procedure to
+  convert values into strings. <br></p></td></tr>
+<!--active-->			   <tr class=""><td><a href='../module/mclass_syntaxnode.html'>MClass_SyntaxNode</a></td><td><a href='../sourcefile/mclass_syntaxnode.f90.html'>MClass_SyntaxNode.f90</a></td><td><p><strong>PURPOSE OF THIS MODULE</strong>: <br>
+  This module contains the <em>SyntaxNode</em> type and its related routines.
+  The <em>SyntaxNode</em> type is a derived type representing a ... <br></p></td></tr>
+<!---->			   <tr class="active"><td><a href='../module/mclass_syntaxtree.html'>MClass_SyntaxTree</a></td><td><a href='../sourcefile/mclass_syntaxtree.f90.html'>MClass_SyntaxTree.f90</a></td><td><p><strong>PURPOSE OF THIS MODULE</strong>: <br>
+  This module contains the <em>SyntaxTree</em> type and its related routines.
+  The <em>SyntaxTree</em> type is a derived type representing a ... <br></p></td></tr>
+<!--active-->			   <tr class=""><td><a href='../module/mclass_ternarytrie.html'>MClass_TernaryTrie</a></td><td><a href='../sourcefile/mclass_ternarytrie.f90.html'>MClass_TernaryTrie.f90</a></td><td><p><strong>PURPOSE OF THIS MODULE</strong>: <br>
+  This module contains the <em>TernaryTrie</em> type and its related routines.
+  The <em>TernaryTrie</em> type is a derived type representing a symbol table
+  of key-value pairs, with string keys and generic values. <br>
+  Technically, the <em>TernaryTrie</em> type employs a ternary-search tree
+  implementation to provide common operations of the symbol table.
+  These operations include the <em>Insert</em>, <em>Remove</em>, <em>Contain</em>, <em>GetSize</em>,
+  <em>IsEmpty</em> and <em>GetValue</em> methods.  It also provides character-based
+  methods for finding the string in the symbol table that is the longest
+  prefix of a given prefix, finding all strings in the symbol table that
+  start with a given prefix, and finding all strings in the symbol table
+  that match a given pattern. <br>
+  For all operations provided, the <em>TernaryTrie</em> type supports two types
+  of character strings: the Fortran intrinsic <em>CHARACTER</em> type and the
+  <em>FvlStr</em> derived type.  A user can choose to work with one of these two
+  types.  Like other symbol tables, the <em>TernaryTrie</em> type does not allow
+  duplicated keys.  Therefore, if an inserted key is equal to a key stored
+  in the table, an associated value of the stored key is replaced by an
+  associated value of the inserted key.  <br>
+   <br>
+ <strong>REFERENCES</strong>: <br>
+  [1] R. Sedgewick and K. Wayne. 2011.  Algorithms, 4th Edition.  Addison-Wesley. <br></p></td></tr>
+<!---->			 </tbody></table>
+             
+        </div>
+      </div>
+      <hr>
+    </div> <!-- /container -->
+    <footer>
+      <div class="container">
+        <div class="row justify-content-between">
+          <div class="col"><p>eXPerimental Fortran Library (XpfLib) Documentation was developed by Niranama<br>&copy; 2024 
+</p>
+          </div>
+          <div class="col">
+            <p class="text-end">
+              Documentation generated by
+              <a href="https://github.com/Fortran-FOSS-Programmers/ford">FORD</a>
+            </p>
+          </div>
+        </div>
+        <br>
+      </div> <!-- /container -->
+    </footer>
+
+    <!-- Bootstrap core JavaScript -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>    
+
+    <!-- MathJax JavaScript
+             ================================================== -->
+             <!-- Placed at the end of the document so the pages load faster -->
+        <script type="text/x-mathjax-config">
+          MathJax.Hub.Config({
+          TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } },
+          jax: ['input/TeX','input/MathML','output/HTML-CSS'],
+          extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']
+          });
+        </script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+          <script src="../tipuesearch/tipuesearch_content.js"></script>
+          <script src="../tipuesearch/tipuesearch_set.js"></script>
+          <script src="../tipuesearch/tipuesearch.js"></script>
+
+  </body>
+</html>

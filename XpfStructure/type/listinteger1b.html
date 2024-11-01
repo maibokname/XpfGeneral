@@ -1,0 +1,2635 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta name="description" content="Experimental Fortran Package - Data Structures">
+    <meta name="author" content="Niranama" >
+    <link rel="icon" href="../favicon.png">
+
+    <title>ListInteger1B &ndash; eXPerimental Fortran Library (XpfLib) Documentation </title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link href="../css/pygments.css" rel="stylesheet">
+    <link href="../css/font-awesome.min.css" rel="stylesheet">
+    <link href="../css/local.css" rel="stylesheet">
+      <link  href="../tipuesearch/tipuesearch.css" rel="stylesheet">
+
+    <script src="https://code.jquery.com/jquery-3.7.0.slim.min.js" integrity="sha256-tG5mcZUtJsZvyKAxYLVXrmjKBVLd6VpVccqz/r4ypFE=" crossorigin="anonymous"></script>
+  </head>
+
+  <body>
+
+    <!-- Fixed navbar -->
+    <div class="container-fluid mb-sm-4 mb-xl-2">
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container">
+          <a class="navbar-brand" href="../index.html">eXPerimental Fortran Library (XpfLib) Documentation </a>
+          <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar"
+                  aria-expanded="false" aria-controls="navbar" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon">
+          </button>
+
+          <div id="navbar" class="navbar-collapse collapse">
+            <ul class="navbar-nav">
+                  <li class="nav-item">
+                    <a class="nav-link" href="../lists/files.html">Source Files</a>
+                  </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../lists/modules.html">Modules</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../lists/types.html">Derived Types</a>
+                </li>
+            </ul>
+              <div class="d-flex align-items-end flex-grow-1">
+                <form action="../search.html" role="search" class="ms-auto">
+                  <input type="text" class="form-control" aria-label="Search" placeholder="Search" name="q" id="tipue_search_input" autocomplete="off" required>
+                </form>
+              </div>
+          </div><!--/.nav-collapse -->
+        </div>
+      </nav>
+    </div>
+
+    <div class="container">
+  <div class="row">
+    <h1>ListInteger1B
+      <small>Derived Type</small>
+      
+    </h1>
+      <div class="container p-2 mb-4 bg-light border rounded-3">
+    <div class="row align-items-center justify-content-between" id="info-bar">
+      <div class="col">
+        <ul class="list-inline" style="margin-bottom:0px;display:inline">
+
+            <li class="list-inline-item" id="statements"><i class="fa fa-list-ol"></i>
+              <a data-bs-toggle="tooltip"
+                 data-bs-placement="bottom" data-html="true"
+                 title="<p> 1.6% of total for derived types.</p>Including implementation: 664 statements,  1.9% of total for derived types.">42 statements</a>
+            </li>
+
+            <li class="list-inline-item" id="source-file">
+              <i class="fa fa-code"></i>
+              <a href="../src/MClass_ListInteger1B.f90"> Source File</a>
+            </li>
+        </ul>
+      </div>
+      <div class="col">
+        <nav aria-label="breadcrumb">
+          <ol class="breadcrumb justify-content-end mb-0">
+                <li class="breadcrumb-item"><a href='../sourcefile/mclass_listinteger1b.f90.html'>MClass_ListInteger1B.f90</a></li>
+                <li class="breadcrumb-item"><a href='../module/mclass_listinteger1b.html'>MClass_ListInteger1B</a></li>
+            <li class="breadcrumb-item active" aria-current="page">ListInteger1B</li>
+          </ol>
+        </nav>
+      </div>
+    </div>
+  </div>
+  <script>
+    $(function () {
+    $('[data-bs-toggle="tooltip"]').tooltip()
+    })
+  </script>
+
+  </div>
+  
+  <div class="row">
+    <div class="col-md-3 hidden-xs hidden-sm visible-md visible-lg">
+      <div id="sidebar">
+      <h3>Contents</h3>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+      <div class="card mb-4">
+      <a data-bs-toggle="collapse" href="#fins-0"
+         aria-expanded="false" aria-controls="fins-0">
+         <h4 class="card-header bg-primary text-white">Finalization Procedures</h4>
+      </a>
+      <div id="fins-0" class="collapse">
+        <div class="list-group list-group-flush">
+            <a class="list-group-item" href="../type/listinteger1b.html#finalproc-linkedlist_finalizer~13">LinkedList_Finalizer</a>
+        </div>
+      </div>
+    </div>
+
+      <div class="card mb-4">
+      <a data-bs-toggle="collapse" href="#boundprocs-0"
+         aria-expanded="false" aria-controls="boundprocs-0">
+         <h4 class="card-header bg-primary text-white">Type-Bound Procedures</h4>
+      </a>
+      <div id="boundprocs-0" class="collapse">
+        <div class="list-group list-group-flush">
+            <a class="list-group-item" href="../type/listinteger1b.html#boundprocedure-construct~61">Construct</a>
+            <a class="list-group-item" href="../type/listinteger1b.html#boundprocedure-destruct~62">Destruct</a>
+            <a class="list-group-item" href="../type/listinteger1b.html#boundprocedure-addfirst~27">AddFirst</a>
+            <a class="list-group-item" href="../type/listinteger1b.html#boundprocedure-addlast~27">AddLast</a>
+            <a class="list-group-item" href="../type/listinteger1b.html#boundprocedure-addat~27">AddAt</a>
+            <a class="list-group-item" href="../type/listinteger1b.html#boundprocedure-remove~46">Remove</a>
+            <a class="list-group-item" href="../type/listinteger1b.html#boundprocedure-removefirst~27">RemoveFirst</a>
+            <a class="list-group-item" href="../type/listinteger1b.html#boundprocedure-removelast~27">RemoveLast</a>
+            <a class="list-group-item" href="../type/listinteger1b.html#boundprocedure-removeat~27">RemoveAt</a>
+            <a class="list-group-item" href="../type/listinteger1b.html#boundprocedure-delete~36">Delete</a>
+            <a class="list-group-item" href="../type/listinteger1b.html#boundprocedure-clear~44">Clear</a>
+            <a class="list-group-item" href="../type/listinteger1b.html#boundprocedure-toarray~38">ToArray</a>
+            <a class="list-group-item" href="../type/listinteger1b.html#boundprocedure-removeduplicates~13">RemoveDuplicates</a>
+            <a class="list-group-item" href="../type/listinteger1b.html#boundprocedure-startfirst~53">StartFirst</a>
+            <a class="list-group-item" href="../type/listinteger1b.html#boundprocedure-moveforward~53">MoveForward</a>
+            <a class="list-group-item" href="../type/listinteger1b.html#boundprocedure-startlast~36">StartLast</a>
+            <a class="list-group-item" href="../type/listinteger1b.html#boundprocedure-movebackward~36">MoveBackward</a>
+            <a class="list-group-item" href="../type/listinteger1b.html#boundprocedure-isempty~127">IsEmpty</a>
+            <a class="list-group-item" href="../type/listinteger1b.html#boundprocedure-getsize~62">GetSize</a>
+            <a class="list-group-item" href="../type/listinteger1b.html#boundprocedure-peekfirst~27">PeekFirst</a>
+            <a class="list-group-item" href="../type/listinteger1b.html#boundprocedure-peeklast~27">PeekLast</a>
+            <a class="list-group-item" href="../type/listinteger1b.html#boundprocedure-peekat~27">PeekAt</a>
+            <a class="list-group-item" href="../type/listinteger1b.html#boundprocedure-getall~38">GetAll</a>
+            <a class="list-group-item" href="../type/listinteger1b.html#boundprocedure-enqueue~25">EnQueue</a>
+            <a class="list-group-item" href="../type/listinteger1b.html#boundprocedure-dequeue~25">DeQueue</a>
+            <a class="list-group-item" href="../type/listinteger1b.html#boundprocedure-push~29">Push</a>
+            <a class="list-group-item" href="../type/listinteger1b.html#boundprocedure-pop~29">Pop</a>
+            <a class="list-group-item" href="../type/listinteger1b.html#boundprocedure-peektop~29">PeekTop</a>
+        </div>
+      </div>
+    </div>
+
+  
+  
+
+
+  </div>
+
+    </div>
+    
+    <div class="col-md-9" id='text'>
+      <h2>type, public :: ListInteger1B</h2>
+    <p><em>ListInteger1B</em> is a container type that employs a doubly-linked list implementation to
+  provide common operations for a list container.  It can also represent other forms
+  of containers including a LIFO stack, a FIFO queue and a double-ended queue (deque).
+  The type of items stored in this container is <em>INTEGER(KIND=kInt8)</em>.</p>
+    <br>
+
+    
+
+      <section>
+        <h2>Finalization Procedures</h2>
+            <div class="card">
+    <div class="card-header codesum">
+      <span class="anchor" id="finalproc-linkedlist_finalizer~13"></span>
+      <h3>final :: <strong>LinkedList_Finalizer</strong> </h3>
+    </div>
+    <div class="card-body">
+      
+      <p>To perform finalization of the container.</p>
+    </div>
+    <ul class="list-group">
+      <li class="list-group-item">
+            <h3>
+    private  subroutine LinkedList_Finalizer(List)  
+
+    </h3>
+  <p>To perform finalization of the object.</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-list~366"></span>
+              type(<a href='../type/listinteger1b.html'>ListInteger1B</a>),
+            </td>
+<td>intent(inout)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>List</strong></td>
+            <td>
+                <p>ListInteger1B object</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+      </li>
+    </ul>
+  </div>
+
+      </section>
+      <br>
+
+      <section>
+        <h2>Type-Bound Procedures</h2>
+          <div class="row">
+              <div class="card mt-3">
+    <div class="card-header codesum">
+      <span class="anchor" id="boundprocedure-construct~61"></span>
+      <h3>
+          procedure, public ::
+  <strong>Construct</strong> => LinkedList_CreateByArray
+        
+      </h3>
+    </div>
+      <div class="card-body">
+        
+        <p><strong>Type-Bound Subroutine</strong>: Construct <br>
+<strong>Purpose</strong>:  To construct a list from an array of items. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    CALL List%Construct(10, Arr)    ! create a list from an array of 10 items</p>
+      </div>
+    <ul class="list-group">
+        <li class="list-group-item">
+                  <h3>
+    private  subroutine LinkedList_CreateByArray(List, N, Items)  
+</h3>
+
+  <p>To construct a list from an array of item.</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(<a href='../type/listinteger1b.html'>ListInteger1B</a>),
+            </td>
+<td>intent(inout)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>List</strong></td>
+            <td>
+                <p>ListInteger1B object</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              integer(kind=kInt32),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>N</strong></td>
+            <td>
+                <p>number of items</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              integer(kind=kInt8),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Items</strong>(N)</td>
+            <td>
+                <p>an array of items</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+        </li>
+    </ul>
+  </div>
+
+          </div>
+          <div class="row">
+              <div class="card mt-3">
+    <div class="card-header codesum">
+      <span class="anchor" id="boundprocedure-destruct~62"></span>
+      <h3>
+          procedure, public ::
+  <strong>Destruct</strong> => LinkedList_Destructor
+        
+      </h3>
+    </div>
+      <div class="card-body">
+        
+        <p><strong>Type-Bound Subroutine</strong>: Destruct <br>
+<strong>Purpose</strong>:  To destruct a list and get its items if requested. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    CALL List%Destruct()    ! destruct the list <br>
+ <strong>Note</strong>: This method is equivalent to the <em>Clear</em> method.</p>
+      </div>
+    <ul class="list-group">
+        <li class="list-group-item">
+                  <h3>
+    private  subroutine LinkedList_Destructor(List)  
+</h3>
+
+  <p>To destruct ListInteger1B object.</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(<a href='../type/listinteger1b.html'>ListInteger1B</a>),
+            </td>
+<td>intent(inout)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>List</strong></td>
+            <td>
+                <p>ListInteger1B object</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+        </li>
+    </ul>
+  </div>
+
+          </div>
+          <div class="row">
+              <div class="card mt-3">
+    <div class="card-header codesum">
+      <span class="anchor" id="boundprocedure-addfirst~27"></span>
+      <h3>
+          procedure, public ::
+  <strong>AddFirst</strong> => LinkedList_AddFirst
+        
+      </h3>
+    </div>
+      <div class="card-body">
+        
+        <p><strong>Type-Bound Subroutine</strong>: AddFirst <br>
+ <strong>Purpose</strong>:  To insert the specified item at the front of the list. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    CALL List%AddFirst(Item)</p>
+      </div>
+    <ul class="list-group">
+        <li class="list-group-item">
+                  <h3>
+    private  subroutine LinkedList_AddFirst(List, Item)  
+</h3>
+
+  <p>To add a item at the head of the list.</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(<a href='../type/listinteger1b.html'>ListInteger1B</a>),
+            </td>
+<td>intent(inout)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>List</strong></td>
+            <td>
+                <p>ListInteger1B object</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              integer(kind=kInt8),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Item</strong></td>
+            <td>
+                <p>item to be added to the list</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+        </li>
+    </ul>
+  </div>
+
+          </div>
+          <div class="row">
+              <div class="card mt-3">
+    <div class="card-header codesum">
+      <span class="anchor" id="boundprocedure-addlast~27"></span>
+      <h3>
+          procedure, public ::
+  <strong>AddLast</strong> => LinkedList_AddLast
+        
+      </h3>
+    </div>
+      <div class="card-body">
+        
+        <p><strong>Type-Bound Subroutine</strong>: AddLast <br>
+ <strong>Purpose</strong>:  To insert the specified item at the end of the list. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    CALL List%AddLast(Item)</p>
+      </div>
+    <ul class="list-group">
+        <li class="list-group-item">
+                  <h3>
+    private  subroutine LinkedList_AddLast(List, Item)  
+</h3>
+
+  <p>To add a item at the tail of the list.</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(<a href='../type/listinteger1b.html'>ListInteger1B</a>),
+            </td>
+<td>intent(inout)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>List</strong></td>
+            <td>
+                <p>ListInteger1B object</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              integer(kind=kInt8),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Item</strong></td>
+            <td>
+                <p>item to be added to the list</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+        </li>
+    </ul>
+  </div>
+
+          </div>
+          <div class="row">
+              <div class="card mt-3">
+    <div class="card-header codesum">
+      <span class="anchor" id="boundprocedure-addat~27"></span>
+      <h3>
+          procedure, public ::
+  <strong>AddAt</strong> => LinkedList_AddAt
+        
+      </h3>
+    </div>
+      <div class="card-body">
+        
+        <p><strong>Type-Bound Function</strong>: AddAt <br>
+ <strong>Purpose</strong>:  To insert the specified item at the specified index where
+               the index must be between 1 and the list size.
+               Also, return a flag indicating whether the item is
+               successfully added. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    Success = List%AddAt(Index, Item) <br>
+  ---&gt;    IF (.NOT.List%AddAt(Index, Item)) DoSomething</p>
+      </div>
+    <ul class="list-group">
+        <li class="list-group-item">
+                  <h3>
+    private  function LinkedList_AddAt(List, Index, Item) result(Flag)  
+</h3>
+
+  <p>To insert the given item at the specified index where the index must be
+ between 1 and the list size.  Also, return a flag indicating whether the
+ item is successfully added.</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(<a href='../type/listinteger1b.html'>ListInteger1B</a>),
+            </td>
+<td>intent(inout)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>List</strong></td>
+            <td>
+                <p>ListInteger1B object</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              integer(kind=kInt32),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Index</strong></td>
+            <td>
+                <p>the one-based index into the list's items</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              integer(kind=kInt8),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Item</strong></td>
+            <td>
+                <p>the item to be added to the list</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+    <h4>
+    Return Value
+    <small>logical</small>
+    </h4>
+    <p>flag indicating whether the item is successfully added. <br>
+- true if the item is successfully added.
+- false if the item is NOT successfully added.</p>
+
+        </li>
+    </ul>
+  </div>
+
+          </div>
+          <div class="row">
+              <div class="card mt-3">
+    <div class="card-header codesum">
+      <span class="anchor" id="boundprocedure-remove~46"></span>
+      <h3>
+          procedure, public ::
+  <strong>Remove</strong> => LinkedList_Remove
+        
+      </h3>
+    </div>
+      <div class="card-body">
+        
+        <p><strong>Type-Bound Subroutine</strong>: Remove <br>
+<strong>Purpose</strong>:  To remove an item from the list.  The first item is removed
+              by default.  If specified, the last item can be removed instead. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    CALL List%Remove()          ! remove the first item <br>
+  ---&gt;    CALL List%Remove(.FALSE.)   ! remove the last item <br>
+  ---&gt;    CALL List%Remove(Item=Item) ! retrieve and the remove the first item</p>
+      </div>
+    <ul class="list-group">
+        <li class="list-group-item">
+                  <h3>
+    private  subroutine LinkedList_Remove(List, First, Item)  
+</h3>
+
+  <p>To remove a node from the list.</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(<a href='../type/listinteger1b.html'>ListInteger1B</a>),
+            </td>
+<td>intent(inout)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>List</strong></td>
+            <td>
+                <p>ListInteger1B object</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              logical,
+            </td>
+<td>intent(in),</td>
+              <td>optional</td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>First</strong></td>
+            <td>
+                <p>location flag where the node is removed <br>
+- true (by default) if want to remove the first node <br>
+- false if want to remove the last node</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              integer(kind=kInt8),
+            </td>
+<td>intent(out),</td>
+              <td>optional</td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Item</strong></td>
+            <td>
+                <p>item of the removed node if requested</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+        </li>
+    </ul>
+  </div>
+
+          </div>
+          <div class="row">
+              <div class="card mt-3">
+    <div class="card-header codesum">
+      <span class="anchor" id="boundprocedure-removefirst~27"></span>
+      <h3>
+          procedure, public ::
+  <strong>RemoveFirst</strong> => LinkedList_RemoveFirst
+        
+      </h3>
+    </div>
+      <div class="card-body">
+        
+        <p><strong>Type-Bound Function</strong>: RemoveFirst <br>
+ <strong>Purpose</strong>:  To get and remove the front (first) item of the list.
+               Also, return a flag indicating whether the item is
+               successfully removed. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    Success = List%RemoveFirst(Item) <br>
+  ---&gt;    IF (.NOT.List%RemoveFirst(Item)) DoSomething</p>
+      </div>
+    <ul class="list-group">
+        <li class="list-group-item">
+                  <h3>
+    private  function LinkedList_RemoveFirst(List, Item) result(Flag)  
+</h3>
+
+  <p>To get and remove the first item of the list.  Also, return
+ a flag indicating whether the item is successfully removed.</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(<a href='../type/listinteger1b.html'>ListInteger1B</a>),
+            </td>
+<td>intent(inout)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>List</strong></td>
+            <td>
+                <p>ListInteger1B object</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              integer(kind=kInt8),
+            </td>
+<td>intent(out)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Item</strong></td>
+            <td>
+                <p>the item to be removed from the list</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+    <h4>
+    Return Value
+    <small>logical</small>
+    </h4>
+    <p>flag indicating whether the item is successfully removed. <br>
+- true if the list is NOT empty.
+- false if the list is empty.</p>
+
+        </li>
+    </ul>
+  </div>
+
+          </div>
+          <div class="row">
+              <div class="card mt-3">
+    <div class="card-header codesum">
+      <span class="anchor" id="boundprocedure-removelast~27"></span>
+      <h3>
+          procedure, public ::
+  <strong>RemoveLast</strong> => LinkedList_RemoveLast
+        
+      </h3>
+    </div>
+      <div class="card-body">
+        
+        <p><strong>Type-Bound Function</strong>: RemoveLast <br>
+ <strong>Purpose</strong>:  To get and remove the last item of the list.
+               Also, return a flag indicating whether the item is
+               successfully removed. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    Success = List%RemoveLast(Item) <br>
+  ---&gt;    IF (.NOT.List%RemoveLast(Item)) DoSomething</p>
+      </div>
+    <ul class="list-group">
+        <li class="list-group-item">
+                  <h3>
+    private  function LinkedList_RemoveLast(List, Item) result(Flag)  
+</h3>
+
+  <p>To get and remove the last item of the list.  Also, return
+ a flag indicating whether the item is successfully removed.</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(<a href='../type/listinteger1b.html'>ListInteger1B</a>),
+            </td>
+<td>intent(inout)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>List</strong></td>
+            <td>
+                <p>ListInteger1B object</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              integer(kind=kInt8),
+            </td>
+<td>intent(out)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Item</strong></td>
+            <td>
+                <p>the item to be removed from the list</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+    <h4>
+    Return Value
+    <small>logical</small>
+    </h4>
+    <p>flag indicating whether the item is successfully removed. <br>
+- true if the list is NOT empty.
+- false if the list is empty.</p>
+
+        </li>
+    </ul>
+  </div>
+
+          </div>
+          <div class="row">
+              <div class="card mt-3">
+    <div class="card-header codesum">
+      <span class="anchor" id="boundprocedure-removeat~27"></span>
+      <h3>
+          procedure, public ::
+  <strong>RemoveAt</strong> => LinkedList_RemoveAt
+        
+      </h3>
+    </div>
+      <div class="card-body">
+        
+        <p><strong>Type-Bound Function</strong>: RemoveAt <br>
+ <strong>Purpose</strong>:  To get and remove the item at the specified index where
+               the index must be between 1 and the list size.
+               Also, return a flag indicating whether the item is
+               successfully removed. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    Success = List%RemoveAt(Index, Item) <br>
+  ---&gt;    IF (.NOT.List%RemoveAt(Index, Item)) DoSomething</p>
+      </div>
+    <ul class="list-group">
+        <li class="list-group-item">
+                  <h3>
+    private  function LinkedList_RemoveAt(List, Index, Item) result(Flag)  
+</h3>
+
+  <p>To get and remove the item at the specified index where the index must be
+ between 1 and the list size.   Also, return a flag indicating whether
+ the item is successfully removed.</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(<a href='../type/listinteger1b.html'>ListInteger1B</a>),
+            </td>
+<td>intent(inout)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>List</strong></td>
+            <td>
+                <p>ListInteger1B object</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              integer(kind=kInt32),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Index</strong></td>
+            <td>
+                <p>the one-based index into the list's items</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              integer(kind=kInt8),
+            </td>
+<td>intent(out)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Item</strong></td>
+            <td>
+                <p>the item to be removed from the list</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+    <h4>
+    Return Value
+    <small>logical</small>
+    </h4>
+    <p>flag indicating whether the item is successfully removed. <br>
+- true if the item is successfully removed.
+- false if the item is NOT successfully removed.</p>
+
+        </li>
+    </ul>
+  </div>
+
+          </div>
+          <div class="row">
+              <div class="card mt-3">
+    <div class="card-header codesum">
+      <span class="anchor" id="boundprocedure-delete~36"></span>
+      <h3>
+          procedure, public ::
+  <strong>Delete</strong> => LinkedList_Delete
+        
+      </h3>
+    </div>
+      <div class="card-body">
+        
+        <p><strong>Type-Bound Subroutine</strong>: Delete <br>
+ <strong>Purpose</strong>:  To delete an item from the list. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    CALL List%Delete() <br>
+ <strong>Note</strong>: This method is intended to be used in conjunction with the
+  <em>StartFirst</em> and <em>MoveForward</em> methods (or the <em>StartLast</em> and
+  <em>MoveBackward</em> methods).  Therefore, after the call to one of those
+  methods and then calling this one will result in a removal of the
+  current item of the iteration (i.e. the same item that can be retrieved
+  via those iteration methods).</p>
+      </div>
+    <ul class="list-group">
+        <li class="list-group-item">
+                  <h3>
+    private  subroutine LinkedList_Delete(List)  
+</h3>
+
+  <p>To delete an item from the list.  This procedure is intended to be used
+ in conjunction with the <em>StartFirst</em> and <em>MoveForward</em> methods (or the
+ <em>StartLast</em> and <em>MoveBackward</em>).  Therefore, after the call to one of
+ these methods and then calling this procedure will result in a removal
+ of the current item of the iteration (i.e. the same item that can be
+ retrieved via those methods). <br>
+ If the cursor pointer is not associated, nothing happens.  This usually
+ means that the list is empty or this procedure is called before those
+ iteration methods. <br>
+ This procedure provides a way to remove items in the middle of the list
+ without knowing specific locations of the items.  The user would perform
+ an iteration over the list by calling those iteration methods.  While in
+ the middle of the iteration, if the interested items are found, they can
+ be removed from the list by this procedure.</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(<a href='../type/listinteger1b.html'>ListInteger1B</a>),
+            </td>
+<td>intent(inout)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>List</strong></td>
+            <td>
+                <p>ListInteger1B object</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+        </li>
+    </ul>
+  </div>
+
+          </div>
+          <div class="row">
+              <div class="card mt-3">
+    <div class="card-header codesum">
+      <span class="anchor" id="boundprocedure-clear~44"></span>
+      <h3>
+          procedure, public ::
+  <strong>Clear</strong> => LinkedList_ClearItems
+        
+      </h3>
+    </div>
+      <div class="card-body">
+        
+        <p><strong>Type-Bound Subroutine</strong>: Clear <br>
+ <strong>Purpose</strong>:  To remove all items from the list. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    CALL List%Clear()</p>
+      </div>
+    <ul class="list-group">
+        <li class="list-group-item">
+                  <h3>
+    private  subroutine LinkedList_ClearItems(List)  
+</h3>
+
+  <p>To free up memory of the list.</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(<a href='../type/listinteger1b.html'>ListInteger1B</a>),
+            </td>
+<td>intent(inout)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>List</strong></td>
+            <td>
+                <p>ListInteger1B object</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+        </li>
+    </ul>
+  </div>
+
+          </div>
+          <div class="row">
+              <div class="card mt-3">
+    <div class="card-header codesum">
+      <span class="anchor" id="boundprocedure-toarray~38"></span>
+      <h3>
+          procedure, public ::
+  <strong>ToArray</strong> => LinkedList_ToArray
+        
+      </h3>
+    </div>
+      <div class="card-body">
+        
+        <p><strong>Type-Bound Function</strong>: ToArray <br>
+ <strong>Purpose</strong>:  To get and remove all items from the list.  Also, return a flag
+               indicating whether the items are successfully removed. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    Success = List%ToArray(Items) <br>
+  ---&gt;    IF (.NOT.List%ToArray(Items)) DoSomething</p>
+      </div>
+    <ul class="list-group">
+        <li class="list-group-item">
+                  <h3>
+    private  function LinkedList_ToArray(List, Items) result(Flag)  
+</h3>
+
+  <p>To get and remove all items from the list.  Also, return
+ a flag indicating whether the items are successfully removed.</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(<a href='../type/listinteger1b.html'>ListInteger1B</a>),
+            </td>
+<td>intent(inout)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>List</strong></td>
+            <td>
+                <p>ListInteger1B object</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              integer(kind=kInt8),
+            </td>
+<td>intent(inout),</td>
+              <td></td>            <td>
+              ALLOCATABLE
+            </td>
+            <td>::</td>
+            <td><strong>Items</strong>(:)</td>
+            <td>
+                <p>the item to be removed from the list</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+    <h4>
+    Return Value
+    <small>logical</small>
+    </h4>
+    <p>flag indicating whether the items are successfully removed. <br>
+- true if the items are successfully removed.
+- false if the items are NOT successfully removed.</p>
+
+        </li>
+    </ul>
+  </div>
+
+          </div>
+          <div class="row">
+              <div class="card mt-3">
+    <div class="card-header codesum">
+      <span class="anchor" id="boundprocedure-removeduplicates~13"></span>
+      <h3>
+          procedure, public ::
+  <strong>RemoveDuplicates</strong> => LinkedList_RemoveDuplicates
+        
+      </h3>
+    </div>
+      <div class="card-body">
+        
+        <p><strong>Type-Bound Subroutine</strong>: RemoveDuplicates <br>
+ <strong>Purpose</strong>:  To remove nodes with duplicated items from the list. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    CALL List%RemoveDuplicates()</p>
+      </div>
+    <ul class="list-group">
+        <li class="list-group-item">
+                  <h3>
+    private  subroutine LinkedList_RemoveDuplicates(List)  
+</h3>
+
+  <p>To remove nodes with duplicated items from the list.</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(<a href='../type/listinteger1b.html'>ListInteger1B</a>),
+            </td>
+<td>intent(inout)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>List</strong></td>
+            <td>
+                <p>ListInteger1B object</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+        </li>
+    </ul>
+  </div>
+
+          </div>
+          <div class="row">
+              <div class="card mt-3">
+    <div class="card-header codesum">
+      <span class="anchor" id="boundprocedure-startfirst~53"></span>
+      <h3>
+          procedure, public ::
+  <strong>StartFirst</strong> => LinkedList_Move2FirstElm
+        
+      </h3>
+    </div>
+      <div class="card-body">
+        
+        <p><strong>Type-Bound Function</strong>: StartFirst <br>
+ <strong>Purpose</strong>:  To start the <em>forward</em> iteration and return a flag indicating
+               whether the list is empty or not. <br>
+ <strong>Usage</strong>: see <em>MoveForward</em> procedure.</p>
+      </div>
+    <ul class="list-group">
+        <li class="list-group-item">
+                  <h3>
+    private  function LinkedList_Move2FirstElm(List, Item) result(IsEmpty)  
+</h3>
+
+  <p>To move to the head node of the list and return
+ a flag indicating whether the list is empty or not.</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(<a href='../type/listinteger1b.html'>ListInteger1B</a>),
+            </td>
+<td>intent(inout)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>List</strong></td>
+            <td>
+                <p>ListInteger1B object</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              integer(kind=kInt8),
+            </td>
+<td>intent(out),</td>
+              <td>optional</td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Item</strong></td>
+            <td>
+                <p>first item</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+    <h4>
+    Return Value
+    <small>logical</small>
+    </h4>
+    <p>true if the list is empty</p>
+
+        </li>
+    </ul>
+  </div>
+
+          </div>
+          <div class="row">
+              <div class="card mt-3">
+    <div class="card-header codesum">
+      <span class="anchor" id="boundprocedure-moveforward~53"></span>
+      <h3>
+          procedure, public ::
+  <strong>MoveForward</strong> => LinkedList_Move2NextElm
+        
+      </h3>
+    </div>
+      <div class="card-body">
+        
+        <p><strong>Type-Bound Function</strong>: MoveForward <br>
+ <strong>Purpose</strong>:  To move <em>forward</em> to the next iteration and return a flag
+               indicating whether the cursor pointer has reached the end
+               of the list or not. <br>
+ <strong>Usage</strong>: <br>
+  The following code snippet illustrates how to typically traverse the list.
+<br>
+<Pre><Code style="color:MidnightBlue;">
+  ! start forward iteration (from the first item)
+  IsEmpty = List%StartFirst()
+  IF (.NOT.IsEmpty) DoSomeThing...
+  DO
+      ! move to the next iteration
+      IsTheEnd = List%MoveForward()
+      ! check whether we reach the end of the list or not
+      IF (IsTheEnd) EXIT
+      ! if not, do the task we need
+      DoSomeThing...
+  END DO
+  </Code></Pre></p>
+<p><br>
+  The following code snippet shows another way to iterate over the list.
+<br>
+<Pre><Code style="color:MidnightBlue;">
+  ! start forward iteration (from the first item)
+  IsTheEnd = List%StartFirst(CurrItem)
+  DO WHILE (.NOT.IsTheEnd)
+      DoSomeThing_With_CurrItem...
+      ! move to the next iteration
+      IsTheEnd = List%MoveForward(CurrItem)
+  END DO
+  </Code></Pre>
+</p>
+      </div>
+    <ul class="list-group">
+        <li class="list-group-item">
+                  <h3>
+    private  function LinkedList_Move2NextElm(List, Item) result(IsTheEnd)  
+</h3>
+
+  <p>To move (forward) to the next node in the list and return a flag indicating
+ whether the cursor pointer has reached the end of the list or not.</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(<a href='../type/listinteger1b.html'>ListInteger1B</a>),
+            </td>
+<td>intent(inout)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>List</strong></td>
+            <td>
+                <p>ListInteger1B object</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              integer(kind=kInt8),
+            </td>
+<td>intent(out),</td>
+              <td>optional</td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Item</strong></td>
+            <td>
+                <p>item of the next node</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+    <h4>
+    Return Value
+    <small>logical</small>
+    </h4>
+    <p>true if the cursor has reached the end of the list</p>
+
+        </li>
+    </ul>
+  </div>
+
+          </div>
+          <div class="row">
+              <div class="card mt-3">
+    <div class="card-header codesum">
+      <span class="anchor" id="boundprocedure-startlast~36"></span>
+      <h3>
+          procedure, public ::
+  <strong>StartLast</strong> => LinkedList_Move2LastElm
+        
+      </h3>
+    </div>
+      <div class="card-body">
+        
+        <p><strong>Type-Bound Function</strong>: StartLast <br>
+ <strong>Purpose</strong>:  To start the <em>backward</em> iteration and return a flag indicating
+               whether the list is empty or not. <br>
+ <strong>Usage</strong>: see <em>MoveBackward</em> procedure.</p>
+      </div>
+    <ul class="list-group">
+        <li class="list-group-item">
+                  <h3>
+    private  function LinkedList_Move2LastElm(List, Item) result(IsEmpty)  
+</h3>
+
+  <p>To move to the tail node of the list and return
+ a flag indicating whether the list is empty or not.</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(<a href='../type/listinteger1b.html'>ListInteger1B</a>),
+            </td>
+<td>intent(inout)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>List</strong></td>
+            <td>
+                <p>ListInteger1B object</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              integer(kind=kInt8),
+            </td>
+<td>intent(out),</td>
+              <td>optional</td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Item</strong></td>
+            <td>
+                <p>last item</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+    <h4>
+    Return Value
+    <small>logical</small>
+    </h4>
+    <p>true if the list is empty</p>
+
+        </li>
+    </ul>
+  </div>
+
+          </div>
+          <div class="row">
+              <div class="card mt-3">
+    <div class="card-header codesum">
+      <span class="anchor" id="boundprocedure-movebackward~36"></span>
+      <h3>
+          procedure, public ::
+  <strong>MoveBackward</strong> => LinkedList_Move2PrevElm
+        
+      </h3>
+    </div>
+      <div class="card-body">
+        
+        <p><strong>Type-Bound Function</strong>: MoveBackward <br>
+ <strong>Purpose</strong>:  To move <em>backward</em> to the next iteration and return a flag
+               indicating whether the cursor pointer has reached the end
+               of the list or not. <br>
+ <strong>Usage</strong>: <br>
+  The following code snippet illustrates how to typically traverse the list in reverse order.
+<br>
+<Pre><Code style="color:MidnightBlue;">
+  ! start backward iteration (from the last item)
+  IsEmpty = List%StartLast()
+  IF (.NOT.IsEmpty) DoSomeThing...
+  DO
+      ! move to the next iteration
+      IsTheEnd = List%MoveBackward()
+      ! check whether we reach the end of the list or not
+      IF (IsTheEnd) EXIT
+      ! if not, do the task we need
+      DoSomeThing...
+  END DO
+  </Code></Pre></p>
+<p><br>
+  The following code snippet shows another way to iterate over the list in reverse order.
+<br>
+<Pre><Code style="color:MidnightBlue;">
+  ! start backward iteration (from the last item)
+  IsTheEnd = List%StartLast(CurrItem)
+  DO WHILE (.NOT.IsTheEnd)
+      DoSomeThing_With_CurrItem...
+      ! move to the next iteration
+      IsTheEnd = List%MoveBackward(CurrItem)
+  END DO
+  </Code></Pre>
+</p>
+      </div>
+    <ul class="list-group">
+        <li class="list-group-item">
+                  <h3>
+    private  function LinkedList_Move2PrevElm(List, Item) result(IsTheEnd)  
+</h3>
+
+  <p>To move backward to the next node (i.e. to the so-called previous node)
+ in the list and return a flag indicating whether the cursor pointer has
+ reached the end of the list or not.</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(<a href='../type/listinteger1b.html'>ListInteger1B</a>),
+            </td>
+<td>intent(inout)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>List</strong></td>
+            <td>
+                <p>ListInteger1B object</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              integer(kind=kInt8),
+            </td>
+<td>intent(out),</td>
+              <td>optional</td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Item</strong></td>
+            <td>
+                <p>item of the previous node</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+    <h4>
+    Return Value
+    <small>logical</small>
+    </h4>
+    <p>true if the cursor has reached the end of the list</p>
+
+        </li>
+    </ul>
+  </div>
+
+          </div>
+          <div class="row">
+              <div class="card mt-3">
+    <div class="card-header codesum">
+      <span class="anchor" id="boundprocedure-isempty~127"></span>
+      <h3>
+          procedure, public ::
+  <strong>IsEmpty</strong> => LinkedList_IsEmpty
+        
+      </h3>
+    </div>
+      <div class="card-body">
+        
+        <p><strong>Type-Bound Function</strong>: IsEmpty <br>
+ <strong>Purpose</strong>:  To check whether the list is empty or not. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    Flag = List%IsEmpty() <br>
+  ---&gt;    IF (.NOT.List%IsEmpty()) DoSomeThing</p>
+      </div>
+    <ul class="list-group">
+        <li class="list-group-item">
+                  <h3>
+    private  function LinkedList_IsEmpty(List) result(Flag)  
+</h3>
+
+  <p>To check whether the list is empty or not.</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(<a href='../type/listinteger1b.html'>ListInteger1B</a>),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>List</strong></td>
+            <td>
+                <p>ListInteger1B object</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+    <h4>
+    Return Value
+    <small>logical</small>
+    </h4>
+    <p>true if the list is empty</p>
+
+        </li>
+    </ul>
+  </div>
+
+          </div>
+          <div class="row">
+              <div class="card mt-3">
+    <div class="card-header codesum">
+      <span class="anchor" id="boundprocedure-getsize~62"></span>
+      <h3>
+          procedure, public ::
+  <strong>GetSize</strong> => LinkedList_GetSize
+        
+      </h3>
+    </div>
+      <div class="card-body">
+        
+        <p><strong>Type-Bound Function</strong>: GetSize <br>
+ <strong>Purpose</strong>:  To get size of the list. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    ListSize = List%GetSize()</p>
+      </div>
+    <ul class="list-group">
+        <li class="list-group-item">
+                  <h3>
+    private  function LinkedList_GetSize(List) result(Size)  
+</h3>
+
+  <p>To get size of the list (a number of nodes).</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(<a href='../type/listinteger1b.html'>ListInteger1B</a>),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>List</strong></td>
+            <td>
+                <p>ListInteger1B object</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+    <h4>
+    Return Value
+    <small>integer(kind=kInt32)</small>
+    </h4>
+    <p>list size (number of nodes)</p>
+
+        </li>
+    </ul>
+  </div>
+
+          </div>
+          <div class="row">
+              <div class="card mt-3">
+    <div class="card-header codesum">
+      <span class="anchor" id="boundprocedure-peekfirst~27"></span>
+      <h3>
+          procedure, public ::
+  <strong>PeekFirst</strong> => LinkedList_PeekFirst
+        
+      </h3>
+    </div>
+      <div class="card-body">
+        
+        <p><strong>Type-Bound Function</strong>: PeekFirst <br>
+ <strong>Purpose</strong>:  To get the first item (without removing it from the list).
+               Also, return a flag indicating whether the item is available
+               or not. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    Success = List%PeekFirst(Item) <br>
+  ---&gt;    IF (.NOT.List%PeekFirst(Item)) DoSomething</p>
+      </div>
+    <ul class="list-group">
+        <li class="list-group-item">
+                  <h3>
+    private  function LinkedList_PeekFirst(List, Item) result(Flag)  
+</h3>
+
+  <p>To retrieve the item stored at the first node without removing it from the list.
+ Also, return a flag indicating whether the item is available.</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(<a href='../type/listinteger1b.html'>ListInteger1B</a>),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>List</strong></td>
+            <td>
+                <p>ListInteger1B object</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              integer(kind=kInt8),
+            </td>
+<td>intent(out)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Item</strong></td>
+            <td>
+                <p>the item to be retrieved from the list</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+    <h4>
+    Return Value
+    <small>logical</small>
+    </h4>
+    <p>flag indicating whether the item is available. <br>
+- true if the list is NOT empty.
+- false if the list is empty.</p>
+
+        </li>
+    </ul>
+  </div>
+
+          </div>
+          <div class="row">
+              <div class="card mt-3">
+    <div class="card-header codesum">
+      <span class="anchor" id="boundprocedure-peeklast~27"></span>
+      <h3>
+          procedure, public ::
+  <strong>PeekLast</strong> => LinkedList_PeekLast
+        
+      </h3>
+    </div>
+      <div class="card-body">
+        
+        <p><strong>Type-Bound Function</strong>: PeekLast <br>
+ <strong>Purpose</strong>:  To get the last item (without removing it from the list).
+               Also, return a flag indicating whether the item is available or not. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    Success = List%PeekLast(Item) <br>
+  ---&gt;    IF (.NOT.List%PeekLast(Item)) DoSomething</p>
+      </div>
+    <ul class="list-group">
+        <li class="list-group-item">
+                  <h3>
+    private  function LinkedList_PeekLast(List, Item) result(Flag)  
+</h3>
+
+  <p>To retrieve the item stored at the last node without removing it from the list.
+ Also, return a flag indicating whether the item is available.</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(<a href='../type/listinteger1b.html'>ListInteger1B</a>),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>List</strong></td>
+            <td>
+                <p>ListInteger1B object</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              integer(kind=kInt8),
+            </td>
+<td>intent(out)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Item</strong></td>
+            <td>
+                <p>the item to be retrieved from the list</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+    <h4>
+    Return Value
+    <small>logical</small>
+    </h4>
+    <p>flag indicating whether the item is available. <br>
+- true if the list is NOT empty.
+- false if the list is empty.</p>
+
+        </li>
+    </ul>
+  </div>
+
+          </div>
+          <div class="row">
+              <div class="card mt-3">
+    <div class="card-header codesum">
+      <span class="anchor" id="boundprocedure-peekat~27"></span>
+      <h3>
+          procedure, public ::
+  <strong>PeekAt</strong> => LinkedList_PeekAt
+        
+      </h3>
+    </div>
+      <div class="card-body">
+        
+        <p><strong>Type-Bound Function</strong>: PeekAt <br>
+ <strong>Purpose</strong>:  To get the item (without removing it from the list) at
+               the specified index where the index must be between 1 and the
+               list size.  Also, return a flag indicating whether the
+               item is available or not. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    Success = List%PeekAt(Index, Item) <br>
+  ---&gt;    IF (.NOT.List%PeekAt(Index, Item)) DoSomething</p>
+      </div>
+    <ul class="list-group">
+        <li class="list-group-item">
+                  <h3>
+    private  function LinkedList_PeekAt(List, Index, Item) result(Flag)  
+</h3>
+
+  <p>To get the item (without removing it from the list) at the specified index
+ where the index must be between 1 and the list size.  Also, return
+ a flag indicating whether the item is available or not.</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(<a href='../type/listinteger1b.html'>ListInteger1B</a>),
+            </td>
+<td>intent(inout)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>List</strong></td>
+            <td>
+                <p>ListInteger1B object</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              integer(kind=kInt32),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Index</strong></td>
+            <td>
+                <p>the one-based index into the list's items</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              integer(kind=kInt8),
+            </td>
+<td>intent(out)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Item</strong></td>
+            <td>
+                <p>the item to be retrieved from the list</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+    <h4>
+    Return Value
+    <small>logical</small>
+    </h4>
+    <p>flag indicating whether the item is available. <br>
+- true if the item is available.
+- false if the item is NOT available.</p>
+
+        </li>
+    </ul>
+  </div>
+
+          </div>
+          <div class="row">
+              <div class="card mt-3">
+    <div class="card-header codesum">
+      <span class="anchor" id="boundprocedure-getall~38"></span>
+      <h3>
+          procedure, public ::
+  <strong>GetAll</strong> => LinkedList_GetAllItems
+        
+      </h3>
+    </div>
+      <div class="card-body">
+        
+        <p><strong>Type-Bound Subroutine</strong>: GetAll <br>
+ <strong>Purpose</strong>:  To get all items (without removing them) from the list. Also,
+               return a flag indicating whether the item is available or not. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    Flag = List%GetAll(Items) <br>
+  ---&gt;    IF (.NOT.List%GetAll(Items)) DoSomething</p>
+      </div>
+    <ul class="list-group">
+        <li class="list-group-item">
+                  <h3>
+    private  function LinkedList_GetAllItems(List, Items) result(Flag)  
+</h3>
+
+  <p>To get all items (without removing them) from the list.</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(<a href='../type/listinteger1b.html'>ListInteger1B</a>),
+            </td>
+<td>intent(inout)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>List</strong></td>
+            <td>
+                <p>ListInteger1B object</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              integer(kind=kInt8),
+            </td>
+<td>intent(out),</td>
+              <td></td>            <td>
+              ALLOCATABLE
+            </td>
+            <td>::</td>
+            <td><strong>Items</strong>(:)</td>
+            <td>
+                <p>an allocatable array of items</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+    <h4>
+    Return Value
+    <small>logical</small>
+    </h4>
+    <p>flag indicating whether the items are successfully retrieved. <br>
+- true if the items are available.
+- false if the items are NOT available.</p>
+
+        </li>
+    </ul>
+  </div>
+
+          </div>
+          <div class="row">
+              <div class="card mt-3">
+    <div class="card-header codesum">
+      <span class="anchor" id="boundprocedure-enqueue~25"></span>
+      <h3>
+          procedure, public ::
+  <strong>EnQueue</strong> => LinkedList_AddLast
+        
+      </h3>
+    </div>
+      <div class="card-body">
+        
+        <p><strong>Type-Bound Subroutine</strong>: EnQueue <br>
+<strong>Purpose</strong>:  To add a new item to the end of the queue. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    CALL Queue%EnQueue(NewItem) <br>
+ <strong>Note</strong>: <em>EnQueue</em> is an alias of <em>AddLast</em>.</p>
+      </div>
+    <ul class="list-group">
+        <li class="list-group-item">
+                  <h3>
+    private  subroutine LinkedList_AddLast(List, Item)  
+</h3>
+
+  <p>To add a item at the tail of the list.</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(<a href='../type/listinteger1b.html'>ListInteger1B</a>),
+            </td>
+<td>intent(inout)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>List</strong></td>
+            <td>
+                <p>ListInteger1B object</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              integer(kind=kInt8),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Item</strong></td>
+            <td>
+                <p>item to be added to the list</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+        </li>
+    </ul>
+  </div>
+
+          </div>
+          <div class="row">
+              <div class="card mt-3">
+    <div class="card-header codesum">
+      <span class="anchor" id="boundprocedure-dequeue~25"></span>
+      <h3>
+          procedure, public ::
+  <strong>DeQueue</strong> => LinkedList_RemoveFirst
+        
+      </h3>
+    </div>
+      <div class="card-body">
+        
+        <p><strong>Type-Bound Function</strong>: DeQueue <br>
+ <strong>Purpose</strong>:  To get and remove the front (first) item of the queue.
+               Also, return a flag indicating whether the item is
+               successfully removed. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    Success = Queue%DeQueue(Item) <br>
+  ---&gt;    IF (.NOT.Queue%DeQueue(Item)) DoSomething <br>
+ <strong>Note</strong>: <em>DeQueue</em> is an alias of <em>RemoveFirst</em>.</p>
+      </div>
+    <ul class="list-group">
+        <li class="list-group-item">
+                  <h3>
+    private  function LinkedList_RemoveFirst(List, Item) result(Flag)  
+</h3>
+
+  <p>To get and remove the first item of the list.  Also, return
+ a flag indicating whether the item is successfully removed.</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(<a href='../type/listinteger1b.html'>ListInteger1B</a>),
+            </td>
+<td>intent(inout)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>List</strong></td>
+            <td>
+                <p>ListInteger1B object</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              integer(kind=kInt8),
+            </td>
+<td>intent(out)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Item</strong></td>
+            <td>
+                <p>the item to be removed from the list</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+    <h4>
+    Return Value
+    <small>logical</small>
+    </h4>
+    <p>flag indicating whether the item is successfully removed. <br>
+- true if the list is NOT empty.
+- false if the list is empty.</p>
+
+        </li>
+    </ul>
+  </div>
+
+          </div>
+          <div class="row">
+              <div class="card mt-3">
+    <div class="card-header codesum">
+      <span class="anchor" id="boundprocedure-push~29"></span>
+      <h3>
+          procedure, public ::
+  <strong>Push</strong> => LinkedList_AddLast
+        
+      </h3>
+    </div>
+      <div class="card-body">
+        
+        <p><strong>Type-Bound Subroutine</strong>: Push <br>
+<strong>Purpose</strong>:  To add a new item to the top of the stack. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    CALL Stack%Push(NewItem) <br>
+ <strong>Note</strong>: <em>Push</em> is an alias of <em>AddLast</em>.</p>
+      </div>
+    <ul class="list-group">
+        <li class="list-group-item">
+                  <h3>
+    private  subroutine LinkedList_AddLast(List, Item)  
+</h3>
+
+  <p>To add a item at the tail of the list.</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(<a href='../type/listinteger1b.html'>ListInteger1B</a>),
+            </td>
+<td>intent(inout)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>List</strong></td>
+            <td>
+                <p>ListInteger1B object</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              integer(kind=kInt8),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Item</strong></td>
+            <td>
+                <p>item to be added to the list</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+        </li>
+    </ul>
+  </div>
+
+          </div>
+          <div class="row">
+              <div class="card mt-3">
+    <div class="card-header codesum">
+      <span class="anchor" id="boundprocedure-pop~29"></span>
+      <h3>
+          procedure, public ::
+  <strong>Pop</strong> => LinkedList_RemoveLast
+        
+      </h3>
+    </div>
+      <div class="card-body">
+        
+        <p><strong>Type-Bound Function</strong>: Pop <br>
+ <strong>Purpose</strong>:  To get and remove the top item of the stack.
+               Also, return a flag indicating whether the item is
+               successfully removed. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    Success = Stack%Pop(Item) <br>
+  ---&gt;    IF (.NOT.Stack%Pop(Item)) DoSomething <br>
+ <strong>Note</strong>: <em>Pop</em> is an alias of <em>RemoveLast</em>.</p>
+      </div>
+    <ul class="list-group">
+        <li class="list-group-item">
+                  <h3>
+    private  function LinkedList_RemoveLast(List, Item) result(Flag)  
+</h3>
+
+  <p>To get and remove the last item of the list.  Also, return
+ a flag indicating whether the item is successfully removed.</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(<a href='../type/listinteger1b.html'>ListInteger1B</a>),
+            </td>
+<td>intent(inout)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>List</strong></td>
+            <td>
+                <p>ListInteger1B object</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              integer(kind=kInt8),
+            </td>
+<td>intent(out)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Item</strong></td>
+            <td>
+                <p>the item to be removed from the list</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+    <h4>
+    Return Value
+    <small>logical</small>
+    </h4>
+    <p>flag indicating whether the item is successfully removed. <br>
+- true if the list is NOT empty.
+- false if the list is empty.</p>
+
+        </li>
+    </ul>
+  </div>
+
+          </div>
+          <div class="row">
+              <div class="card mt-3">
+    <div class="card-header codesum">
+      <span class="anchor" id="boundprocedure-peektop~29"></span>
+      <h3>
+          procedure, public ::
+  <strong>PeekTop</strong> => LinkedList_PeekLast
+        
+      </h3>
+    </div>
+      <div class="card-body">
+        
+        <p><strong>Type-Bound Function</strong>: PeekTop <br>
+ <strong>Purpose</strong>:  To get the last item (without removing it from the container).
+               Also, return a flag indicating whether the item is available or not. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    Success = Container%PeekTop(Item) <br>
+  ---&gt;    IF (.NOT.Container%PeekTop(Item)) DoSomething <br>
+ <strong>Note</strong>: <em>PeekTop</em> is an alias of <em>PeekLast</em>.</p>
+      </div>
+    <ul class="list-group">
+        <li class="list-group-item">
+                  <h3>
+    private  function LinkedList_PeekLast(List, Item) result(Flag)  
+</h3>
+
+  <p>To retrieve the item stored at the last node without removing it from the list.
+ Also, return a flag indicating whether the item is available.</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(<a href='../type/listinteger1b.html'>ListInteger1B</a>),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>List</strong></td>
+            <td>
+                <p>ListInteger1B object</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              integer(kind=kInt8),
+            </td>
+<td>intent(out)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Item</strong></td>
+            <td>
+                <p>the item to be retrieved from the list</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+    <h4>
+    Return Value
+    <small>logical</small>
+    </h4>
+    <p>flag indicating whether the item is available. <br>
+- true if the list is NOT empty.
+- false if the list is empty.</p>
+
+        </li>
+    </ul>
+  </div>
+
+          </div>
+      </section>
+
+    
+    </div>
+  </div>
+
+      <hr>
+    </div> <!-- /container -->
+    <footer>
+      <div class="container">
+        <div class="row justify-content-between">
+          <div class="col"><p>eXPerimental Fortran Library (XpfLib) Documentation was developed by Niranama<br>&copy; 2024 
+</p>
+          </div>
+          <div class="col">
+            <p class="text-end">
+              Documentation generated by
+              <a href="https://github.com/Fortran-FOSS-Programmers/ford">FORD</a>
+            </p>
+          </div>
+        </div>
+        <br>
+      </div> <!-- /container -->
+    </footer>
+
+    <!-- Bootstrap core JavaScript -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>    
+
+    <!-- MathJax JavaScript
+             ================================================== -->
+             <!-- Placed at the end of the document so the pages load faster -->
+        <script type="text/x-mathjax-config">
+          MathJax.Hub.Config({
+          TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } },
+          jax: ['input/TeX','input/MathML','output/HTML-CSS'],
+          extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']
+          });
+        </script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+          <script src="../tipuesearch/tipuesearch_content.js"></script>
+          <script src="../tipuesearch/tipuesearch_set.js"></script>
+          <script src="../tipuesearch/tipuesearch.js"></script>
+
+  </body>
+</html>

@@ -1,0 +1,638 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta name="description" content="Experimental Fortran Package - Base Modules and Classes">
+    <meta name="author" content="Niranama" >
+    <link rel="icon" href="../favicon.png">
+
+    <title>MClass_MathExpParser &ndash; eXPerimental Fortran Library (XpfLib) Documentation</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link href="../css/pygments.css" rel="stylesheet">
+    <link href="../css/font-awesome.min.css" rel="stylesheet">
+    <link href="../css/local.css" rel="stylesheet">
+      <link  href="../tipuesearch/tipuesearch.css" rel="stylesheet">
+
+    <script src="https://code.jquery.com/jquery-3.7.0.slim.min.js" integrity="sha256-tG5mcZUtJsZvyKAxYLVXrmjKBVLd6VpVccqz/r4ypFE=" crossorigin="anonymous"></script>
+  </head>
+
+  <body>
+
+    <!-- Fixed navbar -->
+    <div class="container-fluid mb-sm-4 mb-xl-2">
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container">
+          <a class="navbar-brand" href="../index.html">eXPerimental Fortran Library (XpfLib) Documentation </a>
+          <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar"
+                  aria-expanded="false" aria-controls="navbar" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon">
+          </button>
+
+          <div id="navbar" class="navbar-collapse collapse">
+            <ul class="navbar-nav">
+                  <li class="nav-item">
+                    <a class="nav-link" href="../lists/files.html">Source Files</a>
+                  </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../lists/modules.html">Modules</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../lists/procedures.html">Procedures</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../lists/absint.html">Abstract Interfaces</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../lists/types.html">Derived Types</a>
+                </li>
+            </ul>
+              <div class="d-flex align-items-end flex-grow-1">
+                <form action="../search.html" role="search" class="ms-auto">
+                  <input type="text" class="form-control" aria-label="Search" placeholder="Search" name="q" id="tipue_search_input" autocomplete="off" required>
+                </form>
+              </div>
+          </div><!--/.nav-collapse -->
+        </div>
+      </nav>
+    </div>
+
+    <div class="container">
+  <div class="row">
+    <h1>MClass_MathExpParser
+      <small>Module</small>
+      
+    </h1>
+      <div class="container p-2 mb-4 bg-light border rounded-3">
+    <div class="row align-items-center justify-content-between" id="info-bar">
+      <div class="col">
+        <ul class="list-inline" style="margin-bottom:0px;display:inline">
+
+            <li class="list-inline-item" id="statements"><i class="fa fa-list-ol"></i>
+              <a data-bs-toggle="tooltip"
+                 data-bs-placement="bottom" data-html="true"
+                 title=" 5.4% of total for modules and submodules.">2505 statements</a>
+            </li>
+
+            <li class="list-inline-item" id="source-file">
+              <i class="fa fa-code"></i>
+              <a href="../src/MClass_MathExpParser.f90"> Source File</a>
+            </li>
+        </ul>
+      </div>
+      <div class="col">
+        <nav aria-label="breadcrumb">
+          <ol class="breadcrumb justify-content-end mb-0">
+                <li class="breadcrumb-item"><a href='../sourcefile/mclass_mathexpparser.f90.html'>MClass_MathExpParser.f90</a></li>
+            <li class="breadcrumb-item active" aria-current="page">MClass_MathExpParser</li>
+          </ol>
+        </nav>
+      </div>
+    </div>
+  </div>
+  <script>
+    $(function () {
+    $('[data-bs-toggle="tooltip"]').tooltip()
+    })
+  </script>
+
+  </div>
+
+  <div class="row">
+    <div class="col-md-3">
+        <div id="sidebar">
+      <h3>Contents</h3>
+  
+      <div class="card mb-4">
+      <a data-bs-toggle="collapse" href="#vars-0"
+         aria-expanded="false" aria-controls="vars-0">
+         <h4 class="card-header bg-primary text-white">Variables</h4>
+      </a>
+      <div id="vars-0" class="collapse">
+        <div class="list-group list-group-flush">
+            <a class="list-group-item" href="../module/mclass_mathexpparser.html#variable-fpar_str_len">FPAR_STR_LEN</a>
+            <a class="list-group-item" href="../module/mclass_mathexpparser.html#variable-fpar_max_consts">FPAR_MAX_CONSTS</a>
+            <a class="list-group-item" href="../module/mclass_mathexpparser.html#variable-fpar_max_exprs">FPAR_MAX_EXPRS</a>
+            <a class="list-group-item" href="../module/mclass_mathexpparser.html#variable-fpar_const_len">FPAR_CONST_LEN</a>
+            <a class="list-group-item" href="../module/mclass_mathexpparser.html#variable-fpar_expr_len">FPAR_EXPR_LEN</a>
+            <a class="list-group-item" href="../module/mclass_mathexpparser.html#variable-fpar_func_len">FPAR_FUNC_LEN</a>
+            <a class="list-group-item" href="../module/mclass_mathexpparser.html#variable-fpar_var_len">FPAR_VAR_LEN</a>
+            <a class="list-group-item" href="../module/mclass_mathexpparser.html#variable-fpar_constant">FPAR_CONSTANT</a>
+            <a class="list-group-item" href="../module/mclass_mathexpparser.html#variable-fpar_expression">FPAR_EXPRESSION</a>
+            <a class="list-group-item" href="../module/mclass_mathexpparser.html#variable-fpar_function">FPAR_FUNCTION</a>
+        </div>
+      </div>
+    </div>
+
+  
+  
+  
+  
+  
+  
+      <div class="card mb-4">
+      <a data-bs-toggle="collapse" href="#inters-0"
+         aria-expanded="false" aria-controls="inters-0">
+         <h4 class="card-header bg-primary text-white">Interfaces</h4>
+      </a>
+      <div id="inters-0" class="collapse">
+        <div class="list-group list-group-flush">
+            <a class="list-group-item" href="../module/mclass_mathexpparser.html#interface-geterrormessage">GetErrorMessage</a>
+        </div>
+      </div>
+    </div>
+
+  
+      <div class="card mb-4">
+      <a data-bs-toggle="collapse" href="#types-0"
+         aria-expanded="false" aria-controls="types-0">
+         <h4 class="card-header bg-primary text-white">Derived Types</h4>
+      </a>
+      <div id="types-0" class="collapse">
+        <div class="list-group list-group-flush">
+            <a class="list-group-item" href="../module/mclass_mathexpparser.html#type-mathexpparser">MathExpParser</a>
+        </div>
+      </div>
+    </div>
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+
+
+  </div>
+
+    </div>
+
+    <div class="col-md-9" id='text'>
+      <p><strong>PURPOSE OF THIS MODULE</strong>: <br>
+  This module contains the <em>MathExpParser</em> derived type and its related routines.
+  The <em>MathExpParser</em> type is a parser type that can be used to parse and evaluate
+  mathematical expressions.  It is intended for applications where a set of
+  mathematical expressions is specified at runtime and is then evaluated for
+  a large number of variable values.  This is done by  compiling the set of
+  function strings into byte code, which is interpreted very efficiently for
+  the various variable values.  The evaluation is straightforward and no
+  recursions are done (uses stack arithmetic). <br>
+  This module is a modernized/re-engineered version of the <em>fParser</em> module
+  of the <em>FEATFLOW2</em> program [1].  <br>
+  <br>
+<strong>REFERENCES</strong>: <br>
+  [1] <a href="https://wwwold.mathematik.tu-dortmund.de/~featflow/en/software/featflow2.html">
+      The software package FEATFLOW2</a> <br></p>
+<br>          <div class="card mb-4">
+      <h3 class="card-header card-title bg-light">Uses</h3>
+      <div class="card-body">
+        <ul class="list-group list-group-flush">
+            <li class="list-group-item">
+              <ul class="list-inline">
+                  <li class="list-inline-item"><a href='../module/mbase_sintutil.html'>MBase_SIntUtil</a></li>
+                  <li class="list-inline-item"><a href='../module/mbase_common.html'>MBase_Common</a></li>
+                  <li class="list-inline-item"><a href='../module/mclass_stackint32.html'>MClass_StackInt32</a></li>
+                  <li class="list-inline-item"><a href='../module/mbase_errhandlers.html'>MBase_ErrHandlers</a></li>
+                  <li class="list-inline-item"><a href='../module/mbase_memhandlers.html'>MBase_MemHandlers</a></li>
+              </ul>
+            </li>
+        </ul>
+      </div>
+    </div>
+
+      
+      <br>
+
+
+        <section>
+          <h2>Variables</h2>
+            <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Visibility</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+<th></th><th scope="col">Initial</th>        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-fpar_str_len"></span>
+              integer(kind=kInt32),
+            </td>
+              <td>public,</td>
+            <td>
+parameter               
+            </td>
+            <td>::</td>
+            <td><strong>FPAR_STR_LEN</strong></td>
+<td> =</td>
+                <td>2048</td>
+            <td>
+                <p>Length of string</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-fpar_max_consts"></span>
+              integer(kind=kInt32),
+            </td>
+              <td>public,</td>
+            <td>
+parameter               
+            </td>
+            <td>::</td>
+            <td><strong>FPAR_MAX_CONSTS</strong></td>
+<td> =</td>
+                <td>128</td>
+            <td>
+                <p>Maximum number of predefined/user-defined constants</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-fpar_max_exprs"></span>
+              integer(kind=kInt32),
+            </td>
+              <td>public,</td>
+            <td>
+parameter               
+            </td>
+            <td>::</td>
+            <td><strong>FPAR_MAX_EXPRS</strong></td>
+<td> =</td>
+                <td>128</td>
+            <td>
+                <p>Maximum number of predefined/user-defined expressions</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-fpar_const_len"></span>
+              integer(kind=kInt32),
+            </td>
+              <td>public,</td>
+            <td>
+parameter               
+            </td>
+            <td>::</td>
+            <td><strong>FPAR_CONST_LEN</strong></td>
+<td> =</td>
+                <td>32</td>
+            <td>
+                <p>Length of constant name</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-fpar_expr_len"></span>
+              integer(kind=kInt32),
+            </td>
+              <td>public,</td>
+            <td>
+parameter               
+            </td>
+            <td>::</td>
+            <td><strong>FPAR_EXPR_LEN</strong></td>
+<td> =</td>
+                <td>32</td>
+            <td>
+                <p>Length of expression name</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-fpar_func_len"></span>
+              integer(kind=kInt32),
+            </td>
+              <td>public,</td>
+            <td>
+parameter               
+            </td>
+            <td>::</td>
+            <td><strong>FPAR_FUNC_LEN</strong></td>
+<td> =</td>
+                <td>32</td>
+            <td>
+                <p>Length of function name</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-fpar_var_len"></span>
+              integer(kind=kInt32),
+            </td>
+              <td>public,</td>
+            <td>
+parameter               
+            </td>
+            <td>::</td>
+            <td><strong>FPAR_VAR_LEN</strong></td>
+<td> =</td>
+                <td>32</td>
+            <td>
+                <p>Length of variable name</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-fpar_constant"></span>
+              integer(kind=kInt32),
+            </td>
+              <td>public,</td>
+            <td>
+parameter               
+            </td>
+            <td>::</td>
+            <td><strong>FPAR_CONSTANT</strong></td>
+<td> =</td>
+                <td>1</td>
+            <td>
+                <p>Constant</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-fpar_expression"></span>
+              integer(kind=kInt32),
+            </td>
+              <td>public,</td>
+            <td>
+parameter               
+            </td>
+            <td>::</td>
+            <td><strong>FPAR_EXPRESSION</strong></td>
+<td> =</td>
+                <td>2</td>
+            <td>
+                <p>Expression</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-fpar_function"></span>
+              integer(kind=kInt32),
+            </td>
+              <td>public,</td>
+            <td>
+parameter               
+            </td>
+            <td>::</td>
+            <td><strong>FPAR_FUNCTION</strong></td>
+<td> =</td>
+                <td>3</td>
+            <td>
+                <p>Functions (including symbolic variables)</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+        </section>
+        <br>
+
+
+        <section>
+          <h2>Interfaces</h2>
+              <div class="card">
+    <div class="card-header bg-light codesum">
+      <span class="anchor" id="interface-geterrormessage"></span>
+      <h3>public        interface <a href='../interface/geterrormessage.html'>GetErrorMessage</a> 
+      </h3>
+    </div>
+      <div class="card-body">
+        <p><strong>Function Interface</strong>: GetErrorMessage <br>
+<strong>Purpose</strong>:  To return an error message corresponding to the specified error code. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    ErrMsg = Parser_ErrorMsg(ErrCode) <br></p>
+      </div>
+    <ul class="list-group">
+          <li class="list-group-item">
+                <h3>
+    private  function Parser_ErrorMsg(EvalErrType) result(sMessage)  
+
+    </h3>
+  <p>To return error message of function parser.</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-evalerrtype~5"></span>
+              integer(kind=kInt32),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>EvalErrType</strong></td>
+            <td>
+                <p>Error identifier</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+    <h4>
+    Return Value
+    <small>character(kind=kChar, len=:), ALLOCATABLE</small>
+    </h4>
+    <p>Error messages</p>
+
+          </li>
+    </ul>
+  </div>
+
+        </section>
+        <br>
+
+
+        <section>
+          <h2>Derived Types</h2>
+              <div class="card">
+    <div class="card-header codesum">
+      <span class="anchor" id="type-mathexpparser"></span>
+      <h3>
+        type, public&nbsp;::&nbsp;
+        <a href='../type/mathexpparser.html'>MathExpParser</a>
+        
+      </h3>
+    </div>
+    <div class="card-body">
+      <p><em>MathExpParser</em> is a parser type that can be used to parse and evaluate
+  mathematical expressions.</p>
+
+
+
+        <h4>Finalizations Procedures</h4>
+        <table class="table table-striped varlist">
+          <tbody>
+              <tr>
+                <td>final :: <strong>Parser_Finalize</strong></td>
+                <td><p>a final subroutine supposedly automatically called when the object is out of scope</p></td>
+              </tr>
+          </tbody>
+        </table>
+
+        <h4>Type-Bound Procedures</h4>
+        <table class="table table-striped varlist">
+          <tbody>
+              <tr>
+                <td>  procedure, public ::
+  <strong><a href='../type/mathexpparser.html#boundprocedure-create'>Create</a></strong> => Parser_Create</td>
+                <td><p><strong>Type-Bound Subroutine</strong>: Create <br>
+<strong>Purpose</strong>:  To initialize the function parser with the specified number of functions. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    CALL Parser%Create(nFunc) <br></p></td>
+              </tr>
+              <tr>
+                <td>  procedure, public ::
+  <strong><a href='../type/mathexpparser.html#boundprocedure-destroy~4'>Destroy</a></strong> => Parser_Destroy</td>
+                <td><p><strong>Type-Bound Subroutine</strong>: Destroy <br>
+<strong>Purpose</strong>:  To release memory occupied by the function parser and its components. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    CALL Parser%Destroy() <br></p></td>
+              </tr>
+              <tr>
+                <td>  generic, public ::
+  <strong><a href='../type/mathexpparser.html#boundprocedure-defineconstant'>DefineConstant</a></strong> => Parser_DefineConstantDble, Parser_DefineConstantCmpl</td>
+                <td><p><strong>Type-Bound Subroutine</strong>: DefineConstant <br>
+<strong>Purpose</strong>:  To define a new user-defined constant by specifying the name and value of
+      the new constant. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    CALL Parser%DefineConstant(ConstName, ConstVal) <br></p></td>
+              </tr>
+              <tr>
+                <td>  generic, public ::
+  <strong><a href='../type/mathexpparser.html#boundprocedure-defineexpression'>DefineExpression</a></strong> => Parser_DefineExpression</td>
+                <td><p><strong>Type-Bound Subroutine</strong>: DefineExpression <br>
+<strong>Purpose</strong>:  To define a new user-defined expression by specifying the name and value
+      (expression string) of the new expression. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    CALL Parser%DefineExpression(ExpName, ExpString) <br></p></td>
+              </tr>
+              <tr>
+                <td>  generic, public ::
+  <strong><a href='../type/mathexpparser.html#boundprocedure-parsefunction'>ParseFunction</a></strong> => Parser_ParseFunctionByName, Parser_ParseFunctionByNumber</td>
+                <td><p><strong>Type-Bound Subroutine</strong>: ParseFunction <br>
+<strong>Purpose</strong>:  To parse a string expressing mathematical expression and compile
+      it into bytecode. <br>
+ <strong>Usage</strong>: <br>
+  ! parse function by a name as a function identifier <br>
+  ---&gt;    CALL Parser%ParseFunction(FuncName, FuncString, VarArr) <br>
+  ---&gt;    CALL Parser%ParseFunction(FuncName, FuncString, VarArr, bUseDegrees=.TRUE., iComp=FuncNum) <br>
+  ! parse function by a number as a function identifier <br>
+  ---&gt;    CALL Parser%ParseFunction(FuncNum, FuncString, VarArr) <br>
+  ---&gt;    CALL Parser%ParseFunction(FuncNum, FuncString, VarArr, bUseDegrees=.TRUE.) <br>
+ <strong>Note</strong>: The <em>VarArr</em> is an array of strings containing the variable names. <br></p></td>
+              </tr>
+              <tr>
+                <td>  generic, public ::
+  <strong><a href='../type/mathexpparser.html#boundprocedure-evalfunction'>EvalFunction</a></strong> => Parser_EvalFuncScDbleByName, Parser_EvalFuncScDbleByNumber, Parser_EvalFuncScCmplByName, Parser_EvalFuncScCmplByNumber</td>
+                <td><p><strong>Type-Bound Subroutine</strong>: EvalFunction <br>
+<strong>Purpose</strong>:  To evaluate the parsed function by specifying its identifier. <br>
+ <strong>Usage</strong>: <br>
+  ! evaluate function by a name as a function identifier <br>
+  ---&gt;    CALL Parser%EvalFunction(FuncName, VarArr, ErrCode, ResVal) <br>
+  ! evaluate function by a number as a function identifier <br>
+  ---&gt;    CALL Parser%EvalFunction(FuncNum, FVarArr, ErrCode, ResVal) <br>
+ <strong>Note</strong>: The <em>VarArr</em> is an array of real (or complex) numbers containing the variable
+      values, which correspond to the variable names specified when parsing the function. <br></p></td>
+              </tr>
+              <tr>
+                <td>  generic, public ::
+  <strong><a href='../type/mathexpparser.html#boundprocedure-printbytecode'>PrintByteCode</a></strong> => Parser_PrintByteCodeByName, Parser_PrintByteCodeByNumber</td>
+                <td><p><strong>Type-Bound Subroutine</strong>: PrintByteCode <br>
+<strong>Purpose</strong>:  To print the compiled bytecode stack of the parsed function by
+      specifying its identifier and the output unit number. <br>
+ <strong>Usage</strong>: <br>
+  ! print the bytecode stack by a name as a function identifier <br>
+  ---&gt;    CALL Parser%PrintByteCode(FuncName, OutUnit) <br>
+  ! print the bytecode stack by a number as a function identifier <br>
+  ---&gt;    CALL Parser%PrintByteCode(FuncNum, OutUnit) <br>
+ <strong>Note</strong>: This method provides very technical information and is intended to be
+      used for debugging purpose only.  <br></p></td>
+              </tr>
+              <tr>
+                <td>  procedure, public ::
+  <strong><a href='../type/mathexpparser.html#boundprocedure-getfunctionnumber'>GetFunctionNumber</a></strong> => Parser_GetFunctionNumber</td>
+                <td><p><strong>Type-Bound Function</strong>: GetFunctionNumber <br>
+<strong>Purpose</strong>:  To return a number used as a function identifier by
+      specifying a name as a function identifier. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    FuncNum = Parser%GetFunctionNumber(FuncName) <br></p></td>
+              </tr>
+          </tbody>
+        </table>
+    </div>
+  </div>
+
+        </section>
+        <br>
+
+
+
+
+
+    </div>
+  </div>
+
+      <hr>
+    </div> <!-- /container -->
+    <footer>
+      <div class="container">
+        <div class="row justify-content-between">
+          <div class="col"><p>eXPerimental Fortran Library (XpfLib) Documentation was developed by Niranama<br>&copy; 2024 
+</p>
+          </div>
+          <div class="col">
+            <p class="text-end">
+              Documentation generated by
+              <a href="https://github.com/Fortran-FOSS-Programmers/ford">FORD</a>
+            </p>
+          </div>
+        </div>
+        <br>
+      </div> <!-- /container -->
+    </footer>
+
+    <!-- Bootstrap core JavaScript -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>    
+
+    <!-- MathJax JavaScript
+             ================================================== -->
+             <!-- Placed at the end of the document so the pages load faster -->
+        <script type="text/x-mathjax-config">
+          MathJax.Hub.Config({
+          TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } },
+          jax: ['input/TeX','input/MathML','output/HTML-CSS'],
+          extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']
+          });
+        </script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+          <script src="../tipuesearch/tipuesearch_content.js"></script>
+          <script src="../tipuesearch/tipuesearch_set.js"></script>
+          <script src="../tipuesearch/tipuesearch.js"></script>
+
+  </body>
+</html>

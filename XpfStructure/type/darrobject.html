@@ -1,0 +1,2966 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta name="description" content="Experimental Fortran Package - Data Structures">
+    <meta name="author" content="Niranama" >
+    <link rel="icon" href="../favicon.png">
+
+    <title>DArrObject &ndash; eXPerimental Fortran Library (XpfLib) Documentation </title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link href="../css/pygments.css" rel="stylesheet">
+    <link href="../css/font-awesome.min.css" rel="stylesheet">
+    <link href="../css/local.css" rel="stylesheet">
+      <link  href="../tipuesearch/tipuesearch.css" rel="stylesheet">
+
+    <script src="https://code.jquery.com/jquery-3.7.0.slim.min.js" integrity="sha256-tG5mcZUtJsZvyKAxYLVXrmjKBVLd6VpVccqz/r4ypFE=" crossorigin="anonymous"></script>
+  </head>
+
+  <body>
+
+    <!-- Fixed navbar -->
+    <div class="container-fluid mb-sm-4 mb-xl-2">
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container">
+          <a class="navbar-brand" href="../index.html">eXPerimental Fortran Library (XpfLib) Documentation </a>
+          <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar"
+                  aria-expanded="false" aria-controls="navbar" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon">
+          </button>
+
+          <div id="navbar" class="navbar-collapse collapse">
+            <ul class="navbar-nav">
+                  <li class="nav-item">
+                    <a class="nav-link" href="../lists/files.html">Source Files</a>
+                  </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../lists/modules.html">Modules</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../lists/types.html">Derived Types</a>
+                </li>
+            </ul>
+              <div class="d-flex align-items-end flex-grow-1">
+                <form action="../search.html" role="search" class="ms-auto">
+                  <input type="text" class="form-control" aria-label="Search" placeholder="Search" name="q" id="tipue_search_input" autocomplete="off" required>
+                </form>
+              </div>
+          </div><!--/.nav-collapse -->
+        </div>
+      </nav>
+    </div>
+
+    <div class="container">
+  <div class="row">
+    <h1>DArrObject
+      <small>Derived Type</small>
+      
+    </h1>
+      <div class="container p-2 mb-4 bg-light border rounded-3">
+    <div class="row align-items-center justify-content-between" id="info-bar">
+      <div class="col">
+        <ul class="list-inline" style="margin-bottom:0px;display:inline">
+
+            <li class="list-inline-item" id="statements"><i class="fa fa-list-ol"></i>
+              <a data-bs-toggle="tooltip"
+                 data-bs-placement="bottom" data-html="true"
+                 title="<p> 1.7% of total for derived types.</p>Including implementation: 616 statements,  1.8% of total for derived types.">45 statements</a>
+            </li>
+
+            <li class="list-inline-item" id="source-file">
+              <i class="fa fa-code"></i>
+              <a href="../src/MClass_DArrObject.f90"> Source File</a>
+            </li>
+        </ul>
+      </div>
+      <div class="col">
+        <nav aria-label="breadcrumb">
+          <ol class="breadcrumb justify-content-end mb-0">
+                <li class="breadcrumb-item"><a href='../sourcefile/mclass_darrobject.f90.html'>MClass_DArrObject.f90</a></li>
+                <li class="breadcrumb-item"><a href='../module/mclass_darrobject.html'>MClass_DArrObject</a></li>
+            <li class="breadcrumb-item active" aria-current="page">DArrObject</li>
+          </ol>
+        </nav>
+      </div>
+    </div>
+  </div>
+  <script>
+    $(function () {
+    $('[data-bs-toggle="tooltip"]').tooltip()
+    })
+  </script>
+
+  </div>
+  
+  <div class="row">
+    <div class="col-md-3 hidden-xs hidden-sm visible-md visible-lg">
+      <div id="sidebar">
+      <h3>Contents</h3>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+      <div class="card mb-4">
+      <a data-bs-toggle="collapse" href="#fins-0"
+         aria-expanded="false" aria-controls="fins-0">
+         <h4 class="card-header bg-primary text-white">Finalization Procedures</h4>
+      </a>
+      <div id="fins-0" class="collapse">
+        <div class="list-group list-group-flush">
+            <a class="list-group-item" href="../type/darrobject.html#finalproc-dynarr_finalizer~3">DynArr_Finalizer</a>
+        </div>
+      </div>
+    </div>
+
+      <div class="card mb-4">
+      <a data-bs-toggle="collapse" href="#boundprocs-0"
+         aria-expanded="false" aria-controls="boundprocs-0">
+         <h4 class="card-header bg-primary text-white">Type-Bound Procedures</h4>
+      </a>
+      <div id="boundprocs-0" class="collapse">
+        <div class="list-group list-group-flush">
+            <a class="list-group-item" href="../type/darrobject.html#boundprocedure-createempty~4">CreateEmpty</a>
+            <a class="list-group-item" href="../type/darrobject.html#boundprocedure-construct~6">Construct</a>
+            <a class="list-group-item" href="../type/darrobject.html#boundprocedure-destruct~6">Destruct</a>
+            <a class="list-group-item" href="../type/darrobject.html#boundprocedure-addfirst~4">AddFirst</a>
+            <a class="list-group-item" href="../type/darrobject.html#boundprocedure-addlast~4">AddLast</a>
+            <a class="list-group-item" href="../type/darrobject.html#boundprocedure-addat~4">AddAt</a>
+            <a class="list-group-item" href="../type/darrobject.html#boundprocedure-removefirst~4">RemoveFirst</a>
+            <a class="list-group-item" href="../type/darrobject.html#boundprocedure-removelast~4">RemoveLast</a>
+            <a class="list-group-item" href="../type/darrobject.html#boundprocedure-removeat~4">RemoveAt</a>
+            <a class="list-group-item" href="../type/darrobject.html#boundprocedure-delete~5">Delete</a>
+            <a class="list-group-item" href="../type/darrobject.html#boundprocedure-clear~5">Clear</a>
+            <a class="list-group-item" href="../type/darrobject.html#boundprocedure-toarray~5">ToArray</a>
+            <a class="list-group-item" href="../type/darrobject.html#boundprocedure-startfirst~6">StartFirst</a>
+            <a class="list-group-item" href="../type/darrobject.html#boundprocedure-moveforward~6">MoveForward</a>
+            <a class="list-group-item" href="../type/darrobject.html#boundprocedure-startlast~4">StartLast</a>
+            <a class="list-group-item" href="../type/darrobject.html#boundprocedure-movebackward~4">MoveBackward</a>
+            <a class="list-group-item" href="../type/darrobject.html#boundprocedure-getsize~6">GetSize</a>
+            <a class="list-group-item" href="../type/darrobject.html#boundprocedure-isempty~13">IsEmpty</a>
+            <a class="list-group-item" href="../type/darrobject.html#boundprocedure-peekfirst~4">PeekFirst</a>
+            <a class="list-group-item" href="../type/darrobject.html#boundprocedure-peeklast~4">PeekLast</a>
+            <a class="list-group-item" href="../type/darrobject.html#boundprocedure-peekat~4">PeekAt</a>
+            <a class="list-group-item" href="../type/darrobject.html#boundprocedure-getall~5">GetAll</a>
+            <a class="list-group-item" href="../type/darrobject.html#boundprocedure-enqueue~4">EnQueue</a>
+            <a class="list-group-item" href="../type/darrobject.html#boundprocedure-dequeue~4">DeQueue</a>
+            <a class="list-group-item" href="../type/darrobject.html#boundprocedure-push~4">Push</a>
+            <a class="list-group-item" href="../type/darrobject.html#boundprocedure-pop~4">Pop</a>
+            <a class="list-group-item" href="../type/darrobject.html#boundprocedure-peektop~4">PeekTop</a>
+        </div>
+      </div>
+    </div>
+
+  
+  
+    <div class="card card-primary">
+      <div class="card-header text-left"><h3 class="card-title">Source Code</h3></div>
+      <div class="list-group">
+        <a class="list-group-item" href="../type/darrobject.html#src">DArrObject</a>
+      </div>
+    </div>
+
+
+  </div>
+
+    </div>
+    
+    <div class="col-md-9" id='text'>
+      <h2>type, public :: DArrObject</h2>
+    <p><em>DArrObject</em> is a container type that employs a dynamic-array implementation
+ to provide common operations for a list container.  It can also represent other
+ forms of containers including a LIFO stack, a FIFO queue and a double-ended queue
+ (deque).  The type of items stored in this container is a derived type in the
+ <em>Object</em> class (i.e. the <em>Object</em> type or its subtypes).</p>
+    <br>
+
+    
+
+      <section>
+        <h2>Finalization Procedures</h2>
+            <div class="card">
+    <div class="card-header codesum">
+      <span class="anchor" id="finalproc-dynarr_finalizer~3"></span>
+      <h3>final :: <strong>DynArr_Finalizer</strong> </h3>
+    </div>
+    <div class="card-body">
+      
+      <p>To perform finalization of the container.</p>
+    </div>
+    <ul class="list-group">
+      <li class="list-group-item">
+            <h3>
+    private  subroutine DynArr_Finalizer(Container)  
+
+    </h3>
+  <p>To perform finalization of the object.</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-container~84"></span>
+              type(<a href='../type/darrobject.html'>DArrObject</a>),
+            </td>
+<td>intent(inout)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Container</strong></td>
+            <td>
+                <p>DynArr object</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+      </li>
+    </ul>
+  </div>
+
+      </section>
+      <br>
+
+      <section>
+        <h2>Type-Bound Procedures</h2>
+          <div class="row">
+              <div class="card mt-3">
+    <div class="card-header codesum">
+      <span class="anchor" id="boundprocedure-createempty~4"></span>
+      <h3>
+          procedure, public ::
+  <strong>CreateEmpty</strong> => DynArr_CreateEmpty
+        
+      </h3>
+    </div>
+      <div class="card-body">
+        
+        <p><strong>Type-Bound Subroutine</strong>: CreateEmpty <br>
+ <strong>Purpose</strong>:  To construct an empty container. <br>
+ <strong>Usage</strong>: <br>
+  ! create an empty container with specified initial capacity and type of items to be stored <br>
+  ---&gt;    CALL Container%CreateEmpty(25, Mold) <br>
+  ! create a container and specify the optional incremental size <br>
+  ---&gt;    CALL Container%CreateEmpty(25, Mold, IncSize=16) <br>
+  ! create a container and specify the optional shrink flag <br>
+  ---&gt;    CALL Container%CreateEmpty(25, Mold, Shrink=.TRUE.)</p>
+      </div>
+    <ul class="list-group">
+        <li class="list-group-item">
+                  <h3>
+    private  subroutine DynArr_CreateEmpty(Container, InitCap, Mold, IncSize, Shrink)  
+</h3>
+
+  <p>To create an empty container.</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(<a href='../type/darrobject.html'>DArrObject</a>),
+            </td>
+<td>intent(inout)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Container</strong></td>
+            <td>
+                <p>DynArr object</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              integer(kind=kInt32),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>InitCap</strong></td>
+            <td>
+                <p>initial size of the container</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(Object),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Mold</strong></td>
+            <td>
+                <p>mold providing the type of items to be stored</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              integer(kind=kInt32),
+            </td>
+<td>intent(in),</td>
+              <td>optional</td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>IncSize</strong></td>
+            <td>
+                <p>incremental size of the container when it is full</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              logical,
+            </td>
+<td>intent(in),</td>
+              <td>optional</td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Shrink</strong></td>
+            <td>
+                <p>flag to shrink the container capacity <br>
+- true if want to reduce capacity when the size is less than a quarter of the capacity. <br>
+- otherwise, the capacity stays the same. <br>
+- default is false.</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+        </li>
+    </ul>
+  </div>
+
+          </div>
+          <div class="row">
+              <div class="card mt-3">
+    <div class="card-header codesum">
+      <span class="anchor" id="boundprocedure-construct~6"></span>
+      <h3>
+          generic, public ::
+  <strong>Construct</strong> => DynArr_CreateByArray
+        
+      </h3>
+    </div>
+      <div class="card-body">
+        
+        <p><strong>Type-Bound Subroutine</strong>: Construct <br>
+ <strong>Purpose</strong>:  To construct a new container from an array of items. <br>
+ <strong>Usage</strong>: <br>
+          ! create a container from an array of 25 items <br>
+  ---&gt;    CALL Container%Construct(25, Arr) <br>
+          ! create a container and specify the optional incremental size <br>
+  ---&gt;    CALL Container%Construct(25, Arr, IncSize=16) <br>
+          ! create a container and specify the optional shrink flag <br>
+  ---&gt;    CALL Container%Construct(25, Arr, Shrink=.TRUE.)</p>
+      </div>
+    <ul class="list-group">
+        <li class="list-group-item">
+                  <h3>
+    private  subroutine DynArr_CreateByArray(Container, N, Items, IncSize, Shrink)  
+</h3>
+
+  <p>To create a container from an array of items.</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(<a href='../type/darrobject.html'>DArrObject</a>),
+            </td>
+<td>intent(inout)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Container</strong></td>
+            <td>
+                <p>DynArr object</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              integer(kind=kInt32),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>N</strong></td>
+            <td>
+                <p>number of items</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(Object),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Items</strong>(:)</td>
+            <td>
+                <p>the items to be added to the container</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              integer(kind=kInt32),
+            </td>
+<td>intent(in),</td>
+              <td>optional</td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>IncSize</strong></td>
+            <td>
+                <p>incremental size of the container when it is full</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              logical,
+            </td>
+<td>intent(in),</td>
+              <td>optional</td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Shrink</strong></td>
+            <td>
+                <p>flag to shrink the container capacity <br>
+- true if want to reduce capacity when the size is less than a quarter of the capacity. <br>
+- otherwise, the capacity stays the same. <br>
+- default is false.</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+        </li>
+    </ul>
+  </div>
+
+          </div>
+          <div class="row">
+              <div class="card mt-3">
+    <div class="card-header codesum">
+      <span class="anchor" id="boundprocedure-destruct~6"></span>
+      <h3>
+          procedure, public ::
+  <strong>Destruct</strong> => DynArr_Destroy
+        
+      </h3>
+    </div>
+      <div class="card-body">
+        
+        <p><strong>Type-Bound Subroutine</strong>: Destruct <br>
+ <strong>Purpose</strong>:  To remove all items from the container and free memory
+               of items stored in the container.<br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    CALL Container%Destruct() <br>
+ <strong>Important Note</strong>:  For the <em>DynArr</em> class, this method is not equivalent
+  to the <em>Clear</em> method.  Therefore, after calling the <em>Destruct</em> method,
+  the user should reconstruct the container (by calling a <em>Construction</em>
+  method again) before using other operations once more.  Otherwise, the
+  container's behavior may not be as expected.</p>
+      </div>
+    <ul class="list-group">
+        <li class="list-group-item">
+                  <h3>
+    private  subroutine DynArr_Destroy(Container)  
+</h3>
+
+  <p>To destruct the container.</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(<a href='../type/darrobject.html'>DArrObject</a>),
+            </td>
+<td>intent(inout)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Container</strong></td>
+            <td>
+                <p>DynArr object</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+        </li>
+    </ul>
+  </div>
+
+          </div>
+          <div class="row">
+              <div class="card mt-3">
+    <div class="card-header codesum">
+      <span class="anchor" id="boundprocedure-addfirst~4"></span>
+      <h3>
+          procedure, public ::
+  <strong>AddFirst</strong> => DynArr_AddFirst
+        
+      </h3>
+    </div>
+      <div class="card-body">
+        
+        <p><strong>Type-Bound Subroutine</strong>: AddFirst <br>
+ <strong>Purpose</strong>:  To insert the specified item at the front of the container. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    CALL Container%AddFirst(Item)</p>
+      </div>
+    <ul class="list-group">
+        <li class="list-group-item">
+                  <h3>
+    private  subroutine DynArr_AddFirst(Container, Item)  
+</h3>
+
+  <p>To insert the specified item at the front of the container.</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(<a href='../type/darrobject.html'>DArrObject</a>),
+            </td>
+<td>intent(inout)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Container</strong></td>
+            <td>
+                <p>DynArr object</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(Object),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Item</strong></td>
+            <td>
+                <p>the item to be added to the container</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+        </li>
+    </ul>
+  </div>
+
+          </div>
+          <div class="row">
+              <div class="card mt-3">
+    <div class="card-header codesum">
+      <span class="anchor" id="boundprocedure-addlast~4"></span>
+      <h3>
+          procedure, public ::
+  <strong>AddLast</strong> => DynArr_AddLast
+        
+      </h3>
+    </div>
+      <div class="card-body">
+        
+        <p><strong>Type-Bound Subroutine</strong>: AddLast <br>
+ <strong>Purpose</strong>:  To insert the specified item at the end of the container. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    CALL Container%AddLast(Item)</p>
+      </div>
+    <ul class="list-group">
+        <li class="list-group-item">
+                  <h3>
+    private  subroutine DynArr_AddLast(Container, Item)  
+</h3>
+
+  <p>To insert the specified item at the end of the container.</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(<a href='../type/darrobject.html'>DArrObject</a>),
+            </td>
+<td>intent(inout)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Container</strong></td>
+            <td>
+                <p>DynArr object</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(Object),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Item</strong></td>
+            <td>
+                <p>the item to be added to the container</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+        </li>
+    </ul>
+  </div>
+
+          </div>
+          <div class="row">
+              <div class="card mt-3">
+    <div class="card-header codesum">
+      <span class="anchor" id="boundprocedure-addat~4"></span>
+      <h3>
+          procedure, public ::
+  <strong>AddAt</strong> => DynArr_AddAt
+        
+      </h3>
+    </div>
+      <div class="card-body">
+        
+        <p><strong>Type-Bound Function</strong>: AddAt <br>
+ <strong>Purpose</strong>:  To insert the specified item at the specified index where
+               the index must be between 1 and the container size.
+               Also, return a flag indicating whether the item is
+               successfully added. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    Success = Container%AddAt(Index, Item) <br>
+  ---&gt;    IF (.NOT.Container%AddAt(Index, Item)) DoSomething</p>
+      </div>
+    <ul class="list-group">
+        <li class="list-group-item">
+                  <h3>
+    private  function DynArr_AddAt(Container, Index, Item) result(Flag)  
+</h3>
+
+  <p>To insert the specified item at the specified index where the index must be
+ between 1 and the container size.  Also, return a flag indicating whether
+ the item is successfully added.</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(<a href='../type/darrobject.html'>DArrObject</a>),
+            </td>
+<td>intent(inout)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Container</strong></td>
+            <td>
+                <p>DynArr object</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              integer(kind=kInt32),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Index</strong></td>
+            <td>
+                <p>the one-based index into the container's items</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(Object),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Item</strong></td>
+            <td>
+                <p>the item to be added to the container</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+    <h4>
+    Return Value
+    <small>logical</small>
+    </h4>
+    <p>flag indicating whether the item is successfully added. <br>
+- true if the item is successfully added.
+- false if the item is NOT successfully added.</p>
+
+        </li>
+    </ul>
+  </div>
+
+          </div>
+          <div class="row">
+              <div class="card mt-3">
+    <div class="card-header codesum">
+      <span class="anchor" id="boundprocedure-removefirst~4"></span>
+      <h3>
+          procedure, public ::
+  <strong>RemoveFirst</strong> => DynArr_RemoveFirst
+        
+      </h3>
+    </div>
+      <div class="card-body">
+        
+        <p><strong>Type-Bound Function</strong>: RemoveFirst <br>
+ <strong>Purpose</strong>:  To get and remove the front (first) item of the container.
+               Also, return a flag indicating whether the item is
+               successfully removed. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    Success = Container%RemoveFirst(Item) <br>
+  ---&gt;    IF (.NOT.Container%RemoveFirst(Item)) DoSomething</p>
+      </div>
+    <ul class="list-group">
+        <li class="list-group-item">
+                  <h3>
+    private  function DynArr_RemoveFirst(Container, Item) result(Flag)  
+</h3>
+
+  <p>To get and remove the first item of the container.  Also, return
+a flag indicating whether the item is successfully removed.</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(<a href='../type/darrobject.html'>DArrObject</a>),
+            </td>
+<td>intent(inout)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Container</strong></td>
+            <td>
+                <p>DynArr object</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(Object),
+            </td>
+<td>intent(inout)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Item</strong></td>
+            <td>
+                <p>the item to be removed from the container</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+    <h4>
+    Return Value
+    <small>logical</small>
+    </h4>
+    <p>flag indicating whether the item is successfully removed. <br>
+- true if the container is NOT empty.
+- false if the container is empty.</p>
+
+        </li>
+    </ul>
+  </div>
+
+          </div>
+          <div class="row">
+              <div class="card mt-3">
+    <div class="card-header codesum">
+      <span class="anchor" id="boundprocedure-removelast~4"></span>
+      <h3>
+          procedure, public ::
+  <strong>RemoveLast</strong> => DynArr_RemoveLast
+        
+      </h3>
+    </div>
+      <div class="card-body">
+        
+        <p><strong>Type-Bound Function</strong>: RemoveLast <br>
+ <strong>Purpose</strong>:  To get and remove the last item of the container.
+               Also, return a flag indicating whether the item is
+               successfully removed. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    Success = Container%RemoveLast(Item) <br>
+  ---&gt;    IF (.NOT.Container%RemoveLast(Item)) DoSomething</p>
+      </div>
+    <ul class="list-group">
+        <li class="list-group-item">
+                  <h3>
+    private  function DynArr_RemoveLast(Container, Item) result(Flag)  
+</h3>
+
+  <p>To get and remove the last item of the container.  Also, return
+a flag indicating whether the item is successfully removed.</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(<a href='../type/darrobject.html'>DArrObject</a>),
+            </td>
+<td>intent(inout)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Container</strong></td>
+            <td>
+                <p>DynArr object</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(Object),
+            </td>
+<td>intent(inout)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Item</strong></td>
+            <td>
+                <p>the item to be removed from the container</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+    <h4>
+    Return Value
+    <small>logical</small>
+    </h4>
+    <p>flag indicating whether the item is successfully removed. <br>
+- true if the container is NOT empty.
+- false if the container is empty.</p>
+
+        </li>
+    </ul>
+  </div>
+
+          </div>
+          <div class="row">
+              <div class="card mt-3">
+    <div class="card-header codesum">
+      <span class="anchor" id="boundprocedure-removeat~4"></span>
+      <h3>
+          procedure, public ::
+  <strong>RemoveAt</strong> => DynArr_RemoveAt
+        
+      </h3>
+    </div>
+      <div class="card-body">
+        
+        <p><strong>Type-Bound Function</strong>: RemoveAt <br>
+ <strong>Purpose</strong>:  To get and remove the item at the specified index where
+               the index must be between 1 and the container size.
+               Also, return a flag indicating whether the item is
+               successfully removed. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    Success = Container%RemoveAt(Index, Item) <br>
+  ---&gt;    IF (.NOT.Container%RemoveAt(Index, Item)) DoSomething</p>
+      </div>
+    <ul class="list-group">
+        <li class="list-group-item">
+                  <h3>
+    private  function DynArr_RemoveAt(Container, Index, Item) result(Flag)  
+</h3>
+
+  <p>To get and remove the item at the specified index where the index must be
+ between 1 and the container size.  Also, return a flag indicating whether
+ the item is successfully removed.</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(<a href='../type/darrobject.html'>DArrObject</a>),
+            </td>
+<td>intent(inout)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Container</strong></td>
+            <td>
+                <p>DynArr object</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              integer(kind=kInt32),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Index</strong></td>
+            <td>
+                <p>the one-based index into the container's items</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(Object),
+            </td>
+<td>intent(inout)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Item</strong></td>
+            <td>
+                <p>the item to be removed from the container</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+    <h4>
+    Return Value
+    <small>logical</small>
+    </h4>
+    <p>flag indicating whether the item is successfully removed. <br>
+- true if the item is successfully removed.
+- false if the item is NOT successfully removed.</p>
+
+        </li>
+    </ul>
+  </div>
+
+          </div>
+          <div class="row">
+              <div class="card mt-3">
+    <div class="card-header codesum">
+      <span class="anchor" id="boundprocedure-delete~5"></span>
+      <h3>
+          procedure, public ::
+  <strong>Delete</strong> => DynArr_Delete
+        
+      </h3>
+    </div>
+      <div class="card-body">
+        
+        <p><strong>Type-Bound Subroutine</strong>: Delete <br>
+ <strong>Purpose</strong>:  To delete an item from the container. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    CALL Container%Delete() <br>
+ <strong>Note</strong>: This method is intended to be used in conjunction with
+  the <em>StartFirst</em> and <em>MoveForward</em> methods.  Therefore, after
+  the call to one of those methods and then calling this one
+  will result in a removal of the current item of the iteration
+  (i.e. the same item that can be retrieved via the <em>StartFirst</em>
+  and <em>MoveForward</em> methods).</p>
+      </div>
+    <ul class="list-group">
+        <li class="list-group-item">
+                  <h3>
+    private  subroutine DynArr_Delete(Container)  
+</h3>
+
+  <p>To delete an item from a container.  This procedure is intended
+ to be used in conjunction with the <em>StartFirst</em> and <em>MoveForward</em>
+ methods.  Therefore, after the call to one of the methods and then
+ calling this procedure will result in a removal of the current item
+ of the iteration (i.e. the same item that can be retrieved via those
+ methods).</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(<a href='../type/darrobject.html'>DArrObject</a>),
+            </td>
+<td>intent(inout)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Container</strong></td>
+            <td>
+                <p>DynArr object</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+        </li>
+    </ul>
+  </div>
+
+          </div>
+          <div class="row">
+              <div class="card mt-3">
+    <div class="card-header codesum">
+      <span class="anchor" id="boundprocedure-clear~5"></span>
+      <h3>
+          procedure, public ::
+  <strong>Clear</strong> => DynArr_ClearItems
+        
+      </h3>
+    </div>
+      <div class="card-body">
+        
+        <p><strong>Type-Bound Subroutine</strong>: Clear <br>
+ <strong>Purpose</strong>:  To remove all items from the container. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    CALL Container%Clear()</p>
+      </div>
+    <ul class="list-group">
+        <li class="list-group-item">
+                  <h3>
+    private  subroutine DynArr_ClearItems(Container)  
+</h3>
+
+  <p>To remove all of the items from the container.</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(<a href='../type/darrobject.html'>DArrObject</a>),
+            </td>
+<td>intent(inout)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Container</strong></td>
+            <td>
+                <p>DynArr object</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+        </li>
+    </ul>
+  </div>
+
+          </div>
+          <div class="row">
+              <div class="card mt-3">
+    <div class="card-header codesum">
+      <span class="anchor" id="boundprocedure-toarray~5"></span>
+      <h3>
+          procedure, public ::
+  <strong>ToArray</strong> => DynArr_ToArray
+        
+      </h3>
+    </div>
+      <div class="card-body">
+        
+        <p><strong>Type-Bound Function</strong>: ToArray <br>
+ <strong>Purpose</strong>:  To get and remove all items from the container.  Also, return
+               a flag indicating whether the items are successfully removed. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    Success = Container%ToArray(Items) <br>
+  ---&gt;    IF (.NOT.Container%ToArray(Items)) DoSomething</p>
+      </div>
+    <ul class="list-group">
+        <li class="list-group-item">
+                  <h3>
+    private  function DynArr_ToArray(Container, Items) result(Flag)  
+</h3>
+
+  <p>To get and remove all items from the container.  Also, return
+ a flag indicating whether the items are successfully removed.</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(<a href='../type/darrobject.html'>DArrObject</a>),
+            </td>
+<td>intent(inout)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Container</strong></td>
+            <td>
+                <p>DynArr object</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(Object),
+            </td>
+<td>intent(out),</td>
+              <td></td>            <td>
+              ALLOCATABLE
+            </td>
+            <td>::</td>
+            <td><strong>Items</strong>(:)</td>
+            <td>
+                <p>the item to be removed from the container</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+    <h4>
+    Return Value
+    <small>logical</small>
+    </h4>
+    <p>flag indicating whether the items are successfully removed. <br>
+- true if the items are successfully removed.
+- false if the items are NOT successfully removed.</p>
+
+        </li>
+    </ul>
+  </div>
+
+          </div>
+          <div class="row">
+              <div class="card mt-3">
+    <div class="card-header codesum">
+      <span class="anchor" id="boundprocedure-startfirst~6"></span>
+      <h3>
+          procedure, public ::
+  <strong>StartFirst</strong> => DynArr_Move2FirstElm
+        
+      </h3>
+    </div>
+      <div class="card-body">
+        
+        <p><strong>Type-Bound Function</strong>: StartFirst <br>
+ <strong>Purpose</strong>:  To start the <em>forward</em> iteration and return a flag indicating
+               whether the container is empty or not. <br>
+ <strong>Usage</strong>: see <em>MoveForward</em> procedure.</p>
+      </div>
+    <ul class="list-group">
+        <li class="list-group-item">
+                  <h3>
+    private  function DynArr_Move2FirstElm(Container, Item) result(IsEmpty)  
+</h3>
+
+  <p>To move to the front (first) element in the container.</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(<a href='../type/darrobject.html'>DArrObject</a>),
+            </td>
+<td>intent(inout)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Container</strong></td>
+            <td>
+                <p>DynArr object</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(Object),
+            </td>
+<td>intent(inout),</td>
+              <td>optional</td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Item</strong></td>
+            <td>
+                <p>the first element as output if requested (and available)</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+    <h4>
+    Return Value
+    <small>logical</small>
+    </h4>
+    <p>a flag indicating whether the container contains no element or not <br>
+- true if the container is empty. <br>
+- otherwise the first element is available.</p>
+
+        </li>
+    </ul>
+  </div>
+
+          </div>
+          <div class="row">
+              <div class="card mt-3">
+    <div class="card-header codesum">
+      <span class="anchor" id="boundprocedure-moveforward~6"></span>
+      <h3>
+          procedure, public ::
+  <strong>MoveForward</strong> => DynArr_Move2NextElm
+        
+      </h3>
+    </div>
+      <div class="card-body">
+        
+        <p><strong>Type-Bound Function</strong>: MoveForward <br>
+ <strong>Purpose</strong>:  To move to the next iteration and return a flag indicating whether
+               the cursor pointer has reached the end of the container or not. <br>
+ <strong>Usage</strong>: <br>
+  The following code snippet illustrates how to typically traverse the container.
+<br>
+<Pre><Code style="color:MidnightBlue;">
+  ! start forward iteration (from the first item)
+  IsEmpty = Container%StartFirst()
+  IF (.NOT.IsEmpty) DoSomeThing...
+  DO
+      ! move to the next iteration
+      IsTheEnd = Container%MoveForward()
+      ! check whether we reach the end of the container or not
+      IF (IsTheEnd) EXIT
+      ! if not, do the task we need
+      DoSomeThing...
+  END DO
+  </Code></Pre></p>
+<p><br>
+  The following code snippet shows another way to iterate over the container.
+<br>
+<Pre><Code style="color:MidnightBlue;">
+  ! start forward iteration (from the first item)
+  IsTheEnd = Container%StartFirst(CurrItem)
+  DO WHILE (.NOT.IsTheEnd)
+      DoSomeThing_With_CurrItem...
+      ! move to the next iteration
+      IsTheEnd = Container%MoveForward(CurrItem)
+  END DO
+  </Code></Pre>
+</p>
+      </div>
+    <ul class="list-group">
+        <li class="list-group-item">
+                  <h3>
+    private  function DynArr_Move2NextElm(Container, Item) result(IsTheEnd)  
+</h3>
+
+  <p>To move (backward) to the next element in the container.</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(<a href='../type/darrobject.html'>DArrObject</a>),
+            </td>
+<td>intent(inout)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Container</strong></td>
+            <td>
+                <p>DynArr object</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(Object),
+            </td>
+<td>intent(inout),</td>
+              <td>optional</td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Item</strong></td>
+            <td>
+                <p>the next element as output if requested (and available)</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+    <h4>
+    Return Value
+    <small>logical</small>
+    </h4>
+    <p>a flag indicating whether the move to the end of the container occurs or not <br>
+- true if next element is NOT available. <br>
+- otherwise next element is available.</p>
+
+        </li>
+    </ul>
+  </div>
+
+          </div>
+          <div class="row">
+              <div class="card mt-3">
+    <div class="card-header codesum">
+      <span class="anchor" id="boundprocedure-startlast~4"></span>
+      <h3>
+          procedure, public ::
+  <strong>StartLast</strong> => DynArr_Move2LastElm
+        
+      </h3>
+    </div>
+      <div class="card-body">
+        
+        <p><strong>Type-Bound Function</strong>: StartLast <br>
+ <strong>Purpose</strong>:  To start the <em>backward</em> iteration and return a flag indicating
+               whether the container is empty or not. <br>
+ <strong>Usage</strong>: see <em>MoveBackward</em> procedure.</p>
+      </div>
+    <ul class="list-group">
+        <li class="list-group-item">
+                  <h3>
+    private  function DynArr_Move2LastElm(Container, Item) result(IsEmpty)  
+</h3>
+
+  <p>To move to the last element in the container. <br></p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(<a href='../type/darrobject.html'>DArrObject</a>),
+            </td>
+<td>intent(inout)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Container</strong></td>
+            <td>
+                <p>DynArr object</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(Object),
+            </td>
+<td>intent(inout),</td>
+              <td>optional</td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Item</strong></td>
+            <td>
+                <p>the last element as output if requested (and available)</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+    <h4>
+    Return Value
+    <small>logical</small>
+    </h4>
+    <p>a flag indicating whether the container contains no element or not <br>
+- true if the container is empty. <br>
+- otherwise the last element is available.</p>
+
+        </li>
+    </ul>
+  </div>
+
+          </div>
+          <div class="row">
+              <div class="card mt-3">
+    <div class="card-header codesum">
+      <span class="anchor" id="boundprocedure-movebackward~4"></span>
+      <h3>
+          procedure, public ::
+  <strong>MoveBackward</strong> => DynArr_Move2PrevElm
+        
+      </h3>
+    </div>
+      <div class="card-body">
+        
+        <p><strong>Type-Bound Function</strong>: MoveBackward <br>
+ <strong>Purpose</strong>:  To move to the next iteration (in reverse order) and return
+               a flag indicating whether the cursor pointer has reached the
+               end of the container or not. <br>
+ <strong>Usage</strong>: <br>
+  The following code snippet illustrates how to typically traverse the container in reverse order.
+<br>
+<Pre><Code style="color:MidnightBlue;">
+  ! start backward iteration (from the last item)
+  IsEmpty = Container%StartLast()
+  IF (.NOT.IsEmpty) DoSomeThing...
+  DO
+      ! move to the next iteration
+      IsTheEnd = Container%MoveBackward()
+      ! check whether we reach the end of the container or not
+      IF (IsTheEnd) EXIT
+      ! if not, do the task we need
+      DoSomeThing...
+  END DO
+  </Code></Pre></p>
+<p><br>
+  The following code snippet shows another way to iterate over the container in reverse order.
+<br>
+<Pre><Code style="color:MidnightBlue;">
+  ! start backward iteration (from the last item)
+  IsTheEnd = Container%StartLast(CurrItem)
+  DO WHILE (.NOT.IsTheEnd)
+      DoSomeThing_With_CurrItem...
+      ! move to the next iteration
+      IsTheEnd = Container%MoveBackward(CurrItem)
+  END DO
+  </Code></Pre>
+</p>
+      </div>
+    <ul class="list-group">
+        <li class="list-group-item">
+                  <h3>
+    private  function DynArr_Move2PrevElm(Container, Item) result(IsTheEnd)  
+</h3>
+
+  <p>To move to the previous element in the container. <br></p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(<a href='../type/darrobject.html'>DArrObject</a>),
+            </td>
+<td>intent(inout)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Container</strong></td>
+            <td>
+                <p>DynArr object</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(Object),
+            </td>
+<td>intent(inout),</td>
+              <td>optional</td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Item</strong></td>
+            <td>
+                <p>the previous element as output if requested (and available)</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+    <h4>
+    Return Value
+    <small>logical</small>
+    </h4>
+    <p>a flag indicating whether the move to the end of the container occurs or not <br>
+- true if previous element is NOT available. <br>
+- otherwise previous element is available.</p>
+
+        </li>
+    </ul>
+  </div>
+
+          </div>
+          <div class="row">
+              <div class="card mt-3">
+    <div class="card-header codesum">
+      <span class="anchor" id="boundprocedure-getsize~6"></span>
+      <h3>
+          procedure, public ::
+  <strong>GetSize</strong> => DynArr_GetSize
+        
+      </h3>
+    </div>
+      <div class="card-body">
+        
+        <p><strong>Type-Bound Function</strong>: GetSize <br>
+ <strong>Purpose</strong>:  To get the current size of the container. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    Size = Container%GetSize()</p>
+      </div>
+    <ul class="list-group">
+        <li class="list-group-item">
+                  <h3>
+    private  function DynArr_GetSize(Container) result(Size)  
+</h3>
+
+  <p>To get the number of items in the container.</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(<a href='../type/darrobject.html'>DArrObject</a>),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Container</strong></td>
+            <td>
+                
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+    <h4>
+    Return Value
+    <small>integer(kind=kInt32)</small>
+    </h4>
+    
+
+        </li>
+    </ul>
+  </div>
+
+          </div>
+          <div class="row">
+              <div class="card mt-3">
+    <div class="card-header codesum">
+      <span class="anchor" id="boundprocedure-isempty~13"></span>
+      <h3>
+          procedure, public ::
+  <strong>IsEmpty</strong> => DynArr_IsEmpty
+        
+      </h3>
+    </div>
+      <div class="card-body">
+        
+        <p><strong>Type-Bound Function</strong>: IsEmpty <br>
+ <strong>Purpose</strong>:  To check whether the container is empty or not. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    Flag = Container%IsEmpty() <br>
+  ---&gt;    IF (.NOT.Container%IsEmpty()) DoSomeThing</p>
+      </div>
+    <ul class="list-group">
+        <li class="list-group-item">
+                  <h3>
+    private  function DynArr_IsEmpty(Container) result(Flag)  
+</h3>
+
+  <p>To check whether the container is currently empty or not.</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(<a href='../type/darrobject.html'>DArrObject</a>),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Container</strong></td>
+            <td>
+                <p>DynArr object</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+    <h4>
+    Return Value
+    <small>logical</small>
+    </h4>
+    <p>true if the container currently contains no item.</p>
+
+        </li>
+    </ul>
+  </div>
+
+          </div>
+          <div class="row">
+              <div class="card mt-3">
+    <div class="card-header codesum">
+      <span class="anchor" id="boundprocedure-peekfirst~4"></span>
+      <h3>
+          procedure, public ::
+  <strong>PeekFirst</strong> => DynArr_PeekFirst
+        
+      </h3>
+    </div>
+      <div class="card-body">
+        
+        <p><strong>Type-Bound Function</strong>: PeekFirst <br>
+ <strong>Purpose</strong>:  To get the front (first) item (without removing it from the container).
+               Also, return a flag indicating whether the item is available or not. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    Success = Container%PeekFirst(Item) <br>
+  ---&gt;    IF (.NOT.Container%PeekFirst(Item)) DoSomething</p>
+      </div>
+    <ul class="list-group">
+        <li class="list-group-item">
+                  <h3>
+    private  function DynArr_PeekFirst(Container, Item) result(Flag)  
+</h3>
+
+  <p>To get the front (first) item (without removing it from the container).
+ Also, return a flag indicating whether the item is available.</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(<a href='../type/darrobject.html'>DArrObject</a>),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Container</strong></td>
+            <td>
+                <p>DynArr object</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(Object),
+            </td>
+<td>intent(inout)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Item</strong></td>
+            <td>
+                <p>the item to be retrieved from the container</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+    <h4>
+    Return Value
+    <small>logical</small>
+    </h4>
+    <p>flag indicating whether the item is available. <br>
+- true if the container is NOT empty.
+- false if the container is empty.</p>
+
+        </li>
+    </ul>
+  </div>
+
+          </div>
+          <div class="row">
+              <div class="card mt-3">
+    <div class="card-header codesum">
+      <span class="anchor" id="boundprocedure-peeklast~4"></span>
+      <h3>
+          procedure, public ::
+  <strong>PeekLast</strong> => DynArr_PeekLast
+        
+      </h3>
+    </div>
+      <div class="card-body">
+        
+        <p><strong>Type-Bound Function</strong>: PeekLast <br>
+ <strong>Purpose</strong>:  To get the last item (without removing it from the container).
+               Also, return a flag indicating whether the item is available or not. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    Success = Container%PeekLast(Item) <br>
+  ---&gt;    IF (.NOT.Container%PeekLast(Item)) DoSomething</p>
+      </div>
+    <ul class="list-group">
+        <li class="list-group-item">
+                  <h3>
+    private  function DynArr_PeekLast(Container, Item) result(Flag)  
+</h3>
+
+  <p>To get the last item (without removing it from the container).
+ Also, return a flag indicating whether the item is available.</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(<a href='../type/darrobject.html'>DArrObject</a>),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Container</strong></td>
+            <td>
+                <p>DynArr object</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(Object),
+            </td>
+<td>intent(inout)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Item</strong></td>
+            <td>
+                <p>the item to be retrieved from the container</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+    <h4>
+    Return Value
+    <small>logical</small>
+    </h4>
+    <p>flag indicating whether the item is available. <br>
+- true if the container is NOT empty.
+- false if the container is empty.</p>
+
+        </li>
+    </ul>
+  </div>
+
+          </div>
+          <div class="row">
+              <div class="card mt-3">
+    <div class="card-header codesum">
+      <span class="anchor" id="boundprocedure-peekat~4"></span>
+      <h3>
+          procedure, public ::
+  <strong>PeekAt</strong> => DynArr_PeekAt
+        
+      </h3>
+    </div>
+      <div class="card-body">
+        
+        <p><strong>Type-Bound Function</strong>: PeekAt <br>
+ <strong>Purpose</strong>:  To get the item (without removing it from the container) at
+               the specified index where the index must be between 1 and the
+               container size.  Also, return a flag indicating whether the
+               item is available or not. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    Success = Container%PeekAt(Index, Item) <br>
+  ---&gt;    IF (.NOT.Container%PeekAt(Index, Item)) DoSomething</p>
+      </div>
+    <ul class="list-group">
+        <li class="list-group-item">
+                  <h3>
+    private  function DynArr_PeekAt(Container, Index, Item) result(Flag)  
+</h3>
+
+  <p>To get the item (without removing it from the container) at the specified index
+ where the index must be between 1 and the container size.  Also, return a flag
+ indicating whether the item is available or not.</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(<a href='../type/darrobject.html'>DArrObject</a>),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Container</strong></td>
+            <td>
+                <p>DynArr object</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              integer(kind=kInt32),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Index</strong></td>
+            <td>
+                <p>the one-based index into the container's items</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(Object),
+            </td>
+<td>intent(inout)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Item</strong></td>
+            <td>
+                <p>the item to be retrieved from the container</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+    <h4>
+    Return Value
+    <small>logical</small>
+    </h4>
+    <p>flag indicating whether the item is available. <br>
+- true if the item is available.
+- false if the item is NOT available.</p>
+
+        </li>
+    </ul>
+  </div>
+
+          </div>
+          <div class="row">
+              <div class="card mt-3">
+    <div class="card-header codesum">
+      <span class="anchor" id="boundprocedure-getall~5"></span>
+      <h3>
+          procedure, public ::
+  <strong>GetAll</strong> => DynArr_GetAll
+        
+      </h3>
+    </div>
+      <div class="card-body">
+        
+        <p><em>GetAll</em> is a procedure deferred by the <em>BaseIterable</em> type. <br>
+ <strong>Type-Bound Function</strong>: GetAll <br>
+ <strong>Purpose</strong>:  To get all items (without removing them) from the container.
+               Also, return a flag indicating whether the items are available. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    Success = Container%GetAll(Items) <br>
+  ---&gt;    IF (.NOT.Container%GetAll(Items)) DoSomething</p>
+      </div>
+    <ul class="list-group">
+        <li class="list-group-item">
+                  <h3>
+    private  function DynArr_GetAll(Container, Items) result(Flag)  
+</h3>
+
+  <p>To get all items (without removing them) from the container.  Also,
+ return a flag indicating whether the items are available.</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(<a href='../type/darrobject.html'>DArrObject</a>),
+            </td>
+<td>intent(inout)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Container</strong></td>
+            <td>
+                <p>DynArr object</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(Object),
+            </td>
+<td>intent(out),</td>
+              <td></td>            <td>
+              ALLOCATABLE
+            </td>
+            <td>::</td>
+            <td><strong>Items</strong>(:)</td>
+            <td>
+                <p>the item to be removed from the container</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+    <h4>
+    Return Value
+    <small>logical</small>
+    </h4>
+    <p>flag indicating whether the items are successfully removed. <br>
+- true if the items are available.
+- false if the items are NOT available.</p>
+
+        </li>
+    </ul>
+  </div>
+
+          </div>
+          <div class="row">
+              <div class="card mt-3">
+    <div class="card-header codesum">
+      <span class="anchor" id="boundprocedure-enqueue~4"></span>
+      <h3>
+          procedure, public ::
+  <strong>EnQueue</strong> => DynArr_AddLast
+        
+      </h3>
+    </div>
+      <div class="card-body">
+        
+        <p><strong>Type-Bound Subroutine</strong>: EnQueue <br>
+<strong>Purpose</strong>:  To add a new item to the end of the queue. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    CALL Queue%EnQueue(NewItem) <br>
+ <strong>Note</strong>: <em>EnQueue</em> is an alias of <em>AddLast</em>.</p>
+      </div>
+    <ul class="list-group">
+        <li class="list-group-item">
+                  <h3>
+    private  subroutine DynArr_AddLast(Container, Item)  
+</h3>
+
+  <p>To insert the specified item at the end of the container.</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(<a href='../type/darrobject.html'>DArrObject</a>),
+            </td>
+<td>intent(inout)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Container</strong></td>
+            <td>
+                <p>DynArr object</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(Object),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Item</strong></td>
+            <td>
+                <p>the item to be added to the container</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+        </li>
+    </ul>
+  </div>
+
+          </div>
+          <div class="row">
+              <div class="card mt-3">
+    <div class="card-header codesum">
+      <span class="anchor" id="boundprocedure-dequeue~4"></span>
+      <h3>
+          procedure, public ::
+  <strong>DeQueue</strong> => DynArr_RemoveFirst
+        
+      </h3>
+    </div>
+      <div class="card-body">
+        
+        <p><strong>Type-Bound Function</strong>: DeQueue <br>
+ <strong>Purpose</strong>:  To get and remove the front (first) item of the queue.
+               Also, return a flag indicating whether the item is
+               successfully removed. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    Success = Queue%DeQueue(Item) <br>
+  ---&gt;    IF (.NOT.Queue%DeQueue(Item)) DoSomething <br>
+ <strong>Note</strong>: <em>DeQueue</em> is an alias of <em>RemoveFirst</em>.</p>
+      </div>
+    <ul class="list-group">
+        <li class="list-group-item">
+                  <h3>
+    private  function DynArr_RemoveFirst(Container, Item) result(Flag)  
+</h3>
+
+  <p>To get and remove the first item of the container.  Also, return
+a flag indicating whether the item is successfully removed.</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(<a href='../type/darrobject.html'>DArrObject</a>),
+            </td>
+<td>intent(inout)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Container</strong></td>
+            <td>
+                <p>DynArr object</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(Object),
+            </td>
+<td>intent(inout)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Item</strong></td>
+            <td>
+                <p>the item to be removed from the container</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+    <h4>
+    Return Value
+    <small>logical</small>
+    </h4>
+    <p>flag indicating whether the item is successfully removed. <br>
+- true if the container is NOT empty.
+- false if the container is empty.</p>
+
+        </li>
+    </ul>
+  </div>
+
+          </div>
+          <div class="row">
+              <div class="card mt-3">
+    <div class="card-header codesum">
+      <span class="anchor" id="boundprocedure-push~4"></span>
+      <h3>
+          procedure, public ::
+  <strong>Push</strong> => DynArr_AddLast
+        
+      </h3>
+    </div>
+      <div class="card-body">
+        
+        <p><strong>Type-Bound Subroutine</strong>: Push <br>
+<strong>Purpose</strong>:  To add a new item to the top of the stack. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    CALL Stack%Push(NewItem) <br>
+ <strong>Note</strong>: <em>Push</em> is an alias of <em>AddLast</em>.</p>
+      </div>
+    <ul class="list-group">
+        <li class="list-group-item">
+                  <h3>
+    private  subroutine DynArr_AddLast(Container, Item)  
+</h3>
+
+  <p>To insert the specified item at the end of the container.</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(<a href='../type/darrobject.html'>DArrObject</a>),
+            </td>
+<td>intent(inout)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Container</strong></td>
+            <td>
+                <p>DynArr object</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(Object),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Item</strong></td>
+            <td>
+                <p>the item to be added to the container</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+        </li>
+    </ul>
+  </div>
+
+          </div>
+          <div class="row">
+              <div class="card mt-3">
+    <div class="card-header codesum">
+      <span class="anchor" id="boundprocedure-pop~4"></span>
+      <h3>
+          procedure, public ::
+  <strong>Pop</strong> => DynArr_RemoveLast
+        
+      </h3>
+    </div>
+      <div class="card-body">
+        
+        <p><strong>Type-Bound Function</strong>: Pop <br>
+ <strong>Purpose</strong>:  To get and remove the top item of the stack.
+               Also, return a flag indicating whether the item is
+               successfully removed. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    Success = Stack%Pop(Item) <br>
+  ---&gt;    IF (.NOT.Stack%Pop(Item)) DoSomething <br>
+ <strong>Note</strong>: <em>Pop</em> is an alias of <em>RemoveLast</em>.</p>
+      </div>
+    <ul class="list-group">
+        <li class="list-group-item">
+                  <h3>
+    private  function DynArr_RemoveLast(Container, Item) result(Flag)  
+</h3>
+
+  <p>To get and remove the last item of the container.  Also, return
+a flag indicating whether the item is successfully removed.</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(<a href='../type/darrobject.html'>DArrObject</a>),
+            </td>
+<td>intent(inout)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Container</strong></td>
+            <td>
+                <p>DynArr object</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(Object),
+            </td>
+<td>intent(inout)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Item</strong></td>
+            <td>
+                <p>the item to be removed from the container</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+    <h4>
+    Return Value
+    <small>logical</small>
+    </h4>
+    <p>flag indicating whether the item is successfully removed. <br>
+- true if the container is NOT empty.
+- false if the container is empty.</p>
+
+        </li>
+    </ul>
+  </div>
+
+          </div>
+          <div class="row">
+              <div class="card mt-3">
+    <div class="card-header codesum">
+      <span class="anchor" id="boundprocedure-peektop~4"></span>
+      <h3>
+          procedure, public ::
+  <strong>PeekTop</strong> => DynArr_PeekLast
+        
+      </h3>
+    </div>
+      <div class="card-body">
+        
+        <p><strong>Type-Bound Function</strong>: PeekTop <br>
+ <strong>Purpose</strong>:  To get the last item (without removing it from the container).
+               Also, return a flag indicating whether the item is available or not. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    Success = Container%PeekTop(Item) <br>
+  ---&gt;    IF (.NOT.Container%PeekTop(Item)) DoSomething <br>
+ <strong>Note</strong>: <em>PeekTop</em> is an alias of <em>PeekLast</em>.</p>
+      </div>
+    <ul class="list-group">
+        <li class="list-group-item">
+                  <h3>
+    private  function DynArr_PeekLast(Container, Item) result(Flag)  
+</h3>
+
+  <p>To get the last item (without removing it from the container).
+ Also, return a flag indicating whether the item is available.</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(<a href='../type/darrobject.html'>DArrObject</a>),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Container</strong></td>
+            <td>
+                <p>DynArr object</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(Object),
+            </td>
+<td>intent(inout)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Item</strong></td>
+            <td>
+                <p>the item to be retrieved from the container</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+    <h4>
+    Return Value
+    <small>logical</small>
+    </h4>
+    <p>flag indicating whether the item is available. <br>
+- true if the container is NOT empty.
+- false if the container is empty.</p>
+
+        </li>
+    </ul>
+  </div>
+
+          </div>
+      </section>
+
+    <section>
+    <h3><span class="anchor" id="src"></span>Source Code</h3>
+    <div class="hl codehilite"><pre><span></span><span class="w">    </span><span class="k">TYPE </span><span class="n">DArrObject</span>
+<span class="w">        </span><span class="k">PRIVATE</span>
+<span class="w">        </span><span class="c">!&gt; incremental size of the container when the container is full.</span>
+<span class="w">        </span><span class="c">!  Its value will be reset to 0 if the optional input is NOT</span>
+<span class="w">        </span><span class="c">!  specified during construction</span>
+<span class="w">        </span><span class="n">tIndex</span><span class="w">      </span><span class="kd">::</span><span class="w"> </span><span class="n">IncSize</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">16</span>
+<span class="w">        </span><span class="c">!% flag to shrink the container capacity</span>
+<span class="w">        </span><span class="n">tLogical</span><span class="w">    </span><span class="kd">::</span><span class="w"> </span><span class="n">Shrink</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">.</span><span class="n">FALSE</span><span class="p">.</span>
+<span class="w">        </span><span class="c">!% pointer to first item of the queue</span>
+<span class="w">        </span><span class="n">tIndex</span><span class="w">      </span><span class="kd">::</span><span class="w"> </span><span class="n">First</span><span class="w">  </span><span class="o">=</span><span class="w"> </span><span class="mi">1_kIndex</span>
+<span class="w">        </span><span class="c">!% pointer to next to last item of the queue (i.e. the next available slot)</span>
+<span class="w">        </span><span class="n">tIndex</span><span class="w">      </span><span class="kd">::</span><span class="w"> </span><span class="n">Last</span><span class="w">   </span><span class="o">=</span><span class="w"> </span><span class="mi">1_kIndex</span>
+<span class="w">        </span><span class="c">!% size of the container (number of items)</span>
+<span class="w">        </span><span class="n">tIndex</span><span class="w">      </span><span class="kd">::</span><span class="w"> </span><span class="n">Size</span><span class="w">   </span><span class="o">=</span><span class="w"> </span><span class="mi">0_kIndex</span>
+<span class="w">        </span><span class="c">!% pointer to current item of the iteration</span>
+<span class="w">        </span><span class="n">tIndex</span><span class="w">      </span><span class="kd">::</span><span class="w"> </span><span class="n">Cursor</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0_kIndex</span>
+<span class="w">        </span><span class="c">!&gt; direction of the iteration &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  - positive -&gt; forward iteration</span>
+<span class="w">        </span><span class="c">!  - negative -&gt; backward iteration (only applicable for deque and list)</span>
+<span class="w">        </span><span class="c">!  - zero     -&gt; iteration not yet start</span>
+<span class="w">        </span><span class="n">tSInt32</span><span class="w">     </span><span class="kd">::</span><span class="w"> </span><span class="n">Dir</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span>
+<span class="w">        </span><span class="c">!% items stored in the container.</span>
+<span class="w">        </span><span class="k">CLASS</span><span class="p">(</span><span class="n">Object</span><span class="p">),</span><span class="w"> </span><span class="k">ALLOCATABLE</span><span class="w">   </span><span class="kd">::</span><span class="w"> </span><span class="n">Items</span><span class="p">(:)</span>
+<span class="w">    </span><span class="k">CONTAINS</span>
+<span class="w">        </span><span class="c">! ---------------------------------------------------------------------</span>
+<span class="w">        </span><span class="c">! -----             PRIVATE PROCEDURES                            -----</span>
+<span class="w">        </span><span class="c">! ---------------------------------------------------------------------</span>
+<span class="w">        </span><span class="k">PROCEDURE</span><span class="p">,</span><span class="w"> </span><span class="k">PRIVATE</span><span class="w">  </span><span class="kd">::</span><span class="w"> </span><span class="n">Offset</span><span class="w">       </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">DynArr_GetFirst</span>
+<span class="w">        </span><span class="k">PROCEDURE</span><span class="p">,</span><span class="w"> </span><span class="k">PRIVATE</span><span class="w">  </span><span class="kd">::</span><span class="w"> </span><span class="n">Resize</span><span class="w">       </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">DynArr_MemResize</span>
+<span class="w">        </span><span class="k">PROCEDURE</span><span class="p">,</span><span class="w"> </span><span class="k">PRIVATE</span><span class="w">  </span><span class="kd">::</span><span class="w"> </span><span class="n">Growing</span><span class="w">      </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">DynArr_Growing</span>
+<span class="w">        </span><span class="k">PROCEDURE</span><span class="p">,</span><span class="w"> </span><span class="k">PRIVATE</span><span class="w">  </span><span class="kd">::</span><span class="w"> </span><span class="n">Shrinking</span><span class="w">    </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">DynArr_Shrinking</span>
+<span class="w">        </span><span class="k">PROCEDURE</span><span class="p">,</span><span class="w"> </span><span class="k">PRIVATE</span><span class="w">  </span><span class="kd">::</span><span class="w"> </span><span class="n">DynArr_CreateByArray</span>
+<span class="w">        </span><span class="c">! ---------------------------------------------------------------------</span>
+<span class="w">        </span><span class="c">! -----             PUBLIC PROCEDURES                             -----</span>
+<span class="w">        </span><span class="c">! ---------------------------------------------------------------------</span>
+<span class="w">        </span><span class="c">! -----             Constructor and Destructor Procedures         -----</span>
+<span class="w">        </span><span class="c">! ---------------------------------------------------------------------</span>
+<span class="w">        </span><span class="c">!&gt; **Type-Bound Subroutine**: CreateEmpty &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Purpose**:  To construct an empty container. &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Usage**: &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!   ! create an empty container with specified initial capacity and type of items to be stored &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!   ---&gt;    CALL Container%CreateEmpty(25, Mold) &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!   ! create a container and specify the optional incremental size &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!   ---&gt;    CALL Container%CreateEmpty(25, Mold, IncSize=16) &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!   ! create a container and specify the optional shrink flag &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!   ---&gt;    CALL Container%CreateEmpty(25, Mold, Shrink=.TRUE.)</span>
+<span class="w">        </span><span class="k">PROCEDURE</span><span class="w">   </span><span class="kd">::</span><span class="w"> </span><span class="n">CreateEmpty</span><span class="w">  </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">DynArr_CreateEmpty</span>
+<span class="w">        </span><span class="c">!&gt; **Type-Bound Subroutine**: Construct &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Purpose**:  To construct a new container from an array of items. &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Usage**: &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!           ! create a container from an array of 25 items &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!   ---&gt;    CALL Container%Construct(25, Arr) &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!           ! create a container and specify the optional incremental size &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!   ---&gt;    CALL Container%Construct(25, Arr, IncSize=16) &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!           ! create a container and specify the optional shrink flag &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!   ---&gt;    CALL Container%Construct(25, Arr, Shrink=.TRUE.)</span>
+<span class="w">        </span><span class="k">GENERIC</span><span class="w">     </span><span class="kd">::</span><span class="w"> </span><span class="n">Construct</span><span class="w">    </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">DynArr_CreateByArray</span>
+<span class="w">        </span><span class="c">!&gt; **Type-Bound Subroutine**: Destruct &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Purpose**:  To remove all items from the container and free memory</span>
+<span class="w">        </span><span class="c">!                of items stored in the container.&lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Usage**: &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!   ---&gt;    CALL Container%Destruct() &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Important Note**:  For the *DynArr* class, this method is not equivalent</span>
+<span class="w">        </span><span class="c">!   to the *Clear* method.  Therefore, after calling the *Destruct* method,</span>
+<span class="w">        </span><span class="c">!   the user should reconstruct the container (by calling a *Construction*</span>
+<span class="w">        </span><span class="c">!   method again) before using other operations once more.  Otherwise, the</span>
+<span class="w">        </span><span class="c">!   container&#39;s behavior may not be as expected.</span>
+<span class="w">        </span><span class="k">PROCEDURE</span><span class="w">   </span><span class="kd">::</span><span class="w"> </span><span class="n">Destruct</span><span class="w">     </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">DynArr_Destroy</span>
+<span class="w">        </span><span class="c">! ---------------------------------------------------------------------</span>
+<span class="w">        </span><span class="c">! -----             Insertion and Removal Procedures              -----</span>
+<span class="w">        </span><span class="c">! ---------------------------------------------------------------------</span>
+<span class="w">        </span><span class="c">!&gt; **Type-Bound Subroutine**: AddFirst &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Purpose**:  To insert the specified item at the front of the container. &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Usage**: &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!   ---&gt;    CALL Container%AddFirst(Item)</span>
+<span class="w">        </span><span class="k">PROCEDURE</span><span class="w">   </span><span class="kd">::</span><span class="w"> </span><span class="n">AddFirst</span><span class="w">     </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">DynArr_AddFirst</span>
+<span class="w">        </span><span class="c">!&gt; **Type-Bound Subroutine**: AddLast &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Purpose**:  To insert the specified item at the end of the container. &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Usage**: &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!   ---&gt;    CALL Container%AddLast(Item)</span>
+<span class="w">        </span><span class="k">PROCEDURE</span><span class="w">   </span><span class="kd">::</span><span class="w"> </span><span class="n">AddLast</span><span class="w">      </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">DynArr_AddLast</span>
+<span class="w">        </span><span class="c">!&gt; **Type-Bound Function**: AddAt &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Purpose**:  To insert the specified item at the specified index where</span>
+<span class="w">        </span><span class="c">!                the index must be between 1 and the container size.</span>
+<span class="w">        </span><span class="c">!                Also, return a flag indicating whether the item is</span>
+<span class="w">        </span><span class="c">!                successfully added. &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Usage**: &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!   ---&gt;    Success = Container%AddAt(Index, Item) &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!   ---&gt;    IF (.NOT.Container%AddAt(Index, Item)) DoSomething</span>
+<span class="w">        </span><span class="k">PROCEDURE</span><span class="w">   </span><span class="kd">::</span><span class="w"> </span><span class="n">AddAt</span><span class="w">      </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">DynArr_AddAt</span>
+<span class="w">        </span><span class="c">!&gt; **Type-Bound Function**: RemoveFirst &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Purpose**:  To get and remove the front (first) item of the container.</span>
+<span class="w">        </span><span class="c">!                Also, return a flag indicating whether the item is</span>
+<span class="w">        </span><span class="c">!                successfully removed. &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Usage**: &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!   ---&gt;    Success = Container%RemoveFirst(Item) &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!   ---&gt;    IF (.NOT.Container%RemoveFirst(Item)) DoSomething</span>
+<span class="w">        </span><span class="k">PROCEDURE</span><span class="w">   </span><span class="kd">::</span><span class="w"> </span><span class="n">RemoveFirst</span><span class="w">  </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">DynArr_RemoveFirst</span>
+<span class="w">        </span><span class="c">!&gt; **Type-Bound Function**: RemoveLast &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Purpose**:  To get and remove the last item of the container.</span>
+<span class="w">        </span><span class="c">!                Also, return a flag indicating whether the item is</span>
+<span class="w">        </span><span class="c">!                successfully removed. &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Usage**: &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!   ---&gt;    Success = Container%RemoveLast(Item) &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!   ---&gt;    IF (.NOT.Container%RemoveLast(Item)) DoSomething</span>
+<span class="w">        </span><span class="k">PROCEDURE</span><span class="w">   </span><span class="kd">::</span><span class="w"> </span><span class="n">RemoveLast</span><span class="w">   </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">DynArr_RemoveLast</span>
+<span class="w">        </span><span class="c">!&gt; **Type-Bound Function**: RemoveAt &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Purpose**:  To get and remove the item at the specified index where</span>
+<span class="w">        </span><span class="c">!                the index must be between 1 and the container size.</span>
+<span class="w">        </span><span class="c">!                Also, return a flag indicating whether the item is</span>
+<span class="w">        </span><span class="c">!                successfully removed. &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Usage**: &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!   ---&gt;    Success = Container%RemoveAt(Index, Item) &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!   ---&gt;    IF (.NOT.Container%RemoveAt(Index, Item)) DoSomething</span>
+<span class="w">        </span><span class="k">PROCEDURE</span><span class="w">   </span><span class="kd">::</span><span class="w"> </span><span class="n">RemoveAt</span><span class="w">   </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">DynArr_RemoveAt</span>
+<span class="w">        </span><span class="c">!&gt; **Type-Bound Subroutine**: Delete &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Purpose**:  To delete an item from the container. &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Usage**: &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!   ---&gt;    CALL Container%Delete() &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Note**: This method is intended to be used in conjunction with</span>
+<span class="w">        </span><span class="c">!   the *StartFirst* and *MoveForward* methods.  Therefore, after</span>
+<span class="w">        </span><span class="c">!   the call to one of those methods and then calling this one</span>
+<span class="w">        </span><span class="c">!   will result in a removal of the current item of the iteration</span>
+<span class="w">        </span><span class="c">!   (i.e. the same item that can be retrieved via the *StartFirst*</span>
+<span class="w">        </span><span class="c">!   and *MoveForward* methods).</span>
+<span class="w">        </span><span class="k">PROCEDURE</span><span class="w">   </span><span class="kd">::</span><span class="w"> </span><span class="n">Delete</span><span class="w">       </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">DynArr_Delete</span>
+<span class="w">        </span><span class="c">!&gt; **Type-Bound Subroutine**: Clear &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Purpose**:  To remove all items from the container. &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Usage**: &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!   ---&gt;    CALL Container%Clear()</span>
+<span class="w">        </span><span class="k">PROCEDURE</span><span class="w">   </span><span class="kd">::</span><span class="w"> </span><span class="n">Clear</span><span class="w">        </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">DynArr_ClearItems</span>
+<span class="w">        </span><span class="c">!&gt; **Type-Bound Function**: ToArray &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Purpose**:  To get and remove all items from the container.  Also, return</span>
+<span class="w">        </span><span class="c">!                a flag indicating whether the items are successfully removed. &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Usage**: &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!   ---&gt;    Success = Container%ToArray(Items) &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!   ---&gt;    IF (.NOT.Container%ToArray(Items)) DoSomething</span>
+<span class="w">        </span><span class="k">PROCEDURE</span><span class="w">   </span><span class="kd">::</span><span class="w"> </span><span class="n">ToArray</span><span class="w">      </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">DynArr_ToArray</span>
+<span class="w">        </span><span class="c">! ---------------------------------------------------------------------</span>
+<span class="w">        </span><span class="c">! -----                 Iteration Procedures                      -----</span>
+<span class="w">        </span><span class="c">! ---------------------------------------------------------------------</span>
+<span class="w">        </span><span class="c">!&gt; **Type-Bound Function**: StartFirst &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Purpose**:  To start the *forward* iteration and return a flag indicating</span>
+<span class="w">        </span><span class="c">!                whether the container is empty or not. &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Usage**: see *MoveForward* procedure.</span>
+<span class="w">        </span><span class="k">PROCEDURE</span><span class="w">   </span><span class="kd">::</span><span class="w"> </span><span class="n">StartFirst</span><span class="w">   </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">DynArr_Move2FirstElm</span>
+<span class="w">        </span><span class="c">!&gt; **Type-Bound Function**: MoveForward &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Purpose**:  To move to the next iteration and return a flag indicating whether</span>
+<span class="w">        </span><span class="c">!                the cursor pointer has reached the end of the container or not. &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Usage**: &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!   The following code snippet illustrates how to typically traverse the container.</span>
+<span class="w">        </span><span class="c">!   &lt;Pre&gt;&lt;Code style=&quot;color:MidnightBlue;&quot;&gt;</span>
+<span class="w">        </span><span class="c">!   ! start forward iteration (from the first item)</span>
+<span class="w">        </span><span class="c">!   IsEmpty = Container%StartFirst()</span>
+<span class="w">        </span><span class="c">!   IF (.NOT.IsEmpty) DoSomeThing...</span>
+<span class="w">        </span><span class="c">!   DO</span>
+<span class="w">        </span><span class="c">!       ! move to the next iteration</span>
+<span class="w">        </span><span class="c">!       IsTheEnd = Container%MoveForward()</span>
+<span class="w">        </span><span class="c">!       ! check whether we reach the end of the container or not</span>
+<span class="w">        </span><span class="c">!       IF (IsTheEnd) EXIT</span>
+<span class="w">        </span><span class="c">!       ! if not, do the task we need</span>
+<span class="w">        </span><span class="c">!       DoSomeThing...</span>
+<span class="w">        </span><span class="c">!   END DO</span>
+<span class="w">        </span><span class="c">!   &lt;/Code&gt;&lt;/Pre&gt; &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!   The following code snippet shows another way to iterate over the container.</span>
+<span class="w">        </span><span class="c">!   &lt;Pre&gt;&lt;Code style=&quot;color:MidnightBlue;&quot;&gt;</span>
+<span class="w">        </span><span class="c">!   ! start forward iteration (from the first item)</span>
+<span class="w">        </span><span class="c">!   IsTheEnd = Container%StartFirst(CurrItem)</span>
+<span class="w">        </span><span class="c">!   DO WHILE (.NOT.IsTheEnd)</span>
+<span class="w">        </span><span class="c">!       DoSomeThing_With_CurrItem...</span>
+<span class="w">        </span><span class="c">!       ! move to the next iteration</span>
+<span class="w">        </span><span class="c">!       IsTheEnd = Container%MoveForward(CurrItem)</span>
+<span class="w">        </span><span class="c">!   END DO</span>
+<span class="w">        </span><span class="c">!   &lt;/Code&gt;&lt;/Pre&gt;</span>
+<span class="w">        </span><span class="k">PROCEDURE</span><span class="w">   </span><span class="kd">::</span><span class="w"> </span><span class="n">MoveForward</span><span class="w">  </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">DynArr_Move2NextElm</span>
+<span class="w">        </span><span class="c">!&gt; **Type-Bound Function**: StartLast &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Purpose**:  To start the *backward* iteration and return a flag indicating</span>
+<span class="w">        </span><span class="c">!                whether the container is empty or not. &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Usage**: see *MoveBackward* procedure.</span>
+<span class="w">        </span><span class="k">PROCEDURE</span><span class="w">   </span><span class="kd">::</span><span class="w"> </span><span class="n">StartLast</span><span class="w">    </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">DynArr_Move2LastElm</span>
+<span class="w">        </span><span class="c">!&gt; **Type-Bound Function**: MoveBackward &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Purpose**:  To move to the next iteration (in reverse order) and return</span>
+<span class="w">        </span><span class="c">!                a flag indicating whether the cursor pointer has reached the</span>
+<span class="w">        </span><span class="c">!                end of the container or not. &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Usage**: &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!   The following code snippet illustrates how to typically traverse the container in reverse order.</span>
+<span class="w">        </span><span class="c">!   &lt;Pre&gt;&lt;Code style=&quot;color:MidnightBlue;&quot;&gt;</span>
+<span class="w">        </span><span class="c">!   ! start backward iteration (from the last item)</span>
+<span class="w">        </span><span class="c">!   IsEmpty = Container%StartLast()</span>
+<span class="w">        </span><span class="c">!   IF (.NOT.IsEmpty) DoSomeThing...</span>
+<span class="w">        </span><span class="c">!   DO</span>
+<span class="w">        </span><span class="c">!       ! move to the next iteration</span>
+<span class="w">        </span><span class="c">!       IsTheEnd = Container%MoveBackward()</span>
+<span class="w">        </span><span class="c">!       ! check whether we reach the end of the container or not</span>
+<span class="w">        </span><span class="c">!       IF (IsTheEnd) EXIT</span>
+<span class="w">        </span><span class="c">!       ! if not, do the task we need</span>
+<span class="w">        </span><span class="c">!       DoSomeThing...</span>
+<span class="w">        </span><span class="c">!   END DO</span>
+<span class="w">        </span><span class="c">!   &lt;/Code&gt;&lt;/Pre&gt; &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!   The following code snippet shows another way to iterate over the container in reverse order.</span>
+<span class="w">        </span><span class="c">!   &lt;Pre&gt;&lt;Code style=&quot;color:MidnightBlue;&quot;&gt;</span>
+<span class="w">        </span><span class="c">!   ! start backward iteration (from the last item)</span>
+<span class="w">        </span><span class="c">!   IsTheEnd = Container%StartLast(CurrItem)</span>
+<span class="w">        </span><span class="c">!   DO WHILE (.NOT.IsTheEnd)</span>
+<span class="w">        </span><span class="c">!       DoSomeThing_With_CurrItem...</span>
+<span class="w">        </span><span class="c">!       ! move to the next iteration</span>
+<span class="w">        </span><span class="c">!       IsTheEnd = Container%MoveBackward(CurrItem)</span>
+<span class="w">        </span><span class="c">!   END DO</span>
+<span class="w">        </span><span class="c">!   &lt;/Code&gt;&lt;/Pre&gt;</span>
+<span class="w">        </span><span class="k">PROCEDURE</span><span class="w">   </span><span class="kd">::</span><span class="w"> </span><span class="n">MoveBackward</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">DynArr_Move2PrevElm</span>
+<span class="w">        </span><span class="c">! ---------------------------------------------------------------------</span>
+<span class="w">        </span><span class="c">! -----                 Inquiry Procedures                       ------</span>
+<span class="w">        </span><span class="c">! ---------------------------------------------------------------------</span>
+<span class="w">        </span><span class="c">!&gt; **Type-Bound Function**: GetSize &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Purpose**:  To get the current size of the container. &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Usage**: &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!   ---&gt;    Size = Container%GetSize()</span>
+<span class="w">        </span><span class="k">PROCEDURE</span><span class="w">   </span><span class="kd">::</span><span class="w"> </span><span class="n">GetSize</span><span class="w">      </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">DynArr_GetSize</span>
+<span class="w">        </span><span class="c">!&gt; **Type-Bound Function**: IsEmpty &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Purpose**:  To check whether the container is empty or not. &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Usage**: &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!   ---&gt;    Flag = Container%IsEmpty() &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!   ---&gt;    IF (.NOT.Container%IsEmpty()) DoSomeThing</span>
+<span class="w">        </span><span class="k">PROCEDURE</span><span class="w">   </span><span class="kd">::</span><span class="w"> </span><span class="n">IsEmpty</span><span class="w">      </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">DynArr_IsEmpty</span>
+<span class="w">        </span><span class="c">! ---------------------------------------------------------------------</span>
+<span class="w">        </span><span class="c">! -----                 Retrieval Procedures                     ------</span>
+<span class="w">        </span><span class="c">! ---------------------------------------------------------------------</span>
+<span class="w">        </span><span class="c">!&gt; **Type-Bound Function**: PeekFirst &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Purpose**:  To get the front (first) item (without removing it from the container).</span>
+<span class="w">        </span><span class="c">!                Also, return a flag indicating whether the item is available or not. &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Usage**: &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!   ---&gt;    Success = Container%PeekFirst(Item) &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!   ---&gt;    IF (.NOT.Container%PeekFirst(Item)) DoSomething</span>
+<span class="w">        </span><span class="k">PROCEDURE</span><span class="w">   </span><span class="kd">::</span><span class="w"> </span><span class="n">PeekFirst</span><span class="w">    </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">DynArr_PeekFirst</span>
+<span class="w">        </span><span class="c">!&gt; **Type-Bound Function**: PeekLast &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Purpose**:  To get the last item (without removing it from the container).</span>
+<span class="w">        </span><span class="c">!                Also, return a flag indicating whether the item is available or not. &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Usage**: &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!   ---&gt;    Success = Container%PeekLast(Item) &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!   ---&gt;    IF (.NOT.Container%PeekLast(Item)) DoSomething</span>
+<span class="w">        </span><span class="k">PROCEDURE</span><span class="w">   </span><span class="kd">::</span><span class="w"> </span><span class="n">PeekLast</span><span class="w">     </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">DynArr_PeekLast</span>
+<span class="w">        </span><span class="c">!&gt; **Type-Bound Function**: PeekAt &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Purpose**:  To get the item (without removing it from the container) at</span>
+<span class="w">        </span><span class="c">!                the specified index where the index must be between 1 and the</span>
+<span class="w">        </span><span class="c">!                container size.  Also, return a flag indicating whether the</span>
+<span class="w">        </span><span class="c">!                item is available or not. &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Usage**: &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!   ---&gt;    Success = Container%PeekAt(Index, Item) &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!   ---&gt;    IF (.NOT.Container%PeekAt(Index, Item)) DoSomething</span>
+<span class="w">        </span><span class="k">PROCEDURE</span><span class="w">   </span><span class="kd">::</span><span class="w"> </span><span class="n">PeekAt</span><span class="w">     </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">DynArr_PeekAt</span>
+<span class="w">        </span><span class="c">!&gt; *GetAll* is a procedure deferred by the *BaseIterable* type. &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Type-Bound Function**: GetAll &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Purpose**:  To get all items (without removing them) from the container.</span>
+<span class="w">        </span><span class="c">!                Also, return a flag indicating whether the items are available. &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Usage**: &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!   ---&gt;    Success = Container%GetAll(Items) &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!   ---&gt;    IF (.NOT.Container%GetAll(Items)) DoSomething</span>
+<span class="w">        </span><span class="k">PROCEDURE</span><span class="w">   </span><span class="kd">::</span><span class="w"> </span><span class="n">GetAll</span><span class="w">       </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">DynArr_GetAll</span>
+<span class="w">        </span><span class="c">! ---------------------------------------------------------------------</span>
+<span class="w">        </span><span class="c">! -----                 Queue Procedures                         ------</span>
+<span class="w">        </span><span class="c">! ---------------------------------------------------------------------</span>
+<span class="w">        </span><span class="c">!&gt; **Type-Bound Subroutine**: EnQueue &lt;br&gt;</span>
+<span class="w">        </span><span class="c">! **Purpose**:  To add a new item to the end of the queue. &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Usage**: &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!   ---&gt;    CALL Queue%EnQueue(NewItem) &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Note**: *EnQueue* is an alias of *AddLast*.</span>
+<span class="w">        </span><span class="k">PROCEDURE</span><span class="w">   </span><span class="kd">::</span><span class="w"> </span><span class="n">EnQueue</span><span class="w">      </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">DynArr_AddLast</span>
+<span class="w">        </span><span class="c">!&gt; **Type-Bound Function**: DeQueue &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Purpose**:  To get and remove the front (first) item of the queue.</span>
+<span class="w">        </span><span class="c">!                Also, return a flag indicating whether the item is</span>
+<span class="w">        </span><span class="c">!                successfully removed. &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Usage**: &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!   ---&gt;    Success = Queue%DeQueue(Item) &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!   ---&gt;    IF (.NOT.Queue%DeQueue(Item)) DoSomething &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Note**: *DeQueue* is an alias of *RemoveFirst*.</span>
+<span class="w">        </span><span class="k">PROCEDURE</span><span class="w">   </span><span class="kd">::</span><span class="w"> </span><span class="n">DeQueue</span><span class="w">      </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">DynArr_RemoveFirst</span>
+<span class="w">        </span><span class="c">! ---------------------------------------------------------------------</span>
+<span class="w">        </span><span class="c">! -----                 Stack Procedures                         ------</span>
+<span class="w">        </span><span class="c">! ---------------------------------------------------------------------</span>
+<span class="w">        </span><span class="c">!&gt; **Type-Bound Subroutine**: Push &lt;br&gt;</span>
+<span class="w">        </span><span class="c">! **Purpose**:  To add a new item to the top of the stack. &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Usage**: &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!   ---&gt;    CALL Stack%Push(NewItem) &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Note**: *Push* is an alias of *AddLast*.</span>
+<span class="w">        </span><span class="k">PROCEDURE</span><span class="w">   </span><span class="kd">::</span><span class="w"> </span><span class="n">Push</span><span class="w">         </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">DynArr_AddLast</span>
+<span class="w">        </span><span class="c">!&gt; **Type-Bound Function**: Pop &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Purpose**:  To get and remove the top item of the stack.</span>
+<span class="w">        </span><span class="c">!                Also, return a flag indicating whether the item is</span>
+<span class="w">        </span><span class="c">!                successfully removed. &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Usage**: &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!   ---&gt;    Success = Stack%Pop(Item) &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!   ---&gt;    IF (.NOT.Stack%Pop(Item)) DoSomething &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Note**: *Pop* is an alias of *RemoveLast*.</span>
+<span class="w">        </span><span class="k">PROCEDURE</span><span class="w">   </span><span class="kd">::</span><span class="w"> </span><span class="n">Pop</span><span class="w">          </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">DynArr_RemoveLast</span>
+<span class="w">        </span><span class="c">!&gt; **Type-Bound Function**: PeekTop &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Purpose**:  To get the last item (without removing it from the container).</span>
+<span class="w">        </span><span class="c">!                Also, return a flag indicating whether the item is available or not. &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Usage**: &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!   ---&gt;    Success = Container%PeekTop(Item) &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!   ---&gt;    IF (.NOT.Container%PeekTop(Item)) DoSomething &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Note**: *PeekTop* is an alias of *PeekLast*.</span>
+<span class="w">        </span><span class="k">PROCEDURE</span><span class="w">   </span><span class="kd">::</span><span class="w"> </span><span class="n">PeekTop</span><span class="w">      </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">DynArr_PeekLast</span>
+<span class="w">        </span><span class="c">! ---------------------------------------------------------------------</span>
+<span class="w">        </span><span class="c">! -----             Final Procedure                               -----</span>
+<span class="w">        </span><span class="c">! ---------------------------------------------------------------------</span>
+<span class="w">        </span><span class="c">!&gt; To perform finalization of the container.</span>
+<span class="w">        </span><span class="k">FINAL</span><span class="w">       </span><span class="kd">::</span><span class="w"> </span><span class="n">DynArr_Finalizer</span>
+<span class="w">        </span><span class="c">! ---------------------------------------------------------------------</span>
+<span class="w">    </span><span class="k">END TYPE </span><span class="n">DArrObject</span>
+</pre></div>
+
+    </section>
+    
+    </div>
+  </div>
+
+      <hr>
+    </div> <!-- /container -->
+    <footer>
+      <div class="container">
+        <div class="row justify-content-between">
+          <div class="col"><p>eXPerimental Fortran Library (XpfLib) Documentation was developed by Niranama<br>&copy; 2024 
+</p>
+          </div>
+          <div class="col">
+            <p class="text-end">
+              Documentation generated by
+              <a href="https://github.com/Fortran-FOSS-Programmers/ford">FORD</a>
+            </p>
+          </div>
+        </div>
+        <br>
+      </div> <!-- /container -->
+    </footer>
+
+    <!-- Bootstrap core JavaScript -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>    
+
+    <!-- MathJax JavaScript
+             ================================================== -->
+             <!-- Placed at the end of the document so the pages load faster -->
+        <script type="text/x-mathjax-config">
+          MathJax.Hub.Config({
+          TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } },
+          jax: ['input/TeX','input/MathML','output/HTML-CSS'],
+          extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']
+          });
+        </script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+          <script src="../tipuesearch/tipuesearch_content.js"></script>
+          <script src="../tipuesearch/tipuesearch_set.js"></script>
+          <script src="../tipuesearch/tipuesearch.js"></script>
+
+  </body>
+</html>

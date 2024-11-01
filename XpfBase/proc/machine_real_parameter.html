@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta name="description" content="Experimental Fortran Package - Base Modules and Classes">
+    <meta name="author" content="Niranama" >
+    <link rel="icon" href="../favicon.png">
+
+    <title>Machine_Real_Parameter &ndash; eXPerimental Fortran Library (XpfLib) Documentation</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link href="../css/pygments.css" rel="stylesheet">
+    <link href="../css/font-awesome.min.css" rel="stylesheet">
+    <link href="../css/local.css" rel="stylesheet">
+      <link  href="../tipuesearch/tipuesearch.css" rel="stylesheet">
+
+    <script src="https://code.jquery.com/jquery-3.7.0.slim.min.js" integrity="sha256-tG5mcZUtJsZvyKAxYLVXrmjKBVLd6VpVccqz/r4ypFE=" crossorigin="anonymous"></script>
+  </head>
+
+  <body>
+
+    <!-- Fixed navbar -->
+    <div class="container-fluid mb-sm-4 mb-xl-2">
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container">
+          <a class="navbar-brand" href="../index.html">eXPerimental Fortran Library (XpfLib) Documentation </a>
+          <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar"
+                  aria-expanded="false" aria-controls="navbar" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon">
+          </button>
+
+          <div id="navbar" class="navbar-collapse collapse">
+            <ul class="navbar-nav">
+                  <li class="nav-item">
+                    <a class="nav-link" href="../lists/files.html">Source Files</a>
+                  </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../lists/modules.html">Modules</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../lists/procedures.html">Procedures</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../lists/absint.html">Abstract Interfaces</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../lists/types.html">Derived Types</a>
+                </li>
+            </ul>
+              <div class="d-flex align-items-end flex-grow-1">
+                <form action="../search.html" role="search" class="ms-auto">
+                  <input type="text" class="form-control" aria-label="Search" placeholder="Search" name="q" id="tipue_search_input" autocomplete="off" required>
+                </form>
+              </div>
+          </div><!--/.nav-collapse -->
+        </div>
+      </nav>
+    </div>
+
+    <div class="container">
+  <div class="row">
+    <h1>Machine_Real_Parameter
+      <small>Function</small>
+      
+    </h1>
+      <div class="container p-2 mb-4 bg-light border rounded-3">
+    <div class="row align-items-center justify-content-between" id="info-bar">
+      <div class="col">
+        <ul class="list-inline" style="margin-bottom:0px;display:inline">
+
+            <li class="list-inline-item" id="statements"><i class="fa fa-list-ol"></i>
+              <a data-bs-toggle="tooltip"
+                 data-bs-placement="bottom" data-html="true"
+                 title=" 0.1% of total for procedures.">18 statements</a>
+            </li>
+
+            <li class="list-inline-item" id="source-file">
+              <i class="fa fa-code"></i>
+              <a href="../src/MBase_MiscUtil.f90"> Source File</a>
+            </li>
+        </ul>
+      </div>
+      <div class="col">
+        <nav aria-label="breadcrumb">
+          <ol class="breadcrumb justify-content-end mb-0">
+                <li class="breadcrumb-item"><a href='../sourcefile/mbase_miscutil.f90.html'>MBase_MiscUtil.f90</a></li>
+                <li class="breadcrumb-item"><a href='../module/mbase_miscutil.html'>MBase_MiscUtil</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Machine_Real_Parameter</li>
+          </ol>
+        </nav>
+      </div>
+    </div>
+  </div>
+  <script>
+    $(function () {
+    $('[data-bs-toggle="tooltip"]').tooltip()
+    })
+  </script>
+
+  </div>
+  
+  <div class="row">
+    <div class="col-md-3 hidden-xs hidden-sm visible-md visible-lg">
+      <div id="sidebar">
+      <h3>Contents</h3>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+    <div class="card card-primary">
+      <div class="card-header text-left"><h3 class="card-title">Source Code</h3></div>
+      <div class="list-group">
+        <a class="list-group-item" href="../proc/machine_real_parameter.html#src">Machine_Real_Parameter</a>
+      </div>
+    </div>
+
+
+  </div>
+
+    </div>
+    
+    <div class="col-md-9" id='text'>
+    <h2>public pure function Machine_Real_Parameter(Index) result(Number)  
+</h2>
+    
+
+    <p>To return a floating point machine dependent parameter
+ depending on the specified index.</p>
+
+
+    <h3>Arguments</h3>
+        <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-index~6"></span>
+              integer(kind=kInt32),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Index</strong></td>
+            <td>
+                
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+      <h3>Return Value
+        <small>
+          <span class="anchor" id="variable-number~52"></span>
+          real(kind=kDouble)
+        </small>
+      </h3>
+      
+    <br>
+
+
+    
+    
+
+    
+    
+
+
+
+    
+    <section>
+    <h2><span class="anchor" id="src"></span>Source Code</h2>
+    <div class="hl codehilite"><pre><span></span><span class="k">PURE FUNCTION </span><span class="n">Machine_Real_Parameter</span><span class="p">(</span><span class="nb">Index</span><span class="p">)</span><span class="w"> </span><span class="k">RESULT</span><span class="p">(</span><span class="n">Number</span><span class="p">)</span>
+
+<span class="c">!** PURPOSE OF THIS SUBROUTINE:</span>
+<span class="w">    </span><span class="c">!^ To return a floating point machine dependent parameter</span>
+<span class="w">    </span><span class="c">!  depending on the specified index.</span>
+
+<span class="c">!** METHODOLOGY:</span>
+<span class="w">    </span><span class="c">! This routine can be used to obtain machine-dependent parameters for the</span>
+<span class="w">    </span><span class="c">! local machine environment.  It is a function subprogram with one</span>
+<span class="w">    </span><span class="c">! (input) argument, and can be referenced as follows:</span>
+<span class="w">    </span><span class="c">!</span>
+<span class="w">    </span><span class="c">! Number = MachineRPar(Index)</span>
+<span class="w">    </span><span class="c">!</span>
+<span class="w">    </span><span class="c">! where Index = 1, ..., 5.  The (output) value of Number above is determined by</span>
+<span class="w">    </span><span class="c">! the (input) value of Index.  The results for various values of Index are</span>
+<span class="w">    </span><span class="c">! discussed below.</span>
+<span class="w">    </span><span class="c">!</span>
+<span class="w">    </span><span class="c">! MachineRPar(1) = B**(EMIN-1), the smallest positive magnitude.</span>
+<span class="w">    </span><span class="c">! MachineRPar(2) = B**EMAX*(1 - B**(-T)), the largest magnitude.</span>
+<span class="w">    </span><span class="c">! MachineRPar(3) = B**(-T), the smallest relative spacing.</span>
+<span class="w">    </span><span class="c">! MachineRPar(4) = B**(1-T), the largest relative spacing.</span>
+<span class="w">    </span><span class="c">! MachineRPar(5) = LOG10(B)</span>
+<span class="w">    </span><span class="c">!</span>
+<span class="w">    </span><span class="c">! where B is the base for floating point number,</span>
+<span class="w">    </span><span class="c">!       T is the number of base B digits</span>
+<span class="w">    </span><span class="c">!       EMIN is the smallest exponent E, and</span>
+<span class="w">    </span><span class="c">!       EMAX is the largest exponent E.</span>
+
+<span class="c">!** REFERENCE:</span>
+<span class="w">    </span><span class="c">! P. A. Fox, A. D. Hall and N. L. Schryer, Framework for</span>
+<span class="w">    </span><span class="c">!   a portable library, ACM Transactions on Mathematical</span>
+<span class="w">    </span><span class="c">!   Software 4, 2 (June 1978), pp. 177-188.</span>
+
+<span class="c">!** SUBROUTINE ARGUMENT DECLARATIONS:</span>
+<span class="w">    </span><span class="n">tSInt32</span><span class="p">,</span><span class="w">  </span><span class="k">INTENT</span><span class="p">(</span><span class="n">IN</span><span class="p">)</span><span class="w">    </span><span class="kd">::</span><span class="w"> </span><span class="nb">Index</span>
+<span class="nb">    </span><span class="n">tFloat</span><span class="w">                  </span><span class="kd">::</span><span class="w"> </span><span class="n">Number</span>
+
+<span class="c">!** SUBROUTINE PARAMETER DECLARATIONS:</span>
+<span class="w">    </span><span class="n">tSInt32</span><span class="p">,</span><span class="w">  </span><span class="k">PARAMETER</span><span class="w">     </span><span class="kd">::</span><span class="w"> </span><span class="n">BaseNum</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">RADIX</span><span class="p">(</span><span class="n">One</span><span class="p">)</span><span class="w"> </span><span class="c">! the base for floating point (double precision) number</span>
+
+<span class="c">!** SUBROUTINE INTERNAL VARIABLE DECLARATIONS:</span>
+<span class="w">    </span><span class="c">! na</span>
+
+<span class="c">! FLOW</span>
+
+<span class="w">    </span><span class="k">SELECT CASE</span><span class="w"> </span><span class="p">(</span><span class="nb">Index</span><span class="p">)</span>
+<span class="w">    </span><span class="k">CASE</span><span class="w"> </span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+<span class="w">        </span><span class="c">! the smallest positive magnitude</span>
+<span class="w">        </span><span class="n">Number</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Small</span>
+<span class="w">    </span><span class="k">CASE</span><span class="w"> </span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+<span class="w">        </span><span class="c">! the largest magnitude</span>
+<span class="w">        </span><span class="n">Number</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Large</span>
+<span class="w">    </span><span class="k">CASE</span><span class="w"> </span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
+<span class="w">        </span><span class="c">! the smallest relative spacing</span>
+<span class="w">        </span><span class="n">Number</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">MachineEps</span><span class="o">/</span><span class="kt">REAL</span><span class="p">(</span><span class="n">BaseNum</span><span class="p">,</span><span class="w"> </span><span class="nb">KIND</span><span class="o">=</span><span class="n">kFloat</span><span class="p">)</span>
+<span class="w">    </span><span class="k">CASE</span><span class="w"> </span><span class="p">(</span><span class="mi">4</span><span class="p">)</span>
+<span class="w">        </span><span class="c">! the largest relative spacing</span>
+<span class="w">        </span><span class="n">Number</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">MachineEps</span>
+<span class="w">    </span><span class="k">CASE</span><span class="w"> </span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
+<span class="w">        </span><span class="c">! LOG10(B)</span>
+<span class="w">        </span><span class="n">Number</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">LOG10</span><span class="p">(</span><span class="kt">REAL</span><span class="p">(</span><span class="n">BaseNum</span><span class="p">,</span><span class="w"> </span><span class="nb">KIND</span><span class="o">=</span><span class="n">kFloat</span><span class="p">))</span>
+<span class="w">    </span><span class="k">END SELECT</span>
+
+<span class="k">    RETURN</span>
+
+<span class="k">END FUNCTION </span><span class="n">Machine_Real_Parameter</span>
+</pre></div>
+
+    </section>
+    <br>
+    
+    </div>
+  </div>
+
+      <hr>
+    </div> <!-- /container -->
+    <footer>
+      <div class="container">
+        <div class="row justify-content-between">
+          <div class="col"><p>eXPerimental Fortran Library (XpfLib) Documentation was developed by Niranama<br>&copy; 2024 
+</p>
+          </div>
+          <div class="col">
+            <p class="text-end">
+              Documentation generated by
+              <a href="https://github.com/Fortran-FOSS-Programmers/ford">FORD</a>
+            </p>
+          </div>
+        </div>
+        <br>
+      </div> <!-- /container -->
+    </footer>
+
+    <!-- Bootstrap core JavaScript -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>    
+
+    <!-- MathJax JavaScript
+             ================================================== -->
+             <!-- Placed at the end of the document so the pages load faster -->
+        <script type="text/x-mathjax-config">
+          MathJax.Hub.Config({
+          TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } },
+          jax: ['input/TeX','input/MathML','output/HTML-CSS'],
+          extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']
+          });
+        </script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+          <script src="../tipuesearch/tipuesearch_content.js"></script>
+          <script src="../tipuesearch/tipuesearch_set.js"></script>
+          <script src="../tipuesearch/tipuesearch.js"></script>
+
+  </body>
+</html>

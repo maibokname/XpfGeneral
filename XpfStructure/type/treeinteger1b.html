@@ -1,0 +1,2620 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta name="description" content="Experimental Fortran Package - Data Structures">
+    <meta name="author" content="Niranama" >
+    <link rel="icon" href="../favicon.png">
+
+    <title>TreeInteger1B &ndash; eXPerimental Fortran Library (XpfLib) Documentation </title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link href="../css/pygments.css" rel="stylesheet">
+    <link href="../css/font-awesome.min.css" rel="stylesheet">
+    <link href="../css/local.css" rel="stylesheet">
+      <link  href="../tipuesearch/tipuesearch.css" rel="stylesheet">
+
+    <script src="https://code.jquery.com/jquery-3.7.0.slim.min.js" integrity="sha256-tG5mcZUtJsZvyKAxYLVXrmjKBVLd6VpVccqz/r4ypFE=" crossorigin="anonymous"></script>
+  </head>
+
+  <body>
+
+    <!-- Fixed navbar -->
+    <div class="container-fluid mb-sm-4 mb-xl-2">
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container">
+          <a class="navbar-brand" href="../index.html">eXPerimental Fortran Library (XpfLib) Documentation </a>
+          <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar"
+                  aria-expanded="false" aria-controls="navbar" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon">
+          </button>
+
+          <div id="navbar" class="navbar-collapse collapse">
+            <ul class="navbar-nav">
+                  <li class="nav-item">
+                    <a class="nav-link" href="../lists/files.html">Source Files</a>
+                  </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../lists/modules.html">Modules</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../lists/types.html">Derived Types</a>
+                </li>
+            </ul>
+              <div class="d-flex align-items-end flex-grow-1">
+                <form action="../search.html" role="search" class="ms-auto">
+                  <input type="text" class="form-control" aria-label="Search" placeholder="Search" name="q" id="tipue_search_input" autocomplete="off" required>
+                </form>
+              </div>
+          </div><!--/.nav-collapse -->
+        </div>
+      </nav>
+    </div>
+
+    <div class="container">
+  <div class="row">
+    <h1>TreeInteger1B
+      <small>Derived Type</small>
+      
+    </h1>
+      <div class="container p-2 mb-4 bg-light border rounded-3">
+    <div class="row align-items-center justify-content-between" id="info-bar">
+      <div class="col">
+        <ul class="list-inline" style="margin-bottom:0px;display:inline">
+
+            <li class="list-inline-item" id="statements"><i class="fa fa-list-ol"></i>
+              <a data-bs-toggle="tooltip"
+                 data-bs-placement="bottom" data-html="true"
+                 title="<p> 1.6% of total for derived types.</p>Including implementation: 689 statements,  2.0% of total for derived types.">42 statements</a>
+            </li>
+
+            <li class="list-inline-item" id="source-file">
+              <i class="fa fa-code"></i>
+              <a href="../src/MClass_TreeInteger1B.f90"> Source File</a>
+            </li>
+        </ul>
+      </div>
+      <div class="col">
+        <nav aria-label="breadcrumb">
+          <ol class="breadcrumb justify-content-end mb-0">
+                <li class="breadcrumb-item"><a href='../sourcefile/mclass_treeinteger1b.f90.html'>MClass_TreeInteger1B.f90</a></li>
+                <li class="breadcrumb-item"><a href='../module/mclass_treeinteger1b.html'>MClass_TreeInteger1B</a></li>
+            <li class="breadcrumb-item active" aria-current="page">TreeInteger1B</li>
+          </ol>
+        </nav>
+      </div>
+    </div>
+  </div>
+  <script>
+    $(function () {
+    $('[data-bs-toggle="tooltip"]').tooltip()
+    })
+  </script>
+
+  </div>
+  
+  <div class="row">
+    <div class="col-md-3 hidden-xs hidden-sm visible-md visible-lg">
+      <div id="sidebar">
+      <h3>Contents</h3>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+      <div class="card mb-4">
+      <a data-bs-toggle="collapse" href="#fins-0"
+         aria-expanded="false" aria-controls="fins-0">
+         <h4 class="card-header bg-primary text-white">Finalization Procedures</h4>
+      </a>
+      <div id="fins-0" class="collapse">
+        <div class="list-group list-group-flush">
+            <a class="list-group-item" href="../type/treeinteger1b.html#finalproc-bstree_finalizer~5">BSTree_Finalizer</a>
+        </div>
+      </div>
+    </div>
+
+      <div class="card mb-4">
+      <a data-bs-toggle="collapse" href="#boundprocs-0"
+         aria-expanded="false" aria-controls="boundprocs-0">
+         <h4 class="card-header bg-primary text-white">Type-Bound Procedures</h4>
+      </a>
+      <div id="boundprocs-0" class="collapse">
+        <div class="list-group list-group-flush">
+            <a class="list-group-item" href="../type/treeinteger1b.html#boundprocedure-construct~35">Construct</a>
+            <a class="list-group-item" href="../type/treeinteger1b.html#boundprocedure-destruct~36">Destruct</a>
+            <a class="list-group-item" href="../type/treeinteger1b.html#boundprocedure-insert~27">Insert</a>
+            <a class="list-group-item" href="../type/treeinteger1b.html#boundprocedure-remove~28">Remove</a>
+            <a class="list-group-item" href="../type/treeinteger1b.html#boundprocedure-removemin~7">RemoveMin</a>
+            <a class="list-group-item" href="../type/treeinteger1b.html#boundprocedure-removemax~7">RemoveMax</a>
+            <a class="list-group-item" href="../type/treeinteger1b.html#boundprocedure-startfirst~32">StartFirst</a>
+            <a class="list-group-item" href="../type/treeinteger1b.html#boundprocedure-moveforward~32">MoveForward</a>
+            <a class="list-group-item" href="../type/treeinteger1b.html#boundprocedure-startlast~19">StartLast</a>
+            <a class="list-group-item" href="../type/treeinteger1b.html#boundprocedure-movebackward~19">MoveBackward</a>
+            <a class="list-group-item" href="../type/treeinteger1b.html#boundprocedure-isempty~70">IsEmpty</a>
+            <a class="list-group-item" href="../type/treeinteger1b.html#boundprocedure-contain~16">Contain</a>
+            <a class="list-group-item" href="../type/treeinteger1b.html#boundprocedure-getsize~36">GetSize</a>
+            <a class="list-group-item" href="../type/treeinteger1b.html#boundprocedure-getrangesize~7">GetRangeSize</a>
+            <a class="list-group-item" href="../type/treeinteger1b.html#boundprocedure-getvalue~14">GetValue</a>
+            <a class="list-group-item" href="../type/treeinteger1b.html#boundprocedure-getminkey~7">GetMinKey</a>
+            <a class="list-group-item" href="../type/treeinteger1b.html#boundprocedure-getmaxkey~7">GetMaxKey</a>
+            <a class="list-group-item" href="../type/treeinteger1b.html#boundprocedure-getkeys~15">GetKeys</a>
+            <a class="list-group-item" href="../type/treeinteger1b.html#boundprocedure-floor~7">Floor</a>
+            <a class="list-group-item" href="../type/treeinteger1b.html#boundprocedure-ceiling~7">Ceiling</a>
+            <a class="list-group-item" href="../type/treeinteger1b.html#boundprocedure-select~7">Select</a>
+            <a class="list-group-item" href="../type/treeinteger1b.html#boundprocedure-getrank~7">GetRank</a>
+            <a class="list-group-item" href="../type/treeinteger1b.html#boundprocedure-check~6">Check</a>
+        </div>
+      </div>
+    </div>
+
+  
+  
+
+
+  </div>
+
+    </div>
+    
+    <div class="col-md-9" id='text'>
+      <h2>type, public :: TreeInteger1B</h2>
+    <p><em>TreeInteger1B</em> is a container type that employs a left-leaning red-black (RB) tree
+  implementation to provide common operations for an ordered symbol table.</p>
+    <br>
+
+    
+
+      <section>
+        <h2>Finalization Procedures</h2>
+            <div class="card">
+    <div class="card-header codesum">
+      <span class="anchor" id="finalproc-bstree_finalizer~5"></span>
+      <h3>final :: <strong>BSTree_Finalizer</strong> </h3>
+    </div>
+    <div class="card-body">
+      
+      <p>To perform finalization of the tree.</p>
+    </div>
+    <ul class="list-group">
+      <li class="list-group-item">
+            <h3>
+    private  subroutine BSTree_Finalizer(Tree)  
+
+    </h3>
+  <p>To perform finalization of the object.</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-tree~135"></span>
+              type(<a href='../type/treeinteger1b.html'>TreeInteger1B</a>),
+            </td>
+<td>intent(inout)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Tree</strong></td>
+            <td>
+                <p>tree</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+      </li>
+    </ul>
+  </div>
+
+      </section>
+      <br>
+
+      <section>
+        <h2>Type-Bound Procedures</h2>
+          <div class="row">
+              <div class="card mt-3">
+    <div class="card-header codesum">
+      <span class="anchor" id="boundprocedure-construct~35"></span>
+      <h3>
+          procedure, public ::
+  <strong>Construct</strong> => BSTree_ConstructByArray
+        
+      </h3>
+    </div>
+      <div class="card-body">
+        
+        <p><strong>Type-Bound Subroutine</strong>: Construct <br>
+<strong>Purpose</strong>:  To construct a tree from arrays of keys and values.  <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    CALL Tree%Construct(10, KeyArr, ValArr)</p>
+      </div>
+    <ul class="list-group">
+        <li class="list-group-item">
+                  <h3>
+    private  subroutine BSTree_ConstructByArray(Tree, N, Keys, Values)  
+</h3>
+
+  <p>To construct a tree based on specified arrays.</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(<a href='../type/treeinteger1b.html'>TreeInteger1B</a>),
+            </td>
+<td>intent(inout)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Tree</strong></td>
+            <td>
+                <p>tree</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              integer(kind=kInt32),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>N</strong></td>
+            <td>
+                <p>number of keys</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              integer(kind=kInt8),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Keys</strong>(N)</td>
+            <td>
+                <p>an array of keys</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(*),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Values</strong>(N)</td>
+            <td>
+                <p>an array of associated values</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+        </li>
+    </ul>
+  </div>
+
+          </div>
+          <div class="row">
+              <div class="card mt-3">
+    <div class="card-header codesum">
+      <span class="anchor" id="boundprocedure-destruct~36"></span>
+      <h3>
+          generic, public ::
+  <strong>Destruct</strong> => BSTree_Destructor_I, BSTree_Destructor_II
+        
+      </h3>
+    </div>
+      <div class="card-body">
+        
+        <p><strong>Type-Bound Subroutine</strong>: Destruct <br>
+ <strong>Purpose</strong>:  To remove all key-value pairs from the tree and optionally to
+               retrieve stored keys and values. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    CALL Tree%Destruct() <br>
+  ---&gt;    CALL Tree%Destruct(KeyQueue, ValQueue) <br></p>
+      </div>
+    <ul class="list-group">
+        <li class="list-group-item">
+                  <h3>
+    private  subroutine BSTree_Destructor_I(Tree)  
+</h3>
+
+  <p>To destruct a tree.</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(<a href='../type/treeinteger1b.html'>TreeInteger1B</a>),
+            </td>
+<td>intent(inout)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Tree</strong></td>
+            <td>
+                <p>tree</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+        </li>
+        <li class="list-group-item">
+                  <h3>
+    private  subroutine BSTree_Destructor_II(Tree, KeyQ, ValueQ)  
+</h3>
+
+  <p>To destruct a tree and get its pair data.</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(<a href='../type/treeinteger1b.html'>TreeInteger1B</a>),
+            </td>
+<td>intent(inout)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Tree</strong></td>
+            <td>
+                <p>tree</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              type(<a href='../type/listinteger1b.html'>ListInteger1B</a>),
+            </td>
+<td>intent(out)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>KeyQ</strong></td>
+            <td>
+                <p>a queue of stored keys</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              type(<a href='../type/listanytype.html'>ListAnyType</a>),
+            </td>
+<td>intent(out)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>ValueQ</strong></td>
+            <td>
+                <p>a queue of stored values</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+        </li>
+    </ul>
+  </div>
+
+          </div>
+          <div class="row">
+              <div class="card mt-3">
+    <div class="card-header codesum">
+      <span class="anchor" id="boundprocedure-insert~27"></span>
+      <h3>
+          procedure, public ::
+  <strong>Insert</strong> => BSTree_Insert
+        
+      </h3>
+    </div>
+      <div class="card-body">
+        
+        <p><strong>Type-Bound Subroutine</strong>: Insert <br>
+ <strong>Purpose</strong>:  To insert the specified key-value pair to the tree. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    CALL Tree%Insert(Key, Value) <br></p>
+      </div>
+    <ul class="list-group">
+        <li class="list-group-item">
+                  <h3>
+    private  subroutine BSTree_Insert(Tree, Key, Value)  
+</h3>
+
+  <p>To insert the given key-value pair into the tree.
+ If the tree already contains the specified key, the
+ old value is replaced with the new one.</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(<a href='../type/treeinteger1b.html'>TreeInteger1B</a>),
+            </td>
+<td>intent(inout)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Tree</strong></td>
+            <td>
+                <p>tree</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              integer(kind=kInt8),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Key</strong></td>
+            <td>
+                <p>key to be inserted</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(*),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Value</strong></td>
+            <td>
+                <p>value to be inserted</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+        </li>
+    </ul>
+  </div>
+
+          </div>
+          <div class="row">
+              <div class="card mt-3">
+    <div class="card-header codesum">
+      <span class="anchor" id="boundprocedure-remove~28"></span>
+      <h3>
+          procedure, public ::
+  <strong>Remove</strong> => BSTree_Remove
+        
+      </h3>
+    </div>
+      <div class="card-body">
+        
+        <p><strong>Type-Bound Subroutine</strong>: Remove <br>
+ <strong>Purpose</strong>:  To remove the specified key (and its associated value) from the tree
+      and return a flag indicating whether the key-value pair is successfully removed
+      or not.  Optionally, the associated value of the specified key can be retrieved. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    Flag = Tree%Remove(Key) <br>
+  ---&gt;    IF (.NOT.Tree%Remove(Key, Value)) DoSomething <br></p>
+      </div>
+    <ul class="list-group">
+        <li class="list-group-item">
+                  <h3>
+    private  function BSTree_Remove(Tree, Key, Value) result(Flag)  
+</h3>
+
+  <p>To remove the specified key and its associated value from the tree.
+ Optionally, to retrieve the associated value of the specified key.</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(<a href='../type/treeinteger1b.html'>TreeInteger1B</a>),
+            </td>
+<td>intent(inout)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Tree</strong></td>
+            <td>
+                <p>tree</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              integer(kind=kInt8),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Key</strong></td>
+            <td>
+                <p>key</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(*),
+            </td>
+<td>intent(out),</td>
+              <td>optional,</td>            <td>
+              ALLOCATABLE
+            </td>
+            <td>::</td>
+            <td><strong>Value</strong></td>
+            <td>
+                <p>associated value</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+    <h4>
+    Return Value
+    <small>logical</small>
+    </h4>
+    <p>flag indicating whether the specified key and its associated
+ value are successfully removed or not.</p>
+
+        </li>
+    </ul>
+  </div>
+
+          </div>
+          <div class="row">
+              <div class="card mt-3">
+    <div class="card-header codesum">
+      <span class="anchor" id="boundprocedure-removemin~7"></span>
+      <h3>
+          procedure, public ::
+  <strong>RemoveMin</strong> => BSTree_RemoveMin
+        
+      </h3>
+    </div>
+      <div class="card-body">
+        
+        <p><strong>Type-Bound Subroutine</strong>: RemoveMin <br>
+ <strong>Purpose</strong>:  To remove the smallest key (and its associated value) from the tree
+      and return a flag indicating whether the key-value pair is successfully removed
+      or not.  Optionally, the smallest key and/or its associated value can be retrieved. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    Flag = Tree%RemoveMin() <br>
+  ---&gt;    Flag = Tree%RemoveMin(Key) <br>
+  ---&gt;    IF (.NOT.Tree%RemoveMin(Value=Value)) DoSomething <br>
+  ---&gt;    IF (.NOT.Tree%RemoveMin(Key, Value)) DoSomething <br></p>
+      </div>
+    <ul class="list-group">
+        <li class="list-group-item">
+                  <h3>
+    private  function BSTree_RemoveMin(Tree, Key, Value) result(Flag)  
+</h3>
+
+  <p>To remove the smallest key and its associated value from the tree.
+ Optionally, to retrieve the smallest key and its the associated value.</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(<a href='../type/treeinteger1b.html'>TreeInteger1B</a>),
+            </td>
+<td>intent(inout)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Tree</strong></td>
+            <td>
+                <p>tree</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              integer(kind=kInt8),
+            </td>
+<td>intent(out),</td>
+              <td>optional</td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Key</strong></td>
+            <td>
+                <p>smallest key</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(*),
+            </td>
+<td>intent(out),</td>
+              <td>optional,</td>            <td>
+              ALLOCATABLE
+            </td>
+            <td>::</td>
+            <td><strong>Value</strong></td>
+            <td>
+                <p>associated value</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+    <h4>
+    Return Value
+    <small>logical</small>
+    </h4>
+    <p>flag indicating whether the specified key and its associated
+ value are successfully removed or not.</p>
+
+        </li>
+    </ul>
+  </div>
+
+          </div>
+          <div class="row">
+              <div class="card mt-3">
+    <div class="card-header codesum">
+      <span class="anchor" id="boundprocedure-removemax~7"></span>
+      <h3>
+          procedure, public ::
+  <strong>RemoveMax</strong> => BSTree_RemoveMax
+        
+      </h3>
+    </div>
+      <div class="card-body">
+        
+        <p><strong>Type-Bound Subroutine</strong>: RemoveMax <br>
+ <strong>Purpose</strong>:  To remove the largest key (and its associated value) from the tree
+      and return a flag indicating whether the key-value pair is successfully removed
+      or not.  Optionally, the largest key and/or its associated valuecan be retrieved. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    Flag = Tree%RemoveMax() <br>
+  ---&gt;    Flag = Tree%RemoveMax(Key) <br>
+  ---&gt;    IF (.NOT.Tree%RemoveMax(Value=Value)) DoSomething <br>
+  ---&gt;    IF (.NOT.Tree%RemoveMax(Key, Value)) DoSomething <br></p>
+      </div>
+    <ul class="list-group">
+        <li class="list-group-item">
+                  <h3>
+    private  function BSTree_RemoveMax(Tree, Key, Value) result(Flag)  
+</h3>
+
+  <p>To remove the largest key and its associated value from the tree.
+ Optionally, to retrieve the largest key and its associated value.</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(<a href='../type/treeinteger1b.html'>TreeInteger1B</a>),
+            </td>
+<td>intent(inout)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Tree</strong></td>
+            <td>
+                <p>tree</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              integer(kind=kInt8),
+            </td>
+<td>intent(out),</td>
+              <td>optional</td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Key</strong></td>
+            <td>
+                <p>largest key</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(*),
+            </td>
+<td>intent(out),</td>
+              <td>optional,</td>            <td>
+              ALLOCATABLE
+            </td>
+            <td>::</td>
+            <td><strong>Value</strong></td>
+            <td>
+                <p>associated value</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+    <h4>
+    Return Value
+    <small>logical</small>
+    </h4>
+    <p>flag indicating whether the specified key and its associated
+ value are successfully removed or not.</p>
+
+        </li>
+    </ul>
+  </div>
+
+          </div>
+          <div class="row">
+              <div class="card mt-3">
+    <div class="card-header codesum">
+      <span class="anchor" id="boundprocedure-startfirst~32"></span>
+      <h3>
+          procedure, public ::
+  <strong>StartFirst</strong> => BSTree_Move2First
+        
+      </h3>
+    </div>
+      <div class="card-body">
+        
+        <p><strong>Type-Bound Function</strong>: StartFirst <br>
+ <strong>Purpose</strong>:  To start an iteration (at a node with the smallest key) and return a flag
+               indicating whether the tree is empty or not. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    IsEmpty = Tree%StartFirst() <br>
+  ---&gt;    IsEmpty = Tree%StartFirst(FirstKey) <br>
+  ---&gt;    IsEmpty = Tree%StartFirst(Value=FirstVal) <br>
+  ---&gt;    IsEmpty = Tree%StartFirst(FirstKey, FirstVal)</p>
+      </div>
+    <ul class="list-group">
+        <li class="list-group-item">
+                  <h3>
+    private  function BSTree_Move2First(Tree, Key, Value) result(EmptyTree)  
+</h3>
+
+  <p>To restart the iteration at the node with smallest key (and optionally to retrieve
+ the key and value of that node if requested).</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(<a href='../type/treeinteger1b.html'>TreeInteger1B</a>),
+            </td>
+<td>intent(inout)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Tree</strong></td>
+            <td>
+                <p>tree</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              integer(kind=kInt8),
+            </td>
+<td>intent(out),</td>
+              <td>optional</td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Key</strong></td>
+            <td>
+                <p>the smallest key</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(*),
+            </td>
+<td>intent(out),</td>
+              <td>optional,</td>            <td>
+              ALLOCATABLE
+            </td>
+            <td>::</td>
+            <td><strong>Value</strong></td>
+            <td>
+                <p>associated value</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+    <h4>
+    Return Value
+    <small>logical</small>
+    </h4>
+    <p>true if the tree is empty</p>
+
+        </li>
+    </ul>
+  </div>
+
+          </div>
+          <div class="row">
+              <div class="card mt-3">
+    <div class="card-header codesum">
+      <span class="anchor" id="boundprocedure-moveforward~32"></span>
+      <h3>
+          procedure, public ::
+  <strong>MoveForward</strong> => BSTree_Move2NextPair
+        
+      </h3>
+    </div>
+      <div class="card-body">
+        
+        <p><strong>Type-Bound Function</strong>: MoveForward <br>
+ <strong>Purpose</strong>:  To move to the next key-value pair and return a flag indicating whether
+               the cursor pointer has reached the end of the tree or not. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    IsTheEnd = Tree%MoveForward() <br>
+  ---&gt;    IsTheEnd = Tree%MoveForward(NextKey) <br>
+  ---&gt;    IsTheEnd = Tree%MoveForward(Value=NextVal) <br>
+  ---&gt;    IsTheEnd = Tree%MoveForward(NextKey, NextVal)</p>
+      </div>
+    <ul class="list-group">
+        <li class="list-group-item">
+                  <h3>
+    private  function BSTree_Move2NextPair(Tree, Key, Value) result(EndOfTree)  
+</h3>
+
+  <p>To move to the next node in inorder traversal (and optionally to retrieve
+ the key and value of the next node if requested).</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(<a href='../type/treeinteger1b.html'>TreeInteger1B</a>),
+            </td>
+<td>intent(inout)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Tree</strong></td>
+            <td>
+                <p>tree</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              integer(kind=kInt8),
+            </td>
+<td>intent(out),</td>
+              <td>optional</td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Key</strong></td>
+            <td>
+                <p>key of the next node</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(*),
+            </td>
+<td>intent(out),</td>
+              <td>optional,</td>            <td>
+              ALLOCATABLE
+            </td>
+            <td>::</td>
+            <td><strong>Value</strong></td>
+            <td>
+                <p>value of the next node</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+    <h4>
+    Return Value
+    <small>logical</small>
+    </h4>
+    <p>true if the current iteration node is  at the end of tree (i.e. the next node does not exist).</p>
+
+        </li>
+    </ul>
+  </div>
+
+          </div>
+          <div class="row">
+              <div class="card mt-3">
+    <div class="card-header codesum">
+      <span class="anchor" id="boundprocedure-startlast~19"></span>
+      <h3>
+          procedure, public ::
+  <strong>StartLast</strong> => BSTree_Move2Last
+        
+      </h3>
+    </div>
+      <div class="card-body">
+        
+        <p><strong>Type-Bound Function</strong>: StartLast <br>
+ <strong>Purpose</strong>:  To start an iteration in a reversed order (at a node with the largest key)
+               and return a flag indicating whether the tree is empty or not. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    IsEmpty = Tree%StartLast() <br>
+  ---&gt;    IsEmpty = Tree%StartLast(LastKey) <br>
+  ---&gt;    IsEmpty = Tree%StartLast(Value=LastVal) <br>
+  ---&gt;    IsEmpty = Tree%StartLast(LastKey, LastVal)</p>
+      </div>
+    <ul class="list-group">
+        <li class="list-group-item">
+                  <h3>
+    private  function BSTree_Move2Last(Tree, Key, Value) result(EmptyTree)  
+</h3>
+
+  <p>To restart the iteration at the node with largest key (and optionally to retrieve
+ the key and value of that node if requested).</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(<a href='../type/treeinteger1b.html'>TreeInteger1B</a>),
+            </td>
+<td>intent(inout)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Tree</strong></td>
+            <td>
+                <p>tree</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              integer(kind=kInt8),
+            </td>
+<td>intent(out),</td>
+              <td>optional</td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Key</strong></td>
+            <td>
+                <p>the largest key</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(*),
+            </td>
+<td>intent(out),</td>
+              <td>optional,</td>            <td>
+              ALLOCATABLE
+            </td>
+            <td>::</td>
+            <td><strong>Value</strong></td>
+            <td>
+                <p>associated value</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+    <h4>
+    Return Value
+    <small>logical</small>
+    </h4>
+    <p>true if the tree is empty</p>
+
+        </li>
+    </ul>
+  </div>
+
+          </div>
+          <div class="row">
+              <div class="card mt-3">
+    <div class="card-header codesum">
+      <span class="anchor" id="boundprocedure-movebackward~19"></span>
+      <h3>
+          procedure, public ::
+  <strong>MoveBackward</strong> => BSTree_Move2PrevPair
+        
+      </h3>
+    </div>
+      <div class="card-body">
+        
+        <p><strong>Type-Bound Function</strong>: MoveBackward <br>
+ <strong>Purpose</strong>:  To move to the previous key-value pair and return a flag indicating whether
+               the cursor pointer has reached the end of the tree or not. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    IsTheEnd = Tree%MoveBackward() <br>
+  ---&gt;    IsTheEnd = Tree%MoveBackward(PrevKey) <br>
+  ---&gt;    IsTheEnd = Tree%MoveBackward(Value=PrevVal) <br>
+  ---&gt;    IsTheEnd = Tree%MoveBackward(PrevKey, PrevVal)</p>
+      </div>
+    <ul class="list-group">
+        <li class="list-group-item">
+                  <h3>
+    private  function BSTree_Move2PrevPair(Tree, Key, Value) result(EndOfTree)  
+</h3>
+
+  <p>To move to the previous node in inorder traversal (and optionally to retrieve
+ the key and value of the previous node if requested).</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(<a href='../type/treeinteger1b.html'>TreeInteger1B</a>),
+            </td>
+<td>intent(inout)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Tree</strong></td>
+            <td>
+                <p>tree</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              integer(kind=kInt8),
+            </td>
+<td>intent(out),</td>
+              <td>optional</td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Key</strong></td>
+            <td>
+                <p>key of the previous node</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(*),
+            </td>
+<td>intent(out),</td>
+              <td>optional,</td>            <td>
+              ALLOCATABLE
+            </td>
+            <td>::</td>
+            <td><strong>Value</strong></td>
+            <td>
+                <p>value of the previous node</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+    <h4>
+    Return Value
+    <small>logical</small>
+    </h4>
+    <p>true if the current iteration node is  at the end of tree (i.e. the previous node does not exist).</p>
+
+        </li>
+    </ul>
+  </div>
+
+          </div>
+          <div class="row">
+              <div class="card mt-3">
+    <div class="card-header codesum">
+      <span class="anchor" id="boundprocedure-isempty~70"></span>
+      <h3>
+          procedure, public ::
+  <strong>IsEmpty</strong> => BSTree_IsEmpty
+        
+      </h3>
+    </div>
+      <div class="card-body">
+        
+        <p><strong>Type-Bound Function</strong>: IsEmpty <br>
+ <strong>Purpose</strong>:  To check whether the three is empty or not. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    Flag = Tree%IsEmpty() <br>
+  ---&gt;    IF (.NOT.Tree%IsEmpty()) DoSomeThing</p>
+      </div>
+    <ul class="list-group">
+        <li class="list-group-item">
+                  <h3>
+    private  function BSTree_IsEmpty(Tree) result(Flag)  
+</h3>
+
+  <p>To check whether the tree is empty or not.</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(<a href='../type/treeinteger1b.html'>TreeInteger1B</a>),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Tree</strong></td>
+            <td>
+                <p>tree</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+    <h4>
+    Return Value
+    <small>logical</small>
+    </h4>
+    <p>true if the tree is empty</p>
+
+        </li>
+    </ul>
+  </div>
+
+          </div>
+          <div class="row">
+              <div class="card mt-3">
+    <div class="card-header codesum">
+      <span class="anchor" id="boundprocedure-contain~16"></span>
+      <h3>
+          procedure, public ::
+  <strong>Contain</strong> => BSTree_FindKey
+        
+      </h3>
+    </div>
+      <div class="card-body">
+        
+        <p><strong>Type-Bound Function</strong>: Contain <br>
+ <strong>Purpose</strong>:  To find the specified key in the tree.  Return true if the specified key
+               is found.  Otherwise, return false. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    Flag = Tree%Contain(Key) <br>
+  ---&gt;    IF (.NOT.Tree%Contain(Key)) DoSomething</p>
+      </div>
+    <ul class="list-group">
+        <li class="list-group-item">
+                  <h3>
+    private  function BSTree_FindKey(Tree, Key, KeyNode) result(Found)  
+</h3>
+
+  <p>To find the specified key.</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(<a href='../type/treeinteger1b.html'>TreeInteger1B</a>),
+            </td>
+<td>intent(inout)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Tree</strong></td>
+            <td>
+                <p>tree</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              integer(kind=kInt8),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Key</strong></td>
+            <td>
+                <p>the key to be looked for</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              type(RedBlackNode),
+            </td>
+<td>intent(out),</td>
+              <td>optional,</td>            <td>
+              POINTER
+            </td>
+            <td>::</td>
+            <td><strong>KeyNode</strong></td>
+            <td>
+                <p>the node containing the specified key</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+    <h4>
+    Return Value
+    <small>logical</small>
+    </h4>
+    <p>true if the key found</p>
+
+        </li>
+    </ul>
+  </div>
+
+          </div>
+          <div class="row">
+              <div class="card mt-3">
+    <div class="card-header codesum">
+      <span class="anchor" id="boundprocedure-getsize~36"></span>
+      <h3>
+          procedure, public ::
+  <strong>GetSize</strong> => BSTree_GetSize
+        
+      </h3>
+    </div>
+      <div class="card-body">
+        
+        <p><strong>Type-Bound Function</strong>: GetSize <br>
+ <strong>Purpose</strong>:  To get size of the tree (the number of key-value pair stored in the tree). <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    TreeSize = Tree%GetSize()</p>
+      </div>
+    <ul class="list-group">
+        <li class="list-group-item">
+                  <h3>
+    private  function BSTree_GetSize(Tree) result(Size)  
+</h3>
+
+  <p>To get size of the tree.</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(<a href='../type/treeinteger1b.html'>TreeInteger1B</a>),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Tree</strong></td>
+            <td>
+                <p>tree</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+    <h4>
+    Return Value
+    <small>integer(kind=kInt32)</small>
+    </h4>
+    <p>size of the tree</p>
+
+        </li>
+    </ul>
+  </div>
+
+          </div>
+          <div class="row">
+              <div class="card mt-3">
+    <div class="card-header codesum">
+      <span class="anchor" id="boundprocedure-getrangesize~7"></span>
+      <h3>
+          procedure, public ::
+  <strong>GetRangeSize</strong> => BSTree_GetSize_Range
+        
+      </h3>
+    </div>
+      <div class="card-body">
+        
+        <p><strong>Type-Bound Function</strong>: GetRangeSize <br>
+ <strong>Purpose</strong>:  To return the number of keys between <em>KeyLo</em> (inclusive)
+               and <em>KeyHi</em> (inclusive). <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    RangeSize = Tree%GetRangeSize(KeyLo, KeyHi)</p>
+      </div>
+    <ul class="list-group">
+        <li class="list-group-item">
+                  <h3>
+    private  function BSTree_GetSize_Range(Tree, Low, High) result(Size)  
+</h3>
+
+  <p>To get the number of keys in the tree in the given range.</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(<a href='../type/treeinteger1b.html'>TreeInteger1B</a>),
+            </td>
+<td>intent(inout)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Tree</strong></td>
+            <td>
+                <p>TreeInteger1B object</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              integer(kind=kInt8),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Low</strong></td>
+            <td>
+                <p>low key</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              integer(kind=kInt8),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>High</strong></td>
+            <td>
+                <p>high key</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+    <h4>
+    Return Value
+    <small>integer(kind=kInt32)</small>
+    </h4>
+    <p>size of the tree</p>
+
+        </li>
+    </ul>
+  </div>
+
+          </div>
+          <div class="row">
+              <div class="card mt-3">
+    <div class="card-header codesum">
+      <span class="anchor" id="boundprocedure-getvalue~14"></span>
+      <h3>
+          procedure, public ::
+  <strong>GetValue</strong> => BSTree_GetValue
+        
+      </h3>
+    </div>
+      <div class="card-body">
+        
+        <p><strong>Type-Bound Function</strong>: GetValue <br>
+ <strong>Purpose</strong>:  To get the value associated with the specified key in the tree.  Also, return
+               a flag indicating whether the key-value pair is successfully found or not. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    Flag = Tree%GetValue(Key, Value) <br>
+  ---&gt;    IF (.NOT.Tree%GetValue(Key, Value)) DoSomething</p>
+      </div>
+    <ul class="list-group">
+        <li class="list-group-item">
+                  <h3>
+    private  function BSTree_GetValue(Tree, Key, Value) result(Found)  
+</h3>
+
+  <p>To retrieve value associated with the specified key.</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(<a href='../type/treeinteger1b.html'>TreeInteger1B</a>),
+            </td>
+<td>intent(inout)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Tree</strong></td>
+            <td>
+                <p>tree</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              integer(kind=kInt8),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Key</strong></td>
+            <td>
+                <p>key to be looked for</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(*),
+            </td>
+<td>intent(out),</td>
+              <td></td>            <td>
+              ALLOCATABLE
+            </td>
+            <td>::</td>
+            <td><strong>Value</strong></td>
+            <td>
+                <p>value associated with the key</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+    <h4>
+    Return Value
+    <small>logical</small>
+    </h4>
+    <p>true if the key and its associated value found; false if the key is not in the tree.</p>
+
+        </li>
+    </ul>
+  </div>
+
+          </div>
+          <div class="row">
+              <div class="card mt-3">
+    <div class="card-header codesum">
+      <span class="anchor" id="boundprocedure-getminkey~7"></span>
+      <h3>
+          procedure, public ::
+  <strong>GetMinKey</strong> => BSTree_GetSmallestKey
+        
+      </h3>
+    </div>
+      <div class="card-body">
+        
+        <p><strong>Type-Bound Function</strong>: GetMinKey <br>
+ <strong>Purpose</strong>:  To get the smallest key (and optionally a value associated with it) in the
+               tree.  Also, return a flag indicating whether the key is successfully retrieved
+               or not.  If the tree is not empty, the returned flag is always true. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    Flag = Tree%GetMinKey(Key) <br>
+  ---&gt;    IF (.NOT.Tree%GetMinKey(Key, Value)) DoSomething</p>
+      </div>
+    <ul class="list-group">
+        <li class="list-group-item">
+                  <h3>
+    private  function BSTree_GetSmallestKey(Tree, Key, Value) result(Flag)  
+</h3>
+
+  <p>To return the smallest key in the tree and optionally its associated value.</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(<a href='../type/treeinteger1b.html'>TreeInteger1B</a>),
+            </td>
+<td>intent(inout)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Tree</strong></td>
+            <td>
+                <p>tree</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              integer(kind=kInt8),
+            </td>
+<td>intent(out)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Key</strong></td>
+            <td>
+                <p>smallest key</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(*),
+            </td>
+<td>intent(out),</td>
+              <td>optional,</td>            <td>
+              ALLOCATABLE
+            </td>
+            <td>::</td>
+            <td><strong>Value</strong></td>
+            <td>
+                <p>associated value</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+    <h4>
+    Return Value
+    <small>logical</small>
+    </h4>
+    <p>flag indicating whether the key-value pair is found or not.</p>
+
+        </li>
+    </ul>
+  </div>
+
+          </div>
+          <div class="row">
+              <div class="card mt-3">
+    <div class="card-header codesum">
+      <span class="anchor" id="boundprocedure-getmaxkey~7"></span>
+      <h3>
+          procedure, public ::
+  <strong>GetMaxKey</strong> => BSTree_GetLargestKey
+        
+      </h3>
+    </div>
+      <div class="card-body">
+        
+        <p><strong>Type-Bound Function</strong>: GetMaxKey <br>
+ <strong>Purpose</strong>:  To get the largest key (and optionally a value associated with it) in the
+               tree.  Also, return a flag indicating whether the key is successfully retrieved
+               or not.  If the tree is not empty, the returned flag is always true. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    Flag = Tree%GetMaxKey(Key) <br>
+  ---&gt;    IF (.NOT.Tree%GetMaxKey(Key, Value)) DoSomething</p>
+      </div>
+    <ul class="list-group">
+        <li class="list-group-item">
+                  <h3>
+    private  function BSTree_GetLargestKey(Tree, Key, Value) result(Flag)  
+</h3>
+
+  <p>To return the largest key in the tree and optionally its associated value.</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(<a href='../type/treeinteger1b.html'>TreeInteger1B</a>),
+            </td>
+<td>intent(inout)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Tree</strong></td>
+            <td>
+                <p>tree</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              integer(kind=kInt8),
+            </td>
+<td>intent(out)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Key</strong></td>
+            <td>
+                <p>largest key</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(*),
+            </td>
+<td>intent(out),</td>
+              <td>optional,</td>            <td>
+              ALLOCATABLE
+            </td>
+            <td>::</td>
+            <td><strong>Value</strong></td>
+            <td>
+                <p>associated value</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+    <h4>
+    Return Value
+    <small>logical</small>
+    </h4>
+    <p>flag indicating whether the key-value pair is found or not.</p>
+
+        </li>
+    </ul>
+  </div>
+
+          </div>
+          <div class="row">
+              <div class="card mt-3">
+    <div class="card-header codesum">
+      <span class="anchor" id="boundprocedure-getkeys~15"></span>
+      <h3>
+          generic, public ::
+  <strong>GetKeys</strong> => BSTree_GetKeys_Range, BSTree_GetKeys_All
+        
+      </h3>
+    </div>
+      <div class="card-body">
+        
+        <p><strong>Type-Bound Subroutine</strong>: GetKeys <br>
+ <strong>Purpose</strong>:  To return all keys (in the tree or in the specified range) and
+               optionally all associated values. <br>
+ <strong>Usage</strong>: <br>
+  ! return all keys in the tree <br>
+  ---&gt;    CALL Tree%GetKeys(Keys) <br>
+  ---&gt;    CALL Tree%GetKeys(Keys, Values) <br>
+  ! return all keys in the specified range <br>
+  ---&gt;    CALL Tree%GetKeys(LoKey, HiKey, Keys) <br>
+  ---&gt;    CALL Tree%GetKeys(LoKey, HiKey, Keys, Values) <br></p>
+      </div>
+    <ul class="list-group">
+        <li class="list-group-item">
+                  <h3>
+    private  subroutine BSTree_GetKeys_Range(Tree, Low, High, KeyQ, ValueQ)  
+</h3>
+
+  <p>To return all keys in the tree in the given range and optionally also
+ return all associated values.</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(<a href='../type/treeinteger1b.html'>TreeInteger1B</a>),
+            </td>
+<td>intent(inout)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Tree</strong></td>
+            <td>
+                <p>tree</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              integer(kind=kInt8),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Low</strong></td>
+            <td>
+                <p>low key</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              integer(kind=kInt8),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>High</strong></td>
+            <td>
+                <p>high key</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              type(<a href='../type/listinteger1b.html'>ListInteger1B</a>),
+            </td>
+<td>intent(out)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>KeyQ</strong></td>
+            <td>
+                <p>key queue</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              type(<a href='../type/listanytype.html'>ListAnyType</a>),
+            </td>
+<td>intent(out),</td>
+              <td>optional</td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>ValueQ</strong></td>
+            <td>
+                <p>value queue</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+        </li>
+        <li class="list-group-item">
+                  <h3>
+    private  subroutine BSTree_GetKeys_All(Tree, KeyQ, ValueQ)  
+</h3>
+
+  <p>To return all keys in the tree and optionally all associated values.</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(<a href='../type/treeinteger1b.html'>TreeInteger1B</a>),
+            </td>
+<td>intent(inout)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Tree</strong></td>
+            <td>
+                <p>tree</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              type(<a href='../type/listinteger1b.html'>ListInteger1B</a>),
+            </td>
+<td>intent(out)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>KeyQ</strong></td>
+            <td>
+                <p>key queue</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              type(<a href='../type/listanytype.html'>ListAnyType</a>),
+            </td>
+<td>intent(out),</td>
+              <td>optional</td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>ValueQ</strong></td>
+            <td>
+                <p>value queue</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+        </li>
+    </ul>
+  </div>
+
+          </div>
+          <div class="row">
+              <div class="card mt-3">
+    <div class="card-header codesum">
+      <span class="anchor" id="boundprocedure-floor~7"></span>
+      <h3>
+          procedure, public ::
+  <strong>Floor</strong> => BSTree_Floor
+        
+      </h3>
+    </div>
+      <div class="card-body">
+        
+        <p><strong>Type-Bound Function</strong>: Floor <br>
+ <strong>Purpose</strong>:  To get the largest key (and optionally a value associated with it) in the
+               tree less than or equal to the given key.  Also, return a flag indicating
+               whether the floor key is successfully retrieved or not. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    Flag = Tree%Floor(KeyIn, KeyOut) <br>
+  ---&gt;    IF (.NOT.Tree%Floor(KeyIn, KeyOut, Value)) DoSomething</p>
+      </div>
+    <ul class="list-group">
+        <li class="list-group-item">
+                  <h3>
+    private  function BSTree_Floor(Tree, InKey, OutKey, Value) result(Flag)  
+</h3>
+
+  <p>To return the largest key in the tree less than or equal to the given key
+ and optionally its associated value.</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(<a href='../type/treeinteger1b.html'>TreeInteger1B</a>),
+            </td>
+<td>intent(inout)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Tree</strong></td>
+            <td>
+                <p>tree</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              integer(kind=kInt8),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>InKey</strong></td>
+            <td>
+                <p>input key</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              integer(kind=kInt8),
+            </td>
+<td>intent(out)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>OutKey</strong></td>
+            <td>
+                <p>output key</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(*),
+            </td>
+<td>intent(out),</td>
+              <td>optional,</td>            <td>
+              ALLOCATABLE
+            </td>
+            <td>::</td>
+            <td><strong>Value</strong></td>
+            <td>
+                <p>associated value</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+    <h4>
+    Return Value
+    <small>logical</small>
+    </h4>
+    <p>flag indicating whether the key-value pair is found or not.</p>
+
+        </li>
+    </ul>
+  </div>
+
+          </div>
+          <div class="row">
+              <div class="card mt-3">
+    <div class="card-header codesum">
+      <span class="anchor" id="boundprocedure-ceiling~7"></span>
+      <h3>
+          procedure, public ::
+  <strong>Ceiling</strong> => BSTree_Ceiling
+        
+      </h3>
+    </div>
+      <div class="card-body">
+        
+        <p><strong>Type-Bound Function</strong>: Ceiling <br>
+ <strong>Purpose</strong>:  To get the smallest key (and optionally a value associated with it) in the
+               tree greater than or equal to the given key.  Also, return a flag indicating
+               whether the ceiling key is successfully retrieved or not. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    Flag = Tree%Ceiling(KeyIn, KeyOut) <br>
+  ---&gt;    IF (.NOT.Tree%Ceiling(KeyIn, KeyOut, Value)) DoSomething</p>
+      </div>
+    <ul class="list-group">
+        <li class="list-group-item">
+                  <h3>
+    private  function BSTree_Ceiling(Tree, InKey, OutKey, Value) result(Flag)  
+</h3>
+
+  <p>To return the smallest key in the tree greater than or equal to the given key
+ and optionally its associated value.</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(<a href='../type/treeinteger1b.html'>TreeInteger1B</a>),
+            </td>
+<td>intent(inout)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Tree</strong></td>
+            <td>
+                <p>tree</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              integer(kind=kInt8),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>InKey</strong></td>
+            <td>
+                <p>input key</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              integer(kind=kInt8),
+            </td>
+<td>intent(out)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>OutKey</strong></td>
+            <td>
+                <p>output key</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(*),
+            </td>
+<td>intent(out),</td>
+              <td>optional,</td>            <td>
+              ALLOCATABLE
+            </td>
+            <td>::</td>
+            <td><strong>Value</strong></td>
+            <td>
+                <p>associated value</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+    <h4>
+    Return Value
+    <small>logical</small>
+    </h4>
+    <p>flag indicating whether the key-value pair is found or not.</p>
+
+        </li>
+    </ul>
+  </div>
+
+          </div>
+          <div class="row">
+              <div class="card mt-3">
+    <div class="card-header codesum">
+      <span class="anchor" id="boundprocedure-select~7"></span>
+      <h3>
+          procedure, public ::
+  <strong>Select</strong> => BSTree_Select
+        
+      </h3>
+    </div>
+      <div class="card-body">
+        
+        <p><strong>Type-Bound Subroutine</strong>: Select <br>
+ <strong>Purpose</strong>:  To get the key (and optionally its associated value) of the specified rank
+               where the applicable range of rank is between 0 and TableSize-1. Also, return
+               a flag indicating whether the ranked key is successfully retrieved or not. <br>
+  ---&gt;    Flag = Tree%Select(Rank, Key) <br>
+  ---&gt;    IF (.NOT.Tree%Select(Rank, Key, Value)) DoSomething</p>
+      </div>
+    <ul class="list-group">
+        <li class="list-group-item">
+                  <h3>
+    private  function BSTree_Select(Tree, Rank, Key, Value) result(Flag)  
+</h3>
+
+  <p>To return the key in the tree of a given rank.
+ This key has the property that there are rank keys in
+ the tree that are smaller. In other words, this key is the
+ (rank+1)st smallest key in the tree. <br>
+ Note: applicable range of rank is between 0 and tree_size-1.
+      (this rank number is zero-based).</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(<a href='../type/treeinteger1b.html'>TreeInteger1B</a>),
+            </td>
+<td>intent(inout)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Tree</strong></td>
+            <td>
+                <p>tree</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              integer(kind=kInt32),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Rank</strong></td>
+            <td>
+                <p>rank</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              integer(kind=kInt8),
+            </td>
+<td>intent(out)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Key</strong></td>
+            <td>
+                <p>key of the given rank</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(*),
+            </td>
+<td>intent(out),</td>
+              <td>optional,</td>            <td>
+              ALLOCATABLE
+            </td>
+            <td>::</td>
+            <td><strong>Value</strong></td>
+            <td>
+                <p>associated value</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+    <h4>
+    Return Value
+    <small>logical</small>
+    </h4>
+    <p>flag indicating whether the key-value pair is found or not.</p>
+
+        </li>
+    </ul>
+  </div>
+
+          </div>
+          <div class="row">
+              <div class="card mt-3">
+    <div class="card-header codesum">
+      <span class="anchor" id="boundprocedure-getrank~7"></span>
+      <h3>
+          procedure, public ::
+  <strong>GetRank</strong> => BSTree_Rank
+        
+      </h3>
+    </div>
+      <div class="card-body">
+        
+        <p><strong>Type-Bound Function</strong>: GetRank <br>
+ <strong>Purpose</strong>:  To return the number of keys in the tree strictly less than the given key. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    KeyRank = Tree%GetRank(Key)</p>
+      </div>
+    <ul class="list-group">
+        <li class="list-group-item">
+                  <h3>
+    private  function BSTree_Rank(Tree, Key) result(Rank)  
+</h3>
+
+  <p>To return the number of keys in the tree strictly less than the given key.</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(<a href='../type/treeinteger1b.html'>TreeInteger1B</a>),
+            </td>
+<td>intent(inout)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Tree</strong></td>
+            <td>
+                <p>tree</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              integer(kind=kInt8),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Key</strong></td>
+            <td>
+                <p>key</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+    <h4>
+    Return Value
+    <small>integer(kind=kInt32)</small>
+    </h4>
+    <p>rank of key</p>
+
+        </li>
+    </ul>
+  </div>
+
+          </div>
+          <div class="row">
+              <div class="card mt-3">
+    <div class="card-header codesum">
+      <span class="anchor" id="boundprocedure-check~6"></span>
+      <h3>
+          procedure, public ::
+  <strong>Check</strong> => BSTree_CheckBST
+        
+      </h3>
+    </div>
+      <div class="card-body">
+        
+        <p><strong>Type-Bound Function</strong>: Check <br>
+ <strong>Purpose</strong>:  To check integrity of the BST data structure. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    Flag = Tree%Check() <br>
+  ---&gt;    IF (.NOT.Tree%Check(ErrMsg)) DoSomething</p>
+      </div>
+    <ul class="list-group">
+        <li class="list-group-item">
+                  <h3>
+    private  function BSTree_CheckBST(Tree) result(Flag)  
+</h3>
+
+  <p>To check integrity of BST data structure.</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(<a href='../type/treeinteger1b.html'>TreeInteger1B</a>),
+            </td>
+<td>intent(inout)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Tree</strong></td>
+            <td>
+                <p>tree</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+    <h4>
+    Return Value
+    <small>logical</small>
+    </h4>
+    <p>flag for integrity</p>
+
+        </li>
+    </ul>
+  </div>
+
+          </div>
+      </section>
+
+    
+    </div>
+  </div>
+
+      <hr>
+    </div> <!-- /container -->
+    <footer>
+      <div class="container">
+        <div class="row justify-content-between">
+          <div class="col"><p>eXPerimental Fortran Library (XpfLib) Documentation was developed by Niranama<br>&copy; 2024 
+</p>
+          </div>
+          <div class="col">
+            <p class="text-end">
+              Documentation generated by
+              <a href="https://github.com/Fortran-FOSS-Programmers/ford">FORD</a>
+            </p>
+          </div>
+        </div>
+        <br>
+      </div> <!-- /container -->
+    </footer>
+
+    <!-- Bootstrap core JavaScript -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>    
+
+    <!-- MathJax JavaScript
+             ================================================== -->
+             <!-- Placed at the end of the document so the pages load faster -->
+        <script type="text/x-mathjax-config">
+          MathJax.Hub.Config({
+          TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } },
+          jax: ['input/TeX','input/MathML','output/HTML-CSS'],
+          extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']
+          });
+        </script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+          <script src="../tipuesearch/tipuesearch_content.js"></script>
+          <script src="../tipuesearch/tipuesearch_set.js"></script>
+          <script src="../tipuesearch/tipuesearch.js"></script>
+
+  </body>
+</html>

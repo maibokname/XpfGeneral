@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta name="description" content="Experimental Fortran Package - Data Structures">
+    <meta name="author" content="Niranama" >
+    <link rel="icon" href="../favicon.png">
+
+    <title>MClass_HashTree &ndash; eXPerimental Fortran Library (XpfLib) Documentation</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link href="../css/pygments.css" rel="stylesheet">
+    <link href="../css/font-awesome.min.css" rel="stylesheet">
+    <link href="../css/local.css" rel="stylesheet">
+      <link  href="../tipuesearch/tipuesearch.css" rel="stylesheet">
+
+    <script src="https://code.jquery.com/jquery-3.7.0.slim.min.js" integrity="sha256-tG5mcZUtJsZvyKAxYLVXrmjKBVLd6VpVccqz/r4ypFE=" crossorigin="anonymous"></script>
+  </head>
+
+  <body>
+
+    <!-- Fixed navbar -->
+    <div class="container-fluid mb-sm-4 mb-xl-2">
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container">
+          <a class="navbar-brand" href="../index.html">eXPerimental Fortran Library (XpfLib) Documentation </a>
+          <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar"
+                  aria-expanded="false" aria-controls="navbar" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon">
+          </button>
+
+          <div id="navbar" class="navbar-collapse collapse">
+            <ul class="navbar-nav">
+                  <li class="nav-item">
+                    <a class="nav-link" href="../lists/files.html">Source Files</a>
+                  </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../lists/modules.html">Modules</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../lists/types.html">Derived Types</a>
+                </li>
+            </ul>
+              <div class="d-flex align-items-end flex-grow-1">
+                <form action="../search.html" role="search" class="ms-auto">
+                  <input type="text" class="form-control" aria-label="Search" placeholder="Search" name="q" id="tipue_search_input" autocomplete="off" required>
+                </form>
+              </div>
+          </div><!--/.nav-collapse -->
+        </div>
+      </nav>
+    </div>
+
+    <div class="container">
+  <div class="row">
+    <h1>MClass_HashTree
+      <small>Module</small>
+      
+    </h1>
+      <div class="container p-2 mb-4 bg-light border rounded-3">
+    <div class="row align-items-center justify-content-between" id="info-bar">
+      <div class="col">
+        <ul class="list-inline" style="margin-bottom:0px;display:inline">
+
+            <li class="list-inline-item" id="statements"><i class="fa fa-list-ol"></i>
+              <a data-bs-toggle="tooltip"
+                 data-bs-placement="bottom" data-html="true"
+                 title=" 1.6% of total for modules and submodules.">675 statements</a>
+            </li>
+
+            <li class="list-inline-item" id="source-file">
+              <i class="fa fa-code"></i>
+              <a href="../src/MClass_HashTree.f90"> Source File</a>
+            </li>
+        </ul>
+      </div>
+      <div class="col">
+        <nav aria-label="breadcrumb">
+          <ol class="breadcrumb justify-content-end mb-0">
+                <li class="breadcrumb-item"><a href='../sourcefile/mclass_hashtree.f90.html'>MClass_HashTree.f90</a></li>
+            <li class="breadcrumb-item active" aria-current="page">MClass_HashTree</li>
+          </ol>
+        </nav>
+      </div>
+    </div>
+  </div>
+  <script>
+    $(function () {
+    $('[data-bs-toggle="tooltip"]').tooltip()
+    })
+  </script>
+
+  </div>
+
+  <div class="row">
+    <div class="col-md-3">
+        <div id="sidebar">
+      <h3>Contents</h3>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+      <div class="card mb-4">
+      <a data-bs-toggle="collapse" href="#types-0"
+         aria-expanded="false" aria-controls="types-0">
+         <h4 class="card-header bg-primary text-white">Derived Types</h4>
+      </a>
+      <div id="types-0" class="collapse">
+        <div class="list-group list-group-flush">
+            <a class="list-group-item" href="../module/mclass_hashtree.html#type-hashtree">HashTree</a>
+        </div>
+      </div>
+    </div>
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+
+
+  </div>
+
+    </div>
+
+    <div class="col-md-9" id='text'>
+      <p><strong>PURPOSE OF THIS MODULE</strong>: <br>
+  This module contains the <em>HashTree</em> type and its supporting routines and data type.
+  The <em>HashTree</em> type is a collection type that employs a separate-chaining hash table
+  implementation to provide common operations for an unordered symbol table. <br>
+  The <em>HashTree</em> type uses the <em>KeyOrdered</em> type to store its keys and the <em>GenData</em>
+  type to store its values.  Therefore, it can be used to store comparable keys and
+  values of any data types.  Allowed types of comparable keys include the <em>CHARACTER</em>,
+  <em>INTEGER</em> and <em>REAL</em> intrinsic types as well as any derived type that is in the
+  <em>Comparable</em> class.  Like other collection types, however, it must be employed to store
+  key-value pairs of only specific key type and one specific value type.  To store pairs
+  of another key type (and/or another value type), it must be destructed before inserting
+  items of different key type (or different value type). <br>
+  As a symbol table, the <em>HashTree</em> type does not allow duplicated keys.  Therefore, if
+  an inserted key is equal to a key stored in the table, an associated value of the stored
+  key is replaced by an associated value of the inserted key.  As an <em>unordered</em> symbol
+  table, the <em>HashTree</em> type makes no guarantees as to the iteration order of the table.
+  In particular, it does not guarantee that the order will remain the same over time. <br>
+  Technically, the <em>HashTree</em> type utilizes the <em>IntrusiveHashTree</em> type as its component
+  to store its hash-tree nodes.  As an <em>intrusive</em> container, the <em>IntrusiveHashTree</em> type,
+  which is based on a separate-chaining hash table implementation, provides common hash-table
+  operations without a memory management task.  The memory management task of the inserted
+  hash-tree nodes is handled by the <em>HashTree</em> type.  <br></p>
+<br>          <div class="card mb-4">
+      <h3 class="card-header card-title bg-light">Uses</h3>
+      <div class="card-body">
+        <ul class="list-group list-group-flush">
+            <li class="list-group-item">
+              <ul class="list-inline">
+                  <li class="list-inline-item"><a href='../../XpfBase/module/mbase_memhandlers.html'>MBase_MemHandlers</a></li>
+                  <li class="list-inline-item"><a href='../../XpfBase/module/mclass_compnodepool.html'>MClass_CompNodePool</a></li>
+                  <li class="list-inline-item"><a href='../../XpfBase/module/mclass_charbuffer.html'>MClass_CharBuffer</a></li>
+                  <li class="list-inline-item"><a href='../../XpfBase/module/mbase_errhandlers.html'>MBase_ErrHandlers</a></li>
+                  <li class="list-inline-item"><a href='../../XpfBase/module/mclass_keyordered.html'>MClass_KeyOrdered</a></li>
+                  <li class="list-inline-item"><a href='../../XpfBase/module/mbase_byteutil.html'>MBase_ByteUtil</a></li>
+                  <li class="list-inline-item"><a href='../../XpfBase/module/mclass_intrusivehashtree.html'>MClass_IntrusiveHashTree</a></li>
+                  <li class="list-inline-item"><a href='../../XpfBase/module/mclass_comparable.html'>MClass_Comparable</a></li>
+                  <li class="list-inline-item"><a href='../module/mclass_basecollection.html'>MClass_BaseCollection</a></li>
+                  <li class="list-inline-item"><a href='../../XpfBase/module/mclass_gendata.html'>MClass_GenData</a></li>
+                  <li class="list-inline-item"><a href='../module/mclass_basesymtable.html'>MClass_BaseSymTable</a></li>
+                  <li class="list-inline-item"><a href='../../XpfBase/module/mbase_common.html'>MBase_Common</a></li>
+                  <li class="list-inline-item"><a href='../../XpfBase/module/mbase_simplehash64.html'>MBase_SimpleHash64</a></li>
+                  <li class="list-inline-item"><a href='../../XpfBase/module/mclass_memorypool.html'>MClass_MemoryPool</a></li>
+                  <li class="list-inline-item"><a href='../../XpfBase/module/mbase_sintutil.html'>MBase_SIntUtil</a></li>
+                  <li class="list-inline-item"><a href='../../XpfBase/module/mclass_intrusivebstrees.html'>MClass_IntrusiveBSTrees</a></li>
+                  <li class="list-inline-item"><a href='../../XpfBase/module/mclass_object.html'>MClass_Object</a></li>
+              </ul>
+            </li>
+        </ul>
+      </div>
+    </div>
+
+      
+      <br>
+
+
+
+
+
+
+        <section>
+          <h2>Derived Types</h2>
+              <div class="card">
+    <div class="card-header codesum">
+      <span class="anchor" id="type-hashtree"></span>
+      <h3>
+        type, public, extends(<a href='../type/basesymtable.html'>BaseSymTable</a>)&nbsp;::&nbsp;
+        <a href='../type/hashtree.html'>HashTree</a>
+        
+      </h3>
+    </div>
+    <div class="card-body">
+      <p>The <em>HashTree</em> type is a collection type that employs a separate-chaining hash table
+ implementation to provide common operations for an unordered symbol table.  The <em>HashTree</em>
+ type utilizes the <em>IntrusiveHashTree</em> type as its component to store <em>TabNode</em> objects.
+ As an intrusive container, the <em>IntrusiveHashTree</em> type provides common operations for
+ hash table without a memory management task.  The memory management task of the inserted
+ <em>TabNode</em> objects is handled by the <em>HashTree</em> type. <br>
+ As an unordered symbol table, the <em>HashTree</em> type directly extends the <em>BaseSymTable</em>
+ type and implements all deferred procedures required by the <em>BaseSymTable</em> type and all
+ its super classes.  As a symbol table, the <em>HashTree</em> type does not allow duplicated keys;
+ therefore, if an inserted key is equal to a key stored in the table, an associated value
+ of the stored key is replaced by an associated value of the inserted key. <br></p>
+
+
+
+        <h4>Finalizations Procedures</h4>
+        <table class="table table-striped varlist">
+          <tbody>
+              <tr>
+                <td>final :: <strong>HashTree_Finalize</strong></td>
+                <td><p>To perform finalization of the object.</p></td>
+              </tr>
+          </tbody>
+        </table>
+
+        <h4>Type-Bound Procedures</h4>
+        <table class="table table-striped varlist">
+          <tbody>
+              <tr>
+                <td>  procedure, public ::
+  <strong><a href='../type/basecollection.html#boundprocedure-isempty~86'>IsEmpty</a></strong> => BaseCollection_IsEmpty</td>
+                <td><p><strong>Type-Bound Function</strong>: IsEmpty <br>
+ <strong>Purpose</strong>:  To check whether the collection is empty or not. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    Flag = Collection%IsEmpty() <br>
+  ---&gt;    IF (.NOT.Collection%IsEmpty()) DoSomeThing</p></td>
+              </tr>
+              <tr>
+                <td>  procedure, public ::
+  <strong><a href='../type/basesymtable.html#boundprocedure-clear~18'>Clear</a></strong> => BaseSymTable_ClearEntries</td>
+                <td><p><strong>Type-Bound Subroutine</strong>: Clear <br>
+ <strong>Purpose</strong>:  To remove all key-value pairs from the collection. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    CALL Collection%Clear()
+ <strong>Note</strong>: The <em>Clear</em> method provided by the <em>BaseSymTable</em> type is
+      a simple implementation.   It can be overridden by a better and
+      more efficient implementation.</p></td>
+              </tr>
+              <tr>
+                <td>  procedure, public ::
+  <strong><a href='../type/basesymtable.html#boundprocedure-getkeyptr'>GetKeyPtr</a></strong> => BaseSymTable_GetKeyPtr</td>
+                <td><p><strong>Type-Bound Function</strong>: GetKeyPtr <br>
+ <strong>Purpose</strong>:  To get a pointer to a key stored in a symbol table.  The pointer is
+      intended to be used as a mold for the key (i.e. to provide type of the stored
+      keys).  Return null pointer if the table is empty. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    KeyPtr =&gt; Collection%GetKeyPtr()</p></td>
+              </tr>
+              <tr>
+                <td>  procedure, public ::
+  <strong><a href='../type/basesymtable.html#boundprocedure-getvalptr'>GetValPtr</a></strong> => BaseSymTable_GetValPtr</td>
+                <td><p><strong>Type-Bound Function</strong>: GetValPtr <br>
+ <strong>Purpose</strong>:  To get a pointer to a value stored in a symbol table.  The pointer is
+      intended to be used as a mold for the value (i.e. to provide type of the stored
+      values).  Return null pointer if the table is empty. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    ValPtr =&gt; Collection%GetValPtr()</p></td>
+              </tr>
+              <tr>
+                <td>  procedure, public ::
+  <strong><a href='../type/basesymtable.html#boundprocedure-setmolds'>SetMolds</a></strong> => BaseSymTable_SetMolds</td>
+                <td><p><em>SetMolds</em> is a procedure to set molds of stored keys and values.  This procedure is
+  intended to be used only by a subtype of the <em>BaseSymTable</em> type, not by a user.</p></td>
+              </tr>
+              <tr>
+                <td>  procedure, public ::
+  <strong><a href='../type/basesymtable.html#boundprocedure-freemolds'>FreeMolds</a></strong> => BaseSymTable_FreeMolds</td>
+                <td><p><em>SetMolds</em> is a procedure to free molds of stored keys and values.  This procedure is
+  intended to be used only by a subtype of the <em>BaseSymTable</em> type, not by a user.</p></td>
+              </tr>
+              <tr>
+                <td>  procedure, public ::
+  <strong><a href='../type/basesymtable.html#boundprocedure-iskeyvalid'>IsKeyValid</a></strong> => BaseSymTable_IsKeyValid</td>
+                <td><p><em>IsKeyOrdered</em> is a procedure to check whether the specified key is valid or not.  This
+  procedure is intended to be used only by a subtype of the <em>BaseSymTable</em> type, not by
+  a user.</p></td>
+              </tr>
+              <tr>
+                <td>  procedure, public ::
+  <strong><a href='../type/basesymtable.html#boundprocedure-isvalvalid'>IsValValid</a></strong> => BaseSymTable_IsValValid</td>
+                <td><p><em>IsValOrdered</em> is a procedure to check whether the specified value is valid or not.  This
+  procedure is intended to be used only by a subtype of the <em>BaseSymTable</em> type, not by
+  a user.</p></td>
+              </tr>
+              <tr>
+                <td>  procedure, public ::
+  <strong><a href='../type/hashtree.html#boundprocedure-copycollection~3'>CopyCollection</a></strong> => HashTree_CopyCollection</td>
+                <td><p>Use the <em>Construct</em> method to construct the collection from another collection.</p></td>
+              </tr>
+              <tr>
+                <td>  procedure, public ::
+  <strong><a href='../type/hashtree.html#boundprocedure-destruct~20'>Destruct</a></strong> => HashTree_Destroy</td>
+                <td><p><strong>Type-Bound Subroutine</strong>: Destruct <br>
+ <strong>Purpose</strong>:  To remove all items from the collection and free memory
+               of items stored in the collection.<br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    CALL Collection%Destruct() <br></p></td>
+              </tr>
+              <tr>
+                <td>  procedure, public ::
+  <strong><a href='../type/hashtree.html#boundprocedure-getsize~20'>GetSize</a></strong> => HashTree_GetSize</td>
+                <td><p><strong>Type-Bound Function</strong>: GetSize <br>
+ <strong>Purpose</strong>:  To get the current size of the collection. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    Size = Collection%GetSize()</p></td>
+              </tr>
+              <tr>
+                <td>  procedure, public ::
+  <strong><a href='../type/hashtree.html#boundprocedure-startfirst~16'>StartFirst</a></strong> => HashTree_Move2FirstPair</td>
+                <td><p><strong>Type-Bound Function</strong>: StartFirst <br>
+ <strong>Purpose</strong>:  To start an iteration and return a flag indicating whether
+               the collection is empty or not. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    IsEmpty = Collection%StartFirst() <br>
+  ---&gt;    IsEmpty = Collection%StartFirst(FirstKey) <br>
+  ---&gt;    IsEmpty = Collection%StartFirst(Value=FirstVal) <br>
+  ---&gt;    IsEmpty = Collection%StartFirst(FirstKey, FirstVal)</p></td>
+              </tr>
+              <tr>
+                <td>  procedure, public ::
+  <strong><a href='../type/hashtree.html#boundprocedure-moveforward~16'>MoveForward</a></strong> => HashTree_Move2NextPair</td>
+                <td><p><strong>Type-Bound Function</strong>: MoveForward <br>
+ <strong>Purpose</strong>:  To move to the next key-value pair and return a flag
+               indicating whether the cursor pointer has reached the end of
+               the collection or not. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    IsTheEnd = Collection%MoveForward() <br>
+  ---&gt;    IsTheEnd = Collection%MoveForward(NextKey) <br>
+  ---&gt;    IsTheEnd = Collection%MoveForward(Value=NextVal) <br>
+  ---&gt;    IsTheEnd = Collection%MoveForward(NextKey, NextVal)</p></td>
+              </tr>
+              <tr>
+                <td>  procedure, public ::
+  <strong><a href='../type/hashtree.html#boundprocedure-insert~12'>Insert</a></strong> => HashTree_Insert</td>
+                <td><p><strong>Type-Bound Subroutine</strong>: Insert <br>
+ <strong>Purpose</strong>:  To insert the specified key-value pair to the collection. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    CALL Collection%Insert(Key, Value) <br></p></td>
+              </tr>
+              <tr>
+                <td>  procedure, public ::
+  <strong><a href='../type/hashtree.html#boundprocedure-delete~11'>Delete</a></strong> => HashTree_Delete</td>
+                <td><p><strong>Type-Bound Subroutine</strong>: Delete <br>
+ <strong>Purpose</strong>:  To delete the current key-value pair from the collection. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    CALL Collection%Delete() <br>
+ <strong>Note</strong>: This method is intended to be used in conjunction with the
+ <em>StartFirst</em> and <em>MoveForward</em> methods.  Therefore, after the call to
+ one of those methods and then calling this one will result in a removal
+ of the current pair data of the iteration (i.e. the same key-value pair
+ that can be retrieved via the <em>StartFirst</em> and <em>MoveForward</em> methods).</p></td>
+              </tr>
+              <tr>
+                <td>  procedure, public ::
+  <strong><a href='../type/hashtree.html#boundprocedure-remove~14'>Remove</a></strong> => HashTree_Remove</td>
+                <td><p><strong>Type-Bound Function</strong>: Remove <br>
+ <strong>Purpose</strong>:  To remove the specified key (and its associated value) from
+               the collection.  Also, return a flag indicating whether the
+               key-value pair is successfully removed or not. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    Flag = Collection%Remove(Key) <br>
+  ---&gt;    IF (.NOT.Collection%Remove(Key)) DoSomething</p></td>
+              </tr>
+              <tr>
+                <td>  procedure, public ::
+  <strong><a href='../type/hashtree.html#boundprocedure-contain~7'>Contain</a></strong> => HashTree_Contain</td>
+                <td><p><strong>Type-Bound Function</strong>: Contain <br>
+ <strong>Purpose</strong>:  To find the specified key in the collection.  Return true if
+               the specified key is found.  Otherwise, return false. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    Flag = Collection%Contain(Key) <br>
+  ---&gt;    IF (.NOT.Collection%Contain(Key)) DoSomething</p></td>
+              </tr>
+              <tr>
+                <td>  procedure, public ::
+  <strong><a href='../type/hashtree.html#boundprocedure-getvalue~6'>GetValue</a></strong> => HashTree_GetValue</td>
+                <td><p><strong>Type-Bound Function</strong>: GetValue <br>
+ <strong>Purpose</strong>:  To get a value associated with the specified key in the collection.
+               Also, return a flag indicating whether the key-value pair is
+               successfully found or not. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    Flag = Collection%GetValue(Key, Value) <br>
+  ---&gt;    IF (.NOT.Collection%GetValue(Key, Value)) DoSomething</p></td>
+              </tr>
+              <tr>
+                <td>  procedure, public ::
+  <strong><a href='../type/hashtree.html#boundprocedure-toarray~11'>ToArray</a></strong> => HashTree_ToArray</td>
+                <td><p><strong>Type-Bound Function</strong>: ToArray <br>
+ <strong>Purpose</strong>:  To get and remove all key-value pairs from the collection.  Also, return
+      a flag indicating whether the pairs are successfully retrieved and removed or not. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    Success = Collection%ToArray(Keys, Values) <br>
+  ---&gt;    IF (.NOT.Collection%ToArray(Keys, Values)) DoSomething</p></td>
+              </tr>
+              <tr>
+                <td>  procedure, public ::
+  <strong><a href='../type/hashtree.html#boundprocedure-getall~11'>GetAll</a></strong> => HashTree_GetAll</td>
+                <td><p><strong>Type-Bound Function</strong>: GetAll <br>
+ <strong>Purpose</strong>:  To get all keys and/or all values (without removing them) from the collection.
+      Also, return a flag indicating whether the keys and/or the values are successfully
+      retrieved or not. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    Success = Collection%GetAll(Keys, Values) <br>
+  ---&gt;    IF (.NOT.Collection%GetAll(Keys, Values)) DoSomething</p></td>
+              </tr>
+              <tr>
+                <td>  procedure, public ::
+  <strong><a href='../type/hashtree.html#boundprocedure-createempty~14'>CreateEmpty</a></strong> => HashTree_CreateEmpty</td>
+                <td><p><strong>Type-Bound Subroutine</strong>: CreateEmpty <br>
+ <strong>Purpose</strong>:  To construct an empty table. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    CALL Table%CreateEmpty()            ! use default options  <br>
+  ---&gt;    CALL Table%CreateEmpty(InitCap=25)  ! specify initial capacity <br></p></td>
+              </tr>
+              <tr>
+                <td>  generic, public ::
+  <strong><a href='../type/hashtree.html#boundprocedure-construct~20'>Construct</a></strong> => <a href='../type/hashtree.html#boundprocedure-copycollection~3'>CopyCollection</a>, HashTree_CreateByArray</td>
+                <td><p><strong>Type-Bound Subroutine</strong>: Construct <br>
+ <strong>Purpose</strong>:  To construct a new collection from an array of items or from another
+               collection. <br>
+ <strong>Usage</strong>: <br>
+  ! create a collection from an array of 25 items <br>
+  ---&gt;    CALL Collection%Construct(25, Arr) <br>
+  ! create a collection from another collection <br>
+  ---&gt;    CALL Collection%Construct(OtherCollection) <br></p></td>
+              </tr>
+              <tr>
+                <td>  procedure, public ::
+  <strong><a href='../type/hashtree.html#boundprocedure-copy~6'>Copy</a></strong> => HashTree_Copy</td>
+                <td><p><strong>Type-Bound Subroutine</strong>: Copy <br>
+ <strong>Purpose</strong>: To make a copy of the source object. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    CALL SrcObj%Copy(DstObj) <br></p></td>
+              </tr>
+              <tr>
+                <td>  procedure, public ::
+  <strong><a href='../type/hashtree.html#boundprocedure-isequalto~6'>IsEqualTo</a></strong> => HashTree_IsEqualTo</td>
+                <td><p><strong>Type-Bound Function</strong>: IsEqualTo <br>
+ <strong>Purpose</strong>: To check whether two objects are equal to one another or not. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    Flag = ObjA%IsEqualTo(ObjB) <br>
+  ---&gt;    IF (ObjA%IsEqualTo(ObjB)) DoSomething</p></td>
+              </tr>
+              <tr>
+                <td>  procedure, public ::
+  <strong><a href='../type/hashtree.html#boundprocedure-memfree~6'>MemFree</a></strong> => HashTree_MemFree</td>
+                <td><p><strong>Type-Bound Subroutine</strong>: MemFree <br>
+ <strong>Purpose</strong>: To free memory/storage occupied by the object. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    CALL Obj%MemFree() <br></p></td>
+              </tr>
+              <tr>
+                <td>  procedure, public ::
+  <strong><a href='../type/hashtree.html#boundprocedure-tostring~9'>ToString</a></strong> => HashTree_ToString</td>
+                <td><p><strong>Type-Bound Function</strong>: ToString <br>
+ <strong>Purpose</strong>:  To return the string representation of this object. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    Str = Obj%ToString() <br></p></td>
+              </tr>
+              <tr>
+                <td>  procedure, public ::
+  <strong><a href='../type/hashtree.html#boundprocedure-hashcode~9'>HashCode</a></strong> => HashTree_HashCode</td>
+                <td><p><strong>Type-Bound Function</strong>: HashCode <br>
+ <strong>Purpose</strong>:  To compute the hash code of this object. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    Code = Obj%HashCode() <br></p></td>
+              </tr>
+          </tbody>
+        </table>
+    </div>
+  </div>
+
+        </section>
+        <br>
+
+
+
+
+
+    </div>
+  </div>
+
+      <hr>
+    </div> <!-- /container -->
+    <footer>
+      <div class="container">
+        <div class="row justify-content-between">
+          <div class="col"><p>eXPerimental Fortran Library (XpfLib) Documentation was developed by Niranama<br>&copy; 2024 
+</p>
+          </div>
+          <div class="col">
+            <p class="text-end">
+              Documentation generated by
+              <a href="https://github.com/Fortran-FOSS-Programmers/ford">FORD</a>
+            </p>
+          </div>
+        </div>
+        <br>
+      </div> <!-- /container -->
+    </footer>
+
+    <!-- Bootstrap core JavaScript -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>    
+
+    <!-- MathJax JavaScript
+             ================================================== -->
+             <!-- Placed at the end of the document so the pages load faster -->
+        <script type="text/x-mathjax-config">
+          MathJax.Hub.Config({
+          TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } },
+          jax: ['input/TeX','input/MathML','output/HTML-CSS'],
+          extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']
+          });
+        </script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+          <script src="../tipuesearch/tipuesearch_content.js"></script>
+          <script src="../tipuesearch/tipuesearch_set.js"></script>
+          <script src="../tipuesearch/tipuesearch.js"></script>
+
+  </body>
+</html>

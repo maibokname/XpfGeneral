@@ -1,0 +1,885 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta name="description" content="Experimental Fortran Package - High-Precision Numbers">
+    <meta name="author" content="Niranama" >
+    <link rel="icon" href="../favicon.png">
+
+    <title>All Procedures &ndash; eXPerimental Fortran Library (XpfLib) Documentation
+</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link href="../css/pygments.css" rel="stylesheet">
+    <link href="../css/font-awesome.min.css" rel="stylesheet">
+    <link href="../css/local.css" rel="stylesheet">
+      <link  href="../tipuesearch/tipuesearch.css" rel="stylesheet">
+
+    <script src="https://code.jquery.com/jquery-3.7.0.slim.min.js" integrity="sha256-tG5mcZUtJsZvyKAxYLVXrmjKBVLd6VpVccqz/r4ypFE=" crossorigin="anonymous"></script>
+  </head>
+
+  <body>
+
+    <!-- Fixed navbar -->
+    <div class="container-fluid mb-sm-4 mb-xl-2">
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container">
+          <a class="navbar-brand" href="../index.html">eXPerimental Fortran Library (XpfLib) Documentation </a>
+          <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar"
+                  aria-expanded="false" aria-controls="navbar" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon">
+          </button>
+
+          <div id="navbar" class="navbar-collapse collapse">
+            <ul class="navbar-nav">
+                  <li class="nav-item">
+                    <a class="nav-link" href="../lists/files.html">Source Files</a>
+                  </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../lists/modules.html">Modules</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../lists/procedures.html">Procedures</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../lists/types.html">Derived Types</a>
+                </li>
+            </ul>
+              <div class="d-flex align-items-end flex-grow-1">
+                <form action="../search.html" role="search" class="ms-auto">
+                  <input type="text" class="form-control" aria-label="Search" placeholder="Search" name="q" id="tipue_search_input" autocomplete="off" required>
+                </form>
+              </div>
+          </div><!--/.nav-collapse -->
+        </div>
+      </nav>
+    </div>
+
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12" id='text'>
+			 <h1>Procedures</h1>
+			 <table class="table table-striped">
+			 <thead><tr><th>Procedure</th><th>Location</th><th>Procedure Type</th><th>Description</th></tr></thead>
+			 <tbody>
+			   <tr><td><a href='../interface/abs.html'>ABS</a></td><td><a href='../module/mclass_apint64.html'>MClass_ApInt64</a></td><td>Interface</td><td><p><strong>Function Interface</strong>: ABS <br>
+ <strong>Purpose</strong>:  To return the absolute value of the ApInt64 number. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    AbsNum = ABS(ApNum)</p></td></tr>
+			   <tr><td><a href='../interface/abs~2.html'>ABS</a></td><td><a href='../module/mclass_apint32.html'>MClass_ApInt32</a></td><td>Interface</td><td><p><strong>Function Interface</strong>: ABS <br>
+ <strong>Purpose</strong>:  To return the absolute value of the ApInt32 number. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    AbsNum = ABS(ApNum)</p></td></tr>
+			   <tr><td><a href='../interface/add.html'>Add</a></td><td><a href='../module/mbase_float128.html'>MBase_Float128</a></td><td>Interface</td><td><p><strong>Subroutine Interface</strong>: Add <br>
+ <strong>Purpose</strong>:  To perform addition: This = This + Other. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    CALL Add(This, Other)</p></td></tr>
+			   <tr><td><a href='../interface/addxp.html'>AddXp</a></td><td><a href='../module/mclass_apint64.html'>MClass_ApInt64</a></td><td>Interface</td><td><p><strong>Function Interface</strong>: AddXp <br>
+ <strong>Purpose</strong>:  To perform an addition: OutVal = LhsVal + RhsVal. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    OutVal = AddXp(LhsVal, RhsVal, Algorithm) <br>
+ <strong>Note</strong>: Algorithm must be between 1 and 3.</p></td></tr>
+			   <tr><td><a href='../interface/apint32.html'>ApInt32</a></td><td><a href='../module/mclass_apint32.html'>MClass_ApInt32</a></td><td>Interface</td><td><p><strong>Constructor Interface</strong>: ApInt32 <br>
+ <strong>Purpose</strong>:  To construct an ApInt32 number. <br>
+ <strong>Usage</strong>: <br>
+  ! construct ApNum from a magnitude array <br>
+  ---&gt;    ApNum = ApInt32(Sign, MagLen, MagArray) <br>
+  ! construct ApNum from 64-bit intrinsic integer treated as signed <br>
+  ---&gt;    ApNum = ApInt32(I64) <br>
+  ! construct ApNum from 32-bit intrinsic integer treated as unsigned <br>
+  ---&gt;    ApNum = ApInt32(Sign, U32) <br>
+  ! construct ApNum from 128-bit real number <br>
+  ---&gt;    ApNum = ApInt32(R128) <br>
+  ! construct ApNum from a decimal string <br>
+  ---&gt;    ApNum = ApInt32('-123456789098765432101122334455667788990012345')</p></td></tr>
+			   <tr><td><a href='../interface/apint64.html'>ApInt64</a></td><td><a href='../module/mclass_apint64.html'>MClass_ApInt64</a></td><td>Interface</td><td><p><strong>Constructor Interface</strong>: ApInt64 <br>
+ <strong>Purpose</strong>:  To construct an ApInt64 number. <br>
+ <strong>Usage</strong>: <br>
+  ! construct ApNum from a magnitude array <br>
+  ---&gt;    ApNum = ApInt64(Sign, MagLen, MagArray) <br>
+  ! construct ApNum from 64-bit intrinsic integer treated as signed <br>
+  ---&gt;    ApNum = ApInt64(I64) <br>
+  ! construct ApNum from 32-bit intrinsic integer treated as unsigned <br>
+  ---&gt;    ApNum = ApInt64(Sign, U32) <br>
+  ! construct ApNum from 128-bit real number <br>
+  ---&gt;    ApNum = ApInt64(R128) <br>
+  ! construct ApNum from a decimal string <br>
+  ---&gt;    ApNum = ApInt64('-123456789098765432101122334455667788990012345')</p></td></tr>
+			   <tr><td><a href='../interface/assignment(=).html'>ASSIGNMENT(=)</a></td><td><a href='../module/mclass_apint64.html'>MClass_ApInt64</a></td><td>Interface</td><td><p><strong>Operator Overload</strong>: ASSIGNMENT(=) <br>
+ <strong>Purpose</strong>:  To convert between the ApInt64 type and a signed integer
+      (32-bit, 64-bit, 128-bit or arbitrary-precision integer). <br>
+ <strong>Usage</strong>: <br>
+  ! convert 64-bit signed integer to the ApInt64 type <br>
+  ---&gt;    ApNum = I64 <br>
+  ! convert the ApInt64 type to 128-bit signed integer <br>
+  ---&gt;    I128 = ApNum</p></td></tr>
+			   <tr><td><a href='../interface/assignment(=)~2.html'>ASSIGNMENT(=)</a></td><td><a href='../module/mbase_float128.html'>MBase_Float128</a></td><td>Interface</td><td><p><strong>Operator Overload</strong>: ASSIGNMENT(=) <br>
+ <strong>Purpose</strong>:  To convert between a <em>Float128</em> number and an other real number. <br>
+ <strong>Usage</strong>: <br>
+  ! convert 32-bit real number (Fortran intrinsic type) to the <em>Float128</em> number <br>
+  ---&gt;    F128 = R32 <br>
+  ! convert the <em>Float128</em> number to 128-bit real number (Fortran intrinsic type) <br>
+  ---&gt;    R128 = F128</p></td></tr>
+			   <tr><td><a href='../interface/assignment(=)~3.html'>ASSIGNMENT(=)</a></td><td><a href='../module/mclass_apint32.html'>MClass_ApInt32</a></td><td>Interface</td><td><p><strong>Operator Overload</strong>: ASSIGNMENT(=) <br>
+ <strong>Purpose</strong>:  To convert between the ApInt32 type and a signed integer
+      (32-bit, 64-bit, 128-bit or arbitrary-precision integer). <br>
+ <strong>Usage</strong>: <br>
+  ! convert 64-bit signed integer to the ApInt32 type <br>
+  ---&gt;    ApNum = I64 <br>
+  ! convert the ApInt32 type to 128-bit signed integer <br>
+  ---&gt;    I128 = ApNum</p></td></tr>
+			   <tr><td><a href='../interface/btest.html'>BTEST</a></td><td><a href='../module/mclass_apint64.html'>MClass_ApInt64</a></td><td>Interface</td><td><p><strong>Function Interface</strong>: BTEST <br>
+ <strong>Purpose</strong>:  To check whether the bit at the specified position
+               is 0 (False) or 1 (True). <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    Flag = BTEST(ApNum, Pos)</p></td></tr>
+			   <tr><td><a href='../interface/btest~2.html'>BTEST</a></td><td><a href='../module/mclass_apint32.html'>MClass_ApInt32</a></td><td>Interface</td><td><p><strong>Function Interface</strong>: BTEST <br>
+ <strong>Purpose</strong>:  To check whether the bit at the specified position
+               is 0 (False) or 1 (True). <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    Flag = BTEST(ApNum, Pos)</p></td></tr>
+			   <tr><td><a href='../interface/compare.html'>Compare</a></td><td><a href='../module/mclass_apint64.html'>MClass_ApInt64</a></td><td>Interface</td><td><p><strong>Function Interface</strong>: Compare <br>
+ <strong>Purpose</strong>:  To compare two ApInt64 numbers and return <br>
+  -1 if LHS &lt; RHS, <br>
+   0 if LHS == RHS, or <br>
+   1 if LHS &gt; RHS. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    Flag = Compare(LHS, RHS) <br>
+  ---&gt;    IF (Compare(LHS, RHS) /= 0) DoSomething</p></td></tr>
+			   <tr><td><a href='../interface/compare~2.html'>Compare</a></td><td><a href='../module/mbase_float128.html'>MBase_Float128</a></td><td>Interface</td><td><p><strong>Function Interface</strong>: Compare <br>
+ <strong>Purpose</strong>:  To compare <em>Float128</em> numbers and return <br>
+  -1 if LHS &lt; RHS, <br>
+   0 if LHS == RHS, or <br>
+   1 if LHS &gt; RHS. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    Flag = Compare(LHS, RHS) <br>
+  ---&gt;    IF (Compare(LHS, RHS) /= 0) DoSomething</p></td></tr>
+			   <tr><td><a href='../interface/compare~3.html'>Compare</a></td><td><a href='../module/mclass_apint32.html'>MClass_ApInt32</a></td><td>Interface</td><td><p><strong>Function Interface</strong>: Compare <br>
+ <strong>Purpose</strong>:  To compare two ApInt32 numbers and return <br>
+  -1 if LHS &lt; RHS, <br>
+   0 if LHS == RHS, or <br>
+   1 if LHS &gt; RHS. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    Flag = Compare(LHS, RHS) <br>
+  ---&gt;    IF (Compare(LHS, RHS) /= 0) DoSomething</p></td></tr>
+			   <tr><td><a href='../interface/decrement.html'>Decrement</a></td><td><a href='../module/mbase_float128.html'>MBase_Float128</a></td><td>Interface</td><td><p><strong>Subroutine Interface</strong>: Decrement <br>
+ <strong>Purpose</strong>:  To decrease value of a <em>Float128</em> by one. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    CALL Decrement(F128)</p></td></tr>
+			   <tr><td><a href='../interface/display.html'>Display</a></td><td><a href='../module/mclass_apint64.html'>MClass_ApInt64</a></td><td>Interface</td><td><p><strong>Subroutine Interface</strong>: Display <br>
+ <strong>Purpose</strong>:  To write/display the 'ApInt64' number to the screen (or the specified unit). <br>
+ <strong>Usage</strong>: <br>
+  ! To display (signed) value of ApNum as a decimal string to the screen <br>
+  ---&gt;    CALL Display(ApNum) <br>
+  ! To display (signed) value of ApNum as a decimal string to the output logical unit <br>
+  ---&gt;    CALL Display(ApNum, 11) <br>
+  ! To display (signed) value of ApNum as a decimal string to the output logical unit <br>
+  with input/output status and message <br>
+  ---&gt;    CALL Display(ApNum, 11, IOStat, IOMsg) <br>
+  ! To display (signed) values of components of ApNum as a decimal string to the screen <br>
+  ---&gt;    CALL Display(ApNum, ShowComponent=.TRUE.) <br>
+  ! To display (signed) value of ApNum as a decimal string to the screen with a prefix string <br>
+  ---&gt;    CALL Display(ApNum, Prefix='Signed value of ApNum')</p></td></tr>
+			   <tr><td><a href='../interface/display~2.html'>Display</a></td><td><a href='../module/mclass_apint32.html'>MClass_ApInt32</a></td><td>Interface</td><td><p><strong>Subroutine Interface</strong>: Display <br>
+ <strong>Purpose</strong>:  To write/display the 'ApInt32' number to the screen (or the specified unit). <br>
+ <strong>Usage</strong>: <br>
+  ! To display (signed) value of ApNum as a decimal string to the screen <br>
+  ---&gt;    CALL Display(ApNum) <br>
+  ! To display (signed) value of ApNum as a decimal string to the output logical unit <br>
+  ---&gt;    CALL Display(ApNum, 11) <br>
+  ! To display (signed) value of ApNum as a decimal string to the output logical unit <br>
+  with input/output status and message <br>
+  ---&gt;    CALL Display(ApNum, 11, IOStat, IOMsg) <br>
+  ! To display (signed) values of components of ApNum as a decimal string to the screen <br>
+  ---&gt;    CALL Display(ApNum, ShowComponent=.TRUE.) <br>
+  ! To display (signed) value of ApNum as a decimal string to the screen with a prefix string <br>
+  ---&gt;    CALL Display(ApNum, Prefix='Signed value of ApNum')</p></td></tr>
+			   <tr><td><a href='../interface/divide.html'>Divide</a></td><td><a href='../module/mbase_float128.html'>MBase_Float128</a></td><td>Interface</td><td><p><strong>Subroutine Interface</strong>: Divide <br>
+ <strong>Purpose</strong>:  To perform a division: This = This / Other. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    CALL Divide(This, Other)</p></td></tr>
+			   <tr><td><a href='../interface/dividexp.html'>DivideXp</a></td><td><a href='../module/mclass_apint64.html'>MClass_ApInt64</a></td><td>Interface</td><td><p><strong>Function Interface</strong>: DivideXp <br>
+ <strong>Purpose</strong>:  To perform a division: Quotient = Dividend / Divisor. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    Quotient = DivideXp(Dividend, Divisor, Algorithm) <br>
+ <strong>Note</strong>: Algorithm must be between 1 and 5.</p></td></tr>
+			   <tr><td><a href='../interface/divmod.html'>DivMod</a></td><td><a href='../module/mbase_float128.html'>MBase_Float128</a></td><td>Interface</td><td><p><strong>Subroutine Interface</strong>: DivMod <br>
+ <strong>Purpose</strong>:  To perform a division of two real numbers where the dividend (numerator)
+       must be a <em>Float128</em> number and to return both the quotient and the remainder. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    CALL DivMod(NUMER, DENOM, QUOT, REM)</p></td></tr>
+			   <tr><td><a href='../interface/float128.html'>Float128</a></td><td><a href='../module/mbase_float128.html'>MBase_Float128</a></td><td>Interface</td><td><p><strong>Constructor Interface</strong>: Float128 <br>
+ <strong>Purpose</strong>:  To construct a <em>Float128</em> number. <br>
+ <strong>Usage</strong>: <br>
+  ! construct from 32-bit intrinsic integer number <br>
+  ---&gt;    F128 = Float128(I32) <br>
+  ! construct from 64-bit intrinsic real number <br>
+  ---&gt;    F128 = Float128(R64) <br>
+  ! construct from a decimal string <br>
+  ---&gt;    I128 = Float128('1234567.890987654321011223344E-23132', ErrFlag, ErrMsg) <br></p></td></tr>
+			   <tr><td><a href='../interface/fromstringxp.html'>FromStringXp</a></td><td><a href='../module/mclass_apint64.html'>MClass_ApInt64</a></td><td>Interface</td><td><p><strong>Function Interface</strong>: FromStringXp <br>
+ <strong>Purpose</strong>:  To construct the <em>ApInt64</em> number based on the specified decimal
+               string.  Valid value of <em>Algorithm</em> is between 1 and 4. <br>
+ <strong>Usage</strong>: <br>
+ ---&gt; ApNum = FromStringXp('1234567890987654321011223344', Algorithm) <br>
+ ---&gt; ApNum = FromStringXp('-987654321012345678900123123', Algorithm, ErrFlag) <br>
+ ---&gt; ApNum = FromStringXp(NumStr, 1, ErrMsg=Message) <br>
+ ---&gt; ApNum = FromStringXp(NumStr, 4, ErrFlag, ErrMsg)</p></td></tr>
+			   <tr><td><a href='../interface/getlength.html'>GetLength</a></td><td><a href='../module/mclass_apint64.html'>MClass_ApInt64</a></td><td>Interface</td><td><p><strong>Function Interface</strong>: GetLength <br>
+ <strong>Purpose</strong>:  To return the length of the magnitude array (the number of
+               digits counted as the ApNum number). <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    MagLen = GetLength(ApNum)</p></td></tr>
+			   <tr><td><a href='../interface/getlength~2.html'>GetLength</a></td><td><a href='../module/mclass_apint32.html'>MClass_ApInt32</a></td><td>Interface</td><td><p><strong>Function Interface</strong>: GetLength <br>
+ <strong>Purpose</strong>:  To return the length of the magnitude array (the number of
+               digits counted as the ApNum number). <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    MagLen = GetLength(ApNum)</p></td></tr>
+			   <tr><td><a href='../interface/iand.html'>IAND</a></td><td><a href='../module/mclass_apint64.html'>MClass_ApInt64</a></td><td>Interface</td><td><p><strong>Function Interface</strong>: IAND <br>
+ <strong>Purpose</strong>:  To perform a logical AND on corresponding bits of two
+               ApInt64 numbers. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    NumOut = IAND(NumIn1, NumIn2)</p></td></tr>
+			   <tr><td><a href='../interface/iand~2.html'>IAND</a></td><td><a href='../module/mclass_apint32.html'>MClass_ApInt32</a></td><td>Interface</td><td><p><strong>Function Interface</strong>: IAND <br>
+ <strong>Purpose</strong>:  To perform a logical AND on corresponding bits of two
+               ApInt32 numbers. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    NumOut = IAND(NumIn1, NumIn2)</p></td></tr>
+			   <tr><td><a href='../interface/iand_not.html'>IAND_NOT</a></td><td><a href='../module/mclass_apint64.html'>MClass_ApInt64</a></td><td>Interface</td><td><p><strong>Function Interface</strong>: IAND_NOT <br>
+ <strong>Purpose</strong>:  To perform a bitwise AND and NOT on corresponding bits of two
+               ApInt64 numbers. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    NumOut = IAND_NOT(NumIn1, NumIn2) <br>
+ <strong>Note</strong>: IAND_NOT(NumIn1, NumIn2) is equal to IAND(NumIn1, NOT(NumIn2)).</p></td></tr>
+			   <tr><td><a href='../interface/iand_not~2.html'>IAND_NOT</a></td><td><a href='../module/mclass_apint32.html'>MClass_ApInt32</a></td><td>Interface</td><td><p><strong>Function Interface</strong>: IAND_NOT <br>
+ <strong>Purpose</strong>:  To perform a bitwise AND and NOT on corresponding bits of two
+               ApInt32 numbers. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    NumOut = IAND_NOT(NumIn1, NumIn2) <br>
+ <strong>Note</strong>: IAND_NOT(NumIn1, NumIn2) is equal to IAND(NumIn1, NOT(NumIn2)).</p></td></tr>
+			   <tr><td><a href='../interface/ibchng.html'>IBCHNG</a></td><td><a href='../module/mclass_apint64.html'>MClass_ApInt64</a></td><td>Interface</td><td><p><strong>Function Interface</strong>: IBCHNG <br>
+ <strong>Purpose</strong>:  To reverse the bit at the specified position. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    NumOut = IBCHNG(NumIn, Pos)</p></td></tr>
+			   <tr><td><a href='../interface/ibchng~2.html'>IBCHNG</a></td><td><a href='../module/mclass_apint32.html'>MClass_ApInt32</a></td><td>Interface</td><td><p><strong>Function Interface</strong>: IBCHNG <br>
+ <strong>Purpose</strong>:  To reverse the bit at the specified position. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    NumOut = IBCHNG(NumIn, Pos)</p></td></tr>
+			   <tr><td><a href='../interface/ibclr.html'>IBCLR</a></td><td><a href='../module/mclass_apint64.html'>MClass_ApInt64</a></td><td>Interface</td><td><p><strong>Function Interface</strong>: IBCLR <br>
+ <strong>Purpose</strong>:  To set the bit at the specified position to 0. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    NumOut = IBCLR(NumIn, Pos)</p></td></tr>
+			   <tr><td><a href='../interface/ibclr~2.html'>IBCLR</a></td><td><a href='../module/mclass_apint32.html'>MClass_ApInt32</a></td><td>Interface</td><td><p><strong>Function Interface</strong>: IBCLR <br>
+ <strong>Purpose</strong>:  To set the bit at the specified position to 0. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    NumOut = IBCLR(NumIn, Pos)</p></td></tr>
+			   <tr><td><a href='../interface/ibset.html'>IBSET</a></td><td><a href='../module/mclass_apint64.html'>MClass_ApInt64</a></td><td>Interface</td><td><p><strong>Function Interface</strong>: IBSET <br>
+ <strong>Purpose</strong>:  To set the bit at the specified position to 1. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    NumOut = IBSET(NumIn, Pos)</p></td></tr>
+			   <tr><td><a href='../interface/ibset~2.html'>IBSET</a></td><td><a href='../module/mclass_apint32.html'>MClass_ApInt32</a></td><td>Interface</td><td><p><strong>Function Interface</strong>: IBSET <br>
+ <strong>Purpose</strong>:  To set the bit at the specified position to 1. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    NumOut = IBSET(NumIn, Pos)</p></td></tr>
+			   <tr><td><a href='../interface/ieor.html'>IEOR</a></td><td><a href='../module/mclass_apint64.html'>MClass_ApInt64</a></td><td>Interface</td><td><p><strong>Function Interface</strong>: IEOR <br>
+ <strong>Purpose</strong>:  To perform an exclusive OR on corresponding bits of two
+               ApInt64 numbers. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    NumOut = IEOR(NumIn1, NumIn2)</p></td></tr>
+			   <tr><td><a href='../interface/ieor~2.html'>IEOR</a></td><td><a href='../module/mclass_apint32.html'>MClass_ApInt32</a></td><td>Interface</td><td><p><strong>Function Interface</strong>: IEOR <br>
+ <strong>Purpose</strong>:  To perform an exclusive OR on corresponding bits of two
+               ApInt32 numbers. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    NumOut = IEOR(NumIn1, NumIn2)</p></td></tr>
+			   <tr><td><a href='../interface/increment.html'>Increment</a></td><td><a href='../module/mbase_float128.html'>MBase_Float128</a></td><td>Interface</td><td><p><strong>Subroutine Interface</strong>: Increment <br>
+ <strong>Purpose</strong>:  To increase value of a <em>Float128</em> number by one. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    CALL Increment(F128)</p></td></tr>
+			   <tr><td><a href='../interface/ior.html'>IOR</a></td><td><a href='../module/mclass_apint64.html'>MClass_ApInt64</a></td><td>Interface</td><td><p><strong>Function Interface</strong>: IOR <br>
+ <strong>Purpose</strong>:  To perform an inclusive OR on corresponding bits of two
+               ApInt64 numbers. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    NumOut = IOR(NumIn1, NumIn2)</p></td></tr>
+			   <tr><td><a href='../interface/ior~2.html'>IOR</a></td><td><a href='../module/mclass_apint32.html'>MClass_ApInt32</a></td><td>Interface</td><td><p><strong>Function Interface</strong>: IOR <br>
+ <strong>Purpose</strong>:  To perform an inclusive OR on corresponding bits of two
+               ApInt32 numbers. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    NumOut = IOR(NumIn1, NumIn2)</p></td></tr>
+			   <tr><td><a href='../interface/is_infinite.html'>Is_Infinite</a></td><td><a href='../module/mbase_float128.html'>MBase_Float128</a></td><td>Interface</td><td><p><strong>Function Interface</strong>: Is_Infinite <br>
+ <strong>Purpose</strong>:  To check whether the input value is an infinity or not. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    Flag = Is_Infinite(INPUT) <br>
+  ---&gt;    IF (.NOT.Is_Infinite(INPUT)) DoSomeThing</p></td></tr>
+			   <tr><td><a href='../interface/is_nan.html'>Is_NaN</a></td><td><a href='../module/mbase_float128.html'>MBase_Float128</a></td><td>Interface</td><td><p><strong>Function Interface</strong>: Is_NaN <br>
+ <strong>Purpose</strong>:  To check whether the input value is a NAN (not a number) or not. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    Flag = Is_NaN(INPUT) <br>
+  ---&gt;    IF (.NOT.Is_NaN(INPUT)) DoSomeThing</p></td></tr>
+			   <tr><td><a href='../interface/is_negative.html'>Is_Negative</a></td><td><a href='../module/mbase_float128.html'>MBase_Float128</a></td><td>Interface</td><td><p><strong>Function Interface</strong>: IsNegative <br>
+ <strong>Purpose</strong>:  To check whether the input value is negative or not. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    Flag = IsNegative(INPUT) <br>
+  ---&gt;    IF (.NOT.IsNegative(INPUT)) DoSomeThing</p></td></tr>
+			   <tr><td><a href='../interface/is_zero.html'>Is_Zero</a></td><td><a href='../module/mbase_float128.html'>MBase_Float128</a></td><td>Interface</td><td><p><strong>Function Interface</strong>: IsZero <br>
+ <strong>Purpose</strong>:  To check whether the input value is zero or not. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    Flag = IsZero(INPUT) <br>
+  ---&gt;    IF (.NOT.IsZero(INPUT)) DoSomeThing</p></td></tr>
+			   <tr><td><a href='../interface/ishft.html'>ISHFT</a></td><td><a href='../module/mclass_apint64.html'>MClass_ApInt64</a></td><td>Interface</td><td><p><strong>Function Interface</strong>: ISHFT <br>
+ <strong>Purpose</strong>:  To perform logical shift of an ApInt64 number. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    NumOut = ISHFT(NumIn, 153)    ! a logical left shift by 153 <br>
+  ---&gt;    NumOut = ISHFT(NumIn, -224)   ! a logical right shift by 224</p></td></tr>
+			   <tr><td><a href='../interface/ishft~2.html'>ISHFT</a></td><td><a href='../module/mclass_apint32.html'>MClass_ApInt32</a></td><td>Interface</td><td><p><strong>Function Interface</strong>: ISHFT <br>
+ <strong>Purpose</strong>:  To perform logical shift of an ApInt32 number. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    NumOut = ISHFT(NumIn, 153)    ! a logical left shift by 153 <br>
+  ---&gt;    NumOut = ISHFT(NumIn, -224)   ! a logical right shift by 224</p></td></tr>
+			   <tr><td><a href='../interface/isnegative.html'>IsNegative</a></td><td><a href='../module/mclass_apint64.html'>MClass_ApInt64</a></td><td>Interface</td><td><p><strong>Function Interface</strong>: IsNegative <br>
+ <strong>Purpose</strong>:  To check whether the ApInt64 number has negative value or not. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    Flag = IsNegative(ApNum) <br>
+  ---&gt;    IF (IsNegative(ApNum)) DoSomeThing</p></td></tr>
+			   <tr><td><a href='../interface/isnegative~2.html'>IsNegative</a></td><td><a href='../module/mclass_apint32.html'>MClass_ApInt32</a></td><td>Interface</td><td><p><strong>Function Interface</strong>: IsNegative <br>
+ <strong>Purpose</strong>:  To check whether the ApInt32 number has negative value or not. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    Flag = IsNegative(ApNum) <br>
+  ---&gt;    IF (IsNegative(ApNum)) DoSomeThing</p></td></tr>
+			   <tr><td><a href='../interface/isone.html'>IsOne</a></td><td><a href='../module/mclass_apint64.html'>MClass_ApInt64</a></td><td>Interface</td><td><p><strong>Function Interface</strong>: IsOne <br>
+ <strong>Purpose</strong>:  To check whether the ApInt64 number has value of one or not. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    Flag = IsOne(ApNum) <br>
+  ---&gt;    IF (IsOne(ApNum)) DoSomeThing</p></td></tr>
+			   <tr><td><a href='../interface/isone~2.html'>IsOne</a></td><td><a href='../module/mclass_apint32.html'>MClass_ApInt32</a></td><td>Interface</td><td><p><strong>Function Interface</strong>: IsOne <br>
+ <strong>Purpose</strong>:  To check whether the ApInt32 number has value of one or not. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    Flag = IsOne(ApNum) <br>
+  ---&gt;    IF (IsOne(ApNum)) DoSomeThing</p></td></tr>
+			   <tr><td><a href='../interface/ispositive.html'>IsPositive</a></td><td><a href='../module/mclass_apint64.html'>MClass_ApInt64</a></td><td>Interface</td><td><p><strong>Function Interface</strong>: IsPositive <br>
+ <strong>Purpose</strong>:  To check whether the ApInt64 number has positive value or not. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    Flag = IsPositive(ApNum) <br>
+  ---&gt;    IF (IsPositive(ApNum)) DoSomeThing</p></td></tr>
+			   <tr><td><a href='../interface/ispositive~2.html'>IsPositive</a></td><td><a href='../module/mclass_apint32.html'>MClass_ApInt32</a></td><td>Interface</td><td><p><strong>Function Interface</strong>: IsPositive <br>
+ <strong>Purpose</strong>:  To check whether the ApInt32 number has positive value or not. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    Flag = IsPositive(ApNum) <br>
+  ---&gt;    IF (IsPositive(ApNum)) DoSomeThing</p></td></tr>
+			   <tr><td><a href='../interface/iszero.html'>IsZero</a></td><td><a href='../module/mclass_apint64.html'>MClass_ApInt64</a></td><td>Interface</td><td><p><strong>Function Interface</strong>: IsZero <br>
+ <strong>Purpose</strong>:  To check whether the ApInt64 number has value of zero or not. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    Flag = IsZero(ApNum) <br>
+  ---&gt;    IF (IsZero(ApNum)) DoSomeThing</p></td></tr>
+			   <tr><td><a href='../interface/iszero~2.html'>IsZero</a></td><td><a href='../module/mclass_apint32.html'>MClass_ApInt32</a></td><td>Interface</td><td><p><strong>Function Interface</strong>: IsZero <br>
+ <strong>Purpose</strong>:  To check whether the ApInt32 number has value of zero or not. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    Flag = IsZero(ApNum) <br>
+  ---&gt;    IF (IsZero(ApNum)) DoSomeThing</p></td></tr>
+			   <tr><td><a href='../interface/leadz.html'>LEADZ</a></td><td><a href='../module/mclass_apint64.html'>MClass_ApInt64</a></td><td>Interface</td><td><p><strong>Function Interface</strong>: LEADZ <br>
+ <strong>Purpose</strong>:  To count the number of leading zero bits of the ApInt64 number. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    NumLZ = LEADZ(ApNum)</p></td></tr>
+			   <tr><td><a href='../interface/leadz~2.html'>LEADZ</a></td><td><a href='../module/mclass_apint32.html'>MClass_ApInt32</a></td><td>Interface</td><td><p><strong>Function Interface</strong>: LEADZ <br>
+ <strong>Purpose</strong>:  To count the number of leading zero bits of the ApInt32 number. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    NumLZ = LEADZ(ApNum)</p></td></tr>
+			   <tr><td><a href='../interface/makecopy.html'>MakeCopy</a></td><td><a href='../module/mclass_apint64.html'>MClass_ApInt64</a></td><td>Interface</td><td><p><strong>Function Interface</strong>: Copy <br>
+ <strong>Purpose</strong>:  To make a copy of the ApInt64 number. <br>
+ <strong>Usage</strong>: <br>
+  ! make a copy of the ApInt64 number <br>
+  ---&gt;    DstApNum = MakeCopy(SrcApNum) <br>
+  ! make a copy of the ApInt64 number with the specified capacity
+  (size of magnitude array) of the destination number <br>
+  ---&gt;    DstApNum = MakeCopy(SrcApNum, DstCap)</p></td></tr>
+			   <tr><td><a href='../interface/makecopy~2.html'>MakeCopy</a></td><td><a href='../module/mclass_apint32.html'>MClass_ApInt32</a></td><td>Interface</td><td><p><strong>Function Interface</strong>: Copy <br>
+ <strong>Purpose</strong>:  To make a copy of the ApInt32 number. <br>
+ <strong>Usage</strong>: <br>
+  ! make a copy of the ApInt32 number <br>
+  ---&gt;    DstApNum = MakeCopy(SrcApNum) <br>
+  ! make a copy of the ApInt32 number with the specified capacity
+  (size of magnitude array) of the destination number <br>
+  ---&gt;    DstApNum = MakeCopy(SrcApNum, DstCap)</p></td></tr>
+			   <tr><td><a href='../interface/mod.html'>MOD</a></td><td><a href='../module/mclass_apint64.html'>MClass_ApInt64</a></td><td>Interface</td><td><p><strong>Function Interface</strong>: MOD <br>
+ <strong>Purpose</strong>:  To return the remainder of a division of two signed integers,
+               where the dividend (numerator) is a ApInt64 number and the
+               divisor (denominator) can be any signed integer. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    Remainder = MOD(Dividend, Divisor)</p></td></tr>
+			   <tr><td><a href='../interface/mod~2.html'>MOD</a></td><td><a href='../module/mbase_float128.html'>MBase_Float128</a></td><td>Interface</td><td><p><strong>Function Interface</strong>: MOD <br>
+ <strong>Purpose</strong>:  To return the remainder of a division of two real numbers, where the
+      dividend (numerator) must be a <em>Float128</em> number. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    REM = MOD(NUMER, DENOM)</p></td></tr>
+			   <tr><td><a href='../interface/mod~3.html'>MOD</a></td><td><a href='../module/mclass_apint32.html'>MClass_ApInt32</a></td><td>Interface</td><td><p><strong>Function Interface</strong>: MOD <br>
+ <strong>Purpose</strong>:  To return the remainder of a division of two signed integers,
+               where the dividend (numerator) is a ApInt32 number and the
+               divisor (denominator) can be any signed integer. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    Remainder = MOD(Dividend, Divisor)</p></td></tr>
+			   <tr><td><a href='../interface/modulo.html'>MODULO</a></td><td><a href='../module/mclass_apint64.html'>MClass_ApInt64</a></td><td>Interface</td><td><p><strong>Function Interface</strong>: MODULO <br>
+ <strong>Purpose</strong>:  To compute the modulo of two ApInt64 numbers. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    Modulo = MODULO(Dividend, Divisor)</p></td></tr>
+			   <tr><td><a href='../interface/modulo~2.html'>MODULO</a></td><td><a href='../module/mclass_apint32.html'>MClass_ApInt32</a></td><td>Interface</td><td><p><strong>Function Interface</strong>: MODULO <br>
+ <strong>Purpose</strong>:  To compute the modulo of two ApInt32 numbers. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    Modulo = MODULO(Dividend, Divisor)</p></td></tr>
+			   <tr><td><a href='../interface/modxp.html'>ModXp</a></td><td><a href='../module/mclass_apint64.html'>MClass_ApInt64</a></td><td>Interface</td><td><p><strong>Function Interface</strong>: ModXp <br>
+ <strong>Purpose</strong>:  To perform modulation: Remainder = Dividend Mod Divisor. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    Remainder = ModXp(Dividend, Divisor, Algorithm) <br>
+ <strong>Note</strong>: Algorithm must be between 1 and 5.</p></td></tr>
+			   <tr><td><a href='../interface/multiply.html'>Multiply</a></td><td><a href='../module/mbase_float128.html'>MBase_Float128</a></td><td>Interface</td><td><p><strong>Subroutine Interface</strong>: Multiply <br>
+ <strong>Purpose</strong>:  To perform multiplication: This = This * Other. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    CALL Multiply(This, Other)</p></td></tr>
+			   <tr><td><a href='../interface/multiplyxp.html'>MultiplyXp</a></td><td><a href='../module/mclass_apint64.html'>MClass_ApInt64</a></td><td>Interface</td><td><p><strong>Function Interface</strong>: MultiplyXp <br>
+ <strong>Purpose</strong>:  To perform a multiplication: OutVal = LhsVal * RhsVal. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    OutVal = MultiplyXp(LhsVal, RhsVal, KThreshold, BaseCut, Algorithm) <br>
+ <strong>Note</strong>: Algorithm must be between 1 and 6.</p></td></tr>
+			   <tr><td><a href='../interface/not.html'>NOT</a></td><td><a href='../module/mclass_apint64.html'>MClass_ApInt64</a></td><td>Interface</td><td><p><strong>Function Interface</strong>: NOT <br>
+ <strong>Purpose</strong>:  To return the bitwise logical complement an ApInt64 number. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    NumOut = NOT(NumIn)</p></td></tr>
+			   <tr><td><a href='../interface/not~2.html'>NOT</a></td><td><a href='../module/mclass_apint32.html'>MClass_ApInt32</a></td><td>Interface</td><td><p><strong>Function Interface</strong>: NOT <br>
+ <strong>Purpose</strong>:  To return the bitwise logical complement an ApInt32 number. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    NumOut = NOT(NumIn)</p></td></tr>
+			   <tr><td><a href='../interface/oneapint32.html'>OneApInt32</a></td><td><a href='../module/mclass_apint32.html'>MClass_ApInt32</a></td><td>Interface</td><td></td></tr>
+			   <tr><td><a href='../interface/oneapint64.html'>OneApInt64</a></td><td><a href='../module/mclass_apint64.html'>MClass_ApInt64</a></td><td>Interface</td><td></td></tr>
+			   <tr><td><a href='../interface/operator(ASTERISK).html'>OPERATOR(*)</a></td><td><a href='../module/mclass_apint64.html'>MClass_ApInt64</a></td><td>Interface</td><td><p><strong>Operator Overload</strong>: OPERATOR( * ) <br>
+ <strong>Purpose</strong>:  To perform a multiplication of two signed integers (at least one
+               of which is a ApInt64 number). <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    OutNum = InNum1 * InNum2</p></td></tr>
+			   <tr><td><a href='../interface/operator(ASTERISK)~2.html'>OPERATOR(*)</a></td><td><a href='../module/mbase_float128.html'>MBase_Float128</a></td><td>Interface</td><td><p><strong>Operator Overload</strong>: OPERATOR( * ) <br>
+ <strong>Purpose</strong>:  To perform a multiplication of two real numbers (at least one of which is
+      a <em>Float128</em> number). <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    OUTPUT = FIRST_IN * SECOND_IN</p></td></tr>
+			   <tr><td><a href='../interface/operator(ASTERISK)~3.html'>OPERATOR(*)</a></td><td><a href='../module/mclass_apint32.html'>MClass_ApInt32</a></td><td>Interface</td><td><p><strong>Operator Overload</strong>: OPERATOR( * ) <br>
+ <strong>Purpose</strong>:  To perform a multiplication of two signed integers (at least one
+               of which is a ApInt32 number). <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    OutNum = InNum1 * InNum2</p></td></tr>
+			   <tr><td><a href='../interface/operator(ASTERISKASTERISK).html'>OPERATOR(**)</a></td><td><a href='../module/mclass_apint64.html'>MClass_ApInt64</a></td><td>Interface</td><td><p><strong>Operator Overload</strong>: OPERATOR( ** ) <br>
+ <strong>Purpose</strong>:  To perform an exponentiation of the ApInt64 number. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    NumOut = NumIn**Exp</p></td></tr>
+			   <tr><td><a href='../interface/operator(ASTERISKASTERISK)~2.html'>OPERATOR(**)</a></td><td><a href='../module/mclass_apint32.html'>MClass_ApInt32</a></td><td>Interface</td><td><p><strong>Operator Overload</strong>: OPERATOR( ** ) <br>
+ <strong>Purpose</strong>:  To perform an exponentiation of the ApInt32 number. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    NumOut = NumIn**Exp</p></td></tr>
+			   <tr><td><a href='../interface/operator(+).html'>OPERATOR(+)</a></td><td><a href='../module/mclass_apint64.html'>MClass_ApInt64</a></td><td>Interface</td><td><p><strong>Operator Overload</strong>: OPERATOR(+) <br>
+ <strong>Purpose</strong>:  To perform a summation of two signed integers (at least one
+               of which is a ApInt64 number) or to add a unary plus sign
+               to a ApInt64 number. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    OutNum = +InNum <br>
+  ---&gt;    OutNum = InNum1 + InNum2</p></td></tr>
+			   <tr><td><a href='../interface/operator(+)~2.html'>OPERATOR(+)</a></td><td><a href='../module/mbase_float128.html'>MBase_Float128</a></td><td>Interface</td><td><p><strong>Operator Overload</strong>: OPERATOR(+) <br>
+ <strong>Purpose</strong>:  To perform a summation of two real numbers (at least one of which is
+      a <em>Float128</em> number) or to add a unary plus sign to a <em>Float128</em> number. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    OUTPUT = +INPUT <br>
+  ---&gt;    OUTPUT = FIRST_IN + SECOND_IN</p></td></tr>
+			   <tr><td><a href='../interface/operator(+)~3.html'>OPERATOR(+)</a></td><td><a href='../module/mclass_apint32.html'>MClass_ApInt32</a></td><td>Interface</td><td><p><strong>Operator Overload</strong>: OPERATOR(+) <br>
+ <strong>Purpose</strong>:  To perform a summation of two signed integers (at least one
+               of which is a ApInt32 number) or to add a unary plus sign
+               to a ApInt32 number. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    OutNum = +InNum <br>
+  ---&gt;    OutNum = InNum1 + InNum2</p></td></tr>
+			   <tr><td><a href='../interface/operator(-).html'>OPERATOR(-)</a></td><td><a href='../module/mclass_apint64.html'>MClass_ApInt64</a></td><td>Interface</td><td><p><strong>Operator Overload</strong>: OPERATOR(-) <br>
+ <strong>Purpose</strong>:  To perform a subtraction of two signed integers (at least one
+               of which is a ApInt64 number) or to negate a ApInt64 number. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    OutNum = -InNum <br>
+  ---&gt;    OutNum = InNum1 - InNum2</p></td></tr>
+			   <tr><td><a href='../interface/operator(-)~2.html'>OPERATOR(-)</a></td><td><a href='../module/mbase_float128.html'>MBase_Float128</a></td><td>Interface</td><td><p><strong>Operator Overload</strong>: OPERATOR(-) <br>
+ <strong>Purpose</strong>:  To perform a subtraction of two real numbers (at least one of which is
+      a <em>Float128</em> number) or to perform a negation of a <em>Float128</em> number. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    OUTPUT = -INPUT <br>
+  ---&gt;    OUTPUT = FIRST_IN - SECOND_IN <br></p></td></tr>
+			   <tr><td><a href='../interface/operator(-)~3.html'>OPERATOR(-)</a></td><td><a href='../module/mclass_apint32.html'>MClass_ApInt32</a></td><td>Interface</td><td><p><strong>Operator Overload</strong>: OPERATOR(-) <br>
+ <strong>Purpose</strong>:  To perform a subtraction of two signed integers (at least one
+               of which is a ApInt32 number) or to negate a ApInt32 number. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    OutNum = -InNum <br>
+  ---&gt;    OutNum = InNum1 - InNum2</p></td></tr>
+			   <tr><td><a href='../interface/operator(SLASH).html'>OPERATOR(/)</a></td><td><a href='../module/mclass_apint64.html'>MClass_ApInt64</a></td><td>Interface</td><td><p><strong>Operator Overload</strong>: OPERATOR(/) <br>
+ <strong>Purpose</strong>:  To return the quotient of a division of two signed integers,
+               where the dividend (numerator) is a ApInt64 number and the
+               divisor (denominator) can be any signed integer. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    Quotient = Dividend / Divisor</p></td></tr>
+			   <tr><td><a href='../interface/operator(SLASH)~2.html'>OPERATOR(/)</a></td><td><a href='../module/mbase_float128.html'>MBase_Float128</a></td><td>Interface</td><td><p><strong>Operator Overload</strong>: OPERATOR(/) <br>
+ <strong>Purpose</strong>:  To perform a division of two real numbers where the dividend (numerator)
+      must be a <em>Float128</em> number. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    OUTPUT = FIRST_IN * SECOND_IN</p></td></tr>
+			   <tr><td><a href='../interface/operator(SLASH)~3.html'>OPERATOR(/)</a></td><td><a href='../module/mclass_apint32.html'>MClass_ApInt32</a></td><td>Interface</td><td><p><strong>Operator Overload</strong>: OPERATOR(/) <br>
+ <strong>Purpose</strong>:  To return the quotient of a division of two signed integers,
+               where the dividend (numerator) is a ApInt32 number and the
+               divisor (denominator) can be any signed integer. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    Quotient = Dividend / Divisor</p></td></tr>
+			   <tr><td><a href='../interface/operator(SLASH=).html'>OPERATOR(/=)</a></td><td><a href='../module/mclass_apint64.html'>MClass_ApInt64</a></td><td>Interface</td><td><p><strong>Operator Overload</strong>: OPERATOR(/=) <br>
+ <strong>Purpose</strong>:  To check if values of two ApInt64 numbers are NOT equal.
+  Return .TRUE. if both values are NOT equal; otherwise return .FALSE.. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    Flag = LHS /= RHS <br>
+  ---&gt;    IF (LHS .NE. RHS) DoSomething</p></td></tr>
+			   <tr><td><a href='../interface/operator(SLASH=)~2.html'>OPERATOR(/=)</a></td><td><a href='../module/mbase_float128.html'>MBase_Float128</a></td><td>Interface</td><td><p><strong>Operator Overload</strong>: OPERATOR(/=) <br>
+ <strong>Purpose</strong>:  To check if values of two <em>Float128</em> numbers are not equal.
+  Return .TRUE. if both values are NOT equal; otherwise return .FALSE.. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    Flag = LHS /= RHS <br>
+  ---&gt;    IF (LHS .NE. RHS) DoSomething</p></td></tr>
+			   <tr><td><a href='../interface/operator(SLASH=)~3.html'>OPERATOR(/=)</a></td><td><a href='../module/mclass_apint32.html'>MClass_ApInt32</a></td><td>Interface</td><td><p><strong>Operator Overload</strong>: OPERATOR(/=) <br>
+ <strong>Purpose</strong>:  To check if values of two ApInt32 numbers are NOT equal.
+  Return .TRUE. if both values are NOT equal; otherwise return .FALSE.. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    Flag = LHS /= RHS <br>
+  ---&gt;    IF (LHS .NE. RHS) DoSomething</p></td></tr>
+			   <tr><td><a href='../interface/operator(lt).html'>OPERATOR(<)</a></td><td><a href='../module/mclass_apint64.html'>MClass_ApInt64</a></td><td>Interface</td><td><p><strong>Operator Overload</strong>: OPERATOR(&lt;) <br>
+ <strong>Purpose</strong>:  To check if the LHS value is less than the RHS value.
+  Return .TRUE. if LHS &lt; RHS; otherwise return .FALSE.. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    Flag = LHS &lt; RHS <br>
+  ---&gt;    IF (LHS .LT. RHS) DoSomething</p></td></tr>
+			   <tr><td><a href='../interface/operator(lt)~2.html'>OPERATOR(<)</a></td><td><a href='../module/mbase_float128.html'>MBase_Float128</a></td><td>Interface</td><td><p><strong>Operator Overload</strong>: OPERATOR(&lt;) <br>
+ <strong>Purpose</strong>:  To check if the LHS value is less than the RHS value.
+  Return .TRUE. if LHS &lt; RHS; otherwise return .FALSE.. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    Flag = LHS &lt; RHS <br>
+  ---&gt;    IF (LHS .LT. RHS) DoSomething</p></td></tr>
+			   <tr><td><a href='../interface/operator(lt)~3.html'>OPERATOR(<)</a></td><td><a href='../module/mclass_apint32.html'>MClass_ApInt32</a></td><td>Interface</td><td><p><strong>Operator Overload</strong>: OPERATOR(&lt;) <br>
+ <strong>Purpose</strong>:  To check if the LHS value is less than the RHS value.
+  Return .TRUE. if LHS &lt; RHS; otherwise return .FALSE.. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    Flag = LHS &lt; RHS <br>
+  ---&gt;    IF (LHS .LT. RHS) DoSomething</p></td></tr>
+			   <tr><td><a href='../interface/operator(lt=).html'>OPERATOR(<=)</a></td><td><a href='../module/mclass_apint64.html'>MClass_ApInt64</a></td><td>Interface</td><td><p><strong>Operator Overload</strong>: OPERATOR(&lt;=) <br>
+ <strong>Purpose</strong>:  To check if the LHS value is less than or equal to the RHS value.
+  Return .TRUE. if LHS &lt;= RHS; otherwise return .FALSE.. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    Flag = LHS &lt;= RHS <br>
+  ---&gt;    IF (LHS .LE. RHS) DoSomething</p></td></tr>
+			   <tr><td><a href='../interface/operator(lt=)~2.html'>OPERATOR(<=)</a></td><td><a href='../module/mbase_float128.html'>MBase_Float128</a></td><td>Interface</td><td><p><strong>Operator Overload</strong>: OPERATOR(&lt;=) <br>
+ <strong>Purpose</strong>:  To check if the LHS value is less than or equal to the RHS value.
+  Return .TRUE. if LHS &lt;= RHS; otherwise return .FALSE.. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    Flag = LHS &lt;= RHS <br>
+  ---&gt;    IF (LHS .LE. RHS) DoSomething</p></td></tr>
+			   <tr><td><a href='../interface/operator(lt=)~3.html'>OPERATOR(<=)</a></td><td><a href='../module/mclass_apint32.html'>MClass_ApInt32</a></td><td>Interface</td><td><p><strong>Operator Overload</strong>: OPERATOR(&lt;=) <br>
+ <strong>Purpose</strong>:  To check if the LHS value is less than or equal to the RHS value.
+  Return .TRUE. if LHS &lt;= RHS; otherwise return .FALSE.. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    Flag = LHS &lt;= RHS <br>
+  ---&gt;    IF (LHS .LE. RHS) DoSomething</p></td></tr>
+			   <tr><td><a href='../interface/operator(==).html'>OPERATOR(==)</a></td><td><a href='../module/mclass_apint64.html'>MClass_ApInt64</a></td><td>Interface</td><td><p><strong>Operator Overload</strong>: OPERATOR(==) <br>
+ <strong>Purpose</strong>:  To check if values of two ApInt64 numbers are equal.
+  Return .TRUE. if both values are equal; otherwise return .FALSE.. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    Flag = LHS == RHS <br>
+  ---&gt;    IF (LHS .EQ. RHS) DoSomething</p></td></tr>
+			   <tr><td><a href='../interface/operator(==)~2.html'>OPERATOR(==)</a></td><td><a href='../module/mbase_float128.html'>MBase_Float128</a></td><td>Interface</td><td><p><strong>Operator Overload</strong>: OPERATOR(==) <br>
+ <strong>Purpose</strong>:  To check if values of two <em>Float128</em> numbers are equal.
+  Return .TRUE. if both values are equal; otherwise return .FALSE.. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    Flag = LHS == RHS <br>
+  ---&gt;    IF (LHS .EQ. RHS) DoSomething</p></td></tr>
+			   <tr><td><a href='../interface/operator(==)~3.html'>OPERATOR(==)</a></td><td><a href='../module/mclass_apint32.html'>MClass_ApInt32</a></td><td>Interface</td><td><p><strong>Operator Overload</strong>: OPERATOR(==) <br>
+ <strong>Purpose</strong>:  To check if values of two ApInt32 numbers are equal.
+  Return .TRUE. if both values are equal; otherwise return .FALSE.. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    Flag = LHS == RHS <br>
+  ---&gt;    IF (LHS .EQ. RHS) DoSomething</p></td></tr>
+			   <tr><td><a href='../interface/operator(gt).html'>OPERATOR(>)</a></td><td><a href='../module/mclass_apint64.html'>MClass_ApInt64</a></td><td>Interface</td><td><p><strong>Operator Overload</strong>: OPERATOR(&gt;) <br>
+ <strong>Purpose</strong>:  To check if the LHS value is greater than the RHS value.
+  Return .TRUE. if LHS &gt; RHS; otherwise return .FALSE.. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    Flag = LHS &gt; RHS <br>
+  ---&gt;    IF (LHS .GT. RHS) DoSomething</p></td></tr>
+			   <tr><td><a href='../interface/operator(gt)~2.html'>OPERATOR(>)</a></td><td><a href='../module/mbase_float128.html'>MBase_Float128</a></td><td>Interface</td><td><p><strong>Operator Overload</strong>: OPERATOR(&gt;) <br>
+ <strong>Purpose</strong>:  To check if the LHS value is greater than the RHS value.
+  Return .TRUE. if LHS &gt; RHS; otherwise return .FALSE.. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    Flag = LHS &gt; RHS <br>
+  ---&gt;    IF (LHS .GT. RHS) DoSomething</p></td></tr>
+			   <tr><td><a href='../interface/operator(gt)~3.html'>OPERATOR(>)</a></td><td><a href='../module/mclass_apint32.html'>MClass_ApInt32</a></td><td>Interface</td><td><p><strong>Operator Overload</strong>: OPERATOR(&gt;) <br>
+ <strong>Purpose</strong>:  To check if the LHS value is greater than the RHS value.
+  Return .TRUE. if LHS &gt; RHS; otherwise return .FALSE.. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    Flag = LHS &gt; RHS <br>
+  ---&gt;    IF (LHS .GT. RHS) DoSomething</p></td></tr>
+			   <tr><td><a href='../interface/operator(gt=).html'>OPERATOR(>=)</a></td><td><a href='../module/mclass_apint64.html'>MClass_ApInt64</a></td><td>Interface</td><td><p><strong>Operator Overload</strong>: OPERATOR(&gt;=) <br>
+ <strong>Purpose</strong>:  To check if the LHS value is greater than or equal to the RHS value.
+  Return .TRUE. if LHS &gt;= RHS; otherwise return .FALSE.. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    Flag = LHS &gt;= RHS <br>
+  ---&gt;    IF (LHS .GE. RHS) DoSomething</p></td></tr>
+			   <tr><td><a href='../interface/operator(gt=)~2.html'>OPERATOR(>=)</a></td><td><a href='../module/mbase_float128.html'>MBase_Float128</a></td><td>Interface</td><td><p><strong>Operator Overload</strong>: OPERATOR(&gt;=) <br>
+ <strong>Purpose</strong>:  To check if the LHS value is greater than or equal to the RHS value.
+  Return .TRUE. if LHS &gt;= RHS; otherwise return .FALSE.. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    Flag = LHS &gt;= RHS <br>
+  ---&gt;    IF (LHS .GE. RHS) DoSomething</p></td></tr>
+			   <tr><td><a href='../interface/operator(gt=)~3.html'>OPERATOR(>=)</a></td><td><a href='../module/mclass_apint32.html'>MClass_ApInt32</a></td><td>Interface</td><td><p><strong>Operator Overload</strong>: OPERATOR(&gt;=) <br>
+ <strong>Purpose</strong>:  To check if the LHS value is greater than or equal to the RHS value.
+  Return .TRUE. if LHS &gt;= RHS; otherwise return .FALSE.. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    Flag = LHS &gt;= RHS <br>
+  ---&gt;    IF (LHS .GE. RHS) DoSomething</p></td></tr>
+			   <tr><td><a href='../interface/popcnt.html'>POPCNT</a></td><td><a href='../module/mclass_apint64.html'>MClass_ApInt64</a></td><td>Interface</td><td><p><strong>Function Interface</strong>: POPCNT <br>
+ <strong>Purpose</strong>:  To count the number of 1 bits in the ApInt64 number. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    NumBits = POPCNT(ApNum)</p></td></tr>
+			   <tr><td><a href='../interface/popcnt~2.html'>POPCNT</a></td><td><a href='../module/mclass_apint32.html'>MClass_ApInt32</a></td><td>Interface</td><td><p><strong>Function Interface</strong>: POPCNT <br>
+ <strong>Purpose</strong>:  To count the number of 1 bits in the ApInt32 number. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    NumBits = POPCNT(ApNum)</p></td></tr>
+			   <tr><td><a href='../interface/poppar.html'>POPPAR</a></td><td><a href='../module/mclass_apint64.html'>MClass_ApInt64</a></td><td>Interface</td><td><p><strong>Function Interface</strong>: POPPAR <br>
+ <strong>Purpose</strong>:  To determine the parity of the ApInt64 number. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    NumPar = POPPAR(ApNum)</p></td></tr>
+			   <tr><td><a href='../interface/poppar~2.html'>POPPAR</a></td><td><a href='../module/mclass_apint32.html'>MClass_ApInt32</a></td><td>Interface</td><td><p><strong>Function Interface</strong>: POPPAR <br>
+ <strong>Purpose</strong>:  To determine the parity of the ApInt32 number. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    NumPar = POPPAR(ApNum)</p></td></tr>
+			   <tr><td><a href='../interface/randnumapint32.html'>RandNumApInt32</a></td><td><a href='../module/mclass_apint32.html'>MClass_ApInt32</a></td><td>Interface</td><td></td></tr>
+			   <tr><td><a href='../interface/randnumapint64.html'>RandNumApInt64</a></td><td><a href='../module/mclass_apint64.html'>MClass_ApInt64</a></td><td>Interface</td><td></td></tr>
+			   <tr><td><a href='../interface/shiftl.html'>SHIFTL</a></td><td><a href='../module/mclass_apint64.html'>MClass_ApInt64</a></td><td>Interface</td><td><p><strong>Function Interface</strong>: SHIFTL <br>
+ <strong>Purpose</strong>:  To perform logical left shift where ShiftPos is non-negative. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    NumOut = SHIFTL(NumIn, 157)</p></td></tr>
+			   <tr><td><a href='../interface/shiftl~2.html'>SHIFTL</a></td><td><a href='../module/mclass_apint32.html'>MClass_ApInt32</a></td><td>Interface</td><td><p><strong>Function Interface</strong>: SHIFTL <br>
+ <strong>Purpose</strong>:  To perform logical left shift where ShiftPos is non-negative. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    NumOut = SHIFTL(NumIn, 157)</p></td></tr>
+			   <tr><td><a href='../interface/shiftr.html'>SHIFTR</a></td><td><a href='../module/mclass_apint64.html'>MClass_ApInt64</a></td><td>Interface</td><td><p><strong>Function Interface</strong>: SHIFTR <br>
+ <strong>Purpose</strong>:  To perform logical right shift where ShiftPos is non-negative. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    NumOut = SHIFTR(NumIn, 141)</p></td></tr>
+			   <tr><td><a href='../interface/shiftr~2.html'>SHIFTR</a></td><td><a href='../module/mclass_apint32.html'>MClass_ApInt32</a></td><td>Interface</td><td><p><strong>Function Interface</strong>: SHIFTR <br>
+ <strong>Purpose</strong>:  To perform logical right shift where ShiftPos is non-negative. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    NumOut = SHIFTR(NumIn, 141)</p></td></tr>
+			   <tr><td><a href='../interface/sqr.html'>SQR</a></td><td><a href='../module/mclass_apint64.html'>MClass_ApInt64</a></td><td>Interface</td><td><p><strong>Function Interface</strong>: SQR <br>
+ <strong>Purpose</strong>:  To compute the square of the ApInt64 number. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    NumSqr = SQR(ApNum)</p></td></tr>
+			   <tr><td><a href='../interface/sqr~2.html'>SQR</a></td><td><a href='../module/mclass_apint32.html'>MClass_ApInt32</a></td><td>Interface</td><td><p><strong>Function Interface</strong>: SQR <br>
+ <strong>Purpose</strong>:  To compute the square of the ApInt32 number. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    NumSqr = SQR(ApNum)</p></td></tr>
+			   <tr><td><a href='../interface/subtract.html'>Subtract</a></td><td><a href='../module/mbase_float128.html'>MBase_Float128</a></td><td>Interface</td><td><p><strong>Subroutine Interface</strong>: Subtract <br>
+ <strong>Purpose</strong>:  To perform subtraction: This = This - Other. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    CALL Subtract(This, Other) <br></p></td></tr>
+			   <tr><td><a href='../interface/subtractxp.html'>SubtractXp</a></td><td><a href='../module/mclass_apint64.html'>MClass_ApInt64</a></td><td>Interface</td><td><p><strong>Function Interface</strong>: SubtractXp <br>
+ <strong>Purpose</strong>:  To perform a subtraction: OutVal = LhsVal - RhsVal. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    OutVal = SubtractXp(LhsVal, RhsVal, Algorithm) <br>
+ <strong>Note</strong>: Algorithm must be between 1 and 3.</p></td></tr>
+			   <tr><td><a href='../interface/tobytes.html'>ToBytes</a></td><td><a href='../module/mclass_apint64.html'>MClass_ApInt64</a></td><td>Interface</td><td><p><strong>Subroutine Interface</strong>: ToBytes <br>
+ <strong>Purpose</strong>:  To convert an ApInt64 number to a 8-bit integer magnitude
+  array and its sign. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt; CALL ToBytes(ApNum, MagArray, Sign)</p></td></tr>
+			   <tr><td><a href='../interface/tobytes~2.html'>ToBytes</a></td><td><a href='../module/mclass_apint32.html'>MClass_ApInt32</a></td><td>Interface</td><td><p><strong>Subroutine Interface</strong>: ToBytes <br>
+ <strong>Purpose</strong>:  To convert an ApInt32 number to a 8-bit integer magnitude
+  array and its sign. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt; CALL ToBytes(ApNum, MagArray, Sign)</p></td></tr>
+			   <tr><td><a href='../interface/todecstring.html'>ToDecString</a></td><td><a href='../module/mclass_apint64.html'>MClass_ApInt64</a></td><td>Interface</td><td><p><strong>Function Interface</strong>: ToDecString <br>
+ <strong>Purpose</strong>:  To convert an arbitrary-precision signed integer to
+  a decimal string. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    Str = ToDecString(ApNum)</p></td></tr>
+			   <tr><td><a href='../interface/todecstring~2.html'>ToDecString</a></td><td><a href='../module/mbase_float128.html'>MBase_Float128</a></td><td>Interface</td><td><p><strong>Function Interface</strong>: ToDecString <br>
+ <strong>Purpose</strong>:  To convert a <em>Float128</em> number to a decimal string. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    Str = ToDecString(F128)</p></td></tr>
+			   <tr><td><a href='../interface/todecstring~3.html'>ToDecString</a></td><td><a href='../module/mclass_apint32.html'>MClass_ApInt32</a></td><td>Interface</td><td><p><strong>Function Interface</strong>: ToDecString <br>
+ <strong>Purpose</strong>:  To convert an arbitrary-precision signed integer to
+  a decimal string. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    Str = ToDecString(ApNum)</p></td></tr>
+			   <tr><td><a href='../interface/toi128.html'>ToI128</a></td><td><a href='../module/mclass_apint64.html'>MClass_ApInt64</a></td><td>Interface</td><td><p><strong>Function Interface</strong>: ToI128 <br>
+ <strong>Purpose</strong>:  To convert an arbitrary-precision signed integer to a
+  128-bit signed integer. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    I128 = ToI128(ApNum)</p></td></tr>
+			   <tr><td><a href='../interface/toi128~2.html'>ToI128</a></td><td><a href='../module/mclass_apint32.html'>MClass_ApInt32</a></td><td>Interface</td><td><p><strong>Function Interface</strong>: ToI128 <br>
+ <strong>Purpose</strong>:  To convert an arbitrary-precision signed integer to a
+  128-bit signed integer. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    I128 = ToI128(ApNum)</p></td></tr>
+			   <tr><td><a href='../interface/toi32.html'>ToI32</a></td><td><a href='../module/mclass_apint64.html'>MClass_ApInt64</a></td><td>Interface</td><td><p><strong>Function Interface</strong>: ToI32 <br>
+ <strong>Purpose</strong>:  To convert an arbitrary-precision signed integer to a
+  32-bit signed integer. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    I32 = ToI32(ApNum)</p></td></tr>
+			   <tr><td><a href='../interface/toi32~2.html'>ToI32</a></td><td><a href='../module/mbase_float128.html'>MBase_Float128</a></td><td>Interface</td><td><p><strong>Function Interface</strong>: ToI32 <br>
+ <strong>Purpose</strong>:  To convert a <em>Float128</em> number to a 32-bit integer number. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    I32 = ToI32(F128)</p></td></tr>
+			   <tr><td><a href='../interface/toi32~3.html'>ToI32</a></td><td><a href='../module/mclass_apint32.html'>MClass_ApInt32</a></td><td>Interface</td><td><p><strong>Function Interface</strong>: ToI32 <br>
+ <strong>Purpose</strong>:  To convert an arbitrary-precision signed integer to a
+  32-bit signed integer. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    I32 = ToI32(ApNum)</p></td></tr>
+			   <tr><td><a href='../interface/toi64.html'>ToI64</a></td><td><a href='../module/mclass_apint64.html'>MClass_ApInt64</a></td><td>Interface</td><td><p><strong>Function Interface</strong>: ToI64 <br>
+ <strong>Purpose</strong>:  To convert an arbitrary-precision signed integer to a
+  64-bit signed integer. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    I64 = ToI64(ApNum)</p></td></tr>
+			   <tr><td><a href='../interface/toi64~2.html'>ToI64</a></td><td><a href='../module/mbase_float128.html'>MBase_Float128</a></td><td>Interface</td><td><p><strong>Function Interface</strong>: ToI64 <br>
+ <strong>Purpose</strong>:  To convert a <em>Float128</em> number to a 64-bit integer number. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    I64 = ToI64(F128)</p></td></tr>
+			   <tr><td><a href='../interface/toi64~3.html'>ToI64</a></td><td><a href='../module/mclass_apint32.html'>MClass_ApInt32</a></td><td>Interface</td><td><p><strong>Function Interface</strong>: ToI64 <br>
+ <strong>Purpose</strong>:  To convert an arbitrary-precision signed integer to a
+  64-bit signed integer. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    I64 = ToI64(ApNum)</p></td></tr>
+			   <tr><td><a href='../interface/tor128.html'>ToR128</a></td><td><a href='../module/mclass_apint64.html'>MClass_ApInt64</a></td><td>Interface</td><td><p><strong>Function Interface</strong>: ToR128 <br>
+ <strong>Purpose</strong>:  To convert an arbitrary-precision signed integer to a
+  128-bit real number. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    R128 = ToR128(ApNum)</p></td></tr>
+			   <tr><td><a href='../interface/tor128~2.html'>ToR128</a></td><td><a href='../module/mbase_float128.html'>MBase_Float128</a></td><td>Interface</td><td><p><strong>Function Interface</strong>: ToR128 <br>
+ <strong>Purpose</strong>:  To convert a <em>Float128</em> number to a 128-bit real number. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    R128 = ToR128(F128)</p></td></tr>
+			   <tr><td><a href='../interface/tor128~3.html'>ToR128</a></td><td><a href='../module/mclass_apint32.html'>MClass_ApInt32</a></td><td>Interface</td><td><p><strong>Function Interface</strong>: ToR128 <br>
+ <strong>Purpose</strong>:  To convert an arbitrary-precision signed integer to a
+  128-bit real number. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    R128 = ToR128(ApNum)</p></td></tr>
+			   <tr><td><a href='../interface/tor32.html'>ToR32</a></td><td><a href='../module/mclass_apint64.html'>MClass_ApInt64</a></td><td>Interface</td><td><p><strong>Function Interface</strong>: ToR32 <br>
+ <strong>Purpose</strong>:  To convert an arbitrary-precision signed integer to a
+  32-bit real number. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    R32 = ToR32(ApNum)</p></td></tr>
+			   <tr><td><a href='../interface/tor32~2.html'>ToR32</a></td><td><a href='../module/mbase_float128.html'>MBase_Float128</a></td><td>Interface</td><td><p><strong>Function Interface</strong>: ToR32 <br>
+ <strong>Purpose</strong>:  To convert a <em>Float128</em> number to a 32-bit real number. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    R32 = ToR32(F128)</p></td></tr>
+			   <tr><td><a href='../interface/tor32~3.html'>ToR32</a></td><td><a href='../module/mclass_apint32.html'>MClass_ApInt32</a></td><td>Interface</td><td><p><strong>Function Interface</strong>: ToR32 <br>
+ <strong>Purpose</strong>:  To convert an arbitrary-precision signed integer to a
+  32-bit real number. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    R32 = ToR32(ApNum)</p></td></tr>
+			   <tr><td><a href='../interface/tor64.html'>ToR64</a></td><td><a href='../module/mclass_apint64.html'>MClass_ApInt64</a></td><td>Interface</td><td><p><strong>Function Interface</strong>: ToR64 <br>
+ <strong>Purpose</strong>:  To convert an arbitrary-precision signed integer to a
+  64-bit real number. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    R64 = ToR64(ApNum)</p></td></tr>
+			   <tr><td><a href='../interface/tor64~2.html'>ToR64</a></td><td><a href='../module/mbase_float128.html'>MBase_Float128</a></td><td>Interface</td><td><p><strong>Function Interface</strong>: ToR64 <br>
+ <strong>Purpose</strong>:  To convert a <em>Float128</em> number to a 64-bit real number. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    R64 = ToR64(F128)</p></td></tr>
+			   <tr><td><a href='../interface/tor64~3.html'>ToR64</a></td><td><a href='../module/mclass_apint32.html'>MClass_ApInt32</a></td><td>Interface</td><td><p><strong>Function Interface</strong>: ToR64 <br>
+ <strong>Purpose</strong>:  To convert an arbitrary-precision signed integer to a
+  64-bit real number. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    R64 = ToR64(ApNum)</p></td></tr>
+			   <tr><td><a href='../interface/tostringxp.html'>ToStringXp</a></td><td><a href='../module/mclass_apint64.html'>MClass_ApInt64</a></td><td>Interface</td><td><p><strong>Function Interface</strong>: ToStringXp <br>
+ <strong>Purpose</strong>:  To convert an arbitrary-precision signed integer to a decimal
+               string.  Valid value of <em>Algorithm</em> is between 1 and 7. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    Str = ToStringXp(ApNum, Algorithm)</p></td></tr>
+			   <tr><td><a href='../interface/tou128.html'>ToU128</a></td><td><a href='../module/mclass_apint64.html'>MClass_ApInt64</a></td><td>Interface</td><td><p><strong>Function Interface</strong>: ToU128 <br>
+ <strong>Purpose</strong>:  To convert an arbitrary-precision signed integer to a
+  128-bit unsigned integer. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    U128 = ToU128(ApNum)</p></td></tr>
+			   <tr><td><a href='../interface/tou128~2.html'>ToU128</a></td><td><a href='../module/mclass_apint32.html'>MClass_ApInt32</a></td><td>Interface</td><td><p><strong>Function Interface</strong>: ToU128 <br>
+ <strong>Purpose</strong>:  To convert an arbitrary-precision signed integer to a
+  128-bit unsigned integer. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    U128 = ToU128(ApNum)</p></td></tr>
+			   <tr><td><a href='../interface/tou32.html'>ToU32</a></td><td><a href='../module/mclass_apint64.html'>MClass_ApInt64</a></td><td>Interface</td><td><p><strong>Function Interface</strong>: ToU32 <br>
+ <strong>Purpose</strong>:  To convert an arbitrary-precision signed integer to a
+  32-bit unsigned integer. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    U32 = ToU32(ApNum)</p></td></tr>
+			   <tr><td><a href='../interface/tou32~2.html'>ToU32</a></td><td><a href='../module/mclass_apint32.html'>MClass_ApInt32</a></td><td>Interface</td><td><p><strong>Function Interface</strong>: ToU32 <br>
+ <strong>Purpose</strong>:  To convert an arbitrary-precision signed integer to a
+  32-bit unsigned integer. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    U32 = ToU32(ApNum)</p></td></tr>
+			   <tr><td><a href='../interface/tou64.html'>ToU64</a></td><td><a href='../module/mclass_apint64.html'>MClass_ApInt64</a></td><td>Interface</td><td><p><strong>Function Interface</strong>: ToU64 <br>
+ <strong>Purpose</strong>:  To convert an arbitrary-precision signed integer to a
+  64-bit unsigned integer. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    U64 = ToU64(ApNum)</p></td></tr>
+			   <tr><td><a href='../interface/tou64~2.html'>ToU64</a></td><td><a href='../module/mclass_apint32.html'>MClass_ApInt32</a></td><td>Interface</td><td><p><strong>Function Interface</strong>: ToU64 <br>
+ <strong>Purpose</strong>:  To convert an arbitrary-precision signed integer to a
+  64-bit unsigned integer. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    U64 = ToU64(ApNum)</p></td></tr>
+			   <tr><td><a href='../interface/trailz.html'>TRAILZ</a></td><td><a href='../module/mclass_apint64.html'>MClass_ApInt64</a></td><td>Interface</td><td><p><strong>Function Interface</strong>: TRAILZ <br>
+ <strong>Purpose</strong>:  To count the number of trailing zero bits of the ApInt64 number. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    NumTZ = TRAILZ(ApNum)</p></td></tr>
+			   <tr><td><a href='../interface/trailz~2.html'>TRAILZ</a></td><td><a href='../module/mclass_apint32.html'>MClass_ApInt32</a></td><td>Interface</td><td><p><strong>Function Interface</strong>: TRAILZ <br>
+ <strong>Purpose</strong>:  To count the number of trailing zero bits of the ApInt32 number. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    NumTZ = TRAILZ(ApNum)</p></td></tr>
+			   <tr><td><a href='../interface/zeroapint32.html'>ZeroApInt32</a></td><td><a href='../module/mclass_apint32.html'>MClass_ApInt32</a></td><td>Interface</td><td></td></tr>
+			   <tr><td><a href='../interface/zeroapint64.html'>ZeroApInt64</a></td><td><a href='../module/mclass_apint64.html'>MClass_ApInt64</a></td><td>Interface</td><td></td></tr>
+			 </tbody></table>
+             
+        </div>
+      </div>
+      <hr>
+    </div> <!-- /container -->
+    <footer>
+      <div class="container">
+        <div class="row justify-content-between">
+          <div class="col"><p>eXPerimental Fortran Library (XpfLib) Documentation was developed by Niranama<br>&copy; 2024 
+</p>
+          </div>
+          <div class="col">
+            <p class="text-end">
+              Documentation generated by
+              <a href="https://github.com/Fortran-FOSS-Programmers/ford">FORD</a>
+            </p>
+          </div>
+        </div>
+        <br>
+      </div> <!-- /container -->
+    </footer>
+
+    <!-- Bootstrap core JavaScript -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>    
+
+    <!-- MathJax JavaScript
+             ================================================== -->
+             <!-- Placed at the end of the document so the pages load faster -->
+        <script type="text/x-mathjax-config">
+          MathJax.Hub.Config({
+          TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } },
+          jax: ['input/TeX','input/MathML','output/HTML-CSS'],
+          extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']
+          });
+        </script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+          <script src="../tipuesearch/tipuesearch_content.js"></script>
+          <script src="../tipuesearch/tipuesearch_set.js"></script>
+          <script src="../tipuesearch/tipuesearch.js"></script>
+
+  </body>
+</html>

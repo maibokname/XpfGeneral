@@ -1,0 +1,2931 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta name="description" content="Experimental Fortran Package - Data Structures">
+    <meta name="author" content="Niranama" >
+    <link rel="icon" href="../favicon.png">
+
+    <title>HashTree &ndash; eXPerimental Fortran Library (XpfLib) Documentation </title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link href="../css/pygments.css" rel="stylesheet">
+    <link href="../css/font-awesome.min.css" rel="stylesheet">
+    <link href="../css/local.css" rel="stylesheet">
+      <link  href="../tipuesearch/tipuesearch.css" rel="stylesheet">
+
+    <script src="https://code.jquery.com/jquery-3.7.0.slim.min.js" integrity="sha256-tG5mcZUtJsZvyKAxYLVXrmjKBVLd6VpVccqz/r4ypFE=" crossorigin="anonymous"></script>
+  </head>
+
+  <body>
+
+    <!-- Fixed navbar -->
+    <div class="container-fluid mb-sm-4 mb-xl-2">
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container">
+          <a class="navbar-brand" href="../index.html">eXPerimental Fortran Library (XpfLib) Documentation </a>
+          <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar"
+                  aria-expanded="false" aria-controls="navbar" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon">
+          </button>
+
+          <div id="navbar" class="navbar-collapse collapse">
+            <ul class="navbar-nav">
+                  <li class="nav-item">
+                    <a class="nav-link" href="../lists/files.html">Source Files</a>
+                  </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../lists/modules.html">Modules</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../lists/types.html">Derived Types</a>
+                </li>
+            </ul>
+              <div class="d-flex align-items-end flex-grow-1">
+                <form action="../search.html" role="search" class="ms-auto">
+                  <input type="text" class="form-control" aria-label="Search" placeholder="Search" name="q" id="tipue_search_input" autocomplete="off" required>
+                </form>
+              </div>
+          </div><!--/.nav-collapse -->
+        </div>
+      </nav>
+    </div>
+
+    <div class="container">
+  <div class="row">
+    <h1>HashTree
+      <small>Derived Type</small>
+      
+    </h1>
+      <div class="container p-2 mb-4 bg-light border rounded-3">
+    <div class="row align-items-center justify-content-between" id="info-bar">
+      <div class="col">
+        <ul class="list-inline" style="margin-bottom:0px;display:inline">
+
+            <li class="list-inline-item" id="statements"><i class="fa fa-list-ol"></i>
+              <a data-bs-toggle="tooltip"
+                 data-bs-placement="bottom" data-html="true"
+                 title="<p> 1.2% of total for derived types.</p>Including implementation: 621 statements,  1.8% of total for derived types.">32 statements</a>
+            </li>
+
+            <li class="list-inline-item" id="source-file">
+              <i class="fa fa-code"></i>
+              <a href="../src/MClass_HashTree.f90"> Source File</a>
+            </li>
+        </ul>
+      </div>
+      <div class="col">
+        <nav aria-label="breadcrumb">
+          <ol class="breadcrumb justify-content-end mb-0">
+                <li class="breadcrumb-item"><a href='../sourcefile/mclass_hashtree.f90.html'>MClass_HashTree.f90</a></li>
+                <li class="breadcrumb-item"><a href='../module/mclass_hashtree.html'>MClass_HashTree</a></li>
+            <li class="breadcrumb-item active" aria-current="page">HashTree</li>
+          </ol>
+        </nav>
+      </div>
+    </div>
+  </div>
+  <script>
+    $(function () {
+    $('[data-bs-toggle="tooltip"]').tooltip()
+    })
+  </script>
+
+  </div>
+  
+  <div class="row">
+    <div class="col-md-3 hidden-xs hidden-sm visible-md visible-lg">
+      <div id="sidebar">
+      <h3>Contents</h3>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+      <div class="card mb-4">
+      <a data-bs-toggle="collapse" href="#fins-0"
+         aria-expanded="false" aria-controls="fins-0">
+         <h4 class="card-header bg-primary text-white">Finalization Procedures</h4>
+      </a>
+      <div id="fins-0" class="collapse">
+        <div class="list-group list-group-flush">
+            <a class="list-group-item" href="../type/hashtree.html#finalproc-hashtree_finalize">HashTree_Finalize</a>
+        </div>
+      </div>
+    </div>
+
+      <div class="card mb-4">
+      <a data-bs-toggle="collapse" href="#boundprocs-0"
+         aria-expanded="false" aria-controls="boundprocs-0">
+         <h4 class="card-header bg-primary text-white">Type-Bound Procedures</h4>
+      </a>
+      <div id="boundprocs-0" class="collapse">
+        <div class="list-group list-group-flush">
+            <a class="list-group-item" href="../type/hashtree.html#boundprocedure-isempty~86">IsEmpty</a>
+            <a class="list-group-item" href="../type/hashtree.html#boundprocedure-clear~18">Clear</a>
+            <a class="list-group-item" href="../type/hashtree.html#boundprocedure-getkeyptr">GetKeyPtr</a>
+            <a class="list-group-item" href="../type/hashtree.html#boundprocedure-getvalptr">GetValPtr</a>
+            <a class="list-group-item" href="../type/hashtree.html#boundprocedure-setmolds">SetMolds</a>
+            <a class="list-group-item" href="../type/hashtree.html#boundprocedure-freemolds">FreeMolds</a>
+            <a class="list-group-item" href="../type/hashtree.html#boundprocedure-iskeyvalid">IsKeyValid</a>
+            <a class="list-group-item" href="../type/hashtree.html#boundprocedure-isvalvalid">IsValValid</a>
+            <a class="list-group-item" href="../type/hashtree.html#boundprocedure-copycollection~3">CopyCollection</a>
+            <a class="list-group-item" href="../type/hashtree.html#boundprocedure-destruct~20">Destruct</a>
+            <a class="list-group-item" href="../type/hashtree.html#boundprocedure-getsize~20">GetSize</a>
+            <a class="list-group-item" href="../type/hashtree.html#boundprocedure-startfirst~16">StartFirst</a>
+            <a class="list-group-item" href="../type/hashtree.html#boundprocedure-moveforward~16">MoveForward</a>
+            <a class="list-group-item" href="../type/hashtree.html#boundprocedure-insert~12">Insert</a>
+            <a class="list-group-item" href="../type/hashtree.html#boundprocedure-delete~11">Delete</a>
+            <a class="list-group-item" href="../type/hashtree.html#boundprocedure-remove~14">Remove</a>
+            <a class="list-group-item" href="../type/hashtree.html#boundprocedure-contain~7">Contain</a>
+            <a class="list-group-item" href="../type/hashtree.html#boundprocedure-getvalue~6">GetValue</a>
+            <a class="list-group-item" href="../type/hashtree.html#boundprocedure-toarray~11">ToArray</a>
+            <a class="list-group-item" href="../type/hashtree.html#boundprocedure-getall~11">GetAll</a>
+            <a class="list-group-item" href="../type/hashtree.html#boundprocedure-createempty~14">CreateEmpty</a>
+            <a class="list-group-item" href="../type/hashtree.html#boundprocedure-construct~20">Construct</a>
+            <a class="list-group-item" href="../type/hashtree.html#boundprocedure-copy~6">Copy</a>
+            <a class="list-group-item" href="../type/hashtree.html#boundprocedure-isequalto~6">IsEqualTo</a>
+            <a class="list-group-item" href="../type/hashtree.html#boundprocedure-memfree~6">MemFree</a>
+            <a class="list-group-item" href="../type/hashtree.html#boundprocedure-tostring~9">ToString</a>
+            <a class="list-group-item" href="../type/hashtree.html#boundprocedure-hashcode~9">HashCode</a>
+        </div>
+      </div>
+    </div>
+
+  
+  
+    <div class="card card-primary">
+      <div class="card-header text-left"><h3 class="card-title">Source Code</h3></div>
+      <div class="list-group">
+        <a class="list-group-item" href="../type/hashtree.html#src">HashTree</a>
+      </div>
+    </div>
+
+
+  </div>
+
+    </div>
+    
+    <div class="col-md-9" id='text'>
+      <h2>type, public, extends(<a href='../type/basesymtable.html'>BaseSymTable</a>) :: HashTree</h2>
+    <p>The <em>HashTree</em> type is a collection type that employs a separate-chaining hash table
+ implementation to provide common operations for an unordered symbol table.  The <em>HashTree</em>
+ type utilizes the <em>IntrusiveHashTree</em> type as its component to store <em>TabNode</em> objects.
+ As an intrusive container, the <em>IntrusiveHashTree</em> type provides common operations for
+ hash table without a memory management task.  The memory management task of the inserted
+ <em>TabNode</em> objects is handled by the <em>HashTree</em> type. <br>
+ As an unordered symbol table, the <em>HashTree</em> type directly extends the <em>BaseSymTable</em>
+ type and implements all deferred procedures required by the <em>BaseSymTable</em> type and all
+ its super classes.  As a symbol table, the <em>HashTree</em> type does not allow duplicated keys;
+ therefore, if an inserted key is equal to a key stored in the table, an associated value
+ of the stored key is replaced by an associated value of the inserted key. <br></p>
+    <br>
+
+    
+
+      <section>
+        <h2>Finalization Procedures</h2>
+            <div class="card">
+    <div class="card-header codesum">
+      <span class="anchor" id="finalproc-hashtree_finalize"></span>
+      <h3>final :: <strong>HashTree_Finalize</strong> </h3>
+    </div>
+    <div class="card-body">
+      
+      <p>To perform finalization of the object.</p>
+    </div>
+    <ul class="list-group">
+      <li class="list-group-item">
+            <h3>
+    private  subroutine HashTree_Finalize(Collection)  
+
+    </h3>
+  <p>To perform finalization of the object.</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-collection~289"></span>
+              type(<a href='../type/hashtree.html'>HashTree</a>),
+            </td>
+<td>intent(inout)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Collection</strong></td>
+            <td>
+                
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+      </li>
+    </ul>
+  </div>
+
+      </section>
+      <br>
+
+      <section>
+        <h2>Type-Bound Procedures</h2>
+          <div class="row">
+              <div class="card mt-3">
+    <div class="card-header codesum">
+      <span class="anchor" id="boundprocedure-isempty~86"></span>
+      <h3>
+          procedure, public ::
+  <strong>IsEmpty</strong> => BaseCollection_IsEmpty
+        
+      </h3>
+    </div>
+      <div class="card-body">
+        
+        <p><strong>Type-Bound Function</strong>: IsEmpty <br>
+ <strong>Purpose</strong>:  To check whether the collection is empty or not. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    Flag = Collection%IsEmpty() <br>
+  ---&gt;    IF (.NOT.Collection%IsEmpty()) DoSomeThing</p>
+      </div>
+    <ul class="list-group">
+        <li class="list-group-item">
+                  <h3>
+    private  function BaseCollection_IsEmpty(Collection) result(Flag)  
+</h3>
+
+  <p>To check whether the collection is currently empty or not.</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(<a href='../type/basecollection.html'>BaseCollection</a>),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Collection</strong></td>
+            <td>
+                <p>collection object</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+    <h4>
+    Return Value
+    <small>logical</small>
+    </h4>
+    <p>true if the collection currently contains no item.</p>
+
+        </li>
+    </ul>
+  </div>
+
+          </div>
+          <div class="row">
+              <div class="card mt-3">
+    <div class="card-header codesum">
+      <span class="anchor" id="boundprocedure-clear~18"></span>
+      <h3>
+          procedure, public ::
+  <strong>Clear</strong> => BaseSymTable_ClearEntries
+        
+      </h3>
+    </div>
+      <div class="card-body">
+        
+        <p><strong>Type-Bound Subroutine</strong>: Clear <br>
+ <strong>Purpose</strong>:  To remove all key-value pairs from the collection. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    CALL Collection%Clear()
+ <strong>Note</strong>: The <em>Clear</em> method provided by the <em>BaseSymTable</em> type is
+      a simple implementation.   It can be overridden by a better and
+      more efficient implementation.</p>
+      </div>
+    <ul class="list-group">
+        <li class="list-group-item">
+                  <h3>
+    private  subroutine BaseSymTable_ClearEntries(Collection)  
+</h3>
+
+  <p>To remove all of the pair data items from the collection. <br>
+ This routine provides a basic implementation of the <em>Clear</em>
+ deferred procedure required by the <em>BaseCollection</em> class.
+ This routine should be overridden if a better implementation
+ is available.</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(<a href='../type/basesymtable.html'>BaseSymTable</a>),
+            </td>
+<td>intent(inout)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Collection</strong></td>
+            <td>
+                <p>symbol table</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+        </li>
+    </ul>
+  </div>
+
+          </div>
+          <div class="row">
+              <div class="card mt-3">
+    <div class="card-header codesum">
+      <span class="anchor" id="boundprocedure-getkeyptr"></span>
+      <h3>
+          procedure, public ::
+  <strong>GetKeyPtr</strong> => BaseSymTable_GetKeyPtr
+        
+      </h3>
+    </div>
+      <div class="card-body">
+        
+        <p><strong>Type-Bound Function</strong>: GetKeyPtr <br>
+ <strong>Purpose</strong>:  To get a pointer to a key stored in a symbol table.  The pointer is
+      intended to be used as a mold for the key (i.e. to provide type of the stored
+      keys).  Return null pointer if the table is empty. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    KeyPtr =&gt; Collection%GetKeyPtr()</p>
+      </div>
+    <ul class="list-group">
+        <li class="list-group-item">
+                  <h3>
+    private  function BaseSymTable_GetKeyPtr(Collection) result(Key)  
+</h3>
+
+  <p>To get a pointer to a key stored in a symbol table.  The pointer is intended to be
+ used as a mold for the key (i.e. provides type of the stored keys).  Return null
+ pointer if the table is empty.</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(<a href='../type/basesymtable.html'>BaseSymTable</a>),
+            </td>
+<td>intent(in),</td>
+              <td></td>            <td>
+              TARGET
+            </td>
+            <td>::</td>
+            <td><strong>Collection</strong></td>
+            <td>
+                <p>symbol table</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+    <h4>
+    Return Value
+    <small>class(*), POINTER</small>
+    </h4>
+    <p>pointer to a stored key</p>
+
+        </li>
+    </ul>
+  </div>
+
+          </div>
+          <div class="row">
+              <div class="card mt-3">
+    <div class="card-header codesum">
+      <span class="anchor" id="boundprocedure-getvalptr"></span>
+      <h3>
+          procedure, public ::
+  <strong>GetValPtr</strong> => BaseSymTable_GetValPtr
+        
+      </h3>
+    </div>
+      <div class="card-body">
+        
+        <p><strong>Type-Bound Function</strong>: GetValPtr <br>
+ <strong>Purpose</strong>:  To get a pointer to a value stored in a symbol table.  The pointer is
+      intended to be used as a mold for the value (i.e. to provide type of the stored
+      values).  Return null pointer if the table is empty. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    ValPtr =&gt; Collection%GetValPtr()</p>
+      </div>
+    <ul class="list-group">
+        <li class="list-group-item">
+                  <h3>
+    private  function BaseSymTable_GetValPtr(Collection) result(Val)  
+</h3>
+
+  <p>To get a pointer to a value stored in a symbol table.  The pointer is intended to be
+ used as a mold for the value (i.e. provides type of the stored values).  Return null
+ pointer if the table is empty.</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(<a href='../type/basesymtable.html'>BaseSymTable</a>),
+            </td>
+<td>intent(in),</td>
+              <td></td>            <td>
+              TARGET
+            </td>
+            <td>::</td>
+            <td><strong>Collection</strong></td>
+            <td>
+                <p>symbol table</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+    <h4>
+    Return Value
+    <small>class(*), POINTER</small>
+    </h4>
+    <p>pointer to a stored value</p>
+
+        </li>
+    </ul>
+  </div>
+
+          </div>
+          <div class="row">
+              <div class="card mt-3">
+    <div class="card-header codesum">
+      <span class="anchor" id="boundprocedure-setmolds"></span>
+      <h3>
+          procedure, public ::
+  <strong>SetMolds</strong> => BaseSymTable_SetMolds
+        
+      </h3>
+    </div>
+      <div class="card-body">
+        
+        <p><em>SetMolds</em> is a procedure to set molds of stored keys and values.  This procedure is
+  intended to be used only by a subtype of the <em>BaseSymTable</em> type, not by a user.</p>
+      </div>
+    <ul class="list-group">
+        <li class="list-group-item">
+                  <h3>
+    private  subroutine BaseSymTable_SetMolds(Collection, KeyMold, ValMold)  
+</h3>
+
+  <p>To set the "KeyMold" and "ValMold" components. <br></p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(<a href='../type/basesymtable.html'>BaseSymTable</a>),
+            </td>
+<td>intent(inout)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Collection</strong></td>
+            <td>
+                <p>symbol table</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(*),
+            </td>
+<td>intent(in),</td>
+              <td>optional</td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>KeyMold</strong></td>
+            <td>
+                <p>mold for stored keys</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(*),
+            </td>
+<td>intent(in),</td>
+              <td>optional</td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>ValMold</strong></td>
+            <td>
+                <p>mold for stored values</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+        </li>
+    </ul>
+  </div>
+
+          </div>
+          <div class="row">
+              <div class="card mt-3">
+    <div class="card-header codesum">
+      <span class="anchor" id="boundprocedure-freemolds"></span>
+      <h3>
+          procedure, public ::
+  <strong>FreeMolds</strong> => BaseSymTable_FreeMolds
+        
+      </h3>
+    </div>
+      <div class="card-body">
+        
+        <p><em>SetMolds</em> is a procedure to free molds of stored keys and values.  This procedure is
+  intended to be used only by a subtype of the <em>BaseSymTable</em> type, not by a user.</p>
+      </div>
+    <ul class="list-group">
+        <li class="list-group-item">
+                  <h3>
+    private  subroutine BaseSymTable_FreeMolds(Collection)  
+</h3>
+
+  <p>To free the "KeyMold" and "ValMold" components. <br></p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(<a href='../type/basesymtable.html'>BaseSymTable</a>),
+            </td>
+<td>intent(inout)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Collection</strong></td>
+            <td>
+                <p>symbol table</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+        </li>
+    </ul>
+  </div>
+
+          </div>
+          <div class="row">
+              <div class="card mt-3">
+    <div class="card-header codesum">
+      <span class="anchor" id="boundprocedure-iskeyvalid"></span>
+      <h3>
+          procedure, public ::
+  <strong>IsKeyValid</strong> => BaseSymTable_IsKeyValid
+        
+      </h3>
+    </div>
+      <div class="card-body">
+        
+        <p><em>IsKeyOrdered</em> is a procedure to check whether the specified key is valid or not.  This
+  procedure is intended to be used only by a subtype of the <em>BaseSymTable</em> type, not by
+  a user.</p>
+      </div>
+    <ul class="list-group">
+        <li class="list-group-item">
+                  <h3>
+    private  function BaseSymTable_IsKeyValid(Collection, Key, IsOrderedKey) result(Valid)  
+</h3>
+
+  <p>To check whether the type of specified key is valid or not.</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(<a href='../type/basesymtable.html'>BaseSymTable</a>),
+            </td>
+<td>intent(inout)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Collection</strong></td>
+            <td>
+                <p>symbol table</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(*),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Key</strong></td>
+            <td>
+                <p>the key to be checked</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              logical,
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>IsOrderedKey</strong></td>
+            <td>
+                <p>true if the specified key must be an ordered key; false if the specified key is an unordered key.</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+    <h4>
+    Return Value
+    <small>logical</small>
+    </h4>
+    <p>true if type of the specified key is valid</p>
+
+        </li>
+    </ul>
+  </div>
+
+          </div>
+          <div class="row">
+              <div class="card mt-3">
+    <div class="card-header codesum">
+      <span class="anchor" id="boundprocedure-isvalvalid"></span>
+      <h3>
+          procedure, public ::
+  <strong>IsValValid</strong> => BaseSymTable_IsValValid
+        
+      </h3>
+    </div>
+      <div class="card-body">
+        
+        <p><em>IsValOrdered</em> is a procedure to check whether the specified value is valid or not.  This
+  procedure is intended to be used only by a subtype of the <em>BaseSymTable</em> type, not by
+  a user.</p>
+      </div>
+    <ul class="list-group">
+        <li class="list-group-item">
+                  <h3>
+    private  function BaseSymTable_IsValValid(Collection, Val) result(Valid)  
+</h3>
+
+  <p>To check whether the type of specified value is valid or not.</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(<a href='../type/basesymtable.html'>BaseSymTable</a>),
+            </td>
+<td>intent(inout)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Collection</strong></td>
+            <td>
+                <p>symbol table</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(*),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Val</strong></td>
+            <td>
+                <p>value to be checked</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+    <h4>
+    Return Value
+    <small>logical</small>
+    </h4>
+    <p>true if type of the specified value is valid</p>
+
+        </li>
+    </ul>
+  </div>
+
+          </div>
+          <div class="row">
+              <div class="card mt-3">
+    <div class="card-header codesum">
+      <span class="anchor" id="boundprocedure-copycollection~3"></span>
+      <h3>
+          procedure, public ::
+  <strong>CopyCollection</strong> => HashTree_CopyCollection
+        
+      </h3>
+    </div>
+      <div class="card-body">
+        
+        <p>Use the <em>Construct</em> method to construct the collection from another collection.</p>
+      </div>
+    <ul class="list-group">
+        <li class="list-group-item">
+                  <h3>
+    private  subroutine HashTree_CopyCollection(This, Other, ItemCopy, ValCopy)  
+</h3>
+
+  <p>To creates a new collection (This) with the same items as the given collection (Other). <br>
+ This is a deferred procedure by the <em>BaseCollection</em> class. <br>
+ <em>Note</em>:  Other must be in the <em>BaseSymTable</em> class.</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(<a href='../type/hashtree.html'>HashTree</a>),
+            </td>
+<td>intent(inout)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>This</strong></td>
+            <td>
+                <p>collection object to be created</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(<a href='../type/basecollection.html'>BaseCollection</a>),
+            </td>
+<td>intent(inout)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Other</strong></td>
+            <td>
+                <p>collection object to be copied</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              procedure(IfacePolyCopy),
+            </td>
+<td></td>
+              <td>optional</td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>ItemCopy</strong></td>
+            <td>
+                <p>a helper procedure to copy stored items (or keys) for a derived type not in the
+ <em>Object</em> class; required if the derived type has allocatable/pointer component(s).</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              procedure(IfacePolyCopy),
+            </td>
+<td></td>
+              <td>optional</td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>ValCopy</strong></td>
+            <td>
+                <p>a helper procedure to copy stored values for a derived type not in the <em>Object</em>
+ class; required if the derived type has allocatable/pointer component(s).</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+        </li>
+    </ul>
+  </div>
+
+          </div>
+          <div class="row">
+              <div class="card mt-3">
+    <div class="card-header codesum">
+      <span class="anchor" id="boundprocedure-destruct~20"></span>
+      <h3>
+          procedure, public ::
+  <strong>Destruct</strong> => HashTree_Destroy
+        
+      </h3>
+    </div>
+      <div class="card-body">
+        
+        <p><strong>Type-Bound Subroutine</strong>: Destruct <br>
+ <strong>Purpose</strong>:  To remove all items from the collection and free memory
+               of items stored in the collection.<br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    CALL Collection%Destruct() <br></p>
+      </div>
+    <ul class="list-group">
+        <li class="list-group-item">
+                  <h3>
+    private  subroutine HashTree_Destroy(Collection)  
+</h3>
+
+  <p>To destruct the collection. <br>
+This is a deferred procedure by the <em>BaseCollection</em> class.</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(<a href='../type/hashtree.html'>HashTree</a>),
+            </td>
+<td>intent(inout)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Collection</strong></td>
+            <td>
+                <p>HashTree object</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+        </li>
+    </ul>
+  </div>
+
+          </div>
+          <div class="row">
+              <div class="card mt-3">
+    <div class="card-header codesum">
+      <span class="anchor" id="boundprocedure-getsize~20"></span>
+      <h3>
+          procedure, public ::
+  <strong>GetSize</strong> => HashTree_GetSize
+        
+      </h3>
+    </div>
+      <div class="card-body">
+        
+        <p><strong>Type-Bound Function</strong>: GetSize <br>
+ <strong>Purpose</strong>:  To get the current size of the collection. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    Size = Collection%GetSize()</p>
+      </div>
+    <ul class="list-group">
+        <li class="list-group-item">
+                  <h3>
+    private  function HashTree_GetSize(Collection) result(Size)  
+</h3>
+
+  <p>To get the number of items in the collection.
+ This is a deferred procedure inherited from the <em>BaseCollection</em> type.</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(<a href='../type/hashtree.html'>HashTree</a>),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Collection</strong></td>
+            <td>
+                
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+    <h4>
+    Return Value
+    <small>integer(kind=kInt32)</small>
+    </h4>
+    
+
+        </li>
+    </ul>
+  </div>
+
+          </div>
+          <div class="row">
+              <div class="card mt-3">
+    <div class="card-header codesum">
+      <span class="anchor" id="boundprocedure-startfirst~16"></span>
+      <h3>
+          procedure, public ::
+  <strong>StartFirst</strong> => HashTree_Move2FirstPair
+        
+      </h3>
+    </div>
+      <div class="card-body">
+        
+        <p><strong>Type-Bound Function</strong>: StartFirst <br>
+ <strong>Purpose</strong>:  To start an iteration and return a flag indicating whether
+               the collection is empty or not. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    IsEmpty = Collection%StartFirst() <br>
+  ---&gt;    IsEmpty = Collection%StartFirst(FirstKey) <br>
+  ---&gt;    IsEmpty = Collection%StartFirst(Value=FirstVal) <br>
+  ---&gt;    IsEmpty = Collection%StartFirst(FirstKey, FirstVal)</p>
+      </div>
+    <ul class="list-group">
+        <li class="list-group-item">
+                  <h3>
+    private  function HashTree_Move2FirstPair(Collection, Key, Value, KeyCopy, ValCopy) result(IsEmpty)  
+</h3>
+
+  <p>To move to the first (starting) pair data in a symbol table.
+ For the <em>HashTree</em>, which is an unordered symbol table,
+ the starting pair is the first pair inserted.  <br>
+ This is a deferred procedure by the <em>BaseSymTable</em> class.</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(<a href='../type/hashtree.html'>HashTree</a>),
+            </td>
+<td>intent(inout)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Collection</strong></td>
+            <td>
+                <p>symbol-table collection object</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(*),
+            </td>
+<td>intent(inout),</td>
+              <td>optional</td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Key</strong></td>
+            <td>
+                <p>the first key as output if requested (and available)</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(*),
+            </td>
+<td>intent(inout),</td>
+              <td>optional</td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Value</strong></td>
+            <td>
+                <p>the first value as output if requested (and available)</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              procedure(IfacePolyCopy),
+            </td>
+<td></td>
+              <td>optional</td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>KeyCopy</strong></td>
+            <td>
+                <p>a procedure to copy stored keys for a derived type not in the <em>Object</em> class; <br>
+ required if the derived type has allocatable/pointer component(s).</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              procedure(IfacePolyCopy),
+            </td>
+<td></td>
+              <td>optional</td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>ValCopy</strong></td>
+            <td>
+                <p>a procedure to copy stored values for a derived type not in the <em>Object</em> class; <br>
+ required if the derived type has allocatable/pointer component(s).</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+    <h4>
+    Return Value
+    <small>logical</small>
+    </h4>
+    <p>a flag indicating whether the collection contains no pair data or not <br>
+- true if the collection is empty. <br>
+- otherwise the first pair data is available.</p>
+
+        </li>
+    </ul>
+  </div>
+
+          </div>
+          <div class="row">
+              <div class="card mt-3">
+    <div class="card-header codesum">
+      <span class="anchor" id="boundprocedure-moveforward~16"></span>
+      <h3>
+          procedure, public ::
+  <strong>MoveForward</strong> => HashTree_Move2NextPair
+        
+      </h3>
+    </div>
+      <div class="card-body">
+        
+        <p><strong>Type-Bound Function</strong>: MoveForward <br>
+ <strong>Purpose</strong>:  To move to the next key-value pair and return a flag
+               indicating whether the cursor pointer has reached the end of
+               the collection or not. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    IsTheEnd = Collection%MoveForward() <br>
+  ---&gt;    IsTheEnd = Collection%MoveForward(NextKey) <br>
+  ---&gt;    IsTheEnd = Collection%MoveForward(Value=NextVal) <br>
+  ---&gt;    IsTheEnd = Collection%MoveForward(NextKey, NextVal)</p>
+      </div>
+    <ul class="list-group">
+        <li class="list-group-item">
+                  <h3>
+    private  function HashTree_Move2NextPair(Collection, Key, Value, KeyCopy, ValCopy) result(IsTheEnd)  
+</h3>
+
+  <p>To move to the next pair data in a symbol table.
+ For the <em>HashTree</em>, which is an unordered symbol table,
+ the next pair is the pair inserted after the previous one.  <br>
+ This is a deferred procedure by the <em>BaseSymTable</em> class.</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(<a href='../type/hashtree.html'>HashTree</a>),
+            </td>
+<td>intent(inout)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Collection</strong></td>
+            <td>
+                <p>symbol-table collection object</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(*),
+            </td>
+<td>intent(inout),</td>
+              <td>optional</td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Key</strong></td>
+            <td>
+                <p>the next key as output if requested (and available)</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(*),
+            </td>
+<td>intent(inout),</td>
+              <td>optional</td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Value</strong></td>
+            <td>
+                <p>the next value as output if requested (and available)</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              procedure(IfacePolyCopy),
+            </td>
+<td></td>
+              <td>optional</td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>KeyCopy</strong></td>
+            <td>
+                <p>a procedure to copy stored keys for a derived type not in the <em>Object</em> class; <br>
+ required if the derived type has allocatable/pointer component(s).</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              procedure(IfacePolyCopy),
+            </td>
+<td></td>
+              <td>optional</td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>ValCopy</strong></td>
+            <td>
+                <p>a procedure to copy stored values for a derived type not in the <em>Object</em> class; <br>
+ required if the derived type has allocatable/pointer component(s).</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+    <h4>
+    Return Value
+    <small>logical</small>
+    </h4>
+    <p>a flag indicating whether the move to the end of the
+ collection occurs or not <br>
+- true if next pair data is NOT available. <br>
+- otherwise next pair data is available.</p>
+
+        </li>
+    </ul>
+  </div>
+
+          </div>
+          <div class="row">
+              <div class="card mt-3">
+    <div class="card-header codesum">
+      <span class="anchor" id="boundprocedure-insert~12"></span>
+      <h3>
+          procedure, public ::
+  <strong>Insert</strong> => HashTree_Insert
+        
+      </h3>
+    </div>
+      <div class="card-body">
+        
+        <p><strong>Type-Bound Subroutine</strong>: Insert <br>
+ <strong>Purpose</strong>:  To insert the specified key-value pair to the collection. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    CALL Collection%Insert(Key, Value) <br></p>
+      </div>
+    <ul class="list-group">
+        <li class="list-group-item">
+                  <h3>
+    private  subroutine HashTree_Insert(Collection, Key, Value)  
+</h3>
+
+  <p>To add a key-value pair into a symbol table.  If the specified key is already
+ stored in the table, replace the old value with the new one.  <br>
+ This is a deferred procedure by the <em>BaseSymTable</em> class.</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(<a href='../type/hashtree.html'>HashTree</a>),
+            </td>
+<td>intent(inout)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Collection</strong></td>
+            <td>
+                <p>symbol-table collection object</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(*),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Key</strong></td>
+            <td>
+                <p>the key to be added to the collection</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(*),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Value</strong></td>
+            <td>
+                <p>the associated value to be added to the collection</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+        </li>
+    </ul>
+  </div>
+
+          </div>
+          <div class="row">
+              <div class="card mt-3">
+    <div class="card-header codesum">
+      <span class="anchor" id="boundprocedure-delete~11"></span>
+      <h3>
+          procedure, public ::
+  <strong>Delete</strong> => HashTree_Delete
+        
+      </h3>
+    </div>
+      <div class="card-body">
+        
+        <p><strong>Type-Bound Subroutine</strong>: Delete <br>
+ <strong>Purpose</strong>:  To delete the current key-value pair from the collection. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    CALL Collection%Delete() <br>
+ <strong>Note</strong>: This method is intended to be used in conjunction with the
+ <em>StartFirst</em> and <em>MoveForward</em> methods.  Therefore, after the call to
+ one of those methods and then calling this one will result in a removal
+ of the current pair data of the iteration (i.e. the same key-value pair
+ that can be retrieved via the <em>StartFirst</em> and <em>MoveForward</em> methods).</p>
+      </div>
+    <ul class="list-group">
+        <li class="list-group-item">
+                  <h3>
+    private  subroutine HashTree_Delete(Collection)  
+</h3>
+
+  <p>To delete a key-value pair from a symbol table.  This procedure is intended
+ to be used in conjunction with the <em>StartFirst</em> and <em>MoveForward</em> procedures.
+ Therefore, after the call to either procedure and then calling this procedure
+ will result in a removal of the current key-value pair of the iteration (i.e.
+ the same key-value pair that can be retrieved via those <em>Move</em> procedures). <br>
+ This is a deferred procedure by the <em>BaseSymTable</em> class.</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(<a href='../type/hashtree.html'>HashTree</a>),
+            </td>
+<td>intent(inout)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Collection</strong></td>
+            <td>
+                <p>symbol-table collection object</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+        </li>
+    </ul>
+  </div>
+
+          </div>
+          <div class="row">
+              <div class="card mt-3">
+    <div class="card-header codesum">
+      <span class="anchor" id="boundprocedure-remove~14"></span>
+      <h3>
+          procedure, public ::
+  <strong>Remove</strong> => HashTree_Remove
+        
+      </h3>
+    </div>
+      <div class="card-body">
+        
+        <p><strong>Type-Bound Function</strong>: Remove <br>
+ <strong>Purpose</strong>:  To remove the specified key (and its associated value) from
+               the collection.  Also, return a flag indicating whether the
+               key-value pair is successfully removed or not. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    Flag = Collection%Remove(Key) <br>
+  ---&gt;    IF (.NOT.Collection%Remove(Key)) DoSomething</p>
+      </div>
+    <ul class="list-group">
+        <li class="list-group-item">
+                  <h3>
+    private  function HashTree_Remove(Collection, Key) result(Flag)  
+</h3>
+
+  <p>To delete the specified key (and its associated value) from a symbol
+ table.  Also, return a flag indicating whether the key-value pair is
+ successfully removed or not.  <br>
+ This is a deferred procedure by the <em>BaseSymTable</em> class.</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(<a href='../type/hashtree.html'>HashTree</a>),
+            </td>
+<td>intent(inout)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Collection</strong></td>
+            <td>
+                <p>symbol-table collection object</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(*),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Key</strong></td>
+            <td>
+                <p>the key to be removed from the collection</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+    <h4>
+    Return Value
+    <small>logical</small>
+    </h4>
+    <p>flag indicating whether the specified key and its associated
+ value are successfully removed or not.</p>
+
+        </li>
+    </ul>
+  </div>
+
+          </div>
+          <div class="row">
+              <div class="card mt-3">
+    <div class="card-header codesum">
+      <span class="anchor" id="boundprocedure-contain~7"></span>
+      <h3>
+          procedure, public ::
+  <strong>Contain</strong> => HashTree_Contain
+        
+      </h3>
+    </div>
+      <div class="card-body">
+        
+        <p><strong>Type-Bound Function</strong>: Contain <br>
+ <strong>Purpose</strong>:  To find the specified key in the collection.  Return true if
+               the specified key is found.  Otherwise, return false. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    Flag = Collection%Contain(Key) <br>
+  ---&gt;    IF (.NOT.Collection%Contain(Key)) DoSomething</p>
+      </div>
+    <ul class="list-group">
+        <li class="list-group-item">
+                  <h3>
+    private  function HashTree_Contain(Collection, Key) result(Found)  
+</h3>
+
+  <p>To check whether the specified key is currently stored in a symbol table.  <br>
+ This is a deferred procedure by the <em>BaseSymTable</em> class.</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(<a href='../type/hashtree.html'>HashTree</a>),
+            </td>
+<td>intent(inout)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Collection</strong></td>
+            <td>
+                <p>symbol-table collection object</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(*),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Key</strong></td>
+            <td>
+                <p>the key to be looked for in the collection</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+    <h4>
+    Return Value
+    <small>logical</small>
+    </h4>
+    <p>flag indicating whether the specified key is found or not.</p>
+
+        </li>
+    </ul>
+  </div>
+
+          </div>
+          <div class="row">
+              <div class="card mt-3">
+    <div class="card-header codesum">
+      <span class="anchor" id="boundprocedure-getvalue~6"></span>
+      <h3>
+          procedure, public ::
+  <strong>GetValue</strong> => HashTree_GetValue
+        
+      </h3>
+    </div>
+      <div class="card-body">
+        
+        <p><strong>Type-Bound Function</strong>: GetValue <br>
+ <strong>Purpose</strong>:  To get a value associated with the specified key in the collection.
+               Also, return a flag indicating whether the key-value pair is
+               successfully found or not. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    Flag = Collection%GetValue(Key, Value) <br>
+  ---&gt;    IF (.NOT.Collection%GetValue(Key, Value)) DoSomething</p>
+      </div>
+    <ul class="list-group">
+        <li class="list-group-item">
+                  <h3>
+    private  function HashTree_GetValue(Collection, Key, Value, ValCopy) result(Flag)  
+</h3>
+
+  <p>To get a value associated with the specified key in a symbol table.
+ Also, return a flag indicating whether the key-value pair is successfully
+ found or not.</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(<a href='../type/hashtree.html'>HashTree</a>),
+            </td>
+<td>intent(inout)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Collection</strong></td>
+            <td>
+                <p>symbol-table collection object</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(*),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Key</strong></td>
+            <td>
+                <p>the key to be looked for in the collection</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(*),
+            </td>
+<td>intent(inout)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Value</strong></td>
+            <td>
+                <p>the value associated with the specified key</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              procedure(IfacePolyCopy),
+            </td>
+<td></td>
+              <td>optional</td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>ValCopy</strong></td>
+            <td>
+                <p>a procedure to copy stored values for a derived type not in the <em>Object</em> class; <br>
+ required if the derived type has allocatable/pointer component(s).</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+    <h4>
+    Return Value
+    <small>logical</small>
+    </h4>
+    <p>flag indicating whether the key-value pair is found or not.</p>
+
+        </li>
+    </ul>
+  </div>
+
+          </div>
+          <div class="row">
+              <div class="card mt-3">
+    <div class="card-header codesum">
+      <span class="anchor" id="boundprocedure-toarray~11"></span>
+      <h3>
+          procedure, public ::
+  <strong>ToArray</strong> => HashTree_ToArray
+        
+      </h3>
+    </div>
+      <div class="card-body">
+        
+        <p><strong>Type-Bound Function</strong>: ToArray <br>
+ <strong>Purpose</strong>:  To get and remove all key-value pairs from the collection.  Also, return
+      a flag indicating whether the pairs are successfully retrieved and removed or not. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    Success = Collection%ToArray(Keys, Values) <br>
+  ---&gt;    IF (.NOT.Collection%ToArray(Keys, Values)) DoSomething</p>
+      </div>
+    <ul class="list-group">
+        <li class="list-group-item">
+                  <h3>
+    private  function HashTree_ToArray(Collection, Keys, Values, KeyCopy, ValCopy) result(Success)  
+</h3>
+
+  <p>To get and remove all key-value pairs from the collection.  Also, return a flag
+ indicating whether the pairs are successfully retrieved and removed or not.</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(<a href='../type/hashtree.html'>HashTree</a>),
+            </td>
+<td>intent(inout)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Collection</strong></td>
+            <td>
+                <p>HashTree object</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(*),
+            </td>
+<td>intent(inout)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Keys</strong>(:)</td>
+            <td>
+                <p>the keys to be retrieved and removed from the collection</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(*),
+            </td>
+<td>intent(inout)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Values</strong>(:)</td>
+            <td>
+                <p>the values associated with the keys</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              procedure(IfacePolyCopy),
+            </td>
+<td></td>
+              <td>optional</td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>KeyCopy</strong></td>
+            <td>
+                <p>a procedure to copy stored keys for a derived type not in the <em>Object</em> class; <br>
+ required if the derived type has allocatable/pointer component(s).</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              procedure(IfacePolyCopy),
+            </td>
+<td></td>
+              <td>optional</td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>ValCopy</strong></td>
+            <td>
+                <p>a procedure to copy stored values for a derived type not in the <em>Object</em> class; <br>
+ required if the derived type has allocatable/pointer component(s).</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+    <h4>
+    Return Value
+    <small>logical</small>
+    </h4>
+    <p>flag indicating whether the items are successfully retrieved and removed. <br></p>
+
+        </li>
+    </ul>
+  </div>
+
+          </div>
+          <div class="row">
+              <div class="card mt-3">
+    <div class="card-header codesum">
+      <span class="anchor" id="boundprocedure-getall~11"></span>
+      <h3>
+          procedure, public ::
+  <strong>GetAll</strong> => HashTree_GetAll
+        
+      </h3>
+    </div>
+      <div class="card-body">
+        
+        <p><strong>Type-Bound Function</strong>: GetAll <br>
+ <strong>Purpose</strong>:  To get all keys and/or all values (without removing them) from the collection.
+      Also, return a flag indicating whether the keys and/or the values are successfully
+      retrieved or not. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    Success = Collection%GetAll(Keys, Values) <br>
+  ---&gt;    IF (.NOT.Collection%GetAll(Keys, Values)) DoSomething</p>
+      </div>
+    <ul class="list-group">
+        <li class="list-group-item">
+                  <h3>
+    private  function HashTree_GetAll(Collection, Keys, Values, KeyCopy, ValCopy) result(Success)  
+</h3>
+
+  <p>To get all keys and/or all values (without removing them) from the collection.  Also,
+ return a flag indicating whether the keys and/or values are successfully retrieved.</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(<a href='../type/hashtree.html'>HashTree</a>),
+            </td>
+<td>intent(inout)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Collection</strong></td>
+            <td>
+                <p>HashTree object</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(*),
+            </td>
+<td>intent(inout),</td>
+              <td>optional</td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Keys</strong>(1:)</td>
+            <td>
+                <p>the keys to be retrieved and removed from the collection</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(*),
+            </td>
+<td>intent(inout),</td>
+              <td>optional</td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Values</strong>(1:)</td>
+            <td>
+                <p>the values associated with the keys</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              procedure(IfacePolyCopy),
+            </td>
+<td></td>
+              <td>optional</td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>KeyCopy</strong></td>
+            <td>
+                <p>a procedure to copy stored keys for a derived type not in the <em>Object</em> class; <br>
+ required if the derived type has allocatable/pointer component(s).</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              procedure(IfacePolyCopy),
+            </td>
+<td></td>
+              <td>optional</td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>ValCopy</strong></td>
+            <td>
+                <p>a procedure to copy stored values for a derived type not in the <em>Object</em> class; <br>
+ required if the derived type has allocatable/pointer component(s).</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+    <h4>
+    Return Value
+    <small>logical</small>
+    </h4>
+    <p>flag indicating whether the items are successfully retrieved. <br></p>
+
+        </li>
+    </ul>
+  </div>
+
+          </div>
+          <div class="row">
+              <div class="card mt-3">
+    <div class="card-header codesum">
+      <span class="anchor" id="boundprocedure-createempty~14"></span>
+      <h3>
+          procedure, public ::
+  <strong>CreateEmpty</strong> => HashTree_CreateEmpty
+        
+      </h3>
+    </div>
+      <div class="card-body">
+        
+        <p><strong>Type-Bound Subroutine</strong>: CreateEmpty <br>
+ <strong>Purpose</strong>:  To construct an empty table. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    CALL Table%CreateEmpty()            ! use default options  <br>
+  ---&gt;    CALL Table%CreateEmpty(InitCap=25)  ! specify initial capacity <br></p>
+      </div>
+    <ul class="list-group">
+        <li class="list-group-item">
+                  <h3>
+    private  subroutine HashTree_CreateEmpty(Collection, InitCap)  
+</h3>
+
+  <p>To create an empty hash table.</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(<a href='../type/hashtree.html'>HashTree</a>),
+            </td>
+<td>intent(inout)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Collection</strong></td>
+            <td>
+                <p>collection</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              integer(kind=kInt32),
+            </td>
+<td>intent(in),</td>
+              <td>optional</td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>InitCap</strong></td>
+            <td>
+                <p>initial capacity of the hash table</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+        </li>
+    </ul>
+  </div>
+
+          </div>
+          <div class="row">
+              <div class="card mt-3">
+    <div class="card-header codesum">
+      <span class="anchor" id="boundprocedure-construct~20"></span>
+      <h3>
+          generic, public ::
+  <strong>Construct</strong> => <a href='../type/hashtree.html#boundprocedure-copycollection~3'>CopyCollection</a>, HashTree_CreateByArray
+        
+      </h3>
+    </div>
+      <div class="card-body">
+        
+        <p><strong>Type-Bound Subroutine</strong>: Construct <br>
+ <strong>Purpose</strong>:  To construct a new collection from an array of items or from another
+               collection. <br>
+ <strong>Usage</strong>: <br>
+  ! create a collection from an array of 25 items <br>
+  ---&gt;    CALL Collection%Construct(25, Arr) <br>
+  ! create a collection from another collection <br>
+  ---&gt;    CALL Collection%Construct(OtherCollection) <br></p>
+      </div>
+    <ul class="list-group">
+        <li class="list-group-item">
+                  <h3>
+    private  subroutine HashTree_CopyCollection(This, Other, ItemCopy, ValCopy)  
+</h3>
+
+  <p>To creates a new collection (This) with the same items as the given collection (Other). <br>
+ This is a deferred procedure by the <em>BaseCollection</em> class. <br>
+ <em>Note</em>:  Other must be in the <em>BaseSymTable</em> class.</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(<a href='../type/hashtree.html'>HashTree</a>),
+            </td>
+<td>intent(inout)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>This</strong></td>
+            <td>
+                <p>collection object to be created</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(<a href='../type/basecollection.html'>BaseCollection</a>),
+            </td>
+<td>intent(inout)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Other</strong></td>
+            <td>
+                <p>collection object to be copied</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              procedure(IfacePolyCopy),
+            </td>
+<td></td>
+              <td>optional</td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>ItemCopy</strong></td>
+            <td>
+                <p>a helper procedure to copy stored items (or keys) for a derived type not in the
+ <em>Object</em> class; required if the derived type has allocatable/pointer component(s).</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              procedure(IfacePolyCopy),
+            </td>
+<td></td>
+              <td>optional</td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>ValCopy</strong></td>
+            <td>
+                <p>a helper procedure to copy stored values for a derived type not in the <em>Object</em>
+ class; required if the derived type has allocatable/pointer component(s).</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+        </li>
+        <li class="list-group-item">
+                  <h3>
+    private  subroutine HashTree_CreateByArray(Collection, N, Keys, Values)  
+</h3>
+
+  <p>To create a table from an array of key-value pairs.</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(<a href='../type/hashtree.html'>HashTree</a>),
+            </td>
+<td>intent(inout)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Collection</strong></td>
+            <td>
+                <p>collection</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              integer(kind=kInt32),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>N</strong></td>
+            <td>
+                <p>number of key-value pairs</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(*),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Keys</strong>(N)</td>
+            <td>
+                <p>the keys to be added to the table</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(*),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Values</strong>(N)</td>
+            <td>
+                <p>the associated values to be added to the table</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+        </li>
+    </ul>
+  </div>
+
+          </div>
+          <div class="row">
+              <div class="card mt-3">
+    <div class="card-header codesum">
+      <span class="anchor" id="boundprocedure-copy~6"></span>
+      <h3>
+          procedure, public ::
+  <strong>Copy</strong> => HashTree_Copy
+        
+      </h3>
+    </div>
+      <div class="card-body">
+        
+        <p><strong>Type-Bound Subroutine</strong>: Copy <br>
+ <strong>Purpose</strong>: To make a copy of the source object. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    CALL SrcObj%Copy(DstObj) <br></p>
+      </div>
+    <ul class="list-group">
+        <li class="list-group-item">
+                  <h3>
+    private  subroutine HashTree_Copy(SrcObj, DstObj, IsDeep)  
+</h3>
+
+  <p>To copy the source object to the destination object.
+ This is a deferred procedure inherited from the <em>Object</em> type.
+ <em>Note</em>:  SrcObj must be in the <em>HashTree</em> class.</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(<a href='../type/hashtree.html'>HashTree</a>),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>SrcObj</strong></td>
+            <td>
+                <p>source object</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(Object),
+            </td>
+<td>intent(out)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>DstObj</strong></td>
+            <td>
+                <p>destination object</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              logical,
+            </td>
+<td>intent(in),</td>
+              <td>optional</td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>IsDeep</strong></td>
+            <td>
+                <p>Flag indicating whether to perform deep copy or shallow copy. <br>
+ - If present and true, perform a deep copy. <br>
+ - If present and false, perform a shallow copy. <br>
+ - If not present, perform either a shallow or a deep copy that is naturally most
+   suitable for the object's components.</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+        </li>
+    </ul>
+  </div>
+
+          </div>
+          <div class="row">
+              <div class="card mt-3">
+    <div class="card-header codesum">
+      <span class="anchor" id="boundprocedure-isequalto~6"></span>
+      <h3>
+          procedure, public ::
+  <strong>IsEqualTo</strong> => HashTree_IsEqualTo
+        
+      </h3>
+    </div>
+      <div class="card-body">
+        
+        <p><strong>Type-Bound Function</strong>: IsEqualTo <br>
+ <strong>Purpose</strong>: To check whether two objects are equal to one another or not. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    Flag = ObjA%IsEqualTo(ObjB) <br>
+  ---&gt;    IF (ObjA%IsEqualTo(ObjB)) DoSomething</p>
+      </div>
+    <ul class="list-group">
+        <li class="list-group-item">
+                  <h3>
+    private  function HashTree_IsEqualTo(LhsObj, RhsObj) result(Flag)  
+</h3>
+
+  <p>To check whether LhsObj and RhsObj are equal or not.
+ This is a deferred procedure inherited from the <em>Object</em> type.</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(<a href='../type/hashtree.html'>HashTree</a>),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>LhsObj</strong></td>
+            <td>
+                <p>an object</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(Object),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>RhsObj</strong></td>
+            <td>
+                <p>another object</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+    <h4>
+    Return Value
+    <small>logical</small>
+    </h4>
+    <p>true if both objects are equal</p>
+
+        </li>
+    </ul>
+  </div>
+
+          </div>
+          <div class="row">
+              <div class="card mt-3">
+    <div class="card-header codesum">
+      <span class="anchor" id="boundprocedure-memfree~6"></span>
+      <h3>
+          procedure, public ::
+  <strong>MemFree</strong> => HashTree_MemFree
+        
+      </h3>
+    </div>
+      <div class="card-body">
+        
+        <p><strong>Type-Bound Subroutine</strong>: MemFree <br>
+ <strong>Purpose</strong>: To free memory/storage occupied by the object. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    CALL Obj%MemFree() <br></p>
+      </div>
+    <ul class="list-group">
+        <li class="list-group-item">
+                  <h3>
+    private  subroutine HashTree_MemFree(Obj)  
+</h3>
+
+  <p>To free memory of the HashTree object.
+ This is a deferred procedure inherited from the <em>Object</em> type.</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(<a href='../type/hashtree.html'>HashTree</a>),
+            </td>
+<td>intent(inout)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Obj</strong></td>
+            <td>
+                
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+        </li>
+    </ul>
+  </div>
+
+          </div>
+          <div class="row">
+              <div class="card mt-3">
+    <div class="card-header codesum">
+      <span class="anchor" id="boundprocedure-tostring~9"></span>
+      <h3>
+          procedure, public ::
+  <strong>ToString</strong> => HashTree_ToString
+        
+      </h3>
+    </div>
+      <div class="card-body">
+        
+        <p><strong>Type-Bound Function</strong>: ToString <br>
+ <strong>Purpose</strong>:  To return the string representation of this object. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    Str = Obj%ToString() <br></p>
+      </div>
+    <ul class="list-group">
+        <li class="list-group-item">
+                  <h3>
+    private  function HashTree_ToString(Obj) result(Str)  
+</h3>
+
+  <p>To get the name of the HashTree type.
+ This is a deferred procedure inherited from the <em>Object</em> type.</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(<a href='../type/hashtree.html'>HashTree</a>),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Obj</strong></td>
+            <td>
+                
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+    <h4>
+    Return Value
+    <small>character(kind=kChar, len=:), ALLOCATABLE</small>
+    </h4>
+    
+
+        </li>
+    </ul>
+  </div>
+
+          </div>
+          <div class="row">
+              <div class="card mt-3">
+    <div class="card-header codesum">
+      <span class="anchor" id="boundprocedure-hashcode~9"></span>
+      <h3>
+          procedure, public ::
+  <strong>HashCode</strong> => HashTree_HashCode
+        
+      </h3>
+    </div>
+      <div class="card-body">
+        
+        <p><strong>Type-Bound Function</strong>: HashCode <br>
+ <strong>Purpose</strong>:  To compute the hash code of this object. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    Code = Obj%HashCode() <br></p>
+      </div>
+    <ul class="list-group">
+        <li class="list-group-item">
+                  <h3>
+    private  function HashTree_HashCode(Obj) result(Code)  
+</h3>
+
+  <p>To compute hash code for this object.</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(<a href='../type/hashtree.html'>HashTree</a>),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Obj</strong></td>
+            <td>
+                
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+    <h4>
+    Return Value
+    <small>integer(kind=kInt32)</small>
+    </h4>
+    
+
+        </li>
+    </ul>
+  </div>
+
+          </div>
+      </section>
+
+    <section>
+    <h3><span class="anchor" id="src"></span>Source Code</h3>
+    <div class="hl codehilite"><pre><span></span><span class="w">    </span><span class="k">TYPE</span><span class="p">,</span><span class="w"> </span><span class="k">EXTENDS</span><span class="p">(</span><span class="n">BaseSymTable</span><span class="p">)</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">HashTree</span>
+<span class="w">        </span><span class="k">PRIVATE</span>
+<span class="w">        </span><span class="c">! a working hash table</span>
+<span class="w">        </span><span class="k">TYPE</span><span class="p">(</span><span class="n">IntrusiveHashTree</span><span class="p">)</span><span class="w">     </span><span class="kd">::</span><span class="w"> </span><span class="n">WrkTab</span>
+<span class="w">        </span><span class="c">!&gt; memory pool of hash-tree nodes</span>
+<span class="w">        </span><span class="k">TYPE</span><span class="p">(</span><span class="n">CompNodePool</span><span class="p">)</span><span class="w">          </span><span class="kd">::</span><span class="w"> </span><span class="n">NodePool</span>
+<span class="w">        </span><span class="c">!&gt; memory pool of stored items</span>
+<span class="w">        </span><span class="k">TYPE</span><span class="p">(</span><span class="n">MemoryPool</span><span class="p">)</span><span class="w">            </span><span class="kd">::</span><span class="w"> </span><span class="n">ItemPool</span>
+<span class="w">    </span><span class="k">CONTAINS</span>
+<span class="w">        </span><span class="c">! ---------------------------------------------------------------------</span>
+<span class="w">        </span><span class="c">! -----                     Private Procedures                    -----</span>
+<span class="w">        </span><span class="c">! ---------------------------------------------------------------------</span>
+<span class="w">        </span><span class="c">!&gt; **Type-Bound Function**: FindKey &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Purpose**:  To find the specified key in the collection.  Return true if</span>
+<span class="w">        </span><span class="c">!                the specified key is found.  Otherwise, return false. &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Usage**: &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!   ---&gt;    Flag = Collection%FindKey(Key, KeyNode) &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!   ---&gt;    IF (.NOT.Collection%FindKey(Key)) DoSomething</span>
+<span class="w">        </span><span class="k">PROCEDURE</span><span class="p">,</span><span class="w"> </span><span class="k">PRIVATE</span><span class="w">  </span><span class="kd">::</span><span class="w"> </span><span class="n">FindKey</span><span class="w">      </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">HashTree_FindKey</span>
+<span class="w">        </span><span class="c">!&gt; To retrieve all stored keys</span>
+<span class="w">        </span><span class="k">PROCEDURE</span><span class="p">,</span><span class="w"> </span><span class="k">PRIVATE</span><span class="w">  </span><span class="kd">::</span><span class="w"> </span><span class="n">GetAllKeys</span><span class="w">   </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">HashTree_GetAllKeys</span>
+<span class="w">        </span><span class="c">!&gt; To retrieve all stored values</span>
+<span class="w">        </span><span class="k">PROCEDURE</span><span class="p">,</span><span class="w"> </span><span class="k">PRIVATE</span><span class="w">  </span><span class="kd">::</span><span class="w"> </span><span class="n">GetAllVals</span><span class="w">   </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">HashTree_GetAllVals</span>
+<span class="w">        </span><span class="c">!&gt; To retrieve all stored keys and values</span>
+<span class="w">        </span><span class="k">PROCEDURE</span><span class="p">,</span><span class="w"> </span><span class="k">PRIVATE</span><span class="w">  </span><span class="kd">::</span><span class="w"> </span><span class="n">GetAllPairs</span><span class="w">  </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">HashTree_GetAllPairs</span>
+<span class="w">        </span><span class="c">!&gt; Use the *Construct* method to construct the collection from an array of key-value pairs.</span>
+<span class="w">        </span><span class="k">PROCEDURE</span><span class="p">,</span><span class="w"> </span><span class="k">PRIVATE</span><span class="w">  </span><span class="kd">::</span><span class="w"> </span><span class="n">HashTree_CreateByArray</span>
+<span class="w">        </span><span class="c">! ---------------------------------------------------------------------</span>
+<span class="w">        </span><span class="c">! -----         Deferred Procedures from BaseCollection Type      -----</span>
+<span class="w">        </span><span class="c">! ---------------------------------------------------------------------</span>
+<span class="w">        </span><span class="c">!&gt; Use the *Construct* method to construct the collection from another collection.</span>
+<span class="w">        </span><span class="k">PROCEDURE</span><span class="w">   </span><span class="kd">::</span><span class="w"> </span><span class="n">CopyCollection</span><span class="w">   </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">HashTree_CopyCollection</span>
+<span class="w">        </span><span class="c">!&gt; **Type-Bound Subroutine**: Destruct &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Purpose**:  To remove all items from the collection and free memory</span>
+<span class="w">        </span><span class="c">!                of items stored in the collection.&lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Usage**: &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!   ---&gt;    CALL Collection%Destruct() &lt;br&gt;</span>
+<span class="w">        </span><span class="k">PROCEDURE</span><span class="w">   </span><span class="kd">::</span><span class="w"> </span><span class="n">Destruct</span><span class="w">         </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">HashTree_Destroy</span>
+<span class="w">        </span><span class="c">!&gt; **Type-Bound Function**: GetSize &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Purpose**:  To get the current size of the collection. &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Usage**: &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!   ---&gt;    Size = Collection%GetSize()</span>
+<span class="w">        </span><span class="k">PROCEDURE</span><span class="w">   </span><span class="kd">::</span><span class="w"> </span><span class="n">GetSize</span><span class="w">          </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">HashTree_GetSize</span>
+<span class="w">        </span><span class="c">! ---------------------------------------------------------------------</span>
+<span class="w">        </span><span class="c">! -----         Deferred Procedures from BaseSymTable Type        -----</span>
+<span class="w">        </span><span class="c">! ---------------------------------------------------------------------</span>
+<span class="w">        </span><span class="c">!&gt; **Type-Bound Function**: StartFirst &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Purpose**:  To start an iteration and return a flag indicating whether</span>
+<span class="w">        </span><span class="c">!                the collection is empty or not. &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Usage**: &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!   ---&gt;    IsEmpty = Collection%StartFirst() &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!   ---&gt;    IsEmpty = Collection%StartFirst(FirstKey) &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!   ---&gt;    IsEmpty = Collection%StartFirst(Value=FirstVal) &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!   ---&gt;    IsEmpty = Collection%StartFirst(FirstKey, FirstVal)</span>
+<span class="w">        </span><span class="k">PROCEDURE</span><span class="w">   </span><span class="kd">::</span><span class="w"> </span><span class="n">StartFirst</span><span class="w">   </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">HashTree_Move2FirstPair</span>
+<span class="w">        </span><span class="c">!&gt; **Type-Bound Function**: MoveForward &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Purpose**:  To move to the next key-value pair and return a flag</span>
+<span class="w">        </span><span class="c">!                indicating whether the cursor pointer has reached the end of</span>
+<span class="w">        </span><span class="c">!                the collection or not. &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Usage**: &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!   ---&gt;    IsTheEnd = Collection%MoveForward() &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!   ---&gt;    IsTheEnd = Collection%MoveForward(NextKey) &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!   ---&gt;    IsTheEnd = Collection%MoveForward(Value=NextVal) &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!   ---&gt;    IsTheEnd = Collection%MoveForward(NextKey, NextVal)</span>
+<span class="w">        </span><span class="k">PROCEDURE</span><span class="w">   </span><span class="kd">::</span><span class="w"> </span><span class="n">MoveForward</span><span class="w">  </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">HashTree_Move2NextPair</span>
+<span class="w">        </span><span class="c">!&gt; **Type-Bound Subroutine**: Insert &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Purpose**:  To insert the specified key-value pair to the collection. &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Usage**: &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!   ---&gt;    CALL Collection%Insert(Key, Value) &lt;br&gt;</span>
+<span class="w">        </span><span class="k">PROCEDURE</span><span class="w">   </span><span class="kd">::</span><span class="w"> </span><span class="n">Insert</span><span class="w">       </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">HashTree_Insert</span>
+<span class="w">        </span><span class="c">!&gt; **Type-Bound Subroutine**: Delete &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Purpose**:  To delete the current key-value pair from the collection. &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Usage**: &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!   ---&gt;    CALL Collection%Delete() &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Note**: This method is intended to be used in conjunction with the</span>
+<span class="w">        </span><span class="c">!  *StartFirst* and *MoveForward* methods.  Therefore, after the call to</span>
+<span class="w">        </span><span class="c">!  one of those methods and then calling this one will result in a removal</span>
+<span class="w">        </span><span class="c">!  of the current pair data of the iteration (i.e. the same key-value pair</span>
+<span class="w">        </span><span class="c">!  that can be retrieved via the *StartFirst* and *MoveForward* methods).</span>
+<span class="w">        </span><span class="k">PROCEDURE</span><span class="w">   </span><span class="kd">::</span><span class="w"> </span><span class="n">Delete</span><span class="w">       </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">HashTree_Delete</span>
+<span class="w">        </span><span class="c">!&gt; **Type-Bound Function**: Remove &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Purpose**:  To remove the specified key (and its associated value) from</span>
+<span class="w">        </span><span class="c">!                the collection.  Also, return a flag indicating whether the</span>
+<span class="w">        </span><span class="c">!                key-value pair is successfully removed or not. &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Usage**: &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!   ---&gt;    Flag = Collection%Remove(Key) &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!   ---&gt;    IF (.NOT.Collection%Remove(Key)) DoSomething</span>
+<span class="w">        </span><span class="k">PROCEDURE</span><span class="w">   </span><span class="kd">::</span><span class="w"> </span><span class="n">Remove</span><span class="w">       </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">HashTree_Remove</span>
+<span class="w">        </span><span class="c">!&gt; **Type-Bound Function**: Contain &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Purpose**:  To find the specified key in the collection.  Return true if</span>
+<span class="w">        </span><span class="c">!                the specified key is found.  Otherwise, return false. &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Usage**: &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!   ---&gt;    Flag = Collection%Contain(Key) &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!   ---&gt;    IF (.NOT.Collection%Contain(Key)) DoSomething</span>
+<span class="w">        </span><span class="k">PROCEDURE</span><span class="w">   </span><span class="kd">::</span><span class="w"> </span><span class="n">Contain</span><span class="w">      </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">HashTree_Contain</span>
+<span class="w">        </span><span class="c">!&gt; **Type-Bound Function**: GetValue &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Purpose**:  To get a value associated with the specified key in the collection.</span>
+<span class="w">        </span><span class="c">!                Also, return a flag indicating whether the key-value pair is</span>
+<span class="w">        </span><span class="c">!                successfully found or not. &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Usage**: &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!   ---&gt;    Flag = Collection%GetValue(Key, Value) &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!   ---&gt;    IF (.NOT.Collection%GetValue(Key, Value)) DoSomething</span>
+<span class="w">        </span><span class="k">PROCEDURE</span><span class="w">   </span><span class="kd">::</span><span class="w"> </span><span class="n">GetValue</span><span class="w">     </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">HashTree_GetValue</span>
+<span class="w">        </span><span class="c">!&gt; **Type-Bound Function**: ToArray &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Purpose**:  To get and remove all key-value pairs from the collection.  Also, return</span>
+<span class="w">        </span><span class="c">!       a flag indicating whether the pairs are successfully retrieved and removed or not. &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Usage**: &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!   ---&gt;    Success = Collection%ToArray(Keys, Values) &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!   ---&gt;    IF (.NOT.Collection%ToArray(Keys, Values)) DoSomething</span>
+<span class="w">        </span><span class="k">PROCEDURE</span><span class="w">   </span><span class="kd">::</span><span class="w"> </span><span class="n">ToArray</span><span class="w">      </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">HashTree_ToArray</span>
+<span class="w">        </span><span class="c">!&gt; **Type-Bound Function**: GetAll &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Purpose**:  To get all keys and/or all values (without removing them) from the collection.</span>
+<span class="w">        </span><span class="c">!       Also, return a flag indicating whether the keys and/or the values are successfully</span>
+<span class="w">        </span><span class="c">!       retrieved or not. &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Usage**: &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!   ---&gt;    Success = Collection%GetAll(Keys, Values) &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!   ---&gt;    IF (.NOT.Collection%GetAll(Keys, Values)) DoSomething</span>
+<span class="w">        </span><span class="k">PROCEDURE</span><span class="w">   </span><span class="kd">::</span><span class="w"> </span><span class="n">GetAll</span><span class="w">       </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">HashTree_GetAll</span>
+<span class="w">        </span><span class="c">! ---------------------------------------------------------------------</span>
+<span class="w">        </span><span class="c">! -----                      Specific Procedures                  -----</span>
+<span class="w">        </span><span class="c">! ---------------------------------------------------------------------</span>
+<span class="w">        </span><span class="c">!&gt; **Type-Bound Subroutine**: CreateEmpty &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Purpose**:  To construct an empty table. &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Usage**: &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!   ---&gt;    CALL Table%CreateEmpty()            ! use default options  &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!   ---&gt;    CALL Table%CreateEmpty(InitCap=25)  ! specify initial capacity &lt;br&gt;</span>
+<span class="w">        </span><span class="k">PROCEDURE</span><span class="w">   </span><span class="kd">::</span><span class="w"> </span><span class="n">CreateEmpty</span><span class="w">  </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">HashTree_CreateEmpty</span>
+<span class="w">        </span><span class="c">!&gt; **Type-Bound Subroutine**: Construct &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Purpose**:  To construct a new collection from an array of items or from another</span>
+<span class="w">        </span><span class="c">!                collection. &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Usage**: &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!   ! create a collection from an array of 25 items &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!   ---&gt;    CALL Collection%Construct(25, Arr) &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!   ! create a collection from another collection &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!   ---&gt;    CALL Collection%Construct(OtherCollection) &lt;br&gt;</span>
+<span class="w">        </span><span class="k">GENERIC</span><span class="w">     </span><span class="kd">::</span><span class="w"> </span><span class="n">Construct</span><span class="w">    </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">HashTree_CreateByArray</span>
+<span class="w">        </span><span class="c">! ---------------------------------------------------------------------</span>
+<span class="w">        </span><span class="c">! -----     Deferred/Overridden Procedures from Object Type       -----</span>
+<span class="w">        </span><span class="c">! ---------------------------------------------------------------------</span>
+<span class="w">        </span><span class="c">!&gt; **Type-Bound Subroutine**: Copy &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Purpose**: To make a copy of the source object. &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Usage**: &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!   ---&gt;    CALL SrcObj%Copy(DstObj) &lt;br&gt;</span>
+<span class="w">        </span><span class="k">PROCEDURE</span><span class="w">   </span><span class="kd">::</span><span class="w"> </span><span class="n">Copy</span><span class="w">         </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">HashTree_Copy</span>
+<span class="w">        </span><span class="c">!&gt; **Type-Bound Function**: IsEqualTo &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Purpose**: To check whether two objects are equal to one another or not. &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Usage**: &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!   ---&gt;    Flag = ObjA%IsEqualTo(ObjB) &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!   ---&gt;    IF (ObjA%IsEqualTo(ObjB)) DoSomething</span>
+<span class="w">        </span><span class="k">PROCEDURE</span><span class="w">   </span><span class="kd">::</span><span class="w"> </span><span class="n">IsEqualTo</span><span class="w">    </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">HashTree_IsEqualTo</span>
+<span class="w">        </span><span class="c">!&gt; **Type-Bound Subroutine**: MemFree &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Purpose**: To free memory/storage occupied by the object. &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Usage**: &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!   ---&gt;    CALL Obj%MemFree() &lt;br&gt;</span>
+<span class="w">        </span><span class="k">PROCEDURE</span><span class="w">   </span><span class="kd">::</span><span class="w"> </span><span class="n">MemFree</span><span class="w">      </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">HashTree_MemFree</span>
+<span class="w">        </span><span class="c">!&gt; **Type-Bound Function**: ToString &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Purpose**:  To return the string representation of this object. &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Usage**: &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!   ---&gt;    Str = Obj%ToString() &lt;br&gt;</span>
+<span class="w">        </span><span class="k">PROCEDURE</span><span class="w">   </span><span class="kd">::</span><span class="w"> </span><span class="n">ToString</span><span class="w">     </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">HashTree_ToString</span>
+<span class="w">        </span><span class="c">!&gt; **Type-Bound Function**: HashCode &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Purpose**:  To compute the hash code of this object. &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Usage**: &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!   ---&gt;    Code = Obj%HashCode() &lt;br&gt;</span>
+<span class="w">        </span><span class="k">PROCEDURE</span><span class="w">   </span><span class="kd">::</span><span class="w"> </span><span class="n">HashCode</span><span class="w">     </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">HashTree_HashCode</span>
+<span class="w">        </span><span class="c">! ---------------------------------------------------------------------</span>
+<span class="w">        </span><span class="c">! -----                   Finalize Procedure                      -----</span>
+<span class="w">        </span><span class="c">! ---------------------------------------------------------------------</span>
+<span class="w">        </span><span class="c">!&gt; To perform finalization of the object.</span>
+<span class="w">        </span><span class="k">FINAL</span><span class="w">       </span><span class="kd">::</span><span class="w"> </span><span class="n">HashTree_Finalize</span>
+<span class="w">        </span><span class="c">! ---------------------------------------------------------------------</span>
+<span class="w">    </span><span class="k">END TYPE </span><span class="n">HashTree</span>
+</pre></div>
+
+    </section>
+    
+    </div>
+  </div>
+
+      <hr>
+    </div> <!-- /container -->
+    <footer>
+      <div class="container">
+        <div class="row justify-content-between">
+          <div class="col"><p>eXPerimental Fortran Library (XpfLib) Documentation was developed by Niranama<br>&copy; 2024 
+</p>
+          </div>
+          <div class="col">
+            <p class="text-end">
+              Documentation generated by
+              <a href="https://github.com/Fortran-FOSS-Programmers/ford">FORD</a>
+            </p>
+          </div>
+        </div>
+        <br>
+      </div> <!-- /container -->
+    </footer>
+
+    <!-- Bootstrap core JavaScript -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>    
+
+    <!-- MathJax JavaScript
+             ================================================== -->
+             <!-- Placed at the end of the document so the pages load faster -->
+        <script type="text/x-mathjax-config">
+          MathJax.Hub.Config({
+          TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } },
+          jax: ['input/TeX','input/MathML','output/HTML-CSS'],
+          extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']
+          });
+        </script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+          <script src="../tipuesearch/tipuesearch_content.js"></script>
+          <script src="../tipuesearch/tipuesearch_set.js"></script>
+          <script src="../tipuesearch/tipuesearch.js"></script>
+
+  </body>
+</html>

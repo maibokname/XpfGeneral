@@ -1,0 +1,2131 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta name="description" content="Experimental Fortran Package - Data Structures">
+    <meta name="author" content="Niranama" >
+    <link rel="icon" href="../favicon.png">
+
+    <title>PQBinHeap &ndash; eXPerimental Fortran Library (XpfLib) Documentation </title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link href="../css/pygments.css" rel="stylesheet">
+    <link href="../css/font-awesome.min.css" rel="stylesheet">
+    <link href="../css/local.css" rel="stylesheet">
+      <link  href="../tipuesearch/tipuesearch.css" rel="stylesheet">
+
+    <script src="https://code.jquery.com/jquery-3.7.0.slim.min.js" integrity="sha256-tG5mcZUtJsZvyKAxYLVXrmjKBVLd6VpVccqz/r4ypFE=" crossorigin="anonymous"></script>
+  </head>
+
+  <body>
+
+    <!-- Fixed navbar -->
+    <div class="container-fluid mb-sm-4 mb-xl-2">
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container">
+          <a class="navbar-brand" href="../index.html">eXPerimental Fortran Library (XpfLib) Documentation </a>
+          <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar"
+                  aria-expanded="false" aria-controls="navbar" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon">
+          </button>
+
+          <div id="navbar" class="navbar-collapse collapse">
+            <ul class="navbar-nav">
+                  <li class="nav-item">
+                    <a class="nav-link" href="../lists/files.html">Source Files</a>
+                  </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../lists/modules.html">Modules</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../lists/types.html">Derived Types</a>
+                </li>
+            </ul>
+              <div class="d-flex align-items-end flex-grow-1">
+                <form action="../search.html" role="search" class="ms-auto">
+                  <input type="text" class="form-control" aria-label="Search" placeholder="Search" name="q" id="tipue_search_input" autocomplete="off" required>
+                </form>
+              </div>
+          </div><!--/.nav-collapse -->
+        </div>
+      </nav>
+    </div>
+
+    <div class="container">
+  <div class="row">
+    <h1>PQBinHeap
+      <small>Derived Type</small>
+      
+    </h1>
+      <div class="container p-2 mb-4 bg-light border rounded-3">
+    <div class="row align-items-center justify-content-between" id="info-bar">
+      <div class="col">
+        <ul class="list-inline" style="margin-bottom:0px;display:inline">
+
+            <li class="list-inline-item" id="statements"><i class="fa fa-list-ol"></i>
+              <a data-bs-toggle="tooltip"
+                 data-bs-placement="bottom" data-html="true"
+                 title="<p> 1.5% of total for derived types.</p>Including implementation: 497 statements,  1.4% of total for derived types.">38 statements</a>
+            </li>
+
+            <li class="list-inline-item" id="source-file">
+              <i class="fa fa-code"></i>
+              <a href="../src/MClass_PQBinHeap.f90"> Source File</a>
+            </li>
+        </ul>
+      </div>
+      <div class="col">
+        <nav aria-label="breadcrumb">
+          <ol class="breadcrumb justify-content-end mb-0">
+                <li class="breadcrumb-item"><a href='../sourcefile/mclass_pqbinheap.f90.html'>MClass_PQBinHeap.f90</a></li>
+                <li class="breadcrumb-item"><a href='../module/mclass_pqbinheap.html'>MClass_PQBinHeap</a></li>
+            <li class="breadcrumb-item active" aria-current="page">PQBinHeap</li>
+          </ol>
+        </nav>
+      </div>
+    </div>
+  </div>
+  <script>
+    $(function () {
+    $('[data-bs-toggle="tooltip"]').tooltip()
+    })
+  </script>
+
+  </div>
+  
+  <div class="row">
+    <div class="col-md-3 hidden-xs hidden-sm visible-md visible-lg">
+      <div id="sidebar">
+      <h3>Contents</h3>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+      <div class="card mb-4">
+      <a data-bs-toggle="collapse" href="#fins-0"
+         aria-expanded="false" aria-controls="fins-0">
+         <h4 class="card-header bg-primary text-white">Finalization Procedures</h4>
+      </a>
+      <div id="fins-0" class="collapse">
+        <div class="list-group list-group-flush">
+            <a class="list-group-item" href="../type/pqbinheap.html#finalproc-pqbinheap_finalizer">PQBinHeap_Finalizer</a>
+        </div>
+      </div>
+    </div>
+
+      <div class="card mb-4">
+      <a data-bs-toggle="collapse" href="#boundprocs-0"
+         aria-expanded="false" aria-controls="boundprocs-0">
+         <h4 class="card-header bg-primary text-white">Type-Bound Procedures</h4>
+      </a>
+      <div id="boundprocs-0" class="collapse">
+        <div class="list-group list-group-flush">
+            <a class="list-group-item" href="../type/pqbinheap.html#boundprocedure-isempty~86">IsEmpty</a>
+            <a class="list-group-item" href="../type/pqbinheap.html#boundprocedure-copycollection~8">CopyCollection</a>
+            <a class="list-group-item" href="../type/pqbinheap.html#boundprocedure-clear~23">Clear</a>
+            <a class="list-group-item" href="../type/pqbinheap.html#boundprocedure-destruct~34">Destruct</a>
+            <a class="list-group-item" href="../type/pqbinheap.html#boundprocedure-getsize~34">GetSize</a>
+            <a class="list-group-item" href="../type/pqbinheap.html#boundprocedure-createempty~22">CreateEmpty</a>
+            <a class="list-group-item" href="../type/pqbinheap.html#boundprocedure-construct~33">Construct</a>
+            <a class="list-group-item" href="../type/pqbinheap.html#boundprocedure-insert~26">Insert</a>
+            <a class="list-group-item" href="../type/pqbinheap.html#boundprocedure-remove~26">Remove</a>
+            <a class="list-group-item" href="../type/pqbinheap.html#boundprocedure-peek~7">Peek</a>
+            <a class="list-group-item" href="../type/pqbinheap.html#boundprocedure-toarray~20">ToArray</a>
+            <a class="list-group-item" href="../type/pqbinheap.html#boundprocedure-getall~20">GetAll</a>
+            <a class="list-group-item" href="../type/pqbinheap.html#boundprocedure-startfirst~30">StartFirst</a>
+            <a class="list-group-item" href="../type/pqbinheap.html#boundprocedure-moveforward~30">MoveForward</a>
+            <a class="list-group-item" href="../type/pqbinheap.html#boundprocedure-copy~13">Copy</a>
+            <a class="list-group-item" href="../type/pqbinheap.html#boundprocedure-isequalto~13">IsEqualTo</a>
+            <a class="list-group-item" href="../type/pqbinheap.html#boundprocedure-memfree~13">MemFree</a>
+            <a class="list-group-item" href="../type/pqbinheap.html#boundprocedure-tostring~18">ToString</a>
+            <a class="list-group-item" href="../type/pqbinheap.html#boundprocedure-hashcode~19">HashCode</a>
+        </div>
+      </div>
+    </div>
+
+  
+  
+    <div class="card card-primary">
+      <div class="card-header text-left"><h3 class="card-title">Source Code</h3></div>
+      <div class="list-group">
+        <a class="list-group-item" href="../type/pqbinheap.html#src">PQBinHeap</a>
+      </div>
+    </div>
+
+
+  </div>
+
+    </div>
+    
+    <div class="col-md-9" id='text'>
+      <h2>type, public, extends(<a href='../type/basecollection.html'>BaseCollection</a>) :: PQBinHeap</h2>
+    <p>The <em>PQBinHeap</em> type is a collection type that employs a binary heap implementation
+ to provide common operations for a priority queue.</p>
+    <br>
+
+    
+
+      <section>
+        <h2>Finalization Procedures</h2>
+            <div class="card">
+    <div class="card-header codesum">
+      <span class="anchor" id="finalproc-pqbinheap_finalizer"></span>
+      <h3>final :: <strong>PQBinHeap_Finalizer</strong> </h3>
+    </div>
+    <div class="card-body">
+      
+      <p>To perform finalization of the object.</p>
+    </div>
+    <ul class="list-group">
+      <li class="list-group-item">
+            <h3>
+    private  subroutine PQBinHeap_Finalizer(Collection)  
+
+    </h3>
+  <p>To perform finalization of the object.</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-collection~184"></span>
+              type(<a href='../type/pqbinheap.html'>PQBinHeap</a>),
+            </td>
+<td>intent(inout)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Collection</strong></td>
+            <td>
+                <p>collection</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+      </li>
+    </ul>
+  </div>
+
+      </section>
+      <br>
+
+      <section>
+        <h2>Type-Bound Procedures</h2>
+          <div class="row">
+              <div class="card mt-3">
+    <div class="card-header codesum">
+      <span class="anchor" id="boundprocedure-isempty~86"></span>
+      <h3>
+          procedure, public ::
+  <strong>IsEmpty</strong> => BaseCollection_IsEmpty
+        
+      </h3>
+    </div>
+      <div class="card-body">
+        
+        <p><strong>Type-Bound Function</strong>: IsEmpty <br>
+ <strong>Purpose</strong>:  To check whether the collection is empty or not. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    Flag = Collection%IsEmpty() <br>
+  ---&gt;    IF (.NOT.Collection%IsEmpty()) DoSomeThing</p>
+      </div>
+    <ul class="list-group">
+        <li class="list-group-item">
+                  <h3>
+    private  function BaseCollection_IsEmpty(Collection) result(Flag)  
+</h3>
+
+  <p>To check whether the collection is currently empty or not.</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(<a href='../type/basecollection.html'>BaseCollection</a>),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Collection</strong></td>
+            <td>
+                <p>collection object</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+    <h4>
+    Return Value
+    <small>logical</small>
+    </h4>
+    <p>true if the collection currently contains no item.</p>
+
+        </li>
+    </ul>
+  </div>
+
+          </div>
+          <div class="row">
+              <div class="card mt-3">
+    <div class="card-header codesum">
+      <span class="anchor" id="boundprocedure-copycollection~8"></span>
+      <h3>
+          procedure, public ::
+  <strong>CopyCollection</strong> => PQBinHeap_CopyCollection
+        
+      </h3>
+    </div>
+      <div class="card-body">
+        
+        <p>Use the <em>Construct</em> method to construct the collection from another collection.</p>
+      </div>
+    <ul class="list-group">
+        <li class="list-group-item">
+                  <h3>
+    private  subroutine PQBinHeap_CopyCollection(This, Other, ItemCopy, ValCopy)  
+</h3>
+
+  <p>To creates a new collection (This) with the same items as the given collection (Other).
+ This is a deferred procedure by the <em>BaseCollection</em> class. <br>
+ <em>Note</em>:  Other must be in the <em>BaseIterable</em> class.</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(<a href='../type/pqbinheap.html'>PQBinHeap</a>),
+            </td>
+<td>intent(inout)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>This</strong></td>
+            <td>
+                <p>collection object to be created</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(<a href='../type/basecollection.html'>BaseCollection</a>),
+            </td>
+<td>intent(inout)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Other</strong></td>
+            <td>
+                <p>collection object to be copied</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              procedure(IfacePolyCopy),
+            </td>
+<td></td>
+              <td>optional</td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>ItemCopy</strong></td>
+            <td>
+                <p>a helper procedure to copy stored items for a derived type not in the <em>Object</em> class;
+ required if the derived type has allocatable/pointer component(s).</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              procedure(IfacePolyCopy),
+            </td>
+<td></td>
+              <td>optional</td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>ValCopy</strong></td>
+            <td>
+                <p>a helper procedure to copy stored values for a derived type not in the <em>Object</em>
+ class; required if the derived type has allocatable/pointer component(s).</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+        </li>
+    </ul>
+  </div>
+
+          </div>
+          <div class="row">
+              <div class="card mt-3">
+    <div class="card-header codesum">
+      <span class="anchor" id="boundprocedure-clear~23"></span>
+      <h3>
+          procedure, public ::
+  <strong>Clear</strong> => PQBinHeap_Clear
+        
+      </h3>
+    </div>
+      <div class="card-body">
+        
+        <p><strong>Type-Bound Subroutine</strong>: Clear <br>
+ <strong>Purpose</strong>:  To remove all items from the collection. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    CALL Collection%Clear()</p>
+      </div>
+    <ul class="list-group">
+        <li class="list-group-item">
+                  <h3>
+    private  subroutine PQBinHeap_Clear(Collection)  
+</h3>
+
+  <p>To clear the PQBinHeap object.</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(<a href='../type/pqbinheap.html'>PQBinHeap</a>),
+            </td>
+<td>intent(inout)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Collection</strong></td>
+            <td>
+                <p>collection</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+        </li>
+    </ul>
+  </div>
+
+          </div>
+          <div class="row">
+              <div class="card mt-3">
+    <div class="card-header codesum">
+      <span class="anchor" id="boundprocedure-destruct~34"></span>
+      <h3>
+          procedure, public ::
+  <strong>Destruct</strong> => PQBinHeap_Destruct
+        
+      </h3>
+    </div>
+      <div class="card-body">
+        
+        <p><strong>Type-Bound Subroutine</strong>: Destruct <br>
+ <strong>Purpose</strong>:  To remove all items from the collection and free memory
+               of items stored in the collection.<br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    CALL Collection%Destruct() <br>
+ <strong>Note</strong>:  This method is NOT equivalent to the <em>Clear</em> method. <br></p>
+      </div>
+    <ul class="list-group">
+        <li class="list-group-item">
+                  <h3>
+    private  subroutine PQBinHeap_Destruct(Collection)  
+</h3>
+
+  <p>To destruct PQBinHeap object.</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(<a href='../type/pqbinheap.html'>PQBinHeap</a>),
+            </td>
+<td>intent(inout)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Collection</strong></td>
+            <td>
+                <p>collection</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+        </li>
+    </ul>
+  </div>
+
+          </div>
+          <div class="row">
+              <div class="card mt-3">
+    <div class="card-header codesum">
+      <span class="anchor" id="boundprocedure-getsize~34"></span>
+      <h3>
+          procedure, public ::
+  <strong>GetSize</strong> => PQBinHeap_GetSize
+        
+      </h3>
+    </div>
+      <div class="card-body">
+        
+        <p><strong>Type-Bound Function</strong>: GetSize <br>
+ <strong>Purpose</strong>:  To get the current size of the collection. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    Size = Collection%GetSize()</p>
+      </div>
+    <ul class="list-group">
+        <li class="list-group-item">
+                  <h3>
+    private  function PQBinHeap_GetSize(Collection) result(Size)  
+</h3>
+
+  <p>To get size of the priority queue.</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(<a href='../type/pqbinheap.html'>PQBinHeap</a>),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Collection</strong></td>
+            <td>
+                <p>collection</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+    <h4>
+    Return Value
+    <small>integer(kind=kInt32)</small>
+    </h4>
+    <p>size (number of keys)</p>
+
+        </li>
+    </ul>
+  </div>
+
+          </div>
+          <div class="row">
+              <div class="card mt-3">
+    <div class="card-header codesum">
+      <span class="anchor" id="boundprocedure-createempty~22"></span>
+      <h3>
+          procedure, public ::
+  <strong>CreateEmpty</strong> => PQBinHeap_CreateEmpty
+        
+      </h3>
+    </div>
+      <div class="card-body">
+        
+        <p><strong>Type-Bound Subroutine</strong>: CreateEmpty <br>
+ <strong>Purpose</strong>:  To construct an empty priority queue. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    CALL Table%CreateEmpty(InitCap)                         ! use default options  <br>
+  ---&gt;    CALL Table%CreateEmpty(32, Mold=KeyMold)                ! specify key mold <br>
+  ---&gt;    CALL Table%CreateEmpty(32, MinPQ=.TRUE.)                ! use min-priority queue <br>
+  ---&gt;    CALL Table%CreateEmpty(32, IncSize=16)                  ! specify incremental size <br>
+  ---&gt;    CALL Table%CreateEmpty(32, Shrink=.TRUE.)               ! specify shrinking <br>
+  ---&gt;    CALL Table%CreateEmpty(32, KeyMold, .TRUE., 16, .TRUE.) ! specify all options <br></p>
+      </div>
+    <ul class="list-group">
+        <li class="list-group-item">
+                  <h3>
+    private  subroutine PQBinHeap_CreateEmpty(Collection, InitCap, Mold, MinPQ, IncSize, Shrink)  
+</h3>
+
+  <p>To create an empty priority queue.</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(<a href='../type/pqbinheap.html'>PQBinHeap</a>),
+            </td>
+<td>intent(out)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Collection</strong></td>
+            <td>
+                <p>collection</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              integer(kind=kInt32),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>InitCap</strong></td>
+            <td>
+                <p>initial size of priority queue</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(*),
+            </td>
+<td>intent(in),</td>
+              <td>optional</td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Mold</strong></td>
+            <td>
+                <p>key mold</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              logical,
+            </td>
+<td>intent(in),</td>
+              <td>optional</td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>MinPQ</strong></td>
+            <td>
+                <p>If present and true, the priority queue is a MinPQ. <br>
+ Otherwise, the priority queue is a MaxPQ. <br></p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              integer(kind=kInt32),
+            </td>
+<td>intent(in),</td>
+              <td>optional</td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>IncSize</strong></td>
+            <td>
+                <p>incremental size of priority queue if it is full</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              logical,
+            </td>
+<td>intent(in),</td>
+              <td>optional</td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Shrink</strong></td>
+            <td>
+                <p>flag to shrink the collection capacity <br>
+- true if want to reduce capacity when the size is less than a quarter of the capacity. <br>
+- otherwise, the capacity stays the same. <br>
+- default is false.</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+        </li>
+    </ul>
+  </div>
+
+          </div>
+          <div class="row">
+              <div class="card mt-3">
+    <div class="card-header codesum">
+      <span class="anchor" id="boundprocedure-construct~33"></span>
+      <h3>
+          generic, public ::
+  <strong>Construct</strong> => <a href='../type/pqbinheap.html#boundprocedure-copycollection~8'>CopyCollection</a>, PQBinHeap_ConstructorByArray
+        
+      </h3>
+    </div>
+      <div class="card-body">
+        
+        <p><strong>Type-Bound Subroutine</strong>: Construct <br>
+ <strong>Purpose</strong>:  To construct a priority queue from the specified key arrays. <br>
+ <strong>Usage</strong>: <br>
+  ! use default options  <br>
+  ---&gt;    CALL Collection%Construct(40, KeyArr) <br>
+  ! specify all options (initial capacity is array size plus incremental size) <br>
+  ---&gt;    CALL Collection%Construct(20, KeyArr, MinPQ, IncSize, Shrink) <br></p>
+      </div>
+    <ul class="list-group">
+        <li class="list-group-item">
+                  <h3>
+    private  subroutine PQBinHeap_CopyCollection(This, Other, ItemCopy, ValCopy)  
+</h3>
+
+  <p>To creates a new collection (This) with the same items as the given collection (Other).
+ This is a deferred procedure by the <em>BaseCollection</em> class. <br>
+ <em>Note</em>:  Other must be in the <em>BaseIterable</em> class.</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(<a href='../type/pqbinheap.html'>PQBinHeap</a>),
+            </td>
+<td>intent(inout)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>This</strong></td>
+            <td>
+                <p>collection object to be created</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(<a href='../type/basecollection.html'>BaseCollection</a>),
+            </td>
+<td>intent(inout)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Other</strong></td>
+            <td>
+                <p>collection object to be copied</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              procedure(IfacePolyCopy),
+            </td>
+<td></td>
+              <td>optional</td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>ItemCopy</strong></td>
+            <td>
+                <p>a helper procedure to copy stored items for a derived type not in the <em>Object</em> class;
+ required if the derived type has allocatable/pointer component(s).</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              procedure(IfacePolyCopy),
+            </td>
+<td></td>
+              <td>optional</td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>ValCopy</strong></td>
+            <td>
+                <p>a helper procedure to copy stored values for a derived type not in the <em>Object</em>
+ class; required if the derived type has allocatable/pointer component(s).</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+        </li>
+        <li class="list-group-item">
+                  <h3>
+    private  subroutine PQBinHeap_ConstructorByArray(Collection, N, Keys, MinPQ, IncSize, Shrink)  
+</h3>
+
+  <p>To construct a priority queue from an array of key.</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(<a href='../type/pqbinheap.html'>PQBinHeap</a>),
+            </td>
+<td>intent(inout)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Collection</strong></td>
+            <td>
+                <p>collection</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              integer(kind=kInt32),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>N</strong></td>
+            <td>
+                <p>number of keys</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(*),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Keys</strong>(1:N)</td>
+            <td>
+                <p>key array</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              logical,
+            </td>
+<td>intent(in),</td>
+              <td>optional</td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>MinPQ</strong></td>
+            <td>
+                <p>true if the priority queue to be implemented as a MinPQ; default -&gt; a MaxPQ</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              integer(kind=kInt32),
+            </td>
+<td>intent(in),</td>
+              <td>optional</td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>IncSize</strong></td>
+            <td>
+                <p>incremental size of priority queue if it is full</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              logical,
+            </td>
+<td>intent(in),</td>
+              <td>optional</td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Shrink</strong></td>
+            <td>
+                <p>true if want to reduce capacity when size is less than a quarter of the capacity;
+ default is false.</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+        </li>
+    </ul>
+  </div>
+
+          </div>
+          <div class="row">
+              <div class="card mt-3">
+    <div class="card-header codesum">
+      <span class="anchor" id="boundprocedure-insert~26"></span>
+      <h3>
+          procedure, public ::
+  <strong>Insert</strong> => PQBinHeap_InsertKey
+        
+      </h3>
+    </div>
+      <div class="card-body">
+        
+        <p><strong>Type-Bound Subroutine</strong>: Insert <br>
+ <strong>Purpose</strong>:  To insert the specified key to the priority queue. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    CALL Collection%Insert(Key) <br></p>
+      </div>
+    <ul class="list-group">
+        <li class="list-group-item">
+                  <h3>
+    private  subroutine PQBinHeap_InsertKey(Collection, NewKey)  
+</h3>
+
+  <p>To add a new key to the top (or bottom) of the priority queue.</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(<a href='../type/pqbinheap.html'>PQBinHeap</a>),
+            </td>
+<td>intent(inout)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Collection</strong></td>
+            <td>
+                <p>collection</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(*),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>NewKey</strong></td>
+            <td>
+                <p>new key to be added to the priority queue</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+        </li>
+    </ul>
+  </div>
+
+          </div>
+          <div class="row">
+              <div class="card mt-3">
+    <div class="card-header codesum">
+      <span class="anchor" id="boundprocedure-remove~26"></span>
+      <h3>
+          procedure, public ::
+  <strong>Remove</strong> => PQBinHeap_RemoveKey
+        
+      </h3>
+    </div>
+      <div class="card-body">
+        
+        <p><strong>Type-Bound Function</strong>: Remove <br>
+ <strong>Purpose</strong>:  To retrieve and remove the highest-priority key from the priority queue.  Also,
+      return a flag indicating whether the key is successfully removed or not.  <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    Flag = Collection%Remove(Key) <br>
+  ---&gt;    IF (.NOT.Collection%Remove(Key)) DoSomething</p>
+      </div>
+    <ul class="list-group">
+        <li class="list-group-item">
+                  <h3>
+    private  function PQBinHeap_RemoveKey(Collection, HPKey) result(Success)  
+</h3>
+
+  <p>To retrieve and remove the highest-priority key from the priority queue.  Also, return
+ a flag indicating whether the key is successfully retrieved and removed or not.  <br></p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(<a href='../type/pqbinheap.html'>PQBinHeap</a>),
+            </td>
+<td>intent(inout)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Collection</strong></td>
+            <td>
+                <p>collection</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(*),
+            </td>
+<td>intent(inout)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>HPKey</strong></td>
+            <td>
+                <p>the highest-priority key</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+    <h4>
+    Return Value
+    <small>logical</small>
+    </h4>
+    <p>flag indicating whether the specified key is successfully retrieved and removed or not.</p>
+
+        </li>
+    </ul>
+  </div>
+
+          </div>
+          <div class="row">
+              <div class="card mt-3">
+    <div class="card-header codesum">
+      <span class="anchor" id="boundprocedure-peek~7"></span>
+      <h3>
+          procedure, public ::
+  <strong>Peek</strong> => PQBinHeap_PeekKey
+        
+      </h3>
+    </div>
+      <div class="card-body">
+        
+        <p><strong>Type-Bound Function</strong>: Peek <br>
+ <strong>Purpose</strong>:  To retrieve the highest-priority key from the priority queue.  Also, return
+      a flag indicating whether the key is successfully removed or not.  <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    Flag = Collection%Peek(Key) <br>
+  ---&gt;    IF (.NOT.Collection%Peek(Key)) DoSomething</p>
+      </div>
+    <ul class="list-group">
+        <li class="list-group-item">
+                  <h3>
+    private  function PQBinHeap_PeekKey(Collection, HPKey) result(Success)  
+</h3>
+
+  <p>To retrieve the highest-priority key from the priority queue.  Also, return
+ a flag indicating whether the key is successfully retrieved or not.  <br></p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(<a href='../type/pqbinheap.html'>PQBinHeap</a>),
+            </td>
+<td>intent(inout)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Collection</strong></td>
+            <td>
+                <p>collection</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(*),
+            </td>
+<td>intent(out)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>HPKey</strong></td>
+            <td>
+                <p>the highest-priority key</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+    <h4>
+    Return Value
+    <small>logical</small>
+    </h4>
+    <p>flag indicating whether the specified key is successfully retrieved or not.</p>
+
+        </li>
+    </ul>
+  </div>
+
+          </div>
+          <div class="row">
+              <div class="card mt-3">
+    <div class="card-header codesum">
+      <span class="anchor" id="boundprocedure-toarray~20"></span>
+      <h3>
+          procedure, public ::
+  <strong>ToArray</strong> => PQBinHeap_ToArray
+        
+      </h3>
+    </div>
+      <div class="card-body">
+        
+        <p><strong>Type-Bound Function</strong>: ToArray <br>
+ <strong>Purpose</strong>:  To get and remove all items from the collection.  Also, return a flag
+               indicating whether the items are successfully removed. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    Success = Collection%ToArray(Items) <br>
+  ---&gt;    IF (.NOT.Collection%ToArray(Items)) DoSomething</p>
+      </div>
+    <ul class="list-group">
+        <li class="list-group-item">
+                  <h3>
+    private  function PQBinHeap_ToArray(Collection, Keys) result(Success)  
+</h3>
+
+  <p>To get and remove all keys from the collection.  Also, return
+a flag indicating whether the keys are successfully removed.</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(<a href='../type/pqbinheap.html'>PQBinHeap</a>),
+            </td>
+<td>intent(inout)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Collection</strong></td>
+            <td>
+                <p>PQBinHeap object</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(*),
+            </td>
+<td>intent(inout)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Keys</strong>(:)</td>
+            <td>
+                <p>the keys to be retrieved and removed from the collection</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+    <h4>
+    Return Value
+    <small>logical</small>
+    </h4>
+    <p>flag indicating whether the keys are successfully retrieved and removed. <br></p>
+
+        </li>
+    </ul>
+  </div>
+
+          </div>
+          <div class="row">
+              <div class="card mt-3">
+    <div class="card-header codesum">
+      <span class="anchor" id="boundprocedure-getall~20"></span>
+      <h3>
+          procedure, public ::
+  <strong>GetAll</strong> => PQBinHeap_GetAll
+        
+      </h3>
+    </div>
+      <div class="card-body">
+        
+        <p><strong>Type-Bound Function</strong>: GetAll <br>
+ <strong>Purpose</strong>:  To get all items (without removing them) from the collection. Also, return
+               a flag indicating whether the items are available. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    Success = Collection%GetAll(Items) <br>
+  ---&gt;    IF (.NOT.Collection%GetAll(Items)) DoSomething</p>
+      </div>
+    <ul class="list-group">
+        <li class="list-group-item">
+                  <h3>
+    private  function PQBinHeap_GetAll(Collection, Keys) result(Success)  
+</h3>
+
+  <p>To get all keys (without removing them) from the collection.  Also,
+return a flag indicating whether the keys are successfully retrieved.</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(<a href='../type/pqbinheap.html'>PQBinHeap</a>),
+            </td>
+<td>intent(inout)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Collection</strong></td>
+            <td>
+                <p>PQBinHeap object</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(*),
+            </td>
+<td>intent(inout)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Keys</strong>(1:)</td>
+            <td>
+                <p>the keys to be retrieved from the collection</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+    <h4>
+    Return Value
+    <small>logical</small>
+    </h4>
+    <p>flag indicating whether the keys are successfully retrieved. <br></p>
+
+        </li>
+    </ul>
+  </div>
+
+          </div>
+          <div class="row">
+              <div class="card mt-3">
+    <div class="card-header codesum">
+      <span class="anchor" id="boundprocedure-startfirst~30"></span>
+      <h3>
+          procedure, public ::
+  <strong>StartFirst</strong> => PQBinHeap_Move2FirstKey
+        
+      </h3>
+    </div>
+      <div class="card-body">
+        
+        <p><strong>Type-Bound Function</strong>: StartFirst <br>
+ <strong>Purpose</strong>:  To start the <em>forward</em> iteration and return a flag indicating
+               whether the collection is empty or not. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    IsEmpty = Collection%StartFirst() <br>
+  ---&gt;    IsEmpty = Collection%StartFirst(FirstKey)</p>
+      </div>
+    <ul class="list-group">
+        <li class="list-group-item">
+                  <h3>
+    private  function PQBinHeap_Move2FirstKey(Collection, Key) result(IsEmpty)  
+</h3>
+
+  <p>To move to the first (starting) key in a collection.  <br></p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(<a href='../type/pqbinheap.html'>PQBinHeap</a>),
+            </td>
+<td>intent(inout)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Collection</strong></td>
+            <td>
+                <p>collection</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(*),
+            </td>
+<td>intent(inout),</td>
+              <td>optional</td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Key</strong></td>
+            <td>
+                <p>the first item as output if requested (and available)</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+    <h4>
+    Return Value
+    <small>logical</small>
+    </h4>
+    <p>a flag indicating whether the table contains key or not <br>
+- true if the table is empty. <br>
+- otherwise the first key is available.</p>
+
+        </li>
+    </ul>
+  </div>
+
+          </div>
+          <div class="row">
+              <div class="card mt-3">
+    <div class="card-header codesum">
+      <span class="anchor" id="boundprocedure-moveforward~30"></span>
+      <h3>
+          procedure, public ::
+  <strong>MoveForward</strong> => PQBinHeap_Move2NextKey
+        
+      </h3>
+    </div>
+      <div class="card-body">
+        
+        <p><strong>Type-Bound Function</strong>: MoveForward <br>
+ <strong>Purpose</strong>:  To move to the next iteration and return a flag indicating whether
+               the cursor pointer has reached the end of the collection or not. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    IsTheEnd = Collection%MoveForward() <br>
+  ---&gt;    IsTheEnd = Collection%MoveForward(NextKey) <br>
+ <strong>Note</strong>: See the <a href="../module/mclass_baseiterable.html">BaseIterable</a> type
+           for illustrations of an iteration over a collection using the <em>StartFirst</em>
+           and <em>MoveForward</em> methods.<br></p>
+      </div>
+    <ul class="list-group">
+        <li class="list-group-item">
+                  <h3>
+    private  function PQBinHeap_Move2NextKey(Collection, Key) result(IsTheEnd)  
+</h3>
+
+  <p>To move to the next key in a collection. <br></p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(<a href='../type/pqbinheap.html'>PQBinHeap</a>),
+            </td>
+<td>intent(inout)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Collection</strong></td>
+            <td>
+                <p>collection</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(*),
+            </td>
+<td>intent(inout),</td>
+              <td>optional</td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Key</strong></td>
+            <td>
+                <p>the next item as output if requested (and available)</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+    <h4>
+    Return Value
+    <small>logical</small>
+    </h4>
+    <p>a flag indicating whether the move to the end of the table occurs or not <br>
+- true if next key is NOT available. <br>
+- otherwise next key is available.</p>
+
+        </li>
+    </ul>
+  </div>
+
+          </div>
+          <div class="row">
+              <div class="card mt-3">
+    <div class="card-header codesum">
+      <span class="anchor" id="boundprocedure-copy~13"></span>
+      <h3>
+          procedure, public ::
+  <strong>Copy</strong> => PQBinHeap_Copy
+        
+      </h3>
+    </div>
+      <div class="card-body">
+        
+        <p><strong>Type-Bound Subroutine</strong>: Copy <br>
+ <strong>Purpose</strong>: To make a copy of the source object. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    CALL SrcObj%Copy(DstObj) <br></p>
+      </div>
+    <ul class="list-group">
+        <li class="list-group-item">
+                  <h3>
+    private  subroutine PQBinHeap_Copy(SrcObj, DstObj, IsDeep)  
+</h3>
+
+  <p>To copy the source object to the destination object.
+ This is a deferred procedure inherited from the <em>Object</em> type.</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(<a href='../type/pqbinheap.html'>PQBinHeap</a>),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>SrcObj</strong></td>
+            <td>
+                <p>source object</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(Object),
+            </td>
+<td>intent(out)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>DstObj</strong></td>
+            <td>
+                <p>destination object</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              logical,
+            </td>
+<td>intent(in),</td>
+              <td>optional</td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>IsDeep</strong></td>
+            <td>
+                <p>Flag indicating whether to perform deep copy or shallow copy. <br>
+ - If present and true, perform a deep copy. <br>
+ - If present and false, perform a shallow copy. <br>
+ - If not present, perform either a shallow or a deep copy that is naturally most
+   suitable for the object's components.</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+        </li>
+    </ul>
+  </div>
+
+          </div>
+          <div class="row">
+              <div class="card mt-3">
+    <div class="card-header codesum">
+      <span class="anchor" id="boundprocedure-isequalto~13"></span>
+      <h3>
+          procedure, public ::
+  <strong>IsEqualTo</strong> => PQBinHeap_IsEqualTo
+        
+      </h3>
+    </div>
+      <div class="card-body">
+        
+        <p><strong>Type-Bound Function</strong>: IsEqualTo <br>
+ <strong>Purpose</strong>: To check whether two objects are equal to one another or not. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    Flag = ObjA%IsEqualTo(ObjB) <br>
+  ---&gt;    IF (ObjA%IsEqualTo(ObjB)) DoSomething</p>
+      </div>
+    <ul class="list-group">
+        <li class="list-group-item">
+                  <h3>
+    private  function PQBinHeap_IsEqualTo(LhsObj, RhsObj) result(Flag)  
+</h3>
+
+  <p>To check whether LhsObj and RhsObj are equal or not.
+ This is a deferred procedure inherited from the <em>Object</em> type.</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(<a href='../type/pqbinheap.html'>PQBinHeap</a>),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>LhsObj</strong></td>
+            <td>
+                <p>an object</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(Object),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>RhsObj</strong></td>
+            <td>
+                <p>another object</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+    <h4>
+    Return Value
+    <small>logical</small>
+    </h4>
+    <p>true if both objects are equal</p>
+
+        </li>
+    </ul>
+  </div>
+
+          </div>
+          <div class="row">
+              <div class="card mt-3">
+    <div class="card-header codesum">
+      <span class="anchor" id="boundprocedure-memfree~13"></span>
+      <h3>
+          procedure, public ::
+  <strong>MemFree</strong> => PQBinHeap_MemFree
+        
+      </h3>
+    </div>
+      <div class="card-body">
+        
+        <p><strong>Type-Bound Subroutine</strong>: MemFree <br>
+ <strong>Purpose</strong>: To free memory/storage occupied by the object. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    CALL Obj%MemFree() <br></p>
+      </div>
+    <ul class="list-group">
+        <li class="list-group-item">
+                  <h3>
+    private  subroutine PQBinHeap_MemFree(Obj)  
+</h3>
+
+  <p>To free memory of the PQBinHeap object.
+ This is a deferred procedure inherited from the <em>Object</em> type.</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(<a href='../type/pqbinheap.html'>PQBinHeap</a>),
+            </td>
+<td>intent(inout)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Obj</strong></td>
+            <td>
+                
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+        </li>
+    </ul>
+  </div>
+
+          </div>
+          <div class="row">
+              <div class="card mt-3">
+    <div class="card-header codesum">
+      <span class="anchor" id="boundprocedure-tostring~18"></span>
+      <h3>
+          procedure, public ::
+  <strong>ToString</strong> => PQBinHeap_ToString
+        
+      </h3>
+    </div>
+      <div class="card-body">
+        
+        <p><strong>Type-Bound Function</strong>: ToString <br>
+ <strong>Purpose</strong>:  To return the string representation of this object. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    Str = Obj%ToString() <br></p>
+      </div>
+    <ul class="list-group">
+        <li class="list-group-item">
+                  <h3>
+    private  function PQBinHeap_ToString(Obj) result(Str)  
+</h3>
+
+  <p>To get the name of the PQBinHeap type.
+ This is a deferred procedure inherited from the <em>Object</em> type.</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(<a href='../type/pqbinheap.html'>PQBinHeap</a>),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Obj</strong></td>
+            <td>
+                
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+    <h4>
+    Return Value
+    <small>character(kind=kChar, len=:), ALLOCATABLE</small>
+    </h4>
+    
+
+        </li>
+    </ul>
+  </div>
+
+          </div>
+          <div class="row">
+              <div class="card mt-3">
+    <div class="card-header codesum">
+      <span class="anchor" id="boundprocedure-hashcode~19"></span>
+      <h3>
+          procedure, public ::
+  <strong>HashCode</strong> => PQBinHeap_HashCode
+        
+      </h3>
+    </div>
+      <div class="card-body">
+        
+        <p><strong>Type-Bound Function</strong>: HashCode <br>
+ <strong>Purpose</strong>:  To compute the hash code of this object. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    Code = Obj%HashCode() <br></p>
+      </div>
+    <ul class="list-group">
+        <li class="list-group-item">
+                  <h3>
+    private  function PQBinHeap_HashCode(Obj) result(Code)  
+</h3>
+
+  <p>To compute hash code for this object.</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(<a href='../type/pqbinheap.html'>PQBinHeap</a>),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Obj</strong></td>
+            <td>
+                
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+    <h4>
+    Return Value
+    <small>integer(kind=kInt32)</small>
+    </h4>
+    
+
+        </li>
+    </ul>
+  </div>
+
+          </div>
+      </section>
+
+    <section>
+    <h3><span class="anchor" id="src"></span>Source Code</h3>
+    <div class="hl codehilite"><pre><span></span><span class="w">    </span><span class="k">TYPE</span><span class="p">,</span><span class="w"> </span><span class="k">EXTENDS</span><span class="p">(</span><span class="n">BaseCollection</span><span class="p">)</span><span class="w">   </span><span class="kd">::</span><span class="w"> </span><span class="n">PQBinHeap</span>
+<span class="w">        </span><span class="k">PRIVATE</span>
+<span class="w">        </span><span class="c">!&gt; pointer to the last item of the priority queue</span>
+<span class="w">        </span><span class="n">tIndex</span><span class="w">                          </span><span class="kd">::</span><span class="w"> </span><span class="n">Last</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0_kIndex</span>
+<span class="w">        </span><span class="c">!&gt; flag indicating whether the priority queue is implemented as a maximum or a minimum PQ</span>
+<span class="w">        </span><span class="n">tLogical</span><span class="w">                        </span><span class="kd">::</span><span class="w"> </span><span class="nb">Min</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">FalseVal</span>
+<span class="w">        </span><span class="c">!&gt; incremental size of the collection when the collection is full.</span>
+<span class="w">        </span><span class="c">!  Its value will be reset to 0 if the optional input is NOT</span>
+<span class="w">        </span><span class="c">!  specified during construction</span>
+<span class="w">        </span><span class="n">tIndex</span><span class="w">                          </span><span class="kd">::</span><span class="w"> </span><span class="n">IncSize</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">16_kIndex</span>
+<span class="w">        </span><span class="c">!&gt; flag to shrink priority queue capacity</span>
+<span class="w">        </span><span class="n">tLogical</span><span class="w">                        </span><span class="kd">::</span><span class="w"> </span><span class="n">Shrink</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">FalseVal</span>
+<span class="w">        </span><span class="c">!&gt; stored keys in the priority queue.</span>
+<span class="w">        </span><span class="k">TYPE</span><span class="p">(</span><span class="n">KeyOrdered</span><span class="p">),</span><span class="w"> </span><span class="k">ALLOCATABLE</span><span class="w">   </span><span class="kd">::</span><span class="w"> </span><span class="n">Keys</span><span class="p">(:)</span>
+<span class="w">        </span><span class="c">!&gt; memory pool of stored items</span>
+<span class="w">        </span><span class="k">TYPE</span><span class="p">(</span><span class="n">MemoryPool</span><span class="p">)</span><span class="w">                </span><span class="kd">::</span><span class="w"> </span><span class="n">KeyPool</span>
+<span class="w">        </span><span class="c">!&gt; key mold providing the type of stored keys</span>
+<span class="w">        </span><span class="k">CLASS</span><span class="p">(</span><span class="o">*</span><span class="p">),</span><span class="w">         </span><span class="k">ALLOCATABLE</span><span class="w">   </span><span class="kd">::</span><span class="w"> </span><span class="n">Mold</span>
+<span class="w">        </span><span class="c">!&gt; pointer to current item of the iteration</span>
+<span class="w">        </span><span class="n">tIndex</span><span class="w">                          </span><span class="kd">::</span><span class="w"> </span><span class="n">Cursor</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0_kIndex</span>
+<span class="w">    </span><span class="k">CONTAINS</span>
+<span class="w">        </span><span class="c">! ---------------------------------------------------------------------</span>
+<span class="w">        </span><span class="c">! -----                      Private Procedures                   -----</span>
+<span class="w">        </span><span class="c">! ---------------------------------------------------------------------</span>
+<span class="w">        </span><span class="k">PROCEDURE</span><span class="p">,</span><span class="w"> </span><span class="k">PRIVATE</span><span class="w">  </span><span class="kd">::</span><span class="w"> </span><span class="n">Growing</span><span class="w">      </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">PQBinHeap_Growing</span>
+<span class="w">        </span><span class="k">PROCEDURE</span><span class="p">,</span><span class="w"> </span><span class="k">PRIVATE</span><span class="w">  </span><span class="kd">::</span><span class="w"> </span><span class="n">Shrinking</span><span class="w">    </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">PQBinHeap_Shrinking</span>
+<span class="w">        </span><span class="k">PROCEDURE</span><span class="p">,</span><span class="w"> </span><span class="k">PRIVATE</span><span class="w">  </span><span class="kd">::</span><span class="w"> </span><span class="n">SinkDown</span><span class="w">     </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">PQBinHeap_ReHeapify_TopDown</span>
+<span class="w">        </span><span class="k">PROCEDURE</span><span class="p">,</span><span class="w"> </span><span class="k">PRIVATE</span><span class="w">  </span><span class="kd">::</span><span class="w"> </span><span class="n">SwimUp</span><span class="w">       </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">PQBinHeap_ReHeapify_BottomUp</span>
+<span class="w">        </span><span class="k">PROCEDURE</span><span class="p">,</span><span class="w"> </span><span class="k">PRIVATE</span><span class="w">  </span><span class="kd">::</span><span class="w"> </span><span class="n">IsKeyValid</span><span class="w">   </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">PQBinHeap_IsKeyValid</span>
+<span class="w">        </span><span class="k">PROCEDURE</span><span class="p">,</span><span class="w"> </span><span class="k">PRIVATE</span><span class="w">  </span><span class="kd">::</span><span class="w"> </span><span class="n">SwapKeys</span><span class="w">     </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">PQBinHeap_SwapKeys</span>
+<span class="w">        </span><span class="k">PROCEDURE</span><span class="p">,</span><span class="w"> </span><span class="k">PRIVATE</span><span class="w">  </span><span class="kd">::</span><span class="w"> </span><span class="n">PQBinHeap_ConstructorByArray</span>
+<span class="w">        </span><span class="c">! ---------------------------------------------------------------------</span>
+<span class="w">        </span><span class="c">! -----  Deferred/Overridden Procedures from BaseCollection Type  -----</span>
+<span class="w">        </span><span class="c">! ---------------------------------------------------------------------</span>
+<span class="w">        </span><span class="c">!&gt; Use the *Construct* method to construct the collection from another collection.</span>
+<span class="w">        </span><span class="k">PROCEDURE</span><span class="w">   </span><span class="kd">::</span><span class="w"> </span><span class="n">CopyCollection</span><span class="w">   </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">PQBinHeap_CopyCollection</span>
+<span class="w">        </span><span class="c">!&gt; **Type-Bound Subroutine**: Clear &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Purpose**:  To remove all items from the collection. &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Usage**: &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!   ---&gt;    CALL Collection%Clear()</span>
+<span class="w">        </span><span class="k">PROCEDURE</span><span class="w">   </span><span class="kd">::</span><span class="w"> </span><span class="n">Clear</span><span class="w">            </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">PQBinHeap_Clear</span>
+<span class="w">        </span><span class="c">!&gt; **Type-Bound Subroutine**: Destruct &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Purpose**:  To remove all items from the collection and free memory</span>
+<span class="w">        </span><span class="c">!                of items stored in the collection.&lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Usage**: &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!   ---&gt;    CALL Collection%Destruct() &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Note**:  This method is NOT equivalent to the *Clear* method. &lt;br&gt;</span>
+<span class="w">        </span><span class="k">PROCEDURE</span><span class="w">   </span><span class="kd">::</span><span class="w"> </span><span class="n">Destruct</span><span class="w">         </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">PQBinHeap_Destruct</span>
+<span class="w">        </span><span class="c">!&gt; **Type-Bound Function**: GetSize &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Purpose**:  To get the current size of the collection. &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Usage**: &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!   ---&gt;    Size = Collection%GetSize()</span>
+<span class="w">        </span><span class="k">PROCEDURE</span><span class="w">   </span><span class="kd">::</span><span class="w"> </span><span class="n">GetSize</span><span class="w">          </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">PQBinHeap_GetSize</span>
+<span class="w">        </span><span class="c">! ---------------------------------------------------------------------</span>
+<span class="w">        </span><span class="c">! -----                      Specific Procedures                  -----</span>
+<span class="w">        </span><span class="c">! ---------------------------------------------------------------------</span>
+<span class="w">        </span><span class="c">! -----     constructor and destructor procedures   -----</span>
+<span class="w">        </span><span class="c">! -------------------------------------------------------</span>
+<span class="w">        </span><span class="c">!&gt; **Type-Bound Subroutine**: CreateEmpty &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Purpose**:  To construct an empty priority queue. &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Usage**: &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!   ---&gt;    CALL Table%CreateEmpty(InitCap)                         ! use default options  &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!   ---&gt;    CALL Table%CreateEmpty(32, Mold=KeyMold)                ! specify key mold &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!   ---&gt;    CALL Table%CreateEmpty(32, MinPQ=.TRUE.)                ! use min-priority queue &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!   ---&gt;    CALL Table%CreateEmpty(32, IncSize=16)                  ! specify incremental size &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!   ---&gt;    CALL Table%CreateEmpty(32, Shrink=.TRUE.)               ! specify shrinking &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!   ---&gt;    CALL Table%CreateEmpty(32, KeyMold, .TRUE., 16, .TRUE.) ! specify all options &lt;br&gt;</span>
+<span class="w">        </span><span class="k">PROCEDURE</span><span class="w">   </span><span class="kd">::</span><span class="w"> </span><span class="n">CreateEmpty</span><span class="w">  </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">PQBinHeap_CreateEmpty</span>
+<span class="w">        </span><span class="c">!&gt; **Type-Bound Subroutine**: Construct &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Purpose**:  To construct a priority queue from the specified key arrays. &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Usage**: &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!   ! use default options  &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!   ---&gt;    CALL Collection%Construct(40, KeyArr) &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!   ! specify all options (initial capacity is array size plus incremental size) &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!   ---&gt;    CALL Collection%Construct(20, KeyArr, MinPQ, IncSize, Shrink) &lt;br&gt;</span>
+<span class="w">        </span><span class="k">GENERIC</span><span class="w">     </span><span class="kd">::</span><span class="w"> </span><span class="n">Construct</span><span class="w">    </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">PQBinHeap_ConstructorByArray</span>
+<span class="w">        </span><span class="c">!&gt; **Type-Bound Subroutine**: Insert &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Purpose**:  To insert the specified key to the priority queue. &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Usage**: &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!   ---&gt;    CALL Collection%Insert(Key) &lt;br&gt;</span>
+<span class="w">        </span><span class="k">PROCEDURE</span><span class="w">   </span><span class="kd">::</span><span class="w"> </span><span class="n">Insert</span><span class="w">       </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">PQBinHeap_InsertKey</span>
+<span class="w">        </span><span class="c">!&gt; **Type-Bound Function**: Remove &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Purpose**:  To retrieve and remove the highest-priority key from the priority queue.  Also,</span>
+<span class="w">        </span><span class="c">!       return a flag indicating whether the key is successfully removed or not.  &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Usage**: &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!   ---&gt;    Flag = Collection%Remove(Key) &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!   ---&gt;    IF (.NOT.Collection%Remove(Key)) DoSomething</span>
+<span class="w">        </span><span class="k">PROCEDURE</span><span class="w">   </span><span class="kd">::</span><span class="w"> </span><span class="n">Remove</span><span class="w">       </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">PQBinHeap_RemoveKey</span>
+<span class="w">        </span><span class="c">!&gt; **Type-Bound Function**: Peek &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Purpose**:  To retrieve the highest-priority key from the priority queue.  Also, return</span>
+<span class="w">        </span><span class="c">!       a flag indicating whether the key is successfully removed or not.  &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Usage**: &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!   ---&gt;    Flag = Collection%Peek(Key) &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!   ---&gt;    IF (.NOT.Collection%Peek(Key)) DoSomething</span>
+<span class="w">        </span><span class="k">PROCEDURE</span><span class="w">   </span><span class="kd">::</span><span class="w"> </span><span class="n">Peek</span><span class="w">         </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">PQBinHeap_PeekKey</span>
+<span class="w">        </span><span class="c">!&gt; **Type-Bound Function**: ToArray &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Purpose**:  To get and remove all items from the collection.  Also, return a flag</span>
+<span class="w">        </span><span class="c">!                indicating whether the items are successfully removed. &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Usage**: &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!   ---&gt;    Success = Collection%ToArray(Items) &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!   ---&gt;    IF (.NOT.Collection%ToArray(Items)) DoSomething</span>
+<span class="w">        </span><span class="k">PROCEDURE</span><span class="w">   </span><span class="kd">::</span><span class="w"> </span><span class="n">ToArray</span><span class="w">      </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">PQBinHeap_ToArray</span>
+<span class="w">        </span><span class="c">!&gt; **Type-Bound Function**: GetAll &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Purpose**:  To get all items (without removing them) from the collection. Also, return</span>
+<span class="w">        </span><span class="c">!                a flag indicating whether the items are available. &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Usage**: &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!   ---&gt;    Success = Collection%GetAll(Items) &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!   ---&gt;    IF (.NOT.Collection%GetAll(Items)) DoSomething</span>
+<span class="w">        </span><span class="k">PROCEDURE</span><span class="w">   </span><span class="kd">::</span><span class="w"> </span><span class="n">GetAll</span><span class="w">       </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">PQBinHeap_GetAll</span>
+<span class="w">        </span><span class="c">!&gt; **Type-Bound Function**: StartFirst &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Purpose**:  To start the *forward* iteration and return a flag indicating</span>
+<span class="w">        </span><span class="c">!                whether the collection is empty or not. &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Usage**: &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!   ---&gt;    IsEmpty = Collection%StartFirst() &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!   ---&gt;    IsEmpty = Collection%StartFirst(FirstKey)</span>
+<span class="w">        </span><span class="k">PROCEDURE</span><span class="w">   </span><span class="kd">::</span><span class="w"> </span><span class="n">StartFirst</span><span class="w">   </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">PQBinHeap_Move2FirstKey</span>
+<span class="w">        </span><span class="c">!&gt; **Type-Bound Function**: MoveForward &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Purpose**:  To move to the next iteration and return a flag indicating whether</span>
+<span class="w">        </span><span class="c">!                the cursor pointer has reached the end of the collection or not. &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Usage**: &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!   ---&gt;    IsTheEnd = Collection%MoveForward() &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!   ---&gt;    IsTheEnd = Collection%MoveForward(NextKey) &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Note**: See the &lt;a href=&quot;../module/mclass_baseiterable.html&quot;&gt;BaseIterable&lt;/a&gt; type</span>
+<span class="w">        </span><span class="c">!            for illustrations of an iteration over a collection using the *StartFirst*</span>
+<span class="w">        </span><span class="c">!            and *MoveForward* methods.&lt;br&gt;</span>
+<span class="w">        </span><span class="k">PROCEDURE</span><span class="w">   </span><span class="kd">::</span><span class="w"> </span><span class="n">MoveForward</span><span class="w">  </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">PQBinHeap_Move2NextKey</span>
+<span class="w">        </span><span class="c">! ---------------------------------------------------------------------</span>
+<span class="w">        </span><span class="c">! -----     Deferred/Overridden Procedures from Object Type       -----</span>
+<span class="w">        </span><span class="c">! ---------------------------------------------------------------------</span>
+<span class="w">        </span><span class="c">!&gt; **Type-Bound Subroutine**: Copy &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Purpose**: To make a copy of the source object. &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Usage**: &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!   ---&gt;    CALL SrcObj%Copy(DstObj) &lt;br&gt;</span>
+<span class="w">        </span><span class="k">PROCEDURE</span><span class="w">   </span><span class="kd">::</span><span class="w"> </span><span class="n">Copy</span><span class="w">         </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">PQBinHeap_Copy</span>
+<span class="w">        </span><span class="c">!&gt; **Type-Bound Function**: IsEqualTo &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Purpose**: To check whether two objects are equal to one another or not. &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Usage**: &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!   ---&gt;    Flag = ObjA%IsEqualTo(ObjB) &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!   ---&gt;    IF (ObjA%IsEqualTo(ObjB)) DoSomething</span>
+<span class="w">        </span><span class="k">PROCEDURE</span><span class="w">   </span><span class="kd">::</span><span class="w"> </span><span class="n">IsEqualTo</span><span class="w">    </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">PQBinHeap_IsEqualTo</span>
+<span class="w">        </span><span class="c">!&gt; **Type-Bound Subroutine**: MemFree &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Purpose**: To free memory/storage occupied by the object. &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Usage**: &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!   ---&gt;    CALL Obj%MemFree() &lt;br&gt;</span>
+<span class="w">        </span><span class="k">PROCEDURE</span><span class="w">   </span><span class="kd">::</span><span class="w"> </span><span class="n">MemFree</span><span class="w">      </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">PQBinHeap_MemFree</span>
+<span class="w">        </span><span class="c">!&gt; **Type-Bound Function**: ToString &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Purpose**:  To return the string representation of this object. &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Usage**: &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!   ---&gt;    Str = Obj%ToString() &lt;br&gt;</span>
+<span class="w">        </span><span class="k">PROCEDURE</span><span class="w">   </span><span class="kd">::</span><span class="w"> </span><span class="n">ToString</span><span class="w">     </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">PQBinHeap_ToString</span>
+<span class="w">        </span><span class="c">!&gt; **Type-Bound Function**: HashCode &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Purpose**:  To compute the hash code of this object. &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Usage**: &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!   ---&gt;    Code = Obj%HashCode() &lt;br&gt;</span>
+<span class="w">        </span><span class="k">PROCEDURE</span><span class="w">   </span><span class="kd">::</span><span class="w"> </span><span class="n">HashCode</span><span class="w">     </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">PQBinHeap_HashCode</span>
+<span class="w">        </span><span class="c">! ---------------------------------------------------------------------</span>
+<span class="w">        </span><span class="c">! -----                   Finalize Procedure                      -----</span>
+<span class="w">        </span><span class="c">! ---------------------------------------------------------------------</span>
+<span class="w">        </span><span class="c">!&gt; To perform finalization of the object.</span>
+<span class="w">        </span><span class="k">FINAL</span><span class="w">       </span><span class="kd">::</span><span class="w"> </span><span class="n">PQBinHeap_Finalizer</span>
+<span class="w">        </span><span class="c">! ---------------------------------------------------------------------</span>
+<span class="w">    </span><span class="k">END TYPE </span><span class="n">PQBinHeap</span>
+</pre></div>
+
+    </section>
+    
+    </div>
+  </div>
+
+      <hr>
+    </div> <!-- /container -->
+    <footer>
+      <div class="container">
+        <div class="row justify-content-between">
+          <div class="col"><p>eXPerimental Fortran Library (XpfLib) Documentation was developed by Niranama<br>&copy; 2024 
+</p>
+          </div>
+          <div class="col">
+            <p class="text-end">
+              Documentation generated by
+              <a href="https://github.com/Fortran-FOSS-Programmers/ford">FORD</a>
+            </p>
+          </div>
+        </div>
+        <br>
+      </div> <!-- /container -->
+    </footer>
+
+    <!-- Bootstrap core JavaScript -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>    
+
+    <!-- MathJax JavaScript
+             ================================================== -->
+             <!-- Placed at the end of the document so the pages load faster -->
+        <script type="text/x-mathjax-config">
+          MathJax.Hub.Config({
+          TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } },
+          jax: ['input/TeX','input/MathML','output/HTML-CSS'],
+          extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']
+          });
+        </script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+          <script src="../tipuesearch/tipuesearch_content.js"></script>
+          <script src="../tipuesearch/tipuesearch_set.js"></script>
+          <script src="../tipuesearch/tipuesearch.js"></script>
+
+  </body>
+</html>

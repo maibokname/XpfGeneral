@@ -1,0 +1,1232 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta name="description" content="Experimental Fortran Package - Hash Functions">
+    <meta name="author" content="Niranama" >
+    <link rel="icon" href="../favicon.png">
+
+    <title>HalfSip24Hasher32 &ndash; eXPerimental Fortran Library (XpfLib) Documentation </title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link href="../css/pygments.css" rel="stylesheet">
+    <link href="../css/font-awesome.min.css" rel="stylesheet">
+    <link href="../css/local.css" rel="stylesheet">
+      <link  href="../tipuesearch/tipuesearch.css" rel="stylesheet">
+
+    <script src="https://code.jquery.com/jquery-3.7.0.slim.min.js" integrity="sha256-tG5mcZUtJsZvyKAxYLVXrmjKBVLd6VpVccqz/r4ypFE=" crossorigin="anonymous"></script>
+  </head>
+
+  <body>
+
+    <!-- Fixed navbar -->
+    <div class="container-fluid mb-sm-4 mb-xl-2">
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container">
+          <a class="navbar-brand" href="../index.html">eXPerimental Fortran Library (XpfLib) Documentation </a>
+          <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar"
+                  aria-expanded="false" aria-controls="navbar" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon">
+          </button>
+
+          <div id="navbar" class="navbar-collapse collapse">
+            <ul class="navbar-nav">
+                  <li class="nav-item">
+                    <a class="nav-link" href="../lists/files.html">Source Files</a>
+                  </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../lists/modules.html">Modules</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../lists/procedures.html">Procedures</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../lists/absint.html">Abstract Interfaces</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../lists/types.html">Derived Types</a>
+                </li>
+            </ul>
+              <div class="d-flex align-items-end flex-grow-1">
+                <form action="../search.html" role="search" class="ms-auto">
+                  <input type="text" class="form-control" aria-label="Search" placeholder="Search" name="q" id="tipue_search_input" autocomplete="off" required>
+                </form>
+              </div>
+          </div><!--/.nav-collapse -->
+        </div>
+      </nav>
+    </div>
+
+    <div class="container">
+  <div class="row">
+    <h1>HalfSip24Hasher32
+      <small>Derived Type</small>
+      
+    </h1>
+      <div class="container p-2 mb-4 bg-light border rounded-3">
+    <div class="row align-items-center justify-content-between" id="info-bar">
+      <div class="col">
+        <ul class="list-inline" style="margin-bottom:0px;display:inline">
+
+            <li class="list-inline-item" id="statements"><i class="fa fa-list-ol"></i>
+              <a data-bs-toggle="tooltip"
+                 data-bs-placement="bottom" data-html="true"
+                 title="<p> 1.3% of total for derived types.</p>Including implementation: 286 statements,  1.8% of total for derived types.">15 statements</a>
+            </li>
+
+            <li class="list-inline-item" id="source-file">
+              <i class="fa fa-code"></i>
+              <a href="../src/MClass_HalfSip24Hasher32.f90"> Source File</a>
+            </li>
+        </ul>
+      </div>
+      <div class="col">
+        <nav aria-label="breadcrumb">
+          <ol class="breadcrumb justify-content-end mb-0">
+                <li class="breadcrumb-item"><a href='../sourcefile/mclass_halfsip24hasher32.f90.html'>MClass_HalfSip24Hasher32.f90</a></li>
+                <li class="breadcrumb-item"><a href='../module/mclass_halfsip24hasher32.html'>MClass_HalfSip24Hasher32</a></li>
+            <li class="breadcrumb-item active" aria-current="page">HalfSip24Hasher32</li>
+          </ol>
+        </nav>
+      </div>
+    </div>
+  </div>
+  <script>
+    $(function () {
+    $('[data-bs-toggle="tooltip"]').tooltip()
+    })
+  </script>
+
+  </div>
+  
+  <div class="row">
+    <div class="col-md-3 hidden-xs hidden-sm visible-md visible-lg">
+      <div id="sidebar">
+      <h3>Contents</h3>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+      <div class="card mb-4">
+      <a data-bs-toggle="collapse" href="#boundprocs-0"
+         aria-expanded="false" aria-controls="boundprocs-0">
+         <h4 class="card-header bg-primary text-white">Type-Bound Procedures</h4>
+      </a>
+      <div id="boundprocs-0" class="collapse">
+        <div class="list-group list-group-flush">
+            <a class="list-group-item" href="../type/halfsip24hasher32.html#boundprocedure-reset~12">Reset</a>
+            <a class="list-group-item" href="../type/halfsip24hasher32.html#boundprocedure-getblockcount">GetBlockCount</a>
+            <a class="list-group-item" href="../type/halfsip24hasher32.html#boundprocedure-getbuflen~2">GetBufLen</a>
+            <a class="list-group-item" href="../type/halfsip24hasher32.html#boundprocedure-update">Update</a>
+            <a class="list-group-item" href="../type/halfsip24hasher32.html#boundprocedure-getname~52">GetName</a>
+            <a class="list-group-item" href="../type/halfsip24hasher32.html#boundprocedure-getblocklength~16">GetBlockLength</a>
+            <a class="list-group-item" href="../type/halfsip24hasher32.html#boundprocedure-setbufptr~40">SetBufPtr</a>
+            <a class="list-group-item" href="../type/halfsip24hasher32.html#boundprocedure-processblock~40">ProcessBlock</a>
+            <a class="list-group-item" href="../type/halfsip24hasher32.html#boundprocedure-initialize~51">Initialize</a>
+            <a class="list-group-item" href="../type/halfsip24hasher32.html#boundprocedure-initializewkey~2">InitializeWKey</a>
+            <a class="list-group-item" href="../type/halfsip24hasher32.html#boundprocedure-finalize~19">Finalize</a>
+            <a class="list-group-item" href="../type/halfsip24hasher32.html#boundprocedure-hashdirect~17">HashDirect</a>
+        </div>
+      </div>
+    </div>
+
+  
+  
+    <div class="card card-primary">
+      <div class="card-header text-left"><h3 class="card-title">Source Code</h3></div>
+      <div class="list-group">
+        <a class="list-group-item" href="../type/halfsip24hasher32.html#src">HalfSip24Hasher32</a>
+      </div>
+    </div>
+
+
+  </div>
+
+    </div>
+    
+    <div class="col-md-9" id='text'>
+      <h2>type, public, extends(<a href='../type/hasher32.html'>Hasher32</a>) :: HalfSip24Hasher32</h2>
+    <p><em>HalfSip24Hasher32</em> is a hasher type that outputs the hash value as a 32-bit integer.
+ It employs the <em>HalfSip24</em> hash algorithm by Jean-Philippe Aumasson.</p>
+    <br>
+
+    
+
+
+      <section>
+        <h2>Type-Bound Procedures</h2>
+          <div class="row">
+              <div class="card mt-3">
+    <div class="card-header codesum">
+      <span class="anchor" id="boundprocedure-reset~12"></span>
+      <h3>
+          procedure, public ::
+  <strong>Reset</strong> => HS_Reset
+        
+      </h3>
+    </div>
+      <div class="card-body">
+        
+        <p><em>Reset</em> is a procedure to reset components of the hasher to their initial values. <br>
+ This procedure is NOT intended to be used by a user.</p>
+      </div>
+    <ul class="list-group">
+        <li class="list-group-item">
+                  <h3>
+    private  subroutine HS_Reset(HS)  
+</h3>
+
+  <p>To reset components of the hasher.</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(<a href='../type/basehasher.html'>BaseHasher</a>),
+            </td>
+<td>intent(inout)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>HS</strong></td>
+            <td>
+                <p>a hasher (HS) object</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+        </li>
+    </ul>
+  </div>
+
+          </div>
+          <div class="row">
+              <div class="card mt-3">
+    <div class="card-header codesum">
+      <span class="anchor" id="boundprocedure-getblockcount"></span>
+      <h3>
+          procedure, public ::
+  <strong>GetBlockCount</strong> => HS_BlockCount
+        
+      </h3>
+    </div>
+      <div class="card-body">
+        
+        <p><em>GetBlockCount</em> is a procedure to get the number of blocks of input processed. <br>
+ This procedure is NOT intended to be used by a user.</p>
+      </div>
+    <ul class="list-group">
+        <li class="list-group-item">
+                  <h3>
+    private  function HS_BlockCount(HS) result(BlockCount)  
+</h3>
+
+  <p>To get the number of blocks of input processed.</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(<a href='../type/basehasher.html'>BaseHasher</a>),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>HS</strong></td>
+            <td>
+                <p>a hasher (HS) object</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+    <h4>
+    Return Value
+    <small>integer(kind=kInt32)</small>
+    </h4>
+    <p>number of blocks</p>
+
+        </li>
+    </ul>
+  </div>
+
+          </div>
+          <div class="row">
+              <div class="card mt-3">
+    <div class="card-header codesum">
+      <span class="anchor" id="boundprocedure-getbuflen~2"></span>
+      <h3>
+          procedure, public ::
+  <strong>GetBufLen</strong> => HS_BufLen
+        
+      </h3>
+    </div>
+      <div class="card-body">
+        
+        <p><em>GetBufLen</em> is a procedure to get the number of bytes of input currently
+ stored in the buffer. <br>
+ This procedure is NOT intended to be used by a user.</p>
+      </div>
+    <ul class="list-group">
+        <li class="list-group-item">
+                  <h3>
+    private  function HS_BufLen(HS) result(BufLen)  
+</h3>
+
+  <p>To get the number of bytes of input currently stored in the buffer.</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(<a href='../type/basehasher.html'>BaseHasher</a>),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>HS</strong></td>
+            <td>
+                <p>a hasher (HS) object</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+    <h4>
+    Return Value
+    <small>integer(kind=kInt32)</small>
+    </h4>
+    <p>number of bytes</p>
+
+        </li>
+    </ul>
+  </div>
+
+          </div>
+          <div class="row">
+              <div class="card mt-3">
+    <div class="card-header codesum">
+      <span class="anchor" id="boundprocedure-update"></span>
+      <h3>
+          procedure, public ::
+  <strong>Update</strong> => HS_Update
+        
+      </h3>
+    </div>
+      <div class="card-body">
+        
+        <p><strong>Type-Bound Subroutine</strong>: Update <br>
+ <strong>Purpose</strong>:  To insert input data into the hasher (i.e. temporarily stored in the
+               buffer array) and process block(s) of data if necessary. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    CALL Hasher%Update(Input, InpSize) <br>
+ <strong>Important Note</strong>: The specified input can be any type and any rank where
+              its size is the number of bytes of storage used by the input.</p>
+      </div>
+    <ul class="list-group">
+        <li class="list-group-item">
+                  <h3>
+    private  subroutine HS_Update(HS, Input, InpSize)  
+</h3>
+
+  <p>To insert input data into the hasher (i.e. temporary stored in the buffer array)
+ and process block(s) of data if necessary.</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(<a href='../type/basehasher.html'>BaseHasher</a>),
+            </td>
+<td>intent(inout)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>HS</strong></td>
+            <td>
+                <p>a hasher (HS) object</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              type(*),
+            </td>
+<td>intent(in),</td>
+              <td></td>            <td>
+              CONTIGUOUS
+            </td>
+            <td>::</td>
+            <td><strong>Input</strong>(..)</td>
+            <td>
+                <p>input data (any type and rank)</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              integer(kind=kInt32),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>InpSize</strong></td>
+            <td>
+                <p>size of the input (in bytes)</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+        </li>
+    </ul>
+  </div>
+
+          </div>
+          <div class="row">
+              <div class="card mt-3">
+    <div class="card-header codesum">
+      <span class="anchor" id="boundprocedure-getname~52"></span>
+      <h3>
+          procedure, public ::
+  <strong>GetName</strong> => HalfSip24_GetName
+        
+      </h3>
+    </div>
+      <div class="card-body">
+        
+        <p><strong>Type-Bound Function</strong>: GetName <br>
+ <strong>Purpose</strong>:  To get the name of the hasher. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    Name = Hasher%GetName()</p>
+      </div>
+    <ul class="list-group">
+        <li class="list-group-item">
+                  <h3>
+    private  function HalfSip24_GetName(HS) result(Name)  
+</h3>
+
+  <p>To get the display name for this hasher.</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(<a href='../type/halfsip24hasher32.html'>HalfSip24Hasher32</a>),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>HS</strong></td>
+            <td>
+                <p>a hasher (HS) object</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+    <h4>
+    Return Value
+    <small>character(kind=kChar, len=:), ALLOCATABLE</small>
+    </h4>
+    <p>name of the hash function</p>
+
+        </li>
+    </ul>
+  </div>
+
+          </div>
+          <div class="row">
+              <div class="card mt-3">
+    <div class="card-header codesum">
+      <span class="anchor" id="boundprocedure-getblocklength~16"></span>
+      <h3>
+          procedure, public ::
+  <strong>GetBlockLength</strong> => HalfSip24_BlockLength
+        
+      </h3>
+    </div>
+      <div class="card-body">
+        
+        <p><em>GetBlockLength</em> is a procedure to return the block length of this hasher. <br>
+ This procedure is NOT intended to be used by a user.</p>
+      </div>
+    <ul class="list-group">
+        <li class="list-group-item">
+                  <h3>
+    private  function HalfSip24_BlockLength(HS) result(Length)  
+</h3>
+
+  <p>To return the <em>block length</em> for the hash function.</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(<a href='../type/halfsip24hasher32.html'>HalfSip24Hasher32</a>),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>HS</strong></td>
+            <td>
+                <p>a hasher (HS) object</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+    <h4>
+    Return Value
+    <small>integer(kind=kInt32)</small>
+    </h4>
+    <p>the block length</p>
+
+        </li>
+    </ul>
+  </div>
+
+          </div>
+          <div class="row">
+              <div class="card mt-3">
+    <div class="card-header codesum">
+      <span class="anchor" id="boundprocedure-setbufptr~40"></span>
+      <h3>
+          procedure, public ::
+  <strong>SetBufPtr</strong> => HalfSip24_SetBufPtr
+        
+      </h3>
+    </div>
+      <div class="card-body">
+        
+        <p><em>SetBufPtr</em> is a procedure to set a pointer to the buffer array of this hasher. <br>
+ This procedure is NOT intended to be used by a user.</p>
+      </div>
+    <ul class="list-group">
+        <li class="list-group-item">
+                  <h3>
+    private  subroutine HalfSip24_SetBufPtr(HS, BufPtr)  
+</h3>
+
+  <p>To set the pointer <em>BufPtr</em> to the actual buffer array with starting index of zero.</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(<a href='../type/halfsip24hasher32.html'>HalfSip24Hasher32</a>),
+            </td>
+<td>intent(inout),</td>
+              <td></td>            <td>
+              TARGET
+            </td>
+            <td>::</td>
+            <td><strong>HS</strong></td>
+            <td>
+                <p>a hasher (HS) object</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              integer(kind=kInt8),
+            </td>
+<td>intent(inout),</td>
+              <td></td>            <td>
+              POINTER
+            </td>
+            <td>::</td>
+            <td><strong>BufPtr</strong>(:)</td>
+            <td>
+                <p>a buffer pointer</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+        </li>
+    </ul>
+  </div>
+
+          </div>
+          <div class="row">
+              <div class="card mt-3">
+    <div class="card-header codesum">
+      <span class="anchor" id="boundprocedure-processblock~40"></span>
+      <h3>
+          procedure, public ::
+  <strong>ProcessBlock</strong> => HalfSip24_ProcessBlock
+        
+      </h3>
+    </div>
+      <div class="card-body">
+        
+        <p><em>ProcessBlock</em> is a procedure to process one block of data for this hasher. <br>
+ This procedure is NOT intended to be used by a user.</p>
+      </div>
+    <ul class="list-group">
+        <li class="list-group-item">
+                  <h3>
+    private  subroutine HalfSip24_ProcessBlock(HS, BytesIn)  
+</h3>
+
+  <p>To process one block of data.</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(<a href='../type/halfsip24hasher32.html'>HalfSip24Hasher32</a>),
+            </td>
+<td>intent(inout)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>HS</strong></td>
+            <td>
+                <p>a hasher (HS) object</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              integer(kind=kInt8),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>BytesIn</strong>(0:)</td>
+            <td>
+                <p>the data block</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+        </li>
+    </ul>
+  </div>
+
+          </div>
+          <div class="row">
+              <div class="card mt-3">
+    <div class="card-header codesum">
+      <span class="anchor" id="boundprocedure-initialize~51"></span>
+      <h3>
+          procedure, public ::
+  <strong>Initialize</strong> => HalfSip24_Initialize
+        
+      </h3>
+    </div>
+      <div class="card-body">
+        
+        <p><strong>Type-Bound Subroutine</strong>: Initialize <br>
+ <strong>Purpose</strong>:  To initialize the hasher. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    CALL Hasher%Initialize(Seed)            ! hash value with sign <br>
+  ---&gt;    CALL Hasher%Initialize(Seed, .TRUE.)    ! remove sign from hash value <br></p>
+      </div>
+    <ul class="list-group">
+        <li class="list-group-item">
+                  <h3>
+    private  subroutine HalfSip24_Initialize(HS, Seed, RemoveSign)  
+</h3>
+
+  <p>To initialize the hasher.</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(<a href='../type/halfsip24hasher32.html'>HalfSip24Hasher32</a>),
+            </td>
+<td>intent(inout),</td>
+              <td></td>            <td>
+              TARGET
+            </td>
+            <td>::</td>
+            <td><strong>HS</strong></td>
+            <td>
+                <p>a hasher (HS) object</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              integer(kind=kInt32),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Seed</strong></td>
+            <td>
+                <p>seed</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              logical,
+            </td>
+<td>intent(in),</td>
+              <td>optional</td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>RemoveSign</strong></td>
+            <td>
+                <p>flag indicating whether to remove sign bit or not. <br>
+ - If true, always returns a positive value of the hash code. <br>
+ - If false, returns either a positive or negative value of the hash code. <br>
+ - default is false.</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+        </li>
+    </ul>
+  </div>
+
+          </div>
+          <div class="row">
+              <div class="card mt-3">
+    <div class="card-header codesum">
+      <span class="anchor" id="boundprocedure-initializewkey~2"></span>
+      <h3>
+          procedure, public ::
+  <strong>InitializeWKey</strong> => HalfSip24_Initialize_wKey
+        
+      </h3>
+    </div>
+      <div class="card-body">
+        
+        <p><strong>Type-Bound Subroutine</strong>: InitializeWKey <br>
+ <strong>Purpose</strong>:  To initialize the hasher with a key. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    CALL Hasher%InitializeWKey(Seed, Key)           ! hash value with sign <br>
+  ---&gt;    CALL Hasher%InitializeWKey(Seed, Key, .TRUE.)   ! remove sign from hash value <br></p>
+      </div>
+    <ul class="list-group">
+        <li class="list-group-item">
+                  <h3>
+    private  subroutine HalfSip24_Initialize_wKey(HS, Seed, Key, RemoveSign)  
+</h3>
+
+  <p>To initialize the hasher.</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(<a href='../type/halfsip24hasher32.html'>HalfSip24Hasher32</a>),
+            </td>
+<td>intent(inout),</td>
+              <td></td>            <td>
+              TARGET
+            </td>
+            <td>::</td>
+            <td><strong>HS</strong></td>
+            <td>
+                <p>a hasher (HS) object</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              integer(kind=kInt32),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Seed</strong></td>
+            <td>
+                <p>seed</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              integer(kind=kInt8),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Key</strong>(0:7)</td>
+            <td>
+                <p>key bytes</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              logical,
+            </td>
+<td>intent(in),</td>
+              <td>optional</td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>RemoveSign</strong></td>
+            <td>
+                <p>flag indicating whether to remove sign bit or not. <br>
+ - If true, always returns a positive value of the hash code. <br>
+ - If false, returns either a positive or negative value of the hash code. <br>
+ - default is false.</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+        </li>
+    </ul>
+  </div>
+
+          </div>
+          <div class="row">
+              <div class="card mt-3">
+    <div class="card-header codesum">
+      <span class="anchor" id="boundprocedure-finalize~19"></span>
+      <h3>
+          procedure, public ::
+  <strong>Finalize</strong> => HalfSip24_Finalize
+        
+      </h3>
+    </div>
+      <div class="card-body">
+        
+        <p><strong>Type-Bound Function</strong>: Finalize <br>
+ <strong>Purpose</strong>:  To finalize the current hash computation and return the hash value
+               in a 32-bit integer.  The object is reset. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    HashCode = Hasher%Finalize()</p>
+      </div>
+    <ul class="list-group">
+        <li class="list-group-item">
+                  <h3>
+    private  function HalfSip24_Finalize(HS) result(HashCode)  
+</h3>
+
+  <p>To finalize the current hash computation and return the hash value
+ in a 32-bit integer.  The object is reset.</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(<a href='../type/halfsip24hasher32.html'>HalfSip24Hasher32</a>),
+            </td>
+<td>intent(inout)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>HS</strong></td>
+            <td>
+                <p>a hasher (HS) object</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+    <h4>
+    Return Value
+    <small>integer(kind=kInt32)</small>
+    </h4>
+    <p>hash code</p>
+
+        </li>
+    </ul>
+  </div>
+
+          </div>
+          <div class="row">
+              <div class="card mt-3">
+    <div class="card-header codesum">
+      <span class="anchor" id="boundprocedure-hashdirect~17"></span>
+      <h3>
+          procedure, public ::
+  <strong>HashDirect</strong> => HalfSip24_HashDirect
+        
+      </h3>
+    </div>
+      <div class="card-body">
+        
+        <p><strong>Type-Bound Function</strong>: HashDirect <br>
+ <strong>Purpose</strong>:  To compute the hash value directly (non-incrementally). <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    HashCode = Hasher%HashDirect(Input, InpSize) <br>
+  ---&gt;    HashCode = Hasher%HashDirect(Input, InpSize, Seed) <br>
+  ---&gt;    HashCode = Hasher%HashDirect(Input, InpSize, RemoveSign=.TRUE.) <br>
+ <strong>Note</strong>: The specified input can be any type and any rank where its size is
+           the number of bytes of storage used by the input.</p>
+      </div>
+    <ul class="list-group">
+        <li class="list-group-item">
+                  <h3>
+    private  function HalfSip24_HashDirect(HS, Input, InpSize, Seed, RemoveSign) result(HashCode)  
+</h3>
+
+  <p>To compute the hash value directly (non-incremental).</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(<a href='../type/halfsip24hasher32.html'>HalfSip24Hasher32</a>),
+            </td>
+<td>intent(inout)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>HS</strong></td>
+            <td>
+                <p>a hasher (HS) object</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              type(*),
+            </td>
+<td>intent(in),</td>
+              <td></td>            <td>
+              CONTIGUOUS
+            </td>
+            <td>::</td>
+            <td><strong>Input</strong>(..)</td>
+            <td>
+                <p>input data (any type and rank)</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              integer(kind=kInt32),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>InpSize</strong></td>
+            <td>
+                <p>size of the input (in bytes)</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              integer(kind=kInt32),
+            </td>
+<td>intent(in),</td>
+              <td>optional</td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Seed</strong></td>
+            <td>
+                <p>seed</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              logical,
+            </td>
+<td>intent(in),</td>
+              <td>optional</td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>RemoveSign</strong></td>
+            <td>
+                <p>flag indicating whether to remove sign bit or not. <br>
+ - If true, always returns a positive value of the hash code. <br>
+ - If false, returns either a positive or negative value of the hash code. <br>
+ - default is false.</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+    <h4>
+    Return Value
+    <small>integer(kind=kInt32)</small>
+    </h4>
+    <p>hash code</p>
+
+        </li>
+    </ul>
+  </div>
+
+          </div>
+      </section>
+
+    <section>
+    <h3><span class="anchor" id="src"></span>Source Code</h3>
+    <div class="hl codehilite"><pre><span></span><span class="w">    </span><span class="k">TYPE</span><span class="p">,</span><span class="w"> </span><span class="k">EXTENDS</span><span class="p">(</span><span class="n">Hasher32</span><span class="p">)</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">HalfSip24Hasher32</span>
+<span class="w">        </span><span class="k">PRIVATE</span>
+<span class="w">        </span><span class="c">!% state</span>
+<span class="w">        </span><span class="n">tUInt32</span><span class="w">     </span><span class="kd">::</span><span class="w"> </span><span class="n">State</span><span class="p">(</span><span class="mi">4</span><span class="p">)</span><span class="w">    </span><span class="o">=</span><span class="w"> </span><span class="mi">0_kInt32</span>
+<span class="w">        </span><span class="c">!% buffer array used to store input data</span>
+<span class="w">        </span><span class="n">tUInt8</span><span class="w">      </span><span class="kd">::</span><span class="w"> </span><span class="n">BufArr</span><span class="p">(</span><span class="mi">0</span><span class="p">:</span><span class="mi">3</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0_kInt8</span>
+<span class="w">        </span><span class="c">!% flag indicating whether to remove sign from the final hash value</span>
+<span class="w">        </span><span class="n">tLogical</span><span class="w">    </span><span class="kd">::</span><span class="w"> </span><span class="n">RemoveSign</span><span class="w">  </span><span class="o">=</span><span class="w"> </span><span class="n">FalseVal</span>
+<span class="w">    </span><span class="k">CONTAINS</span>
+<span class="w">        </span><span class="c">!&gt; **Type-Bound Function**: GetName &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Purpose**:  To get the name of the hasher. &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Usage**: &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!   ---&gt;    Name = Hasher%GetName()</span>
+<span class="w">        </span><span class="k">PROCEDURE</span><span class="w">   </span><span class="kd">::</span><span class="w"> </span><span class="n">GetName</span><span class="w">          </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">HalfSip24_GetName</span>
+<span class="w">        </span><span class="c">!&gt; *GetBlockLength* is a procedure to return the block length of this hasher. &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  This procedure is NOT intended to be used by a user.</span>
+<span class="w">        </span><span class="k">PROCEDURE</span><span class="w">   </span><span class="kd">::</span><span class="w"> </span><span class="n">GetBlockLength</span><span class="w">   </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">HalfSip24_BlockLength</span>
+<span class="w">        </span><span class="c">!&gt; *SetBufPtr* is a procedure to set a pointer to the buffer array of this hasher. &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  This procedure is NOT intended to be used by a user.</span>
+<span class="w">        </span><span class="k">PROCEDURE</span><span class="w">   </span><span class="kd">::</span><span class="w"> </span><span class="n">SetBufPtr</span><span class="w">        </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">HalfSip24_SetBufPtr</span>
+<span class="w">        </span><span class="c">!&gt; *ProcessBlock* is a procedure to process one block of data for this hasher. &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  This procedure is NOT intended to be used by a user.</span>
+<span class="w">        </span><span class="k">PROCEDURE</span><span class="w">   </span><span class="kd">::</span><span class="w"> </span><span class="n">ProcessBlock</span><span class="w">     </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">HalfSip24_ProcessBlock</span>
+<span class="w">        </span><span class="c">!&gt; **Type-Bound Subroutine**: Initialize &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Purpose**:  To initialize the hasher. &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Usage**: &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!   ---&gt;    CALL Hasher%Initialize(Seed)            ! hash value with sign &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!   ---&gt;    CALL Hasher%Initialize(Seed, .TRUE.)    ! remove sign from hash value &lt;br&gt;</span>
+<span class="w">        </span><span class="k">PROCEDURE</span><span class="w">   </span><span class="kd">::</span><span class="w"> </span><span class="n">Initialize</span><span class="w">       </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">HalfSip24_Initialize</span>
+<span class="w">        </span><span class="c">!&gt; **Type-Bound Subroutine**: InitializeWKey &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Purpose**:  To initialize the hasher with a key. &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Usage**: &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!   ---&gt;    CALL Hasher%InitializeWKey(Seed, Key)           ! hash value with sign &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!   ---&gt;    CALL Hasher%InitializeWKey(Seed, Key, .TRUE.)   ! remove sign from hash value &lt;br&gt;</span>
+<span class="w">        </span><span class="k">PROCEDURE</span><span class="w">   </span><span class="kd">::</span><span class="w"> </span><span class="n">InitializeWKey</span><span class="w">   </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">HalfSip24_Initialize_wKey</span>
+<span class="w">        </span><span class="c">!&gt; **Type-Bound Function**: Finalize &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Purpose**:  To finalize the current hash computation and return the hash value</span>
+<span class="w">        </span><span class="c">!                in a 32-bit integer.  The object is reset. &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Usage**: &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!   ---&gt;    HashCode = Hasher%Finalize()</span>
+<span class="w">        </span><span class="k">PROCEDURE</span><span class="w">   </span><span class="kd">::</span><span class="w"> </span><span class="n">Finalize</span><span class="w">         </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">HalfSip24_Finalize</span>
+<span class="w">        </span><span class="c">!&gt; **Type-Bound Function**: HashDirect &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Purpose**:  To compute the hash value directly (non-incrementally). &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Usage**: &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!   ---&gt;    HashCode = Hasher%HashDirect(Input, InpSize) &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!   ---&gt;    HashCode = Hasher%HashDirect(Input, InpSize, Seed) &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!   ---&gt;    HashCode = Hasher%HashDirect(Input, InpSize, RemoveSign=.TRUE.) &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Note**: The specified input can be any type and any rank where its size is</span>
+<span class="w">        </span><span class="c">!            the number of bytes of storage used by the input.</span>
+<span class="w">        </span><span class="k">PROCEDURE</span><span class="w">   </span><span class="kd">::</span><span class="w"> </span><span class="n">HashDirect</span><span class="w">       </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">HalfSip24_HashDirect</span>
+<span class="w">    </span><span class="k">END TYPE </span><span class="n">HalfSip24Hasher32</span>
+</pre></div>
+
+    </section>
+    
+    </div>
+  </div>
+
+      <hr>
+    </div> <!-- /container -->
+    <footer>
+      <div class="container">
+        <div class="row justify-content-between">
+          <div class="col"><p>eXPerimental Fortran Library (XpfLib) Documentation was developed by Niranama<br>&copy; 2024 
+</p>
+          </div>
+          <div class="col">
+            <p class="text-end">
+              Documentation generated by
+              <a href="https://github.com/Fortran-FOSS-Programmers/ford">FORD</a>
+            </p>
+          </div>
+        </div>
+        <br>
+      </div> <!-- /container -->
+    </footer>
+
+    <!-- Bootstrap core JavaScript -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>    
+
+    <!-- MathJax JavaScript
+             ================================================== -->
+             <!-- Placed at the end of the document so the pages load faster -->
+        <script type="text/x-mathjax-config">
+          MathJax.Hub.Config({
+          TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } },
+          jax: ['input/TeX','input/MathML','output/HTML-CSS'],
+          extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']
+          });
+        </script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+          <script src="../tipuesearch/tipuesearch_content.js"></script>
+          <script src="../tipuesearch/tipuesearch_set.js"></script>
+          <script src="../tipuesearch/tipuesearch.js"></script>
+
+  </body>
+</html>

@@ -1,0 +1,1832 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta name="description" content="Experimental Fortran Package - String">
+    <meta name="author" content="Niranama" >
+    <link rel="icon" href="../favicon.png">
+
+    <title>StringBuilder &ndash; eXPerimental Fortran Library (XpfLib) Documentation </title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link href="../css/pygments.css" rel="stylesheet">
+    <link href="../css/font-awesome.min.css" rel="stylesheet">
+    <link href="../css/local.css" rel="stylesheet">
+      <link  href="../tipuesearch/tipuesearch.css" rel="stylesheet">
+
+    <script src="https://code.jquery.com/jquery-3.7.0.slim.min.js" integrity="sha256-tG5mcZUtJsZvyKAxYLVXrmjKBVLd6VpVccqz/r4ypFE=" crossorigin="anonymous"></script>
+  </head>
+
+  <body>
+
+    <!-- Fixed navbar -->
+    <div class="container-fluid mb-sm-4 mb-xl-2">
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container">
+          <a class="navbar-brand" href="../index.html">eXPerimental Fortran Library (XpfLib) Documentation </a>
+          <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar"
+                  aria-expanded="false" aria-controls="navbar" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon">
+          </button>
+
+          <div id="navbar" class="navbar-collapse collapse">
+            <ul class="navbar-nav">
+                  <li class="nav-item">
+                    <a class="nav-link" href="../lists/files.html">Source Files</a>
+                  </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../lists/modules.html">Modules</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../lists/procedures.html">Procedures</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../lists/types.html">Derived Types</a>
+                </li>
+            </ul>
+              <div class="d-flex align-items-end flex-grow-1">
+                <form action="../search.html" role="search" class="ms-auto">
+                  <input type="text" class="form-control" aria-label="Search" placeholder="Search" name="q" id="tipue_search_input" autocomplete="off" required>
+                </form>
+              </div>
+          </div><!--/.nav-collapse -->
+        </div>
+      </nav>
+    </div>
+
+    <div class="container">
+  <div class="row">
+    <h1>StringBuilder
+      <small>Derived Type</small>
+      
+    </h1>
+      <div class="container p-2 mb-4 bg-light border rounded-3">
+    <div class="row align-items-center justify-content-between" id="info-bar">
+      <div class="col">
+        <ul class="list-inline" style="margin-bottom:0px;display:inline">
+
+            <li class="list-inline-item" id="statements"><i class="fa fa-list-ol"></i>
+              <a data-bs-toggle="tooltip"
+                 data-bs-placement="bottom" data-html="true"
+                 title="<p> 4.0% of total for derived types.</p>Including implementation: 390 statements,  5.8% of total for derived types.">27 statements</a>
+            </li>
+
+            <li class="list-inline-item" id="source-file">
+              <i class="fa fa-code"></i>
+              <a href="../src/MClass_StringBuilder.f90"> Source File</a>
+            </li>
+        </ul>
+      </div>
+      <div class="col">
+        <nav aria-label="breadcrumb">
+          <ol class="breadcrumb justify-content-end mb-0">
+                <li class="breadcrumb-item"><a href='../sourcefile/mclass_stringbuilder.f90.html'>MClass_StringBuilder.f90</a></li>
+                <li class="breadcrumb-item"><a href='../module/mclass_stringbuilder.html'>MClass_StringBuilder</a></li>
+            <li class="breadcrumb-item active" aria-current="page">StringBuilder</li>
+          </ol>
+        </nav>
+      </div>
+    </div>
+  </div>
+  <script>
+    $(function () {
+    $('[data-bs-toggle="tooltip"]').tooltip()
+    })
+  </script>
+
+  </div>
+  
+  <div class="row">
+    <div class="col-md-3 hidden-xs hidden-sm visible-md visible-lg">
+      <div id="sidebar">
+      <h3>Contents</h3>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+      <div class="card mb-4">
+      <a data-bs-toggle="collapse" href="#fins-0"
+         aria-expanded="false" aria-controls="fins-0">
+         <h4 class="card-header bg-primary text-white">Finalization Procedures</h4>
+      </a>
+      <div id="fins-0" class="collapse">
+        <div class="list-group list-group-flush">
+            <a class="list-group-item" href="../type/stringbuilder.html#finalproc-stringbuilder_finalize">StringBuilder_Finalize</a>
+        </div>
+      </div>
+    </div>
+
+      <div class="card mb-4">
+      <a data-bs-toggle="collapse" href="#boundprocs-0"
+         aria-expanded="false" aria-controls="boundprocs-0">
+         <h4 class="card-header bg-primary text-white">Type-Bound Procedures</h4>
+      </a>
+      <div id="boundprocs-0" class="collapse">
+        <div class="list-group list-group-flush">
+            <a class="list-group-item" href="../type/stringbuilder.html#boundprocedure-createempty~2">CreateEmpty</a>
+            <a class="list-group-item" href="../type/stringbuilder.html#boundprocedure-construct~17">Construct</a>
+            <a class="list-group-item" href="../type/stringbuilder.html#boundprocedure-clear~5">Clear</a>
+            <a class="list-group-item" href="../type/stringbuilder.html#boundprocedure-append">Append</a>
+            <a class="list-group-item" href="../type/stringbuilder.html#boundprocedure-insert~4">Insert</a>
+            <a class="list-group-item" href="../type/stringbuilder.html#boundprocedure-dellastchar">DelLastChar</a>
+            <a class="list-group-item" href="../type/stringbuilder.html#boundprocedure-tocharalloc">ToCharAlloc</a>
+            <a class="list-group-item" href="../type/stringbuilder.html#boundprocedure-tofvlstr">ToFvlStr</a>
+            <a class="list-group-item" href="../type/stringbuilder.html#boundprocedure-tocharstar">ToCharStar</a>
+            <a class="list-group-item" href="../type/stringbuilder.html#boundprocedure-length~3">Length</a>
+            <a class="list-group-item" href="../type/stringbuilder.html#boundprocedure-copy~9">Copy</a>
+            <a class="list-group-item" href="../type/stringbuilder.html#boundprocedure-isequalto~9">IsEqualTo</a>
+            <a class="list-group-item" href="../type/stringbuilder.html#boundprocedure-memfree~7">MemFree</a>
+            <a class="list-group-item" href="../type/stringbuilder.html#boundprocedure-tostring~9">ToString</a>
+            <a class="list-group-item" href="../type/stringbuilder.html#boundprocedure-hashcode~6">HashCode</a>
+            <a class="list-group-item" href="../type/stringbuilder.html#boundprocedure-compareto~3">CompareTo</a>
+        </div>
+      </div>
+    </div>
+
+  
+  
+    <div class="card card-primary">
+      <div class="card-header text-left"><h3 class="card-title">Source Code</h3></div>
+      <div class="list-group">
+        <a class="list-group-item" href="../type/stringbuilder.html#src">StringBuilder</a>
+      </div>
+    </div>
+
+
+  </div>
+
+    </div>
+    
+    <div class="col-md-9" id='text'>
+      <h2>type, public, extends(Comparable) :: StringBuilder</h2>
+    <p>The <em>StringBuilder</em> type is string type that provides a convenient way
+ to build a string from multiple strings.</p>
+    <br>
+
+    
+
+      <section>
+        <h2>Finalization Procedures</h2>
+            <div class="card">
+    <div class="card-header codesum">
+      <span class="anchor" id="finalproc-stringbuilder_finalize"></span>
+      <h3>final :: <strong>StringBuilder_Finalize</strong> </h3>
+    </div>
+    <div class="card-body">
+      
+      <p>To perform finalization of the <em>StringBuilder</em> object.</p>
+    </div>
+    <ul class="list-group">
+      <li class="list-group-item">
+            <h3>
+    private  subroutine StringBuilder_Finalize(StrBld)  
+
+    </h3>
+  <p>To perform finalization of a 'StringBuilder' object.</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-strbld~4"></span>
+              type(<a href='../type/stringbuilder.html'>StringBuilder</a>),
+            </td>
+<td>intent(inout)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>StrBld</strong></td>
+            <td>
+                <p>'StringBuilder' object</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+      </li>
+    </ul>
+  </div>
+
+      </section>
+      <br>
+
+      <section>
+        <h2>Type-Bound Procedures</h2>
+          <div class="row">
+              <div class="card mt-3">
+    <div class="card-header codesum">
+      <span class="anchor" id="boundprocedure-createempty~2"></span>
+      <h3>
+          procedure, public ::
+  <strong>CreateEmpty</strong> => StringBuilder_CreateEmpty
+        
+      </h3>
+    </div>
+      <div class="card-body">
+        
+        <p><strong>Type-Bound Subroutine</strong>: CreateEmpty <br>
+ <strong>Purpose</strong>:  To construct an empty string builder. <br>
+ <strong>Usage</strong>: <br>
+  ! use default initial capacity  <br>
+  ---&gt;    CALL StrBld%CreateEmpty() <br>
+  ! specify initial capacity <br>
+  ---&gt;    CALL StrBld%CreateEmpty(InitCap=256) <br></p>
+      </div>
+    <ul class="list-group">
+        <li class="list-group-item">
+                  <h3>
+    private  subroutine StringBuilder_CreateEmpty(StrBld, InitCap)  
+</h3>
+
+  <p>To create an empty 'StringBuilder' object with optionally specified initial capacity.</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(<a href='../type/stringbuilder.html'>StringBuilder</a>),
+            </td>
+<td>intent(inout)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>StrBld</strong></td>
+            <td>
+                <p>'StringBuilder' object</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              integer(kind=kInt32),
+            </td>
+<td>intent(in),</td>
+              <td>optional</td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>InitCap</strong></td>
+            <td>
+                <p>initial capacity</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+        </li>
+    </ul>
+  </div>
+
+          </div>
+          <div class="row">
+              <div class="card mt-3">
+    <div class="card-header codesum">
+      <span class="anchor" id="boundprocedure-construct~17"></span>
+      <h3>
+          procedure, public ::
+  <strong>Construct</strong> => StringBuilder_Construct
+        
+      </h3>
+    </div>
+      <div class="card-body">
+        
+        <p><strong>Type-Bound Subroutine</strong>: Construct <br>
+ <strong>Purpose</strong>:  To construct a string builder with the specified value.  This method
+      provides a convenient way to create an empty string builder and then add the
+      first value into the builder. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    CALL StrBld%Construct(Value) <br></p>
+      </div>
+    <ul class="list-group">
+        <li class="list-group-item">
+                  <h3>
+    private  subroutine StringBuilder_Construct(StrBld, Value)  
+</h3>
+
+  <p>To construct a string builder with the specified value.  This routine
+ provides a convenient way to create an empty string builder and then
+ add the first value into the builder.</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(<a href='../type/stringbuilder.html'>StringBuilder</a>),
+            </td>
+<td>intent(inout)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>StrBld</strong></td>
+            <td>
+                <p>'StringBuilder' object</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(*),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Value</strong></td>
+            <td>
+                <p>value of any valid type</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+        </li>
+    </ul>
+  </div>
+
+          </div>
+          <div class="row">
+              <div class="card mt-3">
+    <div class="card-header codesum">
+      <span class="anchor" id="boundprocedure-clear~5"></span>
+      <h3>
+          procedure, public ::
+  <strong>Clear</strong> => StringBuilder_Clear
+        
+      </h3>
+    </div>
+      <div class="card-body">
+        
+        <p><strong>Type-Bound Subroutine</strong>: Clear <br>
+ <strong>Purpose</strong>:  To clear the buffer string of the string builder. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    CALL StrBld%Clear() <br></p>
+      </div>
+    <ul class="list-group">
+        <li class="list-group-item">
+                  <h3>
+    private  subroutine StringBuilder_Clear(StrBld)  
+</h3>
+
+  <p>To clear the buffer string of a 'StringBuilder' object.</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(<a href='../type/stringbuilder.html'>StringBuilder</a>),
+            </td>
+<td>intent(inout)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>StrBld</strong></td>
+            <td>
+                <p>'StringBuilder' object</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+        </li>
+    </ul>
+  </div>
+
+          </div>
+          <div class="row">
+              <div class="card mt-3">
+    <div class="card-header codesum">
+      <span class="anchor" id="boundprocedure-append"></span>
+      <h3>
+          generic, public ::
+  <strong>Append</strong> => StringBuilder_Append, StringBuilder_AppendWPrefix
+        
+      </h3>
+    </div>
+      <div class="card-body">
+        
+        <p><strong>Type-Bound Subroutine</strong>: Append <br>
+ <strong>Purpose</strong>:  To append the specified value at the end of the builder where the type
+      of value can be one of Fortran intrinsic types or the <em>FvlStr</em> type.  Optionally,
+      a prefix and/or a suffix can be specified.  Also, optionally, if the type of value
+      is a user-defined one, a <em>ToString</em> procedure must be specified. <br>
+ <strong>Usage</strong>: <br>
+  ! specify only the value <br>
+  ---&gt;    CALL StrBld%Append(Val) <br>
+  ! specify only the value and its ToString procedure<br>
+  ---&gt;    CALL StrBld%Append(Val, ToString) <br>
+  ! specify the value and its prefix <br>
+  ---&gt;    CALL StrBld%Append('The computed value is', Val) <br>
+  ! specify the value and its prefix and suffix <br>
+  ---&gt;    CALL StrBld%Append('The speed of light in vacuum =', 299792458, 'm/s.') <br></p>
+      </div>
+    <ul class="list-group">
+        <li class="list-group-item">
+                  <h3>
+    private  subroutine StringBuilder_Append(StrBld, Value, ToString)  
+</h3>
+
+  <p>To append the <em>Value</em> argument at the end of the stored characters (i.e. at Count+1).
+ The <em>Value</em> argument is automatically converted to a string if its type is valid.
+ Otherwise, an error is reported to a default log file.</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(<a href='../type/stringbuilder.html'>StringBuilder</a>),
+            </td>
+<td>intent(inout)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>StrBld</strong></td>
+            <td>
+                <p>'StringBuilder' object</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(*),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Value</strong></td>
+            <td>
+                <p>value of any valid type</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              procedure(Anytype2String),
+            </td>
+<td></td>
+              <td>optional</td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>ToString</strong></td>
+            <td>
+                <p>procedure to convert value to string</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+        </li>
+        <li class="list-group-item">
+                  <h3>
+    private  subroutine StringBuilder_AppendWPrefix(StrBld, Prefix, Value, Suffix, NoPreSpace, NoPostSpace, ToString)  
+</h3>
+
+  <p>To append the <em>Value</em> argument with a prefix text.  Optionally, a suffix text can be
+ specified.  This routine provides a convenient way to insert a value with a prefix
+ (and a suffix). <br></p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(<a href='../type/stringbuilder.html'>StringBuilder</a>),
+            </td>
+<td>intent(inout)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>StrBld</strong></td>
+            <td>
+                <p>'StringBuilder' object</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              character(kind=kChar, len=*),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Prefix</strong></td>
+            <td>
+                <p>prefix text</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(*),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Value</strong></td>
+            <td>
+                <p>value of any valid type</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              character(kind=kChar, len=*),
+            </td>
+<td>intent(in),</td>
+              <td>optional</td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Suffix</strong></td>
+            <td>
+                <p>suffix text</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              logical,
+            </td>
+<td>intent(in),</td>
+              <td>optional</td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>NoPreSpace</strong></td>
+            <td>
+                <p>true if there is no space between the prefix text and the value; default is false.</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              logical,
+            </td>
+<td>intent(in),</td>
+              <td>optional</td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>NoPostSpace</strong></td>
+            <td>
+                <p>true if there is no space between the prefix text and the value; default is false.</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              procedure(Anytype2String),
+            </td>
+<td></td>
+              <td>optional</td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>ToString</strong></td>
+            <td>
+                <p>procedure to convert value to string</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+        </li>
+    </ul>
+  </div>
+
+          </div>
+          <div class="row">
+              <div class="card mt-3">
+    <div class="card-header codesum">
+      <span class="anchor" id="boundprocedure-insert~4"></span>
+      <h3>
+          procedure, public ::
+  <strong>Insert</strong> => StringBuilder_Insert
+        
+      </h3>
+    </div>
+      <div class="card-body">
+        
+        <p><strong>Type-Bound Subroutine</strong>: Insert <br>
+ <strong>Purpose</strong>:  To insert the specified value at the specified position where the type of
+      value can be one of Fortran intrinsic types or the <em>FvlStr</em> type.  Optionally, if the
+      type of value is a user-defined one, a <em>ToString</em> procedure must be specified. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    CALL StrBld%Insert(Val, Pos) <br>
+  ---&gt;    CALL StrBld%Insert(Val, Pos, ToString) <br></p>
+      </div>
+    <ul class="list-group">
+        <li class="list-group-item">
+                  <h3>
+    private  subroutine StringBuilder_Insert(StrBld, Value, StartID, ToString)  
+</h3>
+
+  <p>To insert the <em>Value</em> argument at the specified position.  The position must be greater
+ than 0 and less than or equal to <em>Count</em>.  Otherwise, this is the same as appending the
+ value.  The <em>Value</em> argument is automatically converted to a string if its type is valid.
+ Otherwise, an error is reported to a default log file.</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(<a href='../type/stringbuilder.html'>StringBuilder</a>),
+            </td>
+<td>intent(inout)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>StrBld</strong></td>
+            <td>
+                <p>'StringBuilder' object</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(*),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Value</strong></td>
+            <td>
+                <p>value of any valid type</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              integer(kind=kInt32),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>StartID</strong></td>
+            <td>
+                <p>position to add the value; must be less than Count</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              procedure(Anytype2String),
+            </td>
+<td></td>
+              <td>optional</td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>ToString</strong></td>
+            <td>
+                <p>procedure to convert value to string</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+        </li>
+    </ul>
+  </div>
+
+          </div>
+          <div class="row">
+              <div class="card mt-3">
+    <div class="card-header codesum">
+      <span class="anchor" id="boundprocedure-dellastchar"></span>
+      <h3>
+          procedure, public ::
+  <strong>DelLastChar</strong> => StringBuilder_DeleteLastChar
+        
+      </h3>
+    </div>
+      <div class="card-body">
+        
+        <p><strong>Type-Bound Subroutine</strong>: DelLastChar <br>
+ <strong>Purpose</strong>:  To remove the last character from the builder's string. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    CALL StrBld%DelLastChar() <br></p>
+      </div>
+    <ul class="list-group">
+        <li class="list-group-item">
+                  <h3>
+    private  subroutine StringBuilder_DeleteLastChar(StrBld)  
+</h3>
+
+  <p>To delete the last character of the string being built.</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(<a href='../type/stringbuilder.html'>StringBuilder</a>),
+            </td>
+<td>intent(inout)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>StrBld</strong></td>
+            <td>
+                <p>'StringBuilder' object</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+        </li>
+    </ul>
+  </div>
+
+          </div>
+          <div class="row">
+              <div class="card mt-3">
+    <div class="card-header codesum">
+      <span class="anchor" id="boundprocedure-tocharalloc"></span>
+      <h3>
+          procedure, public ::
+  <strong>ToCharAlloc</strong> => StringBuilder_ToCharAlloc
+        
+      </h3>
+    </div>
+      <div class="card-body">
+        
+        <p><strong>Type-Bound Function</strong>: ToCharAlloc <br>
+ <strong>Purpose</strong>:  To return characters currently stored in the string builder as an
+      allocatable character string.  Optionally, a user can request to clear the
+      builder' buffer string. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    cStr = StrBld%ToCharAlloc() <br>
+  ---&gt;    cStr = StrBld%ToCharAlloc(ClearBuffer=.TRUE.) <br></p>
+      </div>
+    <ul class="list-group">
+        <li class="list-group-item">
+                  <h3>
+    private  function StringBuilder_ToCharAlloc(StrBld, ClearBuffer) result(cStr)  
+</h3>
+
+  <p>To return characters currently stored in the string builder as
+ an allocatable character string.</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(<a href='../type/stringbuilder.html'>StringBuilder</a>),
+            </td>
+<td>intent(inout)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>StrBld</strong></td>
+            <td>
+                <p>'StringBuilder' object</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              logical,
+            </td>
+<td>intent(in),</td>
+              <td>optional</td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>ClearBuffer</strong></td>
+            <td>
+                <p>true if requesting to clear the builder's buffer after getting the string;
+ default is false.</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+    <h4>
+    Return Value
+    <small>character(kind=kChar, len=:), ALLOCATABLE</small>
+    </h4>
+    <p>string</p>
+
+        </li>
+    </ul>
+  </div>
+
+          </div>
+          <div class="row">
+              <div class="card mt-3">
+    <div class="card-header codesum">
+      <span class="anchor" id="boundprocedure-tofvlstr"></span>
+      <h3>
+          procedure, public ::
+  <strong>ToFvlStr</strong> => StringBuilder_ToFvlStr
+        
+      </h3>
+    </div>
+      <div class="card-body">
+        
+        <p><strong>Type-Bound Function</strong>: ToFvlStr <br>
+ <strong>Purpose</strong>:  To return characters currently stored in the string builder as a
+      string of the <em>FvlStr</em> type.  Optionally, a user can request to clear the
+      builder' buffer string. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    vStr = StrBld%ToFvlStr() <br>
+  ---&gt;    vStr = StrBld%ToFvlStr(ClearBuffer=.TRUE.) <br></p>
+      </div>
+    <ul class="list-group">
+        <li class="list-group-item">
+                  <h3>
+    private  function StringBuilder_ToFvlStr(StrBld, ClearBuffer) result(vStr)  
+</h3>
+
+  <p>To return characters currently stored in the string builder as
+ a string of the <em>FvlStr</em> type.</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(<a href='../type/stringbuilder.html'>StringBuilder</a>),
+            </td>
+<td>intent(inout)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>StrBld</strong></td>
+            <td>
+                <p>'StringBuilder' object</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              logical,
+            </td>
+<td>intent(in),</td>
+              <td>optional</td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>ClearBuffer</strong></td>
+            <td>
+                <p>true if requesting to clear the builder's buffer after getting the string;
+ default is false.</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+    <h4>
+    Return Value
+    <small>type(<a href='../type/fvlstr.html'>FvlStr</a>)</small>
+    </h4>
+    <p>string</p>
+
+        </li>
+    </ul>
+  </div>
+
+          </div>
+          <div class="row">
+              <div class="card mt-3">
+    <div class="card-header codesum">
+      <span class="anchor" id="boundprocedure-tocharstar"></span>
+      <h3>
+          procedure, public ::
+  <strong>ToCharStar</strong> => StringBuilder_ToCharStar
+        
+      </h3>
+    </div>
+      <div class="card-body">
+        
+        <p><strong>Type-Bound Subroutine</strong>: ToCharStar <br>
+ <strong>Purpose</strong>:  To return characters currently stored in the string builder as
+      a character string of assumed length.  Optionally, a user can request
+      to clear the builder' buffer string. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    CALL StrBld%ToCharStar(cStr) <br>
+  ---&gt;    CALL StrBld%ToCharStar(cStr, ClearBuffer=.TRUE.) <br>
+ <strong>Note</strong>: In order to retrieve all the characters currently stored in the builder,
+      the length of the specified string must be at least equal to the current length
+      of the string being built, which can be inquired using the <em>Length</em> method.<br></p>
+      </div>
+    <ul class="list-group">
+        <li class="list-group-item">
+                  <h3>
+    private  subroutine StringBuilder_ToCharStar(StrBld, cStr, ClearBuffer)  
+</h3>
+
+  <p>To return characters currently stored in the string builder as
+ a character string of assumed length.</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(<a href='../type/stringbuilder.html'>StringBuilder</a>),
+            </td>
+<td>intent(inout)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>StrBld</strong></td>
+            <td>
+                <p>'StringBuilder' object</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              character(kind=kChar, len=*),
+            </td>
+<td>intent(out)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>cStr</strong></td>
+            <td>
+                <p>character string</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              logical,
+            </td>
+<td>intent(in),</td>
+              <td>optional</td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>ClearBuffer</strong></td>
+            <td>
+                <p>true if requesting to clear the builder's buffer after getting the string;
+ default is false.</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+        </li>
+    </ul>
+  </div>
+
+          </div>
+          <div class="row">
+              <div class="card mt-3">
+    <div class="card-header codesum">
+      <span class="anchor" id="boundprocedure-length~3"></span>
+      <h3>
+          procedure, public ::
+  <strong>Length</strong> => StringBuilder_GetLength
+        
+      </h3>
+    </div>
+      <div class="card-body">
+        
+        <p><strong>Type-Bound Function</strong>: Length <br>
+ <strong>Purpose</strong>:  To return the current length of the string being built. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    Length = StrBld%Length() <br></p>
+      </div>
+    <ul class="list-group">
+        <li class="list-group-item">
+                  <h3>
+    private  function StringBuilder_GetLength(StrBld) result(Length)  
+</h3>
+
+  <p>To return the current length of the string being built (i.e. the number
+ of characters currently stored in the builder).</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(<a href='../type/stringbuilder.html'>StringBuilder</a>),
+            </td>
+<td>intent(inout)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>StrBld</strong></td>
+            <td>
+                <p>'StringBuilder' object</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+    <h4>
+    Return Value
+    <small>integer(kind=kInt32)</small>
+    </h4>
+    <p>length of the string</p>
+
+        </li>
+    </ul>
+  </div>
+
+          </div>
+          <div class="row">
+              <div class="card mt-3">
+    <div class="card-header codesum">
+      <span class="anchor" id="boundprocedure-copy~9"></span>
+      <h3>
+          procedure, public ::
+  <strong>Copy</strong> => StringBuilder_Copy
+        
+      </h3>
+    </div>
+      <div class="card-body">
+        
+        <p><strong>Type-Bound Subroutine</strong>: Copy <br>
+ <strong>Purpose</strong>: To make a copy of the source object. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    CALL SrcObj%Copy(DstObj) <br></p>
+      </div>
+    <ul class="list-group">
+        <li class="list-group-item">
+                  <h3>
+    private  subroutine StringBuilder_Copy(SrcObj, DstObj, IsDeep)  
+</h3>
+
+  <p>To copy the source object to the destination object.
+ This is a deferred procedure inherited from the <em>Object</em> type.</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(<a href='../type/stringbuilder.html'>StringBuilder</a>),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>SrcObj</strong></td>
+            <td>
+                <p>source object</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(Object),
+            </td>
+<td>intent(out)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>DstObj</strong></td>
+            <td>
+                <p>destination object</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              logical,
+            </td>
+<td>intent(in),</td>
+              <td>optional</td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>IsDeep</strong></td>
+            <td>
+                <p>flag indicating whether to perform deep copy or shallow copy; <br>
+ - if true, perform shallow copy; <br>
+ - if false, perform deep copy; <br>
+ default is false.</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+        </li>
+    </ul>
+  </div>
+
+          </div>
+          <div class="row">
+              <div class="card mt-3">
+    <div class="card-header codesum">
+      <span class="anchor" id="boundprocedure-isequalto~9"></span>
+      <h3>
+          procedure, public ::
+  <strong>IsEqualTo</strong> => StringBuilder_IsEqualTo
+        
+      </h3>
+    </div>
+      <div class="card-body">
+        
+        <p><strong>Type-Bound Function</strong>: IsEqualTo <br>
+ <strong>Purpose</strong>: To check whether two objects are equal to one another or not. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    Flag = ObjA%IsEqualTo(ObjB) <br>
+  ---&gt;    IF (ObjA%IsEqualTo(ObjB)) DoSomething</p>
+      </div>
+    <ul class="list-group">
+        <li class="list-group-item">
+                  <h3>
+    private  function StringBuilder_IsEqualTo(LhsObj, RhsObj) result(Flag)  
+</h3>
+
+  <p>To check whether LhsObj and RhsObj are equal or not.
+ This is a deferred procedure inherited from the <em>Object</em> type.</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(<a href='../type/stringbuilder.html'>StringBuilder</a>),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>LhsObj</strong></td>
+            <td>
+                <p>an object</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(Object),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>RhsObj</strong></td>
+            <td>
+                <p>another object</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+    <h4>
+    Return Value
+    <small>logical</small>
+    </h4>
+    <p>true if both objects are equal</p>
+
+        </li>
+    </ul>
+  </div>
+
+          </div>
+          <div class="row">
+              <div class="card mt-3">
+    <div class="card-header codesum">
+      <span class="anchor" id="boundprocedure-memfree~7"></span>
+      <h3>
+          procedure, public ::
+  <strong>MemFree</strong> => StringBuilder_MemFree
+        
+      </h3>
+    </div>
+      <div class="card-body">
+        
+        <p><strong>Type-Bound Subroutine</strong>: MemFree <br>
+ <strong>Purpose</strong>: To free memory/storage occupied by the object. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    CALL Obj%MemFree() <br></p>
+      </div>
+    <ul class="list-group">
+        <li class="list-group-item">
+                  <h3>
+    private  subroutine StringBuilder_MemFree(Obj)  
+</h3>
+
+  <p>To free memory of the StringBuilder object.
+ This is a deferred procedure inherited from the <em>Object</em> type.</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(<a href='../type/stringbuilder.html'>StringBuilder</a>),
+            </td>
+<td>intent(inout)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Obj</strong></td>
+            <td>
+                
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+        </li>
+    </ul>
+  </div>
+
+          </div>
+          <div class="row">
+              <div class="card mt-3">
+    <div class="card-header codesum">
+      <span class="anchor" id="boundprocedure-tostring~9"></span>
+      <h3>
+          procedure, public ::
+  <strong>ToString</strong> => StringBuilder_ToString
+        
+      </h3>
+    </div>
+      <div class="card-body">
+        
+        <p><strong>Type-Bound Function</strong>: ToString <br>
+ <strong>Purpose</strong>:  To return the string representation of this object. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    Str = Obj%ToString() <br></p>
+      </div>
+    <ul class="list-group">
+        <li class="list-group-item">
+                  <h3>
+    private  function StringBuilder_ToString(Obj) result(Str)  
+</h3>
+
+  <p>To get the string representation of the StringBuilder type.</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(<a href='../type/stringbuilder.html'>StringBuilder</a>),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Obj</strong></td>
+            <td>
+                
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+    <h4>
+    Return Value
+    <small>character(kind=kChar, len=:), ALLOCATABLE</small>
+    </h4>
+    
+
+        </li>
+    </ul>
+  </div>
+
+          </div>
+          <div class="row">
+              <div class="card mt-3">
+    <div class="card-header codesum">
+      <span class="anchor" id="boundprocedure-hashcode~6"></span>
+      <h3>
+          procedure, public ::
+  <strong>HashCode</strong> => StringBuilder_HashCode
+        
+      </h3>
+    </div>
+      <div class="card-body">
+        
+        <p><strong>Type-Bound Function</strong>: HashCode <br>
+ <strong>Purpose</strong>:  To compute the hash code of this object. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    Code = Obj%HashCode() <br></p>
+      </div>
+    <ul class="list-group">
+        <li class="list-group-item">
+                  <h3>
+    private  function StringBuilder_HashCode(Obj) result(Code)  
+</h3>
+
+  <p>To get compute hash code for the given key.
+ This is a deferred procedure inherited from the <em>Hashable</em> type.</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(<a href='../type/stringbuilder.html'>StringBuilder</a>),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Obj</strong></td>
+            <td>
+                
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+    <h4>
+    Return Value
+    <small>integer(kind=kInt32)</small>
+    </h4>
+    
+
+        </li>
+    </ul>
+  </div>
+
+          </div>
+          <div class="row">
+              <div class="card mt-3">
+    <div class="card-header codesum">
+      <span class="anchor" id="boundprocedure-compareto~3"></span>
+      <h3>
+          procedure, public ::
+  <strong>CompareTo</strong> => StringBuilder_CompareTo
+        
+      </h3>
+    </div>
+      <div class="card-body">
+        
+        <p>Use a common logical expression to compare two <em>Comparable</em> objects.</p>
+      </div>
+    <ul class="list-group">
+        <li class="list-group-item">
+                  <h3>
+    private  function StringBuilder_CompareTo(A, B) result(Flag)  
+</h3>
+
+  <p>To compare a StringBuilder object with a Comparable object.
+ This is a deferred procedure inherited from the <em>Comparable</em> type.</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(<a href='../type/stringbuilder.html'>StringBuilder</a>),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>A</strong></td>
+            <td>
+                <p>StringBuilder object</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(Comparable),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>B</strong></td>
+            <td>
+                <p>Comparable object</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+    <h4>
+    Return Value
+    <small>integer(kind=kInt32)</small>
+    </h4>
+    <p>output flag with value of <br>
+  -1 if A &lt; B, <br>
+   0 if A == B, or <br>
+  +1 if A &gt; B.</p>
+
+        </li>
+    </ul>
+  </div>
+
+          </div>
+      </section>
+
+    <section>
+    <h3><span class="anchor" id="src"></span>Source Code</h3>
+    <div class="hl codehilite"><pre><span></span><span class="w">    </span><span class="k">TYPE</span><span class="p">,</span><span class="w"> </span><span class="k">EXTENDS</span><span class="p">(</span><span class="n">Comparable</span><span class="p">)</span><span class="w">  </span><span class="kd">::</span><span class="w"> </span><span class="n">StringBuilder</span>
+<span class="w">        </span><span class="k">PRIVATE</span>
+<span class="k">        </span><span class="n">tIndex</span><span class="w">      </span><span class="kd">::</span><span class="w"> </span><span class="nb">Count</span><span class="w">    </span><span class="o">=</span><span class="w"> </span><span class="mi">0_kIndex</span><span class="w">  </span><span class="c">!! the number of characters currently stored</span>
+<span class="w">        </span><span class="n">tIndex</span><span class="w">      </span><span class="kd">::</span><span class="w"> </span><span class="n">Capacity</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0_kIndex</span><span class="w">  </span><span class="c">!! the maximum number of characters that currently can be stored</span>
+<span class="w">        </span><span class="n">tCharAlloc</span><span class="w">  </span><span class="kd">::</span><span class="w"> </span><span class="n">StrBuf</span><span class="w">               </span><span class="c">!! string buffer</span>
+<span class="w">    </span><span class="k">CONTAINS</span>
+<span class="w">        </span><span class="c">! ---------------------------------------------------------------------</span>
+<span class="w">        </span><span class="c">! -----                     Private Procedures                    -----</span>
+<span class="w">        </span><span class="c">! ---------------------------------------------------------------------</span>
+<span class="w">        </span><span class="k">PROCEDURE</span><span class="p">,</span><span class="w"> </span><span class="k">PRIVATE</span><span class="w">  </span><span class="kd">::</span><span class="w"> </span><span class="n">EnsureCapacity</span><span class="w">   </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">StringBuilder_EnsureCapacity</span>
+<span class="w">        </span><span class="k">PROCEDURE</span><span class="p">,</span><span class="w"> </span><span class="k">PRIVATE</span><span class="w">  </span><span class="kd">::</span><span class="w"> </span><span class="n">StringBuilder_Append</span>
+<span class="w">        </span><span class="k">PROCEDURE</span><span class="p">,</span><span class="w"> </span><span class="k">PRIVATE</span><span class="w">  </span><span class="kd">::</span><span class="w"> </span><span class="n">StringBuilder_AppendWPrefix</span>
+<span class="w">        </span><span class="c">! ---------------------------------------------------------------------</span>
+<span class="w">        </span><span class="c">! -----                     Public Procedures                     -----</span>
+<span class="w">        </span><span class="c">! ---------------------------------------------------------------------</span>
+<span class="w">        </span><span class="c">!&gt; **Type-Bound Subroutine**: CreateEmpty &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Purpose**:  To construct an empty string builder. &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Usage**: &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!   ! use default initial capacity  &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!   ---&gt;    CALL StrBld%CreateEmpty() &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!   ! specify initial capacity &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!   ---&gt;    CALL StrBld%CreateEmpty(InitCap=256) &lt;br&gt;</span>
+<span class="w">        </span><span class="k">PROCEDURE</span><span class="w">   </span><span class="kd">::</span><span class="w"> </span><span class="n">CreateEmpty</span><span class="w">  </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">StringBuilder_CreateEmpty</span>
+<span class="w">        </span><span class="c">!&gt; **Type-Bound Subroutine**: Construct &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Purpose**:  To construct a string builder with the specified value.  This method</span>
+<span class="w">        </span><span class="c">!       provides a convenient way to create an empty string builder and then add the</span>
+<span class="w">        </span><span class="c">!       first value into the builder. &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Usage**: &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!   ---&gt;    CALL StrBld%Construct(Value) &lt;br&gt;</span>
+<span class="w">        </span><span class="k">PROCEDURE</span><span class="w">   </span><span class="kd">::</span><span class="w"> </span><span class="n">Construct</span><span class="w">    </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">StringBuilder_Construct</span>
+<span class="w">        </span><span class="c">!&gt; **Type-Bound Subroutine**: Clear &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Purpose**:  To clear the buffer string of the string builder. &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Usage**: &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!   ---&gt;    CALL StrBld%Clear() &lt;br&gt;</span>
+<span class="w">        </span><span class="k">PROCEDURE</span><span class="w">   </span><span class="kd">::</span><span class="w"> </span><span class="n">Clear</span><span class="w">        </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">StringBuilder_Clear</span>
+<span class="w">        </span><span class="c">!&gt; **Type-Bound Subroutine**: Append &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Purpose**:  To append the specified value at the end of the builder where the type</span>
+<span class="w">        </span><span class="c">!       of value can be one of Fortran intrinsic types or the *FvlStr* type.  Optionally,</span>
+<span class="w">        </span><span class="c">!       a prefix and/or a suffix can be specified.  Also, optionally, if the type of value</span>
+<span class="w">        </span><span class="c">!       is a user-defined one, a *ToString* procedure must be specified. &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Usage**: &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!   ! specify only the value &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!   ---&gt;    CALL StrBld%Append(Val) &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!   ! specify only the value and its ToString procedure&lt;br&gt;</span>
+<span class="w">        </span><span class="c">!   ---&gt;    CALL StrBld%Append(Val, ToString) &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!   ! specify the value and its prefix &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!   ---&gt;    CALL StrBld%Append(&#39;The computed value is&#39;, Val) &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!   ! specify the value and its prefix and suffix &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!   ---&gt;    CALL StrBld%Append(&#39;The speed of light in vacuum =&#39;, 299792458, &#39;m/s.&#39;) &lt;br&gt;</span>
+<span class="w">        </span><span class="k">GENERIC</span><span class="w">     </span><span class="kd">::</span><span class="w"> </span><span class="n">Append</span><span class="w">       </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">StringBuilder_Append</span><span class="p">,</span><span class="w"> </span><span class="n">StringBuilder_AppendWPrefix</span>
+<span class="w">        </span><span class="c">!&gt; **Type-Bound Subroutine**: Insert &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Purpose**:  To insert the specified value at the specified position where the type of</span>
+<span class="w">        </span><span class="c">!       value can be one of Fortran intrinsic types or the *FvlStr* type.  Optionally, if the</span>
+<span class="w">        </span><span class="c">!       type of value is a user-defined one, a *ToString* procedure must be specified. &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Usage**: &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!   ---&gt;    CALL StrBld%Insert(Val, Pos) &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!   ---&gt;    CALL StrBld%Insert(Val, Pos, ToString) &lt;br&gt;</span>
+<span class="w">        </span><span class="k">PROCEDURE</span><span class="w">   </span><span class="kd">::</span><span class="w"> </span><span class="n">Insert</span><span class="w">       </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">StringBuilder_Insert</span>
+<span class="w">        </span><span class="c">!&gt; **Type-Bound Subroutine**: DelLastChar &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Purpose**:  To remove the last character from the builder&#39;s string. &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Usage**: &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!   ---&gt;    CALL StrBld%DelLastChar() &lt;br&gt;</span>
+<span class="w">        </span><span class="k">PROCEDURE</span><span class="w">   </span><span class="kd">::</span><span class="w"> </span><span class="n">DelLastChar</span><span class="w">  </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">StringBuilder_DeleteLastChar</span>
+<span class="w">        </span><span class="c">!&gt; **Type-Bound Function**: ToCharAlloc &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Purpose**:  To return characters currently stored in the string builder as an</span>
+<span class="w">        </span><span class="c">!       allocatable character string.  Optionally, a user can request to clear the</span>
+<span class="w">        </span><span class="c">!       builder&#39; buffer string. &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Usage**: &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!   ---&gt;    cStr = StrBld%ToCharAlloc() &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!   ---&gt;    cStr = StrBld%ToCharAlloc(ClearBuffer=.TRUE.) &lt;br&gt;</span>
+<span class="w">        </span><span class="k">PROCEDURE</span><span class="w">   </span><span class="kd">::</span><span class="w"> </span><span class="n">ToCharAlloc</span><span class="w">  </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">StringBuilder_ToCharAlloc</span>
+<span class="w">        </span><span class="c">!&gt; **Type-Bound Function**: ToFvlStr &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Purpose**:  To return characters currently stored in the string builder as a</span>
+<span class="w">        </span><span class="c">!       string of the *FvlStr* type.  Optionally, a user can request to clear the</span>
+<span class="w">        </span><span class="c">!       builder&#39; buffer string. &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Usage**: &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!   ---&gt;    vStr = StrBld%ToFvlStr() &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!   ---&gt;    vStr = StrBld%ToFvlStr(ClearBuffer=.TRUE.) &lt;br&gt;</span>
+<span class="w">        </span><span class="k">PROCEDURE</span><span class="w">   </span><span class="kd">::</span><span class="w"> </span><span class="n">ToFvlStr</span><span class="w">     </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">StringBuilder_ToFvlStr</span>
+<span class="w">        </span><span class="c">!&gt; **Type-Bound Subroutine**: ToCharStar &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Purpose**:  To return characters currently stored in the string builder as</span>
+<span class="w">        </span><span class="c">!       a character string of assumed length.  Optionally, a user can request</span>
+<span class="w">        </span><span class="c">!       to clear the builder&#39; buffer string. &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Usage**: &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!   ---&gt;    CALL StrBld%ToCharStar(cStr) &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!   ---&gt;    CALL StrBld%ToCharStar(cStr, ClearBuffer=.TRUE.) &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Note**: In order to retrieve all the characters currently stored in the builder,</span>
+<span class="w">        </span><span class="c">!       the length of the specified string must be at least equal to the current length</span>
+<span class="w">        </span><span class="c">!       of the string being built, which can be inquired using the *Length* method.&lt;br&gt;</span>
+<span class="w">        </span><span class="k">PROCEDURE</span><span class="w">   </span><span class="kd">::</span><span class="w"> </span><span class="n">ToCharStar</span><span class="w">   </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">StringBuilder_ToCharStar</span>
+<span class="w">        </span><span class="c">!&gt; **Type-Bound Function**: Length &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Purpose**:  To return the current length of the string being built. &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Usage**: &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!   ---&gt;    Length = StrBld%Length() &lt;br&gt;</span>
+<span class="w">        </span><span class="k">PROCEDURE</span><span class="w">   </span><span class="kd">::</span><span class="w"> </span><span class="n">Length</span><span class="w">       </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">StringBuilder_GetLength</span>
+<span class="w">        </span><span class="c">! ---------------------------------------------------------------------</span>
+<span class="w">        </span><span class="c">! -----     Deferred/Overridden Procedures from Object Type       -----</span>
+<span class="w">        </span><span class="c">! ---------------------------------------------------------------------</span>
+<span class="w">        </span><span class="c">!&gt; **Type-Bound Subroutine**: Copy &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Purpose**: To make a copy of the source object. &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Usage**: &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!   ---&gt;    CALL SrcObj%Copy(DstObj) &lt;br&gt;</span>
+<span class="w">        </span><span class="k">PROCEDURE</span><span class="w">   </span><span class="kd">::</span><span class="w"> </span><span class="n">Copy</span><span class="w">         </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">StringBuilder_Copy</span>
+<span class="w">        </span><span class="c">!&gt; **Type-Bound Function**: IsEqualTo &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Purpose**: To check whether two objects are equal to one another or not. &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Usage**: &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!   ---&gt;    Flag = ObjA%IsEqualTo(ObjB) &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!   ---&gt;    IF (ObjA%IsEqualTo(ObjB)) DoSomething</span>
+<span class="w">        </span><span class="k">PROCEDURE</span><span class="w">   </span><span class="kd">::</span><span class="w"> </span><span class="n">IsEqualTo</span><span class="w">    </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">StringBuilder_IsEqualTo</span>
+<span class="w">        </span><span class="c">!&gt; **Type-Bound Subroutine**: MemFree &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Purpose**: To free memory/storage occupied by the object. &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Usage**: &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!   ---&gt;    CALL Obj%MemFree() &lt;br&gt;</span>
+<span class="w">        </span><span class="k">PROCEDURE</span><span class="w">   </span><span class="kd">::</span><span class="w"> </span><span class="n">MemFree</span><span class="w">      </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">StringBuilder_MemFree</span>
+<span class="w">        </span><span class="c">!&gt; **Type-Bound Function**: ToString &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Purpose**:  To return the string representation of this object. &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Usage**: &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!   ---&gt;    Str = Obj%ToString() &lt;br&gt;</span>
+<span class="w">        </span><span class="k">PROCEDURE</span><span class="w">   </span><span class="kd">::</span><span class="w"> </span><span class="n">ToString</span><span class="w">     </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">StringBuilder_ToString</span>
+<span class="w">        </span><span class="c">!&gt; **Type-Bound Function**: HashCode &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Purpose**:  To compute the hash code of this object. &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Usage**: &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!   ---&gt;    Code = Obj%HashCode() &lt;br&gt;</span>
+<span class="w">        </span><span class="k">PROCEDURE</span><span class="w">   </span><span class="kd">::</span><span class="w"> </span><span class="n">HashCode</span><span class="w">     </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">StringBuilder_HashCode</span>
+<span class="w">        </span><span class="c">! ---------------------------------------------------------------------</span>
+<span class="w">        </span><span class="c">! -----         Deferred Procedures from Comparable Type          -----</span>
+<span class="w">        </span><span class="c">! ---------------------------------------------------------------------</span>
+<span class="w">        </span><span class="c">!&gt; Use a common logical expression to compare two *Comparable* objects.</span>
+<span class="w">        </span><span class="k">PROCEDURE</span><span class="w">   </span><span class="kd">::</span><span class="w"> </span><span class="n">CompareTo</span><span class="w">    </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">StringBuilder_CompareTo</span>
+<span class="w">        </span><span class="c">! ---------------------------------------------------------------------</span>
+<span class="w">        </span><span class="c">! -----                 Final Procedure                           -----</span>
+<span class="w">        </span><span class="c">! ---------------------------------------------------------------------</span>
+<span class="w">        </span><span class="c">!% To perform finalization of the *StringBuilder* object.</span>
+<span class="w">        </span><span class="k">FINAL</span><span class="w">       </span><span class="kd">::</span><span class="w"> </span><span class="n">StringBuilder_Finalize</span>
+<span class="w">        </span><span class="c">! ---------------------------------------------------------------------</span>
+<span class="w">    </span><span class="k">END TYPE </span><span class="n">StringBuilder</span>
+</pre></div>
+
+    </section>
+    
+    </div>
+  </div>
+
+      <hr>
+    </div> <!-- /container -->
+    <footer>
+      <div class="container">
+        <div class="row justify-content-between">
+          <div class="col"><p>eXPerimental Fortran Library (XpfLib) Documentation was developed by Niranama<br>&copy; 2024 
+</p>
+          </div>
+          <div class="col">
+            <p class="text-end">
+              Documentation generated by
+              <a href="https://github.com/Fortran-FOSS-Programmers/ford">FORD</a>
+            </p>
+          </div>
+        </div>
+        <br>
+      </div> <!-- /container -->
+    </footer>
+
+    <!-- Bootstrap core JavaScript -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>    
+
+    <!-- MathJax JavaScript
+             ================================================== -->
+             <!-- Placed at the end of the document so the pages load faster -->
+        <script type="text/x-mathjax-config">
+          MathJax.Hub.Config({
+          TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } },
+          jax: ['input/TeX','input/MathML','output/HTML-CSS'],
+          extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']
+          });
+        </script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+          <script src="../tipuesearch/tipuesearch_content.js"></script>
+          <script src="../tipuesearch/tipuesearch_set.js"></script>
+          <script src="../tipuesearch/tipuesearch.js"></script>
+
+  </body>
+</html>

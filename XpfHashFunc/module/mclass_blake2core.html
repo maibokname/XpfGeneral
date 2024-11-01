@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta name="description" content="Experimental Fortran Package - Hash Functions">
+    <meta name="author" content="Niranama" >
+    <link rel="icon" href="../favicon.png">
+
+    <title>MClass_Blake2Core &ndash; eXPerimental Fortran Library (XpfLib) Documentation</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link href="../css/pygments.css" rel="stylesheet">
+    <link href="../css/font-awesome.min.css" rel="stylesheet">
+    <link href="../css/local.css" rel="stylesheet">
+      <link  href="../tipuesearch/tipuesearch.css" rel="stylesheet">
+
+    <script src="https://code.jquery.com/jquery-3.7.0.slim.min.js" integrity="sha256-tG5mcZUtJsZvyKAxYLVXrmjKBVLd6VpVccqz/r4ypFE=" crossorigin="anonymous"></script>
+  </head>
+
+  <body>
+
+    <!-- Fixed navbar -->
+    <div class="container-fluid mb-sm-4 mb-xl-2">
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container">
+          <a class="navbar-brand" href="../index.html">eXPerimental Fortran Library (XpfLib) Documentation </a>
+          <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar"
+                  aria-expanded="false" aria-controls="navbar" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon">
+          </button>
+
+          <div id="navbar" class="navbar-collapse collapse">
+            <ul class="navbar-nav">
+                  <li class="nav-item">
+                    <a class="nav-link" href="../lists/files.html">Source Files</a>
+                  </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../lists/modules.html">Modules</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../lists/procedures.html">Procedures</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../lists/absint.html">Abstract Interfaces</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../lists/types.html">Derived Types</a>
+                </li>
+            </ul>
+              <div class="d-flex align-items-end flex-grow-1">
+                <form action="../search.html" role="search" class="ms-auto">
+                  <input type="text" class="form-control" aria-label="Search" placeholder="Search" name="q" id="tipue_search_input" autocomplete="off" required>
+                </form>
+              </div>
+          </div><!--/.nav-collapse -->
+        </div>
+      </nav>
+    </div>
+
+    <div class="container">
+  <div class="row">
+    <h1>MClass_Blake2Core
+      <small>Module</small>
+      
+    </h1>
+      <div class="container p-2 mb-4 bg-light border rounded-3">
+    <div class="row align-items-center justify-content-between" id="info-bar">
+      <div class="col">
+        <ul class="list-inline" style="margin-bottom:0px;display:inline">
+
+            <li class="list-inline-item" id="statements"><i class="fa fa-list-ol"></i>
+              <a data-bs-toggle="tooltip"
+                 data-bs-placement="bottom" data-html="true"
+                 title=" 0.7% of total for modules and submodules.">181 statements</a>
+            </li>
+
+            <li class="list-inline-item" id="source-file">
+              <i class="fa fa-code"></i>
+              <a href="../src/MClass_Blake2Core.f90"> Source File</a>
+            </li>
+        </ul>
+      </div>
+      <div class="col">
+        <nav aria-label="breadcrumb">
+          <ol class="breadcrumb justify-content-end mb-0">
+                <li class="breadcrumb-item"><a href='../sourcefile/mclass_blake2core.f90.html'>MClass_Blake2Core.f90</a></li>
+            <li class="breadcrumb-item active" aria-current="page">MClass_Blake2Core</li>
+          </ol>
+        </nav>
+      </div>
+    </div>
+  </div>
+  <script>
+    $(function () {
+    $('[data-bs-toggle="tooltip"]').tooltip()
+    })
+  </script>
+
+  </div>
+
+  <div class="row">
+    <div class="col-md-3">
+        <div id="sidebar">
+      <h3>Contents</h3>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+      <div class="card mb-4">
+      <a data-bs-toggle="collapse" href="#types-0"
+         aria-expanded="false" aria-controls="types-0">
+         <h4 class="card-header bg-primary text-white">Derived Types</h4>
+      </a>
+      <div id="types-0" class="collapse">
+        <div class="list-group list-group-flush">
+            <a class="list-group-item" href="../module/mclass_blake2core.html#type-blake2core">Blake2Core</a>
+        </div>
+      </div>
+    </div>
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+
+
+  </div>
+
+    </div>
+
+    <div class="col-md-9" id='text'>
+      <p><strong>PURPOSE OF THIS MODULE</strong>: <br>
+  This module contains the <em>Blake2Core</em> type and its related routines.
+  The <em>Blake2Core</em> type is an abstract <em>digest</em> type extending directly
+  from the <a href="../module/mclass_basedigest.html#type-basedigest">
+  BaseDigest</a> type.  It defines and implements additional methods
+  (most of which is intended to be used internally) to provide an
+  extended API for an incremental cryptographic hash function. <br>
+  By design, the <em>Blake2Core</em> type is intended to be used as a parent
+  type for all <em>BLAKE2-based</em> digest types.  The <em>Blake2Core</em> type
+  provides an implementation of an incremental cryptographic hash function
+  by employing the <em>BLAKE2 message-digest</em> algorithm [1, 2].  It takes care
+  core operations (i.e. some of the deferred procedures and additional methods
+  provided) required by a <em>BLAKE2-based digest</em> object where its subtypes must
+  take care the remaining operations (i.e the rest of the deferred procedures).
+  The implementation of the <em>Blake2Core</em> type and its subtypes are based
+  mainly on the references [3, 4]. <br>
+  It should be noted that the <em>BLAKE2 message-digest</em> algorithm has several
+  variants with additional features such as keyed hashing (that is, MAC or
+  PRF), hashing with a salt, personalization and/or incremental tree-hashing.
+  The algorithm can also produce a variable-length hash output.  Among these
+  additional features, the <em>Blake2Core</em> type and its subtypes only allow
+  keyed hashing and variable-length hash output. <br>
+   <br>
+<strong>REFERENCES</strong>: <br>
+  [1] <a href="https://www.aumasson.jp/blake/book/">J.P. Aumasson, W. Meier,
+      R.C.W. Phan, and L. Henzen. 2015. The Hash Function BLAKE. Springer. </a> <br>
+  [2] <a href="https://www.blake2.net/">BLAKE2 - Fast Secure Hashing. </a> <br>
+  [3] <a href="https://github.com/kocakosm/jblake2">JBlake2: A pure Java
+      implementation of BLAKE2 (RFC 7693). </a> <br>
+  [4] <a href="https://github.com/BLAKE2/BLAKE2">BLAKE2 official implementations. </a> <br></p>
+<br>          <div class="card mb-4">
+      <h3 class="card-header card-title bg-light">Uses</h3>
+      <div class="card-body">
+        <ul class="list-group list-group-flush">
+            <li class="list-group-item">
+              <ul class="list-inline">
+                  <li class="list-inline-item"><a href='../../XpfBase/module/mbase_memhandlers.html'>MBase_MemHandlers</a></li>
+                  <li class="list-inline-item"><a href='../../XpfBase/module/mbase_byteutil.html'>MBase_ByteUtil</a></li>
+                  <li class="list-inline-item"><a href='../../XpfBase/module/mbase_common.html'>MBase_Common</a></li>
+                  <li class="list-inline-item"><a href='../module/mclass_basedigest.html'>MClass_BaseDigest</a></li>
+              </ul>
+            </li>
+        </ul>
+      </div>
+    </div>
+
+      
+      <br>
+
+
+
+
+
+
+        <section>
+          <h2>Derived Types</h2>
+              <div class="card">
+    <div class="card-header codesum">
+      <span class="anchor" id="type-blake2core"></span>
+      <h3>
+        type, public, extends(<a href='../type/basedigest.html'>BaseDigest</a>)&nbsp;::&nbsp;
+        <a href='../type/blake2core.html'>Blake2Core</a>
+        
+      </h3>
+    </div>
+    <div class="card-body">
+      <p><em>Blake2Core</em> is an abstract <em>digest</em> type provided to be a parent type
+ for other <em>Blake2-based digest</em> types to implement incremental cryptographic
+ hash functions.</p>
+
+
+
+
+        <h4>Type-Bound Procedures</h4>
+        <table class="table table-striped varlist">
+          <tbody>
+              <tr>
+                <td>  procedure(MDCreate), public, deferred ::
+  <strong><a href='../type/basedigest.html#boundprocedure-initialize~47'>Initialize</a></strong></td>
+                <td><p><em>Initialize</em> is a binding name of the <em>MDCreate</em> deferred procedure. <br>
+ Use the <em>Create</em> method in place of the <em>Initialize</em> method to perform
+ any essential initialization of a <em>digest</em> object.</p></td>
+              </tr>
+              <tr>
+                <td>  procedure(MDReset), public, deferred ::
+  <strong><a href='../type/basedigest.html#boundprocedure-reset~29'>Reset</a></strong></td>
+                <td><p><em>Reset</em> is a binding name of the <em>MDReset</em> deferred procedure. <br>
+ <strong>Type-Bound Subroutine</strong>: Reset <br>
+ <strong>Purpose</strong>:  To reset the <em>digest</em> object to its initial state. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    CALL MD%Reset()</p></td>
+              </tr>
+              <tr>
+                <td>  procedure(MDClone), public, deferred ::
+  <strong><a href='../type/basedigest.html#boundprocedure-getclone~29'>GetClone</a></strong></td>
+                <td><p><em>GetClone</em> is a binding name of the <em>MDClone</em> deferred procedure. <br>
+ <strong>Type-Bound Function</strong>: GetClone <br>
+ <strong>Purpose</strong>:  To clone the current state of the source object. The destination
+               object evolves independently of the source object. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    CALL SrcMD%GetClone(DstMD)</p></td>
+              </tr>
+              <tr>
+                <td>  procedure(MDName), public, deferred ::
+  <strong><a href='../type/basedigest.html#boundprocedure-getname~48'>GetName</a></strong></td>
+                <td><p><em>GetName</em> is a binding name of the <em>MDName</em> deferred procedure. <br>
+ <strong>Type-Bound Function</strong>: GetName <br>
+ <strong>Purpose</strong>:  To get the name of the <em>digest</em> object. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    Name = MD%GetName()</p></td>
+              </tr>
+              <tr>
+                <td>  generic, public ::
+  <strong><a href='../type/blake2core.html#boundprocedure-create~31'>Create</a></strong> => <a href='../type/sha1.html#boundprocedure-initialize~52'>Initialize</a></td>
+                <td><p><strong>Type-Bound Subroutine</strong>: Create <br>
+ <strong>Purpose</strong>:  To perform any essential initialization of the <em>digest</em> object. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    CALL MD%Create()</p></td>
+              </tr>
+              <tr>
+                <td>  generic, public ::
+  <strong><a href='../type/blake2core.html#boundprocedure-update~5'>Update</a></strong> => <a href='../type/mdengine.html#boundprocedure-insertbytes~5'>InsertBytes</a>, <a href='../type/mdengine.html#boundprocedure-insertgen~5'>InsertGen</a></td>
+                <td><p><strong>Type-Bound Subroutine</strong>: Update <br>
+ <strong>Purpose</strong>:  To insert input data into the <em>digest</em> object (commonly stored in a
+               buffer array) and process block(s) of data if necessary. <br>
+ <strong>Usage</strong>: <br>
+  ! insert input data in a generic way <br>
+  ---&gt;    CALL MD%Update(Input, InpSize) <br>
+  ! insert input data as an array of bytes (8-bit integers) <br>
+  ---&gt;    CALL MD%Update(ByteArr, Offset, Length) <br></p></td>
+              </tr>
+              <tr>
+                <td>  generic, public ::
+  <strong><a href='../type/blake2core.html#boundprocedure-digest~4'>Digest</a></strong> => <a href='../type/mdengine.html#boundprocedure-bytedigest~5'>ByteDigest</a>, <a href='../type/mdengine.html#boundprocedure-bytedigest_winput~5'>ByteDigest_wInput</a>, HexDigest, HexDigest_wInput</td>
+                <td><p><strong>Type-Bound Subroutine</strong>: Digest <br>
+ <strong>Purpose</strong>:  To finalize the current hash computation and return the hash output.
+               The object is reset.  Some final input data can be inserted. <br>
+ <strong>Usage</strong>: <br>
+  ! finalize hash computation and return hash output as a byte array <br>
+  ---&gt;    CALL MD%Digest(ByteArr) <br>
+  ! insert final input and return hash output as a byte array <br>
+  ---&gt;    CALL MD%Digest(Input, InpSize, ByteArr) <br>
+  ! finalize hash computation and return hash output as a hexadecimal string <br>
+  ---&gt;    CALL MD%Digest(HexStr) <br>
+  ! insert final input and return hash output as a hexadecimal string <br>
+  ---&gt;    CALL MD%Digest(Input, InpSize, HexStr) <br></p></td>
+              </tr>
+              <tr>
+                <td>  procedure(BCSetPtr), public, deferred ::
+  <strong><a href='../type/blake2core.html#boundprocedure-setbufptr~4'>SetBufPtr</a></strong></td>
+                <td><p><em>SetBufPtr</em> is a binding name of the <em>BCSetPtr</em> deferred procedure. <br>
+ This procedure is NOT intended to be used by a user.</p></td>
+              </tr>
+              <tr>
+                <td>  procedure(BCProcess), public, deferred ::
+  <strong><a href='../type/blake2core.html#boundprocedure-processblock~4'>ProcessBlock</a></strong></td>
+                <td><p><em>ProcessBlock</em> is a binding name of the <em>BCProcess</em> deferred procedure. <br>
+ This procedure is NOT intended to be used by a user.</p></td>
+              </tr>
+              <tr>
+                <td>  procedure(BCEncode), public, deferred ::
+  <strong><a href='../type/blake2core.html#boundprocedure-encodeoutput'>EncodeOutput</a></strong></td>
+                <td><p><em>EncodeOutput</em> is a binding name of the <em>BCEncode</em> deferred procedure. <br>
+ This procedure is NOT intended to be used by a user.</p></td>
+              </tr>
+              <tr>
+                <td>  procedure, public ::
+  <strong><a href='../type/blake2core.html#boundprocedure-insertbytes~2'>InsertBytes</a></strong> => Blake2Core_InsertBytes</td>
+                <td><p>Use the <em>Update</em> method in place of the <em>InsertBytes</em> method to insert input
+ data as an array of bytes (8-bit integers) where the offset (zero-based) into
+ the array and the length of the input in bytes are specified.</p></td>
+              </tr>
+              <tr>
+                <td>  procedure, public ::
+  <strong><a href='../type/blake2core.html#boundprocedure-insertgen~2'>InsertGen</a></strong> => Blake2Core_InsertGen</td>
+                <td><p>Use the <em>Update</em> method in place of the <em>InsertGen</em> method to insert
+ input data in a generic way where the <em>Input</em> argument can be any type and
+ any rank and the <em>InpSize</em> argument specifies the size of input data in bytes.</p></td>
+              </tr>
+              <tr>
+                <td>  procedure, public ::
+  <strong><a href='../type/blake2core.html#boundprocedure-bytedigest~2'>ByteDigest</a></strong> => Blake2Core_ByteDigest</td>
+                <td><p>Use the <em>Digest</em> method in place of the <em>ByteDigest</em> method to finalize the
+ current hash computation and return the hash value as an array of bytes
+ in a newly-allocated array.</p></td>
+              </tr>
+              <tr>
+                <td>  procedure, public ::
+  <strong><a href='../type/blake2core.html#boundprocedure-bytedigest_winput~2'>ByteDigest_wInput</a></strong> => Blake2Core_ByteDigest_wInput</td>
+                <td><p>Use the <em>Digest</em> method in place of the <em>ByteDigest_wInput</em> method to insert final
+ input in a generic way and then finalize the current hash computation and return
+ the hash value as an array of bytes in a newly-allocated array.</p></td>
+              </tr>
+              <tr>
+                <td>  procedure, public ::
+  <strong><a href='../type/blake2core.html#boundprocedure-coreinit'>CoreInit</a></strong> => Blake2Core_Init</td>
+                <td><p><em>CoreInit</em> is a procedure to initialize the Blake2Core's components. <br>
+ This procedure is NOT intended to be used by a user but all initialization procedures
+ implemented by a <em>concrete</em> digest type should call this method.</p></td>
+              </tr>
+              <tr>
+                <td>  procedure, public ::
+  <strong><a href='../type/blake2core.html#boundprocedure-corereset'>CoreReset</a></strong> => Blake2Core_Reset</td>
+                <td><p><em>CoreReset</em> is a procedure to reset components of the digest to their initial values. <br>
+ This procedure is NOT intended to be used by a user but the <em>Reset</em> method implemented
+ by a <em>concrete</em> digest type should call this method.</p></td>
+              </tr>
+              <tr>
+                <td>  procedure, public ::
+  <strong><a href='../type/blake2core.html#boundprocedure-coreclone'>CoreClone</a></strong> => Blake2Core_Clone</td>
+                <td><p><em>CoreClone</em> is a procedure to copy components of the source object to the destination one. <br>
+ This procedure is NOT intended to be used by a user but the <em>GetClone</em> method implemented
+ by a <em>concrete</em> digest type should call this method.</p></td>
+              </tr>
+              <tr>
+                <td>  procedure, public ::
+  <strong><a href='../type/blake2core.html#boundprocedure-getbuflen'>GetBufLen</a></strong> => Blake2Core_BufLen</td>
+                <td><p><em>GetBufLen</em> is a procedure to get the number of bytes of input currently
+ stored in the buffer. <br>
+ This procedure is NOT intended to be used by a user.</p></td>
+              </tr>
+              <tr>
+                <td>  procedure, public ::
+  <strong><a href='../type/blake2core.html#boundprocedure-getkeylen'>GetKeyLen</a></strong> => Blake2Core_KeyLen</td>
+                <td><p><em>GetKeyLen</em> is a procedure to get the length of the specified key. <br>
+ This procedure is NOT intended to be used by a user.</p></td>
+              </tr>
+              <tr>
+                <td>  procedure, public ::
+  <strong><a href='../type/blake2core.html#boundprocedure-getdigestlen~3'>GetDigestLen</a></strong> => Blake2Core_DigestLen</td>
+                <td><p><strong>Type-Bound Function</strong>: GetDigestLen <br>
+ <strong>Purpose</strong>:  To return the hash output length (in bytes). <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    Length = MD%GetDigestLen()</p></td>
+              </tr>
+          </tbody>
+        </table>
+    </div>
+  </div>
+
+        </section>
+        <br>
+
+
+
+
+
+    </div>
+  </div>
+
+      <hr>
+    </div> <!-- /container -->
+    <footer>
+      <div class="container">
+        <div class="row justify-content-between">
+          <div class="col"><p>eXPerimental Fortran Library (XpfLib) Documentation was developed by Niranama<br>&copy; 2024 
+</p>
+          </div>
+          <div class="col">
+            <p class="text-end">
+              Documentation generated by
+              <a href="https://github.com/Fortran-FOSS-Programmers/ford">FORD</a>
+            </p>
+          </div>
+        </div>
+        <br>
+      </div> <!-- /container -->
+    </footer>
+
+    <!-- Bootstrap core JavaScript -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>    
+
+    <!-- MathJax JavaScript
+             ================================================== -->
+             <!-- Placed at the end of the document so the pages load faster -->
+        <script type="text/x-mathjax-config">
+          MathJax.Hub.Config({
+          TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } },
+          jax: ['input/TeX','input/MathML','output/HTML-CSS'],
+          extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']
+          });
+        </script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+          <script src="../tipuesearch/tipuesearch_content.js"></script>
+          <script src="../tipuesearch/tipuesearch_set.js"></script>
+          <script src="../tipuesearch/tipuesearch.js"></script>
+
+  </body>
+</html>

@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta name="description" content="Experimental Fortran Package - Base Modules and Classes">
+    <meta name="author" content="Niranama" >
+    <link rel="icon" href="./favicon.png">
+
+    <title> eXPerimental Fortran Library (XpfLib) Documentation </title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link href="./css/pygments.css" rel="stylesheet">
+    <link href="./css/font-awesome.min.css" rel="stylesheet">
+    <link href="./css/local.css" rel="stylesheet">
+      <link  href="./tipuesearch/tipuesearch.css" rel="stylesheet">
+
+    <script src="https://code.jquery.com/jquery-3.7.0.slim.min.js" integrity="sha256-tG5mcZUtJsZvyKAxYLVXrmjKBVLd6VpVccqz/r4ypFE=" crossorigin="anonymous"></script>
+  </head>
+
+  <body>
+
+    <!-- Fixed navbar -->
+    <div class="container-fluid mb-sm-4 mb-xl-2">
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container">
+          <a class="navbar-brand" href="./index.html">eXPerimental Fortran Library (XpfLib) Documentation </a>
+          <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar"
+                  aria-expanded="false" aria-controls="navbar" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon">
+          </button>
+
+          <div id="navbar" class="navbar-collapse collapse">
+            <ul class="navbar-nav">
+                  <li class="nav-item">
+                    <a class="nav-link" href="./lists/files.html">Source Files</a>
+                  </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="./lists/modules.html">Modules</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="./lists/procedures.html">Procedures</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="./lists/absint.html">Abstract Interfaces</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="./lists/types.html">Derived Types</a>
+                </li>
+            </ul>
+              <div class="d-flex align-items-end flex-grow-1">
+                <form action="./search.html" role="search" class="ms-auto">
+                  <input type="text" class="form-control" aria-label="Search" placeholder="Search" name="q" id="tipue_search_input" autocomplete="off" required>
+                </form>
+              </div>
+          </div><!--/.nav-collapse -->
+        </div>
+      </nav>
+    </div>
+
+    <div class="container">
+      <!-- Main component for a primary marketing message or call to action -->
+      <div class="p-5 mb-4 bg-light border rounded-3" id="jumbotron">
+        <p>Experimental Fortran Package - Base Modules and Classes</p>
+        </p>
+      </div>
+
+      <div class="row" id='text'>
+        <div class=col-md-8>
+          <h1>eXPerimental Fortran Library (XpfLib) Documentation</h1>
+          <h2><em>XpfBase: eXPerimental Fortran Base Package</em></h2>
+<p><strong><em>XpfBase</em></strong> is an experimenal package written in Fortran.   It is a sub-package of the <strong><em>XpfGeneral</em></strong> package (a larger package within the <strong><em>XpfLib</em></strong> library), which contains a large collection of general-purpose modules.  The <em>XpfBase</em> package consists of various basic and utility modules that are commonly used in other sub-packages of the <strong><em>XpfGeneral</em></strong> package. </p>
+<p>The source code of the <em>XpfBase</em> package is organized into 9 subfolders of the <em>XpfBase</em> folder.   A brief overview of the source code in each subfolder is given below.</p>
+<ol>
+<li>
+<p>The <em>Abstract</em> subfolder contains two modules that provide two abstract derived types (ADT) that can be employed as base types for other derived types with object-oriented programming (OOP) implementation.</p>
+</li>
+<li>
+<p>The <em>BinDecConv</em> subfolder contains three modules that provide various binary-to-decimal and decimal-to-binary conversion routines for 32-bit, 64-bit and 128-bit floating point (real) numbers.</p>
+</li>
+<li>
+<p>The <em>Classes</em> subfolder contains several modules that provide useful derived types implemented with object-oriented programming.</p>
+</li>
+<li>
+<p>The <em>Containers</em> subfolder contains two subfolders.   The <em>Intrusive</em> subfolder contains several modules/submodules that provide various <em>intrusive</em>-based container types.  The <em>StackList</em> subfolder contains several modules that provide <em>stack</em> container types for common intrinsic data types.</p>
+</li>
+<li>
+<p>The <em>Core</em> subfolder contains several core modules that are frequently used by other modules.</p>
+</li>
+<li>
+<p>The <em>Int128Bits</em> subfolder contains two modules (and their many submodules) that provide derived types and their related routines for 128-bit signed and unsigned integers.</p>
+</li>
+<li>
+<p>The <em>MemPool</em> subfolder contains several core modules for memory handling/management.</p>
+</li>
+<li>
+<p>The <em>PolyForm</em> subfolder contains two basic modules for dealing with unlimited polymorphic entities.</p>
+</li>
+<li>
+<p>The <em>Util</em> subfolder contains a number of modules that provide auxiliary functionalities for other modules. </p>
+</li>
+</ol>
+<h2>Dependencies</h2>
+<p>By default, the <em>XpfBase</em> pacakge is configured to be dependent on the <em>Xpf3rdPT</em> package, which contains a collections of third-party libraries.  However, the <em>XpfBase</em> pacakge can be configured to be an independent package by commenting out macro definitions that define the uses of the third-party libraries.  In particular, the modules that may or may not be dependent on third-party libraries are described below.</p>
+<ul>
+<li>
+<p>The <em>MBase_CppStdUtil</em> module <strong>totally</strong> depends on the <a href="https://github.com/swig-fortran/flibcpp"><em>FLibCpp</em></a> library, which provides Fortran bindings to the C++ Standard Library.  By commenting out the macro definition specified at the beginning of the file, the entire module will not be compiled, and it, thus, will not be available.</p>
+</li>
+<li>
+<p>The <em>MBase_LegacyUtil</em> module <strong>partially</strong> depends on the <a href="https://dl.acm.org/doi/10.1145/1486525.1486531"><em>DispModule</em></a> library, which provides pretty printing functionalies. By commenting out the macro definition specified at the beginning of the file, some routines depending on the library will not be available.</p>
+</li>
+<li>
+<p>The <em>MBase_MiscUtil</em> module <strong>partially</strong> depends on the <a href="https://dmsmith.lmu.build/"><em>FMLib</em></a> and <a href="https://www.davidhbailey.com/dhbsoftware/"><em>MPFun</em></a> libraries, which provide a variety of multi-precision computations. By commenting out the macro definition specified at the beginning of the file, some routines depending on these libraries will not be available.</p>
+</li>
+</ul>
+<h2>Documentation</h2>
+<p>The <a href="https://github.com/Fortran-FOSS-Programmers/ford">FORD</a> program can be used to automatically generate the documentation of the <em>XpfBase</em> package via <code>ford XpfBaseDoc.md</code>.</p>
+        </div>
+          <div class="col-md-4">
+	        <div class="card card-body bg-light">
+              <h2 class="card-title">Developer Info</h2>
+              <h4 class="card-text">Niranama</h4>
+              <p class="card-text"></p>
+            </div>
+          </div>
+      </div>
+        <div class="row">
+          <hr>
+          <div class="col-xs-6 col-sm-3">
+            <div>
+              <h3>Source Files</h3>
+              <ul><li><a href='./sourcefile/mbase_anyrankntype.f90.html'>MBase_AnyRankNType.f90</a></li><li><a href='./sourcefile/mbase_bindec128.f90.html'>MBase_BinDec128.f90</a></li><li><a href='./sourcefile/mbase_bindec32.f90.html'>MBase_BinDec32.f90</a></li><li><a href='./sourcefile/mbase_bindec64.f90.html'>MBase_BinDec64.f90</a></li><li><a href='./sourcefile/mbase_byteutil.f90.html'>MBase_ByteUtil.f90</a></li><li><a href='./sourcefile/mbase_charutil.f90.html'>MBase_CharUtil.f90</a></li><li><a href='./sourcefile/mbase_common.f90.html'>MBase_Common.f90</a></li><li><a href='./sourcefile/mbase_cppstdutil.f90.html'>MBase_CppStdUtil.f90</a></li><li><a href='./sourcefile/mbase_errhandlers.f90.html'>MBase_ErrHandlers.f90</a></li><li><a href='./sourcefile/mbase_floatutil.f90.html'>MBase_FloatUtil.f90</a></li><li><a href='./sourcefile/mbase_iohandlers.f90.html'>MBase_IOHandlers.f90</a></li><li><a href='./sourcefile/mbase_kinds.f90.html'>MBase_Kinds.f90</a></li><li><a href='./sourcefile/mbase_largetables.f90.html'>MBase_LargeTables.f90</a></li><li><a href='./sourcefile/mbase_legacyutil.f90.html'>MBase_LegacyUtil.f90</a></li><li><a href='./sourcefile/mbase_mathutil.f90.html'>MBase_MathUtil.f90</a></li><li><a href='./sourcefile/mbase_memhandlers.f90.html'>MBase_MemHandlers.f90</a></li><li><a href='./sourcefile/mbase_miscutil.f90.html'>MBase_MiscUtil.f90</a></li><li><a href='./sourcefile/mbase_polyfloatnum.f90.html'>MBase_PolyFloatNum.f90</a></li><li><a href='./sourcefile/mbase_readutil.f90.html'>MBase_ReadUtil.f90</a></li><li><a href='./sourcefile/mbase_simplehash32.f90.html'>MBase_SimpleHash32.f90</a></li><li><a href='./sourcefile/mbase_simplehash64.f90.html'>MBase_SimpleHash64.f90</a></li><li><a href='./sourcefile/mbase_sint128.f90.html'>MBase_SInt128.f90</a></li><li><a href='./sourcefile/mbase_sintutil.f90.html'>MBase_SIntUtil.f90</a></li><li><a href='./sourcefile/mbase_systemutil.f90.html'>MBase_SystemUtil.f90</a></li><li><a href='./sourcefile/mbase_uint128.f90.html'>MBase_UInt128.f90</a></li><li><a href='./sourcefile/mbase_uintutil.f90.html'>MBase_UIntUtil.f90</a></li><li><a href='./sourcefile/mbase_writeutil.f90.html'>MBase_WriteUtil.f90</a></li><li><a href='./sourcefile/mclass_basenodepool.f90.html'>MClass_BaseNodePool.f90</a></li><li><a href='./sourcefile/mclass_bytebuffer.f90.html'>MClass_ByteBuffer.f90</a></li><li><a href='./sourcefile/mclass_charbuffer.f90.html'>MClass_CharBuffer.f90</a></li><li><a href='./sourcefile/mclass_comparable.f90.html'>MClass_Comparable.f90</a></li><li><a href='./sourcefile/mclass_compnodepool.f90.html'>MClass_CompNodePool.f90</a></li><li><a href='./sourcefile/mclass_errordata.f90.html'>MClass_ErrorData.f90</a></li><li><a href='./sourcefile/mclass_errorinfo.f90.html'>MClass_ErrorInfo.f90</a></li><li><a href='./sourcefile/mclass_freeblocklist.f90.html'>MClass_FreeBlockList.f90</a></li><li><a href='./sourcefile/mclass_gendata.f90.html'>MClass_GenData.f90</a></li><li><a href='./sourcefile/mclass_intrusivebstrees.f90.html'>MClass_IntrusiveBSTrees.f90</a></li><li><a href='./sourcefile/mclass_intrusivehashlist.f90.html'>MClass_IntrusiveHashList.f90</a></li><li><a href='./sourcefile/mclass_intrusivehashtree.f90.html'>MClass_IntrusiveHashTree.f90</a></li><li><a href='./sourcefile/mclass_intrusivelinkedlists.f90.html'>MClass_IntrusiveLinkedLists.f90</a></li></ul>
+            </div>
+            <div>
+              <ul>
+                <li><a href="./lists/files.html"><em>All source files&hellip;</em></a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-xs-6 col-sm-3">
+            <div>
+              <h3>Modules</h3>
+              <ul><li><a href='./module/mbase_anyrankntype.html'>MBase_AnyRankNType</a></li><li><a href='./module/mbase_bindec128.html'>MBase_BinDec128</a></li><li><a href='./module/mbase_bindec32.html'>MBase_BinDec32</a></li><li><a href='./module/mbase_bindec64.html'>MBase_BinDec64</a></li><li><a href='./module/mbase_byteutil.html'>MBase_ByteUtil</a></li><li><a href='./module/mbase_charutil.html'>MBase_CharUtil</a></li><li><a href='./module/mbase_common.html'>MBase_Common</a></li><li><a href='./module/mbase_cppstdutil.html'>MBase_CppStdUtil</a></li><li><a href='./module/mbase_errhandlers.html'>MBase_ErrHandlers</a></li><li><a href='./module/mbase_floatutil.html'>MBase_FloatUtil</a></li><li><a href='./module/mbase_iohandlers.html'>MBase_IOHandlers</a></li><li><a href='./module/mbase_kinds.html'>MBase_Kinds</a></li><li><a href='./module/mbase_largetables.html'>MBase_LargeTables</a></li><li><a href='./module/mbase_legacyutil.html'>MBase_LegacyUtil</a></li><li><a href='./module/mbase_mathutil.html'>MBase_MathUtil</a></li><li><a href='./module/mbase_memhandlers.html'>MBase_MemHandlers</a></li><li><a href='./module/mbase_miscutil.html'>MBase_MiscUtil</a></li><li><a href='./module/mbase_polyfloatnum.html'>MBase_PolyFloatNum</a></li><li><a href='./module/mbase_readutil.html'>MBase_ReadUtil</a></li><li><a href='./module/mbase_simplehash32.html'>MBase_SimpleHash32</a></li><li><a href='./module/mbase_simplehash64.html'>MBase_SimpleHash64</a></li><li><a href='./module/mbase_sint128.html'>MBase_SInt128</a></li><li><a href='./module/mbase_sintutil.html'>MBase_SIntUtil</a></li><li><a href='./module/mbase_systemutil.html'>MBase_SystemUtil</a></li><li><a href='./module/mbase_uint128.html'>MBase_UInt128</a></li><li><a href='./module/mbase_uintutil.html'>MBase_UIntUtil</a></li><li><a href='./module/mbase_writeutil.html'>MBase_WriteUtil</a></li><li><a href='./module/mclass_basenodepool.html'>MClass_BaseNodePool</a></li><li><a href='./module/mclass_bytebuffer.html'>MClass_ByteBuffer</a></li><li><a href='./module/mclass_charbuffer.html'>MClass_CharBuffer</a></li><li><a href='./module/mclass_comparable.html'>MClass_Comparable</a></li><li><a href='./module/mclass_compnodepool.html'>MClass_CompNodePool</a></li><li><a href='./module/mclass_errordata.html'>MClass_ErrorData</a></li><li><a href='./module/mclass_errorinfo.html'>MClass_ErrorInfo</a></li><li><a href='./module/mclass_freeblocklist.html'>MClass_FreeBlockList</a></li><li><a href='./module/mclass_gendata.html'>MClass_GenData</a></li><li><a href='./module/mclass_intrusivebstrees.html'>MClass_IntrusiveBSTrees</a></li><li><a href='./module/mclass_intrusivehashlist.html'>MClass_IntrusiveHashList</a></li><li><a href='./module/mclass_intrusivehashtree.html'>MClass_IntrusiveHashTree</a></li><li><a href='./module/mclass_intrusivelinkedlists.html'>MClass_IntrusiveLinkedLists</a></li></ul>
+            </div>
+            <div>
+              <ul>
+                <li><a href="./lists/modules.html"><em>All modules&hellip;</em></a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-xs-6 col-sm-3">
+            <div>
+              <h3>Procedures</h3>
+              <ul><li><a href='./proc/abortprogram.html'>AbortProgram</a></li><li><a href='./interface/abs.html'>ABS</a></li><li><a href='./interface/add.html'>Add</a></li><li><a href='./interface/add~2.html'>Add</a></li><li><a href='./proc/addu64.html'>AddU64</a></li><li><a href='./interface/addxp.html'>AddXp</a></li><li><a href='./proc/anytype_2_bytearray.html'>AnyType_2_ByteArray</a></li><li><a href='./proc/anytype_2_bytearrptr.html'>AnyType_2_ByteArrPtr</a></li><li><a href='./proc/anytype_copydata.html'>AnyType_CopyData</a></li><li><a href='./proc/anytype_getbytesize.html'>AnyType_GetByteSize</a></li><li><a href='./proc/anytype_swapdata.html'>AnyType_SwapData</a></li><li><a href='./interface/assignment(=).html'>ASSIGNMENT(=)</a></li><li><a href='./interface/assignment(=)~2.html'>ASSIGNMENT(=)</a></li><li><a href='./interface/assignment(=)~3.html'>ASSIGNMENT(=)</a></li><li><a href='./proc/bin2dec_dragonbox128.html'>Bin2Dec_DragonBox128</a></li><li><a href='./proc/bin2dec_dragonbox32.html'>Bin2Dec_DragonBox32</a></li><li><a href='./proc/bin2dec_dragonbox64.html'>Bin2Dec_DragonBox64</a></li><li><a href='./proc/bin2dec_ryu128.html'>Bin2Dec_Ryu128</a></li><li><a href='./proc/bin2dec_ryu32.html'>Bin2Dec_Ryu32</a></li><li><a href='./proc/bin2dec_ryu64.html'>Bin2Dec_Ryu64</a></li><li><a href='./proc/bin2dec_schubfach128.html'>Bin2Dec_Schubfach128</a></li><li><a href='./proc/bin2dec_schubfach32.html'>Bin2Dec_Schubfach32</a></li><li><a href='./proc/bin2dec_schubfach64.html'>Bin2Dec_Schubfach64</a></li><li><a href='./interface/btest.html'>BTEST</a></li><li><a href='./interface/btest~2.html'>BTEST</a></li><li><a href='./proc/bytearray_2_anytype.html'>ByteArray_2_AnyType</a></li><li><a href='./proc/closeerrorfile.html'>CloseErrorFile</a></li><li><a href='./interface/closefile.html'>CloseFile</a></li><li><a href='./proc/closemiscopenfiles.html'>CloseMiscOpenFiles</a></li><li><a href='./proc/closeopenfiles.html'>CloseOpenFiles</a></li><li><a href='./interface/compare.html'>Compare</a></li><li><a href='./interface/compare~2.html'>Compare</a></li><li><a href='./interface/compareunsigned.html'>CompareUnsigned</a></li><li><a href='./interface/compareunsigned~2.html'>CompareUnsigned</a></li><li><a href='./proc/converttouppercase.html'>ConvertToUpperCase</a></li><li><a href='./proc/countsqfrm_lines.html'>CountSqfrm_Lines</a></li><li><a href='./interface/cstd_argsort.html'>CStd_ArgSort</a></li><li><a href='./interface/cstd_binarysearch.html'>CStd_BinarySearch</a></li><li><a href='./interface/cstd_issorted.html'>CStd_IsSorted</a></li><li><a href='./interface/cstd_shuffle.html'>CStd_Shuffle</a></li></ul>
+            </div>
+            <div>
+              <ul>
+                <li><a href="./lists/procedures.html"><em>All procedures&hellip;</em></a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-xs-6 col-sm-3">
+            <div>
+              <h3>Derived Types</h3>
+              <ul><li><a href='./type/basenode.html'>BaseNode</a></li><li><a href='./type/basenodepool.html'>BaseNodePool</a></li><li><a href='./type/binrep128.html'>BinRep128</a></li><li><a href='./type/binrep32.html'>BinRep32</a></li><li><a href='./type/binrep64.html'>BinRep64</a></li><li><a href='./type/bstnode.html'>BSTNode</a></li><li><a href='./type/bytebuffer.html'>ByteBuffer</a></li><li><a href='./type/charbuffer.html'>CharBuffer</a></li><li><a href='./type/comparable.html'>Comparable</a></li><li><a href='./type/compnode.html'>CompNode</a></li><li><a href='./type/compnodepool.html'>CompNodePool</a></li><li><a href='./type/container.html'>Container</a></li><li><a href='./type/doublylinkednode.html'>DoublyLinkedNode</a></li><li><a href='./type/equation.html'>Equation</a></li><li><a href='./type/errordata.html'>ErrorData</a></li><li><a href='./type/errorinfo.html'>ErrorInfo</a></li><li><a href='./type/freeblocklist.html'>FreeBlockList</a></li><li><a href='./type/freeblocknode.html'>FreeBlockNode</a></li><li><a href='./type/gendata.html'>GenData</a></li><li><a href='./type/hashlistnode.html'>HashListNode</a></li><li><a href='./type/hashtreenode.html'>HashTreeNode</a></li><li><a href='./type/intrusiveavltree.html'>IntrusiveAVLTree</a></li><li><a href='./type/intrusivehashlist.html'>IntrusiveHashList</a></li><li><a href='./type/intrusivehashtree.html'>IntrusiveHashTree</a></li><li><a href='./type/intrusivelinearlist.html'>IntrusiveLinearList</a></li><li><a href='./type/intrusiverbtree.html'>IntrusiveRBTree</a></li><li><a href='./type/intrusiveringlist.html'>IntrusiveRingList</a></li><li><a href='./type/keyordered.html'>KeyOrdered</a></li><li><a href='./type/keyunordered.html'>KeyUnordered</a></li><li><a href='./type/mathexpparser.html'>MathExpParser</a></li><li><a href='./type/memhandle.html'>MemHandle</a></li><li><a href='./type/memorypool.html'>MemoryPool</a></li><li><a href='./type/object.html'>Object</a></li><li><a href='./type/progressbar.html'>ProgressBar</a></li><li><a href='./type/ptrhandle.html'>PtrHandle</a></li><li><a href='./type/safeptralloc.html'>SafePtrAlloc</a></li><li><a href='./type/savevar.html'>SaveVar</a></li><li><a href='./type/sharepar.html'>SharePar</a></li><li><a href='./type/sint128.html'>SInt128</a></li><li><a href='./type/stackchar.html'>StackChar</a></li></ul>
+            </div>
+            <div>
+              <ul>
+                <li><a href="./lists/types.html"><em>All derived types&hellip;</em></a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      <hr>
+    </div> <!-- /container -->
+    <footer>
+      <div class="container">
+        <div class="row justify-content-between">
+          <div class="col"><p>eXPerimental Fortran Library (XpfLib) Documentation was developed by Niranama<br>&copy; 2024 
+</p>
+          </div>
+          <div class="col">
+            <p class="text-end">
+              Documentation generated by
+              <a href="https://github.com/Fortran-FOSS-Programmers/ford">FORD</a>
+            </p>
+          </div>
+        </div>
+        <br>
+      </div> <!-- /container -->
+    </footer>
+
+    <!-- Bootstrap core JavaScript -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>    
+
+    <!-- MathJax JavaScript
+             ================================================== -->
+             <!-- Placed at the end of the document so the pages load faster -->
+        <script type="text/x-mathjax-config">
+          MathJax.Hub.Config({
+          TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } },
+          jax: ['input/TeX','input/MathML','output/HTML-CSS'],
+          extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']
+          });
+        </script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+          <script src="./tipuesearch/tipuesearch_content.js"></script>
+          <script src="./tipuesearch/tipuesearch_set.js"></script>
+          <script src="./tipuesearch/tipuesearch.js"></script>
+
+  </body>
+</html>

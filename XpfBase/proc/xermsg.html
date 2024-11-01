@@ -1,0 +1,592 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta name="description" content="Experimental Fortran Package - Base Modules and Classes">
+    <meta name="author" content="Niranama" >
+    <link rel="icon" href="../favicon.png">
+
+    <title>XERMSG &ndash; eXPerimental Fortran Library (XpfLib) Documentation</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link href="../css/pygments.css" rel="stylesheet">
+    <link href="../css/font-awesome.min.css" rel="stylesheet">
+    <link href="../css/local.css" rel="stylesheet">
+      <link  href="../tipuesearch/tipuesearch.css" rel="stylesheet">
+
+    <script src="https://code.jquery.com/jquery-3.7.0.slim.min.js" integrity="sha256-tG5mcZUtJsZvyKAxYLVXrmjKBVLd6VpVccqz/r4ypFE=" crossorigin="anonymous"></script>
+  </head>
+
+  <body>
+
+    <!-- Fixed navbar -->
+    <div class="container-fluid mb-sm-4 mb-xl-2">
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container">
+          <a class="navbar-brand" href="../index.html">eXPerimental Fortran Library (XpfLib) Documentation </a>
+          <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar"
+                  aria-expanded="false" aria-controls="navbar" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon">
+          </button>
+
+          <div id="navbar" class="navbar-collapse collapse">
+            <ul class="navbar-nav">
+                  <li class="nav-item">
+                    <a class="nav-link" href="../lists/files.html">Source Files</a>
+                  </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../lists/modules.html">Modules</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../lists/procedures.html">Procedures</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../lists/absint.html">Abstract Interfaces</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../lists/types.html">Derived Types</a>
+                </li>
+            </ul>
+              <div class="d-flex align-items-end flex-grow-1">
+                <form action="../search.html" role="search" class="ms-auto">
+                  <input type="text" class="form-control" aria-label="Search" placeholder="Search" name="q" id="tipue_search_input" autocomplete="off" required>
+                </form>
+              </div>
+          </div><!--/.nav-collapse -->
+        </div>
+      </nav>
+    </div>
+
+    <div class="container">
+  <div class="row">
+    <h1>XERMSG
+      <small>Subroutine</small>
+      
+    </h1>
+      <div class="container p-2 mb-4 bg-light border rounded-3">
+    <div class="row align-items-center justify-content-between" id="info-bar">
+      <div class="col">
+        <ul class="list-inline" style="margin-bottom:0px;display:inline">
+
+            <li class="list-inline-item" id="statements"><i class="fa fa-list-ol"></i>
+              <a data-bs-toggle="tooltip"
+                 data-bs-placement="bottom" data-html="true"
+                 title=" 0.4% of total for procedures.">54 statements</a>
+            </li>
+
+            <li class="list-inline-item" id="source-file">
+              <i class="fa fa-code"></i>
+              <a href="../src/MBase_LegacyUtil.f90"> Source File</a>
+            </li>
+        </ul>
+      </div>
+      <div class="col">
+        <nav aria-label="breadcrumb">
+          <ol class="breadcrumb justify-content-end mb-0">
+                <li class="breadcrumb-item"><a href='../sourcefile/mbase_legacyutil.f90.html'>MBase_LegacyUtil.f90</a></li>
+                <li class="breadcrumb-item"><a href='../module/mbase_legacyutil.html'>MBase_LegacyUtil</a></li>
+            <li class="breadcrumb-item active" aria-current="page">XERMSG</li>
+          </ol>
+        </nav>
+      </div>
+    </div>
+  </div>
+  <script>
+    $(function () {
+    $('[data-bs-toggle="tooltip"]').tooltip()
+    })
+  </script>
+
+  </div>
+  
+  <div class="row">
+    <div class="col-md-3 hidden-xs hidden-sm visible-md visible-lg">
+      <div id="sidebar">
+      <h3>Contents</h3>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+    <div class="card card-primary">
+      <div class="card-header text-left"><h3 class="card-title">Source Code</h3></div>
+      <div class="list-group">
+        <a class="list-group-item" href="../proc/xermsg.html#src">XERMSG</a>
+      </div>
+    </div>
+
+
+  </div>
+
+    </div>
+    
+    <div class="col-md-9" id='text'>
+    <h2>public  subroutine XERMSG(LIBRAR, SUBROU, MESSG, NERR, LEVEL)  
+</h2>
+    
+
+    <p>To process and display error information.</p>
+<p>XERMSG processes XERROR messages.</p>
+
+
+    <h3>Arguments</h3>
+        <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-librar"></span>
+              character(kind=kChar, len=*),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>LIBRAR</strong></td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-subrou"></span>
+              character(kind=kChar, len=*),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>SUBROU</strong></td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-messg"></span>
+              character(kind=kChar, len=*),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>MESSG</strong></td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-nerr~2"></span>
+              integer(kind=kInt32),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>NERR</strong></td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-level~2"></span>
+              integer(kind=kInt32),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>LEVEL</strong></td>
+            <td>
+                
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+    <br>
+
+
+    
+    
+
+    
+    
+
+
+
+    
+    <section>
+    <h2><span class="anchor" id="src"></span>Source Code</h2>
+    <div class="hl codehilite"><pre><span></span><span class="k">SUBROUTINE </span><span class="n">XERMSG</span><span class="p">(</span><span class="n">LIBRAR</span><span class="p">,</span><span class="w"> </span><span class="n">SUBROU</span><span class="p">,</span><span class="w"> </span><span class="n">MESSG</span><span class="p">,</span><span class="w"> </span><span class="n">NERR</span><span class="p">,</span><span class="w"> </span><span class="n">LEVEL</span><span class="p">)</span>
+
+<span class="c">!** PURPOSE OF THIS SUBROUTINE:</span>
+<span class="w">    </span><span class="c">!^ To process and display error information.</span>
+
+<span class="c">!** LEGACY DESCRIPTION:</span>
+<span class="w">    </span><span class="c">!! XERMSG processes XERROR messages.</span>
+<span class="w">    </span><span class="c">!</span>
+<span class="w">    </span><span class="c">!***LIBRARY SLATEC (XERROR)</span>
+<span class="w">    </span><span class="c">!***CATEGORY R3C</span>
+<span class="w">    </span><span class="c">!***TYPE ALL (XERMSG-A)</span>
+<span class="w">    </span><span class="c">!***KEYWORDS ERROR MESSAGE, XERROR</span>
+<span class="w">    </span><span class="c">!***AUTHOR Fong, Kirby, (NMFECC at LLNL)</span>
+<span class="w">    </span><span class="c">!***DESCRIPTION</span>
+<span class="w">    </span><span class="c">!</span>
+<span class="w">    </span><span class="c">! XERMSG processes a diagnostic message in a manner determined by the</span>
+<span class="w">    </span><span class="c">! value of LEVEL and the current value of the library error control</span>
+<span class="w">    </span><span class="c">! flag, KONTRL. See subroutine XSETF for details.</span>
+<span class="w">    </span><span class="c">!</span>
+<span class="w">    </span><span class="c">! LIBRAR A character constant (or character variable) with the name</span>
+<span class="w">    </span><span class="c">! of the library. This will be &#39;SLATEC&#39; for the SLATEC</span>
+<span class="w">    </span><span class="c">! Common Math Library. The error handling package is</span>
+<span class="w">    </span><span class="c">! general enough to be used by many libraries</span>
+<span class="w">    </span><span class="c">! simultaneously, so it is desirable for the routine that</span>
+<span class="w">    </span><span class="c">! detects and reports an error to identify the library name</span>
+<span class="w">    </span><span class="c">! as well as the routine name.</span>
+<span class="w">    </span><span class="c">!</span>
+<span class="w">    </span><span class="c">! SUBROU A character constant (or character variable) with the name</span>
+<span class="w">    </span><span class="c">! of the routine that detected the error. Usually it is the</span>
+<span class="w">    </span><span class="c">! name of the routine that is calling XERMSG. There are</span>
+<span class="w">    </span><span class="c">! some instances where a user callable library routine calls</span>
+<span class="w">    </span><span class="c">! lower level subsidiary routines where the error is</span>
+<span class="w">    </span><span class="c">! detected. In such cases it may be more informative to</span>
+<span class="w">    </span><span class="c">! supply the name of the routine the user called rather than</span>
+<span class="w">    </span><span class="c">! the name of the subsidiary routine that detected the</span>
+<span class="w">    </span><span class="c">! error.</span>
+<span class="w">    </span><span class="c">!</span>
+<span class="w">    </span><span class="c">! MESSG A character constant (or character variable) with the text</span>
+<span class="w">    </span><span class="c">! of the error or warning message. In the example below,</span>
+<span class="w">    </span><span class="c">! the message is a character constant that contains a</span>
+<span class="w">    </span><span class="c">! generic message.</span>
+<span class="w">    </span><span class="c">!</span>
+<span class="w">    </span><span class="c">! call XERMSG (&#39;SLATEC&#39;, &#39;MMPY&#39;,</span>
+<span class="w">    </span><span class="c">! *&#39;THE ORDER OF THE MATRIX EXCEEDS THE ROW DIMENSION&#39;,</span>
+<span class="w">    </span><span class="c">! *3, 1)</span>
+<span class="w">    </span><span class="c">!</span>
+<span class="w">    </span><span class="c">! It is possible (and is sometimes desirable) to generate a</span>
+<span class="w">    </span><span class="c">! specific message--e.g., one that contains actual numeric</span>
+<span class="w">    </span><span class="c">! values. Specific numeric values can be converted into</span>
+<span class="w">    </span><span class="c">! character strings using formatted WRITE statements into</span>
+<span class="w">    </span><span class="c">! character variables. This is called standard Fortran</span>
+<span class="w">    </span><span class="c">! internal file I/O and is exemplified in the first three</span>
+<span class="w">    </span><span class="c">! lines of the following example. You can also catenate</span>
+<span class="w">    </span><span class="c">! substrings of characters to construct the error message.</span>
+<span class="w">    </span><span class="c">! Here is an example showing the use of both writing to</span>
+<span class="w">    </span><span class="c">! an internal file and catenating character strings.</span>
+<span class="w">    </span><span class="c">!</span>
+<span class="w">    </span><span class="c">! CHARACTER*5 CHARN, CHARL</span>
+<span class="w">    </span><span class="c">! WRITE (CHARN,10) N</span>
+<span class="w">    </span><span class="c">! WRITE (CHARL,10) LDA</span>
+<span class="w">    </span><span class="c">! 10 FORMAT(I5)</span>
+<span class="w">    </span><span class="c">! call XERMSG (&#39;SLATEC&#39;, &#39;MMPY&#39;, &#39;THE ORDER&#39;//CHARN//</span>
+<span class="w">    </span><span class="c">! * &#39; OF THE MATRIX EXCEEDS ITS ROW DIMENSION OF&#39;//</span>
+<span class="w">    </span><span class="c">! * CHARL, 3, 1)</span>
+<span class="w">    </span><span class="c">!</span>
+<span class="w">    </span><span class="c">! There are two subtleties worth mentioning. One is that</span>
+<span class="w">    </span><span class="c">! the // for character catenation is used to construct the</span>
+<span class="w">    </span><span class="c">! error message so that no single character constant is</span>
+<span class="w">    </span><span class="c">! continued to the next line. This avoids confusion as to</span>
+<span class="w">    </span><span class="c">! whether there are trailing blanks at the end of the line.</span>
+<span class="w">    </span><span class="c">! The second is that by catenating the parts of the message</span>
+<span class="w">    </span><span class="c">! as an actual argument rather than encoding the entire</span>
+<span class="w">    </span><span class="c">! message into one large character variable, we avoid</span>
+<span class="w">    </span><span class="c">! having to know how long the message will be in order to</span>
+<span class="w">    </span><span class="c">! declare an adequate length for that large character</span>
+<span class="w">    </span><span class="c">! variable. XERMSG calls XERPRN to print the message using</span>
+<span class="w">    </span><span class="c">! multiple lines if necessary. If the message is very long,</span>
+<span class="w">    </span><span class="c">! XERPRN will break it into pieces of 72 characters (as</span>
+<span class="w">    </span><span class="c">! requested by XERMSG) for printing on multiple lines.</span>
+<span class="w">    </span><span class="c">! Also, XERMSG asks XERPRN to prefix each line with &#39; * &#39;</span>
+<span class="w">    </span><span class="c">! so that the total line length could be 76 characters.</span>
+<span class="w">    </span><span class="c">! Note also that XERPRN scans the error message backwards</span>
+<span class="w">    </span><span class="c">! to ignore trailing blanks. Another feature is that</span>
+<span class="w">    </span><span class="c">! the substring &#39;$$&#39; is treated as a new line sentinel</span>
+<span class="w">    </span><span class="c">! by XERPRN. If you want to construct a multiline</span>
+<span class="w">    </span><span class="c">! message without having to count out multiples of 72</span>
+<span class="w">    </span><span class="c">! characters, just use &#39;$$&#39; as a separator. &#39;$$&#39;</span>
+<span class="w">    </span><span class="c">! obviously must occur within 72 characters of the</span>
+<span class="w">    </span><span class="c">! start of each line to have its intended effect since</span>
+<span class="w">    </span><span class="c">! XERPRN is asked to wrap around at 72 characters in</span>
+<span class="w">    </span><span class="c">! addition to looking for &#39;$$&#39;.</span>
+<span class="w">    </span><span class="c">!</span>
+<span class="w">    </span><span class="c">! NERR An integer value that is chosen by the library routine&#39;s</span>
+<span class="w">    </span><span class="c">! author. It must be in the range -99 to 999 (three</span>
+<span class="w">    </span><span class="c">! printable digits). Each distinct error should have its</span>
+<span class="w">    </span><span class="c">! own error number. These error numbers should be described</span>
+<span class="w">    </span><span class="c">! in the machine readable documentation for the routine.</span>
+<span class="w">    </span><span class="c">! The error numbers need be unique only within each routine,</span>
+<span class="w">    </span><span class="c">! so it is reasonable for each routine to start enumerating</span>
+<span class="w">    </span><span class="c">! errors from 1 and proceeding to the next integer.</span>
+<span class="w">    </span><span class="c">!</span>
+<span class="w">    </span><span class="c">! LEVEL An integer value in the range 0 to 2 that indicates the</span>
+<span class="w">    </span><span class="c">! level (severity) of the error. Their meanings are</span>
+<span class="w">    </span><span class="c">!</span>
+<span class="w">    </span><span class="c">! -1 A warning message. This is used if it is not clear</span>
+<span class="w">    </span><span class="c">! that there really is an error, but the user&#39;s attention</span>
+<span class="w">    </span><span class="c">! may be needed. An attempt is made to only print this</span>
+<span class="w">    </span><span class="c">! message once.</span>
+<span class="w">    </span><span class="c">!</span>
+<span class="w">    </span><span class="c">! 0 A warning message. This is used if it is not clear</span>
+<span class="w">    </span><span class="c">! that there really is an error, but the user&#39;s attention</span>
+<span class="w">    </span><span class="c">! may be needed.</span>
+<span class="w">    </span><span class="c">!</span>
+<span class="w">    </span><span class="c">! 1 A recoverable error. This is used even if the error is</span>
+<span class="w">    </span><span class="c">! so serious that the routine cannot return any useful</span>
+<span class="w">    </span><span class="c">! answer. If the user has told the error package to</span>
+<span class="w">    </span><span class="c">! return after recoverable errors, then XERMSG will</span>
+<span class="w">    </span><span class="c">! return to the Library routine which can then return to</span>
+<span class="w">    </span><span class="c">! the user&#39;s routine. The user may also permit the error</span>
+<span class="w">    </span><span class="c">! package to terminate the program upon encountering a</span>
+<span class="w">    </span><span class="c">! recoverable error.</span>
+<span class="w">    </span><span class="c">!</span>
+<span class="w">    </span><span class="c">! 2 A fatal error. XERMSG will not return to its caller</span>
+<span class="w">    </span><span class="c">! after it receives a fatal error. This level should</span>
+<span class="w">    </span><span class="c">! hardly ever be used; it is much better to allow the</span>
+<span class="w">    </span><span class="c">! user a chance to recover. An example of one of the few</span>
+<span class="w">    </span><span class="c">! cases in which it is permissible to declare a level 2</span>
+<span class="w">    </span><span class="c">! error is a reverse communication Library routine that</span>
+<span class="w">    </span><span class="c">! is likely to be called repeatedly until it integrates</span>
+<span class="w">    </span><span class="c">! across some interval. If there is a serious error in</span>
+<span class="w">    </span><span class="c">! the input such that another step cannot be taken and</span>
+<span class="w">    </span><span class="c">! the Library routine is called again without the input</span>
+<span class="w">    </span><span class="c">! error having been corrected by the caller, the Library</span>
+<span class="w">    </span><span class="c">! routine will probably be called forever with improper</span>
+<span class="w">    </span><span class="c">! input. In this case, it is reasonable to declare the</span>
+<span class="w">    </span><span class="c">! error to be fatal.</span>
+<span class="w">    </span><span class="c">!</span>
+<span class="w">    </span><span class="c">! Each of the arguments to XERMSG is input; none will be modified by</span>
+<span class="w">    </span><span class="c">! XERMSG. A routine may make multiple calls to XERMSG with warning</span>
+<span class="w">    </span><span class="c">! level messages; however, after a call to XERMSG with a recoverable</span>
+<span class="w">    </span><span class="c">! error, the routine should return to the user. Do not try to call</span>
+<span class="w">    </span><span class="c">! XERMSG with a second recoverable error after the first recoverable</span>
+<span class="w">    </span><span class="c">! error because the error package saves the error number. The user</span>
+<span class="w">    </span><span class="c">! can retrieve this error number by calling another entry point in</span>
+<span class="w">    </span><span class="c">! the error handling package and then clear the error number when</span>
+<span class="w">    </span><span class="c">! recovering from the error. Calling XERMSG in succession causes the</span>
+<span class="w">    </span><span class="c">! old error number to be overwritten by the latest error number.</span>
+<span class="w">    </span><span class="c">! This is considered harmless for error numbers associated with</span>
+<span class="w">    </span><span class="c">! warning messages but must not be done for error numbers of serious</span>
+<span class="w">    </span><span class="c">! errors. After a call to XERMSG with a recoverable error, the user</span>
+<span class="w">    </span><span class="c">! must be given a chance to call NUMXER or XERCLR to retrieve or</span>
+<span class="w">    </span><span class="c">! clear the error number.</span>
+<span class="w">    </span><span class="c">!***REFERENCES R. E. Jones and D. K. Kahaner, XERROR, the SLATEC</span>
+<span class="w">    </span><span class="c">! Error-handling Package, SAND82-0800, Sandia</span>
+<span class="w">    </span><span class="c">! Laboratories, 1982.</span>
+<span class="w">    </span><span class="c">!***ROUTINES CALLED FDUMP, J4SAVE, XERCNT, XERHLT, XERPRN, XERSVE</span>
+<span class="w">    </span><span class="c">!***REVISION HISTORY (YYMMDD)</span>
+<span class="w">    </span><span class="c">! 880101 DATE WRITTEN</span>
+<span class="w">    </span><span class="c">! 880621 REVISED AS DIRECTED AT SLATEC CML MEETING OF FEBRUARY 1988.</span>
+<span class="w">    </span><span class="c">! THERE ARE TWO BASIC CHANGES.</span>
+<span class="w">    </span><span class="c">! 1. A NEW ROUTINE, XERPRN, IS USED INSTEAD OF XERPRT TO</span>
+<span class="w">    </span><span class="c">! PRINT MESSAGES. THIS ROUTINE WILL BREAK LONG MESSAGES</span>
+<span class="w">    </span><span class="c">! INTO PIECES FOR PRINTING ON MULTIPLE LINES. &#39;$$&#39; IS</span>
+<span class="w">    </span><span class="c">! ACCEPTED AS A NEW LINE SENTINEL. A PREFIX CAN BE</span>
+<span class="w">    </span><span class="c">! ADDED TO EACH LINE TO BE PRINTED. XERMSG USES EITHER</span>
+<span class="w">    </span><span class="c">! &#39; ***&#39; OR &#39; * &#39; AND LONG MESSAGES ARE BROKEN EVERY</span>
+<span class="w">    </span><span class="c">! 72 CHARACTERS (AT MOST) SO THAT THE MAXIMUM LINE</span>
+<span class="w">    </span><span class="c">! LENGTH OUTPUT CAN NOW BE AS GREAT AS 76.</span>
+<span class="w">    </span><span class="c">! 2. THE TEXT OF ALL MESSAGES IS NOW IN UPPER CASE SINCE THE</span>
+<span class="w">    </span><span class="c">! FORTRAN STANDARD DOCUMENT DOES NOT ADMIT THE EXISTENCE</span>
+<span class="w">    </span><span class="c">! OF LOWER CASE.</span>
+<span class="w">    </span><span class="c">! 880708 REVISED AFTER THE SLATEC CML MEETING OF JUNE 29 AND 30.</span>
+<span class="w">    </span><span class="c">! THE PRINCIPAL CHANGES ARE</span>
+<span class="w">    </span><span class="c">! 1. CLARIFY COMMENTS IN THE PROLOGUES</span>
+<span class="w">    </span><span class="c">! 2. RENAME XRPRNT TO XERPRN</span>
+<span class="w">    </span><span class="c">! 3. REWORK HANDLING OF &#39;$$&#39; IN XERPRN TO HANDLE BLANK LINES</span>
+<span class="w">    </span><span class="c">! SIMILAR TO THE WAY FORMAT STATEMENTS HANDLE THE /</span>
+<span class="w">    </span><span class="c">! CHARACTER FOR NEW RECORDS.</span>
+<span class="w">    </span><span class="c">! 890706 REVISED WITH THE HELP OF FRED FRITSCH AND REG CLEMENS TO</span>
+<span class="w">    </span><span class="c">! CLEAN UP THE CODING.</span>
+<span class="w">    </span><span class="c">! 890721 REVISED TO USE NEW FEATURE IN XERPRN TO COUNT CHARACTERS IN</span>
+<span class="w">    </span><span class="c">! PREFIX.</span>
+<span class="w">    </span><span class="c">! 891013 REVISED TO CORRECT COMMENTS.</span>
+<span class="w">    </span><span class="c">! 891214 Prologue converted to Version 4.0 format. (WRB)</span>
+<span class="w">    </span><span class="c">! 900510 Changed test on NERR to be -9999999 &lt; NERR &lt; 99999999, but</span>
+<span class="w">    </span><span class="c">! NERR .ne. 0, and on LEVEL to be -2 &lt; LEVEL &lt; 3. Added</span>
+<span class="w">    </span><span class="c">! LEVEL=-1 logic, changed calls to XERSAV to XERSVE, and</span>
+<span class="w">    </span><span class="c">! XERCTL to XERCNT. (RWC)</span>
+<span class="w">    </span><span class="c">! 920501 Reformatted the REFERENCES section. (WRB)</span>
+<span class="w">    </span><span class="c">!***END PROLOGUE XERMSG</span>
+<span class="w">    </span>
+<span class="w">    </span><span class="c">!** SUBROUTINE ARGUMENT DECLARATIONS:</span>
+<span class="w">    </span><span class="n">tSInt32</span><span class="p">,</span><span class="w">   </span><span class="k">INTENT</span><span class="p">(</span><span class="n">IN</span><span class="p">)</span><span class="w">   </span><span class="kd">::</span><span class="w"> </span><span class="n">NERR</span>
+<span class="w">    </span><span class="n">tSInt32</span><span class="p">,</span><span class="w">   </span><span class="k">INTENT</span><span class="p">(</span><span class="n">IN</span><span class="p">)</span><span class="w">   </span><span class="kd">::</span><span class="w"> </span><span class="n">LEVEL</span>
+<span class="w">    </span><span class="n">tCharStar</span><span class="p">,</span><span class="w"> </span><span class="k">INTENT</span><span class="p">(</span><span class="n">IN</span><span class="p">)</span><span class="w">   </span><span class="kd">::</span><span class="w"> </span><span class="n">LIBRAR</span>
+<span class="w">    </span><span class="n">tCharStar</span><span class="p">,</span><span class="w"> </span><span class="k">INTENT</span><span class="p">(</span><span class="n">IN</span><span class="p">)</span><span class="w">   </span><span class="kd">::</span><span class="w"> </span><span class="n">SUBROU</span>
+<span class="w">    </span><span class="n">tCharStar</span><span class="p">,</span><span class="w"> </span><span class="k">INTENT</span><span class="p">(</span><span class="n">IN</span><span class="p">)</span><span class="w">   </span><span class="kd">::</span><span class="w"> </span><span class="n">MESSG</span>
+
+<span class="w">    </span><span class="c">!** SUBROUTINE INTERNAL VARIABLE DECLARATIONS:</span>
+<span class="w">    </span><span class="n">tCharLen</span><span class="p">(</span><span class="mi">256</span><span class="p">)</span><span class="w">   </span><span class="kd">::</span><span class="w"> </span><span class="n">MSG</span>
+<span class="w">    </span><span class="n">tSInt32</span><span class="w">         </span><span class="kd">::</span><span class="w"> </span><span class="n">IOStatus</span>
+
+<span class="w">    </span><span class="c">!** FLOW:</span>
+
+<span class="w">    </span><span class="c">! check flag</span>
+<span class="w">    </span><span class="k">IF</span><span class="w"> </span><span class="p">(.</span><span class="nb">NOT</span><span class="p">.</span><span class="n">ErrFileOpended</span><span class="p">)</span><span class="w"> </span><span class="k">THEN</span>
+<span class="w">        </span><span class="c">! get unit number</span>
+<span class="w">        </span><span class="n">ErrFileUnit</span><span class="o">=</span><span class="n">GetNewIOUnit</span><span class="p">()</span>
+<span class="w">        </span><span class="c">! open file</span>
+<span class="w">        </span><span class="k">OPEN</span><span class="p">(</span><span class="n">ErrFileUnit</span><span class="p">,</span><span class="k">File</span><span class="o">=</span><span class="n">SLATECFileName</span><span class="p">,</span><span class="n">POSITION</span><span class="o">=</span><span class="s1">&#39;APPEND&#39;</span><span class="p">,</span><span class="n">IOStat</span><span class="o">=</span><span class="n">IOStatus</span><span class="p">)</span>
+<span class="w">        </span><span class="k">IF</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">IOStatus</span><span class="w"> </span><span class="o">/=</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="k">THEN</span>
+<span class="k">            CALL </span><span class="n">Handle_ErrOpen</span><span class="p">(</span><span class="s1">&#39;XERMSG&#39;</span><span class="p">,</span><span class="w"> </span><span class="n">ModName</span><span class="p">,</span><span class="w"> </span><span class="n">SLATECFileName</span><span class="p">,</span><span class="w"> </span><span class="n">ErrSevere</span><span class="p">)</span>
+<span class="w">        </span><span class="k">END IF</span>
+<span class="w">        </span><span class="c">! write heading</span>
+<span class="w">        </span><span class="k">WRITE</span><span class="p">(</span><span class="n">ErrFileUnit</span><span class="p">,</span><span class="s1">&#39;(A)&#39;</span><span class="p">)</span><span class="w"> </span><span class="s1">&#39;&#39;</span>
+<span class="w">        </span><span class="k">WRITE</span><span class="p">(</span><span class="n">ErrFileUnit</span><span class="p">,</span><span class="s1">&#39;(A)&#39;</span><span class="p">)</span><span class="w"> </span><span class="s1">&#39;+++++ SLATEC ERROR REPORT +++++&#39;</span>
+<span class="w">        </span><span class="k">WRITE</span><span class="p">(</span><span class="n">ErrFileUnit</span><span class="p">,</span><span class="s1">&#39;(A)&#39;</span><span class="p">)</span><span class="w"> </span><span class="s1">&#39;-------------------------------&#39;</span>
+<span class="w">        </span><span class="c">! Write a blank line</span>
+<span class="w">        </span><span class="k">CALL </span><span class="n">DISP</span><span class="p">(</span><span class="n">X</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">,</span><span class="w"> </span><span class="n">UNIT</span><span class="o">=</span><span class="n">ErrFileUnit</span><span class="p">)</span>
+<span class="w">        </span><span class="c">! set flag</span>
+<span class="w">        </span><span class="n">ErrFileOpended</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">TrueVal</span>
+<span class="w">    </span><span class="k">ELSE</span>
+<span class="w">        </span><span class="c">! double check to make sure that the error file is really opened</span>
+<span class="w">        </span><span class="k">IF</span><span class="w"> </span><span class="p">(.</span><span class="nb">NOT</span><span class="p">.</span><span class="n">IsFileOpen</span><span class="p">(</span><span class="n">SLATECFileName</span><span class="p">))</span><span class="w"> </span><span class="k">THEN</span>
+<span class="w">            </span><span class="c">! get unit number</span>
+<span class="w">            </span><span class="n">ErrFileUnit</span><span class="o">=</span><span class="n">GetNewIOUnit</span><span class="p">()</span>
+<span class="w">            </span><span class="c">! open file</span>
+<span class="w">            </span><span class="k">OPEN</span><span class="p">(</span><span class="n">ErrFileUnit</span><span class="p">,</span><span class="k">File</span><span class="o">=</span><span class="n">SLATECFileName</span><span class="p">,</span><span class="n">POSITION</span><span class="o">=</span><span class="s1">&#39;APPEND&#39;</span><span class="p">,</span><span class="n">IOStat</span><span class="o">=</span><span class="n">IOStatus</span><span class="p">)</span>
+<span class="w">            </span><span class="k">IF</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">IOStatus</span><span class="w"> </span><span class="o">/=</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="k">THEN</span>
+<span class="k">                CALL </span><span class="n">Handle_ErrOpen</span><span class="p">(</span><span class="s1">&#39;XERMSG&#39;</span><span class="p">,</span><span class="w"> </span><span class="n">ModName</span><span class="p">,</span><span class="w"> </span><span class="n">SLATECFileName</span><span class="p">,</span><span class="w"> </span><span class="n">ErrSevere</span><span class="p">)</span>
+<span class="w">            </span><span class="k">END IF</span>
+<span class="w">            </span><span class="c">! write heading</span>
+<span class="w">            </span><span class="k">WRITE</span><span class="p">(</span><span class="n">ErrFileUnit</span><span class="p">,</span><span class="s1">&#39;(A)&#39;</span><span class="p">)</span><span class="w"> </span><span class="s1">&#39;&#39;</span>
+<span class="w">            </span><span class="k">WRITE</span><span class="p">(</span><span class="n">ErrFileUnit</span><span class="p">,</span><span class="s1">&#39;(A)&#39;</span><span class="p">)</span><span class="w"> </span><span class="s1">&#39;+++++ SLATEC ERROR REPORT +++++&#39;</span>
+<span class="w">            </span><span class="k">WRITE</span><span class="p">(</span><span class="n">ErrFileUnit</span><span class="p">,</span><span class="s1">&#39;(A)&#39;</span><span class="p">)</span><span class="w"> </span><span class="s1">&#39;-------------------------------&#39;</span>
+<span class="w">            </span><span class="c">! Write a blank line</span>
+<span class="w">            </span><span class="k">CALL </span><span class="n">DISP</span><span class="p">(</span><span class="n">X</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">,</span><span class="w"> </span><span class="n">UNIT</span><span class="o">=</span><span class="n">ErrFileUnit</span><span class="p">)</span>
+<span class="w">            </span><span class="c">! set flag</span>
+<span class="w">            </span><span class="n">ErrFileOpended</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">TrueVal</span>
+<span class="w">        </span><span class="k">END IF</span>
+<span class="k">    END IF</span>
+
+<span class="w">    </span><span class="c">! set up the message for subroutine and library</span>
+<span class="w">    </span><span class="n">MSG</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;*** MESSAGE FROM ROUTINE &#39;</span><span class="w"> </span><span class="o">//</span><span class="w"> </span><span class="nb">TRIM</span><span class="p">(</span><span class="n">SUBROU</span><span class="p">)</span><span class="w"> </span><span class="o">//</span><span class="w"> </span><span class="p">&amp;</span>
+<span class="w">          </span><span class="s1">&#39; IN LIBRARY &#39;</span><span class="w"> </span><span class="o">//</span><span class="w"> </span><span class="nb">TRIM</span><span class="p">(</span><span class="n">LIBRAR</span><span class="p">)</span>
+<span class="w">    </span><span class="c">!</span>
+<span class="w">    </span><span class="c">! Write the message.</span>
+<span class="w">    </span><span class="c">!</span>
+<span class="w">    </span><span class="k">CALL </span><span class="n">DISP</span><span class="p">(</span><span class="n">X</span><span class="o">=</span><span class="nb">TRIM</span><span class="p">(</span><span class="n">MSG</span><span class="p">),</span><span class="w"> </span><span class="n">UNIT</span><span class="o">=</span><span class="n">ErrFileUnit</span><span class="p">)</span>
+<span class="w">    </span>
+<span class="w">    </span><span class="c">! set up the message for error level</span>
+<span class="w">    </span><span class="k">SELECT CASE</span><span class="w"> </span><span class="p">(</span><span class="n">LEVEL</span><span class="p">)</span>
+<span class="w">    </span><span class="k">CASE</span><span class="w"> </span><span class="p">(:</span><span class="mi">0</span><span class="p">)</span>
+<span class="w">        </span><span class="n">MSG</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;* ERROR LEVEL = INFORMATIVE/WARNING MESSAGE&#39;</span>
+<span class="w">    </span><span class="k">CASE</span><span class="w"> </span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+<span class="w">        </span><span class="n">MSG</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;* ERROR LEVEL = POTENTIALLY RECOVERABLE ERROR&#39;</span>
+<span class="w">    </span><span class="k">CASE</span><span class="w"> </span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+<span class="w">        </span><span class="n">MSG</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;* ERROR LEVEL = FATAL ERROR&#39;</span>
+<span class="w">    </span><span class="k">CASE </span><span class="n">DEFAULT</span>
+<span class="w">        </span><span class="n">MSG</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;*** INVALID ERROR LEVEL SPECIFIED.  CHECK THE ROUTINE NAMED IN ABOVE MESSAGE. ***&#39;</span>
+<span class="w">    </span><span class="k">END SELECT</span>
+<span class="w">    </span>
+<span class="w">    </span><span class="c">!</span>
+<span class="w">    </span><span class="c">! Write the message.</span>
+<span class="w">    </span><span class="c">!</span>
+<span class="w">    </span><span class="k">CALL </span><span class="n">DISP</span><span class="p">(</span><span class="n">X</span><span class="o">=</span><span class="nb">TRIM</span><span class="p">(</span><span class="n">MSG</span><span class="p">),</span><span class="w"> </span><span class="n">UNIT</span><span class="o">=</span><span class="n">ErrFileUnit</span><span class="p">)</span>
+<span class="w">    </span>
+<span class="w">    </span><span class="c">!</span>
+<span class="w">    </span><span class="c">! Write the supplied message.</span>
+<span class="w">    </span><span class="c">!</span>
+<span class="w">    </span><span class="n">MSG</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;* &#39;</span><span class="w"> </span><span class="o">//</span><span class="w"> </span><span class="n">MESSG</span>
+<span class="w">    </span><span class="k">CALL </span><span class="n">DISP</span><span class="p">(</span><span class="n">X</span><span class="o">=</span><span class="nb">TRIM</span><span class="p">(</span><span class="n">MSG</span><span class="p">),</span><span class="w"> </span><span class="n">UNIT</span><span class="o">=</span><span class="n">ErrFileUnit</span><span class="p">)</span>
+
+<span class="w">    </span><span class="c">! write the message for error code</span>
+<span class="w">    </span><span class="k">CALL </span><span class="n">DISP</span><span class="p">(</span><span class="n">TITLE</span><span class="o">=</span><span class="s1">&#39;* ERROR NUMBER = &#39;</span><span class="p">,</span><span class="w"> </span><span class="n">X</span><span class="o">=</span><span class="n">NERR</span><span class="p">,</span><span class="w"> </span><span class="n">STYLE</span><span class="o">=</span><span class="s1">&#39;LEFT&#39;</span><span class="p">,</span><span class="w"> </span><span class="p">&amp;</span>
+<span class="w">              </span><span class="n">UNIT</span><span class="o">=</span><span class="n">ErrFileUnit</span><span class="p">,</span><span class="w"> </span><span class="n">ADVANCE</span><span class="o">=</span><span class="s1">&#39;YES&#39;</span><span class="p">)</span>
+
+<span class="w">    </span><span class="c">!</span>
+<span class="w">    </span><span class="c">! Write the end of the message.</span>
+<span class="w">    </span><span class="c">!</span>
+<span class="w">    </span><span class="k">CALL </span><span class="n">DISP</span><span class="p">(</span><span class="n">X</span><span class="o">=</span><span class="s1">&#39;*** END OF MESSAGE&#39;</span><span class="p">,</span><span class="w"> </span><span class="n">UNIT</span><span class="o">=</span><span class="n">ErrFileUnit</span><span class="p">)</span>
+
+<span class="w">    </span><span class="c">!</span>
+<span class="w">    </span><span class="c">! Write a blank line</span>
+<span class="w">    </span><span class="c">!</span>
+<span class="w">    </span><span class="k">CALL </span><span class="n">DISP</span><span class="p">(</span><span class="n">X</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">,</span><span class="w"> </span><span class="n">UNIT</span><span class="o">=</span><span class="n">ErrFileUnit</span><span class="p">)</span>
+
+<span class="w">    </span><span class="k">RETURN</span>
+
+<span class="k">END SUBROUTINE </span><span class="n">XERMSG</span>
+</pre></div>
+
+    </section>
+    <br>
+    
+    </div>
+  </div>
+
+      <hr>
+    </div> <!-- /container -->
+    <footer>
+      <div class="container">
+        <div class="row justify-content-between">
+          <div class="col"><p>eXPerimental Fortran Library (XpfLib) Documentation was developed by Niranama<br>&copy; 2024 
+</p>
+          </div>
+          <div class="col">
+            <p class="text-end">
+              Documentation generated by
+              <a href="https://github.com/Fortran-FOSS-Programmers/ford">FORD</a>
+            </p>
+          </div>
+        </div>
+        <br>
+      </div> <!-- /container -->
+    </footer>
+
+    <!-- Bootstrap core JavaScript -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>    
+
+    <!-- MathJax JavaScript
+             ================================================== -->
+             <!-- Placed at the end of the document so the pages load faster -->
+        <script type="text/x-mathjax-config">
+          MathJax.Hub.Config({
+          TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } },
+          jax: ['input/TeX','input/MathML','output/HTML-CSS'],
+          extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']
+          });
+        </script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+          <script src="../tipuesearch/tipuesearch_content.js"></script>
+          <script src="../tipuesearch/tipuesearch_set.js"></script>
+          <script src="../tipuesearch/tipuesearch.js"></script>
+
+  </body>
+</html>

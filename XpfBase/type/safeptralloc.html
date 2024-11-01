@@ -1,0 +1,3759 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta name="description" content="Experimental Fortran Package - Base Modules and Classes">
+    <meta name="author" content="Niranama" >
+    <link rel="icon" href="../favicon.png">
+
+    <title>SafePtrAlloc &ndash; eXPerimental Fortran Library (XpfLib) Documentation </title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link href="../css/pygments.css" rel="stylesheet">
+    <link href="../css/font-awesome.min.css" rel="stylesheet">
+    <link href="../css/local.css" rel="stylesheet">
+      <link  href="../tipuesearch/tipuesearch.css" rel="stylesheet">
+
+    <script src="https://code.jquery.com/jquery-3.7.0.slim.min.js" integrity="sha256-tG5mcZUtJsZvyKAxYLVXrmjKBVLd6VpVccqz/r4ypFE=" crossorigin="anonymous"></script>
+  </head>
+
+  <body>
+
+    <!-- Fixed navbar -->
+    <div class="container-fluid mb-sm-4 mb-xl-2">
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container">
+          <a class="navbar-brand" href="../index.html">eXPerimental Fortran Library (XpfLib) Documentation </a>
+          <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar"
+                  aria-expanded="false" aria-controls="navbar" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon">
+          </button>
+
+          <div id="navbar" class="navbar-collapse collapse">
+            <ul class="navbar-nav">
+                  <li class="nav-item">
+                    <a class="nav-link" href="../lists/files.html">Source Files</a>
+                  </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../lists/modules.html">Modules</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../lists/procedures.html">Procedures</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../lists/absint.html">Abstract Interfaces</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../lists/types.html">Derived Types</a>
+                </li>
+            </ul>
+              <div class="d-flex align-items-end flex-grow-1">
+                <form action="../search.html" role="search" class="ms-auto">
+                  <input type="text" class="form-control" aria-label="Search" placeholder="Search" name="q" id="tipue_search_input" autocomplete="off" required>
+                </form>
+              </div>
+          </div><!--/.nav-collapse -->
+        </div>
+      </nav>
+    </div>
+
+    <div class="container">
+  <div class="row">
+    <h1>SafePtrAlloc
+      <small>Derived Type</small>
+      
+    </h1>
+      <div class="container p-2 mb-4 bg-light border rounded-3">
+    <div class="row align-items-center justify-content-between" id="info-bar">
+      <div class="col">
+        <ul class="list-inline" style="margin-bottom:0px;display:inline">
+
+            <li class="list-inline-item" id="statements"><i class="fa fa-list-ol"></i>
+              <a data-bs-toggle="tooltip"
+                 data-bs-placement="bottom" data-html="true"
+                 title="<p> 6.8% of total for derived types.</p>Including implementation: 1003 statements, 14.7% of total for derived types.">55 statements</a>
+            </li>
+
+            <li class="list-inline-item" id="source-file">
+              <i class="fa fa-code"></i>
+              <a href="../src/MClass_SafePtrAlloc.f90"> Source File</a>
+            </li>
+        </ul>
+      </div>
+      <div class="col">
+        <nav aria-label="breadcrumb">
+          <ol class="breadcrumb justify-content-end mb-0">
+                <li class="breadcrumb-item"><a href='../sourcefile/mclass_safeptralloc.f90.html'>MClass_SafePtrAlloc.f90</a></li>
+                <li class="breadcrumb-item"><a href='../module/mclass_safeptralloc.html'>MClass_SafePtrAlloc</a></li>
+            <li class="breadcrumb-item active" aria-current="page">SafePtrAlloc</li>
+          </ol>
+        </nav>
+      </div>
+    </div>
+  </div>
+  <script>
+    $(function () {
+    $('[data-bs-toggle="tooltip"]').tooltip()
+    })
+  </script>
+
+  </div>
+  
+  <div class="row">
+    <div class="col-md-3 hidden-xs hidden-sm visible-md visible-lg">
+      <div id="sidebar">
+      <h3>Contents</h3>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+      <div class="card mb-4">
+      <a data-bs-toggle="collapse" href="#boundprocs-0"
+         aria-expanded="false" aria-controls="boundprocs-0">
+         <h4 class="card-header bg-primary text-white">Type-Bound Procedures</h4>
+      </a>
+      <div id="boundprocs-0" class="collapse">
+        <div class="list-group list-group-flush">
+            <a class="list-group-item" href="../type/safeptralloc.html#boundprocedure-construct~8">Construct</a>
+            <a class="list-group-item" href="../type/safeptralloc.html#boundprocedure-destruct~8">Destruct</a>
+            <a class="list-group-item" href="../type/safeptralloc.html#boundprocedure-memfree~7">MemFree</a>
+            <a class="list-group-item" href="../type/safeptralloc.html#boundprocedure-memalloc">MemAlloc</a>
+            <a class="list-group-item" href="../type/safeptralloc.html#boundprocedure-memresize">MemResize</a>
+        </div>
+      </div>
+    </div>
+
+  
+  
+    <div class="card card-primary">
+      <div class="card-header text-left"><h3 class="card-title">Source Code</h3></div>
+      <div class="list-group">
+        <a class="list-group-item" href="../type/safeptralloc.html#src">SafePtrAlloc</a>
+      </div>
+    </div>
+
+
+  </div>
+
+    </div>
+    
+    <div class="col-md-9" id='text'>
+      <h2>type, public :: SafePtrAlloc</h2>
+    <p>The <em>SafePtrAlloc</em> type is a safe-pointer allocator that provides a safe way to
+ allocate memory for a one-dimensional pointer array.</p>
+    <br>
+
+    
+
+
+      <section>
+        <h2>Type-Bound Procedures</h2>
+          <div class="row">
+              <div class="card mt-3">
+    <div class="card-header codesum">
+      <span class="anchor" id="boundprocedure-construct~8"></span>
+      <h3>
+          procedure, public ::
+  <strong>Construct</strong> => SafePtrAlloc_Construct
+        
+      </h3>
+    </div>
+      <div class="card-body">
+        
+        <p><strong>Type-Bound Subroutine</strong>: Construct <br>
+ <strong>Purpose</strong>:  To construct a new allocator based on the optionally specified block size. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    CALL Allocator%Construct() <br>
+  ---&gt;    CALL Allocator%Construct(BlockSize) <br></p>
+      </div>
+    <ul class="list-group">
+        <li class="list-group-item">
+                  <h3>
+    private  subroutine SafePtrAlloc_Construct(Allocator, BlockSize)  
+</h3>
+
+  <p>To construct a new allocator based on the optionally specified block size.</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(<a href='../type/safeptralloc.html'>SafePtrAlloc</a>),
+            </td>
+<td>intent(out)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Allocator</strong></td>
+            <td>
+                <p><em>SafePtrAlloc</em> object</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              integer(kind=kInt32),
+            </td>
+<td>intent(in),</td>
+              <td>optional</td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>BlockSize</strong></td>
+            <td>
+                <p>block size</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+        </li>
+    </ul>
+  </div>
+
+          </div>
+          <div class="row">
+              <div class="card mt-3">
+    <div class="card-header codesum">
+      <span class="anchor" id="boundprocedure-destruct~8"></span>
+      <h3>
+          procedure, public ::
+  <strong>Destruct</strong> => SafePtrAlloc_Destruct
+        
+      </h3>
+    </div>
+      <div class="card-body">
+        
+        <p><strong>Type-Bound Subroutine</strong>: Destruct <br>
+ <strong>Purpose</strong>:  To destruct the allocator. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    CALL Allocator%Destruct()</p>
+      </div>
+    <ul class="list-group">
+        <li class="list-group-item">
+                  <h3>
+    private  subroutine SafePtrAlloc_Destruct(Allocator)  
+</h3>
+
+  <p>To destruct the allocator.</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(<a href='../type/safeptralloc.html'>SafePtrAlloc</a>),
+            </td>
+<td>intent(inout)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Allocator</strong></td>
+            <td>
+                <p><em>SafePtrAlloc</em> object</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+        </li>
+    </ul>
+  </div>
+
+          </div>
+          <div class="row">
+              <div class="card mt-3">
+    <div class="card-header codesum">
+      <span class="anchor" id="boundprocedure-memfree~7"></span>
+      <h3>
+          generic, public ::
+  <strong>MemFree</strong> => SafePtrAlloc_MemFree_Character, SafePtrAlloc_MemFree_Int8, SafePtrAlloc_MemFree_Int16, SafePtrAlloc_MemFree_Int32, SafePtrAlloc_MemFree_Int64, SafePtrAlloc_MemFree_RealSP, SafePtrAlloc_MemFree_RealDP, SafePtrAlloc_MemFree_RealQP, SafePtrAlloc_MemFree_CmpxSP, SafePtrAlloc_MemFree_CmpxDP, SafePtrAlloc_MemFree_CmpxQP, SafePtrAlloc_MemFree_Logical, SafePtrAlloc_MemFree_Object
+        
+      </h3>
+    </div>
+      <div class="card-body">
+        
+        <p><strong>Type-Bound Subroutine</strong>: MemFree <br>
+ <strong>Purpose</strong>:  To release the storage according to the specified handle and the pointer. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    CALL Allocator%MemFree(Handle, AnyPtr)</p>
+      </div>
+    <ul class="list-group">
+        <li class="list-group-item">
+                  <h3>
+    private  subroutine SafePtrAlloc_MemFree_Character(Allocator, Handle, DatPtr)  
+</h3>
+
+  <p>To free the storage occupied by the specified handle and pointer.</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(<a href='../type/safeptralloc.html'>SafePtrAlloc</a>),
+            </td>
+<td>intent(inout)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Allocator</strong></td>
+            <td>
+                <p><em>SafePtrAlloc</em> object</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              type(<a href='../type/ptrhandle.html'>PtrHandle</a>),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Handle</strong></td>
+            <td>
+                <p>pointer handle; must match the pointer</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              character(kind=kChar, len=:),
+            </td>
+<td>intent(inout),</td>
+              <td></td>            <td>
+              POINTER
+            </td>
+            <td>::</td>
+            <td><strong>DatPtr</strong>(:)</td>
+            <td>
+                <p>A 1-D pointer array</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+        </li>
+        <li class="list-group-item">
+                  <h3>
+    private  subroutine SafePtrAlloc_MemFree_Int8(Allocator, Handle, DatPtr)  
+</h3>
+
+  <p>To free the storage occupied by the specified handle and pointer.</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(<a href='../type/safeptralloc.html'>SafePtrAlloc</a>),
+            </td>
+<td>intent(inout)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Allocator</strong></td>
+            <td>
+                <p><em>SafePtrAlloc</em> object</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              type(<a href='../type/ptrhandle.html'>PtrHandle</a>),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Handle</strong></td>
+            <td>
+                <p>pointer handle; must match the pointer</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              integer(kind=kInt8),
+            </td>
+<td>intent(inout),</td>
+              <td></td>            <td>
+              POINTER
+            </td>
+            <td>::</td>
+            <td><strong>DatPtr</strong>(:)</td>
+            <td>
+                <p>A 1-D pointer array</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+        </li>
+        <li class="list-group-item">
+                  <h3>
+    private  subroutine SafePtrAlloc_MemFree_Int16(Allocator, Handle, DatPtr)  
+</h3>
+
+  <p>To free the storage occupied by the specified handle and pointer.</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(<a href='../type/safeptralloc.html'>SafePtrAlloc</a>),
+            </td>
+<td>intent(inout)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Allocator</strong></td>
+            <td>
+                <p><em>SafePtrAlloc</em> object</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              type(<a href='../type/ptrhandle.html'>PtrHandle</a>),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Handle</strong></td>
+            <td>
+                <p>pointer handle; must match the pointer</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              integer(kind=kInt16),
+            </td>
+<td>intent(inout),</td>
+              <td></td>            <td>
+              POINTER
+            </td>
+            <td>::</td>
+            <td><strong>DatPtr</strong>(:)</td>
+            <td>
+                <p>A 1-D pointer array</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+        </li>
+        <li class="list-group-item">
+                  <h3>
+    private  subroutine SafePtrAlloc_MemFree_Int32(Allocator, Handle, DatPtr)  
+</h3>
+
+  <p>To free the storage occupied by the specified handle and pointer.</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(<a href='../type/safeptralloc.html'>SafePtrAlloc</a>),
+            </td>
+<td>intent(inout)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Allocator</strong></td>
+            <td>
+                <p><em>SafePtrAlloc</em> object</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              type(<a href='../type/ptrhandle.html'>PtrHandle</a>),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Handle</strong></td>
+            <td>
+                <p>pointer handle; must match the pointer</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              integer(kind=kInt32),
+            </td>
+<td>intent(inout),</td>
+              <td></td>            <td>
+              POINTER
+            </td>
+            <td>::</td>
+            <td><strong>DatPtr</strong>(:)</td>
+            <td>
+                <p>A 1-D pointer array</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+        </li>
+        <li class="list-group-item">
+                  <h3>
+    private  subroutine SafePtrAlloc_MemFree_Int64(Allocator, Handle, DatPtr)  
+</h3>
+
+  <p>To free the storage occupied by the specified handle and pointer.</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(<a href='../type/safeptralloc.html'>SafePtrAlloc</a>),
+            </td>
+<td>intent(inout)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Allocator</strong></td>
+            <td>
+                <p><em>SafePtrAlloc</em> object</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              type(<a href='../type/ptrhandle.html'>PtrHandle</a>),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Handle</strong></td>
+            <td>
+                <p>pointer handle; must match the pointer</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              integer(kind=kInt64),
+            </td>
+<td>intent(inout),</td>
+              <td></td>            <td>
+              POINTER
+            </td>
+            <td>::</td>
+            <td><strong>DatPtr</strong>(:)</td>
+            <td>
+                <p>A 1-D pointer array</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+        </li>
+        <li class="list-group-item">
+                  <h3>
+    private  subroutine SafePtrAlloc_MemFree_RealSP(Allocator, Handle, DatPtr)  
+</h3>
+
+  <p>To free the storage occupied by the specified handle and pointer.</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(<a href='../type/safeptralloc.html'>SafePtrAlloc</a>),
+            </td>
+<td>intent(inout)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Allocator</strong></td>
+            <td>
+                <p><em>SafePtrAlloc</em> object</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              type(<a href='../type/ptrhandle.html'>PtrHandle</a>),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Handle</strong></td>
+            <td>
+                <p>pointer handle; must match the pointer</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              real(kind=kSingle),
+            </td>
+<td>intent(inout),</td>
+              <td></td>            <td>
+              POINTER
+            </td>
+            <td>::</td>
+            <td><strong>DatPtr</strong>(:)</td>
+            <td>
+                <p>A 1-D pointer array</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+        </li>
+        <li class="list-group-item">
+                  <h3>
+    private  subroutine SafePtrAlloc_MemFree_RealDP(Allocator, Handle, DatPtr)  
+</h3>
+
+  <p>To free the storage occupied by the specified handle and pointer.</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(<a href='../type/safeptralloc.html'>SafePtrAlloc</a>),
+            </td>
+<td>intent(inout)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Allocator</strong></td>
+            <td>
+                <p><em>SafePtrAlloc</em> object</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              type(<a href='../type/ptrhandle.html'>PtrHandle</a>),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Handle</strong></td>
+            <td>
+                <p>pointer handle; must match the pointer</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              real(kind=kDouble),
+            </td>
+<td>intent(inout),</td>
+              <td></td>            <td>
+              POINTER
+            </td>
+            <td>::</td>
+            <td><strong>DatPtr</strong>(:)</td>
+            <td>
+                <p>A 1-D pointer array</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+        </li>
+        <li class="list-group-item">
+                  <h3>
+    private  subroutine SafePtrAlloc_MemFree_RealQP(Allocator, Handle, DatPtr)  
+</h3>
+
+  <p>To free the storage occupied by the specified handle and pointer.</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(<a href='../type/safeptralloc.html'>SafePtrAlloc</a>),
+            </td>
+<td>intent(inout)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Allocator</strong></td>
+            <td>
+                <p><em>SafePtrAlloc</em> object</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              type(<a href='../type/ptrhandle.html'>PtrHandle</a>),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Handle</strong></td>
+            <td>
+                <p>pointer handle; must match the pointer</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              real(kind=kQuad),
+            </td>
+<td>intent(inout),</td>
+              <td></td>            <td>
+              POINTER
+            </td>
+            <td>::</td>
+            <td><strong>DatPtr</strong>(:)</td>
+            <td>
+                <p>A 1-D pointer array</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+        </li>
+        <li class="list-group-item">
+                  <h3>
+    private  subroutine SafePtrAlloc_MemFree_CmpxSP(Allocator, Handle, DatPtr)  
+</h3>
+
+  <p>To free the storage occupied by the specified handle and pointer.</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(<a href='../type/safeptralloc.html'>SafePtrAlloc</a>),
+            </td>
+<td>intent(inout)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Allocator</strong></td>
+            <td>
+                <p><em>SafePtrAlloc</em> object</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              type(<a href='../type/ptrhandle.html'>PtrHandle</a>),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Handle</strong></td>
+            <td>
+                <p>pointer handle; must match the pointer</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              complex(kind=kSingle),
+            </td>
+<td>intent(inout),</td>
+              <td></td>            <td>
+              POINTER
+            </td>
+            <td>::</td>
+            <td><strong>DatPtr</strong>(:)</td>
+            <td>
+                <p>A 1-D pointer array</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+        </li>
+        <li class="list-group-item">
+                  <h3>
+    private  subroutine SafePtrAlloc_MemFree_CmpxDP(Allocator, Handle, DatPtr)  
+</h3>
+
+  <p>To free the storage occupied by the specified handle and pointer.</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(<a href='../type/safeptralloc.html'>SafePtrAlloc</a>),
+            </td>
+<td>intent(inout)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Allocator</strong></td>
+            <td>
+                <p><em>SafePtrAlloc</em> object</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              type(<a href='../type/ptrhandle.html'>PtrHandle</a>),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Handle</strong></td>
+            <td>
+                <p>pointer handle; must match the pointer</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              complex(kind=kDouble),
+            </td>
+<td>intent(inout),</td>
+              <td></td>            <td>
+              POINTER
+            </td>
+            <td>::</td>
+            <td><strong>DatPtr</strong>(:)</td>
+            <td>
+                <p>A 1-D pointer array</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+        </li>
+        <li class="list-group-item">
+                  <h3>
+    private  subroutine SafePtrAlloc_MemFree_CmpxQP(Allocator, Handle, DatPtr)  
+</h3>
+
+  <p>To free the storage occupied by the specified handle and pointer.</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(<a href='../type/safeptralloc.html'>SafePtrAlloc</a>),
+            </td>
+<td>intent(inout)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Allocator</strong></td>
+            <td>
+                <p><em>SafePtrAlloc</em> object</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              type(<a href='../type/ptrhandle.html'>PtrHandle</a>),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Handle</strong></td>
+            <td>
+                <p>pointer handle; must match the pointer</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              complex(kind=kQuad),
+            </td>
+<td>intent(inout),</td>
+              <td></td>            <td>
+              POINTER
+            </td>
+            <td>::</td>
+            <td><strong>DatPtr</strong>(:)</td>
+            <td>
+                <p>A 1-D pointer array</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+        </li>
+        <li class="list-group-item">
+                  <h3>
+    private  subroutine SafePtrAlloc_MemFree_Logical(Allocator, Handle, DatPtr)  
+</h3>
+
+  <p>To free the storage occupied by the specified handle and pointer.</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(<a href='../type/safeptralloc.html'>SafePtrAlloc</a>),
+            </td>
+<td>intent(inout)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Allocator</strong></td>
+            <td>
+                <p><em>SafePtrAlloc</em> object</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              type(<a href='../type/ptrhandle.html'>PtrHandle</a>),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Handle</strong></td>
+            <td>
+                <p>pointer handle; must match the pointer</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              logical,
+            </td>
+<td>intent(inout),</td>
+              <td></td>            <td>
+              POINTER
+            </td>
+            <td>::</td>
+            <td><strong>DatPtr</strong>(:)</td>
+            <td>
+                <p>A 1-D pointer array</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+        </li>
+        <li class="list-group-item">
+                  <h3>
+    private  subroutine SafePtrAlloc_MemFree_Object(Allocator, Handle, DatPtr)  
+</h3>
+
+  <p>To free the storage occupied by the specified handle and pointer.</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(<a href='../type/safeptralloc.html'>SafePtrAlloc</a>),
+            </td>
+<td>intent(inout)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Allocator</strong></td>
+            <td>
+                <p><em>SafePtrAlloc</em> object</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              type(<a href='../type/ptrhandle.html'>PtrHandle</a>),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Handle</strong></td>
+            <td>
+                <p>pointer handle; must match the pointer</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(<a href='../type/object.html'>Object</a>),
+            </td>
+<td>intent(inout),</td>
+              <td></td>            <td>
+              POINTER
+            </td>
+            <td>::</td>
+            <td><strong>DatPtr</strong>(:)</td>
+            <td>
+                <p>A 1-D pointer array</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+        </li>
+    </ul>
+  </div>
+
+          </div>
+          <div class="row">
+              <div class="card mt-3">
+    <div class="card-header codesum">
+      <span class="anchor" id="boundprocedure-memalloc"></span>
+      <h3>
+          generic, public ::
+  <strong>MemAlloc</strong> => SafePtrAlloc_MemAlloc_Character, SafePtrAlloc_MemAlloc_Int8, SafePtrAlloc_MemAlloc_Int16, SafePtrAlloc_MemAlloc_Int32, SafePtrAlloc_MemAlloc_Int64, SafePtrAlloc_MemAlloc_RealSP, SafePtrAlloc_MemAlloc_RealDP, SafePtrAlloc_MemAlloc_RealQP, SafePtrAlloc_MemAlloc_CmpxSP, SafePtrAlloc_MemAlloc_CmpxDP, SafePtrAlloc_MemAlloc_CmpxQP, SafePtrAlloc_MemAlloc_Logical, SafePtrAlloc_MemAlloc_Object
+        
+      </h3>
+    </div>
+      <div class="card-body">
+        
+        <p><strong>Type-Bound Function</strong>: MemAlloc <br>
+ <strong>Purpose</strong>:  To allocate the storage for the specified pointer array. <br>
+ <strong>Usage</strong>: <br>
+  ! for any intrinsic types except the CHARACTER type <br>
+  ---&gt;    Handle = Allocator%MemAlloc(AnyPtr, Size) <br>
+  ---&gt;    Handle = Allocator%MemAlloc(AnyPtr, Size, StartID) <br>
+  ! for the CHARACTER type <br>
+  ---&gt;    Handle = Allocator%MemAlloc(CharLen, CharPtr, Size) <br>
+  ---&gt;    Handle = Allocator%MemAlloc(CharLen, CharPtr, Size, StartID) <br>
+  ! for any derived types in the <em>Object</em> class <br>
+  ---&gt;    Handle = Allocator%MemAlloc(ObjMold, SetObjPtr, ObjPtr, Size) <br>
+  ---&gt;    Handle = Allocator%MemAlloc(ObjMold, SetObjPtr, ObjPtr, Size, StartID) <br></p>
+      </div>
+    <ul class="list-group">
+        <li class="list-group-item">
+                  <h3>
+    private  function SafePtrAlloc_MemAlloc_Character(Allocator, CharLen, DatPtr, Size, StartID) result(Handle)  
+</h3>
+
+  <p>To get the storage requested by the specified pointer array.</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(<a href='../type/safeptralloc.html'>SafePtrAlloc</a>),
+            </td>
+<td>intent(inout)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Allocator</strong></td>
+            <td>
+                <p><em>SafePtrAlloc</em> object</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              integer(kind=kInt32),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>CharLen</strong></td>
+            <td>
+                <p>length of the character string</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              character(kind=kChar, len=:),
+            </td>
+<td>intent(out),</td>
+              <td></td>            <td>
+              POINTER
+            </td>
+            <td>::</td>
+            <td><strong>DatPtr</strong>(:)</td>
+            <td>
+                <p>A 1-D pointer array</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              integer(kind=kInt32),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Size</strong></td>
+            <td>
+                <p>size of the array requested; must be positive</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              integer(kind=kInt32),
+            </td>
+<td>intent(in),</td>
+              <td>optional</td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>StartID</strong></td>
+            <td>
+                <p>starting index of A</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+    <h4>
+    Return Value
+    <small>type(<a href='../type/ptrhandle.html'>PtrHandle</a>)</small>
+    </h4>
+    <p>pointer handle</p>
+
+        </li>
+        <li class="list-group-item">
+                  <h3>
+    private  function SafePtrAlloc_MemAlloc_Int8(Allocator, DatPtr, Size, StartID) result(Handle)  
+</h3>
+
+  <p>To get the storage requested by the specified pointer array.</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(<a href='../type/safeptralloc.html'>SafePtrAlloc</a>),
+            </td>
+<td>intent(inout)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Allocator</strong></td>
+            <td>
+                <p><em>SafePtrAlloc</em> object</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              integer(kind=kInt8),
+            </td>
+<td>intent(out),</td>
+              <td></td>            <td>
+              POINTER
+            </td>
+            <td>::</td>
+            <td><strong>DatPtr</strong>(:)</td>
+            <td>
+                <p>A 1-D pointer array</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              integer(kind=kInt32),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Size</strong></td>
+            <td>
+                <p>size of the array requested; must be positive</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              integer(kind=kInt32),
+            </td>
+<td>intent(in),</td>
+              <td>optional</td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>StartID</strong></td>
+            <td>
+                <p>starting index of A</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+    <h4>
+    Return Value
+    <small>type(<a href='../type/ptrhandle.html'>PtrHandle</a>)</small>
+    </h4>
+    <p>pointer handle</p>
+
+        </li>
+        <li class="list-group-item">
+                  <h3>
+    private  function SafePtrAlloc_MemAlloc_Int16(Allocator, DatPtr, Size, StartID) result(Handle)  
+</h3>
+
+  <p>To get the storage requested by the specified pointer array.</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(<a href='../type/safeptralloc.html'>SafePtrAlloc</a>),
+            </td>
+<td>intent(inout)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Allocator</strong></td>
+            <td>
+                <p><em>SafePtrAlloc</em> object</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              integer(kind=kInt16),
+            </td>
+<td>intent(out),</td>
+              <td></td>            <td>
+              POINTER
+            </td>
+            <td>::</td>
+            <td><strong>DatPtr</strong>(:)</td>
+            <td>
+                <p>A 1-D pointer array</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              integer(kind=kInt32),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Size</strong></td>
+            <td>
+                <p>size of the array requested; must be positive</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              integer(kind=kInt32),
+            </td>
+<td>intent(in),</td>
+              <td>optional</td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>StartID</strong></td>
+            <td>
+                <p>starting index of A</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+    <h4>
+    Return Value
+    <small>type(<a href='../type/ptrhandle.html'>PtrHandle</a>)</small>
+    </h4>
+    <p>pointer handle</p>
+
+        </li>
+        <li class="list-group-item">
+                  <h3>
+    private  function SafePtrAlloc_MemAlloc_Int32(Allocator, DatPtr, Size, StartID) result(Handle)  
+</h3>
+
+  <p>To get the storage requested by the specified pointer array.</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(<a href='../type/safeptralloc.html'>SafePtrAlloc</a>),
+            </td>
+<td>intent(inout)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Allocator</strong></td>
+            <td>
+                <p><em>SafePtrAlloc</em> object</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              integer(kind=kInt32),
+            </td>
+<td>intent(out),</td>
+              <td></td>            <td>
+              POINTER
+            </td>
+            <td>::</td>
+            <td><strong>DatPtr</strong>(:)</td>
+            <td>
+                <p>A 1-D pointer array</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              integer(kind=kInt32),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Size</strong></td>
+            <td>
+                <p>size of the array requested; must be positive</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              integer(kind=kInt32),
+            </td>
+<td>intent(in),</td>
+              <td>optional</td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>StartID</strong></td>
+            <td>
+                <p>starting index of A</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+    <h4>
+    Return Value
+    <small>type(<a href='../type/ptrhandle.html'>PtrHandle</a>)</small>
+    </h4>
+    <p>pointer handle</p>
+
+        </li>
+        <li class="list-group-item">
+                  <h3>
+    private  function SafePtrAlloc_MemAlloc_Int64(Allocator, DatPtr, Size, StartID) result(Handle)  
+</h3>
+
+  <p>To get the storage requested by the specified pointer array.</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(<a href='../type/safeptralloc.html'>SafePtrAlloc</a>),
+            </td>
+<td>intent(inout)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Allocator</strong></td>
+            <td>
+                <p><em>SafePtrAlloc</em> object</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              integer(kind=kInt64),
+            </td>
+<td>intent(out),</td>
+              <td></td>            <td>
+              POINTER
+            </td>
+            <td>::</td>
+            <td><strong>DatPtr</strong>(:)</td>
+            <td>
+                <p>A 1-D pointer array</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              integer(kind=kInt32),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Size</strong></td>
+            <td>
+                <p>size of the array requested; must be positive</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              integer(kind=kInt32),
+            </td>
+<td>intent(in),</td>
+              <td>optional</td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>StartID</strong></td>
+            <td>
+                <p>starting index of A</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+    <h4>
+    Return Value
+    <small>type(<a href='../type/ptrhandle.html'>PtrHandle</a>)</small>
+    </h4>
+    <p>pointer handle</p>
+
+        </li>
+        <li class="list-group-item">
+                  <h3>
+    private  function SafePtrAlloc_MemAlloc_RealSP(Allocator, DatPtr, Size, StartID) result(Handle)  
+</h3>
+
+  <p>To get the storage requested by the specified pointer array.</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(<a href='../type/safeptralloc.html'>SafePtrAlloc</a>),
+            </td>
+<td>intent(inout)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Allocator</strong></td>
+            <td>
+                <p><em>SafePtrAlloc</em> object</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              real(kind=kSingle),
+            </td>
+<td>intent(out),</td>
+              <td></td>            <td>
+              POINTER
+            </td>
+            <td>::</td>
+            <td><strong>DatPtr</strong>(:)</td>
+            <td>
+                <p>A 1-D pointer array</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              integer(kind=kInt32),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Size</strong></td>
+            <td>
+                <p>size of the array requested; must be positive</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              integer(kind=kInt32),
+            </td>
+<td>intent(in),</td>
+              <td>optional</td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>StartID</strong></td>
+            <td>
+                <p>starting index of A</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+    <h4>
+    Return Value
+    <small>type(<a href='../type/ptrhandle.html'>PtrHandle</a>)</small>
+    </h4>
+    <p>pointer handle</p>
+
+        </li>
+        <li class="list-group-item">
+                  <h3>
+    private  function SafePtrAlloc_MemAlloc_RealDP(Allocator, DatPtr, Size, StartID) result(Handle)  
+</h3>
+
+  <p>To get the storage requested by the specified pointer array.</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(<a href='../type/safeptralloc.html'>SafePtrAlloc</a>),
+            </td>
+<td>intent(inout)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Allocator</strong></td>
+            <td>
+                <p><em>SafePtrAlloc</em> object</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              real(kind=kDouble),
+            </td>
+<td>intent(out),</td>
+              <td></td>            <td>
+              POINTER
+            </td>
+            <td>::</td>
+            <td><strong>DatPtr</strong>(:)</td>
+            <td>
+                <p>A 1-D pointer array</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              integer(kind=kInt32),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Size</strong></td>
+            <td>
+                <p>size of the array requested; must be positive</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              integer(kind=kInt32),
+            </td>
+<td>intent(in),</td>
+              <td>optional</td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>StartID</strong></td>
+            <td>
+                <p>starting index of A</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+    <h4>
+    Return Value
+    <small>type(<a href='../type/ptrhandle.html'>PtrHandle</a>)</small>
+    </h4>
+    <p>pointer handle</p>
+
+        </li>
+        <li class="list-group-item">
+                  <h3>
+    private  function SafePtrAlloc_MemAlloc_RealQP(Allocator, DatPtr, Size, StartID) result(Handle)  
+</h3>
+
+  <p>To get the storage requested by the specified pointer array.</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(<a href='../type/safeptralloc.html'>SafePtrAlloc</a>),
+            </td>
+<td>intent(inout)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Allocator</strong></td>
+            <td>
+                <p><em>SafePtrAlloc</em> object</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              real(kind=kQuad),
+            </td>
+<td>intent(out),</td>
+              <td></td>            <td>
+              POINTER
+            </td>
+            <td>::</td>
+            <td><strong>DatPtr</strong>(:)</td>
+            <td>
+                <p>A 1-D pointer array</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              integer(kind=kInt32),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Size</strong></td>
+            <td>
+                <p>size of the array requested; must be positive</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              integer(kind=kInt32),
+            </td>
+<td>intent(in),</td>
+              <td>optional</td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>StartID</strong></td>
+            <td>
+                <p>starting index of A</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+    <h4>
+    Return Value
+    <small>type(<a href='../type/ptrhandle.html'>PtrHandle</a>)</small>
+    </h4>
+    <p>pointer handle</p>
+
+        </li>
+        <li class="list-group-item">
+                  <h3>
+    private  function SafePtrAlloc_MemAlloc_CmpxSP(Allocator, DatPtr, Size, StartID) result(Handle)  
+</h3>
+
+  <p>To get the storage requested by the specified pointer array.</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(<a href='../type/safeptralloc.html'>SafePtrAlloc</a>),
+            </td>
+<td>intent(inout)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Allocator</strong></td>
+            <td>
+                <p><em>SafePtrAlloc</em> object</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              complex(kind=kSingle),
+            </td>
+<td>intent(out),</td>
+              <td></td>            <td>
+              POINTER
+            </td>
+            <td>::</td>
+            <td><strong>DatPtr</strong>(:)</td>
+            <td>
+                <p>A 1-D pointer array</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              integer(kind=kInt32),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Size</strong></td>
+            <td>
+                <p>size of the array requested; must be positive</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              integer(kind=kInt32),
+            </td>
+<td>intent(in),</td>
+              <td>optional</td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>StartID</strong></td>
+            <td>
+                <p>starting index of A</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+    <h4>
+    Return Value
+    <small>type(<a href='../type/ptrhandle.html'>PtrHandle</a>)</small>
+    </h4>
+    <p>pointer handle</p>
+
+        </li>
+        <li class="list-group-item">
+                  <h3>
+    private  function SafePtrAlloc_MemAlloc_CmpxDP(Allocator, DatPtr, Size, StartID) result(Handle)  
+</h3>
+
+  <p>To get the storage requested by the specified pointer array.</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(<a href='../type/safeptralloc.html'>SafePtrAlloc</a>),
+            </td>
+<td>intent(inout)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Allocator</strong></td>
+            <td>
+                <p><em>SafePtrAlloc</em> object</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              complex(kind=kDouble),
+            </td>
+<td>intent(out),</td>
+              <td></td>            <td>
+              POINTER
+            </td>
+            <td>::</td>
+            <td><strong>DatPtr</strong>(:)</td>
+            <td>
+                <p>A 1-D pointer array</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              integer(kind=kInt32),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Size</strong></td>
+            <td>
+                <p>size of the array requested; must be positive</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              integer(kind=kInt32),
+            </td>
+<td>intent(in),</td>
+              <td>optional</td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>StartID</strong></td>
+            <td>
+                <p>starting index of A</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+    <h4>
+    Return Value
+    <small>type(<a href='../type/ptrhandle.html'>PtrHandle</a>)</small>
+    </h4>
+    <p>pointer handle</p>
+
+        </li>
+        <li class="list-group-item">
+                  <h3>
+    private  function SafePtrAlloc_MemAlloc_CmpxQP(Allocator, DatPtr, Size, StartID) result(Handle)  
+</h3>
+
+  <p>To get the storage requested by the specified pointer array.</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(<a href='../type/safeptralloc.html'>SafePtrAlloc</a>),
+            </td>
+<td>intent(inout)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Allocator</strong></td>
+            <td>
+                <p><em>SafePtrAlloc</em> object</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              complex(kind=kQuad),
+            </td>
+<td>intent(out),</td>
+              <td></td>            <td>
+              POINTER
+            </td>
+            <td>::</td>
+            <td><strong>DatPtr</strong>(:)</td>
+            <td>
+                <p>A 1-D pointer array</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              integer(kind=kInt32),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Size</strong></td>
+            <td>
+                <p>size of the array requested; must be positive</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              integer(kind=kInt32),
+            </td>
+<td>intent(in),</td>
+              <td>optional</td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>StartID</strong></td>
+            <td>
+                <p>starting index of A</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+    <h4>
+    Return Value
+    <small>type(<a href='../type/ptrhandle.html'>PtrHandle</a>)</small>
+    </h4>
+    <p>pointer handle</p>
+
+        </li>
+        <li class="list-group-item">
+                  <h3>
+    private  function SafePtrAlloc_MemAlloc_Logical(Allocator, DatPtr, Size, StartID) result(Handle)  
+</h3>
+
+  <p>To get the storage requested by the specified pointer array.</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(<a href='../type/safeptralloc.html'>SafePtrAlloc</a>),
+            </td>
+<td>intent(inout)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Allocator</strong></td>
+            <td>
+                <p><em>SafePtrAlloc</em> object</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              logical,
+            </td>
+<td>intent(out),</td>
+              <td></td>            <td>
+              POINTER
+            </td>
+            <td>::</td>
+            <td><strong>DatPtr</strong>(:)</td>
+            <td>
+                <p>A 1-D pointer array</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              integer(kind=kInt32),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Size</strong></td>
+            <td>
+                <p>size of the array requested; must be positive</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              integer(kind=kInt32),
+            </td>
+<td>intent(in),</td>
+              <td>optional</td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>StartID</strong></td>
+            <td>
+                <p>starting index of A</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+    <h4>
+    Return Value
+    <small>type(<a href='../type/ptrhandle.html'>PtrHandle</a>)</small>
+    </h4>
+    <p>pointer handle</p>
+
+        </li>
+        <li class="list-group-item">
+                  <h3>
+    private  function SafePtrAlloc_MemAlloc_Object(Allocator, ObjMold, SetObjPtr, DatPtr, Size, StartID) result(Handle)  
+</h3>
+
+  <p>To get the storage requested by the specified pointer array.</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(<a href='../type/safeptralloc.html'>SafePtrAlloc</a>),
+            </td>
+<td>intent(inout)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Allocator</strong></td>
+            <td>
+                <p><em>SafePtrAlloc</em> object</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(<a href='../type/object.html'>Object</a>),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>ObjMold</strong></td>
+            <td>
+                <p>a mold for the specified pointer array; must be a concrete type in the <em>Object</em> class;
+ also if it has pointer/allocatable components, those components must not yet be allocated.</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              procedure(IfaceSetObjPtr)
+            </td>
+<td></td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>SetObjPtr</strong></td>
+            <td>
+                <p>a procedure to set a pointer array in the <em>Object</em> class to the targeted byte array</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(<a href='../type/object.html'>Object</a>),
+            </td>
+<td>intent(out),</td>
+              <td></td>            <td>
+              POINTER
+            </td>
+            <td>::</td>
+            <td><strong>DatPtr</strong>(:)</td>
+            <td>
+                <p>A 1-D pointer array</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              integer(kind=kInt32),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Size</strong></td>
+            <td>
+                <p>size of the array requested; must be positive</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              integer(kind=kInt32),
+            </td>
+<td>intent(in),</td>
+              <td>optional</td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>StartID</strong></td>
+            <td>
+                <p>starting index of A</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+    <h4>
+    Return Value
+    <small>type(<a href='../type/ptrhandle.html'>PtrHandle</a>)</small>
+    </h4>
+    <p>pointer handle</p>
+
+        </li>
+    </ul>
+  </div>
+
+          </div>
+          <div class="row">
+              <div class="card mt-3">
+    <div class="card-header codesum">
+      <span class="anchor" id="boundprocedure-memresize"></span>
+      <h3>
+          generic, public ::
+  <strong>MemResize</strong> => SafePtrAlloc_MemResize_Character, SafePtrAlloc_MemResize_Int8, SafePtrAlloc_MemResize_Int16, SafePtrAlloc_MemResize_Int32, SafePtrAlloc_MemResize_Int64, SafePtrAlloc_MemResize_RealSP, SafePtrAlloc_MemResize_RealDP, SafePtrAlloc_MemResize_RealQP, SafePtrAlloc_MemResize_CmpxSP, SafePtrAlloc_MemResize_CmpxDP, SafePtrAlloc_MemResize_CmpxQP, SafePtrAlloc_MemResize_Logical, SafePtrAlloc_MemResize_Object
+        
+      </h3>
+    </div>
+      <div class="card-body">
+        
+        <p><strong>Type-Bound Subroutine</strong>: MemResize <br>
+ <strong>Purpose</strong>:  To resize the storage of the specified pointer array. <br>
+ <strong>Usage</strong>: <br>
+  ! for any intrinsic types <br>
+  ---&gt;    CALL Allocator%MemResize(Handle, AnyPtr, NewSize) <br>
+  ! for any derived types in the <em>Object</em> class <br>
+  ---&gt;    CALL Allocator%MemResize(ObjMold, SetObjPtr, Handle, ObjPtr, NewSize) <br></p>
+      </div>
+    <ul class="list-group">
+        <li class="list-group-item">
+                  <h3>
+    private  subroutine SafePtrAlloc_MemResize_Character(Allocator, Handle, DatPtr, NewSize)  
+</h3>
+
+  <p>To resize the storage of the specified pointer array.</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(<a href='../type/safeptralloc.html'>SafePtrAlloc</a>),
+            </td>
+<td>intent(inout)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Allocator</strong></td>
+            <td>
+                <p><em>SafePtrAlloc</em> object</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              type(<a href='../type/ptrhandle.html'>PtrHandle</a>),
+            </td>
+<td>intent(inout)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Handle</strong></td>
+            <td>
+                <p>pointer handle; must match the array</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              character(kind=kChar, len=:),
+            </td>
+<td>intent(inout),</td>
+              <td></td>            <td>
+              POINTER
+            </td>
+            <td>::</td>
+            <td><strong>DatPtr</strong>(:)</td>
+            <td>
+                <p>A 1-D pointer array</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              integer(kind=kInt32),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>NewSize</strong></td>
+            <td>
+                <p>new size of the array; must be positive</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+        </li>
+        <li class="list-group-item">
+                  <h3>
+    private  subroutine SafePtrAlloc_MemResize_Int8(Allocator, Handle, DatPtr, NewSize)  
+</h3>
+
+  <p>To resize the storage of the specified pointer array.</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(<a href='../type/safeptralloc.html'>SafePtrAlloc</a>),
+            </td>
+<td>intent(inout)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Allocator</strong></td>
+            <td>
+                <p><em>SafePtrAlloc</em> object</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              type(<a href='../type/ptrhandle.html'>PtrHandle</a>),
+            </td>
+<td>intent(inout)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Handle</strong></td>
+            <td>
+                <p>pointer handle; must match the array</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              integer(kind=kInt8),
+            </td>
+<td>intent(inout),</td>
+              <td></td>            <td>
+              POINTER
+            </td>
+            <td>::</td>
+            <td><strong>DatPtr</strong>(:)</td>
+            <td>
+                <p>A 1-D pointer array</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              integer(kind=kInt32),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>NewSize</strong></td>
+            <td>
+                <p>new size of the array; must be positive</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+        </li>
+        <li class="list-group-item">
+                  <h3>
+    private  subroutine SafePtrAlloc_MemResize_Int16(Allocator, Handle, DatPtr, NewSize)  
+</h3>
+
+  <p>To resize the storage of the specified pointer array.</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(<a href='../type/safeptralloc.html'>SafePtrAlloc</a>),
+            </td>
+<td>intent(inout)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Allocator</strong></td>
+            <td>
+                <p><em>SafePtrAlloc</em> object</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              type(<a href='../type/ptrhandle.html'>PtrHandle</a>),
+            </td>
+<td>intent(inout)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Handle</strong></td>
+            <td>
+                <p>pointer handle; must match the array</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              integer(kind=kInt16),
+            </td>
+<td>intent(inout),</td>
+              <td></td>            <td>
+              POINTER
+            </td>
+            <td>::</td>
+            <td><strong>DatPtr</strong>(:)</td>
+            <td>
+                <p>A 1-D pointer array</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              integer(kind=kInt32),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>NewSize</strong></td>
+            <td>
+                <p>new size of the array; must be positive</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+        </li>
+        <li class="list-group-item">
+                  <h3>
+    private  subroutine SafePtrAlloc_MemResize_Int32(Allocator, Handle, DatPtr, NewSize)  
+</h3>
+
+  <p>To resize the storage of the specified pointer array.</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(<a href='../type/safeptralloc.html'>SafePtrAlloc</a>),
+            </td>
+<td>intent(inout)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Allocator</strong></td>
+            <td>
+                <p><em>SafePtrAlloc</em> object</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              type(<a href='../type/ptrhandle.html'>PtrHandle</a>),
+            </td>
+<td>intent(inout)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Handle</strong></td>
+            <td>
+                <p>pointer handle; must match the array</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              integer(kind=kInt32),
+            </td>
+<td>intent(inout),</td>
+              <td></td>            <td>
+              POINTER
+            </td>
+            <td>::</td>
+            <td><strong>DatPtr</strong>(:)</td>
+            <td>
+                <p>A 1-D pointer array</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              integer(kind=kInt32),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>NewSize</strong></td>
+            <td>
+                <p>new size of the array; must be positive</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+        </li>
+        <li class="list-group-item">
+                  <h3>
+    private  subroutine SafePtrAlloc_MemResize_Int64(Allocator, Handle, DatPtr, NewSize)  
+</h3>
+
+  <p>To resize the storage of the specified pointer array.</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(<a href='../type/safeptralloc.html'>SafePtrAlloc</a>),
+            </td>
+<td>intent(inout)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Allocator</strong></td>
+            <td>
+                <p><em>SafePtrAlloc</em> object</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              type(<a href='../type/ptrhandle.html'>PtrHandle</a>),
+            </td>
+<td>intent(inout)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Handle</strong></td>
+            <td>
+                <p>pointer handle; must match the array</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              integer(kind=kInt64),
+            </td>
+<td>intent(inout),</td>
+              <td></td>            <td>
+              POINTER
+            </td>
+            <td>::</td>
+            <td><strong>DatPtr</strong>(:)</td>
+            <td>
+                <p>A 1-D pointer array</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              integer(kind=kInt32),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>NewSize</strong></td>
+            <td>
+                <p>new size of the array; must be positive</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+        </li>
+        <li class="list-group-item">
+                  <h3>
+    private  subroutine SafePtrAlloc_MemResize_RealSP(Allocator, Handle, DatPtr, NewSize)  
+</h3>
+
+  <p>To resize the storage of the specified pointer array.</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(<a href='../type/safeptralloc.html'>SafePtrAlloc</a>),
+            </td>
+<td>intent(inout)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Allocator</strong></td>
+            <td>
+                <p><em>SafePtrAlloc</em> object</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              type(<a href='../type/ptrhandle.html'>PtrHandle</a>),
+            </td>
+<td>intent(inout)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Handle</strong></td>
+            <td>
+                <p>pointer handle; must match the array</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              real(kind=kSingle),
+            </td>
+<td>intent(inout),</td>
+              <td></td>            <td>
+              POINTER
+            </td>
+            <td>::</td>
+            <td><strong>DatPtr</strong>(:)</td>
+            <td>
+                <p>A 1-D pointer array</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              integer(kind=kInt32),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>NewSize</strong></td>
+            <td>
+                <p>new size of the array; must be positive</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+        </li>
+        <li class="list-group-item">
+                  <h3>
+    private  subroutine SafePtrAlloc_MemResize_RealDP(Allocator, Handle, DatPtr, NewSize)  
+</h3>
+
+  <p>To resize the storage of the specified pointer array.</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(<a href='../type/safeptralloc.html'>SafePtrAlloc</a>),
+            </td>
+<td>intent(inout)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Allocator</strong></td>
+            <td>
+                <p><em>SafePtrAlloc</em> object</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              type(<a href='../type/ptrhandle.html'>PtrHandle</a>),
+            </td>
+<td>intent(inout)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Handle</strong></td>
+            <td>
+                <p>pointer handle; must match the array</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              real(kind=kDouble),
+            </td>
+<td>intent(inout),</td>
+              <td></td>            <td>
+              POINTER
+            </td>
+            <td>::</td>
+            <td><strong>DatPtr</strong>(:)</td>
+            <td>
+                <p>A 1-D pointer array</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              integer(kind=kInt32),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>NewSize</strong></td>
+            <td>
+                <p>new size of the array; must be positive</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+        </li>
+        <li class="list-group-item">
+                  <h3>
+    private  subroutine SafePtrAlloc_MemResize_RealQP(Allocator, Handle, DatPtr, NewSize)  
+</h3>
+
+  <p>To resize the storage of the specified pointer array.</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(<a href='../type/safeptralloc.html'>SafePtrAlloc</a>),
+            </td>
+<td>intent(inout)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Allocator</strong></td>
+            <td>
+                <p><em>SafePtrAlloc</em> object</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              type(<a href='../type/ptrhandle.html'>PtrHandle</a>),
+            </td>
+<td>intent(inout)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Handle</strong></td>
+            <td>
+                <p>pointer handle; must match the array</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              real(kind=kQuad),
+            </td>
+<td>intent(inout),</td>
+              <td></td>            <td>
+              POINTER
+            </td>
+            <td>::</td>
+            <td><strong>DatPtr</strong>(:)</td>
+            <td>
+                <p>A 1-D pointer array</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              integer(kind=kInt32),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>NewSize</strong></td>
+            <td>
+                <p>new size of the array; must be positive</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+        </li>
+        <li class="list-group-item">
+                  <h3>
+    private  subroutine SafePtrAlloc_MemResize_CmpxSP(Allocator, Handle, DatPtr, NewSize)  
+</h3>
+
+  <p>To resize the storage of the specified pointer array.</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(<a href='../type/safeptralloc.html'>SafePtrAlloc</a>),
+            </td>
+<td>intent(inout)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Allocator</strong></td>
+            <td>
+                <p><em>SafePtrAlloc</em> object</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              type(<a href='../type/ptrhandle.html'>PtrHandle</a>),
+            </td>
+<td>intent(inout)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Handle</strong></td>
+            <td>
+                <p>pointer handle; must match the array</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              complex(kind=kSingle),
+            </td>
+<td>intent(inout),</td>
+              <td></td>            <td>
+              POINTER
+            </td>
+            <td>::</td>
+            <td><strong>DatPtr</strong>(:)</td>
+            <td>
+                <p>A 1-D pointer array</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              integer(kind=kInt32),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>NewSize</strong></td>
+            <td>
+                <p>new size of the array; must be positive</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+        </li>
+        <li class="list-group-item">
+                  <h3>
+    private  subroutine SafePtrAlloc_MemResize_CmpxDP(Allocator, Handle, DatPtr, NewSize)  
+</h3>
+
+  <p>To resize the storage of the specified pointer array.</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(<a href='../type/safeptralloc.html'>SafePtrAlloc</a>),
+            </td>
+<td>intent(inout)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Allocator</strong></td>
+            <td>
+                <p><em>SafePtrAlloc</em> object</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              type(<a href='../type/ptrhandle.html'>PtrHandle</a>),
+            </td>
+<td>intent(inout)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Handle</strong></td>
+            <td>
+                <p>pointer handle; must match the array</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              complex(kind=kDouble),
+            </td>
+<td>intent(inout),</td>
+              <td></td>            <td>
+              POINTER
+            </td>
+            <td>::</td>
+            <td><strong>DatPtr</strong>(:)</td>
+            <td>
+                <p>A 1-D pointer array</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              integer(kind=kInt32),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>NewSize</strong></td>
+            <td>
+                <p>new size of the array; must be positive</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+        </li>
+        <li class="list-group-item">
+                  <h3>
+    private  subroutine SafePtrAlloc_MemResize_CmpxQP(Allocator, Handle, DatPtr, NewSize)  
+</h3>
+
+  <p>To resize the storage of the specified pointer array.</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(<a href='../type/safeptralloc.html'>SafePtrAlloc</a>),
+            </td>
+<td>intent(inout)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Allocator</strong></td>
+            <td>
+                <p><em>SafePtrAlloc</em> object</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              type(<a href='../type/ptrhandle.html'>PtrHandle</a>),
+            </td>
+<td>intent(inout)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Handle</strong></td>
+            <td>
+                <p>pointer handle; must match the array</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              complex(kind=kQuad),
+            </td>
+<td>intent(inout),</td>
+              <td></td>            <td>
+              POINTER
+            </td>
+            <td>::</td>
+            <td><strong>DatPtr</strong>(:)</td>
+            <td>
+                <p>A 1-D pointer array</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              integer(kind=kInt32),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>NewSize</strong></td>
+            <td>
+                <p>new size of the array; must be positive</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+        </li>
+        <li class="list-group-item">
+                  <h3>
+    private  subroutine SafePtrAlloc_MemResize_Logical(Allocator, Handle, DatPtr, NewSize)  
+</h3>
+
+  <p>To resize the storage of the specified pointer array.</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(<a href='../type/safeptralloc.html'>SafePtrAlloc</a>),
+            </td>
+<td>intent(inout)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Allocator</strong></td>
+            <td>
+                <p><em>SafePtrAlloc</em> object</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              type(<a href='../type/ptrhandle.html'>PtrHandle</a>),
+            </td>
+<td>intent(inout)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Handle</strong></td>
+            <td>
+                <p>pointer handle; must match the array</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              logical,
+            </td>
+<td>intent(inout),</td>
+              <td></td>            <td>
+              POINTER
+            </td>
+            <td>::</td>
+            <td><strong>DatPtr</strong>(:)</td>
+            <td>
+                <p>A 1-D pointer array</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              integer(kind=kInt32),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>NewSize</strong></td>
+            <td>
+                <p>new size of the array; must be positive</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+        </li>
+        <li class="list-group-item">
+                  <h3>
+    private  subroutine SafePtrAlloc_MemResize_Object(Allocator, ObjMold, SetObjPtr, Handle, DatPtr, NewSize)  
+</h3>
+
+  <p>To resize the storage of the specified pointer array.</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(<a href='../type/safeptralloc.html'>SafePtrAlloc</a>),
+            </td>
+<td>intent(inout)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Allocator</strong></td>
+            <td>
+                <p><em>SafePtrAlloc</em> object</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(<a href='../type/object.html'>Object</a>),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>ObjMold</strong></td>
+            <td>
+                <p>a mold for the specified pointer array; must be a concrete type in the <em>Object</em> class;
+ also if it has pointer/allocatable components, those components must not yet be allocated.</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              procedure(IfaceSetObjPtr)
+            </td>
+<td></td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>SetObjPtr</strong></td>
+            <td>
+                <p>a procedure to set a pointer array in the <em>Object</em> class to the targeted byte array</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              type(<a href='../type/ptrhandle.html'>PtrHandle</a>),
+            </td>
+<td>intent(inout)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Handle</strong></td>
+            <td>
+                <p>pointer handle; must match the array</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(<a href='../type/object.html'>Object</a>),
+            </td>
+<td>intent(inout),</td>
+              <td></td>            <td>
+              POINTER
+            </td>
+            <td>::</td>
+            <td><strong>DatPtr</strong>(:)</td>
+            <td>
+                <p>A 1-D pointer array</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              integer(kind=kInt32),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>NewSize</strong></td>
+            <td>
+                <p>new size of the array; must be positive</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+        </li>
+    </ul>
+  </div>
+
+          </div>
+      </section>
+
+    <section>
+    <h3><span class="anchor" id="src"></span>Source Code</h3>
+    <div class="hl codehilite"><pre><span></span><span class="w">    </span><span class="k">TYPE </span><span class="n">SafePtrAlloc</span>
+<span class="w">        </span><span class="k">PRIVATE</span>
+<span class="w">        </span><span class="c">!&gt; the memory storage pool</span>
+<span class="w">        </span><span class="k">TYPE</span><span class="p">(</span><span class="n">MemPool</span><span class="p">)</span><span class="w">   </span><span class="kd">::</span><span class="w"> </span><span class="n">Pool</span>
+<span class="w">        </span><span class="c">!&gt; the free block list to track the memory storage pool</span>
+<span class="w">        </span><span class="k">TYPE</span><span class="p">(</span><span class="n">FreeBlockList</span><span class="p">)</span><span class="w">  </span><span class="kd">::</span><span class="w"> </span><span class="n">List</span>
+<span class="w">        </span><span class="c">!&gt; the initial block size</span>
+<span class="w">        </span><span class="n">tIndex</span><span class="w">          </span><span class="kd">::</span><span class="w"> </span><span class="n">BlockSize</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">DefaultBlockSize</span>
+<span class="w">        </span><span class="c">!&gt; the number of times that the memory storage pool allocates</span>
+<span class="w">        </span><span class="n">tSInt32</span><span class="w">         </span><span class="kd">::</span><span class="w"> </span><span class="n">NumAlloc</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">-</span><span class="mi">1</span>
+<span class="w">    </span><span class="k">CONTAINS</span>
+<span class="w">        </span><span class="c">!----------------------------------------------------------------------</span>
+<span class="w">        </span><span class="c">!&gt; **Type-Bound Function**: Reserve &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Purpose**:  To reserve the storage according to the specified size. &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Usage**: &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!   ---&gt;    Handle = Allocator%Reserve(ByteSize) &lt;br&gt;</span>
+<span class="w">        </span><span class="k">PROCEDURE</span><span class="p">,</span><span class="w"> </span><span class="k">PRIVATE</span><span class="w">  </span><span class="kd">::</span><span class="w"> </span><span class="n">Reserve</span><span class="w">      </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">SafePtrAlloc_Reserve</span>
+<span class="w">        </span><span class="c">!&gt; **Type-Bound Function**: Retrieve &lt;br&gt;</span>
+<span class="w">        </span><span class="c">! **Purpose**:  To get a pointer to the storage according to the specified handle. &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Usage**: &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!   ---&gt;    DatPtr =&gt; Allocator%Retrieve(Handle) &lt;br&gt;</span>
+<span class="w">        </span><span class="k">PROCEDURE</span><span class="p">,</span><span class="w"> </span><span class="k">PRIVATE</span><span class="w">  </span><span class="kd">::</span><span class="w"> </span><span class="n">Retrieve</span><span class="w">     </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">SafePtrAlloc_Retrieve</span>
+<span class="w">        </span><span class="c">!&gt; **Type-Bound Subroutine**: Release &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Purpose**:  To release the storage according to the specified handle. &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Usage**: &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!   ---&gt;    CALL Allocator%Release(Handle)</span>
+<span class="w">        </span><span class="k">PROCEDURE</span><span class="p">,</span><span class="w"> </span><span class="k">PRIVATE</span><span class="w">  </span><span class="kd">::</span><span class="w"> </span><span class="n">Release</span><span class="w">     </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">SafePtrAlloc_Release</span>
+<span class="w">        </span><span class="c">!----------------------------------------------------------------------</span>
+<span class="w">        </span><span class="k">PROCEDURE</span><span class="p">,</span><span class="w"> </span><span class="k">PRIVATE</span><span class="w">  </span><span class="kd">::</span><span class="w"> </span><span class="n">SafePtrAlloc_MemFree_Character</span>
+<span class="w">        </span><span class="k">PROCEDURE</span><span class="p">,</span><span class="w"> </span><span class="k">PRIVATE</span><span class="w">  </span><span class="kd">::</span><span class="w"> </span><span class="n">SafePtrAlloc_MemAlloc_Character</span>
+<span class="w">        </span><span class="k">PROCEDURE</span><span class="p">,</span><span class="w"> </span><span class="k">PRIVATE</span><span class="w">  </span><span class="kd">::</span><span class="w"> </span><span class="n">SafePtrAlloc_MemResize_Character</span>
+<span class="w">        </span><span class="k">PROCEDURE</span><span class="p">,</span><span class="w"> </span><span class="k">PRIVATE</span><span class="w">  </span><span class="kd">::</span><span class="w"> </span><span class="n">SafePtrAlloc_MemFree_Int8</span>
+<span class="w">        </span><span class="k">PROCEDURE</span><span class="p">,</span><span class="w"> </span><span class="k">PRIVATE</span><span class="w">  </span><span class="kd">::</span><span class="w"> </span><span class="n">SafePtrAlloc_MemAlloc_Int8</span>
+<span class="w">        </span><span class="k">PROCEDURE</span><span class="p">,</span><span class="w"> </span><span class="k">PRIVATE</span><span class="w">  </span><span class="kd">::</span><span class="w"> </span><span class="n">SafePtrAlloc_MemResize_Int8</span>
+<span class="w">        </span><span class="k">PROCEDURE</span><span class="p">,</span><span class="w"> </span><span class="k">PRIVATE</span><span class="w">  </span><span class="kd">::</span><span class="w"> </span><span class="n">SafePtrAlloc_MemFree_Int16</span>
+<span class="w">        </span><span class="k">PROCEDURE</span><span class="p">,</span><span class="w"> </span><span class="k">PRIVATE</span><span class="w">  </span><span class="kd">::</span><span class="w"> </span><span class="n">SafePtrAlloc_MemAlloc_Int16</span>
+<span class="w">        </span><span class="k">PROCEDURE</span><span class="p">,</span><span class="w"> </span><span class="k">PRIVATE</span><span class="w">  </span><span class="kd">::</span><span class="w"> </span><span class="n">SafePtrAlloc_MemResize_Int16</span>
+<span class="w">        </span><span class="k">PROCEDURE</span><span class="p">,</span><span class="w"> </span><span class="k">PRIVATE</span><span class="w">  </span><span class="kd">::</span><span class="w"> </span><span class="n">SafePtrAlloc_MemFree_Int32</span>
+<span class="w">        </span><span class="k">PROCEDURE</span><span class="p">,</span><span class="w"> </span><span class="k">PRIVATE</span><span class="w">  </span><span class="kd">::</span><span class="w"> </span><span class="n">SafePtrAlloc_MemAlloc_Int32</span>
+<span class="w">        </span><span class="k">PROCEDURE</span><span class="p">,</span><span class="w"> </span><span class="k">PRIVATE</span><span class="w">  </span><span class="kd">::</span><span class="w"> </span><span class="n">SafePtrAlloc_MemResize_Int32</span>
+<span class="w">        </span><span class="k">PROCEDURE</span><span class="p">,</span><span class="w"> </span><span class="k">PRIVATE</span><span class="w">  </span><span class="kd">::</span><span class="w"> </span><span class="n">SafePtrAlloc_MemFree_Int64</span>
+<span class="w">        </span><span class="k">PROCEDURE</span><span class="p">,</span><span class="w"> </span><span class="k">PRIVATE</span><span class="w">  </span><span class="kd">::</span><span class="w"> </span><span class="n">SafePtrAlloc_MemAlloc_Int64</span>
+<span class="w">        </span><span class="k">PROCEDURE</span><span class="p">,</span><span class="w"> </span><span class="k">PRIVATE</span><span class="w">  </span><span class="kd">::</span><span class="w"> </span><span class="n">SafePtrAlloc_MemResize_Int64</span>
+<span class="w">        </span><span class="k">PROCEDURE</span><span class="p">,</span><span class="w"> </span><span class="k">PRIVATE</span><span class="w">  </span><span class="kd">::</span><span class="w"> </span><span class="n">SafePtrAlloc_MemFree_RealSP</span>
+<span class="w">        </span><span class="k">PROCEDURE</span><span class="p">,</span><span class="w"> </span><span class="k">PRIVATE</span><span class="w">  </span><span class="kd">::</span><span class="w"> </span><span class="n">SafePtrAlloc_MemAlloc_RealSP</span>
+<span class="w">        </span><span class="k">PROCEDURE</span><span class="p">,</span><span class="w"> </span><span class="k">PRIVATE</span><span class="w">  </span><span class="kd">::</span><span class="w"> </span><span class="n">SafePtrAlloc_MemResize_RealSP</span>
+<span class="w">        </span><span class="k">PROCEDURE</span><span class="p">,</span><span class="w"> </span><span class="k">PRIVATE</span><span class="w">  </span><span class="kd">::</span><span class="w"> </span><span class="n">SafePtrAlloc_MemFree_RealDP</span>
+<span class="w">        </span><span class="k">PROCEDURE</span><span class="p">,</span><span class="w"> </span><span class="k">PRIVATE</span><span class="w">  </span><span class="kd">::</span><span class="w"> </span><span class="n">SafePtrAlloc_MemAlloc_RealDP</span>
+<span class="w">        </span><span class="k">PROCEDURE</span><span class="p">,</span><span class="w"> </span><span class="k">PRIVATE</span><span class="w">  </span><span class="kd">::</span><span class="w"> </span><span class="n">SafePtrAlloc_MemResize_RealDP</span>
+<span class="w">        </span><span class="k">PROCEDURE</span><span class="p">,</span><span class="w"> </span><span class="k">PRIVATE</span><span class="w">  </span><span class="kd">::</span><span class="w"> </span><span class="n">SafePtrAlloc_MemFree_RealQP</span>
+<span class="w">        </span><span class="k">PROCEDURE</span><span class="p">,</span><span class="w"> </span><span class="k">PRIVATE</span><span class="w">  </span><span class="kd">::</span><span class="w"> </span><span class="n">SafePtrAlloc_MemAlloc_RealQP</span>
+<span class="w">        </span><span class="k">PROCEDURE</span><span class="p">,</span><span class="w"> </span><span class="k">PRIVATE</span><span class="w">  </span><span class="kd">::</span><span class="w"> </span><span class="n">SafePtrAlloc_MemResize_RealQP</span>
+<span class="w">        </span><span class="k">PROCEDURE</span><span class="p">,</span><span class="w"> </span><span class="k">PRIVATE</span><span class="w">  </span><span class="kd">::</span><span class="w"> </span><span class="n">SafePtrAlloc_MemFree_CmpxSP</span>
+<span class="w">        </span><span class="k">PROCEDURE</span><span class="p">,</span><span class="w"> </span><span class="k">PRIVATE</span><span class="w">  </span><span class="kd">::</span><span class="w"> </span><span class="n">SafePtrAlloc_MemAlloc_CmpxSP</span>
+<span class="w">        </span><span class="k">PROCEDURE</span><span class="p">,</span><span class="w"> </span><span class="k">PRIVATE</span><span class="w">  </span><span class="kd">::</span><span class="w"> </span><span class="n">SafePtrAlloc_MemResize_CmpxSP</span>
+<span class="w">        </span><span class="k">PROCEDURE</span><span class="p">,</span><span class="w"> </span><span class="k">PRIVATE</span><span class="w">  </span><span class="kd">::</span><span class="w"> </span><span class="n">SafePtrAlloc_MemFree_CmpxDP</span>
+<span class="w">        </span><span class="k">PROCEDURE</span><span class="p">,</span><span class="w"> </span><span class="k">PRIVATE</span><span class="w">  </span><span class="kd">::</span><span class="w"> </span><span class="n">SafePtrAlloc_MemAlloc_CmpxDP</span>
+<span class="w">        </span><span class="k">PROCEDURE</span><span class="p">,</span><span class="w"> </span><span class="k">PRIVATE</span><span class="w">  </span><span class="kd">::</span><span class="w"> </span><span class="n">SafePtrAlloc_MemResize_CmpxDP</span>
+<span class="w">        </span><span class="k">PROCEDURE</span><span class="p">,</span><span class="w"> </span><span class="k">PRIVATE</span><span class="w">  </span><span class="kd">::</span><span class="w"> </span><span class="n">SafePtrAlloc_MemFree_CmpxQP</span>
+<span class="w">        </span><span class="k">PROCEDURE</span><span class="p">,</span><span class="w"> </span><span class="k">PRIVATE</span><span class="w">  </span><span class="kd">::</span><span class="w"> </span><span class="n">SafePtrAlloc_MemAlloc_CmpxQP</span>
+<span class="w">        </span><span class="k">PROCEDURE</span><span class="p">,</span><span class="w"> </span><span class="k">PRIVATE</span><span class="w">  </span><span class="kd">::</span><span class="w"> </span><span class="n">SafePtrAlloc_MemResize_CmpxQP</span>
+<span class="w">        </span><span class="k">PROCEDURE</span><span class="p">,</span><span class="w"> </span><span class="k">PRIVATE</span><span class="w">  </span><span class="kd">::</span><span class="w"> </span><span class="n">SafePtrAlloc_MemFree_Logical</span>
+<span class="w">        </span><span class="k">PROCEDURE</span><span class="p">,</span><span class="w"> </span><span class="k">PRIVATE</span><span class="w">  </span><span class="kd">::</span><span class="w"> </span><span class="n">SafePtrAlloc_MemAlloc_Logical</span>
+<span class="w">        </span><span class="k">PROCEDURE</span><span class="p">,</span><span class="w"> </span><span class="k">PRIVATE</span><span class="w">  </span><span class="kd">::</span><span class="w"> </span><span class="n">SafePtrAlloc_MemResize_Logical</span>
+<span class="w">        </span><span class="k">PROCEDURE</span><span class="p">,</span><span class="w"> </span><span class="k">PRIVATE</span><span class="w">  </span><span class="kd">::</span><span class="w"> </span><span class="n">SafePtrAlloc_MemFree_Object</span>
+<span class="w">        </span><span class="k">PROCEDURE</span><span class="p">,</span><span class="w"> </span><span class="k">PRIVATE</span><span class="w">  </span><span class="kd">::</span><span class="w"> </span><span class="n">SafePtrAlloc_MemAlloc_Object</span>
+<span class="w">        </span><span class="k">PROCEDURE</span><span class="p">,</span><span class="w"> </span><span class="k">PRIVATE</span><span class="w">  </span><span class="kd">::</span><span class="w"> </span><span class="n">SafePtrAlloc_MemResize_Object</span>
+<span class="w">        </span><span class="c">!----------------------------------------------------------------------</span>
+<span class="w">        </span><span class="c">!&gt; **Type-Bound Subroutine**: Construct &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Purpose**:  To construct a new allocator based on the optionally specified block size. &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Usage**: &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!   ---&gt;    CALL Allocator%Construct() &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!   ---&gt;    CALL Allocator%Construct(BlockSize) &lt;br&gt;</span>
+<span class="w">        </span><span class="k">PROCEDURE</span><span class="w">   </span><span class="kd">::</span><span class="w"> </span><span class="n">Construct</span><span class="w">    </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">SafePtrAlloc_Construct</span>
+<span class="w">        </span><span class="c">!&gt; **Type-Bound Subroutine**: Destruct &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Purpose**:  To destruct the allocator. &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Usage**: &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!   ---&gt;    CALL Allocator%Destruct()</span>
+<span class="w">        </span><span class="k">PROCEDURE</span><span class="w">   </span><span class="kd">::</span><span class="w"> </span><span class="n">Destruct</span><span class="w">     </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">SafePtrAlloc_Destruct</span>
+<span class="w">        </span><span class="c">!&gt; **Type-Bound Subroutine**: MemFree &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Purpose**:  To release the storage according to the specified handle and the pointer. &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Usage**: &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!   ---&gt;    CALL Allocator%MemFree(Handle, AnyPtr)</span>
+<span class="w">        </span><span class="k">GENERIC</span><span class="w">     </span><span class="kd">::</span><span class="w"> </span><span class="n">MemFree</span><span class="w">      </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">SafePtrAlloc_MemFree_Character</span><span class="p">,</span><span class="w">  </span><span class="p">&amp;</span>
+<span class="w">                                       </span><span class="n">SafePtrAlloc_MemFree_Int8</span><span class="p">,</span><span class="w">       </span><span class="p">&amp;</span>
+<span class="w">                                       </span><span class="n">SafePtrAlloc_MemFree_Int16</span><span class="p">,</span><span class="w">      </span><span class="p">&amp;</span>
+<span class="w">                                       </span><span class="n">SafePtrAlloc_MemFree_Int32</span><span class="p">,</span><span class="w">      </span><span class="p">&amp;</span>
+<span class="w">                                       </span><span class="n">SafePtrAlloc_MemFree_Int64</span><span class="p">,</span><span class="w">      </span><span class="p">&amp;</span>
+<span class="w">                                       </span><span class="n">SafePtrAlloc_MemFree_RealSP</span><span class="p">,</span><span class="w">     </span><span class="p">&amp;</span>
+<span class="w">                                       </span><span class="n">SafePtrAlloc_MemFree_RealDP</span><span class="p">,</span><span class="w">     </span><span class="p">&amp;</span>
+<span class="w">                                       </span><span class="n">SafePtrAlloc_MemFree_RealQP</span><span class="p">,</span><span class="w">     </span><span class="p">&amp;</span>
+<span class="w">                                       </span><span class="n">SafePtrAlloc_MemFree_CmpxSP</span><span class="p">,</span><span class="w">     </span><span class="p">&amp;</span>
+<span class="w">                                       </span><span class="n">SafePtrAlloc_MemFree_CmpxDP</span><span class="p">,</span><span class="w">     </span><span class="p">&amp;</span>
+<span class="w">                                       </span><span class="n">SafePtrAlloc_MemFree_CmpxQP</span><span class="p">,</span><span class="w">     </span><span class="p">&amp;</span>
+<span class="w">                                       </span><span class="n">SafePtrAlloc_MemFree_Logical</span><span class="p">,</span><span class="w">    </span><span class="p">&amp;</span>
+<span class="w">                                       </span><span class="n">SafePtrAlloc_MemFree_Object</span>
+<span class="w">        </span><span class="c">!&gt; **Type-Bound Function**: MemAlloc &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Purpose**:  To allocate the storage for the specified pointer array. &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Usage**: &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!   ! for any intrinsic types except the CHARACTER type &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!   ---&gt;    Handle = Allocator%MemAlloc(AnyPtr, Size) &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!   ---&gt;    Handle = Allocator%MemAlloc(AnyPtr, Size, StartID) &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!   ! for the CHARACTER type &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!   ---&gt;    Handle = Allocator%MemAlloc(CharLen, CharPtr, Size) &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!   ---&gt;    Handle = Allocator%MemAlloc(CharLen, CharPtr, Size, StartID) &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!   ! for any derived types in the *Object* class &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!   ---&gt;    Handle = Allocator%MemAlloc(ObjMold, SetObjPtr, ObjPtr, Size) &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!   ---&gt;    Handle = Allocator%MemAlloc(ObjMold, SetObjPtr, ObjPtr, Size, StartID) &lt;br&gt;</span>
+<span class="w">        </span><span class="k">GENERIC</span><span class="w">     </span><span class="kd">::</span><span class="w"> </span><span class="n">MemAlloc</span><span class="w">     </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">SafePtrAlloc_MemAlloc_Character</span><span class="p">,</span><span class="w">     </span><span class="p">&amp;</span>
+<span class="w">                                       </span><span class="n">SafePtrAlloc_MemAlloc_Int8</span><span class="p">,</span><span class="w">          </span><span class="p">&amp;</span>
+<span class="w">                                       </span><span class="n">SafePtrAlloc_MemAlloc_Int16</span><span class="p">,</span><span class="w">         </span><span class="p">&amp;</span>
+<span class="w">                                       </span><span class="n">SafePtrAlloc_MemAlloc_Int32</span><span class="p">,</span><span class="w">         </span><span class="p">&amp;</span>
+<span class="w">                                       </span><span class="n">SafePtrAlloc_MemAlloc_Int64</span><span class="p">,</span><span class="w">         </span><span class="p">&amp;</span>
+<span class="w">                                       </span><span class="n">SafePtrAlloc_MemAlloc_RealSP</span><span class="p">,</span><span class="w">        </span><span class="p">&amp;</span>
+<span class="w">                                       </span><span class="n">SafePtrAlloc_MemAlloc_RealDP</span><span class="p">,</span><span class="w">        </span><span class="p">&amp;</span>
+<span class="w">                                       </span><span class="n">SafePtrAlloc_MemAlloc_RealQP</span><span class="p">,</span><span class="w">        </span><span class="p">&amp;</span>
+<span class="w">                                       </span><span class="n">SafePtrAlloc_MemAlloc_CmpxSP</span><span class="p">,</span><span class="w">        </span><span class="p">&amp;</span>
+<span class="w">                                       </span><span class="n">SafePtrAlloc_MemAlloc_CmpxDP</span><span class="p">,</span><span class="w">        </span><span class="p">&amp;</span>
+<span class="w">                                       </span><span class="n">SafePtrAlloc_MemAlloc_CmpxQP</span><span class="p">,</span><span class="w">        </span><span class="p">&amp;</span>
+<span class="w">                                       </span><span class="n">SafePtrAlloc_MemAlloc_Logical</span><span class="p">,</span><span class="w">       </span><span class="p">&amp;</span>
+<span class="w">                                       </span><span class="n">SafePtrAlloc_MemAlloc_Object</span>
+<span class="w">        </span><span class="c">!&gt; **Type-Bound Subroutine**: MemResize &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Purpose**:  To resize the storage of the specified pointer array. &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Usage**: &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!   ! for any intrinsic types &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!   ---&gt;    CALL Allocator%MemResize(Handle, AnyPtr, NewSize) &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!   ! for any derived types in the *Object* class &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!   ---&gt;    CALL Allocator%MemResize(ObjMold, SetObjPtr, Handle, ObjPtr, NewSize) &lt;br&gt;</span>
+<span class="w">        </span><span class="k">GENERIC</span><span class="w">     </span><span class="kd">::</span><span class="w"> </span><span class="n">MemResize</span><span class="w">    </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">SafePtrAlloc_MemResize_Character</span><span class="p">,</span><span class="w">    </span><span class="p">&amp;</span>
+<span class="w">                                       </span><span class="n">SafePtrAlloc_MemResize_Int8</span><span class="p">,</span><span class="w">         </span><span class="p">&amp;</span>
+<span class="w">                                       </span><span class="n">SafePtrAlloc_MemResize_Int16</span><span class="p">,</span><span class="w">        </span><span class="p">&amp;</span>
+<span class="w">                                       </span><span class="n">SafePtrAlloc_MemResize_Int32</span><span class="p">,</span><span class="w">        </span><span class="p">&amp;</span>
+<span class="w">                                       </span><span class="n">SafePtrAlloc_MemResize_Int64</span><span class="p">,</span><span class="w">        </span><span class="p">&amp;</span>
+<span class="w">                                       </span><span class="n">SafePtrAlloc_MemResize_RealSP</span><span class="p">,</span><span class="w">       </span><span class="p">&amp;</span>
+<span class="w">                                       </span><span class="n">SafePtrAlloc_MemResize_RealDP</span><span class="p">,</span><span class="w">       </span><span class="p">&amp;</span>
+<span class="w">                                       </span><span class="n">SafePtrAlloc_MemResize_RealQP</span><span class="p">,</span><span class="w">       </span><span class="p">&amp;</span>
+<span class="w">                                       </span><span class="n">SafePtrAlloc_MemResize_CmpxSP</span><span class="p">,</span><span class="w">       </span><span class="p">&amp;</span>
+<span class="w">                                       </span><span class="n">SafePtrAlloc_MemResize_CmpxDP</span><span class="p">,</span><span class="w">       </span><span class="p">&amp;</span>
+<span class="w">                                       </span><span class="n">SafePtrAlloc_MemResize_CmpxQP</span><span class="p">,</span><span class="w">       </span><span class="p">&amp;</span>
+<span class="w">                                       </span><span class="n">SafePtrAlloc_MemResize_Logical</span><span class="p">,</span><span class="w">      </span><span class="p">&amp;</span>
+<span class="w">                                       </span><span class="n">SafePtrAlloc_MemResize_Object</span>
+<span class="w">        </span><span class="c">!----------------------------------------------------------------------</span>
+<span class="w">    </span><span class="k">END TYPE </span><span class="n">SafePtrAlloc</span>
+</pre></div>
+
+    </section>
+    
+    </div>
+  </div>
+
+      <hr>
+    </div> <!-- /container -->
+    <footer>
+      <div class="container">
+        <div class="row justify-content-between">
+          <div class="col"><p>eXPerimental Fortran Library (XpfLib) Documentation was developed by Niranama<br>&copy; 2024 
+</p>
+          </div>
+          <div class="col">
+            <p class="text-end">
+              Documentation generated by
+              <a href="https://github.com/Fortran-FOSS-Programmers/ford">FORD</a>
+            </p>
+          </div>
+        </div>
+        <br>
+      </div> <!-- /container -->
+    </footer>
+
+    <!-- Bootstrap core JavaScript -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>    
+
+    <!-- MathJax JavaScript
+             ================================================== -->
+             <!-- Placed at the end of the document so the pages load faster -->
+        <script type="text/x-mathjax-config">
+          MathJax.Hub.Config({
+          TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } },
+          jax: ['input/TeX','input/MathML','output/HTML-CSS'],
+          extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']
+          });
+        </script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+          <script src="../tipuesearch/tipuesearch_content.js"></script>
+          <script src="../tipuesearch/tipuesearch_set.js"></script>
+          <script src="../tipuesearch/tipuesearch.js"></script>
+
+  </body>
+</html>

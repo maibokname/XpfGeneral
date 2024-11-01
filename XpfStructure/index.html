@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta name="description" content="Experimental Fortran Package - Data Structures">
+    <meta name="author" content="Niranama" >
+    <link rel="icon" href="./favicon.png">
+
+    <title> eXPerimental Fortran Library (XpfLib) Documentation </title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link href="./css/pygments.css" rel="stylesheet">
+    <link href="./css/font-awesome.min.css" rel="stylesheet">
+    <link href="./css/local.css" rel="stylesheet">
+      <link  href="./tipuesearch/tipuesearch.css" rel="stylesheet">
+
+    <script src="https://code.jquery.com/jquery-3.7.0.slim.min.js" integrity="sha256-tG5mcZUtJsZvyKAxYLVXrmjKBVLd6VpVccqz/r4ypFE=" crossorigin="anonymous"></script>
+  </head>
+
+  <body>
+
+    <!-- Fixed navbar -->
+    <div class="container-fluid mb-sm-4 mb-xl-2">
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container">
+          <a class="navbar-brand" href="./index.html">eXPerimental Fortran Library (XpfLib) Documentation </a>
+          <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar"
+                  aria-expanded="false" aria-controls="navbar" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon">
+          </button>
+
+          <div id="navbar" class="navbar-collapse collapse">
+            <ul class="navbar-nav">
+                  <li class="nav-item">
+                    <a class="nav-link" href="./lists/files.html">Source Files</a>
+                  </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="./lists/modules.html">Modules</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="./lists/types.html">Derived Types</a>
+                </li>
+            </ul>
+              <div class="d-flex align-items-end flex-grow-1">
+                <form action="./search.html" role="search" class="ms-auto">
+                  <input type="text" class="form-control" aria-label="Search" placeholder="Search" name="q" id="tipue_search_input" autocomplete="off" required>
+                </form>
+              </div>
+          </div><!--/.nav-collapse -->
+        </div>
+      </nav>
+    </div>
+
+    <div class="container">
+      <!-- Main component for a primary marketing message or call to action -->
+      <div class="p-5 mb-4 bg-light border rounded-3" id="jumbotron">
+        <p>Experimental Fortran Package - Data Structures</p>
+        </p>
+      </div>
+
+      <div class="row" id='text'>
+        <div class=col-md-8>
+          <h1>eXPerimental Fortran Library (XpfLib) Documentation</h1>
+          <p>!+++ external: XpfBase=./XpfGeneral/XpfBase +++!</p>
+<h2><em>XpfStructure: eXPerimental Fortran Structure Package</em></h2>
+<p><strong><em>XpfStructure</em></strong> is an experimenal package written in Fortran.   It is a sub-package of the <strong><em>XpfGeneral</em></strong> package (a larger package within the <strong><em>XpfLib</em></strong> library), which contains a large collection of general-purpose modules.  The <em>XpfStructure</em> package consists of a large number of modules that implement data structures commonly found in computer science.  The package may be divided into two sub-packages: the <strong><em>Collection</em></strong> sub-package and the <strong><em>Container</em></strong> sub-package. </p>
+<h3>The Collection Sub-package</h3>
+<p>The <strong><em>Collection</em></strong> sub-package implements various common data structures including stack, queue, deque, list, set, priority queue, tree and hash table.  In this sub-package, each data structure is referred to as a <strong>collection</strong>, which is an object representing a group of objects.  By design, all collections in this sub-package can be considered as generic collections because the same collections can be used with objects of several different data types.  Some collections allow objects of any data type to be inserted whereas other collections may only allow objects of some specific data types to be inserted.  It is important to note that, by design, although each collection can be used with objects of several data types, it only allows objects of one specific type at a time.  To insert objects of different type, the collection must be destructed before it can be used to insert objects of another type.  This means that if a user have objects of two different types to be inserted into a collection type, he/she must also have two collection objects (of the same collection type), each collection object for objects of one particular type.</p>
+<p>The source code of the <em>Collection</em> sub-package is located in the <em>Collections</em> subfolder, which contains six subfolders.  A brief overview of the <em>Collection</em> sub-package is given below.</p>
+<ul>
+<li>
+<p>The <em>ADT</em> subfolder contains four modules that provide abstract derived types (ADT) that are employed as base types for all other collections in the sub-package.  The <em>BaseCollection</em> type defines an application programming interface (API) for various common operations of collections while the <em>BaseIterable</em> type, which is a direct subtype of the <em>BaseCollection</em> type defines additional operations for an iteration over items stored in a collection.  The <em>BaseSymTable</em> type, which is also a direct subtype of the <em>BaseCollection</em> type, defines an API for a symbol table (a collection that associates a <em>value</em> with a <em>key</em>).  The <em>OrderedSymTable</em> type extends the <em>BaseSymTable</em> type and defines addtional operations for an ordered symbol table.</p>
+</li>
+<li>
+<p>The <em>DynArr</em> subfolder consists of one module and four submodules.  The <em>MClass_DynamicArrays</em> module contains four concrete derived types that represent <em>dynamic-array-based</em> collections.  The <em>StackArray</em> type  represents a last-in-first-out (LIFO) stack while the <em>QueueArray</em> type represents a first-in-first-out (FIFO) queue.  The <em>DequeArray</em> type represents a double-ended queue (deque) and the <em>ListArray</em> type represents a list where an item can be added, removed or retrieved at the (valid) specified index.  All collections in this module employ a resizable array (or the so-called <em>dynamic array</em>) technique that can increase or decrease its size depending on the current collection size (number of stored items) relative to the current collection capacity.  The <em>MClass_DynamicArrays</em> module provide the interfaces for all aforementioned collections whereas each submodule  provides the actual implementation for each collection.</p>
+</li>
+<li>
+<p>Like the <em>DynArr</em> subfolder, the <em>LnkList</em> subfolder consists of one module and four submodules.  Similary, the <em>MClass_LinkedLists</em> module contains four concrete derived types that represent <em>linked-list-based</em> collections: the <em>StackLinked</em>, <em>QueueLinked</em>, <em>DequeLinked</em> and <em>ListLinked</em> types, which are functionally the same as those <em>dynamic-array-based</em> collections.  As the names suggested, all collections in this module employ a doubly-linked list implementation.  However, unlike conventional implementation, these collections utilize an intrusive linked-list container (available in the <strong><em>XpfBase</em></strong> package) as their component where the linked-list task is done by the intrusive container.</p>
+</li>
+<li>
+<p>The <em>PQueue</em> subfolder consists of two modules.  The <em>MClass_PQBinHeap</em> module provides the <em>PQBinHeap</em> type that can be used to represent either a max-priority queue or a min-priority queue.  The <em>PQBinHeap</em> type employs a binary heap implementation to provide operations for a priority queue.  The <em>MClass_PQMinMax</em> module provides the <em>PQMinMax</em> type, which represents a generalized priority queue.  The <em>PQMinMax</em> type employs a ordered array implementation to provide combined operations of a max-priority queue and a min-priority queue.</p>
+</li>
+<li>
+<p>The <em>Set</em> subfolder also consists of two modules. The <em>MClass_HashSet</em> module provides the <em>HashSet</em> type while the <em>MClass_TreeSet</em> module provides the <em>TreeSet</em> type.  The <em>HashSet</em> type employs an open-addressing hash table implementation to provide common operations for an unordered set.  The <em>TreeSet</em> type employs a balanced binary-search-tree (BST) implementation to provide common operations for an ordered set.  Like the <em>linked-list-based</em> collections, the <em>TreeSet</em> type utilizes an intrusive balanced tree container (also available in the <strong><em>XpfBase</em></strong> package) as its component where the balanced-tree task is done by the intrusive container.</p>
+</li>
+<li>
+<p>The <em>SymTab</em> subfolder consists of five modules that provide five derived types representing symbol tables.  The <em>HashMap</em> type employs an open-addressing hash table implementation to provide common operations for an unordered symbol table while both the <em>HashList</em> and the <em>HashTree</em> types employ a separate-chaining hash table implementation to provide common operations for an unordered symbol table.  Both the <em>HashList</em> and the <em>HashTree</em> types utilize an intrusive hash-table container (a different one for each type, also available in the <strong><em>XpfBase</em></strong> package) as its component where the hash-table task is done by the intrusive container.  The <em>ListTable</em> type employs a linked-list implementation to provide common operations for an unordered symbol table whereas the <em>TreeTable</em> type employs a balanced BST implementation to provide common operations for an ordered symbol table.  Like many other collections previously mentioned, both types also utilizes an intrusive container as its component.</p>
+</li>
+</ul>
+<h3>The Container Sub-package</h3>
+<p>The <strong><em>Container</em></strong> sub-package implements various common data structures similar to those implemented in the <strong><em>Collection</em></strong> sub-package.  However, each data structure in this sub-package is referred to as a <strong>container</strong> instead.  Unlike those collection types, most of containers implemented in this sub-package can be used only for objects of one specific data type it is designed for.  Also, unlike those in the <strong><em>Collection</em></strong> sub-package, these containers employs conventional implementation instead of utilizing an intrusive container.</p>
+<p>The source code of the <em>Container</em> sub-package is located in the <em>Containers</em> subfolder, which contains six subfolders. A brief overview of the <em>Container</em> sub-package is given below.</p>
+<ul>
+<li>The <em>DblLnkList</em> subfolder consists of fourteen modules, twelve of which provide doubly-linked-list container types for Fortran intrinsic data types.  The <em>ListObject</em> type is designed to be used with inserted items of any derived data types that are a subtype of the <em>Object</em> type whereas the <em>ListAnyType</em> type is designed to be used with inserted items of any data types.  By design, each doubly-linked-list container type can represent various forms of common containers including a LIFO stack, a FIFO queue, a deque or a list.  Therefore, no container specifically representing a stack or a queue is provided in this sub-package.  Because the <em>ListAnyType</em> type can be used with objects of any data type, it is a generic container.  Unlike those collection types, it allows objects of different types to be inserted into the container.  However, to be able to retrieve the stored items, a user must specify an <em>allocatable</em> unlimited polymorphic type as an output argument.  Therefore, the interfaces of item-retrieving routines in the <em>ListAnyType</em> type are different from those collection types although the interfaces of item-insertion routines are similar.</li>
+<li>The <em>DynArray</em> subfolder consists of thirteen modules, twelve of which provide dynamic-array-based container types for Fortran intrinsic data types. The <em>DArrObject</em> type is designed to be used with inserted items of any derived data types that are a subtype of the <em>Object</em> type.  Similar to a doubly-linked-list container type, a dynamic-array-based container type can represent various forms of common containers including a LIFO stack, a FIFO queue, a deque or a list.</li>
+<li>The <em>HashTable</em> subfolder consists of nine modules, eight of which provide hash-table container types (representing unordered symbol tables) based on open-addressing implementation for keys of Fortran intrinsic data types.  All these eight modules allow values of any data types to be inserted along with keys of one Fortran intrinsic data type.  The <em>HTabObject</em> type is designed to be used with inserted key-value objects of any derived data types that are a subtype of the <em>Object</em> type.  Its design is slightly differently from other hash-table container types such that it requires a key and a value to be bundled into a derived type in the <em>Object</em> class.</li>
+<li>The <em>PriorityQ</em> subfolder consists of ten modules, eight of which provide priority queue container types based on binary heap implementation for Fortran intrinsic data types.  Both the <em>PQBasic</em> and the <em>PQHeap</em> types are designed to be used with inserted keys of any derived data types that are a subtype of the <em>Comparable</em> type.  The <em>PQHeap</em> type also employs the binary heap implementation like other eight priority queues.  Unlike other priority queues, the <em>PQBasic</em> type employs an elementary implementation where its array representation can be unordered or ordered by a sorting algorithm.</li>
+<li>The <em>RBTree</em> subfolder consists of nine modules, eight of which provide balanced-tree container types (representing ordered symbol tables) based on red-black tree implementation for keys of Fortran intrinsic data types.  Like the hash-table container types, all these eight modules allow values of any data types to be inserted along with keys of one Fortran intrinsic data type.  The <em>TreeComparable</em> type is designed in a similar fashion to the <em>HTabObject</em> type and intended to be used with inserted key-value objects of any derived data types that are a subtype of the <em>Comparable</em> type.  As a result, it requires a key and a value to be bundled into a derived type that is in the <em>Comparable</em> class.</li>
+<li>The <em>Interfaces</em> subfolder contains five modules that provide centralized accesses to the five groups of available container types in this sub-package.</li>
+</ul>
+<h2>Dependencies</h2>
+<p>The <em>XpfStructure</em> pacakge is primarily dependent on the <a href="../XpfBase/Index.html"><em>XpfBase</em></a> and <a href="../XpfRankNSort/Index.html"><em>XpfRankNSort</em></a> packages.</p>
+<h2>Documentation</h2>
+<p>The <a href="https://github.com/Fortran-FOSS-Programmers/ford">FORD</a> program can be used to automatically generate the documentation of the <em>XpfStructure</em> package via <code>ford XpfStructureDoc.md</code>.</p>
+        </div>
+          <div class="col-md-4">
+	        <div class="card card-body bg-light">
+              <h2 class="card-title">Developer Info</h2>
+              <h4 class="card-text">Niranama</h4>
+              <p class="card-text"></p>
+            </div>
+          </div>
+      </div>
+        <div class="row">
+          <hr>
+          <div class="col-xs-6 col-sm-4">
+            <div>
+              <h3>Source Files</h3>
+              <ul><li><a href='./sourcefile/mbase_balancedtrees.f90.html'>MBase_BalancedTrees.f90</a></li><li><a href='./sourcefile/mbase_doublylinkedlists.f90.html'>MBase_DoublyLinkedLists.f90</a></li><li><a href='./sourcefile/mbase_dynamicarrays.f90.html'>MBase_DynamicArrays.f90</a></li><li><a href='./sourcefile/mbase_hashtables.f90.html'>MBase_HashTables.f90</a></li><li><a href='./sourcefile/mbase_priorityqueues.f90.html'>MBase_PriorityQueues.f90</a></li><li><a href='./sourcefile/mclass_basecollection.f90.html'>MClass_BaseCollection.f90</a></li><li><a href='./sourcefile/mclass_baseiterable.f90.html'>MClass_BaseIterable.f90</a></li><li><a href='./sourcefile/mclass_basesymtable.f90.html'>MClass_BaseSymTable.f90</a></li><li><a href='./sourcefile/mclass_darrcharacter.f90.html'>MClass_DArrCharacter.f90</a></li><li><a href='./sourcefile/mclass_darrcmpxdp.f90.html'>MClass_DArrCmpxDP.f90</a></li><li><a href='./sourcefile/mclass_darrcmpxqp.f90.html'>MClass_DArrCmpxQP.f90</a></li><li><a href='./sourcefile/mclass_darrcmpxsp.f90.html'>MClass_DArrCmpxSP.f90</a></li><li><a href='./sourcefile/mclass_darrinteger1b.f90.html'>MClass_DArrInteger1B.f90</a></li><li><a href='./sourcefile/mclass_darrinteger2b.f90.html'>MClass_DArrInteger2B.f90</a></li><li><a href='./sourcefile/mclass_darrinteger4b.f90.html'>MClass_DArrInteger4B.f90</a></li><li><a href='./sourcefile/mclass_darrinteger8b.f90.html'>MClass_DArrInteger8B.f90</a></li><li><a href='./sourcefile/mclass_darrlogical.f90.html'>MClass_DArrLogical.f90</a></li><li><a href='./sourcefile/mclass_darrobject.f90.html'>MClass_DArrObject.f90</a></li><li><a href='./sourcefile/mclass_darrrealdp.f90.html'>MClass_DArrRealDP.f90</a></li><li><a href='./sourcefile/mclass_darrrealqp.f90.html'>MClass_DArrRealQP.f90</a></li><li><a href='./sourcefile/mclass_darrrealsp.f90.html'>MClass_DArrRealSP.f90</a></li><li><a href='./sourcefile/mclass_dynamicarrays.f90.html'>MClass_DynamicArrays.f90</a></li><li><a href='./sourcefile/mclass_hashlist.f90.html'>MClass_HashList.f90</a></li><li><a href='./sourcefile/mclass_hashmap.f90.html'>MClass_HashMap.f90</a></li><li><a href='./sourcefile/mclass_hashset.f90.html'>MClass_HashSet.f90</a></li><li><a href='./sourcefile/mclass_hashtree.f90.html'>MClass_HashTree.f90</a></li><li><a href='./sourcefile/mclass_htabcharacter.f90.html'>MClass_HTabCharacter.f90</a></li><li><a href='./sourcefile/mclass_htabinteger1b.f90.html'>MClass_HTabInteger1B.f90</a></li><li><a href='./sourcefile/mclass_htabinteger2b.f90.html'>MClass_HTabInteger2B.f90</a></li><li><a href='./sourcefile/mclass_htabinteger4b.f90.html'>MClass_HTabInteger4B.f90</a></li><li><a href='./sourcefile/mclass_htabinteger8b.f90.html'>MClass_HTabInteger8B.f90</a></li><li><a href='./sourcefile/mclass_htabobject.f90.html'>MClass_HTabObject.f90</a></li><li><a href='./sourcefile/mclass_htabrealdp.f90.html'>MClass_HTabRealDP.f90</a></li><li><a href='./sourcefile/mclass_htabrealqp.f90.html'>MClass_HTabRealQP.f90</a></li><li><a href='./sourcefile/mclass_htabrealsp.f90.html'>MClass_HTabRealSP.f90</a></li><li><a href='./sourcefile/mclass_linkedlists.f90.html'>MClass_LinkedLists.f90</a></li><li><a href='./sourcefile/mclass_listanytype.f90.html'>MClass_ListAnyType.f90</a></li><li><a href='./sourcefile/mclass_listcharacter.f90.html'>MClass_ListCharacter.f90</a></li><li><a href='./sourcefile/mclass_listcmpxdp.f90.html'>MClass_ListCmpxDP.f90</a></li><li><a href='./sourcefile/mclass_listcmpxqp.f90.html'>MClass_ListCmpxQP.f90</a></li></ul>
+            </div>
+            <div>
+              <ul>
+                <li><a href="./lists/files.html"><em>All source files&hellip;</em></a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-xs-6 col-sm-4">
+            <div>
+              <h3>Modules</h3>
+              <ul><li><a href='./module/mbase_balancedtrees.html'>MBase_BalancedTrees</a></li><li><a href='./module/mbase_doublylinkedlists.html'>MBase_DoublyLinkedLists</a></li><li><a href='./module/mbase_dynamicarrays.html'>MBase_DynamicArrays</a></li><li><a href='./module/mbase_hashtables.html'>MBase_HashTables</a></li><li><a href='./module/mbase_priorityqueues.html'>MBase_PriorityQueues</a></li><li><a href='./module/mclass_basecollection.html'>MClass_BaseCollection</a></li><li><a href='./module/mclass_baseiterable.html'>MClass_BaseIterable</a></li><li><a href='./module/mclass_basesymtable.html'>MClass_BaseSymTable</a></li><li><a href='./module/mclass_darrcharacter.html'>MClass_DArrCharacter</a></li><li><a href='./module/mclass_darrcmpxdp.html'>MClass_DArrCmpxDP</a></li><li><a href='./module/mclass_darrcmpxqp.html'>MClass_DArrCmpxQP</a></li><li><a href='./module/mclass_darrcmpxsp.html'>MClass_DArrCmpxSP</a></li><li><a href='./module/mclass_darrinteger1b.html'>MClass_DArrInteger1B</a></li><li><a href='./module/mclass_darrinteger2b.html'>MClass_DArrInteger2B</a></li><li><a href='./module/mclass_darrinteger4b.html'>MClass_DArrInteger4B</a></li><li><a href='./module/mclass_darrinteger8b.html'>MClass_DArrInteger8B</a></li><li><a href='./module/mclass_darrlogical.html'>MClass_DArrLogical</a></li><li><a href='./module/mclass_darrobject.html'>MClass_DArrObject</a></li><li><a href='./module/mclass_darrrealdp.html'>MClass_DArrRealDP</a></li><li><a href='./module/mclass_darrrealqp.html'>MClass_DArrRealQP</a></li><li><a href='./module/mclass_darrrealsp.html'>MClass_DArrRealSP</a></li><li><a href='./module/mclass_dynamicarrays.html'>MClass_DynamicArrays</a></li><li><a href='./module/mclass_hashlist.html'>MClass_HashList</a></li><li><a href='./module/mclass_hashmap.html'>MClass_HashMap</a></li><li><a href='./module/mclass_hashset.html'>MClass_HashSet</a></li><li><a href='./module/mclass_hashtree.html'>MClass_HashTree</a></li><li><a href='./module/mclass_htabcharacter.html'>MClass_HTabCharacter</a></li><li><a href='./module/mclass_htabinteger1b.html'>MClass_HTabInteger1B</a></li><li><a href='./module/mclass_htabinteger2b.html'>MClass_HTabInteger2B</a></li><li><a href='./module/mclass_htabinteger4b.html'>MClass_HTabInteger4B</a></li><li><a href='./module/mclass_htabinteger8b.html'>MClass_HTabInteger8B</a></li><li><a href='./module/mclass_htabobject.html'>MClass_HTabObject</a></li><li><a href='./module/mclass_htabrealdp.html'>MClass_HTabRealDP</a></li><li><a href='./module/mclass_htabrealqp.html'>MClass_HTabRealQP</a></li><li><a href='./module/mclass_htabrealsp.html'>MClass_HTabRealSP</a></li><li><a href='./module/mclass_linkedlists.html'>MClass_LinkedLists</a></li><li><a href='./module/mclass_listanytype.html'>MClass_ListAnyType</a></li><li><a href='./module/mclass_listcharacter.html'>MClass_ListCharacter</a></li><li><a href='./module/mclass_listcmpxdp.html'>MClass_ListCmpxDP</a></li><li><a href='./module/mclass_listcmpxqp.html'>MClass_ListCmpxQP</a></li></ul>
+            </div>
+            <div>
+              <ul>
+                <li><a href="./lists/modules.html"><em>All modules&hellip;</em></a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-xs-6 col-sm-4">
+            <div>
+              <h3>Derived Types</h3>
+              <ul><li><a href='./type/basecollection.html'>BaseCollection</a></li><li><a href='./type/baseiterable.html'>BaseIterable</a></li><li><a href='./type/basesymtable.html'>BaseSymTable</a></li><li><a href='./type/darrcharacter.html'>DArrCharacter</a></li><li><a href='./type/darrcmpxdp.html'>DArrCmpxDP</a></li><li><a href='./type/darrcmpxqp.html'>DArrCmpxQP</a></li><li><a href='./type/darrcmpxsp.html'>DArrCmpxSP</a></li><li><a href='./type/darrinteger1b.html'>DArrInteger1B</a></li><li><a href='./type/darrinteger2b.html'>DArrInteger2B</a></li><li><a href='./type/darrinteger4b.html'>DArrInteger4B</a></li><li><a href='./type/darrinteger8b.html'>DArrInteger8B</a></li><li><a href='./type/darrlogical.html'>DArrLogical</a></li><li><a href='./type/darrobject.html'>DArrObject</a></li><li><a href='./type/darrrealdp.html'>DArrRealDP</a></li><li><a href='./type/darrrealqp.html'>DArrRealQP</a></li><li><a href='./type/darrrealsp.html'>DArrRealSP</a></li><li><a href='./type/dequearray.html'>DequeArray</a></li><li><a href='./type/dequelinked.html'>DequeLinked</a></li><li><a href='./type/hashlist.html'>HashList</a></li><li><a href='./type/hashmap.html'>HashMap</a></li><li><a href='./type/hashset.html'>HashSet</a></li><li><a href='./type/hashtree.html'>HashTree</a></li><li><a href='./type/htabcharacter.html'>HTabCharacter</a></li><li><a href='./type/htabinteger1b.html'>HTabInteger1B</a></li><li><a href='./type/htabinteger2b.html'>HTabInteger2B</a></li><li><a href='./type/htabinteger4b.html'>HTabInteger4B</a></li><li><a href='./type/htabinteger8b.html'>HTabInteger8B</a></li><li><a href='./type/htabobject.html'>HTabObject</a></li><li><a href='./type/htabrealdp.html'>HTabRealDP</a></li><li><a href='./type/htabrealqp.html'>HTabRealQP</a></li><li><a href='./type/htabrealsp.html'>HTabRealSP</a></li><li><a href='./type/listanytype.html'>ListAnyType</a></li><li><a href='./type/listarray.html'>ListArray</a></li><li><a href='./type/listcharacter.html'>ListCharacter</a></li><li><a href='./type/listcmpxdp.html'>ListCmpxDP</a></li><li><a href='./type/listcmpxqp.html'>ListCmpxQP</a></li><li><a href='./type/listcmpxsp.html'>ListCmpxSP</a></li><li><a href='./type/listinteger1b.html'>ListInteger1B</a></li><li><a href='./type/listinteger2b.html'>ListInteger2B</a></li><li><a href='./type/listinteger4b.html'>ListInteger4B</a></li></ul>
+            </div>
+            <div>
+              <ul>
+                <li><a href="./lists/types.html"><em>All derived types&hellip;</em></a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      <hr>
+    </div> <!-- /container -->
+    <footer>
+      <div class="container">
+        <div class="row justify-content-between">
+          <div class="col"><p>eXPerimental Fortran Library (XpfLib) Documentation was developed by Niranama<br>&copy; 2024 
+</p>
+          </div>
+          <div class="col">
+            <p class="text-end">
+              Documentation generated by
+              <a href="https://github.com/Fortran-FOSS-Programmers/ford">FORD</a>
+            </p>
+          </div>
+        </div>
+        <br>
+      </div> <!-- /container -->
+    </footer>
+
+    <!-- Bootstrap core JavaScript -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>    
+
+    <!-- MathJax JavaScript
+             ================================================== -->
+             <!-- Placed at the end of the document so the pages load faster -->
+        <script type="text/x-mathjax-config">
+          MathJax.Hub.Config({
+          TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } },
+          jax: ['input/TeX','input/MathML','output/HTML-CSS'],
+          extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']
+          });
+        </script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+          <script src="./tipuesearch/tipuesearch_content.js"></script>
+          <script src="./tipuesearch/tipuesearch_set.js"></script>
+          <script src="./tipuesearch/tipuesearch.js"></script>
+
+  </body>
+</html>

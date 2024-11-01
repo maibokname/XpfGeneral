@@ -1,0 +1,785 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta name="description" content="Experimental Fortran Package - Base Modules and Classes">
+    <meta name="author" content="Niranama" >
+    <link rel="icon" href="../favicon.png">
+
+    <title>All Modules &ndash; eXPerimental Fortran Library (XpfLib) Documentation
+</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link href="../css/pygments.css" rel="stylesheet">
+    <link href="../css/font-awesome.min.css" rel="stylesheet">
+    <link href="../css/local.css" rel="stylesheet">
+      <link  href="../tipuesearch/tipuesearch.css" rel="stylesheet">
+
+    <script src="https://code.jquery.com/jquery-3.7.0.slim.min.js" integrity="sha256-tG5mcZUtJsZvyKAxYLVXrmjKBVLd6VpVccqz/r4ypFE=" crossorigin="anonymous"></script>
+  </head>
+
+  <body>
+
+    <!-- Fixed navbar -->
+    <div class="container-fluid mb-sm-4 mb-xl-2">
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container">
+          <a class="navbar-brand" href="../index.html">eXPerimental Fortran Library (XpfLib) Documentation </a>
+          <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar"
+                  aria-expanded="false" aria-controls="navbar" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon">
+          </button>
+
+          <div id="navbar" class="navbar-collapse collapse">
+            <ul class="navbar-nav">
+                  <li class="nav-item">
+                    <a class="nav-link" href="../lists/files.html">Source Files</a>
+                  </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../lists/modules.html">Modules</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../lists/procedures.html">Procedures</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../lists/absint.html">Abstract Interfaces</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../lists/types.html">Derived Types</a>
+                </li>
+            </ul>
+              <div class="d-flex align-items-end flex-grow-1">
+                <form action="../search.html" role="search" class="ms-auto">
+                  <input type="text" class="form-control" aria-label="Search" placeholder="Search" name="q" id="tipue_search_input" autocomplete="off" required>
+                </form>
+              </div>
+          </div><!--/.nav-collapse -->
+        </div>
+      </nav>
+    </div>
+
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12" id='text'>
+			 <h1>Modules</h1>
+			 <table class="table">
+			 <thead><tr><th>Module</th><th>Source File</th><th>Description</th></tr></thead>
+			 <tbody>
+			   <tr class="active"><td><a href='../module/mbase_anyrankntype.html'>MBase_AnyRankNType</a></td><td><a href='../sourcefile/mbase_anyrankntype.f90.html'>MBase_AnyRankNType.f90</a></td><td><p><strong>PURPOSE OF THIS MODULE</strong>: <br>
+  This module contains common routines for unlimited polymorphic and assumed-type entities.
+  For most procedures, the specified polymorphic arguments can have any rank between 1 and 7. <br></p></td></tr>
+<!--active-->			   <tr class=""><td><a href='../module/mbase_bindec128.html'>MBase_BinDec128</a></td><td><a href='../sourcefile/mbase_bindec128.f90.html'>MBase_BinDec128.f90</a></td><td><p><strong>PURPOSE OF THIS MODULE</strong>: <br>
+  This module contains various binary-to-decimal and decimal-to-binary conversion routines for
+  128-bit floating-point numbers (i.e. quadruple-precision real numbers).  It provides these
+  routines as a building block for higher-level formatting/parsing procedures with high performance
+  that perform conversions between human-readable strings and floating-point (real) numbers. <br>
+  <br>
+ <strong>REFERENCE TECHNICAL ARTICLES</strong>: <br>
+  [1] <a href="https://github.com/jk-jeon/dragonbox/blob/master/other_files/Dragonbox.pdf">
+      Junekey Jeon.  "Dragonbox: A New Floating-Point Binary-to-Decimal Conversion Algorithm".</a> <br>
+  [2] <a href="https://dl.acm.org/doi/10.1145/3192366.3192369">
+      Ulf Adams.  "Ryu: Fast Float-to-String Conversion".</a> <br>
+  [3] <a href="https://drive.google.com/open?id=1luHhyQF9zKlM8yJ1nebU0OgVYhfC6CBN">
+      Raffaello Giulietti.  "The Schubfach way to render doubles".</a> <br>
+  [4] <a href="https://doi.org/10.1145/989393.989430">
+      Clinger WD. How to Read Floating Point Numbers Accurately. SIGPLAN Not 2004 Apr;
+      39(4):360-371.</a> <br>
+  [5] <a href="https://arxiv.org/abs/2101.11408">Daniel Lemire.  "Number Parsing at a
+      Gigabyte per Second", Software: Practice and Experience 51 (8), 2021.</a> <br>
+  [6] <a href="https://arxiv.org/abs/2212.06644">Noble Mushtak and Daniel Lemire.
+      "Fast  Number Parsing Without Fallback", Software: Practice and Experience
+      53 (7), 2023.</a> <br>
+  [7] <a href="https://hal.inria.fr/hal-00864293v1/document">Bouvier &amp; Zimmermann.
+      "Division-Free Binary-to-Decimal Conversion".</a> <br>
+  [8] Hacker's Delight, 2nd Edition.
+  [9] <a href="https://nigeltao.github.io/blog/2020/eisel-lemire.html">Nigel Tao.
+      "The Eisel-Lemire ParseNumberF64 Algorithm".</a> <br>
+  [10] <a href="https://nigeltao.github.io/blog/2020/parse-number-f64-simple.html">
+      Nigel Tao.  "ParseNumberF64 by Simple Decimal Conversion".</a> <br>
+  <br>
+  <strong>REFERENCE CODE IMPLEMENTATION</strong>: <br>
+  [11] <a href="https://github.com/jk-jeon/dragonbox">DragonBox: C++ reference
+      implementation.</a> <br>
+  [12] <a href="https://github.com/ulfjack/ryu">Ryu: C reference implementation.</a> <br>
+  [13] <a href="https://github.com/c4f7fcce9cb06515/Schubfach">Schubfach: Java
+      reference implementation.</a> <br>
+  [14] <a href="https://github.com/abolz/Drachennest">Drachennest: Different
+      algorithms for converting binary to decimal floating-point numbers.</a> <br>
+  [15] <a href="https://github.com/ibireme/c_numconv_benchmark">Number Conversion
+      Benchmark in C.</a> <br>
+  [16] <a href="https://github.com/fastfloat/fast_float">Fast_Float Number
+      Parsing Library.</a> <br>
+  [17] <a href="https://github.com/lemire/fast_double_parser">Fast_Double_Parser.</a> <br>
+  [18] <a href="https://github.com/llvm/llvm-project/tree/main/libc/src/__support">
+      The LLVM Project (LibC).</a> <br>
+  [19] <a href="https://github.com/google/double-conversion">Double Conversion:
+      Efficient binary-decimal and decimal-binary conversion routines for IEEE doubles.</a> <br>
+  [20] <a href="https://github.com/fmtlib/fmt">fmt: A modern formatting library.</a> <br></p></td></tr>
+<!---->			   <tr class="active"><td><a href='../module/mbase_bindec32.html'>MBase_BinDec32</a></td><td><a href='../sourcefile/mbase_bindec32.f90.html'>MBase_BinDec32.f90</a></td><td><p><strong>PURPOSE OF THIS MODULE</strong>: <br>
+  This module contains various binary-to-decimal and decimal-to-binary conversion routines for
+  32-bit floating-point numbers (i.e. single-precision real numbers).  It provides these routines
+  as a building block for higher-level formatting/parsing procedures with high performance that
+  perform conversions between human-readable strings and floating-point (real) numbers. <br>
+  <br>
+ <strong>REFERENCE TECHNICAL ARTICLES</strong>: <br>
+  [1] <a href="https://github.com/jk-jeon/dragonbox/blob/master/other_files/Dragonbox.pdf">
+      Junekey Jeon.  "Dragonbox: A New Floating-Point Binary-to-Decimal Conversion Algorithm".</a> <br>
+  [2] <a href="https://dl.acm.org/doi/10.1145/3192366.3192369">
+      Ulf Adams.  "Ryu: Fast Float-to-String Conversion".</a> <br>
+  [3] <a href="https://drive.google.com/open?id=1luHhyQF9zKlM8yJ1nebU0OgVYhfC6CBN">
+      Raffaello Giulietti.  "The Schubfach way to render doubles".</a> <br>
+  [4] <a href="https://doi.org/10.1145/989393.989430">
+      Clinger WD. How to Read Floating Point Numbers Accurately. SIGPLAN Not 2004 Apr;
+      39(4):360-371.</a> <br>
+  [5] <a href="https://arxiv.org/abs/2101.11408">Daniel Lemire.  "Number Parsing at a
+      Gigabyte per Second", Software: Practice and Experience 51 (8), 2021.</a> <br>
+  [6] <a href="https://arxiv.org/abs/2212.06644">Noble Mushtak and Daniel Lemire.
+      "Fast  Number Parsing Without Fallback", Software: Practice and Experience
+      53 (7), 2023.</a> <br>
+  [7] <a href="https://hal.inria.fr/hal-00864293v1/document">Bouvier &amp; Zimmermann.
+      "Division-Free Binary-to-Decimal Conversion".</a> <br>
+  [8] Hacker's Delight, 2nd Edition.
+  [9] <a href="https://nigeltao.github.io/blog/2020/eisel-lemire.html">Nigel Tao.
+      "The Eisel-Lemire ParseNumberF64 Algorithm".</a> <br>
+  [10] <a href="https://nigeltao.github.io/blog/2020/parse-number-f64-simple.html">
+      Nigel Tao.  "ParseNumberF64 by Simple Decimal Conversion".</a> <br>
+  <br>
+  <strong>REFERENCE CODE IMPLEMENTATION</strong>: <br>
+  [11] <a href="https://github.com/jk-jeon/dragonbox">DragonBox: C++ reference
+      implementation.</a> <br>
+  [12] <a href="https://github.com/ulfjack/ryu">Ryu: C reference implementation.</a> <br>
+  [13] <a href="https://github.com/c4f7fcce9cb06515/Schubfach">Schubfach: Java
+      reference implementation.</a> <br>
+  [14] <a href="https://github.com/abolz/Drachennest">Drachennest: Different
+      algorithms for converting binary to decimal floating-point numbers.</a> <br>
+  [15] <a href="https://github.com/ibireme/c_numconv_benchmark">Number Conversion
+      Benchmark in C.</a> <br>
+  [16] <a href="https://github.com/fastfloat/fast_float">Fast_Float Number
+      Parsing Library.</a> <br>
+  [17] <a href="https://github.com/lemire/fast_double_parser">Fast_Double_Parser.</a> <br>
+  [18] <a href="https://github.com/llvm/llvm-project/tree/main/libc/src/__support">
+      The LLVM Project (LibC).</a> <br>
+  [19] <a href="https://github.com/google/double-conversion">Double Conversion:
+      Efficient binary-decimal and decimal-binary conversion routines for IEEE doubles.</a> <br>
+  [20] <a href="https://github.com/fmtlib/fmt">fmt: A modern formatting library.</a> <br></p></td></tr>
+<!--active-->			   <tr class=""><td><a href='../module/mbase_bindec64.html'>MBase_BinDec64</a></td><td><a href='../sourcefile/mbase_bindec64.f90.html'>MBase_BinDec64.f90</a></td><td><p><strong>PURPOSE OF THIS MODULE</strong>: <br>
+  This module contains various binary-to-decimal and decimal-to-binary conversion routines for
+  64-bit floating-point numbers (i.e. double-precision real numbers).  It provides these routines
+  as a building block for higher-level formatting/parsing procedures with high performance that
+  perform conversions between human-readable strings and floating-point (real) numbers. <br>
+  <br>
+ <strong>REFERENCE TECHNICAL ARTICLES</strong>: <br>
+  [1] <a href="https://github.com/jk-jeon/dragonbox/blob/master/other_files/Dragonbox.pdf">
+      Junekey Jeon.  "Dragonbox: A New Floating-Point Binary-to-Decimal Conversion Algorithm".</a> <br>
+  [2] <a href="https://dl.acm.org/doi/10.1145/3192366.3192369">
+      Ulf Adams.  "Ryu: Fast Float-to-String Conversion".</a> <br>
+  [3] <a href="https://drive.google.com/open?id=1luHhyQF9zKlM8yJ1nebU0OgVYhfC6CBN">
+      Raffaello Giulietti.  "The Schubfach way to render doubles".</a> <br>
+  [4] <a href="https://doi.org/10.1145/989393.989430">
+      Clinger WD. How to Read Floating Point Numbers Accurately. SIGPLAN Not 2004 Apr;
+      39(4):360-371.</a> <br>
+  [5] <a href="https://arxiv.org/abs/2101.11408">Daniel Lemire.  "Number Parsing at a
+      Gigabyte per Second", Software: Practice and Experience 51 (8), 2021.</a> <br>
+  [6] <a href="https://arxiv.org/abs/2212.06644">Noble Mushtak and Daniel Lemire.
+      "Fast  Number Parsing Without Fallback", Software: Practice and Experience
+      53 (7), 2023.</a> <br>
+  [7] <a href="https://hal.inria.fr/hal-00864293v1/document">Bouvier &amp; Zimmermann.
+      "Division-Free Binary-to-Decimal Conversion".</a> <br>
+  [8] Hacker's Delight, 2nd Edition.
+  [9] <a href="https://nigeltao.github.io/blog/2020/eisel-lemire.html">Nigel Tao.
+      "The Eisel-Lemire ParseNumberF64 Algorithm".</a> <br>
+  [10] <a href="https://nigeltao.github.io/blog/2020/parse-number-f64-simple.html">
+      Nigel Tao.  "ParseNumberF64 by Simple Decimal Conversion".</a> <br>
+  <br>
+  <strong>REFERENCE CODE IMPLEMENTATION</strong>: <br>
+  [11] <a href="https://github.com/jk-jeon/dragonbox">DragonBox: C++ reference
+      implementation.</a> <br>
+  [12] <a href="https://github.com/ulfjack/ryu">Ryu: C reference implementation.</a> <br>
+  [13] <a href="https://github.com/c4f7fcce9cb06515/Schubfach">Schubfach: Java
+      reference implementation.</a> <br>
+  [14] <a href="https://github.com/abolz/Drachennest">Drachennest: Different
+      algorithms for converting binary to decimal floating-point numbers.</a> <br>
+  [15] <a href="https://github.com/ibireme/c_numconv_benchmark">Number Conversion
+      Benchmark in C.</a> <br>
+  [16] <a href="https://github.com/fastfloat/fast_float">Fast_Float Number
+      Parsing Library.</a> <br>
+  [17] <a href="https://github.com/lemire/fast_double_parser">Fast_Double_Parser.</a> <br>
+  [18] <a href="https://github.com/llvm/llvm-project/tree/main/libc/src/__support">
+      The LLVM Project (LibC).</a> <br>
+  [19] <a href="https://github.com/google/double-conversion">Double Conversion:
+      Efficient binary-decimal and decimal-binary conversion routines for IEEE doubles.</a> <br>
+  [20] <a href="https://github.com/fmtlib/fmt">fmt: A modern formatting library.</a> <br></p></td></tr>
+<!---->			   <tr class="active"><td><a href='../module/mbase_byteutil.html'>MBase_ByteUtil</a></td><td><a href='../sourcefile/mbase_byteutil.f90.html'>MBase_ByteUtil.f90</a></td><td><p><strong>PURPOSE OF THIS MODULE</strong>: <br>
+  This module contains various byte (8-bit integer) utility routines.</p></td></tr>
+<!--active-->			   <tr class=""><td><a href='../module/mbase_charutil.html'>MBase_CharUtil</a></td><td><a href='../sourcefile/mbase_charutil.f90.html'>MBase_CharUtil.f90</a></td><td><p><strong>PURPOSE OF THIS MODULE</strong>: <br>
+This module contains various utility routines and parameters relating to a character. <br></p></td></tr>
+<!---->			   <tr class="active"><td><a href='../module/mbase_common.html'>MBase_Common</a></td><td><a href='../sourcefile/mbase_common.f90.html'>MBase_Common.f90</a></td><td><p><strong>PURPOSE OF THIS MODULE</strong>: <br>
+  This module contains various parameters commonly used throughout the library.</p></td></tr>
+<!--active-->			   <tr class=""><td><a href='../module/mbase_cppstdutil.html'>MBase_CppStdUtil</a></td><td><a href='../sourcefile/mbase_cppstdutil.f90.html'>MBase_CppStdUtil.f90</a></td><td><p><strong>PURPOSE OF THIS MODULE</strong>: <br>
+  This module provides interfaces/wrappers to the C++ standard library through
+  the <em>FLibCpp</em> library.</p></td></tr>
+<!---->			   <tr class="active"><td><a href='../module/mbase_errhandlers.html'>MBase_ErrHandlers</a></td><td><a href='../sourcefile/mbase_errhandlers.f90.html'>MBase_ErrHandlers.f90</a></td><td><p><strong>PURPOSE OF THIS MODULE</strong>: <br>
+  This module contains routines and parameters for error-handling tasks.   The error messages
+  are written to a (default) log file named 'XpfLibError.Log'.</p></td></tr>
+<!--active-->			   <tr class=""><td><a href='../module/mbase_floatutil.html'>MBase_FloatUtil</a></td><td><a href='../sourcefile/mbase_floatutil.f90.html'>MBase_FloatUtil.f90</a></td><td><p><strong>PURPOSE OF THIS MODULE</strong>: <br>
+  This module contains various utility routines and parameters relating to floating point number.</p></td></tr>
+<!---->			   <tr class="active"><td><a href='../module/mbase_iohandlers.html'>MBase_IOHandlers</a></td><td><a href='../sourcefile/mbase_iohandlers.f90.html'>MBase_IOHandlers.f90</a></td><td><p><strong>PURPOSE OF THIS MODULE</strong>: <br>
+  This module contains various routines for handling basic input/output (IO) operations.</p></td></tr>
+<!--active-->			   <tr class=""><td><a href='../module/mbase_kinds.html'>MBase_Kinds</a></td><td><a href='../sourcefile/mbase_kinds.f90.html'>MBase_Kinds.f90</a></td><td><p><strong>PURPOSE OF THIS MODULE</strong>: <br>
+  This module contains kind parameters used in the library.</p></td></tr>
+<!---->			   <tr class="active"><td><a href='../module/mbase_largetables.html'>MBase_LargeTables</a></td><td><a href='../sourcefile/mbase_largetables.f90.html'>MBase_LargeTables.f90</a></td><td><p><strong>PURPOSE OF THIS MODULE</strong>: <br>
+  This module contains large look-up tables. <br></p></td></tr>
+<!--active-->			   <tr class=""><td><a href='../module/mbase_legacyutil.html'>MBase_LegacyUtil</a></td><td><a href='../sourcefile/mbase_legacyutil.f90.html'>MBase_LegacyUtil.f90</a></td><td><p><strong>PURPOSE OF THIS MODULE</strong>: <br>
+  This module contains derived types used for legacy code.  It also contains
+  utility routines based on routines from SLATEC library.   These routines
+  have the same interface as their original ones but their implementation have
+  all been re-engineered.  These routines provide a simple refactoring of
+  legacy code.</p></td></tr>
+<!---->			   <tr class="active"><td><a href='../module/mbase_mathutil.html'>MBase_MathUtil</a></td><td><a href='../sourcefile/mbase_mathutil.f90.html'>MBase_MathUtil.f90</a></td><td><p><strong>PURPOSE OF THIS MODULE</strong>: <br>
+  This module contains various routines relating to mathematic operations. <br></p></td></tr>
+<!--active-->			   <tr class=""><td><a href='../module/mbase_memhandlers.html'>MBase_MemHandlers</a></td><td><a href='../sourcefile/mbase_memhandlers.f90.html'>MBase_MemHandlers.f90</a></td><td><p><strong>PURPOSE OF THIS MODULE</strong>: <br>
+  This module contains memory-handling routines for all intrinsic types.  Currently, the specified
+  arguments can have either <em>ALLOCATABLE</em> or <em>POINTER</em> attribute and its rank can be any number
+  between 1 and 7. <br></p></td></tr>
+<!---->			   <tr class="active"><td><a href='../module/mbase_miscutil.html'>MBase_MiscUtil</a></td><td><a href='../sourcefile/mbase_miscutil.f90.html'>MBase_MiscUtil.f90</a></td><td><p><strong>PURPOSE OF THIS MODULE</strong>: <br>
+  This module contains various routines that are not quite fit into other existing modules
+  or some are legacy code with different interfaces from routines in other existing modules
+  with the same functionality.</p></td></tr>
+<!--active-->			   <tr class=""><td><a href='../module/mbase_polyfloatnum.html'>MBase_PolyFloatNum</a></td><td><a href='../sourcefile/mbase_polyfloatnum.f90.html'>MBase_PolyFloatNum.f90</a></td><td><p><strong>PURPOSE OF THIS MODULE</strong>: <br>
+  This module contains common routines for basic operations of floating-point numbers
+  using the unlimited polymorphic type as a type of the floating-point numbers.  These
+  routines can handle only the Fortran intrinsic real and complex types with a default
+  kind where the default kind for both real and complex types is defined in the
+  <em>MBase_Kinds</em> module.  <br>
+  <br>
+<strong>Important Note</strong>: <br>
+  By design, most routines in this module use the unlimited polymorphic type (i.e.
+  CLASS(*)) to handle either a real or a complex type and they do not check for any
+  other types.  This means that these routines will silently return (without reporting
+  any errors) if invalid types are specified as arguments.  It is a user responsibility
+  to use these routines properly.  It should also be mentioned that if two or more
+  arguments are required by a routine, the specified arguments must have the same type,
+  either the real or the complex type.  Otherwise, the routine will also silently return. <br></p></td></tr>
+<!---->			   <tr class="active"><td><a href='../module/mbase_readutil.html'>MBase_ReadUtil</a></td><td><a href='../sourcefile/mbase_readutil.f90.html'>MBase_ReadUtil.f90</a></td><td><p><strong>PURPOSE OF THIS MODULE</strong>: <br>
+  This module contains various utility routines relating to reading from character strings
+  (i.e. parsing the string and return appropriate value).</p></td></tr>
+<!--active-->			   <tr class=""><td><a href='../module/mbase_simplehash32.html'>MBase_SimpleHash32</a></td><td><a href='../sourcefile/mbase_simplehash32.f90.html'>MBase_SimpleHash32.f90</a></td><td><p><strong>PURPOSE OF THIS MODULE</strong>: <br>
+  This module contains (non-cryptographic) simple hash function routines that
+  output a hash value as a 32-bit integer.  All routines can be used for an
+  input (i.e. a key) of any type and rank providing that the size of the input
+  (in bytes) is known at compile time.  All routines can be used for a continued
+  hashing by providing the previously computed hash value as an (optional) input
+  argument (i.e. the <em>StartHash</em> argument).  Optionally, a user can specify
+  whether to return only positive value of the hash code.  This is particularly
+  useful when used in conjunction with a hash table. <br>
+  <br>
+<strong>REFERENCES</strong>: <br>
+  [1] <a href="http://www.partow.net/programming/hashfunctions/index.html">
+      General Purpose Hash Function Algorithms</a> by Arash Partow. <br>
+  [2] <a href="https://github.com/zmiimz/fortran_notes">Fortran Notes Library. </a> <br>
+  [3] <a href="https://dl.acm.org/doi/10.5555/523106"> Sedgewick, R. 1997. Algorithms
+       in C: Parts 1-4, Fundamentals, Data Structures, Sorting, and Searching. </a> <br>
+  [4] <a href="https://en.wikipedia.org/wiki/PJW_hash_function">PJW hash function. </a> <br>
+  [5] <a href="http://www.cse.yorku.ca/~oz/hash.html">Hash Functions. </a> <br>
+  [6] <a href="http://stackoverflow.com/questions/664014/what-integer-hash-function-are-good-that-accepts-an-integer-hash-key">
+      What integer hash function are good that accepts an integer hash key? </a> <br>
+  [7] <a href="https://en.wikipedia.org/wiki/Fowler%E2%80%93Noll%E2%80%93Vo_hash_function">
+      Fowler-Noll-Vo hash function. </a> <br>
+  [8] <a href="https://en.wikipedia.org/wiki/Jenkins_hash_function">Jenkins hash function. </a> <br></p></td></tr>
+<!---->			   <tr class="active"><td><a href='../module/mbase_simplehash64.html'>MBase_SimpleHash64</a></td><td><a href='../sourcefile/mbase_simplehash64.f90.html'>MBase_SimpleHash64.f90</a></td><td><p><strong>PURPOSE OF THIS MODULE</strong>: <br>
+  This module contains (non-cryptographic) simple hash function routines that
+  output a hash value as a 64-bit integer.  All routines can be used for an
+  input (i.e. a key) of any type and rank providing that the size of the input
+  (in bytes) is known at compile time.  All routines can be used for a continued
+  hashing by providing the previously computed hash value as an (optional) input
+  argument (i.e. the <em>StartHash</em> argument).  Optionally, a user can specify
+  whether to return only positive value of the hash code.  This is particularly
+  useful when used in conjunction with a hash table. <br>
+  <br>
+<strong>REFERENCES</strong>: <br>
+  [1] <a href="http://www.partow.net/programming/hashfunctions/index.html">
+      General Purpose Hash Function Algorithms</a> by Arash Partow. <br>
+  [2] <a href="https://github.com/zmiimz/fortran_notes">Fortran Notes Library. </a> <br>
+  [3] <a href="https://dl.acm.org/doi/10.5555/523106"> Sedgewick, R. 1997. Algorithms
+       in C: Parts 1-4, Fundamentals, Data Structures, Sorting, and Searching. </a> <br>
+  [4] <a href="https://en.wikipedia.org/wiki/PJW_hash_function">PJW hash function. </a> <br>
+  [5] <a href="http://www.cse.yorku.ca/~oz/hash.html">Hash Functions. </a> <br>
+  [6] <a href="http://stackoverflow.com/questions/664014/what-integer-hash-function-are-good-that-accepts-an-integer-hash-key">
+      What integer hash function are good that accepts an integer hash key? </a> <br>
+  [7] <a href="https://en.wikipedia.org/wiki/Fowler%E2%80%93Noll%E2%80%93Vo_hash_function">
+      Fowler-Noll-Vo hash function. </a> <br>
+  [8] <a href="https://en.wikipedia.org/wiki/Jenkins_hash_function">Jenkins hash function. </a> <br></p></td></tr>
+<!--active-->			   <tr class=""><td><a href='../module/mbase_sint128.html'>MBase_SInt128</a></td><td><a href='../sourcefile/mbase_sint128.f90.html'>MBase_SInt128.f90</a></td><td><p><strong>PURPOSE OF THIS MODULE</strong>: <br>
+  This module contains the <em>SInt128</em> type, its related routines and useful <em>SInt128</em>
+  parameters.  The <em>SInt128</em> type is a derived type representing a <strong>128-bit signed</strong>
+  integer.   Various common operations usually available for integer types are provided
+  including arithmetic, bitwise, comparison, and conversion/construction operations.
+  The application programming interface (API) follows Fortran intrinsic integer types
+  with additional functions/methods provided. <br>
+  Similar to the <a href="../module/mbase_uint128.html#type-uint128">UInt128</a>
+  type, the <em>SInt128</em> type consists of two 64-bit integer components where the base
+  of its components is 2<sup>64</sup>.  Like the <em>UInt128</em> type, the <em>SInt128</em> type
+  treats its lower 64-bit component as unsigned integer.  Unlike the <em>UInt128</em> type,
+  however, the <em>SInt128</em> type treats its upper 64-bit component as a signed one.
+  The <em>SInt128</em> type relies on the <em>UInt128</em> type for some of its operations (the
+  division/modulation operations in particular) where the same algorithms can be
+  applied for both types.  If an unsigned integer is needed, user can use the
+  <a href="../module/mbase_uint128.html#type-uint128">UInt128</a> type instead.
+  Also, for a signed integer with precision higher than that provided by the <em>SInt128</em>
+  type, a user can use either the <em>ApInt32</em> type or <em>ApInt64</em> type available in the
+  <strong><em>XpfHighPrec</em></strong> package. <br>
+  <br>
+ <strong>Important Notes</strong>: <br>
+  (1) For arithmetic operations, various types of signed integer types (32-, 64- and
+  128-bit) are allowed.  Like the <em>UInt128</em> type, the use of signed and unsigned
+  integers in the same operation is NOT allowed.  Unsigned integer types must be
+  explicitly converted to signed types before using in the arithmetic operations. <br>
+  (2) For comparison and bitwise operations that require two input arguments,
+  both arguments must only be the 128-bit signed integer type.  The operations
+  on mixed types are not provided.  Therefore, all other types must be explicitly
+  converted to the <em>SInt128</em> type before using in the comparison and bitwise
+  operations. <br>
+  (3) It is impossible to differentiate between signed and unsigned integers for
+  Fortran intrinsic types.  Therefore, it is a user responsibility to make sure
+  and be extremely careful not to mix up signed and unsigned integers in the same
+  expressions.  It should be noted that, in this module, the unsigned integer types
+  are mostly used in conversion operations.  In all other operations, all Fortran
+  intrinsic integer types are assumed to be signed. <br>
+ <br>
+<strong>REFERENCES</strong>: <br>
+  [1] <a href="https://github.com/abseil/abseil-cpp/tree/master/absl/numeric">
+      Absl's Numeric Library</a> <br>
+  [2] <a href="https://github.com/martint/int128/">Fast 128-bit math library
+      for Java</a> <br>
+  [3] <a href="https://github.com/chfast/intx">IntX: Extended precision integer C++
+      library</a></p></td></tr>
+<!---->			   <tr class="active"><td><a href='../module/mbase_sintutil.html'>MBase_SIntUtil</a></td><td><a href='../sourcefile/mbase_sintutil.f90.html'>MBase_SIntUtil.f90</a></td><td><p><strong>PURPOSE OF THIS MODULE</strong>: <br>
+  This module contains various utility routines relating to (signed) integers.</p></td></tr>
+<!--active-->			   <tr class=""><td><a href='../module/mbase_systemutil.html'>MBase_SystemUtil</a></td><td><a href='../sourcefile/mbase_systemutil.f90.html'>MBase_SystemUtil.f90</a></td><td><p><strong>PURPOSE OF THIS MODULE</strong>: <br>
+  This module contains utility routines relating to operating system and compiler currently in used.</p></td></tr>
+<!---->			   <tr class="active"><td><a href='../module/mbase_uint128.html'>MBase_UInt128</a></td><td><a href='../sourcefile/mbase_uint128.f90.html'>MBase_UInt128.f90</a></td><td><p><strong>PURPOSE OF THIS MODULE</strong>: <br>
+  This module contains the <em>UInt128</em> type, its related routines and useful <em>UInt128</em>
+  parameters.  The <em>UInt128</em> type is a derived type representing a <strong>128-bit unsigned</strong>
+  integer.   Various common operations usually available for integer types are provided
+  including arithmetic, bitwise, comparison, and conversion/construction operations.
+  The application programming interface (API) follows Fortran intrinsic integer types
+  as close as practical.  However, since Fortran does not have an unsigned integer type,
+  those operations that differ between signed and unsigned integers use the interfaces
+  similar to those operations used in the <a href="../module/mbase_uintutil.html">
+  MBase_UIntUtil</a> module.  For a 128-bit signed integer, use the
+  <a href="../module/mbase_sint128.html#type-sint128">SInt128</a> type.  For an unsigned
+  integer with precision higher than that provided by the <em>UInt128</em> type, a user can use
+  either the <em>ApInt32</em> type or <em>ApInt64</em> type available in the <strong><em>XpfHighPrec</em></strong> package. <br>
+  <br>
+ <strong>Important Notes</strong>: <br>
+  (1) For arithmetic operations, various types of unsigned integer types (32-, 64-
+  and 128-bit) are allowed.  However, the use of signed and unsigned integers in
+  the same operation is NOT allowed.  Signed integer types must be explicitly
+  converted to unsigned types before using in the arithmetic operations. <br>
+  (2) For comparison and bitwise operations that require two input arguments,
+  both arguments must only be the 128-bit unsigned integer type.  The operations
+  on mixed types are not provided.  Therefore, all other types must be explicitly
+  converted to the <em>UInt128</em> type before using in the comparison and bitwise
+  operations. <br>
+  (3) It is impossible to differentiate between signed and unsigned integers for
+  Fortran intrinsic types.  Therefore, it is a user responsibility to make sure
+  and be extremely careful not to mix up signed and unsigned integers in the same
+  expressions.  It should be noted that, in this module, the signed integer types
+  are mostly used in conversion operations.  In all other operations, all Fortran
+  intrinsic integer types are assumed to be unsigned. <br>
+ <br>
+<strong>REFERENCES</strong>: <br>
+  [1] <a href="https://github.com/abseil/abseil-cpp/tree/master/absl/numeric">
+      Absl's Numeric Library</a> <br>
+  [2] <a href="https://github.com/martint/int128/">Fast 128-bit math library
+      for Java</a> <br>
+  [3] <a href="https://github.com/chfast/intx">IntX: Extended precision integer C++
+      library</a></p></td></tr>
+<!--active-->			   <tr class=""><td><a href='../module/mbase_uintutil.html'>MBase_UIntUtil</a></td><td><a href='../sourcefile/mbase_uintutil.f90.html'>MBase_UIntUtil.f90</a></td><td><p><strong>PURPOSE OF THIS MODULE</strong>: <br>
+  This module contains routines that perform comparisons and arithmetic
+  operations for unsigned integers.  The module also provide various
+  utility routines including conversions from an unsigned integer to
+  a string as well as unsigned multiplications (to higher precision). <br>
+  <br>
+<strong>REFERENCES</strong>: <br>
+  [1] <a href="https://github.com/google/guava">Guava: Google Core Libraries
+      for Java</a> <br>
+  [2] <a href="https://github.com/openjdk/jdk">Java's OpenJDK</a> <br>
+  [3] <a href="https://flibs.sourceforge.net/">FLIBS - A collection of Fortran
+      modules</a> <br>
+  <br>
+<strong>TECHNICAL NOTES</strong>: <br>
+  According to [3], Fortran does not natively support unsigned integers but
+  intrinsic (signed) integer types in Fortran behave the same as unsigned
+  one for positive values.  For negative values, however, they behave differently
+  for the following operations: <br>
+   - <em>conversion</em>:   to and from string <br>
+   - <em>comparison</em>:   less than (&lt;), less than or equal to(&lt;=),
+                     greater than (&gt;), greater than or equal to (&gt;=) <br>
+   - <em>arithmetic</em>:   division (/) and modulation (MOD) <br>
+  (Note that in two's complement arithmetic, the three other basic
+   arithmetic operations of add, subtract, and multiply are bit-wise
+   identical if the two operands are regarded as both being signed
+   or both being unsigned.) <br>
+  Therefore, the module only provides routines for those operations that differ.
+  For those operations (the one that not yet mentioned including bitwise one)
+  that have the same behaviors, normal Fortran expressions can be used. <br>
+  It is important to note that routines in this module cannot differentiate between
+  signed and unsigned integers (i.e. they assume all integers (input and/or output)
+  to be unsigned with the exception of output of 'CompareUnsigned' routines); thus,
+  users of this module must be extremely careful not to mix up signed and unsigned
+  integers in the same expressions. <br>
+  The application interfaces (APIs) used in this module follows closely those used in
+  reference [3].  However, the implementations used here are mostly based on those
+  in references [1] and [2] because it appears that algorithms used in [1] and [2]
+  are more efficient than those used in [3].</p></td></tr>
+<!---->			   <tr class="active"><td><a href='../module/mbase_writeutil.html'>MBase_WriteUtil</a></td><td><a href='../sourcefile/mbase_writeutil.f90.html'>MBase_WriteUtil.f90</a></td><td><p><strong>PURPOSE OF THIS MODULE</strong>: <br>
+  This module contains various utility routines relating to writing to character strings
+  (i.e. formatting a value).</p></td></tr>
+<!--active-->			   <tr class=""><td><a href='../module/mclass_basenodepool.html'>MClass_BaseNodePool</a></td><td><a href='../sourcefile/mclass_basenodepool.f90.html'>MClass_BaseNodePool.f90</a></td><td><p><strong>PURPOSE OF THIS MODULE</strong>: <br>
+  This module contains the <em>BaseNodePool</em> type, the <em>BaseNode</em> type and its related routines.
+  The <em>BaseNodePool</em> type is a memory-pool type that can be used to manage memory allocation
+  of nodes stored in a linked-based container while the <em>BaseNode</em> type is an abstract type
+  provided as a base type for a linked node.  Any linked-based container type intended to
+  utilize the <em>BaseNodePool</em> type must implement its linked node type as an extended type of
+  the <em>BaseNode</em> type.</p></td></tr>
+<!---->			   <tr class="active"><td><a href='../module/mclass_bytebuffer.html'>MClass_ByteBuffer</a></td><td><a href='../sourcefile/mclass_bytebuffer.f90.html'>MClass_ByteBuffer.f90</a></td><td><p><strong>PURPOSE OF THIS MODULE</strong>: <br>
+  This module contains the <em>ByteBuffer</em> type and its related routines.  The <em>ByteBuffer</em> type
+  is a buffer type that provides a conveniently simple and efficient mechanism for adding
+  multiple bytes (i.e. building an array of 8-bit integers).  <br>
+  The <em>ByteBuffer</em> type provides several methods that can be grouped into the following
+  categories. <br>
+  (1) Construction and Destruction.  Methods for these operations include: <br>
+  - <em>CreateEmpty</em> method - method to construct an empty buffer, <br>
+  - <em>Construct</em> method - method to construct the buffer from its first specified bytes, and <br>
+  - <em>Clear</em> method - method to remove all inserted bytes from the buffer. <br>
+  (2) Insertion.  A method for this operation is: <br>
+  - <em>Append</em> method - method to insert bytes into the end of the buffer, <br>
+  (3) Conversion-To-Bytes.  Methods for these operations include: <br>
+  - <em>AsArray</em> method - method to return the stored bytes as an allocatable array of 8-bit integers, and <br>
+  - <em>ViewArray</em> method - method to return a pointer to the stored bytes. <br>
+  (4) Inquiry.  A method for this operation is: <br>
+  - <em>Size</em> method - method to inquire the current size of the stored bytes. <br>
+  <em>Note</em>: The <em>ByteBuffer</em> type is a subtype in the <em>Object</em> class so it also provides those deferred
+  methods required by the <em>Object</em> class. <br></p></td></tr>
+<!--active-->			   <tr class=""><td><a href='../module/mclass_charbuffer.html'>MClass_CharBuffer</a></td><td><a href='../sourcefile/mclass_charbuffer.f90.html'>MClass_CharBuffer.f90</a></td><td><p><strong>PURPOSE OF THIS MODULE</strong>: <br>
+  This module contains the <em>CharBuffer</em> type and its related routines.  The <em>CharBuffer</em> type
+  is a buffer type that provides a conveniently simple and efficient mechanism for concatenating
+  multiple character strings (i.e. building a string from several strings).  <br>
+  The <em>CharBuffer</em> type provides several methods that can be grouped into the following
+  categories. <br>
+  (1) Construction and Destruction.  Methods for these operations include: <br>
+  - <em>CreateEmpty</em> method - method to construct an empty buffer, <br>
+  - <em>Construct</em> method - method to construct the buffer from its first specified string, and <br>
+  - <em>Clear</em> method - method to remove all inserted characters from the buffer. <br>
+  (2) Insertion.  A method for this operation is: <br>
+  - <em>Append</em> method - method to insert a string into the end of the buffer's string, <br>
+  (3) Conversion-To-String.  Methods for these operations include: <br>
+  - <em>AsString</em> method - method to return the buffer's string as an allocatable character string, and <br>
+  - <em>ViewString</em> method - method to return a pointer to the buffer's string. <br>
+  (4) Inquiry.  A method for this operation is: <br>
+  - <em>Length</em> method - method to inquire the current length of the buffer's string. <br>
+  <strong><em>Note</em></strong>: The <em>CharBuffer</em> type is a subtype in the <em>Object</em> class so it also provides those deferred
+  methods required by the <em>Object</em> class. <br>
+  <strong><em>Important Note</em></strong>: The <em>CharBuffer</em> type provides two methods to return character strings stored in
+  the object.  The <em>AsString</em> method exactly returns the stored character string whereas the <em>ToString</em>
+  method (inherited from the <em>Object</em> type) returns a string representation of the object, which includes
+  the stored character string and a prefix specifying the type name of the object (i.e. "CharBuffer").
+  Therefore, the user should choose the method properly. <br></p></td></tr>
+<!---->			   <tr class="active"><td><a href='../module/mclass_comparable.html'>MClass_Comparable</a></td><td><a href='../sourcefile/mclass_comparable.f90.html'>MClass_Comparable.f90</a></td><td><p><strong>PURPOSE OF THIS MODULE</strong>: <br>
+  This module contains the <em>Comparable</em> type and its related routines.  The <em>Comparable</em> type is
+  an abstract data type (ADT) representing an object that can be compared to itself and/or other
+  object in the <em>Comparable</em> class.  The comparison provides a total ordering on the <em>Comparable</em>
+  objects.  This ordering is commonly referred to as the class's natural ordering, and the class's
+  <em>CompareTo</em> method is referred to as its natural comparison method. <br>
+  The <em>Comparable</em> type defines an application programming interface (API) for typical relational
+  comparisons.  A <em>concrete</em> derived type that extends the <em>Comparable</em> type must implement the
+  <em>CompareTo</em> deferred procedure.  Because the <em>Comparable</em> type is a subtype of the
+  <a href="../module/mclass_object.html#type-object">Object</a> type, all extended types must also
+  implement those deferred procedures required by a subtype of the <em>Object</em> type.</p></td></tr>
+<!--active-->			   <tr class=""><td><a href='../module/mclass_compnodepool.html'>MClass_CompNodePool</a></td><td><a href='../sourcefile/mclass_compnodepool.f90.html'>MClass_CompNodePool.f90</a></td><td><p><strong>PURPOSE OF THIS MODULE</strong>: <br>
+  This module contains the <em>CompNodePool</em> type, the <em>CompNode</em> type and its related routines.
+  The <em>CompNodePool</em> type is a memory-pool type that can be used to manage memory allocation of
+  comparable nodes stored in a linked-based container while the <em>CompNode</em> type is an abstract
+  type provided as a base type for a comparable linked node.  Any linked-based container type
+  intended to utilize the <em>CompNodePool</em> type must implement its linked node type as an extended
+  type of the <em>CompNode</em> type.</p></td></tr>
+<!---->			   <tr class="active"><td><a href='../module/mclass_errordata.html'>MClass_ErrorData</a></td><td><a href='../sourcefile/mclass_errordata.f90.html'>MClass_ErrorData.f90</a></td><td><p><strong>PURPOSE OF THIS MODULE</strong>: <br>
+  This module contains the <em>ErrorData</em> derived type and its related routines.
+  The <em>ErrorData</em> type is a simple error data type that can be used to handle and
+  report errors. <br></p></td></tr>
+<!--active-->			   <tr class=""><td><a href='../module/mclass_errorinfo.html'>MClass_ErrorInfo</a></td><td><a href='../sourcefile/mclass_errorinfo.f90.html'>MClass_ErrorInfo.f90</a></td><td><p><strong>PURPOSE OF THIS MODULE</strong>: <br>
+  This module contains the <em>ErrorInfo</em> derived type and its related routines.
+  The <em>ErrorInfo</em> type is an error data type that can be used to handle and report
+  errors.  Unlike the <a href="../module/mclass_errordata.html#type-errordata">
+  ErrorData</a> type, which can only report the routine name (and optionally
+  the module name) where the error occurs, the <em>ErrorInfo</em> type provides the
+  <em>SetCaller</em> method so that all the calling routines and their modules can
+  be reported.</p></td></tr>
+<!---->			   <tr class="active"><td><a href='../module/mclass_freeblocklist.html'>MClass_FreeBlockList</a></td><td><a href='../sourcefile/mclass_freeblocklist.f90.html'>MClass_FreeBlockList.f90</a></td><td><p><strong>PURPOSE OF THIS MODULE</strong>: <br>
+  This module contains the <em>FreeBlockList</em> type, the <em>FreeBlockNode</em> type and its related
+  routines.  The <em>FreeBlockList</em> type is a linked-list type that can be used to keep track
+  of free memory blocks in a memory pool while the <em>FreeBlockNode</em> type is a linked-node
+  type to be used in conjunction with the <em>FreeBlockList</em> type.</p></td></tr>
+<!--active-->			   <tr class=""><td><a href='../module/mclass_gendata.html'>MClass_GenData</a></td><td><a href='../sourcefile/mclass_gendata.f90.html'>MClass_GenData.f90</a></td><td><p><strong>PURPOSE OF THIS MODULE</strong>: <br>
+  This module contains the <em>GenData</em> type and its related routines.  The <em>GenData</em> type is
+  a data type that provides a generic data storage.  It can be used to store any data types.
+  The <em>GenData</em> type is a client of the <em>MemoryPool</em> type where, internally, it uses the
+  storage of the <em>MemoryPool</em> type to store data of intrinsic types.  For data of derived
+  types, it uses an unlimited polymorphic entity to store the specified data. <br>
+  <em>Note</em>: By design, the <em>GenData</em> type requires the user to supply the <em>MemoryPool</em> type
+  when the <em>Set</em> method is called.  This means that the user is an owner of the specified
+  <em>MemoryPool</em> type and must be responsible for managing the memory pool.  If the type of
+  the data to be stored is a derived one, the user may specify a null pointer as an argument
+  to the <em>Set</em> method. <br></p></td></tr>
+<!---->			   <tr class="active"><td><a href='../module/mclass_intrusivebstrees.html'>MClass_IntrusiveBSTrees</a></td><td><a href='../sourcefile/mclass_intrusivebstrees.f90.html'>MClass_IntrusiveBSTrees.f90</a></td><td><p><strong>PURPOSE OF THIS MODULE</strong>: <br>
+  This module contains <em>intrusive-based</em> balanced-tree container types and their
+  related routines.  The module provides application programming interfaces (APIs)
+  for two balanced-tree containers: the AVL tree (by the <em>IntrusiveAVLTree</em> type)
+  and the red-black tree (by the <em>IntrusiveRBTree</em> type).  The module also provides
+  a binary-search tree node type (<em>BSTNode</em>) to be used with the containers. <br>
+  Both balanced-tree container types employ the so-called <strong>intrusive</strong> technique.
+  See the <a href="../module/MClass_IntrusiveLinkedLists.html">MClass_IntrusiveLinkedLists</a>
+  module for detailed explanation of the intrusive technique. <br>
+  Similar to the <a href="../module/MClass_IntrusiveLinkedLists.html#type-doublylinkednode">DoublyLinkedNode</a>
+  type, a user must define a new node type that extends the <em>BSTNode</em> type in order to
+  use an intrusive tree container provided.  This new type typically contains user data
+  as its additional component(s).  However, unlike a user type that extends the
+  <em>DoublyLinkedNode</em> type, this new type must be able to compare to itself and provides
+  a total ordering on the user objects.  This is due to the fact that the new user type
+  is in the <em>Comparable</em> class (as the <em>BSTNode</em> type is a subtype of the <em>Comparable</em>
+  type).  Therefore, the user must implement deferred procedures required by a
+  <em>Comparable</em> object.  This means that user data of the new user type typically contain
+  a key and other data.  The key then is commonly used to provide a comparison of two
+  <em>Comparable</em> objects. <br>
+  The <em>IntrusiveAVLTree</em> type is a balanced-tree container type that uses the AVL
+  (Adelson-Velsky and Landis) tree whereas the <em>IntrusiveRBTree</em> type is also a
+  balanced-tree container type but employs a left-leaning red-black (RB) tree.
+  Both tree container types stores objects (or nodes) in the <em>BSTNode</em> class.  Thus,
+  a user type that extends the <em>BSTNode</em> type can be used in both tree containers.</p></td></tr>
+<!--active-->			   <tr class=""><td><a href='../module/mclass_intrusivehashlist.html'>MClass_IntrusiveHashList</a></td><td><a href='../sourcefile/mclass_intrusivehashlist.f90.html'>MClass_IntrusiveHashList.f90</a></td><td><p><strong>PURPOSE OF THIS MODULE</strong>: <br>
+  This module contains the <em>IntrusiveHashList</em> type, the <em>HashListNode</em> type and
+  their related routines.  The <em>IntrusiveHashList</em> type is a container type that
+  employs a separate-chaining hash table implementation to provide common operations
+  for an unordered symbol table while the <em>HashListNode</em> type is a node type intended
+  to be used in conjunction with the <em>IntrusiveHashList</em> type. <br>
+  As an intrusive container, the <em>IntrusiveHashList</em> type requires a user to define
+  a new node type that extends the <em>HashListNode</em> type, which is a subtype of the
+  <a href="../module/MClass_IntrusiveLinkedLists.html#type-doublylinkednode">DoublyLinkedNode</a>
+  type.  The new node type must contain a key (or more than one) as its additional
+  component(s).  The new node type may contain one or more associated values as its
+  other component(s).  The user is also required to implement all procedures deferred
+  by the <em>HashListNode</em> type.  In particular, the <em>IsKeyEqual</em> and <em>ComputeHashValue</em>
+  deferred procedures should be dependent on the key component(s) only. <br>
+  Unlike intrusive list-based and tree-based types, which can be used instantly
+  by inserting objects into a container, the <em>IntrusiveHashList</em> type requires an
+  explicit construction via the <em>Construct</em> method before using other provided
+  operations. <br></p></td></tr>
+<!---->			   <tr class="active"><td><a href='../module/mclass_intrusivehashtree.html'>MClass_IntrusiveHashTree</a></td><td><a href='../sourcefile/mclass_intrusivehashtree.f90.html'>MClass_IntrusiveHashTree.f90</a></td><td><p><strong>PURPOSE OF THIS MODULE</strong>: <br>
+  This module contains the <em>IntrusiveHashTree</em> type, the <em>HashTreeNode</em> type and
+  their related routines.  The <em>IntrusiveHashTree</em> type is a container type that
+  employs a separate-chaining hash table implementation to provide common operations
+  for an unordered symbol table while the <em>HashTreeNode</em> type is a node type intended
+  to be used in conjunction with the <em>IntrusiveHashTree</em> type. <br>
+  As an intrusive container, the <em>IntrusiveHashTree</em> type requires a user to define
+  a new node type that extends the <em>HashTreeNode</em> type, which is a subtype of the
+  <a href="../module/MClass_IntrusiveBSTrees.html#type-bstode">BSTNode</a> type.  The
+  new node type must contain a key (or more than one) as its additional component(s).
+  The new node type may contain one or more associated values as its other component(s).
+  The user is also required to implement all procedures deferred by the <em>HashTreeNode</em>
+  type and its parent types.  In particular, the <em>CompareTo</em> and <em>ComputeHashValue</em>
+  deferred procedures should be dependent on the key component(s) only. <br>
+  Unlike intrusive list-based and tree-based types, which can be used instantly by
+  inserting objects into a container, the <em>IntrusiveHashTree</em> type requires an explicit
+  construction via the <em>Construct</em> method before using other provided operations. <br></p></td></tr>
+<!--active-->			   <tr class=""><td><a href='../module/mclass_intrusivelinkedlists.html'>MClass_IntrusiveLinkedLists</a></td><td><a href='../sourcefile/mclass_intrusivelinkedlists.f90.html'>MClass_IntrusiveLinkedLists.f90</a></td><td><p><strong>PURPOSE OF THIS MODULE</strong>: <br>
+  This module contains <em>intrusive-based</em> linked-list container types and their
+  related routines.  The module provides application programming interfaces (APIs)
+  for two linked-list containers: the linear list (by the <em>IntrusiveLinearList</em>
+  type) and the ring list (by <em>IntrusiveRingList</em> type).  The module also provides
+  a base linked node (<em>DoublyLinkedNode</em>) type to be used with both containers. <br>
+  The <em>DoublyLinkedNode</em> type is a base linked node type that can connect to
+  its adjacent nodes in two directions.  The node allows a doubly-linked list to
+  be formed.  This indicates that both containers are doubly-linked list containers.
+  To use the list containers provided, a user must define a new node type that extends
+  the <em>DoublyLinkedNode</em> type.  This new type typically contains user data as its
+  additional component(s). <br>
+  The <em>IntrusiveLinearList</em> type is an <em>intrusive linearly-linked-list</em> container
+  while the <em>IntrusiveRingList</em> type is an <em>intrusive circularly-linked-list</em> container.
+  Unlike the <em>IntrusiveLinearList</em> type, the next pointer of the last node of the
+  <em>IntrusiveRingList</em> list points to its first node, rather than pointing to NULL.
+  Similarly, the previous pointer of the first node of the <em>IntrusiveRingList</em> list
+  points to its last node allowing the list to be formed as a ring.  Both containers
+  stores objects (or nodes) in the <em>DoublyLinkedNode</em> class (i.e. objects/nodes that
+  are subtypes of the <em>DoublyLinkedNode</em> type). <br>
+ <br>
+ <strong>Intrusive Technique</strong>: <br>
+  Both intrusive list container types employ the so-called <strong>intrusive</strong> technique.
+  To illustrate the intrusive technique and highlight its distinction from the
+  non-intrusive (i.e. tradition) one, let consider a derived type that defines
+  a point in a 2-dimensional coordinate system.
+<br>
+<Pre><Code style="color:MidnightBlue;">
+  TYPE Point2D
+      REAL   :: X, Y
+  END TYPE
+  </Code></Pre></p><a href="../module/mclass_intrusivelinkedlists.html" class="pull-right"><emph>Read more&hellip;</emph></a></td></tr>
+<!---->			   <tr class="active"><td><a href='../module/mclass_keyordered.html'>MClass_KeyOrdered</a></td><td><a href='../sourcefile/mclass_keyordered.f90.html'>MClass_KeyOrdered.f90</a></td><td><p><strong>PURPOSE OF THIS MODULE</strong>: <br>
+  This module contains the <em>KeyOrdered</em> type and its related routines.  The <em>KeyOrdered</em>
+  type is a data type that provides a storage for an ordered key.  It can be used to store
+  any valid ordered key types.  This data type is intended to be used in conjunction with
+  an ordered associative (key-value) container. <br>
+  The comparison between ordered keys provides a total ordering on the key objects.  This
+  ordering is commonly referred to as the key's natural ordering, and the <em>CompareTo</em> method
+  provided for the <em>KeyOrdered</em> type is referred to as its natural comparison method. <br>
+  For the <em>KeyOrdered</em> type implemented here, the valid ordered key types include any Fortran
+  intrinsic types that have a <em>natural ordering</em> and any concrete derived type that is a subtype
+  of the <em>Comparable</em> type.  The valid Fortran intrinsic key types include the <em>CHARACTER</em> type,
+  <em>INTEGER</em> types and <em>REAL</em> types. <br>
+  The <em>KeyOrdered</em> type is a client of the <em>MemoryPool</em> type where, internally, it uses the
+  storage of the <em>MemoryPool</em> type to store key data of intrinsic types.  For key data of derived
+  types, it uses an unlimited polymorphic entity to store the specified data. <br>
+  <em>Note</em>: By design, the <em>GenData</em> type requires the user to supply the <em>MemoryPool</em> type
+  when the <em>Set</em> method is called.  This means that the user is an owner of the specified
+  <em>MemoryPool</em> type and must be responsible for managing the memory pool.  If the type of
+  the data to be stored is a derived one, the user may specify a null pointer as an argument
+  to the <em>Set</em> method. <br></p></td></tr>
+<!--active-->			   <tr class=""><td><a href='../module/mclass_keyunordered.html'>MClass_KeyUnordered</a></td><td><a href='../sourcefile/mclass_keyunordered.f90.html'>MClass_KeyUnordered.f90</a></td><td><p><strong>PURPOSE OF THIS MODULE</strong>: <br>
+  This module contains the <em>KeyUnordered</em> type and its related routines.  The <em>KeyUnordered</em>
+  type is a data type that provides a storage for an unordered key.  It can be used to store
+  any data types, except the <em>LOGICAL</em> type.  The <em>KeyUnordered</em> type is a subtype extended
+  from the <em>GenData</em> type. <br>
+  <em>Note</em>: By design, the <em>GenData</em> type requires the user to supply the <em>MemoryPool</em> type
+  when the <em>Set</em> method is called.  This means that the user is an owner of the specified
+  <em>MemoryPool</em> type and must be responsible for managing the memory pool.  If the type of
+  the data to be stored is a derived one, the user may specify a null pointer as an argument
+  to the <em>Set</em> method. <br></p></td></tr>
+<!---->			   <tr class="active"><td><a href='../module/mclass_mathexpparser.html'>MClass_MathExpParser</a></td><td><a href='../sourcefile/mclass_mathexpparser.f90.html'>MClass_MathExpParser.f90</a></td><td><p><strong>PURPOSE OF THIS MODULE</strong>: <br>
+  This module contains the <em>MathExpParser</em> derived type and its related routines.
+  The <em>MathExpParser</em> type is a parser type that can be used to parse and evaluate
+  mathematical expressions.  It is intended for applications where a set of
+  mathematical expressions is specified at runtime and is then evaluated for
+  a large number of variable values.  This is done by  compiling the set of
+  function strings into byte code, which is interpreted very efficiently for
+  the various variable values.  The evaluation is straightforward and no
+  recursions are done (uses stack arithmetic). <br>
+  This module is a modernized/re-engineered version of the <em>fParser</em> module
+  of the <em>FEATFLOW2</em> program [1].  <br>
+  <br>
+<strong>REFERENCES</strong>: <br>
+  [1] <a href="https://wwwold.mathematik.tu-dortmund.de/~featflow/en/software/featflow2.html">
+      The software package FEATFLOW2</a> <br></p></td></tr>
+<!--active-->			   <tr class=""><td><a href='../module/mclass_memorypool.html'>MClass_MemoryPool</a></td><td><a href='../sourcefile/mclass_memorypool.f90.html'>MClass_MemoryPool.f90</a></td><td><p><strong>PURPOSE OF THIS MODULE</strong>: <br>
+  This module contains the <em>MemoryPool</em> type and its supporting data types and related routines.
+  The <em>MemoryPool</em> type is a general data storage type that can be used to store data of any types.
+  Internally, it stores the specified data as an array of bytes.</p></td></tr>
+<!---->			   <tr class="active"><td><a href='../module/mclass_object.html'>MClass_Object</a></td><td><a href='../sourcefile/mclass_object.f90.html'>MClass_Object.f90</a></td><td><p><strong>PURPOSE OF THIS MODULE</strong>: <br>
+  This module contains the <em>Object</em> type and its related routines.  The <em>Object</em> type is an
+  abstract data type (ADT) representing an object that can make a copy of itself.  It defines
+  an application programming interface (API) for various common operations shared by most
+  objects.  By design, the <em>Object</em> type is intended to be a base type (superclass) for all
+  other derived types with object-oriented programming (OOP) implementation.  Hence, all other
+  derived types should extend from this base type (i.e being its subclasses). <br></p></td></tr>
+<!--active-->			   <tr class=""><td><a href='../module/mclass_progressbar.html'>MClass_ProgressBar</a></td><td><a href='../sourcefile/mclass_progressbar.f90.html'>MClass_ProgressBar.f90</a></td><td><p><strong>PURPOSE OF THIS MODULE</strong>: <br>
+  This module contains a <em>ProgressBar</em> class that can be used to display a progress
+  bar in the console, so that the user can see the progress of a long calculation or
+  operation. The <em>ProgressBar</em> class is an object-oriented implementation of the
+  <strong><em>progress_bar</em></strong> module of <a href="https://github.com/arjenmarkus/io_utilities">
+  I/O utilities: Small collection of Fortran modules.</a> <br>
+ <br>
+<strong>USAGE</strong>: <br>
+  The following code snippet illustrates a typical usage of the ProgressBar class.
+<br>
+<Pre><Code style="color:MidnightBlue;">
+  ! set up progress bar
+  CALL Bar%Setup(Progress_Delimited, Prefix = "Progress: ", Show = Progress_Value_Max, &
+                 MaxVal = REAL(OutLoop, KIND=SP))
+  ! perform a long calculation task
+  DO J = 1, OutLoop
+      DO I = 1, InLoop
+          Do Some Calculations
+      END DO
+      ! update the bar
+      CALL Bar%Update(REAL(J, KIND=SP))
+  END DO
+  ! when done, move cursor to next line
+  CALL Bar%Finish()
+  </Code></Pre>
+</p></td></tr>
+<!---->			   <tr class="active"><td><a href='../module/mclass_safeptralloc.html'>MClass_SafePtrAlloc</a></td><td><a href='../sourcefile/mclass_safeptralloc.f90.html'>MClass_SafePtrAlloc.f90</a></td><td><p><strong>PURPOSE OF THIS MODULE</strong>: <br>
+  This module contains the <em>SafePtrAlloc</em> type and its supporting data types and related routines.
+  The <em>SafePtrAlloc</em> type is a safe-pointer allocator that provides a safe way to allocate memory
+  for a 1-dimensional pointer array for any intrinsic types and any derived types in the <em>Object</em>
+  class.  It is worth noting that users may use the allocator with a pointer remapping of a rank-one
+  array to safely allocate memory for a pointer array with rank higher than one.</p></td></tr>
+<!--active-->			   <tr class=""><td><a href='../module/mclass_stackchar.html'>MClass_StackChar</a></td><td><a href='../sourcefile/mclass_stackchar.f90.html'>MClass_StackChar.f90</a></td><td><p><strong>PURPOSE OF THIS MODULE</strong>: <br>
+  This module contains the <em>StackChar</em> type and its related/supporting routines and derived type(s).
+  The <em>StackChar</em> type is a stack container with <em>CHARACTER</em> as the type of its stored items.  It
+  employs a conventional singly-linked list implementation. <br></p></td></tr>
+<!---->			   <tr class="active"><td><a href='../module/mclass_stackint32.html'>MClass_StackInt32</a></td><td><a href='../sourcefile/mclass_stackint32.f90.html'>MClass_StackInt32.f90</a></td><td><p><strong>PURPOSE OF THIS MODULE</strong>: <br>
+  This module contains the <em>StackInt32</em> type and its related/supporting routines and derived type(s).
+  The <em>StackInt32</em> type is a stack container with <em>INTEGER(KIND=kInt32)</em> as the type of its stored
+  items.  It employs a conventional singly-linked list implementation. <br></p></td></tr>
+<!--active-->			   <tr class=""><td><a href='../module/mclass_stackint64.html'>MClass_StackInt64</a></td><td><a href='../sourcefile/mclass_stackint64.f90.html'>MClass_StackInt64.f90</a></td><td><p><strong>PURPOSE OF THIS MODULE</strong>: <br>
+  This module contains the <em>StackInt64</em> type and its related/supporting routines and derived type(s).
+  The <em>StackInt64</em> type is a stack container with <em>INTEGER(KIND=kInt64)</em> as the type of its stored
+  items.  It employs a conventional singly-linked list implementation. <br></p></td></tr>
+<!---->			   <tr class="active"><td><a href='../module/mclass_stackrealdp.html'>MClass_StackRealDP</a></td><td><a href='../sourcefile/mclass_stackrealdp.f90.html'>MClass_StackRealDP.f90</a></td><td><p><strong>PURPOSE OF THIS MODULE</strong>: <br>
+  This module contains the <em>StackRealDP</em> type and its related/supporting routines and derived type(s).
+  The <em>StackRealDP</em> type is a stack container with <em>REAL(KIND=kDouble)</em> as the type of its stored
+  items.  It employs a conventional singly-linked list implementation. <br></p></td></tr>
+<!--active-->			   <tr class=""><td><a href='../module/mclass_stackrealsp.html'>MClass_StackRealSP</a></td><td><a href='../sourcefile/mclass_stackrealsp.f90.html'>MClass_StackRealSP.f90</a></td><td><p><strong>PURPOSE OF THIS MODULE</strong>: <br>
+  This module contains the <em>StackRealSP</em> type and its related/supporting routines and derived type(s).
+  The <em>StackRealSP</em> type is a stack container with <em>REAL(KIND=kSingle)</em> as the type of its stored
+  items.  It employs a conventional singly-linked list implementation. <br></p></td></tr>
+<!---->			   <tr class="active"><td><a href='../module/mclass_timer.html'>MClass_Timer</a></td><td><a href='../sourcefile/mclass_timer.f90.html'>MClass_Timer.f90</a></td><td><p><strong>PURPOSE OF THIS MODULE</strong>: <br>
+  This module contains a <em>Timer</em> class that can be used to measure an elapsed time.</p></td></tr>
+<!--active-->			 </tbody></table>
+             
+        </div>
+      </div>
+      <hr>
+    </div> <!-- /container -->
+    <footer>
+      <div class="container">
+        <div class="row justify-content-between">
+          <div class="col"><p>eXPerimental Fortran Library (XpfLib) Documentation was developed by Niranama<br>&copy; 2024 
+</p>
+          </div>
+          <div class="col">
+            <p class="text-end">
+              Documentation generated by
+              <a href="https://github.com/Fortran-FOSS-Programmers/ford">FORD</a>
+            </p>
+          </div>
+        </div>
+        <br>
+      </div> <!-- /container -->
+    </footer>
+
+    <!-- Bootstrap core JavaScript -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>    
+
+    <!-- MathJax JavaScript
+             ================================================== -->
+             <!-- Placed at the end of the document so the pages load faster -->
+        <script type="text/x-mathjax-config">
+          MathJax.Hub.Config({
+          TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } },
+          jax: ['input/TeX','input/MathML','output/HTML-CSS'],
+          extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']
+          });
+        </script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+          <script src="../tipuesearch/tipuesearch_content.js"></script>
+          <script src="../tipuesearch/tipuesearch_set.js"></script>
+          <script src="../tipuesearch/tipuesearch.js"></script>
+
+  </body>
+</html>

@@ -1,0 +1,1039 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta name="description" content="Experimental Fortran Package - Hash Functions">
+    <meta name="author" content="Niranama" >
+    <link rel="icon" href="../favicon.png">
+
+    <title>KP1600Sponge &ndash; eXPerimental Fortran Library (XpfLib) Documentation </title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link href="../css/pygments.css" rel="stylesheet">
+    <link href="../css/font-awesome.min.css" rel="stylesheet">
+    <link href="../css/local.css" rel="stylesheet">
+      <link  href="../tipuesearch/tipuesearch.css" rel="stylesheet">
+
+    <script src="https://code.jquery.com/jquery-3.7.0.slim.min.js" integrity="sha256-tG5mcZUtJsZvyKAxYLVXrmjKBVLd6VpVccqz/r4ypFE=" crossorigin="anonymous"></script>
+  </head>
+
+  <body>
+
+    <!-- Fixed navbar -->
+    <div class="container-fluid mb-sm-4 mb-xl-2">
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container">
+          <a class="navbar-brand" href="../index.html">eXPerimental Fortran Library (XpfLib) Documentation </a>
+          <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar"
+                  aria-expanded="false" aria-controls="navbar" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon">
+          </button>
+
+          <div id="navbar" class="navbar-collapse collapse">
+            <ul class="navbar-nav">
+                  <li class="nav-item">
+                    <a class="nav-link" href="../lists/files.html">Source Files</a>
+                  </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../lists/modules.html">Modules</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../lists/procedures.html">Procedures</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../lists/absint.html">Abstract Interfaces</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../lists/types.html">Derived Types</a>
+                </li>
+            </ul>
+              <div class="d-flex align-items-end flex-grow-1">
+                <form action="../search.html" role="search" class="ms-auto">
+                  <input type="text" class="form-control" aria-label="Search" placeholder="Search" name="q" id="tipue_search_input" autocomplete="off" required>
+                </form>
+              </div>
+          </div><!--/.nav-collapse -->
+        </div>
+      </nav>
+    </div>
+
+    <div class="container">
+  <div class="row">
+    <h1>KP1600Sponge
+      <small>Derived Type</small>
+      
+    </h1>
+      <div class="container p-2 mb-4 bg-light border rounded-3">
+    <div class="row align-items-center justify-content-between" id="info-bar">
+      <div class="col">
+        <ul class="list-inline" style="margin-bottom:0px;display:inline">
+
+            <li class="list-inline-item" id="statements"><i class="fa fa-list-ol"></i>
+              <a data-bs-toggle="tooltip"
+                 data-bs-placement="bottom" data-html="true"
+                 title="<p> 1.9% of total for derived types.</p>Including implementation: 417 statements,  2.6% of total for derived types.">22 statements</a>
+            </li>
+
+            <li class="list-inline-item" id="source-file">
+              <i class="fa fa-code"></i>
+              <a href="../src/MClass_KP1600Sponge.f90"> Source File</a>
+            </li>
+        </ul>
+      </div>
+      <div class="col">
+        <nav aria-label="breadcrumb">
+          <ol class="breadcrumb justify-content-end mb-0">
+                <li class="breadcrumb-item"><a href='../sourcefile/mclass_kp1600sponge.f90.html'>MClass_KP1600Sponge.f90</a></li>
+                <li class="breadcrumb-item"><a href='../module/mclass_kp1600sponge.html'>MClass_KP1600Sponge</a></li>
+            <li class="breadcrumb-item active" aria-current="page">KP1600Sponge</li>
+          </ol>
+        </nav>
+      </div>
+    </div>
+  </div>
+  <script>
+    $(function () {
+    $('[data-bs-toggle="tooltip"]').tooltip()
+    })
+  </script>
+
+  </div>
+  
+  <div class="row">
+    <div class="col-md-3 hidden-xs hidden-sm visible-md visible-lg">
+      <div id="sidebar">
+      <h3>Contents</h3>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+      <div class="card mb-4">
+      <a data-bs-toggle="collapse" href="#fins-0"
+         aria-expanded="false" aria-controls="fins-0">
+         <h4 class="card-header bg-primary text-white">Finalization Procedures</h4>
+      </a>
+      <div id="fins-0" class="collapse">
+        <div class="list-group list-group-flush">
+            <a class="list-group-item" href="../type/kp1600sponge.html#finalproc-kp1600sponge_finalize">KP1600Sponge_Finalize</a>
+        </div>
+      </div>
+    </div>
+
+      <div class="card mb-4">
+      <a data-bs-toggle="collapse" href="#boundprocs-0"
+         aria-expanded="false" aria-controls="boundprocs-0">
+         <h4 class="card-header bg-primary text-white">Type-Bound Procedures</h4>
+      </a>
+      <div id="boundprocs-0" class="collapse">
+        <div class="list-group list-group-flush">
+            <a class="list-group-item" href="../type/kp1600sponge.html#boundprocedure-initialize~37">Initialize</a>
+            <a class="list-group-item" href="../type/kp1600sponge.html#boundprocedure-absorb">Absorb</a>
+            <a class="list-group-item" href="../type/kp1600sponge.html#boundprocedure-absorblastfewbits">AbsorbLastFewBits</a>
+            <a class="list-group-item" href="../type/kp1600sponge.html#boundprocedure-permute">Permute</a>
+            <a class="list-group-item" href="../type/kp1600sponge.html#boundprocedure-squeeze">Squeeze</a>
+            <a class="list-group-item" href="../type/kp1600sponge.html#boundprocedure-getbyteioindex">GetByteIOIndex</a>
+            <a class="list-group-item" href="../type/kp1600sponge.html#boundprocedure-setbyteioindex">SetByteIOIndex</a>
+            <a class="list-group-item" href="../type/kp1600sponge.html#boundprocedure-copystate">CopyState</a>
+        </div>
+      </div>
+    </div>
+
+  
+  
+    <div class="card card-primary">
+      <div class="card-header text-left"><h3 class="card-title">Source Code</h3></div>
+      <div class="list-group">
+        <a class="list-group-item" href="../type/kp1600sponge.html#src">KP1600Sponge</a>
+      </div>
+    </div>
+
+
+  </div>
+
+    </div>
+    
+    <div class="col-md-9" id='text'>
+      <h2>type, public :: KP1600Sponge</h2>
+    <p><em>KP1600Sponge</em> is a derived type representing a sponge instance for
+ use with the <em>Keccak Sponge</em> functions.  It gathers the state processed
+ by the permutation as well as the rate.</p>
+    <br>
+
+    
+
+      <section>
+        <h2>Finalization Procedures</h2>
+            <div class="card">
+    <div class="card-header codesum">
+      <span class="anchor" id="finalproc-kp1600sponge_finalize"></span>
+      <h3>final :: <strong>KP1600Sponge_Finalize</strong> </h3>
+    </div>
+    <div class="card-body">
+      
+      
+    </div>
+    <ul class="list-group">
+      <li class="list-group-item">
+            <h3>
+    private  subroutine KP1600Sponge_Finalize(Instance)  
+
+    </h3>
+  <p>To perform finalization of the object.</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-instance~9"></span>
+              type(<a href='../type/kp1600sponge.html'>KP1600Sponge</a>),
+            </td>
+<td>intent(inout)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Instance</strong></td>
+            <td>
+                <p>'Sponge' instance</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+      </li>
+    </ul>
+  </div>
+
+      </section>
+      <br>
+
+      <section>
+        <h2>Type-Bound Procedures</h2>
+          <div class="row">
+              <div class="card mt-3">
+    <div class="card-header codesum">
+      <span class="anchor" id="boundprocedure-initialize~37"></span>
+      <h3>
+          procedure, public ::
+  <strong>Initialize</strong> => KP1600Sponge_Initialize
+        
+      </h3>
+    </div>
+      <div class="card-body">
+        
+        <p><strong>Type-Bound Subroutine</strong>: Initialize <br>
+ <strong>Purpose</strong>:  To initialize the <em>Sponge</em> instance. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    CALL Instance%Initialize(Capacity, nRounds)</p>
+      </div>
+    <ul class="list-group">
+        <li class="list-group-item">
+                  <h3>
+    private  subroutine KP1600Sponge_Initialize(Instance, Capacity, NRounds)  
+</h3>
+
+  <p>To initialize the state of the Keccak-p[1600, nRounds] sponge function.
+ The phase of the sponge function is set to absorbing. <br>
+ Note: the capacity 'c' is a double of the security strength of a particular
+       cryptographic hash function.</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(<a href='../type/kp1600sponge.html'>KP1600Sponge</a>),
+            </td>
+<td>intent(inout),</td>
+              <td></td>            <td>
+              TARGET
+            </td>
+            <td>::</td>
+            <td><strong>Instance</strong></td>
+            <td>
+                <p>'Sponge' instance</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              integer(kind=kInt32),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Capacity</strong></td>
+            <td>
+                <p>value of the capacity c</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              integer(kind=kInt32),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>NRounds</strong></td>
+            <td>
+                <p>the number of rounds to be permuted</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+        </li>
+    </ul>
+  </div>
+
+          </div>
+          <div class="row">
+              <div class="card mt-3">
+    <div class="card-header codesum">
+      <span class="anchor" id="boundprocedure-absorb"></span>
+      <h3>
+          procedure, public ::
+  <strong>Absorb</strong> => KP1600Sponge_Absorb
+        
+      </h3>
+    </div>
+      <div class="card-body">
+        
+        <p><strong>Type-Bound Function</strong>: Absorb <br>
+ <strong>Purpose</strong>:  To insert input data in bytes to be absorbed by <em>Sponge</em> instance. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    Flag = Instance%Absorb(Input, InpSize) <br>
+  ---&gt;    IF (.NOT.Instance%Absorb(Input, InpSize)) DoSomething <br>
+ <strong>Note</strong>: Must call this method before calling either the <em>AbsorbLastFewBits</em>
+           method or the <em>Squeeze</em> method. <br></p>
+      </div>
+    <ul class="list-group">
+        <li class="list-group-item">
+                  <h3>
+    private  function KP1600Sponge_Absorb(Instance, InpDat, InpByteLen) result(RetFlag)  
+</h3>
+
+  <p>To insert input data in bytes to be absorbed by the sponge function. <br>
+ The sponge function must be in the absorbing phase, which means that
+ the <em>Squeezing</em> flag is currently set to false.  Otherwise, the routine
+ return a <em>FAILURE</em> value. <br>
+ This also indicates that this function (i.e. the <em>Absorb</em> method) must be
+ called before the <em>AbsorbLastFewBits</em> method or the <em>Squeeze</em> method is
+ called.</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(<a href='../type/kp1600sponge.html'>KP1600Sponge</a>),
+            </td>
+<td>intent(inout)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Instance</strong></td>
+            <td>
+                <p>'Sponge' instance</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              integer(kind=kInt8),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>InpDat</strong>(0:)</td>
+            <td>
+                <p>input data as an array of 8-bit integers</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              integer(kind=kInt32),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>InpByteLen</strong></td>
+            <td>
+                <p>size of input data in bytes</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+    <h4>
+    Return Value
+    <small>integer(kind=kInt8)</small>
+    </h4>
+    <p>Returned flag indicating whether the operation is successful or not. <br>
+ - Return the <em>FAILURE</em> value if the <em>Squeezing</em> flag is true. <br>
+ - Otherwise, return the <em>SUCCESS</em> value. <br></p>
+
+        </li>
+    </ul>
+  </div>
+
+          </div>
+          <div class="row">
+              <div class="card mt-3">
+    <div class="card-header codesum">
+      <span class="anchor" id="boundprocedure-absorblastfewbits"></span>
+      <h3>
+          procedure, public ::
+  <strong>AbsorbLastFewBits</strong> => KP1600Sponge_AbsorbLastFewBits
+        
+      </h3>
+    </div>
+      <div class="card-body">
+        
+        <p><strong>Type-Bound Function</strong>: AbsorbLastFewBits <br>
+ <strong>Purpose</strong>:  To insert input data in bits to be absorbed by <em>Sponge</em> instance. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    Flag = Instance%AbsorbLastFewBits(LastByte) <br>
+  ---&gt;    IF (.NOT.Instance%AbsorbLastFewBits(LastByte)) DoSomething <br>
+ <strong>Note</strong>: Must call this method only once and before calling the <em>Squeeze</em> method. <br></p>
+      </div>
+    <ul class="list-group">
+        <li class="list-group-item">
+                  <h3>
+    private  function KP1600Sponge_AbsorbLastFewBits(Instance, DelimitedData) result(RetFlag)  
+</h3>
+
+  <p>To insert input data in bits to be absorbed by the sponge function and
+ then switch to the squeezing phase. <br>
+ The sponge function must be in the absorbing phase, which means that
+ the <em>Squeezing</em> flag is currently set to false.  Otherwise, the routine
+ return a <em>FAILURE</em> value. <br>
+ This also indicates that this function (i.e. the <em>AbsorbLastFewBits</em> method)
+ must be called only once and before the <em>Squeeze</em> method is called.</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(<a href='../type/kp1600sponge.html'>KP1600Sponge</a>),
+            </td>
+<td>intent(inout)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Instance</strong></td>
+            <td>
+                <p>'Sponge' instance</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              integer(kind=kInt8),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>DelimitedData</strong></td>
+            <td>
+                <p>A single byte containing from 0 to 7 trailing bits that must be absorbed.
+ These <em>n</em> bits must be in the least significant bit positions. These bits
+ must be delimited with a bit 1 at position <em>n</em> (counting from 0=LSB to 7=MSB)
+ and followed by bits 0 from position <em>n</em>+1 to position 7. <br>
+ Some examples: <br>
+  - If no bits are to be absorbed, then <em>DelimitedData</em> must be Z'01'. <br>
+  - If the 2-bit sequence 0,0 is to be absorbed, <em>DelimitedData</em> must be Z'04'. <br>
+  - If the 5-bit sequence 0,1,0,0,1 is to be absorbed, <em>DelimitedData</em> must be Z'32'. <br>
+  - If the 7-bit sequence 1,1,0,1,0,0,0 is to be absorbed, <em>DelimitedData</em> must be Z'8B'. <br>
+ <em>DelimitedData</em> must NOT be zero.</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+    <h4>
+    Return Value
+    <small>integer(kind=kInt8)</small>
+    </h4>
+    <p>Returned flag indicating whether the operation is successful or not. <br>
+ - Return the <em>FAILURE</em> value if the <em>Squeezing</em> flag is true or <em>DelimitedData</em> is zero. <br>
+ - Otherwise, return the <em>SUCCESS</em> value. <br></p>
+
+        </li>
+    </ul>
+  </div>
+
+          </div>
+          <div class="row">
+              <div class="card mt-3">
+    <div class="card-header codesum">
+      <span class="anchor" id="boundprocedure-permute"></span>
+      <h3>
+          procedure, public ::
+  <strong>Permute</strong> => KP1600Sponge_Permute
+        
+      </h3>
+    </div>
+      <div class="card-body">
+        
+        <p><strong>Type-Bound Subroutine</strong>: Permute <br>
+ <strong>Purpose</strong>:  To perform a permutation of the state of the <em>Sponge</em> instance. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    CALL Instance%Permute()</p>
+      </div>
+    <ul class="list-group">
+        <li class="list-group-item">
+                  <h3>
+    private  subroutine KP1600Sponge_Permute(Instance)  
+</h3>
+
+  <p>To perform a permutation of the state of the instance.</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(<a href='../type/kp1600sponge.html'>KP1600Sponge</a>),
+            </td>
+<td>intent(inout)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Instance</strong></td>
+            <td>
+                <p>'Sponge' instance</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+        </li>
+    </ul>
+  </div>
+
+          </div>
+          <div class="row">
+              <div class="card mt-3">
+    <div class="card-header codesum">
+      <span class="anchor" id="boundprocedure-squeeze"></span>
+      <h3>
+          procedure, public ::
+  <strong>Squeeze</strong> => KP1600Sponge_Squeeze
+        
+      </h3>
+    </div>
+      <div class="card-body">
+        
+        <p><strong>Type-Bound Function</strong>: Squeeze <br>
+ <strong>Purpose</strong>:  To retrieve output data from <em>Sponge</em> instance. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    Flag = Instance%Squeeze(Output, OutSize) <br>
+  ---&gt;    IF (.NOT.Instance%Squeeze(Output, OutSize)) DoSomething <br></p>
+      </div>
+    <ul class="list-group">
+        <li class="list-group-item">
+                  <h3>
+    private  function KP1600Sponge_Squeeze(Instance, OutDat, OutByteLen) result(RetFlag)  
+</h3>
+
+  <p>To squeeze output data from the sponge function.  If the sponge function
+ was in the absorbing phase, this function switches it to the squeezing
+ phase as if the <em>AbsorbLastFewBits</em> method was called.</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(<a href='../type/kp1600sponge.html'>KP1600Sponge</a>),
+            </td>
+<td>intent(inout)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Instance</strong></td>
+            <td>
+                <p>'Sponge' instance</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              integer(kind=kInt8),
+            </td>
+<td>intent(out)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>OutDat</strong>(0:)</td>
+            <td>
+                <p>a byte array to store the output data</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              integer(kind=kInt32),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>OutByteLen</strong></td>
+            <td>
+                <p>the number of output bytes desired</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+    <h4>
+    Return Value
+    <small>integer(kind=kInt8)</small>
+    </h4>
+    <p>Returned flag indicating whether the operation is successful or not. <br>
+ - Return the <em>FAILURE</em> value if the operation is NOT successful. <br>
+ - Otherwise, return the <em>SUCCESS</em> value. <br></p>
+
+        </li>
+    </ul>
+  </div>
+
+          </div>
+          <div class="row">
+              <div class="card mt-3">
+    <div class="card-header codesum">
+      <span class="anchor" id="boundprocedure-getbyteioindex"></span>
+      <h3>
+          procedure, public ::
+  <strong>GetByteIOIndex</strong> => KP1600Sponge_GetByteIOIndex
+        
+      </h3>
+    </div>
+      <div class="card-body">
+        
+        <p><strong>Type-Bound Function</strong>: GetByteIOIndex <br>
+ <strong>Purpose</strong>:  To get value of the <em>ByteIOIndex</em> component of the <em>Sponge</em> instance. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    Index = Instance%GetByteIOIndex()</p>
+      </div>
+    <ul class="list-group">
+        <li class="list-group-item">
+                  <h3>
+    private  function KP1600Sponge_GetByteIOIndex(Instance) result(Indx)  
+</h3>
+
+  <p>To return the <em>ByteIOIndex</em> variable.</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(<a href='../type/kp1600sponge.html'>KP1600Sponge</a>),
+            </td>
+<td>intent(inout)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Instance</strong></td>
+            <td>
+                
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+    <h4>
+    Return Value
+    <small>integer(kind=kInt32)</small>
+    </h4>
+    
+
+        </li>
+    </ul>
+  </div>
+
+          </div>
+          <div class="row">
+              <div class="card mt-3">
+    <div class="card-header codesum">
+      <span class="anchor" id="boundprocedure-setbyteioindex"></span>
+      <h3>
+          procedure, public ::
+  <strong>SetByteIOIndex</strong> => KP1600Sponge_SetByteIOIndex
+        
+      </h3>
+    </div>
+      <div class="card-body">
+        
+        <p><strong>Type-Bound Subroutine</strong>: SetByteIOIndex <br>
+ <strong>Purpose</strong>:  To set value of the <em>ByteIOIndex</em> component of the <em>Sponge</em> instance. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    CALL Instance%SetByteIOIndex(Index)</p>
+      </div>
+    <ul class="list-group">
+        <li class="list-group-item">
+                  <h3>
+    private  subroutine KP1600Sponge_SetByteIOIndex(Instance, Indx)  
+</h3>
+
+  <p>To set the <em>ByteIOIndex</em> variable.</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(<a href='../type/kp1600sponge.html'>KP1600Sponge</a>),
+            </td>
+<td>intent(inout)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Instance</strong></td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              integer(kind=kInt32),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Indx</strong></td>
+            <td>
+                
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+        </li>
+    </ul>
+  </div>
+
+          </div>
+          <div class="row">
+              <div class="card mt-3">
+    <div class="card-header codesum">
+      <span class="anchor" id="boundprocedure-copystate"></span>
+      <h3>
+          procedure, public ::
+  <strong>CopyState</strong> => KP1600Sponge_CopyState
+        
+      </h3>
+    </div>
+      <div class="card-body">
+        
+        <p><strong>Type-Bound Subroutine</strong>: CopyState <br>
+ <strong>Purpose</strong>:  To copy the current state of the source instance. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    CALL Src%CopyState(Dst)</p>
+      </div>
+    <ul class="list-group">
+        <li class="list-group-item">
+                  <h3>
+    private  subroutine KP1600Sponge_CopyState(Src, Dst)  
+</h3>
+
+  <p>To copy the current states of the source instance to the destination instance. <br>
+ Note: Only those that would be changed during various operations are copied.
+       Those that would not be changed are expected to be copied to the
+       destination during its construction.</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(<a href='../type/kp1600sponge.html'>KP1600Sponge</a>),
+            </td>
+<td>intent(inout)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Src</strong></td>
+            <td>
+                <p>the source instance</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              class(<a href='../type/kp1600sponge.html'>KP1600Sponge</a>),
+            </td>
+<td>intent(inout)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Dst</strong></td>
+            <td>
+                <p>the destination instance</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+        </li>
+    </ul>
+  </div>
+
+          </div>
+      </section>
+
+    <section>
+    <h3><span class="anchor" id="src"></span>Source Code</h3>
+    <div class="hl codehilite"><pre><span></span><span class="w">    </span><span class="k">TYPE </span><span class="n">KP1600Sponge</span>
+<span class="w">        </span><span class="k">PRIVATE</span>
+<span class="w">        </span><span class="c">!% The state in bytes processed by the permutation</span>
+<span class="w">        </span><span class="n">tByte</span><span class="w">           </span><span class="kd">::</span><span class="w"> </span><span class="n">State</span><span class="p">(</span><span class="mi">0</span><span class="p">:</span><span class="n">KP1600SizeInBytes</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0_kInt8</span>
+<span class="w">        </span><span class="c">!% The state in words; an alias of the state</span>
+<span class="w">        </span><span class="n">tLong</span><span class="p">,</span><span class="w"> </span><span class="k">POINTER</span><span class="w">  </span><span class="kd">::</span><span class="w"> </span><span class="n">StateAsWords</span><span class="p">(:)</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="nb">NULL</span><span class="p">()</span>
+<span class="w">        </span><span class="c">!% The number of permutation rounds</span>
+<span class="w">        </span><span class="n">tInteger</span><span class="w">        </span><span class="kd">::</span><span class="w"> </span><span class="n">NRounds</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">24</span>
+<span class="w">        </span><span class="c">!% The value of the rate in bits</span>
+<span class="w">        </span><span class="n">tInteger</span><span class="w">        </span><span class="kd">::</span><span class="w"> </span><span class="n">Rate</span>
+<span class="w">        </span><span class="c">!% The position in the state of the next byte to be input/output</span>
+<span class="w">        </span><span class="n">tInteger</span><span class="w">        </span><span class="kd">::</span><span class="w"> </span><span class="n">ByteIOIndex</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span>
+<span class="w">        </span><span class="c">!% The flag for squeezing</span>
+<span class="w">        </span><span class="n">tLogical</span><span class="w">        </span><span class="kd">::</span><span class="w"> </span><span class="n">Squeezing</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">FalseVal</span>
+<span class="w">    </span><span class="k">CONTAINS</span>
+<span class="w">        </span><span class="c">! ---------------------------------------------------------------------</span>
+<span class="w">        </span><span class="c">! -----                     Private Procedures                    -----</span>
+<span class="w">        </span><span class="c">! ---------------------------------------------------------------------</span>
+<span class="w">        </span><span class="k">PROCEDURE</span><span class="p">,</span><span class="w"> </span><span class="k">PRIVATE</span><span class="w">  </span><span class="kd">::</span><span class="w"> </span><span class="n">AddByte</span><span class="w">          </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">KP1600Sponge_AddByte</span>
+<span class="w">        </span><span class="k">PROCEDURE</span><span class="p">,</span><span class="w"> </span><span class="k">PRIVATE</span><span class="w">  </span><span class="kd">::</span><span class="w"> </span><span class="n">AddBytes</span><span class="w">         </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">KP1600Sponge_AddBytes</span>
+<span class="w">        </span><span class="k">PROCEDURE</span><span class="p">,</span><span class="w"> </span><span class="k">PRIVATE</span><span class="w">  </span><span class="kd">::</span><span class="w"> </span><span class="n">ExtractBytes</span><span class="w">     </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">KP1600Sponge_ExtractBytes</span>
+<span class="w">        </span><span class="c">! ---------------------------------------------------------------------</span>
+<span class="w">        </span><span class="c">! -----                     Public Procedures                     -----</span>
+<span class="w">        </span><span class="c">! ---------------------------------------------------------------------</span>
+<span class="w">        </span><span class="c">!&gt; **Type-Bound Subroutine**: Initialize &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Purpose**:  To initialize the *Sponge* instance. &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Usage**: &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!   ---&gt;    CALL Instance%Initialize(Capacity, nRounds)</span>
+<span class="w">        </span><span class="k">PROCEDURE</span><span class="w">       </span><span class="kd">::</span><span class="w"> </span><span class="n">Initialize</span><span class="w">           </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">KP1600Sponge_Initialize</span>
+<span class="w">        </span><span class="c">!&gt; **Type-Bound Function**: Absorb &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Purpose**:  To insert input data in bytes to be absorbed by *Sponge* instance. &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Usage**: &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!   ---&gt;    Flag = Instance%Absorb(Input, InpSize) &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!   ---&gt;    IF (.NOT.Instance%Absorb(Input, InpSize)) DoSomething &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Note**: Must call this method before calling either the *AbsorbLastFewBits*</span>
+<span class="w">        </span><span class="c">!            method or the *Squeeze* method. &lt;br&gt;</span>
+<span class="w">        </span><span class="k">PROCEDURE</span><span class="w">       </span><span class="kd">::</span><span class="w"> </span><span class="n">Absorb</span><span class="w">               </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">KP1600Sponge_Absorb</span>
+<span class="w">        </span><span class="c">!&gt; **Type-Bound Function**: AbsorbLastFewBits &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Purpose**:  To insert input data in bits to be absorbed by *Sponge* instance. &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Usage**: &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!   ---&gt;    Flag = Instance%AbsorbLastFewBits(LastByte) &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!   ---&gt;    IF (.NOT.Instance%AbsorbLastFewBits(LastByte)) DoSomething &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Note**: Must call this method only once and before calling the *Squeeze* method. &lt;br&gt;</span>
+<span class="w">        </span><span class="k">PROCEDURE</span><span class="w">       </span><span class="kd">::</span><span class="w"> </span><span class="n">AbsorbLastFewBits</span><span class="w">    </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">KP1600Sponge_AbsorbLastFewBits</span>
+<span class="w">        </span><span class="c">!&gt; **Type-Bound Subroutine**: Permute &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Purpose**:  To perform a permutation of the state of the *Sponge* instance. &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Usage**: &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!   ---&gt;    CALL Instance%Permute()</span>
+<span class="w">        </span><span class="k">PROCEDURE</span><span class="w">       </span><span class="kd">::</span><span class="w"> </span><span class="n">Permute</span><span class="w">              </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">KP1600Sponge_Permute</span>
+<span class="w">        </span><span class="c">!&gt; **Type-Bound Function**: Squeeze &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Purpose**:  To retrieve output data from *Sponge* instance. &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Usage**: &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!   ---&gt;    Flag = Instance%Squeeze(Output, OutSize) &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!   ---&gt;    IF (.NOT.Instance%Squeeze(Output, OutSize)) DoSomething &lt;br&gt;</span>
+<span class="w">        </span><span class="k">PROCEDURE</span><span class="w">       </span><span class="kd">::</span><span class="w"> </span><span class="n">Squeeze</span><span class="w">              </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">KP1600Sponge_Squeeze</span>
+<span class="w">        </span><span class="c">!&gt; **Type-Bound Function**: GetByteIOIndex &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Purpose**:  To get value of the *ByteIOIndex* component of the *Sponge* instance. &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Usage**: &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!   ---&gt;    Index = Instance%GetByteIOIndex()</span>
+<span class="w">        </span><span class="k">PROCEDURE</span><span class="w">       </span><span class="kd">::</span><span class="w"> </span><span class="n">GetByteIOIndex</span><span class="w">       </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">KP1600Sponge_GetByteIOIndex</span>
+<span class="w">        </span><span class="c">!&gt; **Type-Bound Subroutine**: SetByteIOIndex &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Purpose**:  To set value of the *ByteIOIndex* component of the *Sponge* instance. &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Usage**: &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!   ---&gt;    CALL Instance%SetByteIOIndex(Index)</span>
+<span class="w">        </span><span class="k">PROCEDURE</span><span class="w">       </span><span class="kd">::</span><span class="w"> </span><span class="n">SetByteIOIndex</span><span class="w">       </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">KP1600Sponge_SetByteIOIndex</span>
+<span class="w">        </span><span class="c">!&gt; **Type-Bound Subroutine**: CopyState &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Purpose**:  To copy the current state of the source instance. &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!  **Usage**: &lt;br&gt;</span>
+<span class="w">        </span><span class="c">!   ---&gt;    CALL Src%CopyState(Dst)</span>
+<span class="w">        </span><span class="k">PROCEDURE</span><span class="w">       </span><span class="kd">::</span><span class="w"> </span><span class="n">CopyState</span><span class="w">            </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">KP1600Sponge_CopyState</span>
+<span class="w">        </span><span class="c">! ---------------------------------------------------------------------</span>
+<span class="w">        </span><span class="k">FINAL</span><span class="w">           </span><span class="kd">::</span><span class="w"> </span><span class="n">KP1600Sponge_Finalize</span>
+<span class="w">        </span><span class="c">! ---------------------------------------------------------------------</span>
+<span class="w">    </span><span class="k">END TYPE </span><span class="n">KP1600Sponge</span>
+</pre></div>
+
+    </section>
+    
+    </div>
+  </div>
+
+      <hr>
+    </div> <!-- /container -->
+    <footer>
+      <div class="container">
+        <div class="row justify-content-between">
+          <div class="col"><p>eXPerimental Fortran Library (XpfLib) Documentation was developed by Niranama<br>&copy; 2024 
+</p>
+          </div>
+          <div class="col">
+            <p class="text-end">
+              Documentation generated by
+              <a href="https://github.com/Fortran-FOSS-Programmers/ford">FORD</a>
+            </p>
+          </div>
+        </div>
+        <br>
+      </div> <!-- /container -->
+    </footer>
+
+    <!-- Bootstrap core JavaScript -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>    
+
+    <!-- MathJax JavaScript
+             ================================================== -->
+             <!-- Placed at the end of the document so the pages load faster -->
+        <script type="text/x-mathjax-config">
+          MathJax.Hub.Config({
+          TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } },
+          jax: ['input/TeX','input/MathML','output/HTML-CSS'],
+          extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']
+          });
+        </script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+          <script src="../tipuesearch/tipuesearch_content.js"></script>
+          <script src="../tipuesearch/tipuesearch_set.js"></script>
+          <script src="../tipuesearch/tipuesearch.js"></script>
+
+  </body>
+</html>

@@ -1,0 +1,681 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta name="description" content="Experimental Fortran Package - Base Modules and Classes">
+    <meta name="author" content="Niranama" >
+    <link rel="icon" href="../favicon.png">
+
+    <title>MClass_IntrusiveHashTree &ndash; eXPerimental Fortran Library (XpfLib) Documentation</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link href="../css/pygments.css" rel="stylesheet">
+    <link href="../css/font-awesome.min.css" rel="stylesheet">
+    <link href="../css/local.css" rel="stylesheet">
+      <link  href="../tipuesearch/tipuesearch.css" rel="stylesheet">
+
+    <script src="https://code.jquery.com/jquery-3.7.0.slim.min.js" integrity="sha256-tG5mcZUtJsZvyKAxYLVXrmjKBVLd6VpVccqz/r4ypFE=" crossorigin="anonymous"></script>
+  </head>
+
+  <body>
+
+    <!-- Fixed navbar -->
+    <div class="container-fluid mb-sm-4 mb-xl-2">
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container">
+          <a class="navbar-brand" href="../index.html">eXPerimental Fortran Library (XpfLib) Documentation </a>
+          <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar"
+                  aria-expanded="false" aria-controls="navbar" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon">
+          </button>
+
+          <div id="navbar" class="navbar-collapse collapse">
+            <ul class="navbar-nav">
+                  <li class="nav-item">
+                    <a class="nav-link" href="../lists/files.html">Source Files</a>
+                  </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../lists/modules.html">Modules</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../lists/procedures.html">Procedures</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../lists/absint.html">Abstract Interfaces</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../lists/types.html">Derived Types</a>
+                </li>
+            </ul>
+              <div class="d-flex align-items-end flex-grow-1">
+                <form action="../search.html" role="search" class="ms-auto">
+                  <input type="text" class="form-control" aria-label="Search" placeholder="Search" name="q" id="tipue_search_input" autocomplete="off" required>
+                </form>
+              </div>
+          </div><!--/.nav-collapse -->
+        </div>
+      </nav>
+    </div>
+
+    <div class="container">
+  <div class="row">
+    <h1>MClass_IntrusiveHashTree
+      <small>Module</small>
+      
+    </h1>
+      <div class="container p-2 mb-4 bg-light border rounded-3">
+    <div class="row align-items-center justify-content-between" id="info-bar">
+      <div class="col">
+        <ul class="list-inline" style="margin-bottom:0px;display:inline">
+
+            <li class="list-inline-item" id="statements"><i class="fa fa-list-ol"></i>
+              <a data-bs-toggle="tooltip"
+                 data-bs-placement="bottom" data-html="true"
+                 title=" 0.9% of total for modules and submodules.">435 statements</a>
+            </li>
+
+            <li class="list-inline-item" id="source-file">
+              <i class="fa fa-code"></i>
+              <a href="../src/MClass_IntrusiveHashTree.f90"> Source File</a>
+            </li>
+        </ul>
+      </div>
+      <div class="col">
+        <nav aria-label="breadcrumb">
+          <ol class="breadcrumb justify-content-end mb-0">
+                <li class="breadcrumb-item"><a href='../sourcefile/mclass_intrusivehashtree.f90.html'>MClass_IntrusiveHashTree.f90</a></li>
+            <li class="breadcrumb-item active" aria-current="page">MClass_IntrusiveHashTree</li>
+          </ol>
+        </nav>
+      </div>
+    </div>
+  </div>
+  <script>
+    $(function () {
+    $('[data-bs-toggle="tooltip"]').tooltip()
+    })
+  </script>
+
+  </div>
+
+  <div class="row">
+    <div class="col-md-3">
+        <div id="sidebar">
+      <h3>Contents</h3>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+      <div class="card mb-4">
+      <a data-bs-toggle="collapse" href="#types-0"
+         aria-expanded="false" aria-controls="types-0">
+         <h4 class="card-header bg-primary text-white">Derived Types</h4>
+      </a>
+      <div id="types-0" class="collapse">
+        <div class="list-group list-group-flush">
+            <a class="list-group-item" href="../module/mclass_intrusivehashtree.html#type-hashtreenode">HashTreeNode</a>
+            <a class="list-group-item" href="../module/mclass_intrusivehashtree.html#type-intrusivehashtree">IntrusiveHashTree</a>
+        </div>
+      </div>
+    </div>
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+
+
+  </div>
+
+    </div>
+
+    <div class="col-md-9" id='text'>
+      <p><strong>PURPOSE OF THIS MODULE</strong>: <br>
+  This module contains the <em>IntrusiveHashTree</em> type, the <em>HashTreeNode</em> type and
+  their related routines.  The <em>IntrusiveHashTree</em> type is a container type that
+  employs a separate-chaining hash table implementation to provide common operations
+  for an unordered symbol table while the <em>HashTreeNode</em> type is a node type intended
+  to be used in conjunction with the <em>IntrusiveHashTree</em> type. <br>
+  As an intrusive container, the <em>IntrusiveHashTree</em> type requires a user to define
+  a new node type that extends the <em>HashTreeNode</em> type, which is a subtype of the
+  <a href="../module/MClass_IntrusiveBSTrees.html#type-bstode">BSTNode</a> type.  The
+  new node type must contain a key (or more than one) as its additional component(s).
+  The new node type may contain one or more associated values as its other component(s).
+  The user is also required to implement all procedures deferred by the <em>HashTreeNode</em>
+  type and its parent types.  In particular, the <em>CompareTo</em> and <em>ComputeHashValue</em>
+  deferred procedures should be dependent on the key component(s) only. <br>
+  Unlike intrusive list-based and tree-based types, which can be used instantly by
+  inserting objects into a container, the <em>IntrusiveHashTree</em> type requires an explicit
+  construction via the <em>Construct</em> method before using other provided operations. <br></p>
+<br>          <div class="card mb-4">
+      <h3 class="card-header card-title bg-light">Uses</h3>
+      <div class="card-body">
+        <ul class="list-group list-group-flush">
+            <li class="list-group-item">
+              <ul class="list-inline">
+                  <li class="list-inline-item"><a href='../module/mbase_sintutil.html'>MBase_SIntUtil</a></li>
+                  <li class="list-inline-item"><a href='../module/mbase_common.html'>MBase_Common</a></li>
+                  <li class="list-inline-item"><a href='../module/mclass_intrusivebstrees.html'>MClass_IntrusiveBSTrees</a></li>
+                  <li class="list-inline-item"><a href='http://fortranwiki.org/fortran/show/iso_fortran_env'>iso_fortran_env</a></li>
+                  <li class="list-inline-item"><a href='http://fortranwiki.org/fortran/show/iso_c_binding'>iso_c_binding</a></li>
+                  <li class="list-inline-item"><a href='../module/mbase_errhandlers.html'>MBase_ErrHandlers</a></li>
+              </ul>
+            </li>
+        </ul>
+      </div>
+    </div>
+
+      
+      <br>
+
+
+
+
+
+
+        <section>
+          <h2>Derived Types</h2>
+              <div class="card">
+    <div class="card-header codesum">
+      <span class="anchor" id="type-hashtreenode"></span>
+      <h3>
+        type, public, extends(<a href='../type/bstnode.html'>BSTNode</a>)&nbsp;::&nbsp;
+        <a href='../type/hashtreenode.html'>HashTreeNode</a>
+        
+      </h3>
+    </div>
+    <div class="card-body">
+      <p>The <em>HashTreeNode</em> type is a binary-search-tree node type intended to be
+ used in conjunction with the <em>IntrusiveHashTree</em> type.  Similar to other
+ intrusive containers, the <em>IntrusiveHashTree</em> type requires a user to
+ define a new (concrete) node type that extends the <em>HashTreeNode</em> type
+ where the new node type contains a key and its associated value as its
+ components. <br>
+ The following code snippet illustrates how to define a new node type.
+<br>
+<Pre><Code style="color:MidnightBlue;">
+  TYPE, EXTENDS(HashTreeNode) :: AssociativeNode
+      CHARACTER(LEN=:), ALLOCATABLE   :: Key      ! stored string key
+      INTEGER                         :: Value1   ! stored integer value
+      REAL                            :: Value2   ! stored real value
+  END TYPE
+  </Code></Pre></p><a href="../type/hashtreenode.html" class="pull-right"><emph>Read more&hellip;</emph></a>
+
+
+
+
+        <h4>Type-Bound Procedures</h4>
+        <table class="table table-striped varlist">
+          <tbody>
+              <tr>
+                <td>  procedure(IfaceCopy), public, deferred ::
+  <strong><a href='../type/object.html#boundprocedure-copy~8'>Copy</a></strong></td>
+                <td><p><em>Copy</em> is a deferred procedure to perform a copy of this (source) object.</p></td>
+              </tr>
+              <tr>
+                <td>  procedure(IfaceEqual), public, deferred ::
+  <strong><a href='../type/object.html#boundprocedure-isequalto~10'>IsEqualTo</a></strong></td>
+                <td><p><em>IsEqualTo</em> is a deferred procedure to compare whether this object is equal to the
+ other object or not.</p></td>
+              </tr>
+              <tr>
+                <td>  procedure(IfaceFree), public, deferred ::
+  <strong><a href='../type/object.html#boundprocedure-memfree~9'>MemFree</a></strong></td>
+                <td><p><em>MemFree</em> is a deferred procedure to free storage currently occupied by this object.</p></td>
+              </tr>
+              <tr>
+                <td>  procedure(Iface2String), public, deferred ::
+  <strong><a href='../type/object.html#boundprocedure-tostring~9'>ToString</a></strong></td>
+                <td><p><em>ToString</em> is a deferred procedure to get the string representation of this object.</p></td>
+              </tr>
+              <tr>
+                <td>  procedure, public ::
+  <strong><a href='../type/object.html#boundprocedure-hashcode~36'>HashCode</a></strong> => Object_HashCode</td>
+                <td><p><strong>Type-Bound Function</strong>: HashCode <br>
+ <strong>Purpose</strong>:  To compute the hash code of this object. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    Code = Obj%HashCode() <br>
+ <strong>Note</strong>: The method provided here as a default implementation compute the hash code
+      based on the string representation of this object and a simple hash algorithm.
+      It should be overridden by a better and more efficient implementation if possible. <br></p></td>
+              </tr>
+              <tr>
+                <td>  procedure(IfaceCompare), public, deferred ::
+  <strong><a href='../type/comparable.html#boundprocedure-compareto'>CompareTo</a></strong></td>
+                <td><p><em>CompareTo</em> is a deferred procedure to provide a natural comparison of two
+ <em>Comparable</em> objects.</p></td>
+              </tr>
+              <tr>
+                <td>  generic, public ::
+  <strong><a href='../type/hashtreenode.html#boundprocedure-operator%28%3D%3D%29~4'>OPERATOR(==)</a></strong> => Comparable_EqualTo</td>
+                <td><p><strong>Operator Overload</strong>: OPERATOR(==) <br>
+ <strong>Purpose</strong>:  To check if the LHS value is equal to the RHS value <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    Flag = LHS == RHS <br>
+  ---&gt;    IF (LHS == RHS) DoSomething</p></td>
+              </tr>
+              <tr>
+                <td>  generic, public ::
+  <strong><a href='../type/hashtreenode.html#boundprocedure-operator%28SLASH%3D%29~4'>OPERATOR(/=)</a></strong> => Comparable_NotEqualTo</td>
+                <td><p><strong>Operator Overload</strong>: OPERATOR(/=) <br>
+ <strong>Purpose</strong>:  To check if the LHS value is NOT equal to the RHS value <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    Flag = LHS /= RHS <br>
+  ---&gt;    IF (LHS /= RHS) DoSomething</p></td>
+              </tr>
+              <tr>
+                <td>  generic, public ::
+  <strong><a href='../type/hashtreenode.html#boundprocedure-operator%28lt%29~4'>OPERATOR(<)</a></strong> => Comparable_LessThan</td>
+                <td><p><strong>Operator Overload</strong>: OPERATOR(&lt;) <br>
+ <strong>Purpose</strong>:  To check if the LHS value is less than the RHS value <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    Flag = LHS &lt; RHS <br>
+  ---&gt;    IF (LHS &lt; RHS) DoSomething</p></td>
+              </tr>
+              <tr>
+                <td>  generic, public ::
+  <strong><a href='../type/hashtreenode.html#boundprocedure-operator%28gt%29~4'>OPERATOR(>)</a></strong> => Comparable_GreaterThan</td>
+                <td><p><strong>Operator Overload</strong>: OPERATOR(&gt;) <br>
+ <strong>Purpose</strong>:  To check if the LHS value is greater than the RHS value <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    Flag = LHS &gt; RHS <br>
+  ---&gt;    IF (LHS &gt; RHS) DoSomething</p></td>
+              </tr>
+              <tr>
+                <td>  generic, public ::
+  <strong><a href='../type/hashtreenode.html#boundprocedure-operator%28lt%3D%29~4'>OPERATOR(<=)</a></strong> => Comparable_LessEqual</td>
+                <td><p><strong>Operator Overload</strong>: OPERATOR(&lt;=) <br>
+ <strong>Purpose</strong>:  To check if the LHS value is less than or equal to the RHS value <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    Flag = LHS &lt;= RHS <br>
+  ---&gt;    IF (LHS &lt;= RHS) DoSomething</p></td>
+              </tr>
+              <tr>
+                <td>  generic, public ::
+  <strong><a href='../type/hashtreenode.html#boundprocedure-operator%28gt%3D%29~4'>OPERATOR(>=)</a></strong> => Comparable_GreaterEqual</td>
+                <td><p><strong>Operator Overload</strong>: OPERATOR(&gt;=) <br>
+ <strong>Purpose</strong>:  To check if the LHS value is greater than or equal to the RHS value <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    Flag = LHS &gt;= RHS <br>
+  ---&gt;    IF (LHS &gt;= RHS) DoSomething</p></td>
+              </tr>
+              <tr>
+                <td>  procedure, public ::
+  <strong><a href='../type/compnode.html#boundprocedure-copycompnode'>CopyCompNode</a></strong> => ThisNode_CopyPIndx</td>
+                <td><p><strong>Type-Bound Subroutine</strong>: CopyCompNode <br>
+ <strong>Purpose</strong>:  To copy the <em>PIndx</em> component of the source to the destination.
+               This method is provided to help user implement deferred procedure(s)
+               required by an object in the <em>Object</em> class. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    CALL SrcNode%CopyCompNode(DstNode)</p></td>
+              </tr>
+              <tr>
+                <td>  procedure, public ::
+  <strong><a href='../type/compnode.html#boundprocedure-ispindxequal'>IsPIndxEqual</a></strong> => ThisNode_EqualTo</td>
+                <td><p><strong>Type-Bound Subroutine</strong>: IsPIndxEqual <br>
+ <strong>Purpose</strong>:  To compare whether the "PIndx" component of both objects are equal
+               or not.  This method is provided to help user implement deferred
+               procedure(s) required by an object in the <em>Object</em> class. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    Flag = LhsNode%IsPIndxEqual(RhsNode) <br>
+  ---&gt;    IF (.NOT.LhsNode%IsPIndxEqual(RhsNode)) DoSomething</p></td>
+              </tr>
+              <tr>
+                <td>  procedure, public ::
+  <strong><a href='../type/bstnode.html#boundprocedure-getleft'>GetLeft</a></strong> => BSTNode_GetLeftNode</td>
+                <td><p><strong>Type-Bound Function</strong>: GetLeft <br>
+ <strong>Purpose</strong>:  To get a pointer to the left node of the current node. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    LeftNode =&gt; CurrNode%GetLeft()</p></td>
+              </tr>
+              <tr>
+                <td>  procedure, public ::
+  <strong><a href='../type/bstnode.html#boundprocedure-getright'>GetRight</a></strong> => BSTNode_GetRightNode</td>
+                <td><p><strong>Type-Bound Function</strong>: GetRight <br>
+ <strong>Purpose</strong>:  To get a pointer to the right node of the current node. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    RightNode =&gt; CurrNode%GetRight()</p></td>
+              </tr>
+              <tr>
+                <td>  procedure, public ::
+  <strong><a href='../type/bstnode.html#boundprocedure-getsize~9'>GetSize</a></strong> => BSTNode_GetSize</td>
+                <td><p><strong>Type-Bound Function</strong>: GetSize <br>
+ <strong>Purpose</strong>:  To get number of nodes in subtree rooted by this node. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    Size = CurrNode%GetSize()</p></td>
+              </tr>
+              <tr>
+                <td>  procedure, public ::
+  <strong><a href='../type/bstnode.html#boundprocedure-freepointers~2'>FreePointers</a></strong> => BSTNode_FreePointers</td>
+                <td><p><strong>Type-Bound Subroutine</strong>: FreePointers <br>
+ <strong>Purpose</strong>:  To nullify the pointer components of the node. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    CALL CurrNode%FreePointers()</p></td>
+              </tr>
+              <tr>
+                <td>  procedure, public ::
+  <strong><a href='../type/bstnode.html#boundprocedure-setnew~2'>SetNew</a></strong> => BSTNode_SetNew</td>
+                <td><p><strong>Type-Bound Subroutine</strong>: SetNew <br>
+ <strong>Purpose</strong>:  To set the node as a new node in the tree container. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    CALL Node%SetNew()</p></td>
+              </tr>
+              <tr>
+                <td>  procedure, public ::
+  <strong><a href='../type/bstnode.html#boundprocedure-resetbstnode'>ResetBSTNode</a></strong> => BSTNode_Reset</td>
+                <td><p><strong>Type-Bound Subroutine</strong>: ResetBSTNode <br>
+ <strong>Purpose</strong>:  To reset the node to its initialized state. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    CALL Node%ResetBSTNode()</p></td>
+              </tr>
+              <tr>
+                <td>  procedure, public ::
+  <strong><a href='../type/bstnode.html#boundprocedure-copybstnode'>CopyBSTNode</a></strong> => BSTNode_CopyBSTNode</td>
+                <td><p><strong>Type-Bound Subroutine</strong>: CopyBSTNode <br>
+ <strong>Purpose</strong>:  To copy members of the source to the destination.  This method
+               is provided to help user implement deferred procedure(s) required
+               by an object in the <em>Object</em> class. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    CALL SrcNode%CopyBSTNode(DstNode)</p></td>
+              </tr>
+              <tr>
+                <td>  procedure, public ::
+  <strong><a href='../type/bstnode.html#boundprocedure-isbstnodeequal'>IsBSTNodeEqual</a></strong> => BSTNode_EqualTo</td>
+                <td><p><strong>Type-Bound Function</strong>: IsBSTNodeEqual <br>
+ <strong>Purpose</strong>:  To compare whether all members of both objects are equal or not.
+               This method is provided to help user implement deferred procedure(s)
+               required by an object in the <em>Object</em> class. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    Flag = LhsNode%IsBSTNodeEqual(RhsNode) <br>
+  ---&gt;    IF (.NOT.LhsNode%IsBSTNodeEqual(RhsNode)) DoSomething</p></td>
+              </tr>
+              <tr>
+                <td>  procedure, public ::
+  <strong><a href='../type/hashtreenode.html#boundprocedure-resethashnode'>ResetHashNode</a></strong> => HashTreeNode_Reset</td>
+                <td><p><strong>Type-Bound Subroutine</strong>: ResetHashNode <br>
+ <strong>Purpose</strong>:  To reset the node to its initialized state. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    CALL Node%ResetHashNode()</p></td>
+              </tr>
+              <tr>
+                <td>  procedure, public ::
+  <strong><a href='../type/hashtreenode.html#boundprocedure-copyhashnode'>CopyHashNode</a></strong> => HashTreeNode_CopyHashNode</td>
+                <td><p><strong>Type-Bound Subroutine</strong>: CopyHashNode <br>
+ <strong>Purpose</strong>:  To copy members of the source to the destination.  This method
+               is provided to help user implement deferred procedure(s) required
+               by an object in the <em>Object</em> class. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    CALL SrcNode%CopyHashNode(DstNode)</p></td>
+              </tr>
+              <tr>
+                <td>  procedure, public ::
+  <strong><a href='../type/hashtreenode.html#boundprocedure-ishashnodeequal'>IsHashNodeEqual</a></strong> => HashTreeNode_EqualTo</td>
+                <td><p><strong>Type-Bound Function</strong>: EqualTo <br>
+ <strong>Purpose</strong>:  To compare whether all members of both objects are equal or not.
+               This method is provided to help user implement deferred procedure(s)
+               required by an object in the <em>Object</em> class. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    Flag = LhsNode%EqualTo(RhsNode) <br>
+  ---&gt;    IF (.NOT.LhsNode%EqualTo(RhsNode)) DoSomething</p></td>
+              </tr>
+          </tbody>
+        </table>
+    </div>
+  </div>
+
+              <div class="card">
+    <div class="card-header codesum">
+      <span class="anchor" id="type-intrusivehashtree"></span>
+      <h3>
+        type, public&nbsp;::&nbsp;
+        <a href='../type/intrusivehashtree.html'>IntrusiveHashTree</a>
+        
+      </h3>
+    </div>
+    <div class="card-body">
+      <p>The <em>IntrusiveHashTree</em> type is an intrusive container type that employs a
+ separate-chaining hash table implementation to provide common operations for
+ an unordered symbol table.  The separate-chaining technique combines a balanced
+ binary-search tree with a hash table to solve the collision problem.  <br>
+ The <em>IntrusiveHashTree</em> type employs an array of the <em>IntrusiveRBTree</em> type
+ as its component (i.e. using an array of balanced trees as its buckets) to store
+ <em>HashTreeNode</em> objects.  Although the <em>IntrusiveHashTree</em> type handles a memory
+ management of its working trees, these working trees (as intrusive containers)
+ only provide a linking/unlinking task for common balanced-tree operations.  This
+ means that the memory management task of the inserted <em>HashTreeNode</em> objects
+ is essentially handled by a user who is an owner of those inserted objects. <br>
+ As a symbol table, the <em>IntrusiveHashTree</em> type does not allow duplicated keys;
+ therefore, if an inserted key node has a key equal to that of a key node stored
+ in the table, the stored key node is replaced by the inserted key node.  <br>
+ In order to avoid large balanced trees (due to many keys hashed to the same indices),
+ the <em>IntrusiveHashTree</em> type employs the dynamic-array technique to resize the
+ balanced-tree array.  As a result, the <em>IntrusiveHashTree</em> type requires an explicit
+ construction via the <em>Construct</em> method before using other provided operations.
+ When the <em>Destruct</em> method is called, the hash table also needs to be re-construct
+ because this method essentially deallocates the working array.  <br></p>
+
+
+
+        <h4>Finalizations Procedures</h4>
+        <table class="table table-striped varlist">
+          <tbody>
+              <tr>
+                <td>final :: <strong>HashTable_Finalize</strong></td>
+                <td><p>To perform finalization of the object.</p></td>
+              </tr>
+          </tbody>
+        </table>
+
+        <h4>Type-Bound Procedures</h4>
+        <table class="table table-striped varlist">
+          <tbody>
+              <tr>
+                <td>  procedure, public ::
+  <strong><a href='../type/intrusivehashtree.html#boundprocedure-cloneto~5'>CloneTo</a></strong> => HashTable_Clone</td>
+                <td><p><strong>Type-Bound Subroutine</strong>: CloneTo <br>
+ <strong>Purpose</strong>:  To perform cloning of the source hash table. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    CALL SrcTab%CloneTo(DstTab) <br></p></td>
+              </tr>
+              <tr>
+                <td>  generic, public ::
+  <strong><a href='../type/intrusivehashtree.html#boundprocedure-construct~6'>Construct</a></strong> => CreateEmpty, CreateByArray</td>
+                <td><p><strong>Type-Bound Subroutine</strong>: Construct <br>
+ <strong>Purpose</strong>:  To construct a new empty table with default or specified capacity, or
+               a new non-empty table from an array of key nodes. <br>
+ <strong>Usage</strong>: <br>
+  ! construct an empty table <br>
+  ---&gt;    CALL Table%Construct()          ! use default initial capacity <br>
+  ---&gt;    CALL Table%Construct(InitCap)   ! specify initial capacity <br>
+  ! construct a non-empty table from an array of 25 key nodes <br>
+  ---&gt;    CALL Table%Construct(25, KeyNodes) <br></p></td>
+              </tr>
+              <tr>
+                <td>  procedure, public ::
+  <strong><a href='../type/intrusivehashtree.html#boundprocedure-destruct~6'>Destruct</a></strong> => HashTable_Destroy</td>
+                <td><p><strong>Type-Bound Subroutine</strong>: Destruct <br>
+ <strong>Purpose</strong>:  To remove all key nodes from the table, free memory of the allocatable
+               component, and reset all other components.<br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    CALL Table%Destruct() <br>
+ <strong>Note</strong>:  This method is NOT equivalent to the <em>Clear</em> method where the allocatable
+            component is NOT deallocated.</p></td>
+              </tr>
+              <tr>
+                <td>  procedure, public ::
+  <strong><a href='../type/intrusivehashtree.html#boundprocedure-insert~3'>Insert</a></strong> => HashTable_Insert</td>
+                <td><p><strong>Type-Bound Subroutine</strong>: Insert <br>
+ <strong>Purpose</strong>:  To insert the specified key node into the table. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    CALL Table%Insert(KeyNode) <br></p></td>
+              </tr>
+              <tr>
+                <td>  procedure, public ::
+  <strong><a href='../type/intrusivehashtree.html#boundprocedure-remove~2'>Remove</a></strong> => HashTable_Remove</td>
+                <td><p><strong>Type-Bound Function</strong>: Remove <br>
+ <strong>Purpose</strong>:  To remove a stored key node that has the key component equal to that
+               of the specified key node.  Also, return a flag indicating whether
+               a stored key node is successfully removed or not.  <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    Flag = Table%Remove(KeyNode) <br>
+  ---&gt;    IF (.NOT.Table%Remove(KeyNode)) DoSomething</p></td>
+              </tr>
+              <tr>
+                <td>  procedure, public ::
+  <strong><a href='../type/intrusivehashtree.html#boundprocedure-delete'>Delete</a></strong> => HashTable_Delete</td>
+                <td><p><strong>Type-Bound Subroutine</strong>: Delete <br>
+ <strong>Purpose</strong>:  To delete the current node from the collection. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    CALL Collection%Delete() <br>
+  ---&gt;    CALL Collection%Delete(DelNode) <br>
+ <strong>Note</strong>: This method is intended to be used in conjunction with the
+ <em>StartFirst</em> and <em>MoveForward</em> methods.  Therefore, after the call to
+ one of those methods and then calling this one will result in a removal
+ of the current node of the iteration.</p></td>
+              </tr>
+              <tr>
+                <td>  procedure, public ::
+  <strong><a href='../type/intrusivehashtree.html#boundprocedure-clear~3'>Clear</a></strong> => HashTable_Clear</td>
+                <td><p><strong>Type-Bound Subroutine</strong>: Clear <br>
+ <strong>Purpose</strong>:  To remove all stored key nodes from the table. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    CALL Table%Clear()</p></td>
+              </tr>
+              <tr>
+                <td>  procedure, public ::
+  <strong><a href='../type/intrusivehashtree.html#boundprocedure-startfirst~2'>StartFirst</a></strong> => HashTable_Move2FirstNode</td>
+                <td><p><strong>Type-Bound Function</strong>: StartFirst <br>
+ <strong>Purpose</strong>:  To start the <em>forward</em> iteration and return a flag
+               indicating whether the table is empty or not. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    IsEmpty = Table%StartFirst() <br>
+  ---&gt;    IsEmpty = Table%StartFirst(FirstNode)</p></td>
+              </tr>
+              <tr>
+                <td>  procedure, public ::
+  <strong><a href='../type/intrusivehashtree.html#boundprocedure-moveforward~3'>MoveForward</a></strong> => HashTable_Move2NextNode</td>
+                <td><p><strong>Type-Bound Function</strong>: MoveForward <br>
+ <strong>Purpose</strong>:  To move <em>forward</em> to the next iteration and return a flag
+               indicating whether the cursor has reached the end of the
+               table or not. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    IsTheEnd = Table%MoveForward() <br>
+  ---&gt;    IsTheEnd = Table%MoveForward(NextNode) <br></p></td>
+              </tr>
+              <tr>
+                <td>  procedure, public ::
+  <strong><a href='../type/intrusivehashtree.html#boundprocedure-getsize~8'>GetSize</a></strong> => HashTable_GetSize</td>
+                <td><p><strong>Type-Bound Function</strong>: GetSize <br>
+ <strong>Purpose</strong>:  To get size of the table (number of total nodes stored). <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    TableSize = Table%GetSize()</p></td>
+              </tr>
+              <tr>
+                <td>  procedure, public ::
+  <strong><a href='../type/intrusivehashtree.html#boundprocedure-isempty~10'>IsEmpty</a></strong> => HashTable_IsEmpty</td>
+                <td><p><strong>Type-Bound Function</strong>: IsEmpty <br>
+ <strong>Purpose</strong>:  To check whether the table is empty or not. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    Flag = Table%IsEmpty() <br>
+  ---&gt;    IF (.NOT.Table%IsEmpty()) DoSomeThing</p></td>
+              </tr>
+              <tr>
+                <td>  procedure, public ::
+  <strong><a href='../type/intrusivehashtree.html#boundprocedure-contain~2'>Contain</a></strong> => HashTable_Contain</td>
+                <td><p><strong>Type-Bound Function</strong>: Contain <br>
+ <strong>Purpose</strong>:  To find a stored key node that has the key component equal to
+               that of specified key node.  Return a flag indicating whether
+               such node is found or not.  <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    Flag = Table%Contain(KeyNode) <br>
+  ---&gt;    IF (.NOT.Table%Contain(KeyNode)) DoSomething</p></td>
+              </tr>
+              <tr>
+                <td>  procedure, public ::
+  <strong><a href='../type/intrusivehashtree.html#boundprocedure-findnode'>FindNode</a></strong> => HashTable_FindNode</td>
+                <td><p><strong>Type-Bound Function</strong>: FindNode <br>
+ <strong>Purpose</strong>:  To find the specified key node in the table.  Return true if
+               the specified key node is found.  Otherwise, return false. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    Flag = Table%FindNode(KeyNode, StoredNode) <br>
+  ---&gt;    IF (.NOT.Table%FindNode(KeyNode)) DoSomething</p></td>
+              </tr>
+              <tr>
+                <td>  procedure, public ::
+  <strong><a href='../type/intrusivehashtree.html#boundprocedure-getcursor~2'>GetCursor</a></strong> => HashTable_GetCursor</td>
+                <td><p><strong>Type-Bound Function</strong>: GetCursor <br>
+ <strong>Purpose</strong>:  To get a pointer to the current node of the iteration. <br>
+ <strong>Usage</strong>: <br>
+  ---&gt;    CursorNode =&gt; Table%GetCursor()</p></td>
+              </tr>
+          </tbody>
+        </table>
+    </div>
+  </div>
+
+        </section>
+        <br>
+
+
+
+
+
+    </div>
+  </div>
+
+      <hr>
+    </div> <!-- /container -->
+    <footer>
+      <div class="container">
+        <div class="row justify-content-between">
+          <div class="col"><p>eXPerimental Fortran Library (XpfLib) Documentation was developed by Niranama<br>&copy; 2024 
+</p>
+          </div>
+          <div class="col">
+            <p class="text-end">
+              Documentation generated by
+              <a href="https://github.com/Fortran-FOSS-Programmers/ford">FORD</a>
+            </p>
+          </div>
+        </div>
+        <br>
+      </div> <!-- /container -->
+    </footer>
+
+    <!-- Bootstrap core JavaScript -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>    
+
+    <!-- MathJax JavaScript
+             ================================================== -->
+             <!-- Placed at the end of the document so the pages load faster -->
+        <script type="text/x-mathjax-config">
+          MathJax.Hub.Config({
+          TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } },
+          jax: ['input/TeX','input/MathML','output/HTML-CSS'],
+          extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']
+          });
+        </script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+          <script src="../tipuesearch/tipuesearch_content.js"></script>
+          <script src="../tipuesearch/tipuesearch_set.js"></script>
+          <script src="../tipuesearch/tipuesearch.js"></script>
+
+  </body>
+</html>
